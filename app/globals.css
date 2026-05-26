@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --brand-navy: #0b1e4a;
+  --brand-blue: #2e5cb3;
+  --brand-sky: #3c79da;
+  --brand-orange-light: #ffaa3b;
+  --brand-orange-dark: #f37022;
+  --neutral-dark: #334155;
+  --neutral-muted: #64748b;
+  --neutral-border: #d1d5db;
+  --neutral-canvas: #ffffff;
+  --neutral-background: #f8fafc;
+  --gradient-brand-action: linear-gradient(to right, #ffaa3b, #f37022);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-brand-navy: var(--brand-navy);
+  --color-brand-blue: var(--brand-blue);
+  --color-brand-sky: var(--brand-sky);
+  --color-brand-orange-light: var(--brand-orange-light);
+  --color-brand-orange-dark: var(--brand-orange-dark);
+  --color-neutral-dark: var(--neutral-dark);
+  --color-neutral-muted: var(--neutral-muted);
+  --color-neutral-border: var(--neutral-border);
+  --color-neutral-canvas: var(--neutral-canvas);
+  --color-neutral-background: var(--neutral-background);
+  --font-sans: var(--font-poppins);
+  --font-mono: var(--font-geist-mono);
+}
+
+@utility bg-gradient-brand-action {
+  background-image: var(--gradient-brand-action);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), sans-serif;
+}
+
+.type-h1 {
+  font-size: clamp(2.5rem, 5vw, 3.75rem);
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.type-h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.12;
+  font-weight: 700;
+}
+
+.type-h3 {
+  font-size: clamp(1.75rem, 3.2vw, 2.5rem);
+  line-height: 1.15;
+  font-weight: 700;
+}
+
+.type-h4 {
+  font-size: clamp(1.5rem, 2.7vw, 2rem);
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.type-h5 {
+  font-size: clamp(1.25rem, 2.2vw, 1.5rem);
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+.type-h6 {
+  font-size: clamp(1.125rem, 2vw, 1.25rem);
+  line-height: 1.3;
+  font-weight: 700;
+}
+
+.type-normal-16 {
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 400;
+}

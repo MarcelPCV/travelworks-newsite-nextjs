@@ -1,0 +1,34 @@
+import IntlProviderWrapper from './intl-provider';
+import type { ReactNode } from 'react';
+import type { AbstractIntlMessages } from 'next-intl';
+import Navbar from './components/navbar';
+import { routeToMessageLocale } from './locale-config';
+
+export default async function LocaleLayout({
+  children,
+  params,
+}: {
+  children: ReactNode;
+  params: { locale: string } | Promise<{ locale: string }>;
+}) {
+  // `params` may be a Promise in some Next.js versions — await it and read locale to support both sync and async shapes
+  const { locale } = await Promise.resolve(params);
+  const file = routeToMessageLocale[locale] ?? 'en-US';
+
+  let messages: AbstractIntlMessages = {};
+  try {
+    messages = (await import(`../../messages/${file}.json`)).default;
+  } catch {
+    messages = (await import(`../../messages/en-US.json`)).default;
+  }
+
+  // Pass the message locale (e.g. 'en-US') to the client provider so it can be inferred reliably
+  return (
+    <IntlProviderWrapper locale={file} messages={messages}>
+      <div className="min-h-screen bg-zinc-50">
+        <Navbar />
+        <main className="mx-auto flex w-full max-w-6xl flex-1 px-4 py-8 sm:px-6 lg:px-8">{children}</main>
+      </div>
+    </IntlProviderWrapper>
+  );
+}

@@ -1,0 +1,51 @@
+import { ColorItem, ColorPalette, Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Design Tokens/All Tokens" />
+
+# TravelWorks Core Design Tokens
+
+_The official design system constants for the TravelWorks layout, dashboard modules, and knowledge base._
+
+## 1. Brand Accents & Actions
+
+These colors drive attention to focal interfaces, primary conversions, and major brand typography.
+
+<ColorPalette>
+  <ColorItem
+    title="Primary Action CTA (Gradient)"
+    subtitle="bg-gradient-brand-action"
+    colors={{ 'Linear Gradient': 'linear-gradient(to right, #ffaa3b, #f37022)' }}
+  />
+  <ColorItem
+    title="Brand Navy"
+    subtitle="text-brand-navy / bg-brand-navy"
+    colors={{ DeepNavy: '#0b1e4a' }}
+  />
+  <ColorItem
+    title="Core Brand Blues"
+    subtitle="text-brand-blue / text-brand-sky"
+    colors={{ TravelBlue: '#2e5cb3', HoverSky: '#3c79da' }}
+  />
+  <ColorItem
+    title="CTA Gradient Stops"
+    subtitle="text-brand-orange-light / text-brand-orange-dark"
+    colors={{ OrangeLight: '#ffaa3b', OrangeDark: '#f37022' }}
+  />
+</ColorPalette>
+
+## 2. Interface Neutrals
+
+Engineered for back-office data presentation, form components, text layouts, and clean UI borders.
+
+<ColorPalette>
+  <ColorItem
+    title="Typography Tints"
+    subtitle="text-neutral-dark / text-neutral-muted"
+    colors={{ BodyDark: '#334155', MutedLabels: '#64748b' }}
+  />
+  <ColorItem
+    title="Layout Scaffolding"
+    subtitle="bg-neutral-canvas / bg-neutral-background / border-neutral-border"
+    colors={{ CanvasWhite: '#ffffff', CleanGrayBg: '#f8fafc', BorderStroke: '#d1d5db' }}
+  />
+</ColorPalette>

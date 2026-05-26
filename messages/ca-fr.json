@@ -1,0 +1,24 @@
+{
+  "title": "Bienvenue (Canada - FR)",
+  "subtitle": "Commencez en modifiant le fichier page.tsx.",
+  "deploy": "Déployer",
+  "docs": "Documentation",
+  "nav": {
+    "menu": "Menu",
+    "close": "Fermer",
+    "languageTitle": "Langues",
+    "languagePrefix": "Langue : {language}",
+    "items": {
+      "home": "Accueil",
+      "services": "Services",
+      "pricing": "Tarifs",
+      "contact": "Contact",
+      "more": "Menu"
+    },
+    "secondLevel": {
+      "dashboard": "Tableau de bord",
+      "team": "Equipe",
+      "settings": "Parametres"
+    }
+  }
+}

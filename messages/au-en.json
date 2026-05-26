@@ -1,0 +1,24 @@
+{
+  "title": "Welcome (Australia)",
+  "subtitle": "To get started, edit the page.tsx file.",
+  "deploy": "Deploy Now",
+  "docs": "Documentation",
+  "nav": {
+    "menu": "Menu",
+    "close": "Close",
+    "languageTitle": "Languages",
+    "languagePrefix": "Language: {language}",
+    "items": {
+      "home": "Home",
+      "services": "Services",
+      "pricing": "Pricing",
+      "contact": "Contact",
+      "more": "Dropdown"
+    },
+    "secondLevel": {
+      "dashboard": "Dashboard",
+      "team": "Team",
+      "settings": "Settings"
+    }
+  }
+}
