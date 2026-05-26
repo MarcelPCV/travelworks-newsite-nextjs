@@ -2,6 +2,9 @@ import IntlProviderWrapper from './intl-provider';
 import type { ReactNode } from 'react';
 import type { AbstractIntlMessages } from 'next-intl';
 import Navbar from './components/navbar';
+import LocationConfirmationBar from './components/location-confirmation-bar';
+import TopAnnouncementBar from './components/top-announcement-bar';
+import ConsentManager from './components/consent-manager';
 import { routeToMessageLocale } from './locale-config';
 
 export default async function LocaleLayout({
@@ -26,8 +29,11 @@ export default async function LocaleLayout({
   return (
     <IntlProviderWrapper locale={file} messages={messages}>
       <div className="min-h-screen bg-zinc-50">
+        <LocationConfirmationBar />
+        <TopAnnouncementBar />
         <Navbar />
         <main className="mx-auto flex w-full max-w-6xl flex-1 px-4 py-8 sm:px-6 lg:px-8">{children}</main>
+        <ConsentManager />
       </div>
     </IntlProviderWrapper>
   );

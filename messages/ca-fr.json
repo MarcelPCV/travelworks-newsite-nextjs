@@ -20,5 +20,22 @@
       "team": "Equipe",
       "settings": "Parametres"
     }
+  },
+  "locationBar": {
+    "message": "Etes-vous au bon endroit? Choisissez votre langue pour voir le contenu specifique a votre emplacement.",
+    "selectLabel": "Choisir la langue de votre emplacement",
+    "continue": "Continuer",
+    "close": "Fermer"
+  },
+  "topAnnouncement": {
+    "message": "Concentrez-vous sur votre prochaine avancee. Nous nous occupons du reste.",
+    "learnMore": "En savoir plus",
+    "dismiss": "Fermer l'annonce",
+    "modal": {
+      "title": "Information importante",
+      "description": "Vous pouvez ajouter ici des details complets, des notes de politique ou des annonces de service que les utilisateurs doivent lire avant de continuer.",
+      "close": "Fermer la fenetre",
+      "button": "Fermer"
+    }
   }
 }

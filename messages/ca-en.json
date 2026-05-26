@@ -20,5 +20,22 @@
       "team": "Team",
       "settings": "Settings"
     }
+  },
+  "locationBar": {
+    "message": "Are you in the right place? Choose your language to see content specific to your location.",
+    "selectLabel": "Choose your location language",
+    "continue": "Continue",
+    "close": "Close"
+  },
+  "topAnnouncement": {
+    "message": "Focus on your next breakthrough. We'll handle the heavy lifting.",
+    "learnMore": "Learn more",
+    "dismiss": "Dismiss announcement",
+    "modal": {
+      "title": "Important Information",
+      "description": "Here you can add detailed updates, policy notes, or service announcements that users should read before continuing.",
+      "close": "Close modal",
+      "button": "Close"
+    }
   }
 }

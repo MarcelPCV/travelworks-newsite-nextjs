@@ -6,6 +6,7 @@ import { useMemo, useState } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import { DEFAULT_ROUTE_LOCALE, localeOptions, routeToMessageLocale } from '../locale-config';
 import { Globe } from 'lucide-react';
+import CtaButton from './cta-button';
 
 const topLevelLinks = [
   { key: 'home', href: '#' },
@@ -68,7 +69,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-40 border-b border-zinc-200 bg-white/90 backdrop-blur">
       <nav className="mx-auto flex w-full max-w-6xl items-center px-4 py-3 sm:px-6 lg:px-8">
         <Link href={homeHref} className="text-xl font-semibold tracking-tight text-zinc-900">
-          Word Sprint
+          TravelWorks
         </Link>
 
         <button
@@ -124,6 +125,9 @@ export default function Navbar() {
               ) : null}
             </li>
           </ul>
+
+          <CtaButton label="ASK FOR A DEMO" variant="orangeGradient" size="xs" />
+          <CtaButton label="LOG IN" variant="blue" size="xs" />
 
           <div className="relative">
             <button
@@ -193,6 +197,11 @@ export default function Navbar() {
                 </div>
               ) : null}
             </li>
+          </ul>
+
+          <ul>
+            <li className="py-2"><CtaButton label="ASK FOR A DEMO" variant="orangeGradient" size="xs" /></li>
+            <li className="py-2"><CtaButton label="LOG IN" variant="blue" size="xs" /></li>
           </ul>
 
           <div className="mt-3 border-t border-zinc-200 pt-3">
