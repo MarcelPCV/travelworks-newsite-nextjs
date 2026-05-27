@@ -6,19 +6,65 @@
   "nav": {
     "menu": "Menu",
     "close": "Close",
-    "languageTitle": "",
+    "languageTitle": "Languages",
     "languagePrefix": "{language}",
-    "items": {
-      "home": "Home",
-      "services": "Services",
-      "pricing": "Pricing",
-      "contact": "Contact",
-      "more": "Dropdown"
+    "languages": {
+      "en": "English (Global)",
+      "ca-en": "English (Canada)",
+      "ca-fr": "French (Canada)",
+      "au-en": "English (Australia)"
     },
-    "secondLevel": {
-      "dashboard": "Dashboard",
-      "team": "Team",
-      "settings": "Settings"
+    "topLevel": {
+      "products": "Products",
+      "aboutUs": "About Us",
+      "training": "Training",
+      "support": "Support"
+    },
+    "brand": {
+      "name": "TravelWorks"
+    },
+    "products": {
+      "subtitle": "travel-agency-software",
+      "promoMessage": "Discover TravelWorks, the ultimate software platform for modern travel agencies.",
+      "categories": {
+        "travelworks": "Travelworks",
+        "tourOnline": "TourOnline",
+        "travelPortal": "Travel Portal"
+      },
+      "links": {
+        "features": "Features",
+        "benefits": "Benefits",
+        "tourOnline": "TourOnline",
+        "backofficeSystem": "Backoffice System",
+        "tripDetails": "Trip Details",
+        "tourManagement": "Tour Management",
+        "crmTools": "CRM Tools",
+        "dashboardReports": "Dashboard Reports",
+        "integrations": "Integrations",
+        "customizations": "Customizations",
+        "tryIt": "Try It",
+        "askForDemo": "Ask for a Demo"
+      }
+    },
+    "aboutUs": {
+      "company": "Travelworks Company",
+      "clients": "Clients",
+      "partners": "Partners",
+      "contact": "Contact"
+    },
+    "training": {
+      "platform": "Training Platform",
+      "knowledgeBase": "Knowledge Base"
+    },
+    "cta": {
+      "askForDemo": "ASK FOR A DEMO",
+      "logIn": "LOG IN",
+      "logInOptions": {
+        "travelworks": "Travelworks",
+        "support": "Support",
+        "trainingPlatform": "Training Platform",
+        "knowledgeBase": "Knowledge Base"
+      }
     }
   },
   "locationBar": {
@@ -37,5 +83,11 @@
       "close": "Close modal",
       "button": "Close"
     }
+  },
+  "newsTicker": {
+    "label": "News",
+    "headline": "Travelworks launches new tools to master accounting software",
+    "phone": "1 877 282-4556",
+    "phoneAriaLabel": "Call {phone}"
   }
 }

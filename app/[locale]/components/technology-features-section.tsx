@@ -39,11 +39,11 @@ function FeatureIcon({ item }: { item: TechnologyFeatureItem }) {
   const Icon = item.iconComponent ?? Cog;
 
   return (
-    <div className="relative flex h-24 w-24 items-center justify-center rounded-full bg-brand-blue shadow-[0_10px_24px_rgba(46,92,179,0.26)]">
+    <div className="relative flex h-20 w-20 items-center justify-center rounded-full bg-brand-blue shadow-[0_10px_24px_rgba(46,92,179,0.26)]">
       {item.icon ? (
-        <div className="h-12 w-12 [&>svg]:h-full [&>svg]:w-full">{item.icon}</div>
+        <div className="h-10 w-10 [&>svg]:h-full [&>svg]:w-full">{item.icon}</div>
       ) : (
-        <Icon className="h-12 w-12 text-white" strokeWidth={1.9} />
+        <Icon className="h-10 w-10 text-white" strokeWidth={1.9} />
       )}
       <span className="pointer-events-none absolute -right-0.5 top-1/2 h-3.5 w-3.5 -translate-y-1/2 rounded-full bg-brand-orange-light" />
     </div>
@@ -77,10 +77,10 @@ export default function TechnologyFeaturesSection({
           return (
             <article
               key={item.id}
-              className="flex w-[calc(50%-0.75rem)] max-w-[11rem] flex-col items-center text-center sm:w-[calc(33.333%-1rem)] md:w-[calc(20%-1.25rem)] xl:w-[calc(14.285%-1.3rem)]"
+              className="flex w-[calc(50%-0.75rem)] max-w-[11rem] flex-col items-center text-center sm:w-[calc(33.333%-1.3rem)] md:w-[calc(20%-1.5rem)] xl:w-[calc(14.285%-1.7rem)]"
             >
               <FeatureIcon item={item} />
-              <p className="mt-3 max-w-[12ch] text-2xl font-medium leading-tight text-brand-blue">{item.label}</p>
+              <p className="mt-3 max-w-[12ch] text-md font-medium leading-tight text-brand-blue">{item.label}</p>
             </article>
           );
         })}

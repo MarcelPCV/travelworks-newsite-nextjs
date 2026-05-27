@@ -6,6 +6,7 @@ import CustomersTrustSection from './components/customers-trust-section';
 import FooterLinkColumnsSection from './components/footer-link-columns-section';
 import ContactBarSection from './components/contact-bar-section';
 import HeroCarousel, { type HeroSlide } from './components/hero-carousel';
+import NewsTickerBar from './components/news-ticker-bar';
 import NewsSection from './components/news-section';
 import PlatformShowcaseSection from './components/platform-showcase-section';
 import PlanningDemoSection from './components/planning-demo-section';
@@ -53,7 +54,10 @@ export default function LocalePage() {
 
   return (
     <div className="flex w-full flex-col gap-10 py-2">
-      <HeroCarousel slides={slides} effect="fade" navigation pagination contentAlignment="alternate" />
+      <div className="space-y-0">
+        <NewsTickerBar />
+        <HeroCarousel slides={slides} effect="fade" navigation pagination contentAlignment="alternate" />
+      </div>
       <TechnologyFeaturesSection />
       <PlatformShowcaseSection />
       <WhyTravelworksSection />

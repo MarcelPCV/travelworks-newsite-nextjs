@@ -7,18 +7,64 @@
     "menu": "Menu",
     "close": "Fermer",
     "languageTitle": "Langues",
-    "languagePrefix": "Langue : {language}",
-    "items": {
-      "home": "Accueil",
-      "services": "Services",
-      "pricing": "Tarifs",
-      "contact": "Contact",
-      "more": "Menu"
+    "languagePrefix": "{language}",
+    "languages": {
+      "en": "Anglais (Global)",
+      "ca-en": "Anglais (Canada)",
+      "ca-fr": "Français (Canada)",
+      "au-en": "Anglais (Australie)"
     },
-    "secondLevel": {
-      "dashboard": "Tableau de bord",
-      "team": "Equipe",
-      "settings": "Parametres"
+    "topLevel": {
+      "products": "Produits",
+      "aboutUs": "A propos",
+      "training": "Formation",
+      "support": "Support"
+    },
+    "brand": {
+      "name": "TravelWorks"
+    },
+    "products": {
+      "subtitle": "travel-agency-software",
+      "promoMessage": "Decouvrez TravelWorks, la plateforme logicielle ultime pour les agences de voyage modernes.",
+      "categories": {
+        "travelworks": "Travelworks",
+        "tourOnline": "TourOnline",
+        "travelPortal": "Travel Portal"
+      },
+      "links": {
+        "features": "Fonctionnalites",
+        "benefits": "Avantages",
+        "backofficeSystem": "Systeme Backoffice",
+        "tripDetails": "Details du voyage",
+        "tourManagement": "Gestion des tours",
+         "tourOnline": "TourOnline",
+        "crmTools": "Outils CRM",
+        "dashboardReports": "Rapports de tableau de bord",
+        "integrations": "Integrations",
+        "customizations": "Personnalisations",
+        "tryIt": "Essayer",
+        "askForDemo": "Demander une demo"
+      }
+    },
+    "aboutUs": {
+      "company": "Societe Travelworks",
+      "clients": "Clients",
+      "partners": "Partenaires",
+      "contact": "Contact"
+    },
+    "training": {
+      "platform": "Plateforme de formation",
+      "knowledgeBase": "Base de connaissances"
+    },
+    "cta": {
+      "askForDemo": "DEMANDER UNE DEMO",
+      "logIn": "SE CONNECTER",
+      "logInOptions": {
+        "travelworks": "PCVoyages",
+        "support": "Support",
+        "trainingPlatform": "Plateforme de formation",
+        "knowledgeBase": "Base de connaissances"
+      }
     }
   },
   "locationBar": {
@@ -37,5 +83,11 @@
       "close": "Fermer la fenetre",
       "button": "Fermer"
     }
+  },
+  "newsTicker": {
+    "label": "Nouvelles",
+    "headline": "Travelworks lance de nouveaux outils pour maitriser les logiciels de comptabilite",
+    "phone": "1 877 282-4556",
+    "phoneAriaLabel": "Appeler le {phone}"
   }
 }
