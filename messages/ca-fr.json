@@ -89,5 +89,14 @@
     "headline": "Travelworks lance de nouveaux outils pour maitriser les logiciels de comptabilite",
     "phone": "1 877 282-4556",
     "phoneAriaLabel": "Appeler le {phone}"
+  },
+  "consent": {
+    "descriptionBeforePrivacy": "Ce site utilise des cookies pour ameliorer votre experience de navigation, analyser le trafic du site et afficher du contenu personnalise. Veuillez consulter notre",
+    "privacyPolicyLabel": "Politique de confidentialite",
+    "betweenLinksText": "et notre",
+    "cookiePolicyLabel": "Politique relative aux cookies",
+    "descriptionAfterCookie": " pour plus d'informations.",
+    "privacyPolicyUrl": "#",
+    "cookiePolicyUrl": "#"
   }
 }

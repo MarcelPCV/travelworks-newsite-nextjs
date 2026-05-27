@@ -24,6 +24,7 @@ import {
   Star,
   UserCog,
   Users,
+  CircleArrowRight,
   type LucideIcon,
 } from 'lucide-react';
 import CtaButton from './cta-button';
@@ -125,10 +126,10 @@ export default function Navbar() {
   const homeHref = currentRouteLocale === DEFAULT_ROUTE_LOCALE ? '/' : `/${currentRouteLocale}`;
 
   const logInOptions: DropdownCtaOption[] = [
-    { id: 'Travelworks', label: t('cta.logInOptions.travelworks'), href: '#' , icon: <UserCog aria-hidden="true" /> },
-    { id: 'Support', label: t('cta.logInOptions.support'), href: '#', icon: <KeyRound aria-hidden="true" /> },
-    { id: 'Training', label: t('cta.logInOptions.trainingPlatform'), href: '#', icon: <KeyRound aria-hidden="true" /> },
-    { id: 'Knowledge Base', label: t('cta.logInOptions.knowledgeBase'), href: '#', icon: <ShieldCheck aria-hidden="true" /> },
+    { id: 'Travelworks', label: t('cta.logInOptions.travelworks'), href: '#' , icon: <CircleArrowRight aria-hidden="true" /> },
+    { id: 'Support', label: t('cta.logInOptions.support'), href: '#', icon: <CircleArrowRight aria-hidden="true" /> },
+    { id: 'Training', label: t('cta.logInOptions.trainingPlatform'), href: '#', icon: <CircleArrowRight aria-hidden="true" /> },
+    { id: 'Knowledge Base', label: t('cta.logInOptions.knowledgeBase'), href: '#', icon: <CircleArrowRight aria-hidden="true" /> },
   ];
 
   const getLanguageLabel = useCallback((route: string) => {

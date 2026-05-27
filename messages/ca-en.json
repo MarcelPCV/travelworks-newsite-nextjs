@@ -89,5 +89,14 @@
     "headline": "Travelworks launches new tools to master accounting software",
     "phone": "1 877 282-4556",
     "phoneAriaLabel": "Call {phone}"
+  },
+  "consent": {
+    "descriptionBeforePrivacy": "This site uses cookies to improve your browsing experience, analyze site traffic, and display personalized content. Please review our",
+    "privacyPolicyLabel": "Privacy Policy",
+    "betweenLinksText": "and",
+    "cookiePolicyLabel": "Cookie Policy",
+    "descriptionAfterCookie": " for more information.",
+    "privacyPolicyUrl": "#",
+    "cookiePolicyUrl": "#"
   }
 }
