@@ -50,7 +50,7 @@ export default function TopAnnouncementBar() {
   return (
     <>
       <div className="border-b border-blue-700 bg-[#0074ff] text-white">
-        <div className="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-4 py-1 sm:px-6 lg:px-8">
+        <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-4 py-1 sm:px-6 lg:px-8">
           <p className="text-center text-sm leading-5 md:text-left">{t('message')}</p>
 
           <div className="flex shrink-0 items-center gap-3">
