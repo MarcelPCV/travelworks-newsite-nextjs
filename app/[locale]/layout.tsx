@@ -16,16 +16,16 @@ export default async function LocaleLayout({
 }) {
   // `params` may be a Promise in some Next.js versions — await it and read locale to support both sync and async shapes
   const { locale } = await Promise.resolve(params);
-  const file = routeToMessageLocale[locale] ?? 'en-US';
+  const file = routeToMessageLocale[locale] ?? 'en-us';
 
   let messages: AbstractIntlMessages = {};
   try {
     messages = (await import(`../../messages/${file}.json`)).default;
   } catch {
-    messages = (await import(`../../messages/en-US.json`)).default;
+    messages = (await import(`../../messages/en-us.json`)).default;
   }
 
-  // Pass the message locale (e.g. 'en-US') to the client provider so it can be inferred reliably
+  // Pass the message locale (e.g. 'en-us') to the client provider so it can be inferred reliably
   return (
     <IntlProviderWrapper locale={file} messages={messages}>
       <div className="min-h-screen bg-zinc-50">

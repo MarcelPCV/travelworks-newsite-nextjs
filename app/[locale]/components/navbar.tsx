@@ -25,6 +25,8 @@ import {
   UserCog,
   Users,
   CircleArrowRight,
+  Search,
+  X,
   type LucideIcon,
 } from 'lucide-react';
 import CtaButton from './cta-button';
@@ -116,8 +118,10 @@ export default function Navbar() {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [mobileSection, setMobileSection] = useState<'products' | 'aboutUs' | 'training' | null>(null);
   const [isLangOpen, setIsLangOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [loginDropdownCloseSignal, setLoginDropdownCloseSignal] = useState(0);
   const closeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const searchInputRef = useRef<HTMLInputElement | null>(null);
   const headerRef = useRef<HTMLElement | null>(null);
 
   const currentRouteLocale =
@@ -179,6 +183,18 @@ export default function Navbar() {
   };
 
   useEffect(() => {
+    if (!isSearchOpen) {
+      return;
+    }
+
+    const frame = requestAnimationFrame(() => {
+      searchInputRef.current?.focus();
+    });
+
+    return () => cancelAnimationFrame(frame);
+  }, [isSearchOpen]);
+
+  useEffect(() => {
     const onDocumentClick = (event: MouseEvent) => {
       if (!headerRef.current) {
         return;
@@ -197,6 +213,7 @@ export default function Navbar() {
         setActiveDesktopPanel(null);
         setIsLangOpen(false);
         setIsMobileOpen(false);
+        setIsSearchOpen(false);
         setLoginDropdownCloseSignal((prev) => prev + 1);
       }
     };
@@ -212,7 +229,8 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header
+    <>
+      <header
       ref={headerRef}
       className="sticky top-0 z-40 border-b border-zinc-200 bg-white/95 backdrop-blur"
       onMouseEnter={clearScheduledClose}
@@ -394,6 +412,19 @@ export default function Navbar() {
           </ul>
 
           <div className="flex items-center gap-2">
+            <button
+              type="button"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-md text-zinc-700 transition hover:bg-zinc-200"
+              aria-label="Open search"
+              onClick={() => {
+                setIsSearchOpen(true);
+                setActiveDesktopPanel(null);
+                setIsLangOpen(false);
+                setLoginDropdownCloseSignal((prev) => prev + 1);
+              }}
+            >
+              <Search className="h-5 w-5" aria-hidden="true" />
+            </button>
             <CtaButton label={t('cta.askForDemo')} variant="orangeGradient" size="xs" />
             <div
               onMouseEnter={() => {
@@ -685,6 +716,49 @@ export default function Navbar() {
           </div>
         </div>
       ) : null}
-    </header>
+
+      </header>
+
+      {isSearchOpen ? (
+        <div
+          className="fixed inset-0 z-[70] flex items-center justify-center bg-black/60 px-4 sm:px-6"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Site search"
+          onClick={() => setIsSearchOpen(false)}
+        >
+          <div className="w-full max-w-5xl" onClick={(event) => event.stopPropagation()}>
+            <div className="rounded-2xl border border-zinc-300 bg-white p-4 shadow-2xl sm:p-6">
+              <div className="flex items-center gap-3 rounded-xl border border-zinc-300 bg-zinc-50 px-4 py-3 sm:px-5">
+                <Search className="h-5 w-5 shrink-0 text-zinc-500" aria-hidden="true" />
+                <input
+                  ref={searchInputRef}
+                  type="search"
+                  placeholder="Search pages, products and help"
+                  className="h-10 w-full bg-transparent text-base text-zinc-800 placeholder:text-zinc-500 focus:outline-none"
+                />
+                <button
+                  type="button"
+                  className="hidden shrink-0 rounded-lg border border-zinc-300 px-3 py-2 text-sm font-semibold text-zinc-600 sm:inline-flex"
+                  onClick={() => setIsSearchOpen(false)}
+                >
+                  ESC
+                </button>
+                <button
+                  type="button"
+                  className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-zinc-300 text-zinc-600 transition hover:bg-zinc-100"
+                  aria-label="Close search"
+                  onClick={() => setIsSearchOpen(false)}
+                >
+                  <X className="h-4 w-4" aria-hidden="true" />
+                </button>
+              </div>
+
+              <p className="mt-4 px-1 text-sm text-zinc-500">Type at least 2 characters to start searching.</p>
+            </div>
+          </div>
+        </div>
+      ) : null}
+    </>
   );
 }

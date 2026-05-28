@@ -1,6 +1,6 @@
 {
-  "title": "Welcome (Australia)",
-  "subtitle": "To get started, edit the page.tsx file.",
+  "title": "Welcome (Canada - EN)",
+  "subtitle": "Get started by editing the page.tsx file.",
   "deploy": "Deploy Now",
   "docs": "Documentation",
   "nav": {
@@ -10,9 +10,9 @@
     "languagePrefix": "{language}",
     "languages": {
       "en": "English (Global)",
-      "ca-en": "English (Canada)",
-      "ca-fr": "French (Canada)",
-      "au-en": "English (Australia)"
+      "en-ca": "English (Canada)",
+      "fr-ca": "French (Canada)",
+      "en-au": "English (Australia)"
     },
     "topLevel": {
       "products": "Products",

@@ -5,7 +5,7 @@ const nextConfig = {
     return [
       {
         source: '/au',
-        destination: '/au-en',
+        destination: '/en-au',
       },
     ];
   },

@@ -7,10 +7,10 @@ export type LocaleOption = {
 export const DEFAULT_ROUTE_LOCALE = 'en';
 
 export const localeOptions: LocaleOption[] = [
-  { routeLocale: DEFAULT_ROUTE_LOCALE, messageLocale: 'en-US', label: 'English (Global)' },
-  { routeLocale: 'ca-en', messageLocale: 'ca-en', label: 'English (Canada)' },
-  { routeLocale: 'ca-fr', messageLocale: 'ca-fr', label: 'Francais (Canada)' },
-  { routeLocale: 'au-en', messageLocale: 'au-en', label: 'English (Australia)' },
+  { routeLocale: DEFAULT_ROUTE_LOCALE, messageLocale: 'en-us', label: 'English (Global)' },
+  { routeLocale: 'en-ca', messageLocale: 'en-ca', label: 'English (Canada)' },
+  { routeLocale: 'fr-ca', messageLocale: 'fr-ca', label: 'Francais (Canada)' },
+  { routeLocale: 'en-au', messageLocale: 'en-au', label: 'English (Australia)' },
 ];
 
 export const routeToMessageLocale = localeOptions.reduce<Record<string, string>>((acc, item) => {

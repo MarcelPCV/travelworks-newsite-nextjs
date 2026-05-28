@@ -14,7 +14,7 @@ export default function IntlProviderWrapper({
   messages: AbstractIntlMessages;
 }) {
   // Ensure a non-falsy locale is passed to NextIntlClientProvider
-  const effectiveLocale = locale || 'en-US';
+  const effectiveLocale = locale || 'en-us';
 
   return (
     <NextIntlClientProvider locale={effectiveLocale} messages={messages} timeZone="UTC">

@@ -2,7 +2,7 @@ import { expect, test } from '@playwright/test';
 
 test.describe('Navbar mega menu', () => {
   test('opens Products mega menu on hover and switches category content', async ({ page }) => {
-    await page.goto('/en-US');
+    await page.goto('/en-us');
 
     const productsTrigger = page.getByRole('button', { name: 'Products' });
     await productsTrigger.hover();
@@ -18,7 +18,7 @@ test.describe('Navbar mega menu', () => {
   });
 
   test('shows About Us and Training dropdown menus', async ({ page }) => {
-    await page.goto('/en-US');
+    await page.goto('/en-us');
 
     await page.getByRole('button', { name: 'About Us' }).hover();
     await expect(page.getByRole('menu', { name: 'About Us' })).toBeVisible();
@@ -30,7 +30,7 @@ test.describe('Navbar mega menu', () => {
   });
 
   test('supports keyboard open and escape close for products menu', async ({ page }) => {
-    await page.goto('/en-US');
+    await page.goto('/en-us');
 
     const productsTrigger = page.getByRole('button', { name: 'Products' });
     await productsTrigger.focus();

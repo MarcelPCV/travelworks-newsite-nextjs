@@ -2,7 +2,7 @@ import type { Preview } from '@storybook/nextjs-vite';
 import { Poppins } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 
-import enUsMessages from '../messages/en-US.json';
+import enUsMessages from '../messages/en-us.json';
 import '../app/globals.css';
 
 const poppins = Poppins({
@@ -16,7 +16,7 @@ const poppins = Poppins({
 const preview: Preview = {
   decorators: [
     (Story) => (
-      <NextIntlClientProvider locale="en-US" messages={enUsMessages} timeZone="UTC">
+      <NextIntlClientProvider locale="en-us" messages={enUsMessages} timeZone="UTC">
         <div className={`${poppins.variable} font-sans`}>
           <Story />
         </div>

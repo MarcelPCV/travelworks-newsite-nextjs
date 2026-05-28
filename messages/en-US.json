@@ -10,9 +10,9 @@
     "languagePrefix": "{language}",
     "languages": {
       "en": "English (Global)",
-      "ca-en": "English (Canada)",
-      "ca-fr": "French (Canada)",
-      "au-en": "English (Australia)"
+      "en-ca": "English (Canada)",
+      "fr-ca": "French (Canada)",
+      "en-au": "English (Australia)"
     },
     "topLevel": {
       "products": "Products",

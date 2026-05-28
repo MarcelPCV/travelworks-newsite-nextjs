@@ -16,15 +16,15 @@ Purpose
 
 2) High-level architecture
 - Next.js (App Router) project using the /app directory. Root layout: app/layout.tsx (contains <html> and <body> — only this layout should render them).
-- Internationalization: Per-locale route segments exist (examples: app/ca-fr, app/ca-en, app/au-en). A dedicated /en route is used for the English prefix.
-- Locale messages: JSON files live in /messages (found: en-US.json, ca-en.json, ca-fr.json, au-en.json). Messages are intended to be loaded server-side by next-intl.
+- Internationalization: Per-locale route segments exist (examples: app/fr-ca, app/en-ca, app/en-au). A dedicated /en route is used for the English prefix.
+- Locale messages: JSON files live in /messages (found: en-us.json, en-ca.json, fr-ca.json, en-au.json). Messages are intended to be loaded server-side by next-intl.
 - next-intl is installed and intended to be integrated via NextIntlProvider at the root to provide messages and set <html lang=...> dynamically.
 - Styling and fonts: Tailwind CSS + next/font used. Fonts are set up in app/layout.tsx (Geist + Geist_Mono).
 - Keep SSR deterministic: avoid Date.now(), Math.random(), or client-only locale formatting in server components.
 
 3) Key conventions and repo-specific rules
 - Single root html/body: NEVER render <html> or <body> in nested layouts/components. Only app/layout.tsx should contain those tags — nested layouts must return children only.
-- Locale message filenames: Use locale-like identifiers (e.g., en-US.json, ca-en.json). Keep minimal keys when adding new locale files (e.g., title, nav.home) to avoid build-time failures.
+- Locale message filenames: Use locale-like identifiers (e.g., en-us.json, en-ca.json). Keep minimal keys when adding new locale files (e.g., title, nav.home) to avoid build-time failures.
 - Route-type consistency: Adding layouts in new route segments can trigger type-check or runtime errors. Prefer server-only page components for simple locale pages unless layout logic is required.
 - Avoid branching on typeof window in server components. Use client components when runtime detection is required.
 - next-intl usage: Provide messages server-side (NextIntlProvider) and prefer useTranslations in components rather than ad-hoc client-side lookups.
@@ -33,8 +33,13 @@ Purpose
 - app/layout.tsx (fonts, root lang/class, html/body)
 - app/page.tsx and per-locale pages under app/*
 - messages/*.json (locale message content)
+- app/api/pages/[id]/route.ts (page API proxy route)
 - package.json (scripts, next and dependency versions)
 - AGENTS.md (root) — contains agent conventions to review before launching sub-agents
+
+API route organization
+- Keep API page proxy logic centralized in app/api/pages/[id]/route.ts.
+- Pass page identifiers directly through /api/pages/[id] and keep query passthrough behavior unchanged.
 
 5) Agent / workflow notes
 - Before changing layouts, run a build (npm run build) locally to catch route-type and hydration issues.
