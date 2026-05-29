@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { useTranslations } from 'next-intl';
 import BenefitsBanner from './components/benefits-banner';
@@ -14,11 +14,11 @@ import TechnologyFeaturesSection from './components/technology-features-section'
 import WhyTravelworksSection from './components/why-travelworks-section';
 
 export default function LocalePage() {
+  const t = useTranslations();
+
   return (
     <div className="flex w-full flex-col gap-4 py-2">
-      <h1 className="sr-only">
-        TravelWorks Travel Management Platform
-      </h1>
+      <h1 className="sr-only">{t('title')}</h1>
       <NewsTickerBar />
       <PageApiDebugCarousel />
       <TechnologyFeaturesSection />

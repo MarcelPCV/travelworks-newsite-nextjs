@@ -12,18 +12,16 @@
 # Error details
 
 ```
-Error: expect(locator).toBeVisible() failed
+Error: expect(locator).toBeFocused() failed
 
-Locator:  locator('#products-mega-menu')
-Expected: visible
-Received: hidden
-Timeout:  5000ms
+Locator: getByRole('button', { name: 'Travelworks' })
+Expected: focused
+Timeout: 5000ms
+Error: element(s) not found
 
 Call log:
-  - Expect "toBeVisible" with timeout 5000ms
-  - waiting for locator('#products-mega-menu')
-    14 × locator resolved to <div role="menu" aria-hidden="true" aria-label="Products" id="products-mega-menu" class="absolute inset-x-0 top-full hidden border-t border-zinc-200 bg-gray-400 lg:block pointer-events-none invisible">…</div>
-       - unexpected value "hidden"
+  - Expect "toBeFocused" with timeout 5000ms
+  - waiting for getByRole('button', { name: 'Travelworks' })
 
 ```
 
@@ -51,7 +49,7 @@ Call log:
     - button "LOG IN"
     - button "English (Global)"
 - main:
-  - heading "TravelWorks Travel Management Platform" [level=1]
+  - heading "Welcome" [level=1]
   - region "News":
     - text: News
     - paragraph: Travelworks launches new tools to master accounting software
@@ -332,9 +330,9 @@ Call log:
   37 |     await page.keyboard.press('ArrowDown');
   38 | 
   39 |     const megaMenu = page.locator('#products-mega-menu');
-> 40 |     await expect(megaMenu).toBeVisible();
-     |                            ^ Error: expect(locator).toBeVisible() failed
-  41 |     await expect(page.getByRole('button', { name: 'Travelworks' })).toBeFocused();
+  40 |     await expect(megaMenu).toBeVisible();
+> 41 |     await expect(page.getByRole('button', { name: 'Travelworks' })).toBeFocused();
+     |                                                                     ^ Error: expect(locator).toBeFocused() failed
   42 | 
   43 |     await page.keyboard.press('Escape');
   44 |     await expect(megaMenu).not.toBeVisible();
