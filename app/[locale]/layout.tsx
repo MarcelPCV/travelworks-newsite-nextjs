@@ -1,6 +1,7 @@
 import IntlProviderWrapper from './intl-provider';
 import type { ReactNode } from 'react';
 import type { AbstractIntlMessages } from 'next-intl';
+import enUS from '../../messages/en-us.json';
 import Navbar from './components/navbar';
 import LocationConfirmationBar from './components/location-confirmation-bar';
 import TopAnnouncementBar from './components/top-announcement-bar';
@@ -18,11 +19,15 @@ export default async function LocaleLayout({
   const { locale } = await Promise.resolve(params);
   const file = routeToMessageLocale[locale] ?? 'en-us';
 
-  let messages: AbstractIntlMessages = {};
-  try {
-    messages = (await import(`../../messages/${file}.json`)).default;
-  } catch {
-    messages = (await import(`../../messages/en-us.json`)).default;
+  // Statically import the default messages so Turbopack can resolve the module during build.
+  let messages: AbstractIntlMessages = enUS;
+
+  if (file !== 'en-us') {
+    try {
+      messages = (await import(`../../messages/${file}.json`)).default;
+    } catch {
+      messages = enUS;
+    }
   }
 
   // Pass the message locale (e.g. 'en-us') to the client provider so it can be inferred reliably

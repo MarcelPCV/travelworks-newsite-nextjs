@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Rewrites replace simple middleware rewrites
+  // Rewrites replace simple proxy rewrites (formerly middleware)
   async rewrites() {
     return [
       {

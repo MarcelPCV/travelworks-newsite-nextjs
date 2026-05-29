@@ -1,8 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server';
 
+// Replacement for the deprecated `middleware.ts` convention.
+// Keep behavior identical to the previous middleware implementation.
+
 const DEFAULT_ROUTE_LOCALE = 'en';
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   // Keep static assets and framework routes untouched.

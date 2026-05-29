@@ -79,7 +79,7 @@ Avoid inline styles.
 
 - Use Clerk authentication
 - Protect server routes
-- Use middleware when necessary
+ - Use proxy when necessary (`proxy.ts`); keep `middleware.ts` shim for compatibility
 - Never expose secrets in client components
 - Always validate sessions in server actions
 
