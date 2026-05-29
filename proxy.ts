@@ -1,9 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-// Replacement for the deprecated `middleware.ts` convention.
-// Keep behavior identical to the previous middleware implementation.
-
 const DEFAULT_ROUTE_LOCALE = 'en';
+const SUPPORTED_ROUTE_LOCALES = ['en', 'en-ca', 'fr-ca', 'en-au'] as const;
+
+function getFirstSegment(pathname: string) {
+  return pathname.split('/')[1] ?? '';
+}
 
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
@@ -18,13 +20,19 @@ export function proxy(request: NextRequest) {
     const url = request.nextUrl.clone();
     const nextPath = pathname.slice(DEFAULT_ROUTE_LOCALE.length + 1) || '/';
     url.pathname = nextPath;
-    return NextResponse.redirect(url);
+    return NextResponse.redirect(url, 308);
   }
 
-  // Serve the default locale from root while keeping the visible URL clean.
-  if (pathname === '/') {
+  // Rewrite unprefixed paths to the default locale while keeping clean URLs.
+  // Examples: / -> /en, /features -> /en/features
+  const firstSegment = getFirstSegment(pathname);
+  const isLocalePrefixed = SUPPORTED_ROUTE_LOCALES.includes(
+    firstSegment as (typeof SUPPORTED_ROUTE_LOCALES)[number],
+  );
+
+  if (!isLocalePrefixed) {
     const url = request.nextUrl.clone();
-    url.pathname = `/${DEFAULT_ROUTE_LOCALE}`;
+    url.pathname = `/${DEFAULT_ROUTE_LOCALE}${pathname === '/' ? '' : pathname}`;
     return NextResponse.rewrite(url);
   }
 
