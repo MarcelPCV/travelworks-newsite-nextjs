@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/nextjs-vite';
 import { ArrowRight, LogIn } from 'lucide-react';
 
-import CtaButton from '@/app/[locale]/components/cta-button';
+import CtaButton from '@/app/[locale]/components/ui/cta-button';
 
 const meta = {
   title: 'App/CtaButton',

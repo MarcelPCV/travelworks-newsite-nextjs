@@ -1,35 +1,33 @@
-"use client";
+import { notFound } from 'next/navigation';
+import LayoutRenderer from './[slug]/blocks/layout-renderer';
+import { getCmsPageBySlug } from './cms-page';
+import { getHomepageSlugCandidates } from './locale-config';
 
-import { useTranslations } from 'next-intl';
-import BenefitsBanner from './components/benefits-banner';
-import CustomersTrustSection from './components/customers-trust-section';
-import FooterLinkColumnsSection from './components/footer-link-columns-section';
-import ContactBarSection from './components/contact-bar-section';
-import PageApiDebugCarousel from './components/page-api-debug-carousel';
-import NewsTickerBar from './components/news-ticker-bar';
-import NewsSection from './components/news-section';
-import PlatformShowcaseSection from './components/platform-showcase-section';
-import PlanningDemoSection from './components/planning-demo-section';
-import TechnologyFeaturesSection from './components/technology-features-section';
-import WhyTravelworksSection from './components/why-travelworks-section';
+export default async function LocalePage({
+  params,
+}: {
+  params: { locale: string } | Promise<{ locale: string }>;
+}) {
+  const { locale } = await Promise.resolve(params);
+  let page = null;
 
-export default function LocalePage() {
-  const t = useTranslations();
+  for (const slug of getHomepageSlugCandidates(locale)) {
+    page = await getCmsPageBySlug(slug, locale);
+    if (page) {
+      break;
+    }
+  }
+
+  if (!page) {
+    notFound();
+  }
 
   return (
-    <div className="flex w-full flex-col gap-4 py-2">
-      <h1 className="sr-only">{t('title')}</h1>
-      <NewsTickerBar />
-      <PageApiDebugCarousel />
-      <TechnologyFeaturesSection />
-      <PlatformShowcaseSection />
-      <WhyTravelworksSection />
-      <BenefitsBanner />
-      <CustomersTrustSection />
-      <PlanningDemoSection />
-      <NewsSection />
-      <ContactBarSection />
-      <FooterLinkColumnsSection />
-    </div>
+    <main>
+      <h1 className="sr-only">{page.title ?? 'Home'}</h1>
+      <div className="flex w-full flex-col gap-4 py-2">
+        <LayoutRenderer layout={Array.isArray(page.layout) ? page.layout : []} pageTitle={page.title} />
+      </div>
+    </main>
   );
 }

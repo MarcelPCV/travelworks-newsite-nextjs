@@ -4,26 +4,9 @@ import { ChevronDown, X } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
 import { usePathname, useRouter } from 'next/navigation';
 import { useEffect, useMemo, useState } from 'react';
-import { DEFAULT_ROUTE_LOCALE, localeOptions, routeToMessageLocale } from '../locale-config';
+import { DEFAULT_ROUTE_LOCALE, localeOptions, replaceLocaleInPath, routeToMessageLocale } from '../locale-config';
 
 const DISMISSED_STORAGE_KEY = 'travelworks.location_bar.dismissed';
-
-function replaceLocaleInPath(pathname: string, targetLocale: string): string {
-  const segments = pathname.split('/').filter(Boolean);
-  const knownRouteLocales = new Set(localeOptions.map((item) => item.routeLocale));
-
-  if (segments.length > 0 && knownRouteLocales.has(segments[0])) {
-    segments.shift();
-  }
-
-  const suffixPath = segments.join('/');
-
-  if (targetLocale === DEFAULT_ROUTE_LOCALE) {
-    return suffixPath ? `/${suffixPath}` : '/';
-  }
-
-  return suffixPath ? `/${targetLocale}/${suffixPath}` : `/${targetLocale}`;
-}
 
 export default function LocationConfirmationBar() {
   const pathname = usePathname();

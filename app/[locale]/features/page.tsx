@@ -2,6 +2,7 @@ import FeaturesHeroSection from '../components/features-hero-section';
 import FeaturesMasonrySection from '../components/features-masonry-section';
 import IntroSection from '../components/intro-section';
 import ComparisonSolutionSection from '../components/comparison-solution-section';
+import FeaturesHighlightsSection from '../components/features-highlights-section';
 import YoutubeVideoSection from '../components/youtube-video-section';
 import NewsSection from '../components/news-section';
 import FooterLinkColumnsSection from '../components/footer-link-columns-section';
@@ -21,6 +22,7 @@ export default function FeaturesPage() {
       <FeaturesMasonrySection className="mt-4 sm:mt-6" />
       <YoutubeVideoSection className="mt-4 sm:mt-6" />
       <ComparisonSolutionSection className="mt-4 sm:mt-6" />
+      <FeaturesHighlightsSection className="mt-4 sm:mt-6" />
       <NewsSection className="mt-4 sm:mt-6" />
       <FooterLinkColumnsSection className="mt-4 sm:mt-6" />
     </div>

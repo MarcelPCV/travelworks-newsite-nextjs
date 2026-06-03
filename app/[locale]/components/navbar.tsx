@@ -4,32 +4,36 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useMemo, useRef, useState, useCallback } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
-import { DEFAULT_ROUTE_LOCALE, localeOptions, routeToMessageLocale } from '../locale-config';
+import {
+  DEFAULT_ROUTE_LOCALE,
+  getTravelAgencySoftwareSegment,
+  localeOptions,
+  replaceLocaleInPath,
+  routeToMessageLocale,
+  travelAgencySoftwareSlugs,
+} from '../locale-config';
 import {
   BarChart3,
   BookOpen,
   Building2,
   ChevronDown,
-  KeyRound,
   Globe,
   GraduationCap,
   Link2,
   Mail,
   Map,
   MessageCircle,
-  ShieldCheck,
   PlayCircle,
   Settings,
   SlidersHorizontal,
   Star,
-  UserCog,
   Users,
   CircleArrowRight,
   Search,
   X,
   type LucideIcon,
 } from 'lucide-react';
-import CtaButton from './cta-button';
+import CtaButton from './ui/cta-button';
 import DropdownCtaButton, { type DropdownCtaOption } from './dropdown-cta-button';
 
 type DesktopPanel = 'products' | 'aboutUs' | 'training' | null;
@@ -45,8 +49,6 @@ type ProductLinkKey =
   | 'integrations'
   | 'dashboardReports'
   | 'customizations'
-  | 'askForDemo'
-  | 'tryIt';
 
 const productCategories: ProductCategory[] = ['travelworks'];
 
@@ -54,7 +56,7 @@ const productColumnsByCategory: Record<ProductCategory, ProductLinkKey[][]> = {
   travelworks: [
     ['features', 'benefits', 'backofficeSystem', 'tripDetails'],
     ['tourManagement', 'tourOnline', 'crmTools', 'integrations'],
-    ['dashboardReports', 'customizations', 'askForDemo'],
+    ['dashboardReports', 'customizations'],
   ],
 };
 
@@ -73,9 +75,7 @@ const productLinkIcons: Record<ProductLinkKey, LucideIcon> = {
   crmTools: Users,
   dashboardReports: BarChart3,
   integrations: Link2,
-  customizations: SlidersHorizontal,
-  askForDemo: MessageCircle,
-  tryIt: PlayCircle,
+  customizations: SlidersHorizontal
 };
 
 const aboutUsLinkIcons: Record<(typeof aboutUsLinks)[number], LucideIcon> = {
@@ -90,23 +90,37 @@ const trainingLinkIcons: Record<(typeof trainingLinks)[number], LucideIcon> = {
   knowledgeBase: BookOpen,
 };
 
-function replaceLocaleInPath(pathname: string, targetLocale: string): string {
-  const segments = pathname.split('/').filter(Boolean);
-  const knownRouteLocales = new Set(localeOptions.map((item) => item.routeLocale));
+const productSlugByKey: Record<ProductLinkKey, string> = {
+  features: 'features',
+  benefits: 'benefits',
+  backofficeSystem: 'back-office-travel-agency',
+  tripDetails: 'trip-details',
+  tourManagement: 'tour-management',
+  tourOnline: 'tour-online',
+  crmTools: 'crm-tools',
+  integrations: 'multiple-integration',
+  dashboardReports: 'dashboard-reports',
+  customizations: 'customizations',
+};
 
-  // If the current path starts with a locale segment, remove it before switching.
-  if (segments.length > 0 && knownRouteLocales.has(segments[0])) {
-    segments.shift();
-  }
+const aboutUsSlugByKey: Record<(typeof aboutUsLinks)[number], string> = {
+  company: '',
+  clients: 'clients',
+  partners: 'partners',
+  contact: 'contact',
+};
 
-  const suffixPath = segments.join('/');
+const trainingSlugByKey: Record<(typeof trainingLinks)[number], string> = {
+  platform: 'platform',
+  knowledgeBase: 'knowledge-base',
+};
 
-  if (targetLocale === DEFAULT_ROUTE_LOCALE) {
-    return suffixPath ? `/${suffixPath}` : '/';
-  }
-
-  return suffixPath ? `/${targetLocale}/${suffixPath}` : `/${targetLocale}`;
-}
+const loginSlugByOptionId: Record<'Travelworks' | 'Support' | 'Training' | 'Knowledge Base', string> = {
+  Travelworks: 'travelworks',
+  Support: 'support',
+  Training: 'training',
+  'Knowledge Base': 'knowledge-base',
+};
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -127,13 +141,65 @@ export default function Navbar() {
   const currentRouteLocale =
     localeOptions.find((item) => item.messageLocale === activeMessageLocale)?.routeLocale ?? DEFAULT_ROUTE_LOCALE;
 
+  const withLocalePrefix = useCallback(
+    (path: string) => (currentRouteLocale === DEFAULT_ROUTE_LOCALE ? path : `/${currentRouteLocale}${path}`),
+    [currentRouteLocale]
+  );
+
+  const oneLevelHref = useCallback((slug: string) => withLocalePrefix(`/${slug}`), [withLocalePrefix]);
+
+  const solutionHref = useCallback(
+    (linkKey: ProductLinkKey) => {
+      const canonicalSlug = productSlugByKey[linkKey];
+      const localizedSlug = travelAgencySoftwareSlugs[canonicalSlug]?.[currentRouteLocale] ?? canonicalSlug;
+      const localizedSegment = getTravelAgencySoftwareSegment(currentRouteLocale);
+      return withLocalePrefix(`/${localizedSegment}/${localizedSlug}`);
+    },
+    [currentRouteLocale, withLocalePrefix]
+  );
+
+  const aboutUsHref = useCallback(
+    (linkKey: (typeof aboutUsLinks)[number]) => {
+      const slug = aboutUsSlugByKey[linkKey];
+      return slug ? withLocalePrefix(`/about-us/${slug}`) : withLocalePrefix('/about-us');
+    },
+    [withLocalePrefix]
+  );
+
+  const trainingHref = useCallback(
+    (linkKey: (typeof trainingLinks)[number]) => withLocalePrefix(`/training/${trainingSlugByKey[linkKey]}`),
+    [withLocalePrefix]
+  );
+
   const homeHref = currentRouteLocale === DEFAULT_ROUTE_LOCALE ? '/' : `/${currentRouteLocale}`;
+  const askForDemoHref = oneLevelHref('ask-for-demo');
+  const supportHref = oneLevelHref('support');
 
   const logInOptions: DropdownCtaOption[] = [
-    { id: 'Travelworks', label: t('cta.logInOptions.travelworks'), href: '#' , icon: <CircleArrowRight aria-hidden="true" /> },
-    { id: 'Support', label: t('cta.logInOptions.support'), href: '#', icon: <CircleArrowRight aria-hidden="true" /> },
-    { id: 'Training', label: t('cta.logInOptions.trainingPlatform'), href: '#', icon: <CircleArrowRight aria-hidden="true" /> },
-    { id: 'Knowledge Base', label: t('cta.logInOptions.knowledgeBase'), href: '#', icon: <CircleArrowRight aria-hidden="true" /> },
+    {
+      id: 'Travelworks',
+      label: t('cta.logInOptions.travelworks'),
+      href: oneLevelHref(loginSlugByOptionId.Travelworks),
+      icon: <CircleArrowRight aria-hidden="true" />,
+    },
+    {
+      id: 'Support',
+      label: t('cta.logInOptions.support'),
+      href: oneLevelHref(loginSlugByOptionId.Support),
+      icon: <CircleArrowRight aria-hidden="true" />,
+    },
+    {
+      id: 'Training',
+      label: t('cta.logInOptions.trainingPlatform'),
+      href: oneLevelHref(loginSlugByOptionId.Training),
+      icon: <CircleArrowRight aria-hidden="true" />,
+    },
+    {
+      id: 'Knowledge Base',
+      label: t('cta.logInOptions.knowledgeBase'),
+      href: oneLevelHref(loginSlugByOptionId['Knowledge Base']),
+      icon: <CircleArrowRight aria-hidden="true" />,
+    },
   ];
 
   const getLanguageLabel = useCallback((route: string) => {
@@ -231,23 +297,23 @@ export default function Navbar() {
   return (
     <>
       <header
-      ref={headerRef}
-      className="sticky top-0 z-40 border-b border-zinc-200 bg-white/95 backdrop-blur"
-      onMouseEnter={clearScheduledClose}
-      onMouseLeave={() => {
-        schedulePanelClose();
-        setIsLangOpen(false);
-        setLoginDropdownCloseSignal((prev) => prev + 1);
-      }}
-      onBlurCapture={(event) => {
-        const nextFocused = event.relatedTarget as Node | null;
-        if (!nextFocused || !event.currentTarget.contains(nextFocused)) {
-          setActiveDesktopPanel(null);
+        ref={headerRef}
+        className="sticky top-0 z-40 border-b border-zinc-200 bg-white/95 backdrop-blur"
+        onMouseEnter={clearScheduledClose}
+        onMouseLeave={() => {
+          schedulePanelClose();
           setIsLangOpen(false);
           setLoginDropdownCloseSignal((prev) => prev + 1);
-        }
-      }}
-    >
+        }}
+        onBlurCapture={(event) => {
+          const nextFocused = event.relatedTarget as Node | null;
+          if (!nextFocused || !event.currentTarget.contains(nextFocused)) {
+            setActiveDesktopPanel(null);
+            setIsLangOpen(false);
+            setLoginDropdownCloseSignal((prev) => prev + 1);
+          }
+        }}
+      >
       <nav className="mx-auto flex w-full max-w-7xl items-center px-4 py-3 sm:px-6 lg:px-8">
         <Link href={homeHref} className="text-xl font-semibold tracking-tight text-zinc-900">
           {t('brand.name')}
@@ -337,7 +403,7 @@ export default function Navbar() {
                     return (
                   <Link
                     key={link}
-                    href="#"
+                    href={aboutUsHref(link)}
                     role="menuitem"
                     className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium text-zinc-800 transition duration-150 hover:bg-white"
                     onClick={() => setActiveDesktopPanel(null)}
@@ -388,7 +454,7 @@ export default function Navbar() {
                     return (
                   <Link
                     key={link}
-                    href="#"
+                    href={trainingHref(link)}
                     role="menuitem"
                     className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium text-zinc-800 transition duration-150 hover:bg-white"
                     onClick={() => setActiveDesktopPanel(null)}
@@ -425,7 +491,9 @@ export default function Navbar() {
             >
               <Search className="h-5 w-5" aria-hidden="true" />
             </button>
-            <CtaButton label={t('cta.askForDemo')} variant="orangeGradient" size="xs" />
+            <Link href={askForDemoHref}>
+              <CtaButton label={t('cta.askForDemo')} variant="orangeGradient" size="xs" />
+            </Link>
             <div
               onMouseEnter={() => {
                 clearScheduledClose();
@@ -525,7 +593,7 @@ export default function Navbar() {
                         return (
                       <Link
                         key={linkKey}
-                        href="#"
+                        href={solutionHref(linkKey)}
                         role="menuitem"
                         className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium text-zinc-800 transition duration-150 hover:bg-white"
                         onClick={() => setActiveDesktopPanel(null)}
@@ -585,7 +653,7 @@ export default function Navbar() {
                         return (
                       <Link
                         key={`mobile-${linkKey}`}
-                        href="#"
+                        href={solutionHref(linkKey)}
                         className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium text-zinc-700 hover:bg-white"
                       >
                         <Icon className={menuItemIconClassName} aria-hidden="true" />
@@ -621,7 +689,7 @@ export default function Navbar() {
                       return (
                     <Link
                       key={`mobile-${link}`}
-                      href="#"
+                      href={aboutUsHref(link)}
                       className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium text-zinc-700 hover:bg-white"
                     >
                       <Icon className={menuItemIconClassName} aria-hidden="true" />
@@ -656,7 +724,7 @@ export default function Navbar() {
                       return (
                     <Link
                       key={`mobile-${link}`}
-                      href="#"
+                      href={trainingHref(link)}
                       className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium text-zinc-700 hover:bg-white"
                     >
                       <Icon className={menuItemIconClassName} aria-hidden="true" />
@@ -670,7 +738,7 @@ export default function Navbar() {
             </li>
 
             <li>
-              <Link href="#" className="block rounded-md px-3 py-2 text-sm font-medium text-zinc-700 hover:bg-zinc-100">
+              <Link href={supportHref} className="block rounded-md px-3 py-2 text-sm font-medium text-zinc-700 hover:bg-zinc-100">
                 {t('topLevel.support')}
               </Link>
             </li>
@@ -678,7 +746,9 @@ export default function Navbar() {
 
           <ul className="mt-3">
             <li className="py-2">
-              <CtaButton label={t('cta.askForDemo')} variant="orangeGradient" size="xs" />
+              <Link href={askForDemoHref}>
+                <CtaButton label={t('cta.askForDemo')} variant="orangeGradient" size="xs" />
+              </Link>
             </li>
             <li className="py-2">
               <DropdownCtaButton
@@ -721,7 +791,7 @@ export default function Navbar() {
 
       {isSearchOpen ? (
         <div
-          className="fixed inset-0 z-[70] flex items-center justify-center bg-black/60 px-4 sm:px-6"
+          className="fixed inset-0 z-70 flex items-center justify-center bg-black/60 px-4 sm:px-6"
           role="dialog"
           aria-modal="true"
           aria-label="Site search"

@@ -8,7 +8,7 @@ export default function NewsTickerBar() {
   const phone = t('phone');
 
   return (
-    <section className="w-full border border-zinc-300 rounded-sm bg-[#f5f5f5]" aria-label={t('label')}>
+    <section className="mx-auto w-full max-w-7xl border border-zinc-300 rounded-sm bg-[#f5f5f5]" aria-label={t('label')}>
       <div className="mx-auto flex w-full max-w-7xl items-center gap-3 px-4 py-1 sm:px-6 lg:px-8">
         <span className="shrink-0 text-[13px] font-semibold uppercase leading-none tracking-tight text-zinc-950">{t('label')}</span>
 

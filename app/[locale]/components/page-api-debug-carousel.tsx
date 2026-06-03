@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
-import HeroCarousel, { type HeroSlide, type HeroContentPosition } from './old-components/hero-carousel';
+import HeroCarousel, { type HeroSlide, type HeroContentPosition } from './hero-carousel';
 
 const PAGE_ID = '1';
 

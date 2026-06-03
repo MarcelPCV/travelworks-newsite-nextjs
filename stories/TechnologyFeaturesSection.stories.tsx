@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/nextjs-vite';
 import { CircleDollarSign, ShieldCheck, Workflow } from 'lucide-react';
 
-import TechnologyFeaturesSection, {
+import IconsGridBlock, {
   type TechnologyFeatureItem,
-} from '@/app/[locale]/components/technology-features-section';
+} from '@/app/[locale]/[slug]/blocks/icons-grid-block';
 
 const customItems: TechnologyFeatureItem[] = [
   { id: 'payments', label: 'Payments Hub', iconComponent: CircleDollarSign },
@@ -13,11 +13,11 @@ const customItems: TechnologyFeatureItem[] = [
 
 const meta = {
   title: 'App/TechnologyFeaturesSection',
-  component: TechnologyFeaturesSection,
+  component: IconsGridBlock,
   parameters: {
     layout: 'fullscreen',
   },
-} satisfies Meta<typeof TechnologyFeaturesSection>;
+} satisfies Meta<typeof IconsGridBlock>;
 
 export default meta;
 

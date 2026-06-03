@@ -163,10 +163,6 @@ export default function HeroCarousel({
                     <div className="absolute left-5 top-5 h-12 w-28 rounded-md border border-white/50 bg-white/15 backdrop-blur-sm" />
                     <div className="absolute left-10 top-24 h-20 w-36 rounded-lg border border-white/45 bg-white/15 backdrop-blur-sm sm:h-24 sm:w-44" />
                     <div className="absolute right-8 top-16 h-28 w-16 rounded-xl border border-white/50 bg-white/20 backdrop-blur-sm sm:h-36 sm:w-20" />
-
-                    <div className="absolute inset-x-6 bottom-6 rounded-lg bg-white/85 px-4 py-3 text-center text-sm font-medium tracking-wide text-neutral-dark">
-                      {slide.mediaCaption}
-                    </div>
                   </div>
                 </div>
               </div>
