@@ -63,7 +63,7 @@ const productColumnsByCategory: Record<ProductCategory, ProductLinkKey[][]> = {
 const aboutUsLinks = ['company', 'clients', 'partners', 'contact'] as const;
 const trainingLinks = ['platform', 'knowledgeBase'] as const;
 
-const menuItemIconClassName = 'w-5 h-5 text-zinc-800';
+const menuItemIconClassName = 'w-5 h-5 transition duration-150 text-zinc-900';
 
 const productLinkIcons: Record<ProductLinkKey, LucideIcon> = {
   features: Settings,
@@ -567,7 +567,7 @@ export default function Navbar() {
         role="menu"
         aria-label={t('topLevel.products')}
         aria-hidden={!isProductsOpen}
-        className={`absolute inset-x-0 top-full hidden border-t border-zinc-200 bg-gray-400 lg:block ${
+        className={`absolute inset-x-0 top-full hidden border-t border-zinc-200 bg-background/90 backdrop-blur-sm lg:block ${
           isProductsOpen ? 'pointer-events-auto visible' : 'pointer-events-none invisible'
         }`}
       >
@@ -576,34 +576,38 @@ export default function Navbar() {
             isProductsOpen ? 'translate-y-0 opacity-100' : '-translate-y-1 opacity-0'
           }`}
         >
-          <div className="grid min-h-88 grid-cols-[260px_1fr] overflow-hidden rounded-2xl border border-zinc-300 bg-[#e5e5e5] shadow-xl">
-            <div className="border-r border-zinc-300 bg-zinc-300/70 p-8">
-              <p className="max-w-[12ch] text-2xl font-semibold leading-[1.4] tracking-tight text-zinc-950">
+          <div className="grid min-h-64 grid-cols-[260px_1fr] overflow-hidden">
+            <div className="border-r border-zinc-600 p-8">
+              <p className="max-w-[12ch] text-xl font-semibold leading-[1.4] tracking-tight text-white">
                 {t('products.promoMessage')}
               </p>
             </div>
 
             <div className="p-7">
-              <div className="grid grid-cols-3 gap-x-10 gap-y-8 xl:grid-cols-4">
+              <div className="grid grid-cols-3 gap-x-10 gap-y-8">
                 {productColumnsByCategory[activeProductCategory].map((column, columnIndex) => (
                   <div key={`${activeProductCategory}-${columnIndex}`} className="space-y-2">
-                    {column.map((linkKey) => (
-                      (() => {
-                        const Icon = productLinkIcons[linkKey];
-                        return (
-                      <Link
-                        key={linkKey}
-                        href={solutionHref(linkKey)}
-                        role="menuitem"
-                        className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium text-zinc-800 transition duration-150 hover:bg-white"
-                        onClick={() => setActiveDesktopPanel(null)}
-                      >
-                        <Icon className={menuItemIconClassName} aria-hidden="true" />
-                        {t(`products.links.${linkKey}`)}
-                      </Link>
-                        );
-                      })()
-                    ))}
+                    {column.map((linkKey) => {
+                      const Icon = productLinkIcons[linkKey];
+
+                      return (
+                        <Link
+                          key={linkKey}
+                          href={solutionHref(linkKey)}
+                          role="menuitem"
+                          onClick={() => setActiveDesktopPanel(null)}
+                          className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium text-white hover:text-zinc-900 transition duration-150 hover:bg-zinc-300"
+                        >
+                          <div className="w-10 h-10 shrink-0 bg-zinc-100 flex items-center justify-center rounded-full">
+                            <Icon className={menuItemIconClassName} aria-hidden="true" />
+                          </div>
+
+                          <span className="min-w-40 break-words">
+                            {t(`products.links.${linkKey}`)}
+                          </span>
+                        </Link>
+                      );
+                    })}
                   </div>
                 ))}
               </div>
