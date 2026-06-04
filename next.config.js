@@ -56,6 +56,11 @@ const nextConfig = {
         port: '3001',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'travelworks-newsite-payload-cms.vercel.app/',
+        pathname: '/**',
+      },
     ],
   },
   
