@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/nextjs-vite';
 
-import HeroCarousel, { type HeroSlide } from '@/app/[locale]/components/hero-carousel';
+import HeroCarousel, { type HeroSlide } from '@/app/[locale]/travel-agency-software/[slug]/blocks/hero-carousel';
 
 const perSlideOverrideSlides: HeroSlide[] = [
   {

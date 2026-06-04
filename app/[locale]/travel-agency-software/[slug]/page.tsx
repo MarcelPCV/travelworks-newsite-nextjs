@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import LayoutRenderer from './blocks/layout-renderer';
 import type { CmsPage } from './blocks/types';
 import { isRecord } from './blocks/types';
+import PlatformShowcaseSection from './../../components/platform-showcase-section';
 
 type PagesResponse = {
 	docs?: CmsPage[];
@@ -77,6 +78,7 @@ export default async function Page({
 			<h1 className="text-zinc-900">{page.title ?? 'Untitled page'}</h1>
 			<div className="flex w-full flex-col gap-4 py-2">
 				<LayoutRenderer layout={Array.isArray(page.layout) ? page.layout : []} pageTitle={page.title} />
+				<PlatformShowcaseSection />
 			</div>
 		</main>
 	);

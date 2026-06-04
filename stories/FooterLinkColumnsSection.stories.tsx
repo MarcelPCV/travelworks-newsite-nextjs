@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/nextjs-vite';
 
-import FooterLinkColumnsSection, { type FooterLinkColumn } from '@/app/[locale]/components/footer-link-columns-section';
+import FooterLinkColumnsSection, { type FooterLinkColumn } from '@/app/[locale]/components/footer/footer-link-columns-section';
 
 const longLabelColumns: FooterLinkColumn[] = [
   {

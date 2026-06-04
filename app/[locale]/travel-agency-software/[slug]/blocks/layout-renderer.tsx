@@ -1,4 +1,4 @@
-import CarouselBlock from './carousel-block';
+import { CarouselBlock } from './hero-carousel';
 import IconsGridBlock from './icons-grid-block';
 import HeroPage from './hero-page';
 import type { CmsBlock } from './types';
@@ -10,7 +10,7 @@ export default function LayoutRenderer({ layout, pageTitle }: { layout: CmsBlock
         const key = String(block.id ?? `${block.blockType ?? 'block'}-${index}`);
 
         switch (block.blockType) {
-          case 'carousel':
+          case 'carousel-block':
             return <CarouselBlock key={key} block={block} pageTitle={pageTitle} />;
           case 'icons-grid':
             return <IconsGridBlock key={key} block={block} pageTitle={pageTitle} />;

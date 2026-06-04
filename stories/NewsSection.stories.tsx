@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/nextjs-vite';
 
-import NewsSection, { type NewsItem } from '@/app/[locale]/components/news-section';
+import NewsSection, { type NewsItem } from '@/app/[locale]/components/footer/news-section';
 
 const customItems: NewsItem[] = [
   {

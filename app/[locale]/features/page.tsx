@@ -4,8 +4,8 @@ import IntroSection from '../components/intro-section';
 import ComparisonSolutionSection from '../components/comparison-solution-section';
 import FeaturesHighlightsSection from '../components/features-highlights-section';
 import YoutubeVideoSection from '../components/youtube-video-section';
-import NewsSection from '../components/news-section';
-import FooterLinkColumnsSection from '../components/footer-link-columns-section';
+import NewsSection from '../components/footer/news-section';
+import FooterLinkColumnsSection from '../components/footer/footer-link-columns-section';
 
 export default function FeaturesPage() {
   return (

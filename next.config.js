@@ -35,7 +35,6 @@ const nextConfig = {
     ];
   },
 
-  // Rewrites replace simple proxy rewrites (formerly middleware)
   async rewrites() {
     return [
       {
@@ -48,6 +47,18 @@ const nextConfig = {
       },
     ];
   },
+
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'http',
+        hostname: 'localhost',
+        port: '3001',
+        pathname: '/**',
+      },
+    ],
+  },
+  
 };
 
 module.exports = nextConfig;

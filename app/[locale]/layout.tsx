@@ -7,6 +7,7 @@ import LocationConfirmationBar from './components/location-confirmation-bar';
 import TopAnnouncementBar from './components/top-announcement-bar';
 import ConsentManager from './components/consent-manager';
 import { routeToMessageLocale } from './locale-config';
+import Footer from './components/footer/index';
 
 export default async function LocaleLayout({
   children,
@@ -39,6 +40,7 @@ export default async function LocaleLayout({
         <Navbar />
         <main className="mx-auto w-full px-4 py-2 sm:px-6 lg:px-8">{children}</main>
         <ConsentManager />
+        <Footer />
       </div>
     </IntlProviderWrapper>
   );
