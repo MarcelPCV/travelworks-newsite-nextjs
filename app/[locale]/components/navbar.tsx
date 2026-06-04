@@ -63,7 +63,7 @@ const productColumnsByCategory: Record<ProductCategory, ProductLinkKey[][]> = {
 const aboutUsLinks = ['company', 'clients', 'partners', 'contact'] as const;
 const trainingLinks = ['platform', 'knowledgeBase'] as const;
 
-const menuItemIconClassName = 'w-5 h-5 transition duration-150 text-zinc-900';
+const menuItemIconClassName = 'w-5 h-5 transition duration-150 text-zinc-900 group-hover:text-zinc-700 rounded-full';
 
 const productLinkIcons: Record<ProductLinkKey, LucideIcon> = {
   features: Settings,
@@ -104,7 +104,7 @@ const productSlugByKey: Record<ProductLinkKey, string> = {
 };
 
 const aboutUsSlugByKey: Record<(typeof aboutUsLinks)[number], string> = {
-  company: '',
+  company: 'about-us',
   clients: 'clients',
   partners: 'partners',
   contact: 'contact',
@@ -393,7 +393,7 @@ export default function Navbar() {
                 role="menu"
                 aria-label={t('topLevel.aboutUs')}
                 aria-hidden={!isAboutUsOpen}
-                className={`absolute left-0 top-full mt-3 w-56 rounded-xl border border-zinc-300 bg-[#e5e5e5] p-3 shadow-lg transition duration-200 motion-reduce:transition-none ${
+                className={`absolute left-0 top-full mt-3 w-56 rounded-xl border border-zinc-200 bg-background/90 backdrop-blur-md p-3 shadow-lg transition duration-200 motion-reduce:transition-none ${
                   isAboutUsOpen ? 'visible translate-y-0 opacity-100' : 'pointer-events-none invisible -translate-y-1 opacity-0'
                 }`}
               >
@@ -405,10 +405,12 @@ export default function Navbar() {
                     key={link}
                     href={aboutUsHref(link)}
                     role="menuitem"
-                    className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium text-zinc-800 transition duration-150 hover:bg-white"
+                    className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium text-white hover:text-zinc-900 transition duration-150 hover:bg-white"
                     onClick={() => setActiveDesktopPanel(null)}
                   >
-                    <Icon className={menuItemIconClassName} aria-hidden="true" />
+                    <div className="w-10 h-10 shrink-0 bg-zinc-100 flex items-center justify-center rounded-full shadow-xl">
+                      <Icon className={menuItemIconClassName} aria-hidden="true" />
+                    </div>
                     {t(`aboutUs.${link}`)}
                   </Link>
                     );
@@ -444,7 +446,7 @@ export default function Navbar() {
                 role="menu"
                 aria-label={t('topLevel.training')}
                 aria-hidden={!isTrainingOpen}
-                className={`absolute left-0 top-full mt-3 w-56 rounded-xl border border-zinc-300 bg-[#e5e5e5] p-3 shadow-lg transition duration-200 motion-reduce:transition-none ${
+                className={`absolute left-0 top-full mt-3 w-56 rounded-xl border border-zinc-200 bg-background/90 backdrop-blur-md p-3 shadow-lg transition duration-200 motion-reduce:transition-none ${
                   isTrainingOpen ? 'visible translate-y-0 opacity-100' : 'pointer-events-none invisible -translate-y-1 opacity-0'
                 }`}
               >
@@ -456,10 +458,12 @@ export default function Navbar() {
                     key={link}
                     href={trainingHref(link)}
                     role="menuitem"
-                    className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium text-zinc-800 transition duration-150 hover:bg-white"
+                    className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium text-white hover:text-zinc-900 transition duration-150 hover:bg-white"
                     onClick={() => setActiveDesktopPanel(null)}
                   >
-                    <Icon className={menuItemIconClassName} aria-hidden="true" />
+                    <div className="w-10 h-10 shrink-0 bg-zinc-100 flex items-center justify-center rounded-full shadow-xl">
+                      <Icon className={menuItemIconClassName} aria-hidden="true" />
+                    </div>
                     {t(`training.${link}`)}
                   </Link>
                     );
@@ -567,7 +571,7 @@ export default function Navbar() {
         role="menu"
         aria-label={t('topLevel.products')}
         aria-hidden={!isProductsOpen}
-        className={`absolute inset-x-0 top-full hidden border-t border-zinc-200 bg-background/90 backdrop-blur-sm lg:block ${
+        className={`absolute inset-x-0 top-full hidden border-t border-zinc-200 bg-background/90 backdrop-blur-md  rounded-b-2xl lg:block ${
           isProductsOpen ? 'pointer-events-auto visible' : 'pointer-events-none invisible'
         }`}
       >
@@ -578,7 +582,7 @@ export default function Navbar() {
         >
           <div className="grid min-h-64 grid-cols-[260px_1fr] overflow-hidden">
             <div className="border-r border-zinc-600 p-8">
-              <p className="max-w-[12ch] text-xl font-semibold leading-[1.4] tracking-tight text-white">
+              <p className="max-w-[12ch] text-2xl font-semibold leading-[1.4] tracking-tight text-white">
                 {t('products.promoMessage')}
               </p>
             </div>
@@ -598,7 +602,7 @@ export default function Navbar() {
                           onClick={() => setActiveDesktopPanel(null)}
                           className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium text-white hover:text-zinc-900 transition duration-150 hover:bg-zinc-300"
                         >
-                          <div className="w-10 h-10 shrink-0 bg-zinc-100 flex items-center justify-center rounded-full">
+                          <div className="w-10 h-10 shrink-0 bg-zinc-100 flex items-center justify-center rounded-full shadow-xl">
                             <Icon className={menuItemIconClassName} aria-hidden="true" />
                           </div>
 
