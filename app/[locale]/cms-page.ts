@@ -33,16 +33,21 @@ export async function getCmsPageBySlug(slug: string, locale: string): Promise<Cm
   });
 
   const baseUrl = await getBaseUrl();
-  const response = await fetch(`${baseUrl}/api/pages/slug/${encodeURIComponent(slug)}?${query.toString()}`, {
-    cache: 'no-store',
-  });
+  let response;
+  try {
+    response = await fetch(`${baseUrl}/api/pages/slug/${encodeURIComponent(slug)}?${query.toString()}`, {
+      cache: 'no-store',
+    });
+  } catch (error) {
+    console.warn(`Failed to reach API for slug: ${slug}`, error);
+    return null;
+  }
 
   if (!response.ok) {
-    if (response.status === 404) {
-      return null;
+    if (response.status !== 404) {
+      console.warn(`Failed to load page for slug: ${slug}, status: ${response.status}`);
     }
-
-    throw new Error(`Failed to load page for slug: ${slug}`);
+    return null;
   }
 
   const data = (await response.json()) as PagesResponse;

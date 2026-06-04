@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import LayoutRenderer from './[slug]/blocks/layout-renderer';
 import { getCmsPageBySlug } from './cms-page';
 import { getHomepageSlugCandidates } from './locale-config';
+import CmsUnavailable from './components/cms-unavailable';
 
 export default async function LocalePage({
   params,
@@ -19,7 +20,7 @@ export default async function LocalePage({
   }
 
   if (!page) {
-    notFound();
+    return <CmsUnavailable />;
   }
 
   return (

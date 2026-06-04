@@ -98,5 +98,9 @@
     "descriptionAfterCookie": " for more information.",
     "privacyPolicyUrl": "#",
     "cookiePolicyUrl": "#"
+  },
+  "cmsUnavailable": {
+    "title": "CMS Not Available",
+    "description": "We are currently unable to connect to the CMS. Please check if the Payload CMS server is running and accessible."
   }
 }
