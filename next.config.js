@@ -58,7 +58,7 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'travelworks-newsite-payload-cms.vercel.app/',
+        hostname: 'travelworks-newsite-payload-cms.vercel.app',
         pathname: '/**',
       },
     ],
