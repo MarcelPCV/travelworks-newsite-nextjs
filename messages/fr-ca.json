@@ -39,6 +39,25 @@
           "title": "Intégrations multiples"
         }
       }
+    },
+    "why-travelworks": {
+      "title": "Pourquoi TravelWorks",
+      "optimize": {
+        "title": "Optimisez la facturation et la comptabilité",
+        "description": "Générez des factures professionnelles et standardisées. Automatisez la création de factures et améliorez votre processus comptable grâce aux bonnes pratiques."
+      },
+      "gds": {
+        "title": "Intégré aux GDS et moteurs de réservation",
+        "description": "Connectez vos moteurs de réservation et votre flux de réservations existants afin de centraliser les processus et permettre à votre équipe de travailler plus rapidement."
+      },
+      "cloud": {
+        "title": "Système cloud, une solution clé en main",
+        "description": "Travaillez depuis un environnement cloud fiable qui simplifie la maintenance, la collaboration et le développement sur plusieurs sites."
+      },
+      "crm": {
+        "title": "Outil CRM et marketing intégré",
+        "description": "Générez des revenus supplémentaires grâce à des campagnes ciblées et améliorez le service client avec des communications automatisées."
+      }
     }
   },
   "features": {
