@@ -1,4 +1,66 @@
 {
+  "home": {
+    "hero-caroussel": {
+      "concept": {
+        "title": "Une <strong>solution complète</strong> : réservation, CRM, inventaire, facturation, comptabilité et marketing",
+        "cta": "Découvrir TravelWorks"
+      },
+      "promo": {
+        "title": "<strong>Systèmes cloud sécurisés</strong> idéals pour les employés travaillant à distance",
+        "cta": "Découvrir nos avantages"
+      },
+      "tourOnline": {
+        "title": "Une <strong>solution complète</strong> : réservation, CRM, inventaire, facturation, comptabilité et marketing",
+        "cta": "Découvrir TourOnline"
+      }
+    },
+    "features-cards": {
+      "title": "<span>Une technologie <strong>adaptée</strong> à <strong>l’industrie du voyage</strong></span>",
+      "items": {
+        "backoffice-tools": {
+          "title": "Gestion des réservations"
+        },
+        "reservation-management": {
+          "title": "Gestion des dossiers de réservation"
+        },
+        "strategic-management-tool": {
+          "title": "Outil de gestion stratégique"
+        },
+        "tour-management": {
+          "title": "Gestion des circuits"
+        },
+        "online-tour-booking": {
+          "title": "Réservation de circuits en ligne"
+        },
+        "crm-tools": {
+          "title": "Outils CRM"
+        },
+        "multiple-integration": {
+          "title": "Intégrations multiples"
+        }
+      }
+    }
+  },
+  "features": {
+    "highlights": {
+      "invoicing-methodology": {
+        "title": "Méthodologie de facturation",
+        "description": "Avec TravelWorks, vous pouvez générer des <strong className='font-semibold text-brand-blue'>factures standardisées en un seul clic</strong>. Vous pouvez facilement définir votre <strong className='font-semibold text-brand-blue'>modèle de facture avec des messages personnalisés</strong> pour votre agence. Les factures avec <strong className='font-semibold text-brand-blue'>vos conditions générales</strong> peuvent être envoyées facilement à vos clients par e-mail. Toutes les modifications de facturation sont suivies dans l’historique du dossier, évitant ainsi tout retraitement pour vos agents."
+      },
+      "process-automation": {
+        "title": "Automatisation des processus",
+        "description": "<strong className='font-semibold text-brand-blue'>Générez des factures dans notre système à partir de vos moteurs de réservation</strong>, activez le calcul automatique des frais de service et gérez les groupes de passagers sans ressaisir d’informations redondantes. <strong className='font-semibold text-brand-blue'>Cela permet de réduire les tâches administratives dans votre agence de voyages</strong>, afin que vos agents puissent se concentrer sur le service client."
+      },
+      "accounting-integration": {
+        "title": "Comptabilité précise en temps réel",
+        "description": "Votre agence de voyages travaille avec un comptable externe ; il est précieux qu’il puisse consulter vos données sans avoir à se déplacer. Votre comptabilité à jour permet d’identifier rapidement les dossiers nécessitant un contrôle supplémentaire et de clôturer les périodes comptables sans perte de temps. <strong className='font-semibold text-brand-blue'>Moins de travail pour votre comptable signifie plus d’argent dans la caisse de votre agence de voyages.</strong>"
+      },
+      "data-anywhere": {
+        "title": "Données accessibles partout, même pour les comptables",
+        "description": "Notre système a été conçu pour <strong className='font-semibold text-brand-blue'>vous aider à identifier à tout moment vos comptes fournisseurs et comptes clients</strong> au sein de votre agence de voyages. Les rapprochements bancaires sont effectués facilement et les états financiers sont produits rapidement. Le grand livre s’ajuste automatiquement et les rapports comptables peuvent être générés en quelques clics."
+      }
+    }
+  },
   "title": "Bienvenue (Canada - FR)",
   "subtitle": "Commencez en modifiant le fichier page.tsx.",
   "deploy": "Déployer",

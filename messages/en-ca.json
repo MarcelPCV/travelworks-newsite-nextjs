@@ -1,4 +1,66 @@
 {
+  "home": {
+    "hero-caroussel": {
+      "concept" : {
+        "title": "A <strong>comprehensive solution</strong> : booking, CRM, inventory, billing, accounting and marketing",
+        "cta": "Discover TravelWorks"
+      },
+      "promo": {
+        "title": "<strong>Secured cloud systems </strong>ideal for staff working remotely",
+        "cta": "Know our advantages"
+      },
+      "tourOnline": {
+        "title": "A <strong>comprehensive solution</strong> : booking, CRM, inventory, billing, accounting and marketing",
+        "cta": "Discover TourOnline"
+      }
+    },
+    "features-cards": {
+      "title": "<span>Technology <strong>tailored</strong> to <strong>travel industry</strong></span>",
+      "items": {
+        "backoffice-tools": {
+          "title": "Booking Management"
+        },
+        "reservation-management": {
+          "title": "Reservation Management"
+        },
+        "strategic-management-tool": {
+          "title": "Strategic Management Tool"
+        },
+        "tour-management": {
+          "title": "Tour Management"
+        },
+        "online-tour-booking": {
+          "title": "Online Tour Booking"
+        },
+        "crm-tools": {
+          "title": "CRM Tools"
+        },
+        "multiple-integration": {
+          "title": "Multiple Integration"
+        }
+      }
+    }
+  },
+  "features": {
+    "highlights": {
+      "invoicing-methodology": {
+        "title": "Invoicing Methodology",
+        "description": "With TravelWorks, you can generate <strong className='font-semibold text-brand-blue'>standardized invoices with one click</strong>. You can easily define your <strong className='font-semibold text-brand-blue'>invoice template with customized messages</strong> for your agency, Invoices with <strong className='font-semibold text-brand-blue'>your Terms and Conditions</strong> can easily be emailed to your customers. All invoice changes are tracked by the file history, avoiding re-work for your agents."
+      },
+      "process-automation": {
+        "title": "Process Automation",
+        "description": "<strong className='font-semibold text-brand-blue'>Generate invoices in our system from your booking engines</strong>, activate automatic calculation of service fees, and manage passenger groups without re-entering redundant information,<strong className='font-semibold text-brand-blue'>. This is how you reduce administrative tasks in your travel agency</strong>, so your agents can focus on customer service."
+      },
+      "accounting-integration": {
+        "title": "Accurate Accounting In Real Time",
+        "description": "Your travel agency is dealing with an external accountant; how valuable it is for them to consult your data without having to travel to your location. Your up-to-date accounting helps quickly identify files that require additional screening and close accounting periods without wasting time.<strong className='font-semibold text-brand-blue'>. Less work for your accountant means more money in your travel agency&apos;s pockets.</strong>"
+      },
+      "data-anywhere": {
+        "title": "Available Data From Anywhere, Even For Accountants",
+        "description": "Our system was built to <strong className='font-semibold text-brand-blue'>help you identify at any time your accounts payable and accounts receivable</strong> within your travel agency. Bank reconciliations are carried out easily and financial statements are produced quickly.The general ledger automatically adjusts and accounting reports can be generated in a few clicks."
+      }
+    }
+  },
   "title": "Welcome (Canada - EN)",
   "subtitle": "Get started by editing the page.tsx file.",
   "deploy": "Deploy Now",
