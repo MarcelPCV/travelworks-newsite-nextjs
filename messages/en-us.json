@@ -39,6 +39,25 @@
           "title": "Multiple Integration"
         }
       }
+    },
+    "why-travelworks": {
+      "title": "Why TravelWorks",
+      "optimize": {
+        "title": "Optimize Invoicing and Accounting",
+        "description": "Generate professional and standardized invoices. Automate invoice creation and maximize your accounting process with good practices."
+      },
+      "gds": {
+        "title": "Integrated to GDS and Booking Engines",
+        "description": "Connect your current booking engines and reservation flow so processes stay centralized and your team works faster."
+      },
+      "cloud": {
+        "title": "Cloud System, a Turnkey Solution",
+        "description": "Operate from a reliable cloud environment that simplifies maintenance, collaboration, and growth across locations."
+      },
+      "crm": {
+        "title": "CRM Tool and Integrated Marketing",
+        "description": "Generate additional revenue with targeted campaigns and improve customer service with automated communication."
+      }
     }
   },
   "features": {
