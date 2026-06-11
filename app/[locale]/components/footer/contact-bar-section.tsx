@@ -43,7 +43,7 @@ export default function ContactBarSection({
           {logo ? (
             <div className="h-10">{logo}</div>
           ) : (
-            <div className="text-[1.05rem] font-semibold text-brand-blue">Logo</div>
+            <div className="text-[2.05rem] font-semibold text-brand-blue">TravelWorks</div>
           )}
         </div>
 
