@@ -1,5 +1,10 @@
 {
   "home": {
+    "news-ticker": {
+      "section-title": "Nouvelles",
+      "news-label": "PcVoyages lance de nouveaux outils pour maîtriser le logiciel de comptabilité",
+      "phone": "1 877 282-4556"
+    },
     "hero-caroussel": {
       "concept": {
         "title": "Une <strong>solution complète</strong> : réservation, CRM, inventaire, facturation, comptabilité et marketing",

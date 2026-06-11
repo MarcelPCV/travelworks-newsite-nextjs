@@ -1,8 +1,7 @@
-export type HeroSlide = {
+export type NewsTicker = {
   id: string;
-  title: string;
-  ctaLabel: string;
-  ctaHref: string;
-  image: string;
-  contentPosition?: 'left' | 'right';
+  sectionTitle: string;
+  newsLabel: string;
+  newsCtaHref: string;
+  phone: string;
 };
