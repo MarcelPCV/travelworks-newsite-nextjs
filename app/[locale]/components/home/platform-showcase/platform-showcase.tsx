@@ -6,25 +6,14 @@ type PlatformShowcaseSectionProps = {
   badgePlaceholderLabel?: string;
 };
 
-export default function PlatformShowcaseSection({
+export default function PlatformShowcase({
   title = 'A pleasant work environment for travel agents, considerable time-saving for accountants and an essential management tool for travel agency managers.',
   description,
-  className,
   mediaPlaceholderLabel = 'Computer Image Placeholder',
   badgePlaceholderLabel = '30 Years Stamp Placeholder',
 }: PlatformShowcaseSectionProps) {
-  const rootClassName = ['relative overflow-hidden rounded-3xl bg-brand-blue px-4 py-8 sm:px-6 lg:px-10 lg:py-12', className]
-    .filter(Boolean)
-    .join(' ');
-
   return (
-    <section className={rootClassName} aria-labelledby="platform-showcase-title">
-      <div className="pointer-events-none absolute inset-0">
-        <span className="absolute -left-8 top-14 h-40 w-12 rotate-[36deg] rounded-full bg-brand-sky/25 blur-[1px] sm:h-56 sm:w-16" />
-        <span className="absolute left-1/3 top-6 h-28 w-28 rounded-full bg-brand-sky/20 blur-sm sm:h-36 sm:w-36" />
-        <span className="absolute bottom-24 right-[20%] h-52 w-14 rotate-[35deg] rounded-full bg-brand-sky/20 blur-[1px] sm:h-64 sm:w-20" />
-      </div>
-
+    <section className="mx-auto relative overflow-hidden rounded-3xl bg-brand-blue px-4 py-8 sm:px-6 lg:px-10 lg:py-12" aria-labelledby="platform-showcase-title">
       <div className="relative mx-auto flex w-full max-w-6xl flex-col gap-8">
         <div className="relative">
           <div className="mx-auto w-full max-w-5xl rounded-2xl border border-white/35 bg-brand-navy/30 p-4 shadow-[0_30px_80px_rgba(7,22,60,0.45)] sm:p-6 lg:p-8">

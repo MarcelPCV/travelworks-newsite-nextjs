@@ -3,6 +3,7 @@ import FeaturesHighlightsSection from './components/features/features-highlights
 import FeatureCards from './components/home/feature-cards/feature-cards';
 import WhyTravelworksSection from './components/home/why/why-travelworks-section';
 import PlanningDemoSection from './components/home/demo-section/planning-demo-section';
+import PlatformShowcase from './components/home/platform-showcase/platform-showcase';
 import { setRequestLocale } from 'next-intl/server';
 import { getCountryOptions } from '@/app/lib/countries';
 import { routeToMessageLocale } from './locale-config';
@@ -26,6 +27,7 @@ export default async function LocalePage({
       <div className="flex w-full flex-col gap-4 py-2">
         <HeroCarousel />
         <FeatureCards />
+        <PlatformShowcase />
         <WhyTravelworksSection />
         <PlanningDemoSection
           countries={countries}
