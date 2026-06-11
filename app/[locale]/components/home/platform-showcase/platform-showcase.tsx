@@ -13,33 +13,31 @@ export default function PlatformShowcase({
   badgePlaceholderLabel = '30 Years Stamp Placeholder',
 }: PlatformShowcaseSectionProps) {
   return (
-    <section className="mx-auto relative overflow-hidden rounded-3xl bg-brand-blue px-4 py-8 sm:px-6 lg:px-10 lg:py-12" aria-labelledby="platform-showcase-title">
-      <div className="relative mx-auto flex w-full max-w-6xl flex-col gap-8">
-        <div className="relative">
-          <div className="mx-auto w-full max-w-5xl rounded-2xl border border-white/35 bg-brand-navy/30 p-4 shadow-[0_30px_80px_rgba(7,22,60,0.45)] sm:p-6 lg:p-8">
-            <div className="flex aspect-[16/8.5] items-center justify-center rounded-xl border-2 border-dashed border-white/55 bg-gradient-to-br from-brand-sky/35 to-brand-navy/50 px-6 text-center text-sm font-medium uppercase tracking-wide text-white/90 sm:text-base">
-              {mediaPlaceholderLabel}
-            </div>
-          </div>
-
-          <div className="mx-auto mt-5 flex w-fit items-center justify-center rounded-full border-4 border-white/80 bg-brand-blue px-6 py-4 text-center text-brand-orange-light shadow-[0_14px_40px_rgba(9,26,69,0.45)] sm:absolute sm:bottom-5 sm:right-4 sm:mt-0 sm:px-7 lg:right-8">
-            <div className="leading-tight">
-              <p className="text-3xl font-bold tracking-tight sm:text-4xl">+ 30</p>
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white">Years</p>
-              <p className="mt-1 text-[11px] font-medium uppercase tracking-[0.12em] text-white/90 sm:text-xs">
-                {badgePlaceholderLabel}
-              </p>
-            </div>
+    <div className="relative mx-auto max-w-7xl flex w-full flex-col gap-8 bg-blue-500">
+      <div className="relative">
+        <div className="mx-auto w-full rounded-2xl border border-white/35 bg-brand-navy/30 p-4 shadow-[0_30px_80px_rgba(7,22,60,0.45)] sm:p-6 lg:p-8">
+          <div className="flex aspect-[16/8.5] items-center justify-center rounded-xl border-2 border-dashed border-white/55 bg-gradient-to-br from-brand-sky/35 to-brand-navy/50 px-6 text-center text-sm font-medium uppercase tracking-wide text-white/90 sm:text-base">
+            {mediaPlaceholderLabel}
           </div>
         </div>
 
-        <div className="mx-auto max-w-4xl text-center text-white">
-          <h2 id="platform-showcase-title" className="type-h4 font-medium text-white sm:type-h3">
-            {title}
-          </h2>
-          {description ? <p className="type-normal-16 mt-4 text-white/85">{description}</p> : null}
+        <div className="mx-auto mt-5 flex w-fit items-center justify-center rounded-full border-4 border-white/80 bg-brand-blue px-6 py-4 text-center text-brand-orange-light shadow-[0_14px_40px_rgba(9,26,69,0.45)] sm:absolute sm:bottom-5 sm:right-4 sm:mt-0 sm:px-7 lg:right-8">
+          <div className="leading-tight">
+            <p className="text-3xl font-bold tracking-tight sm:text-4xl">+ 30</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white">Years</p>
+            <p className="mt-1 text-[11px] font-medium uppercase tracking-[0.12em] text-white/90 sm:text-xs">
+              {badgePlaceholderLabel}
+            </p>
+          </div>
         </div>
       </div>
-    </section>
+
+      <div className="mx-auto max-w-4xl text-center text-white">
+        <h2 id="platform-showcase-title" className="type-h4 font-medium text-white sm:type-h3">
+          {title}
+        </h2>
+        {description ? <p className="type-normal-16 mt-4 text-white/85">{description}</p> : null}
+      </div>
+    </div>
   );
 }
