@@ -2,8 +2,20 @@ import HeroCarousel from './components/home/hero-carousel/hero-carousel'
 import FeaturesHighlightsSection from './components/features/features-highlights-section';
 import FeatureCards from './components/home/feature-cards/feature-cards';
 import WhyTravelworksSection from './components/home/why/why-travelworks-section';
+import PlanningDemoSection from './components/home/demo-section/planning-demo-section';
+import { setRequestLocale } from 'next-intl/server';
+import { getCountryOptions } from '@/app/lib/countries';
+import { routeToMessageLocale } from './locale-config';
 
-export default async function LocalePage() {
+export default async function LocalePage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale: routeLocale } = await params;
+  setRequestLocale(routeLocale);
+  const messageLocale = routeToMessageLocale[routeLocale] ?? 'en-us';
+  const countries = getCountryOptions(messageLocale);
   // if (!page) {
   //   return <CmsUnavailable />;
   // }
@@ -15,6 +27,10 @@ export default async function LocalePage() {
         <HeroCarousel />
         <FeatureCards />
         <WhyTravelworksSection />
+        <PlanningDemoSection
+          countries={countries}
+          locale={messageLocale}
+        />
         <FeaturesHighlightsSection />
       </div>
     </main>

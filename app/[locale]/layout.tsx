@@ -1,6 +1,7 @@
 import IntlProviderWrapper from './intl-provider';
 import type { ReactNode } from 'react';
 import type { AbstractIntlMessages } from 'next-intl';
+import { setRequestLocale } from 'next-intl/server';
 import enUS from '../../messages/en-us.json';
 import Navbar from './components/navbar';
 import LocationConfirmationBar from './components/location-confirmation-bar';
@@ -18,6 +19,7 @@ export default async function LocaleLayout({
 }) {
   // `params` may be a Promise in some Next.js versions — await it and read locale to support both sync and async shapes
   const { locale } = await Promise.resolve(params);
+  setRequestLocale(locale);
   const file = routeToMessageLocale[locale] ?? 'en-us';
 
   // Statically import the default messages so Turbopack can resolve the module during build.
