@@ -4,7 +4,7 @@ import { ChevronDown, X } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
 import { usePathname, useRouter } from 'next/navigation';
 import { useEffect, useMemo, useState } from 'react';
-import { DEFAULT_ROUTE_LOCALE, localeOptions, replaceLocaleInPath, routeToMessageLocale } from '../locale-config';
+import { DEFAULT_ROUTE_LOCALE, localeOptions, replaceLocaleInPath, routeToMessageLocale } from '@/app/[locale]/locale-config';
 
 const DISMISSED_STORAGE_KEY = 'travelworks.location_bar.dismissed';
 

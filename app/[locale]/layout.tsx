@@ -3,10 +3,10 @@ import type { ReactNode } from 'react';
 import type { AbstractIntlMessages } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
 import enUS from '../../messages/en-us.json';
-import Navbar from './components/navbar';
-import LocationConfirmationBar from './components/location-confirmation-bar';
-import TopAnnouncementBar from './components/top-announcement-bar';
-import ConsentManager from './components/consent-manager';
+import Navbar from './components/layout/navbar';
+import LocationConfirmationBar from './components/layout/location-confirmation-bar';
+import TopAnnouncementBar from './components/layout/top-announcement-bar';
+import ConsentManager from './components/layout/consent-manager';
 import { routeToMessageLocale } from './locale-config';
 import Footer from './components/footer/index';
 

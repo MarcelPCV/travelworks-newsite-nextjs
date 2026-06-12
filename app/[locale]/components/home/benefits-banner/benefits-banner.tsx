@@ -29,14 +29,9 @@ export default function BenefitsBanner({
   buttonHref = '#',
   hideButton = false,
   imagePlaceholderLabel = 'Laptop Image Placeholder',
-  className,
 }: BenefitsBannerProps) {
-  const rootClassName = ['relative overflow-hidden rounded-2xl bg-neutral-background', className]
-    .filter(Boolean)
-    .join(' ');
-
   return (
-    <section className={rootClassName} aria-labelledby="benefits-banner-title">
+    <section className="mx-auto max-w-7xl relative overflow-hidden rounded-2xl bg-neutral-background" aria-labelledby="benefits-banner-title">
       <div className="pointer-events-none absolute inset-0">
         <span className="absolute -left-20 top-0 h-[140%] w-28 rotate-45 bg-neutral-border/45" />
         <span className="absolute right-[-5.5rem] top-0 h-[135%] w-28 -rotate-45 bg-neutral-border/40" />

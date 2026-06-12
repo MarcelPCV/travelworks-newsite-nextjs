@@ -69,13 +69,21 @@
         "title": "Outil CRM et marketing intégré",
         "description": "Générez des revenus supplémentaires grâce à des campagnes ciblées et améliorez le service client avec des communications automatisées."
       }
+    },
+    "footer-demo": {
+      "title": "Prêt à voir comment PcVoyages peut transformer votre agence de voyages ?",
+      "cta": "Demander une démo"
+    },
+    "client-trust-section": {
+      "title": "Plus de <strong>1 000 agences de voyages</strong> nous font confiance"
     }
+
   },
   "features": {
     "highlights": {
       "invoicing-methodology": {
         "title": "Méthodologie de facturation",
-        "description": "Avec TravelWorks, vous pouvez générer des <strong className='font-semibold text-brand-blue'>factures standardisées en un seul clic</strong>. Vous pouvez facilement définir votre <strong className='font-semibold text-brand-blue'>modèle de facture avec des messages personnalisés</strong> pour votre agence. Les factures avec <strong className='font-semibold text-brand-blue'>vos conditions générales</strong> peuvent être envoyées facilement à vos clients par e-mail. Toutes les modifications de facturation sont suivies dans l’historique du dossier, évitant ainsi tout retraitement pour vos agents."
+        "description": "Avec PcVoyages, vous pouvez générer des <strong className='font-semibold text-brand-blue'>factures standardisées en un seul clic</strong>. Vous pouvez facilement définir votre <strong className='font-semibold text-brand-blue'>modèle de facture avec des messages personnalisés</strong> pour votre agence. Les factures avec <strong className='font-semibold text-brand-blue'>vos conditions générales</strong> peuvent être envoyées facilement à vos clients par e-mail. Toutes les modifications de facturation sont suivies dans l’historique du dossier, évitant ainsi tout retraitement pour vos agents."
       },
       "process-automation": {
         "title": "Automatisation des processus",

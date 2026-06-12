@@ -5,6 +5,8 @@ import WhyTravelworksSection from './components/home/why/why-travelworks-section
 import PlanningDemoSection from './components/home/demo-section/planning-demo-section';
 import PlatformShowcase from './components/home/platform-showcase/platform-showcase';
 import NewsTickerBar from './components/home/news-ticker/news-ticker-bar';
+import ClientTrustSection from './components/home/clients-section/client-trust-section';
+import BenefitsBanner from './components/home/benefits-banner/benefits-banner';
 import { setRequestLocale } from 'next-intl/server';
 import { getCountryOptions } from '@/app/lib/countries';
 import { routeToMessageLocale } from './locale-config';
@@ -32,6 +34,9 @@ export default async function LocalePage({
         <FeatureCards />
         <PlatformShowcase />
         <WhyTravelworksSection />
+        <BenefitsBanner />
+        <ClientTrustSection />
+        <BenefitsBanner />
         <PlanningDemoSection
           countries={countries}
           locale={messageLocale}

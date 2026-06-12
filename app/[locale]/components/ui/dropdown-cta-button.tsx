@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { ChevronDown } from 'lucide-react';
 import { useEffect, useId, useRef, useState, type ButtonHTMLAttributes, type ReactNode } from 'react';
-import CtaButton, { type CtaButtonProps } from './ui/cta-button';
+import CtaButton, { type CtaButtonProps } from './cta-button';
 
 type DropdownCtaButtonVariant = NonNullable<CtaButtonProps['variant']>;
 type DropdownCtaButtonSize = NonNullable<CtaButtonProps['size']>;

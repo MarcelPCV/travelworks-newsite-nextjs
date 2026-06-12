@@ -74,6 +74,13 @@
         "title": "CRM Tool and Integrated Marketing",
         "description": "Generate additional revenue with targeted campaigns and improve customer service with automated communication."
       }
+    },
+    "footer-demo" : {
+      "title": "Ready to see how TravelWorks can transform your travel agency?",
+      "cta": "Request a demo"
+    },
+    "client-trust-section": {
+      "title": "More than <strong>1,000 travel agencies</strong> trust us"
     }
   },
   "features": {

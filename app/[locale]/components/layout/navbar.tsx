@@ -11,7 +11,7 @@ import {
   replaceLocaleInPath,
   routeToMessageLocale,
   travelAgencySoftwareSlugs,
-} from '../locale-config';
+} from '@/app/[locale]/locale-config';
 import {
   BarChart3,
   BookOpen,
@@ -22,8 +22,6 @@ import {
   Link2,
   Mail,
   Map,
-  MessageCircle,
-  PlayCircle,
   Settings,
   SlidersHorizontal,
   Star,
@@ -33,8 +31,8 @@ import {
   X,
   type LucideIcon,
 } from 'lucide-react';
-import CtaButton from './ui/cta-button';
-import DropdownCtaButton, { type DropdownCtaOption } from './dropdown-cta-button';
+import CtaButton from '@/app/[locale]/components/ui/cta-button';
+import DropdownCtaButton, { type DropdownCtaOption } from '@/app/[locale]/components/ui/dropdown-cta-button';
 
 type DesktopPanel = 'products' | 'aboutUs' | 'training' | null;
 type ProductCategory = 'travelworks';

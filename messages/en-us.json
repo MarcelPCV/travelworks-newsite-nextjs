@@ -73,6 +73,9 @@
     "footer-demo" : {
       "title": "Ready to see how TravelWorks can transform your travel agency?",
       "cta": "Request a demo"
+    },
+    "client-trust-section": {
+      "title": "More than <strong>1,000 travel agencies</strong> trust us"
     }
   },
   "features": {
