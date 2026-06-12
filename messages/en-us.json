@@ -19,6 +19,12 @@
         "cta": "Discover TourOnline"
       }
     },
+    "platform-showcase": {
+      "title": "Built to Simplify Travel Agency Workflows",
+      "description": "A pleasant work environment for travel agents, considerable time-saving for accountants and an essential management tool for travel agency managers.",
+      "mainImage": "/images/components/platform-showcase/bundle_home_en.webp",
+      "secondaryImage": "/images/components/platform-showcase/30years.svg"
+    },
     "features-cards": {
       "title": "<span>Technology <strong>tailored</strong> to <strong>travel industry</strong></span>",
       "items": {

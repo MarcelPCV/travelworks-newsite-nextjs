@@ -1,8 +1,8 @@
-export type HeroSlide = {
-  id: string;
-  title: string;
-  ctaLabel: string;
-  ctaHref: string;
-  image: string;
-  contentPosition?: 'left' | 'right';
+import { ReactNode } from 'react';
+
+export type PlatformShowcaseModel = {
+  title: ReactNode;
+  description: ReactNode;
+  mainImage: string;
+  secondaryImage: string;
 };

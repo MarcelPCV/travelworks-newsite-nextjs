@@ -54,7 +54,7 @@ export default function WhyTravelworksSection() {
   return (
     <section className="w-full mx-auto max-w-7xl rounded-2xl bg-neutral-background py-8" aria-labelledby="why-travelworks-heading">
       {t('title') && (
-         <h2 dangerouslySetInnerHTML={{ __html: t('title') }} className="text-center text-3xl font-medium uppercase tracking-tight text-brand-blue sm:text-4xl"/>
+         <h2 dangerouslySetInnerHTML={{ __html: t('title') }} className="text-center text-3xl py-4 font-medium uppercase tracking-tight text-brand-blue sm:text-4xl"/>
       )}
 
       <div className="grid grid-cols-1 overflow-hidden rounded-xl border border-neutral-border sm:grid-cols-2 xl:grid-cols-4">

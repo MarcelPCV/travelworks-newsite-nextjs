@@ -108,7 +108,7 @@ export default function PlanningDemoSection({ countries, locale }: Props) {
               <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                 {model.form.fields.map((field) => (
                   <label key={field.id} className="block">
-                    <span className="text-[1.5rem] font-medium">{field.label}</span>
+                    <span className="text-[1rem] font-medium">{field.label}</span>
 
                     <input
                       name={field.name}
@@ -133,12 +133,12 @@ export default function PlanningDemoSection({ countries, locale }: Props) {
               {/* Country */}
               <div>
                 <label className="block">
-                  <span className="text-[1.5rem] font-medium">{model.form.country.label}</span>
+                  <span className="text-[1rem] font-medium">{model.form.country.label}</span>
 
                   <select
                     name="country"
                     aria-describedby={fieldErrors.country ? 'country-error' : undefined}
-                    className={`mt-2 w-full border-b bg-transparent py-2 text-[1.2rem] outline-none
+                    className={`mt-2 w-full border-b bg-transparent py-2 text-[.9rem] outline-none
                       ${fieldErrors.country ? 'border-red-500' : 'border-neutral-border'}`}
                   >
                     <option value="">{model.form.country.placeholder}</option>

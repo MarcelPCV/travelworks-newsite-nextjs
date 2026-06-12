@@ -19,6 +19,12 @@
         "cta": "Découvrir TourOnline"
       }
     },
+    "platform-showcase": {
+      "title": "Conçu pour simplifier les flux de travail des agences de voyages",
+      "description": "Un environnement de travail agréable pour les agents de voyages, un gain de temps considérable pour les comptables et un outil de gestion essentiel pour les responsables d'agences de voyages.",
+      "mainImage": "/images/components/platform-showcase/bundle_home_fr.webp",
+      "secondaryImage": "/images/components/platform-showcase/30years.svg"
+    },
     "features-cards": {
       "title": "<span>Une technologie <strong>adaptée</strong> à <strong>l’industrie du voyage</strong></span>",
       "items": {
