@@ -32,7 +32,27 @@ export const travelAgencySoftwareSegmentByRouteLocale: Record<string, string> = 
   'en-au': 'travel-agency-software',
 };
 
-// Canonical slug -> locale-specific slug mapping for this section.
+export const aboutUsSegmentByRouteLocale: Record<string, string> = {
+  en: 'about-us',
+  'en-ca': 'about-us',
+  'fr-ca': 'a-propos',
+  'en-au': 'about-us',
+};
+
+export const trainingSegmentByRouteLocale: Record<string, string> = {
+  en: 'training',
+  'en-ca': 'training',
+  'fr-ca': 'formation',
+  'en-au': 'training',
+};
+
+export const demoByRouteLocale: Record<string, string> = {
+  en: 'ask-for-a-demo',
+  'en-ca': 'ask-for-a-demo',
+  'fr-ca': 'demander-une-demo',
+  'en-au': 'ask-for-a-demo',
+};
+
 export const travelAgencySoftwareSlugs: Record<string, Record<string, string>> = {
   features: {
     en: 'features',
@@ -40,23 +60,136 @@ export const travelAgencySoftwareSlugs: Record<string, Record<string, string>> =
     'fr-ca': 'fonctionnalites',
     'en-au': 'features',
   },
+  benefits: {
+    en: 'benefits',
+    'en-ca': 'benefits',
+    'fr-ca': 'avantages',
+    'en-au': 'benefits',
+  },
+  "back-office-travel-agency": {
+    en: 'back-office-travel-agency',
+    'en-ca': 'back-office-travel-agency',
+    'fr-ca': 'back-office-agence-voyage',
+    'en-au': 'back-office-travel-agency',
+  },
+  "trip-details": {
+    en: 'trip-details',
+    'en-ca': 'trip-details',
+    'fr-ca': 'details-du-voyage',
+    'en-au': 'trip-details',
+  },
+  "tour-management": {
+    en: 'tour-management',
+    'en-ca': 'tour-management',
+    'fr-ca': 'gestion-des-tours',
+    'en-au': 'tour-management',
+  },
+  "crm-tools": {
+    en: 'crm-tools',
+    'en-ca': 'crm-tools',
+    'fr-ca': 'outils-crm',
+    'en-au': 'crm-tools',
+  },
+  "multiple-integration": {
+    en: 'multiple-integration',
+    'en-ca': 'multiple-integration',
+    'fr-ca': 'integration-multiple',
+    'en-au': 'multiple-integration',
+  },
+  "dashboard-reports": {
+    en: 'dashboard-reports',
+    'en-ca': 'dashboard-reports',
+    'fr-ca': 'tableau-de-bord-rapports',
+    'en-au': 'dashboard-reports',
+  },
+  customizations: {
+    en: 'customizations',
+    'en-ca': 'customizations',
+    'fr-ca': 'customizations',
+    'en-au': 'customizations',
+  }
 };
 
-const slugToCanonicalByLocale: Record<string, Record<string, string>> = {};
+export const aboutUsSlugs: Record<string, Record<string, string>> = {
+  partners: {
+    en: 'partners',
+    'en-ca': 'partners',
+    'fr-ca': 'partenaires',
+    'en-au': 'partners',
+  },
+  "travelworks": {
+    en: 'travelworks',
+    'en-ca': 'travelworks',
+    'fr-ca': 'pc-voyages',
+    'en-au': 'travelworks',
+  }
+};
+
+export const trainingSlugs: Record<string, Record<string, string>> = {
+  "training-platform": {
+    en: 'training-platform',
+    'en-ca': 'training-platform',
+    'fr-ca': 'plateforme-de-formation',
+    'en-au': 'training-platform',
+  },
+  "knowledge-base": {
+    en: 'knowledge-base',
+    'en-ca': 'knowledge-base',
+    'fr-ca': 'base-de-connaissances',
+    'en-au': 'knowledge-base',
+  }
+};
+
+const travelAgencySoftwareSlugToCanonicalByLocale: Record<string, Record<string, string>> = {};
 Object.entries(travelAgencySoftwareSlugs).forEach(([canonical, byLocale]) => {
   Object.entries(byLocale).forEach(([locale, slug]) => {
-    if (!slugToCanonicalByLocale[locale]) {
-      slugToCanonicalByLocale[locale] = {};
+    if (!travelAgencySoftwareSlugToCanonicalByLocale[locale]) {
+      travelAgencySoftwareSlugToCanonicalByLocale[locale] = {};
     }
-    slugToCanonicalByLocale[locale][slug] = canonical;
+    travelAgencySoftwareSlugToCanonicalByLocale[locale][slug] = canonical;
+  });
+});
+
+const aboutUsSlugToCanonicalByLocale: Record<string, Record<string, string>> = {};
+Object.entries(aboutUsSlugs).forEach(([canonical, byLocale]) => {
+  Object.entries(byLocale).forEach(([locale, slug]) => {
+    if (!aboutUsSlugToCanonicalByLocale[locale]) {
+      aboutUsSlugToCanonicalByLocale[locale] = {};
+    }
+    aboutUsSlugToCanonicalByLocale[locale][slug] = canonical;
+  });
+});
+
+const trainingSlugToCanonicalByLocale: Record<string, Record<string, string>> = {};
+Object.entries(trainingSlugs).forEach(([canonical, byLocale]) => {
+  Object.entries(byLocale).forEach(([locale, slug]) => {
+    if (!trainingSlugToCanonicalByLocale[locale]) {
+      trainingSlugToCanonicalByLocale[locale] = {};
+    }
+    trainingSlugToCanonicalByLocale[locale][slug] = canonical;
   });
 });
 
 const knownRouteLocales = new Set(localeOptions.map((item) => item.routeLocale));
-const knownTravelAgencySoftwareSegments = new Set(Object.values(travelAgencySoftwareSegmentByRouteLocale));
 
+const knownTravelAgencySoftwareSegments = new Set(Object.values(travelAgencySoftwareSegmentByRouteLocale));
 export function getTravelAgencySoftwareSegment(routeLocale: string): string {
   return travelAgencySoftwareSegmentByRouteLocale[routeLocale] ?? travelAgencySoftwareSegmentByRouteLocale.en;
+}
+
+const knownAboutUsSegments = new Set(Object.values(aboutUsSegmentByRouteLocale));
+export function getAboutUsSegment(routeLocale: string): string {
+  return aboutUsSegmentByRouteLocale[routeLocale] ?? aboutUsSegmentByRouteLocale.en;
+}
+
+const knownTrainingSegments = new Set(Object.values(trainingSegmentByRouteLocale));
+export function getTrainingSegment(routeLocale: string): string {
+  return trainingSegmentByRouteLocale[routeLocale] ?? trainingSegmentByRouteLocale.en;
+}
+
+const knownDemoSlugs = new Set(Object.values(demoByRouteLocale));
+export function getDemoSlug(routeLocale: string): string {
+  return demoByRouteLocale[routeLocale] ?? demoByRouteLocale.en;
 }
 
 export function getHomepageSlug(routeLocale: string): string {
@@ -89,11 +222,42 @@ export function replaceLocaleInPath(pathname: string, targetLocale: string): str
     // Also translate the page slug in this section when it has a locale-specific value.
     if (segments.length > 1) {
       const currentSlug = segments[1];
-      const canonicalSlug = slugToCanonicalByLocale[currentLocale]?.[currentSlug];
+      const canonicalSlug = travelAgencySoftwareSlugToCanonicalByLocale[currentLocale]?.[currentSlug];
       if (canonicalSlug && travelAgencySoftwareSlugs[canonicalSlug]?.[targetLocale]) {
         segments[1] = travelAgencySoftwareSlugs[canonicalSlug][targetLocale];
       }
     }
+  }
+
+  // Keep the static about-us segment localized when switching locales.
+  if (segments.length > 0 && knownAboutUsSegments.has(segments[0])) {
+    segments[0] = getAboutUsSegment(targetLocale);
+
+    if (segments.length > 1) {
+      const currentSlug = segments[1];
+      const canonicalSlug = aboutUsSlugToCanonicalByLocale[currentLocale]?.[currentSlug];
+      if (canonicalSlug && aboutUsSlugs[canonicalSlug]?.[targetLocale]) {
+        segments[1] = aboutUsSlugs[canonicalSlug][targetLocale];
+      }
+    }
+  }
+
+  // Keep the static training segment localized when switching locales.
+  if (segments.length > 0 && knownTrainingSegments.has(segments[0])) {
+    segments[0] = getTrainingSegment(targetLocale);
+
+    if (segments.length > 1) {
+      const currentSlug = segments[1];
+      const canonicalSlug = trainingSlugToCanonicalByLocale[currentLocale]?.[currentSlug];
+      if (canonicalSlug && trainingSlugs[canonicalSlug]?.[targetLocale]) {
+        segments[1] = trainingSlugs[canonicalSlug][targetLocale];
+      }
+    }
+  }
+
+  // Keep one-level demo page slug localized when switching locales.
+  if (segments.length > 0 && knownDemoSlugs.has(segments[0])) {
+    segments[0] = getDemoSlug(targetLocale);
   }
 
   const suffixPath = segments.join('/');

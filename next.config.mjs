@@ -1,4 +1,5 @@
-const createNextIntlPlugin = require('next-intl/plugin');
+import createNextIntlPlugin from 'next-intl/plugin';
+
 const withNextIntl = createNextIntlPlugin('./i18n/request.ts');
 
 /** @type {import('next').NextConfig} */
@@ -45,9 +46,37 @@ const nextConfig = {
         destination: '/en-au',
       },
       {
+        source: '/fr-ca/a-propos',
+        destination: '/fr-ca/about-us',
+      },
+      {
+        source: '/fr-ca/a-propos/partenaires',
+        destination: '/fr-ca/about-us/partners',
+      },
+      {
+        source: '/fr-ca/a-propos/pc-voyages',
+        destination: '/fr-ca/about-us/travelworks',
+      },
+      {
+        source: '/fr-ca/a-propos/:slug',
+        destination: '/fr-ca/about-us/:slug',
+      },
+      {
         source: '/fr-ca/logiciel-agence-voyage/:slug',
         destination: '/fr-ca/travel-agency-software/:slug',
       },
+      {
+        source: '/fr-ca/formation/plateforme-de-formation',
+        destination: '/fr-ca/training/training-platform',
+      },
+      {
+        source: '/fr-ca/formation/base-de-connaissances',
+        destination: '/fr-ca/training/knowledge-base',
+      },
+      {
+        source: '/fr-ca/demander-une-demo',
+        destination: '/fr-ca/ask-for-a-demo',
+      }
     ];
   },
 
@@ -69,4 +98,4 @@ const nextConfig = {
   
 };
 
-module.exports = withNextIntl(nextConfig);
+export default withNextIntl(nextConfig);

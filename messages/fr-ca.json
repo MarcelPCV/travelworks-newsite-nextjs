@@ -147,10 +147,11 @@
       }
     },
     "aboutUs": {
-      "company": "Societe Travelworks",
+      "company": "PcVoyages",
       "clients": "Clients",
       "partners": "Partenaires",
-      "contact": "Contact"
+      "contact": "Contact",
+      "careers": "Carrières"
     },
     "training": {
       "platform": "Plateforme de formation",

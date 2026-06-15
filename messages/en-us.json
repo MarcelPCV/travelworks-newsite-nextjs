@@ -146,10 +146,11 @@
       }
     },
     "aboutUs": {
-      "company": "Travelworks Company",
+      "company": "Travelworks",
       "clients": "Clients",
       "partners": "Partners",
-      "contact": "Contact"
+      "contact": "Contact",
+      "careers": "Careers"
     },
     "training": {
       "platform": "Training Platform",

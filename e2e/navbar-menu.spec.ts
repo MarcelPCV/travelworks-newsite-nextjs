@@ -22,7 +22,7 @@ test.describe('Navbar mega menu', () => {
 
     await page.getByRole('button', { name: 'About Us' }).hover();
     await expect(page.getByRole('menu', { name: 'About Us' })).toBeVisible();
-    await expect(page.getByRole('link', { name: 'Travelworks Company' })).toBeVisible();
+    await expect(page.getByRole('link', { name: 'Travelworks' })).toBeVisible();
 
     await page.getByRole('button', { name: 'Training' }).hover();
     await expect(page.getByRole('menu', { name: 'Training' })).toBeVisible();

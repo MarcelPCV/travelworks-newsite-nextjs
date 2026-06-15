@@ -5,11 +5,16 @@ import { usePathname } from 'next/navigation';
 import { useEffect, useMemo, useRef, useState, useCallback } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import {
+  aboutUsSlugs,
   DEFAULT_ROUTE_LOCALE,
+  getAboutUsSegment,
+  getDemoSlug,
+  getTrainingSegment,
   getTravelAgencySoftwareSegment,
   localeOptions,
   replaceLocaleInPath,
   routeToMessageLocale,
+  trainingSlugs,
   travelAgencySoftwareSlugs,
 } from '@/app/[locale]/locale-config';
 import {
@@ -58,7 +63,7 @@ const productColumnsByCategory: Record<ProductCategory, ProductLinkKey[][]> = {
   ],
 };
 
-const aboutUsLinks = ['company', 'clients', 'partners', 'contact'] as const;
+const aboutUsLinks = ['company', 'clients', 'partners', 'contact', 'careers'] as const;
 const trainingLinks = ['platform', 'knowledgeBase'] as const;
 
 const menuItemIconClassName = 'w-5 h-5 transition duration-150 text-zinc-900 group-hover:text-zinc-700 rounded-full';
@@ -81,6 +86,7 @@ const aboutUsLinkIcons: Record<(typeof aboutUsLinks)[number], LucideIcon> = {
   clients: Users,
   partners: Users,
   contact: Mail,
+  careers: Star,
 };
 
 const trainingLinkIcons: Record<(typeof trainingLinks)[number], LucideIcon> = {
@@ -102,21 +108,22 @@ const productSlugByKey: Record<ProductLinkKey, string> = {
 };
 
 const aboutUsSlugByKey: Record<(typeof aboutUsLinks)[number], string> = {
-  company: 'about-us',
+  company: 'travelworks',
   clients: 'clients',
   partners: 'partners',
   contact: 'contact',
+  careers: 'careers',
 };
 
 const trainingSlugByKey: Record<(typeof trainingLinks)[number], string> = {
-  platform: 'platform',
+  platform: 'training-platform',
   knowledgeBase: 'knowledge-base',
 };
 
 const loginSlugByOptionId: Record<'Travelworks' | 'Support' | 'Training' | 'Knowledge Base', string> = {
   Travelworks: 'travelworks',
   Support: 'support',
-  Training: 'training',
+  Training: 'training-platform',
   'Knowledge Base': 'knowledge-base',
 };
 
@@ -158,19 +165,26 @@ export default function Navbar() {
 
   const aboutUsHref = useCallback(
     (linkKey: (typeof aboutUsLinks)[number]) => {
-      const slug = aboutUsSlugByKey[linkKey];
-      return slug ? withLocalePrefix(`/about-us/${slug}`) : withLocalePrefix('/about-us');
+      const canonicalSlug = aboutUsSlugByKey[linkKey];
+      const localizedSlug = aboutUsSlugs[canonicalSlug]?.[currentRouteLocale] ?? canonicalSlug;
+      const localizedSegment = getAboutUsSegment(currentRouteLocale);
+      return localizedSlug ? withLocalePrefix(`/${localizedSegment}/${localizedSlug}`) : withLocalePrefix(`/${localizedSegment}`);
     },
-    [withLocalePrefix]
+    [currentRouteLocale, withLocalePrefix]
   );
 
   const trainingHref = useCallback(
-    (linkKey: (typeof trainingLinks)[number]) => withLocalePrefix(`/training/${trainingSlugByKey[linkKey]}`),
-    [withLocalePrefix]
+    (linkKey: (typeof trainingLinks)[number]) => {
+      const canonicalSlug = trainingSlugByKey[linkKey];
+      const localizedSlug = trainingSlugs[canonicalSlug]?.[currentRouteLocale] ?? canonicalSlug;
+      const localizedSegment = getTrainingSegment(currentRouteLocale);
+      return withLocalePrefix(`/${localizedSegment}/${localizedSlug}`);
+    },
+    [currentRouteLocale, withLocalePrefix]
   );
 
   const homeHref = currentRouteLocale === DEFAULT_ROUTE_LOCALE ? '/' : `/${currentRouteLocale}`;
-  const askForDemoHref = oneLevelHref('ask-for-demo');
+  const askForDemoHref = withLocalePrefix(`/${getDemoSlug(currentRouteLocale)}`);
   const supportHref = oneLevelHref('support');
 
   const logInOptions: DropdownCtaOption[] = [
