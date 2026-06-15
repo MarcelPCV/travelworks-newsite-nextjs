@@ -1,18 +1,27 @@
 import Image from 'next/image';
 import { useId } from 'react';
 
+// --- Types ---
 type ImagePosition = 'left' | 'right';
 
-type IntroSectionProps = {
+interface IntroSectionProps {
+  /** Optional text above the main heading (e.g., "Featured Brand"). */
   eyebrow?: string;
+  /** The main title of the section. */
   heading: string;
+  /** The descriptive paragraph content. */
   description: string;
+  /** URL source for the hero image. */
   imageSrc: string;
+  /** Alt text for accessibility. */
   imageAlt: string;
+  /** Determines if the image is on the left or right side of the text block. Defaults to 'left'. */
   imagePosition?: ImagePosition;
+  /** Optional additional classes applied to the root <section> element. */
   className?: string;
-};
+}
 
+// --- Component ---
 export default function IntroSection({
   eyebrow,
   heading,
@@ -23,17 +32,27 @@ export default function IntroSection({
   className,
 }: IntroSectionProps) {
   const headingId = useId();
-  const imageOrderClassName = imagePosition === 'right' ? 'md:order-2' : 'md:order-1';
-  const textOrderClassName = imagePosition === 'right' ? 'md:order-1' : 'md:order-2';
 
-  const rootClassName = ['w-full rounded-[2rem] bg-neutral-background px-4 py-5 sm:px-6 sm:py-6 lg:px-8 lg:py-8', className]
-    .filter(Boolean)
-    .join(' ');
+  // 1. Encapsulate dynamic ordering logic for clarity
+  const getOrderClasses = (position: ImagePosition) => ({
+    imageOrder: position === 'right' ? 'md:order-2' : 'md:order-1',
+    textOrder: position === 'right' ? 'md:order-1' : 'md:order-2',
+  });
+
+  const { imageOrder: imageOrderClassName, textOrder: textOrderClassName } = getOrderClasses(imagePosition);
+
+  // 2. Define base classes for better separation of concerns
+  const rootBaseClasses = [
+    'w-full mx-auto max-w-7xl rounded-[2rem] bg-neutral-background py-5 sm:py-6 lg:py-8',
+  ].join(' ');
+
+  const contentGridClasses = `grid grid-cols-1 gap-5 overflow-hidden rounded-[1.6rem] border border-neutral-border/70 bg-white md:grid-cols-[minmax(0,1.08fr)_minmax(0,0.92fr)] md:gap-0`;
 
   return (
-    <section className={rootClassName} aria-labelledby={headingId}>
-      <div className="grid grid-cols-1 gap-5 overflow-hidden rounded-[1.6rem] border border-neutral-border/70 bg-white md:grid-cols-[minmax(0,1.08fr)_minmax(0,0.92fr)] md:gap-0">
-        <div className={[imageOrderClassName, 'relative min-h-[17rem] overflow-hidden md:min-h-[24rem] lg:min-h-[28rem]'].join(' ')}>
+    <section className={`${rootBaseClasses} ${className}`} aria-labelledby={headingId}>
+      <div className={contentGridClasses}>
+        {/* Image Container */}
+        <div className={`relative min-h-68 overflow-hidden md:min-h-96 lg:min-h-112 ${imageOrderClassName}`}>
           <Image
             src={imageSrc}
             alt={imageAlt}
@@ -43,12 +62,8 @@ export default function IntroSection({
           />
         </div>
 
-        <div
-          className={[
-            textOrderClassName,
-            'flex flex-col justify-center px-5 py-6 text-center sm:px-7 sm:py-8 md:px-8 md:py-10 md:text-left lg:px-10 lg:py-12',
-          ].join(' ')}
-        >
+        {/* Text Content Container */}
+        <div className={`flex flex-col justify-center px-5 py-6 text-center sm:px-7 sm:py-8 md:px-8 md:py-10 md:text-left lg:px-10 lg:py-12 ${textOrderClassName}`}>
           {eyebrow ? (
             <p className="text-sm font-semibold uppercase tracking-[0.18em] text-brand-blue/75 sm:text-base">{eyebrow}</p>
           ) : null}

@@ -32,7 +32,7 @@ function ImageSlot({
   );
 }
 
-export default function FeaturesHeroSection({
+export default function PageHero({
   className,
   heading = 'TRAVELWORKS',
   description = 'State of the art technology solutions for travel agencies and tour operators.',
@@ -42,7 +42,7 @@ export default function FeaturesHeroSection({
   ctaImageSrc,
 }: FeaturesHeroSectionProps) {
   const rootClassName = [
-    'relative w-full overflow-hidden bg-[#e5e5e5]',
+    'relative mx-auto max-w-7xl w-full overflow-hidden bg-[#e5e5e5]',
     'before:pointer-events-none before:absolute before:inset-0 before:hidden before:bg-[radial-gradient(circle_at_8%_88%,rgba(255,170,59,0.55),transparent_13%),radial-gradient(circle_at_16%_14%,rgba(255,255,255,0.5),transparent_18%),linear-gradient(132deg,rgba(255,255,255,0.54)_0%,rgba(255,255,255,0)_34%),linear-gradient(-132deg,rgba(255,255,255,0.5)_0%,rgba(255,255,255,0)_30%),radial-gradient(circle_at_87%_17%,rgba(255,170,59,0.6),transparent_14%),radial-gradient(circle_at_80%_88%,rgba(255,170,59,0.5),transparent_12%)] before:lg:block',
     className,
   ]
@@ -68,12 +68,12 @@ export default function FeaturesHeroSection({
 
               <h1
                 id="features-hero-title"
-                className="mt-5 text-4xl font-semibold uppercase tracking-wide text-brand-blue sm:text-[2.55rem] lg:mt-7 lg:text-[3rem]"
+                className="mt-5 text-3xl font-semibold uppercase tracking-wide text-brand-blue lg:mt-7"
               >
                 {heading}
               </h1>
 
-              <p className="mx-auto mt-4 max-w-[22ch] text-[2rem] leading-tight text-neutral-dark sm:max-w-[24ch] sm:text-[2.2rem] lg:mt-5 lg:text-[2.35rem]">
+              <p className="mx-auto mt-4 max-w-[22ch] text-[1,4rem] leading-tight text-neutral-dark sm:max-w-[24ch]">
                 {description}
               </p>
 
