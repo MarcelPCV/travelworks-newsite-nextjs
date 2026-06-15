@@ -62,6 +62,42 @@ const nextConfig = {
         destination: '/fr-ca/about-us/:slug',
       },
       {
+        source: '/fr-ca/logiciel-agence-voyage/fonctionnalites',
+        destination: '/fr-ca/travel-agency-software/features',
+      },
+      {
+        source: '/fr-ca/logiciel-agence-voyage/avantages',
+        destination: '/fr-ca/travel-agency-software/benefits',
+      },
+      {
+        source: '/fr-ca/logiciel-agence-voyage/back-office-agence-voyage',
+        destination: '/fr-ca/travel-agency-software/back-office-travel-agency',
+      },
+      {
+        source: '/fr-ca/logiciel-agence-voyage/details-du-voyage',
+        destination: '/fr-ca/travel-agency-software/trip-details',
+      },
+      {
+        source: '/fr-ca/logiciel-agence-voyage/gestion-des-tours',
+        destination: '/fr-ca/travel-agency-software/tour-management',
+      },
+      {
+        source: '/fr-ca/logiciel-agence-voyage/outils-crm',
+        destination: '/fr-ca/travel-agency-software/crm-tools',
+      },
+      {
+        source: '/fr-ca/logiciel-agence-voyage/integration-multiple',
+        destination: '/fr-ca/travel-agency-software/multiple-integration',
+      },
+      {
+        source: '/fr-ca/logiciel-agence-voyage/tableau-de-bord-rapports',
+        destination: '/fr-ca/travel-agency-software/dashboard-reports',
+      },
+      {
+        source: '/fr-ca/logiciel-agence-voyage/customizations',
+        destination: '/fr-ca/travel-agency-software/customizations',
+      },
+      {
         source: '/fr-ca/logiciel-agence-voyage/:slug',
         destination: '/fr-ca/travel-agency-software/:slug',
       },
