@@ -164,7 +164,7 @@ export default function ComparisonSolutionSection({
   rows = defaultRows,
   className,
 }: ComparisonSolutionSectionProps) {
-  const rootClassName = ['w-full bg-[#e7e7e7] px-3 py-7 sm:px-4 sm:py-8 lg:px-5 lg:py-10', className]
+  const rootClassName = ['w-full mx-auto max-w-7xl bg-[#e7e7e7] px-3 py-7 sm:px-4 sm:py-8 lg:px-5 lg:py-10', className]
     .filter(Boolean)
     .join(' ');
 

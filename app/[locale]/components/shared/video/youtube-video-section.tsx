@@ -20,7 +20,7 @@ export default function YoutubeVideoSection({
   className,
   description,
 }: YoutubeVideoSectionProps) {
-  const rootClassName = ['w-full rounded-[2rem] bg-[#3f3f41] px-4 py-8 sm:px-6 sm:py-10 lg:px-8', className]
+  const rootClassName = ['w-full mx-auto max-w-7xl rounded-[2rem] bg-[#3f3f41] px-4 py-8 sm:px-6 sm:py-10 lg:px-8', className]
     .filter(Boolean)
     .join(' ');
 
