@@ -10,7 +10,6 @@ import BenefitsBanner from './components/home/benefits-banner/benefits-banner';
 import { setRequestLocale } from 'next-intl/server';
 import { getCountryOptions } from '@/app/lib/countries';
 import { routeToMessageLocale } from './locale-config';
-import YoutubeVideoSection from './components/shared/video/youtube-video-section';
 import FeaturesHeroSection from './components/shared/page-hero/page-hero';
 
 export default async function LocalePage({
@@ -43,13 +42,6 @@ export default async function LocalePage({
           locale={messageLocale}
         />
         <FeaturesHighlightsSection />
-        <YoutubeVideoSection
-          heading="See Our Latest Client Success Story"
-          videoId="qG8LDdvA6TE"
-          channelLabel="Travelworks Showcase"
-          description="This video highlights our work with Acme Corp, demonstrating our platform's efficiency in real-time."
-          className="mt-10 border-red-500/50" // Example of custom class override
-        />
       </div>
     </main>
   );

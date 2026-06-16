@@ -1,4 +1,18 @@
 {
+  "pages": {
+    "travel-agency-software": {
+      "features": {
+        "block-type-page-hero": {
+          "title": "Travelworks",
+          "description": "State of the art technology solutions for travel agencies and tour operators.",
+          "mobileTopImageSrc":"/images/pages/travel-agency-software/features/background-portfolio-features-mobile.webp",
+          "desktopMainImageSrc":"/images/pages/travel-agency-software/features/background-portfolio-features-mobile.webp",
+          "logoImageSrc": "",
+          "ctaImageSrc":"/images/pages/travel-agency-software/features/30-logo-en.svg"
+        }
+      }
+    }
+  },
   "home": {
     "news-ticker": {
       "section-title": "News",
@@ -204,3 +218,4 @@
     "description": "We are currently unable to connect to the CMS. Please check if the Payload CMS server is running and accessible."
   }
 }
+

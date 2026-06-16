@@ -138,7 +138,7 @@ export default function FeaturesMasonrySection({
   rightCards = defaultRightCards,
   className,
 }: FeaturesMasonrySectionProps) {
-  const rootClassName = ['w-full bg-[#ececec] px-3 py-7 sm:px-4 sm:py-8 lg:px-5 lg:py-10', className]
+  const rootClassName = ['w-full mx-auto max-w-7xl bg-[#ececec] px-3 py-7 sm:px-4 sm:py-8 lg:px-5 lg:py-10', className]
     .filter(Boolean)
     .join(' ');
 
