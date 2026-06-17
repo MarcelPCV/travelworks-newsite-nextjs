@@ -1,32 +1,18 @@
 import Image from 'next/image';
 import { useId } from 'react';
+import { SplitSectionModel, ImagePosition } from './type';
 
-// --- Types ---
-type ImagePosition = 'left' | 'right';
-
-interface IntroSectionProps {
-  heading: string;
-  /** The descriptive paragraph content. */
-  description: string;
-  /** URL source for the hero image. */
-  imageSrc: string;
-  /** Alt text for accessibility. */
-  imageAlt: string;
-  /** Determines if the image is on the left or right side of the text block. Defaults to 'left'. */
-  imagePosition?: ImagePosition;
-  /** Optional additional classes applied to the root <section> element. */
-  className?: string;
-}
+type SplitSectionProps = Omit<SplitSectionModel, 'blockType'>;
 
 // --- Component ---
-export default function IntroSection({
+export default function SplitSection({
   heading,
   description,
   imageSrc,
   imageAlt,
   imagePosition = 'left',
   className,
-}: IntroSectionProps) {
+}: SplitSectionProps) {
   const headingId = useId();
 
   // 1. Encapsulate dynamic ordering logic for clarity

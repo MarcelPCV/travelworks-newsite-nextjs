@@ -1,4 +1,170 @@
 {
+  "pages": {
+    "travel-agency-software": {
+      "features": {
+        "block-type-page-hero": {
+          "title": "PcVoyages",
+          "description": "Des solutions technologiques de pointe pour les agences de voyages et les voyagistes.",
+          "mobileTopImageSrc": "/images/pages/travel-agency-software/features/background-portfolio-features-mobile.webp",
+          "desktopMainImageSrc": "/images/pages/travel-agency-software/features/background-portfolio-features-mobile.webp",
+          "logoImageSrc": "",
+          "ctaImageSrc": "/images/pages/travel-agency-software/features/30-logo-en.svg"
+        },
+        "block-type-split": {
+          "heading": "Des outils puissants et intelligents",
+          "description": "Les besoins comptables des agences de voyages sont très particuliers. Notre système est conçu pour couvrir tous les aspects de l'entreprise. PcVoyages offre les outils qui vous aideront à accroître votre productivité, à améliorer le service à la clientèle et à générer davantage de rentabilité.",
+          "imageSrc": "/images/pages/travel-agency-software/features/features-en.webp",
+          "imageAlt": "Aperçu de la plateforme PcVoyages"
+        },
+        "block-type-features-masonry": {
+          "heading": "Découvrez toutes les fonctionnalités :",
+          "reservation-management": {
+            "title": "Gestion des réservations",
+            "topLinkLabel": "Cliquez ici et découvrez SIREV : le moteur de réservation en ligne",
+            "items": {
+              "0": "Gestion des comptes corporatifs",
+              "1": "Gestion des groupes de passagers",
+              "2": "Produits optionnels supplémentaires dans les réservations existantes",
+              "3": "Calcul automatisé des frais de service",
+              "4": "Historique des passagers"
+            }
+          },
+          "strategic-management-tool": {
+            "title": "Outil de gestion stratégique",
+            "items": {
+              "0": "Tableau de bord avec les échéances clés pour les agents et les gestionnaires",
+              "1": "Indicateurs de performance personnalisés par agent, succursale et bannière",
+              "2": "Communications internes pour des promotions hebdomadaires ciblées"
+            }
+          },
+          "crm-marketing": {
+            "title": "Outils CRM et marketing",
+            "items": {
+              "0": "CRM et campagnes de courriels ciblées",
+              "1": "Messagerie de rappel automatisée",
+              "2": "Application mobile avec détails d’itinéraire, cartes et contenu de destination"
+            },
+            "ctaLabel": "Fonctionnalités CRM",
+            "ctaHref": "#"
+          },
+          "accounting": {
+            "title": "Comptabilité",
+            "items": {
+              "0": "Comptes fournisseurs",
+              "1": "Comptes clients",
+              "2": "Grand livre",
+              "3": "Opérations comptables et rapprochements",
+              "4": "Rapports"
+            },
+            "ctaLabel": "Fonctionnalités comptables",
+            "ctaHref": "#"
+          },
+          "invoicing": {
+            "title": "Facturation",
+            "items": {
+              "0": "Configuration des règles et préférences de facturation",
+              "1": "Configuration des modèles de factures",
+              "2": "Envoi de factures par courriel avec messages personnalisés",
+              "3": "Ajustement de la facturation en temps réel lors de l’ajout de nouveaux produits",
+              "4": "Génération de chèques en lot"
+            },
+            "ctaLabel": "Fonctionnalités de facturation",
+            "ctaHref": "#"
+          },
+          "tour-management": {
+            "title": "Gestion des voyages",
+            "items": {
+              "0": "Création de produits et sous-produits",
+              "1": "Inventaire en temps réel",
+              "2": "Réservation en ligne",
+              "3": "Suivi automatisé des paiements"
+            },
+            "ctaLabel": "Fonctionnalités de gestion des voyages",
+            "ctaHref": "#"
+          }
+        },
+        "block-type-youtube-video": {
+          "heading": "Découvrez notre dernière histoire de réussite client",
+          "videoId": "qG8LDdvA6TE",
+          "channelLabel": "Vitrine Travelworks",
+          "description": "Cette vidéo met en lumière notre travail avec Acme Corp, démontrant l'efficacité de notre plateforme en temps réel."
+        },
+        "block-type-comparison-solution": {
+          "heading": "Une solution complète",
+          "imageSrc": "/image.webp",
+          "imageAlt": "Agent de voyage souriant à un bureau avec un ordinateur portable",
+          "columns": {
+            "0": {
+              "id": "travelworks",
+              "label": "TravelWorks"
+            },
+            "1": {
+              "id": "generic-accounting",
+              "label": "Logiciel de comptabilité générique"
+            },
+            "2": {
+              "id": "other-travel",
+              "label": "Autres logiciels de voyage"
+            }
+          },
+          "rows": {
+            "0": {
+              "id": "invoicing",
+              "label": "Facturation"
+            },
+            "1": {
+              "id": "automated-invoicing-gds",
+              "label": "Facturation automatisée avec GDS"
+            },
+            "2": {
+              "id": "accounting-operations",
+              "label": "Opérations comptables"
+            },
+            "3": {
+              "id": "integrated-crm",
+              "label": "CRM intégré"
+            },
+            "4": {
+              "id": "passenger-groups",
+              "label": "Gestion des groupes de passagers"
+            },
+            "5": {
+              "id": "agent-commission",
+              "label": "Gestion des commissions des agents de voyage"
+            },
+            "6": {
+              "id": "supplier-cards",
+              "label": "Gestion des cartes de crédit des fournisseurs"
+            },
+            "7": {
+              "id": "bsp-arc",
+              "label": "Gestion BSP / ARC"
+            },
+            "8": {
+              "id": "reporting-travel",
+              "label": "Outil de reporting adapté à l'industrie du voyage"
+            },
+            "9": {
+              "id": "genuine-cloud",
+              "label": "Système cloud natif"
+            },
+            "10": {
+              "id": "insurance-api",
+              "label": "Intégration complète (API) avec les compagnies d'assurance"
+            },
+            "11": {
+              "id": "dashboard-timelines",
+              "label": "Tableau de bord avec chronologie clé par agent"
+            },
+            "12": {
+              "id": "tablet-version",
+              "label": "Version tablette du logiciel"
+            }
+          }
+        }
+      }
+    }
+  },
   "home": {
     "news-ticker": {
       "section-title": "Nouvelles",

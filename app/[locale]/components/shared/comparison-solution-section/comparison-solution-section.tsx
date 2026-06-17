@@ -1,169 +1,15 @@
 import Image from 'next/image';
 import { Check } from 'lucide-react';
-
-export type ComparisonColumn = {
-  id: string;
-  label: string;
-};
-
-export type ComparisonSolutionRow = {
-  id: string;
-  label: string;
-  values: Record<string, boolean>;
-};
-
-type ComparisonSolutionSectionProps = {
-  heading?: string;
-  imageSrc?: string;
-  imageAlt?: string;
-  columns?: ComparisonColumn[];
-  rows?: ComparisonSolutionRow[];
-  className?: string;
-};
-
-const defaultColumns: ComparisonColumn[] = [
-  { id: 'travelworks', label: 'TravelWorks' },
-  { id: 'generic-accounting', label: 'Generic accounting software' },
-  { id: 'other-travel', label: 'Other travel software' },
-];
-
-const defaultRows: ComparisonSolutionRow[] = [
-  {
-    id: 'invoicing',
-    label: 'Invoicing',
-    values: {
-      travelworks: true,
-      'generic-accounting': true,
-      'other-travel': true,
-    },
-  },
-  {
-    id: 'automated-invoicing-gds',
-    label: 'Automated invoicing with GDS',
-    values: {
-      travelworks: true,
-      'generic-accounting': false,
-      'other-travel': true,
-    },
-  },
-  {
-    id: 'accounting-operations',
-    label: 'Accounting operations',
-    values: {
-      travelworks: true,
-      'generic-accounting': true,
-      'other-travel': true,
-    },
-  },
-  {
-    id: 'integrated-crm',
-    label: 'Integrated CRM',
-    values: {
-      travelworks: true,
-      'generic-accounting': false,
-      'other-travel': false,
-    },
-  },
-  {
-    id: 'passenger-groups',
-    label: 'Passengers groups management',
-    values: {
-      travelworks: true,
-      'generic-accounting': false,
-      'other-travel': true,
-    },
-  },
-  {
-    id: 'agent-commission',
-    label: 'Travel agent commission management',
-    values: {
-      travelworks: true,
-      'generic-accounting': false,
-      'other-travel': true,
-    },
-  },
-  {
-    id: 'supplier-cards',
-    label: 'Management of suppliers credit cards',
-    values: {
-      travelworks: true,
-      'generic-accounting': false,
-      'other-travel': true,
-    },
-  },
-  {
-    id: 'bsp-arc',
-    label: 'BSP / ARC management',
-    values: {
-      travelworks: true,
-      'generic-accounting': false,
-      'other-travel': true,
-    },
-  },
-  {
-    id: 'reporting-travel',
-    label: 'Reporting tool tailored to travel industry',
-    values: {
-      travelworks: true,
-      'generic-accounting': false,
-      'other-travel': true,
-    },
-  },
-  {
-    id: 'genuine-cloud',
-    label: 'Genuine cloud system',
-    values: {
-      travelworks: true,
-      'generic-accounting': true,
-      'other-travel': false,
-    },
-  },
-  {
-    id: 'insurance-api',
-    label: 'Full integration (API) with insurance companies',
-    values: {
-      travelworks: true,
-      'generic-accounting': false,
-      'other-travel': false,
-    },
-  },
-  {
-    id: 'mobile-app-module',
-    label: 'Mobile application module integrated to main system',
-    values: {
-      travelworks: true,
-      'generic-accounting': false,
-      'other-travel': false,
-    },
-  },
-  {
-    id: 'dashboard-timelines',
-    label: 'Dashboard with key timelines per agent',
-    values: {
-      travelworks: true,
-      'generic-accounting': false,
-      'other-travel': false,
-    },
-  },
-  {
-    id: 'tablet-version',
-    label: 'Tablet application version of the software',
-    values: {
-      travelworks: true,
-      'generic-accounting': false,
-      'other-travel': false,
-    },
-  },
-];
+import { ComparisonColumn, ComparisonSolutionRow, ComparisonSolution } from './type';
 
 export default function ComparisonSolutionSection({
-  heading = 'A Complete Solution',
-  imageSrc = '/image.webp',
-  imageAlt = 'Travel agent smiling at a desk with a laptop',
-  columns = defaultColumns,
-  rows = defaultRows,
+  heading,
+  imageSrc,
+  imageAlt,
+  columns = [],
+  rows = [],
   className,
-}: ComparisonSolutionSectionProps) {
+}: ComparisonSolution) {
   const rootClassName = ['w-full mx-auto max-w-7xl bg-[#e7e7e7] px-3 py-7 sm:px-4 sm:py-8 lg:px-5 lg:py-10', className]
     .filter(Boolean)
     .join(' ');
@@ -180,14 +26,16 @@ export default function ComparisonSolutionSection({
 
         <div className="mt-4 grid grid-cols-1 overflow-hidden border border-neutral-border/70 bg-neutral-canvas lg:grid-cols-[1.9fr_1fr]">
           <div className="relative min-h-[21rem] sm:min-h-[26rem] lg:min-h-full">
-            <Image
-              src={imageSrc}
-              alt={imageAlt}
-              fill
-              sizes="(max-width: 1023px) 100vw, 64vw"
-              className="object-cover"
-              priority={false}
-            />
+            {imageSrc ? (
+              <Image
+                src={imageSrc}
+                alt={imageAlt ?? ''}
+                fill
+                sizes="(max-width: 1023px) 100vw, 64vw"
+                className="object-cover"
+                priority={false}
+              />
+            ) : null}
           </div>
 
           <div className="overflow-x-auto bg-brand-blue">

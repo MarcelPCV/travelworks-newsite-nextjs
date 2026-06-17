@@ -17,7 +17,7 @@ export default function SecurityBannerCard({
   className,
 }: SecurityBannerCardProps) {
   const rootClassName = [
-    'w-full overflow-hidden rounded-sm border border-neutral-border bg-neutral-canvas',
+    'w-full max-w-[300px] overflow-hidden rounded-sm border border-neutral-border bg-neutral-canvas',
     className,
   ]
     .filter(Boolean)

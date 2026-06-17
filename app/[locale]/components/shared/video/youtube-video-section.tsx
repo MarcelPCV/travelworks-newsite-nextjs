@@ -1,25 +1,14 @@
 import React from 'react';
 import YouTubePlayer from './YouTubePlayer';
-
-type YoutubeVideoSectionProps = {
-  heading?: string;
-  videoId?: string;
-  channelLabel?: string;
-  className?: string;
-  description?: string; 
-};
-
-const defaultHeading = 'Boost The Efficiency Of Your Travel Agency!';
-const defaultVideoId = 'M7lc1UVf-VE';
-const defaultChannelLabel = 'Travelworks - PcVoyages';
+import { YoutubeVideoModel } from './type';
 
 export default function YoutubeVideoSection({
-  heading = defaultHeading,
-  videoId = defaultVideoId,
-  channelLabel = defaultChannelLabel,
+  heading,
+  videoId,
+  channelLabel,
   className,
   description,
-}: YoutubeVideoSectionProps) {
+}: YoutubeVideoModel) {
   const rootClassName = ['w-full mx-auto max-w-7xl rounded-[2rem] bg-[#3f3f41] px-4 py-8 sm:px-6 sm:py-10 lg:px-8', className]
     .filter(Boolean)
     .join(' ');

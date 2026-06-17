@@ -9,6 +9,158 @@
           "desktopMainImageSrc":"/images/pages/travel-agency-software/features/background-portfolio-features-mobile.webp",
           "logoImageSrc": "",
           "ctaImageSrc":"/images/pages/travel-agency-software/features/30-logo-en.svg"
+        },
+        "block-type-split": {
+          "heading": "Powerful and smart tools",
+          "description": "Travel agency accounting needs are quite particular. Our system is designed to cover all aspects of the business. TravelWorks has the tools that will help you increase productivity, improve customer service and generate profitability.",
+          "imageSrc": "/images/pages/travel-agency-software/features/features-en.webp",
+          "imageAlt": "TravelWorks platform overview"
+        },
+        "block-type-features-masonry": {
+          "heading": "Discover all features:",
+          "reservation-management": {
+            "title": "Reservation Management",
+            "topLinkLabel": "Click Here and discover SIREV: The Online Booking Engine",
+            "items": {
+              "0": "Management of corporate accounts",
+              "1": "Management of passenger groups",
+              "2": "Additional optional products in existing bookings",
+              "3": "Automated service fee calculation",
+              "4": "Passenger history"
+            }
+          },
+          "strategic-management-tool": {
+            "title": "Strategic Management Tool",
+            "items": {
+              "0": "Dashboard with key deadlines for agents and managers.",
+              "1": "Custom performance indicators by agent, branch, and banner.",
+              "2": "Internal communications for targeted weekly promotions."
+            }
+          },
+          "crm-marketing":{
+            "title": "CRM and Marketing Tools",
+            "items": {
+              "0": "CRM and targeted email campaigns",
+              "1": "Automated reminder messaging",
+              "2": "Mobile app with itinerary details, maps, and destination content"
+            },
+            "ctaLabel": "CRM Tools Features",
+            "ctaHref": "#"
+          },
+          "accounting": {
+            "title": "Accounting",
+            "items": {
+              "0": "Accounts payable",
+              "1": "Accounts receivable",
+              "2": "General ledger",
+              "3": "Accounting operations and reconciliations",
+              "4": "Reporting"
+            },
+            "ctaLabel": "Accounting Features",
+            "ctaHref": "#"
+          },
+          "invoicing": {
+            "title": "Invoicing",
+            "items": {
+              "0": "Configuration of invoicing rules and preferences",
+              "1": "Invoice template configuration",
+              "2": "Invoice e-mailing with customized messages",
+              "3": "Real-time invoicing adjustment when adding new products",
+              "4": "Batch cheque generation"
+            },
+            "ctaLabel": "Invoicing Features",
+            "ctaHref": "#"
+          },
+          "tour-management": {
+            "title": "Tour Management",
+            "items": {
+              "0": "Product and sub-product creation",
+              "1": "Real-time inventory",
+              "2": "Online reservation",
+              "3": "Automated payment follow-up"
+            },
+            "ctaLabel": "Tour Management Features",
+            "ctaHref": "#"
+          }
+        },
+        "block-type-youtube-video": {
+          "heading": "See Our Latest Client Success Story",
+          "videoId": "qG8LDdvA6TE",
+          "channelLabel": "Travelworks Showcase",
+          "description": "This video highlights our work with Acme Corp, demonstrating our platform's efficiency in real-time."
+        },
+        "block-type-comparison-solution": {
+          "heading": "A Complete Solution",
+          "imageSrc": "/image.webp",
+          "imageAlt": "Travel agent smiling at a desk with a laptop",
+          "columns": {
+            "0": {
+              "id": "travelworks",
+              "label": "TravelWorks"
+            },
+            "1": {
+              "id": "generic-accounting",
+              "label": "Generic accounting software"
+            },
+            "2": {
+              "id": "other-travel",
+              "label": "Other travel software"
+            }
+          },
+          "rows": {
+            "0": {
+              "id": "invoicing",
+              "label": "Invoicing"
+            },
+            "1": {
+              "id": "automated-invoicing-gds",
+              "label": "Automated invoicing with GDS"
+            },
+            "2": {
+              "id": "accounting-operations",
+              "label": "Accounting operations"
+            },
+            "3": {
+              "id": "integrated-crm",
+              "label": "Integrated CRM"
+            },
+            "4": {
+              "id": "passenger-groups",
+              "label": "Passengers groups management"
+            },
+            "5": {
+              "id": "agent-commission",
+              "label": "Travel agent commission management"
+            },
+            "6": {
+              "id": "supplier-cards",
+              "label": "Management of suppliers credit cards"
+            },
+            "7": {
+              "id": "bsp-arc",
+              "label": "BSP / ARC management"
+            },
+            "8": {
+              "id": "reporting-travel",
+              "label": "Reporting tool tailored to travel industry"
+            },
+            "9": {
+              "id": "genuine-cloud",
+              "label": "Genuine cloud system"
+            },
+            "10": {
+              "id": "insurance-api",
+              "label": "Full integration (API) with insurance companies"
+            },
+            "11": {
+              "id": "dashboard-timelines",
+              "label": "Dashboard with key timelines per agent"
+            },
+            "12": {
+              "id": "tablet-version",
+              "label": "Tablet application version of the software"
+            }
+          }
         }
       }
     }
@@ -218,4 +370,3 @@
     "description": "We are currently unable to connect to the CMS. Please check if the Payload CMS server is running and accessible."
   }
 }
-

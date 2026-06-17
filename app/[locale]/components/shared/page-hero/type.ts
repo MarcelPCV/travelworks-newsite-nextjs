@@ -1,5 +1,5 @@
 export type PageHeroModel = {
-	blockType: string;
+	blockType: "PageHero";
   title?: string;
   description?: string;
   mobileTopImageSrc?: string;
