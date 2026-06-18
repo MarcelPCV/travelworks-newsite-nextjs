@@ -1,13 +1,4 @@
-'use client';
-
-import {
-  CircleDollarSign,
-  FileCheck2,
-  Laptop,
-  Workflow,
-} from 'lucide-react';
-import { useTranslations } from 'next-intl';
-import { Features } from './type';
+import { FeaturesCardsHighlights } from './type';
 
 function HeadingBadge() {
   return (
@@ -18,8 +9,12 @@ function HeadingBadge() {
   );
 }
 
-function HighlightIcon({ item }: { item: Features }) {
-  const Icon = item.icon ?? FileCheck2;
+function normalizeClass(html: string) {
+  return html.replace(/className=/g, 'class=');
+}
+
+function HighlightIcon({ item }: { item: FeaturesCardsHighlights }) {
+  const Icon = item.icon;
 
   return (
     <div className="flex h-28 w-28 items-center justify-center rounded-full bg-[#dbdbdb]">
@@ -28,40 +23,19 @@ function HighlightIcon({ item }: { item: Features }) {
   );
 }
 
-export default function FeaturesHighlightsSection() {
-  const t = useTranslations('features.highlights');
-  
-  const items: Features[] = [
-    {
-      id: 0,
-      title: t.raw('invoicing-methodology.title'),
-      description: t.raw('invoicing-methodology.description'),
-      icon: FileCheck2
-    },
-    {
-      id: 1,
-      title: t.raw('process-automation.title'),
-      description: t.raw('process-automation.description'),
-      icon: Workflow
-    },
-    {
-      id: 2,
-      title: t.raw('accounting-integration.title'),
-      description: t.raw('accounting-integration.description'),
-      icon: CircleDollarSign,
-    },
-    {
-      id: 3,
-      title: t.raw('data-anywhere.title'),
-      description: t.raw('data-anywhere.description'),
-      icon: Laptop
-    },
-  ];
+type FeaturesHighlightsSectionProps = {
+  cards: FeaturesCardsHighlights[];
+  ariaLabel?: string;
+};
 
+export default function FeaturesHighlightsSection({
+  cards,
+  ariaLabel = 'Accounting and automation highlights',
+}: FeaturesHighlightsSectionProps) {
   return (
-    <section className="w-full mx-auto max-w-7xl rounded-2xl bg-[#e7e7e7] px-4 py-8 sm:px-6 lg:px-10 lg:py-12" aria-label="Accounting and automation highlights">
+    <section className="w-full mx-auto max-w-7xl rounded-2xl bg-[#e7e7e7] px-4 py-8 sm:px-6 lg:px-10 lg:py-12" aria-label={ariaLabel}>
       <div className="grid grid-cols-1 gap-x-16 gap-y-12 lg:grid-cols-2 lg:gap-y-14">
-        {items.map((item) => {
+        {cards.map((item) => {
           return (
             <div key={item.id} className="grid grid-cols-1 gap-5 sm:grid-cols-[8rem_1fr] sm:gap-6">
               <div className="sm:pt-3">
@@ -75,7 +49,7 @@ export default function FeaturesHighlightsSection() {
                 </h3>
 
                 <div className="mt-4 space-y-4 text-lg leading-relaxed text-neutral-700">
-                  <span dangerouslySetInnerHTML={{ __html: item.description }} />
+                  <p dangerouslySetInnerHTML={{ __html: normalizeClass(item.description) }} />
                 </div>
               </div>
             </div>

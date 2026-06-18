@@ -162,6 +162,122 @@
             }
           }
         }
+      },
+      "back-office-travel-agency": {
+        "block-type-page-hero": {
+          "title": "COMPTABILITÉ ET FACTURATION",
+          "description": "Créez des factures standardisées et professionnelles. Automatisez efficacement vos opérations et maintenez une comptabilité fiable.",
+          "mobileTopImageSrc": "/images/pages/travel-agency-software/back-office-travel-agency/background-portfolio-backoffice.webp",
+          "desktopMainImageSrc": "/images/pages/travel-agency-software/back-office-travel-agency/background-portfolio-backoffice.webp",
+          "logoImageSrc": "",
+          "ctaImageSrc": ""
+        },
+        "block-type-split": {
+          "heading": "Une comptabilité moderne : moins de papier, plus d’efficacité.",
+          "description": "Avec TravelWorks, optimisez vos processus comptables grâce à de bonnes pratiques et à des outils performants !",
+          "imageSrc": "/images/pages/travel-agency-software/back-office-travel-agency/travelworks_paperless.webp",
+          "imageAlt": "Aperçu de la plateforme TravelWorks"
+        },
+        "block-type-features-highlights": {
+          "invoicing-methodology": {
+            "title": "Méthodologie de facturation",
+            "description": "Avec TravelWorks, vous pouvez générer des <strong className='font-semibold text-brand-blue'>factures standardisées en un seul clic</strong>. Définissez facilement votre <strong className='font-semibold text-brand-blue'>modèle de facture avec des messages personnalisés</strong> pour votre agence. Les factures incluant <strong className='font-semibold text-brand-blue'>vos conditions générales</strong> peuvent être envoyées par courriel à vos clients. Toutes les modifications apportées aux factures sont enregistrées dans l’historique du dossier, évitant ainsi les reprises de travail pour vos agents."
+          },
+          "process-automation": {
+            "title": "Automatisation des processus",
+            "description": "<strong className='font-semibold text-brand-blue'>Générez des factures directement depuis vos moteurs de réservation</strong>, activez le calcul automatique des frais de service et gérez les groupes de passagers sans avoir à ressaisir des informations redondantes. <strong className='font-semibold text-brand-blue'>Vous réduisez ainsi les tâches administratives de votre agence de voyages</strong>, permettant à vos agents de se concentrer sur le service à la clientèle."
+          },
+          "accounting-integration": {
+            "title": "Une comptabilité précise en temps réel",
+            "description": "Votre agence de voyages travaille avec un comptable externe ? Celui-ci peut consulter vos données à distance, sans avoir à se déplacer. Une comptabilité à jour permet d’identifier rapidement les dossiers nécessitant une vérification supplémentaire et de clôturer les périodes comptables sans perte de temps. <strong className='font-semibold text-brand-blue'>Moins de travail pour votre comptable signifie plus d’économies pour votre agence de voyages.</strong>"
+          },
+          "data-anywhere": {
+            "title": "Des données accessibles partout, même pour les comptables",
+            "description": "Notre système a été conçu pour <strong className='font-semibold text-brand-blue'>vous permettre d’identifier en tout temps vos comptes fournisseurs et vos comptes clients</strong>. Les conciliations bancaires sont simplifiées et les états financiers peuvent être produits rapidement. Le grand livre général est mis à jour automatiquement et les rapports comptables peuvent être générés en quelques clics."
+          }
+        },
+        "block-type-features-masonry": {
+          "heading": "La comptabilité d’une agence de voyages comporte des exigences très spécifiques. Notre système a été conçu pour toutes les couvrir.",
+          "passenger-groups": {
+            "title": "GROUPES DE PASSAGERS",
+            "topLinkLabel": "",
+            "items": {
+              "0": "Vous organisez des voyages de groupe et souhaitez gagner du temps sur la facturation ? Avec TravelWorks, vous pouvez créer un modèle de voyage qui synchronise automatiquement tous les dossiers des passagers.",
+              "1": "Lorsqu’un nouveau client souhaite rejoindre le même groupe, des produits additionnels (par exemple une assurance voyage) peuvent être ajoutés à son dossier, rendant la réservation plus rapide et plus efficace grâce au modèle existant.",
+              "2": "Un rapport de rentabilité peut être généré pour ce groupe de passagers à partir de notre module de rapports."
+            }
+          },
+          "suppliers-credit-cards": {
+            "title": "CARTES DE CRÉDIT DES FOURNISSEURS",
+            "items": {
+              "0": "Votre agence de voyages traite les cartes de crédit des fournisseurs avec des prélèvements préautorisés.",
+              "1": "TravelWorks vous permet de gérer ces modes de paiement spécifiques en plus de tous les autres."
+            }
+          },
+          "advanced-reports": {
+            "title": "RAPPORTS AVANCÉS",
+            "items": {
+              "0": "Les gestionnaires d’agences de voyages souhaitent suivre la performance de leur entreprise en temps réel.",
+              "1": "TravelWorks génère de multiples rapports selon différents critères (destination, type de produit, fournisseur, etc.).",
+              "2": "Des communications périodiques par courriel contenant des rapports peuvent être configurées selon vos besoins."
+            },
+            "ctaLabel": "",
+            "ctaHref": ""
+          },
+          "mobile-solutions": {
+            "title": "SOLUTIONS MOBILES",
+            "items": {
+              "0": "Pour offrir un service à la clientèle optimal, TravelWorks propose un concept unique avec des applications mobiles (iOS/Android) intégrées à son logiciel.",
+              "1": "Les agences de voyages peuvent offrir à leurs clients une application iOS et Android à leur image de marque permettant d’accéder à : des itinéraires détaillés, des cartes locales et des guides de voyage liés à leur destination.",
+              "2": "Des informations utiles qui simplifient leur voyage et améliorent leur expérience sur place."
+            },
+            "ctaLabel": "Découvrir Trip n'Touch",
+            "ctaHref": "#"
+          },
+          "travel-agents-commissions": {
+            "title": "COMMISSIONS DES CONSEILLERS EN VOYAGES",
+            "items": {
+              "0": "La gestion des commissions des agents peut être complexe en raison des différentes structures de commissions selon les produits, du calcul des commissions sur les paiements partiels des clients, des délais dans la réception des commissions des fournisseurs et du partage des commissions entre plusieurs agents. TravelWorks simplifie ces processus en offrant un suivi précis et une gestion efficace des commissions.",
+              "1": "TravelWorks vous permet de gérer cet aspect en toute tranquillité. Les gestionnaires et les agents peuvent compter sur notre logiciel pour assurer le suivi de toutes les commissions à payer et à recevoir."
+            },
+            "ctaLabel": "",
+            "ctaHref": ""
+          },
+          "bsp-arc-management": {
+            "title": "GESTION BSP-ARC",
+            "items": {
+              "0": "Votre agence de voyages est accréditée IATA et gère le BSP ou l’ARC ?",
+              "1": "TravelWorks permet d’identifier rapidement les erreurs grâce à des rapports automatisés d’exception. Vous intervenez uniquement lorsqu’un écart est détecté, pour une efficacité maximale."
+            },
+            "ctaLabel": "",
+            "ctaHref": ""
+          },
+          "travel-agents-dashboards": {
+            "title": "TABLEAUX DE BORD DES CONSEILLERS EN VOYAGES",
+            "items": {
+              "0": "À l’ouverture du logiciel chaque jour, les agents peuvent consulter les dates importantes à venir, les promotions à mettre de l’avant ainsi que leurs résultats en temps réel (revenus, profits, etc.).",
+              "1": "Les tableaux de bord sont personnalisés pour les gestionnaires et propriétaires d’agences afin qu’ils puissent consulter en temps réel les indicateurs de performance de tous les agents.",
+              "2": "Les propriétaires de plusieurs succursales peuvent également effectuer ce type de suivi pour l’ensemble de leurs agences."
+            },
+            "ctaLabel": "",
+            "ctaHref": ""
+          },
+          "pci-compliance": {
+            "title": "CONFORMITÉ PCI",
+            "items": {
+              "0": "Toute entreprise qui traite des paiements par carte de crédit ou de débit doit se conformer aux normes PCI DSS (Payment Card Industry Data Security Standards). Ces normes visent à assurer la sécurité des réseaux et à protéger les informations de paiement sensibles contre tout accès non autorisé.",
+              "1": "TravelWorks a été conçu en tenant compte de la conformité PCI afin d’aider les agences de voyages à maintenir un environnement de paiement sécurisé, à protéger les données de leurs clients et à répondre aux exigences de sécurité de l’industrie."
+            },
+            "ctaLabel": "Consulter les normes de sécurité",
+            "ctaHref": "https://www.pcisecuritystandards.org/"
+          }
+        },
+        "block-type-youtube-video": {
+          "heading": "Découvrez notre plus récente histoire de réussite client",
+          "videoId": "qG8LDdvA6TE",
+          "channelLabel": "Présentation de TravelWorks",
+          "description": "Cette vidéo présente notre collaboration avec Acme Corp et démontre l’efficacité de notre plateforme en temps réel."
+        }
       }
     }
   },

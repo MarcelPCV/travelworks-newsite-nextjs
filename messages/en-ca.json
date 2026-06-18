@@ -162,6 +162,122 @@
             }
           }
         }
+      },
+      "back-office-travel-agency": {
+        "block-type-page-hero": {
+          "title": "ACCOUNTING AND INVOICING",
+          "description": "Create standardized & professional invoices. Efficiently automate your operations and maintain reliable accounting",
+          "mobileTopImageSrc":"/images/pages/travel-agency-software/back-office-travel-agency/background-portfolio-backoffice.webp",
+          "desktopMainImageSrc":"/images/pages/travel-agency-software/back-office-travel-agency/background-portfolio-backoffice.webp",
+          "logoImageSrc": "",
+          "ctaImageSrc":""
+        },
+        "block-type-split": {
+          "heading": "Modern accounting: less paper, more efficiency.",
+          "description": "With Travelworks, you maximize your accounting processes with good practices and powerful tools!",
+          "imageSrc": "/images/pages/travel-agency-software/back-office-travel-agency/travelworks_paperless.webp",
+          "imageAlt": "TravelWorks platform overview"
+        },
+        "block-type-features-highlights": {
+          "invoicing-methodology": {
+            "title": "Invoicing Methodology",
+            "description": "With TravelWorks, you can generate <strong className='font-semibold text-brand-blue'>standardized invoices with one click</strong>. You can easily define your <strong className='font-semibold text-brand-blue'>invoice template with customized messages</strong> for your agency, Invoices with <strong className='font-semibold text-brand-blue'>your Terms and Conditions</strong> can easily be emailed to your customers. All invoice changes are tracked by the file history, avoiding re-work for your agents."
+          },
+          "process-automation": {
+            "title": "Process Automation",
+            "description": "<strong className='font-semibold text-brand-blue'>Generate invoices in our system from your booking engines</strong>, activate automatic calculation of service fees, and manage passenger groups without re-entering redundant information,<strong className='font-semibold text-brand-blue'>. This is how you reduce administrative tasks in your travel agency</strong>, so your agents can focus on customer service."
+          },
+          "accounting-integration": {
+            "title": "Accurate Accounting In Real Time",
+            "description": "Your travel agency is dealing with an external accountant; how valuable it is for them to consult your data without having to travel to your location. Your up-to-date accounting helps quickly identify files that require additional screening and close accounting periods without wasting time.<strong className='font-semibold text-brand-blue'>. Less work for your accountant means more money in your travel agency&apos;s pockets.</strong>"
+          },
+          "data-anywhere": {
+            "title": "Available Data From Anywhere, Even For Accountants",
+            "description": "Our system was built to <strong className='font-semibold text-brand-blue'>help you identify at any time your accounts payable and accounts receivable</strong> within your travel agency. Bank reconciliations are carried out easily and financial statements are produced quickly.The general ledger automatically adjusts and accounting reports can be generated in a few clicks."
+          }
+        },
+        "block-type-features-masonry": {
+          "heading": "Travel agency accounting has very specific requirements that need to be considered and our system has been designed to cover them all.",
+          "passenger-groups": {
+            "title": "PASSENGER GROUPS",
+            "topLinkLabel": "",
+            "items": {
+              "0": "Are you organizing group travel and want to save time with billing? With TravelWorks, you can create a trip template which will synchronize all your passengers files.",
+              "1": "When a new client wants to join the same passenger group, additional products (i.e. insurance policy) can be added to their file making the booking quicker and more efficient while using the template.",
+              "2": "A profitability report can be generated for this particular Passenger Group via our Reporting module"
+            }
+          },
+          "suppliers-credit-cards": {
+            "title": "SUPPLIERS' CREDIT CARDS",
+            "items": {
+              "0": "Your travel agency handles suppliers' credit cards with preauthorized withdrawals.",
+              "1": "TravelWorks allows you to handle these specific methods of payment in addition to all others."
+            }
+          },
+          "advanced-reports":{
+            "title": "ADVANCED REPORTS",
+            "items": {
+              "0": "Travel agency managers want to be able to monitor their travel agency's performances in real-time.",
+              "1": "TravelWorks generates multiple reports based on several criteria (by destination, by product type, by supplier etc.).",
+              "2": "Periodic reporting email communications can be configured to your needs"
+            },
+            "ctaLabel": "",
+            "ctaHref": ""
+          },
+          "mobile-solutions": {
+            "title": "MOBILE SOLUTIONS",
+            "items": {
+              "0": "For optimal customer service, TravelWorks offers a unique concept with mobile applications (iOS/Android) integrated into its software.",
+              "1": "Travel agencies can now offer their clients an iOS and Android application with their logo that will allow passengers to access: Detailed itineraries, Local maps, Travel guides related to their destinations",
+              "2": "Useful information that will simplify their journey and enhance their stay."
+            },
+            "ctaLabel": "Discover Trip n'Touch",
+            "ctaHref": "#"
+          },
+          "travel-agents-commissions": {
+            "title": "TRAVEL AGENTS' COMMISSIONS",
+            "items": {
+              "0": "Managing agent commissions can be complex due to varying commission structures across products, the need to calculate commissions on partial client payments, delays in receiving supplier commissions, and the requirement to split commissions between multiple agents. TravelWorks simplifies these processes, providing accurate tracking and streamlined commission management.",
+              "1": "TravelWorks allows you to manage this aspect with peace of mind. Travel Managers and agents can rely on our software to keep track of all commission payables and receivables."
+            },
+            "ctaLabel": "",
+            "ctaHref": ""
+          },
+          "bsp-arc-management": {
+            "title": "BSP-ARC MANAGEMENT",
+            "items": {
+              "0": "Your travel agency is IATA accredited and you manage BSP - ARC!",
+              "1": "Travel Works allows you to quickly identify errors through automated exception reports. You intervene only in cases where gaps have been identified for optimal efficiency!"
+            },
+            "ctaLabel": "",
+            "ctaHref": ""
+          },
+          "travel-agents-dashboards": {
+            "title": "TRAVEL AGENTS' DASHBOARDS",
+            "items": {
+              "0": "Upon opening the software each day, agents have the possibility of viewing important dates coming up, promotions to push as well as their real-time results (revenue, profits...).",
+              "1": "Dashboards are customized for travel agency managers and owners in order to enable them to consult all agents' performance indicators in real-time.",
+              "2": "Multi-branch owners can also carry out this type of follow-up on all branches." 
+            },
+            "ctaLabel": "",
+            "ctaHref": ""
+          },
+          "pci-compliance": {
+            "title": "PCI COMPLIANCE",
+            "items": {
+              "0": "Any business that processes customer payments through credit or debit cards must comply with Payment Card Industry Data Security Standards (PCI DSS). These standards are designed to ensure secure network infrastructure and protect sensitive payment information from unauthorized access.",
+              "1": "TravelWorks is designed with PCI compliance in mind, helping travel agencies maintain a secure payment environment while safeguarding customer data and supporting industry security requirements."
+            },
+            "ctaLabel": "Consult Security Standards",
+            "ctaHref": "https://www.pcisecuritystandards.org/"
+          }
+        },
+        "block-type-youtube-video": {
+          "heading": "See Our Latest Client Success Story",
+          "videoId": "qG8LDdvA6TE",
+          "channelLabel": "Travelworks Showcase",
+          "description": "This video highlights our work with Acme Corp, demonstrating our platform's efficiency in real-time."
+        }
       }
     }
   },

@@ -1,5 +1,5 @@
 import HeroCarousel from './components/home/hero-carousel/hero-carousel'
-import FeaturesHighlightsSection from './components/features/features-highlights-section';
+
 import FeatureCards from './components/home/feature-cards/feature-cards';
 import WhyTravelworksSection from './components/home/why/why-travelworks-section';
 import PlanningDemoSection from './components/home/demo-section/planning-demo-section';
@@ -10,7 +10,6 @@ import BenefitsBanner from './components/home/benefits-banner/benefits-banner';
 import { setRequestLocale } from 'next-intl/server';
 import { getCountryOptions } from '@/app/lib/countries';
 import { routeToMessageLocale } from './locale-config';
-import FeaturesHeroSection from './components/shared/page-hero/page-hero';
 
 export default async function LocalePage({
   params,
@@ -41,7 +40,6 @@ export default async function LocalePage({
           countries={countries}
           locale={messageLocale}
         />
-        <FeaturesHighlightsSection />
       </div>
     </main>
   );
