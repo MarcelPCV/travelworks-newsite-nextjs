@@ -78,7 +78,7 @@ export const productSlugByKey: Record<ProductLinkKey, string> = {
   tourManagement: 'tour-management',
   tourOnline: 'tour-online',
   crmTools: 'crm-tools',
-  integrations: 'multiple-integration',
+  integrations: 'integrations',
   dashboardReports: 'dashboard-reports',
   customizations: 'customizations',
 };

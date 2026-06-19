@@ -7,10 +7,16 @@ export type FeaturesCardsHighlights = {
   title: string;
   description: string;
   icon: LucideIcon;
+  linkTitle?: string;
+  linkUrl?: string;
 };
 
 export type FeaturesHighlights = {
-  blockType: "block-type-features-highlights"
+  blockType: "FeaturesHighlights"
+  cards: FeaturesCardsHighlights[];
+};
+
+export type FeaturesHighlightsSectionProps = {
   cards: FeaturesCardsHighlights[];
 };
 

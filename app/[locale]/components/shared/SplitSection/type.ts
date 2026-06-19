@@ -1,11 +1,12 @@
-// --- Types ---
+import { ReactNode } from 'react';
+
 export type ImagePosition = 'left' | 'right';
 
 export type SplitSectionModel = {
   blockType: "SplitSection";
   heading: string;
   /** The descriptive paragraph content. */
-  description: string;
+  description: ReactNode;
   /** URL source for the hero image. */
   imageSrc: string;
   /** Alt text for accessibility. */

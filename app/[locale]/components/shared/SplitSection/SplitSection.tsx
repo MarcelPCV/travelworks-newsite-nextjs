@@ -29,18 +29,24 @@ export default function SplitSection({
   ].join(' ');
 
   const contentGridClasses = `grid grid-cols-1 gap-5 overflow-hidden rounded-[1.6rem] md:grid-cols-[minmax(0,1.08fr)_minmax(0,0.92fr)] md:gap-0`;
+  const hasValidImageSrc =
+    typeof imageSrc === 'string' &&
+    (imageSrc.startsWith('/') || imageSrc.startsWith('http://') || imageSrc.startsWith('https://') || imageSrc.startsWith('data:'));
 
   return (
     <section className={`${rootBaseClasses} ${className}`} aria-labelledby={headingId}>
       <div className={contentGridClasses}>
         {/* Image Container */}
         <div className={`relative flex items-center min-h-68 overflow-hidden md:min-h-96 lg:min-h-112 ${imageOrderClassName}`}>
-          <Image
-            src={imageSrc}
-            alt={imageAlt}
-            width={800}
-            height={600}
-          />
+          {hasValidImageSrc ? (
+            <Image
+              src={imageSrc}
+              alt={imageAlt ?? ''}
+              width={800}
+              height={600}
+            />
+          ) : null}
+          dasdasd
         </div>
 
         {/* Text Content Container */}

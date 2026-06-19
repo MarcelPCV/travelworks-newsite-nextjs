@@ -1,4 +1,6 @@
-import { FeaturesCardsHighlights } from './type';
+import { FeaturesCardsHighlights, FeaturesHighlightsSectionProps } from './type';
+import Link from 'next/link';
+
 
 function HeadingBadge() {
   return (
@@ -23,17 +25,12 @@ function HighlightIcon({ item }: { item: FeaturesCardsHighlights }) {
   );
 }
 
-type FeaturesHighlightsSectionProps = {
-  cards: FeaturesCardsHighlights[];
-  ariaLabel?: string;
-};
 
 export default function FeaturesHighlightsSection({
   cards,
-  ariaLabel = 'Accounting and automation highlights',
 }: FeaturesHighlightsSectionProps) {
   return (
-    <section className="w-full mx-auto max-w-7xl rounded-2xl bg-[#e7e7e7] px-4 py-8 sm:px-6 lg:px-10 lg:py-12" aria-label={ariaLabel}>
+    <section className="w-full mx-auto max-w-7xl rounded-2xl bg-[#e7e7e7] px-4 py-8 sm:px-6 lg:px-10 lg:py-12" aria-label="Feature highlights">
       <div className="grid grid-cols-1 gap-x-16 gap-y-12 lg:grid-cols-2 lg:gap-y-14">
         {cards.map((item) => {
           return (
@@ -51,6 +48,12 @@ export default function FeaturesHighlightsSection({
                 <div className="mt-4 space-y-4 text-lg leading-relaxed text-neutral-700">
                   <p dangerouslySetInnerHTML={{ __html: normalizeClass(item.description) }} />
                 </div>
+
+                {item.linkUrl && item.linkTitle && (
+                  <Link href={item.linkUrl} className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-white bg-brand-blue px-2 py-1 rounded-md">
+                    {item.linkTitle}
+                  </Link>
+                )}
               </div>
             </div>
           );

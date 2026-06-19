@@ -38,10 +38,10 @@ export default async function Page({
 							<SplitSection
 								key={index}
 								{...layout}
-								heading={layout.heading ? t(layout.heading) : ''}
-								description={layout.description ? t(layout.description) : ''}
-								imageSrc={layout.imageSrc ? t(layout.imageSrc) : ''}
-								imageAlt={layout.imageAlt ? t(layout.imageAlt) : ''}
+								heading={typeof layout.heading === 'string' ? t(layout.heading) : ''}
+								description={typeof layout.description === 'string' ? t(layout.description) : ''}
+								imageSrc={typeof layout.imageSrc === 'string' ? t(layout.imageSrc) : ''}
+								imageAlt={typeof layout.imageAlt === 'string' ? t(layout.imageAlt) : ''}
 							/>
 						);
 					case "FeatureMasonry":

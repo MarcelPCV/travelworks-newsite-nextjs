@@ -278,6 +278,58 @@
           "channelLabel": "Travelworks Showcase",
           "description": "This video highlights our work with Acme Corp, demonstrating our platform's efficiency in real-time."
         }
+      },
+      "customizations": {
+        "block-type-page-hero": {
+          "title": "Customizations",
+          "description": "We work with you to meet your needs",
+          "mobileTopImageSrc":"/images/pages/travel-agency-software/customizations/background-portfolio-customization.webp",
+          "desktopMainImageSrc":"/images/pages/travel-agency-software/customizations/background-portfolio-customization.webp",
+          "logoImageSrc": "",
+          "ctaImageSrc":""
+        },
+        "block-type-split": {
+          "heading": "Custom Experiences",
+          "description": "In addition to providing a range of incredible tools for your agency, we work with <strong>exclusive customization</strong> for some clients. Please, contact us for more information. With Travelworks there are <strong>no barriers</strong> to your business structure.",
+          "imageSrc": "/images/pages/travel-agency-software/customizations/customized.webp",
+          "imageAlt": "Custom Experiences"
+        },
+        "block-type-youtube-video": {
+          "heading": "See Our Latest Client Success Story",
+          "videoId": "qG8LDdvA6TE",
+          "channelLabel": "Travelworks Showcase",
+          "description": "This video highlights our work with Acme Corp, demonstrating our platform's efficiency in real-time."
+        }
+      },
+      "integrations": {
+        "block-type-page-hero": {
+          "title": "Integrate with other systems",
+          "description": "Interface with numerous partners and automate your operations.",
+          "mobileTopImageSrc": "/images/pages/travel-agency-software/multiple-integration/background-portfolio-multiple-integration.webp",
+          "desktopMainImageSrc": "/images/pages/travel-agency-software/multiple-integration/background-portfolio-multiple-integration.webp",
+          "logoImageSrc": "",
+          "ctaImageSrc":""
+        },
+        "block-type-features-highlights": {
+          "online-reservation": {
+            "title": "Online reservation and automated invoicing",
+            "description": "<p>If you offer your clients online booking via your website, you can <strong>automate invoices without any manual intervention.</strong></p><p>If you have a partnership with Soft Voyages for your online reservation bookings, the <strong>auto-invoicing feature can be activated</strong>.</p><p>If your website is designed by another provider, we can <strong>evaluate the feasibility of the integration upon request.</strong></p>",
+            "linkTitle": "",
+            "linkUrl": "#"
+          },
+          "gds": {
+            "title": "Integrates with major Global Distribution Systems (GDS)",
+            "description": "<p>This enables you to retrieve accounting information from systems such as: <strong>Sabre, Galileo, Amadeus, Worldspan & SIREV </strong>.</p><p>An automated invoice is generated and transactions are updated in the TravelWorks accounting module.</p>",
+            "linkTitle": "Discover our Partners",
+            "linkUrl": "#"
+          },
+          "insurance-companies": {
+            "title": "Direct connect access to several Insurance companies",
+            "description": "The <strong>insurance companies interface</strong> is accessible in <strong>real-time via TravelWorks</strong>. Once you select the best policy for your client, the information is transmitted to the insurance company and is then auto populated into TravelWorks invoicing with the price breakdown, commission receivable & policy identification number.",
+            "linkTitle": "Discover our Partners",
+            "linkUrl": "#"
+          }
+        }
       }
     }
   },

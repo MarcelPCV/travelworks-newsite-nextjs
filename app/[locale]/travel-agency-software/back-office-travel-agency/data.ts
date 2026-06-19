@@ -163,7 +163,7 @@ export const BackOfficeTravelAgencyPage: Page = {
       imagePosition: "left"
     },
     {
-      blockType: "block-type-features-highlights",
+      blockType: "FeaturesHighlights",
       cards: featuresCards
     },
     {

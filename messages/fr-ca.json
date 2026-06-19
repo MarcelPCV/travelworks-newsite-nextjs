@@ -278,6 +278,58 @@
           "channelLabel": "Présentation de TravelWorks",
           "description": "Cette vidéo présente notre collaboration avec Acme Corp et démontre l’efficacité de notre plateforme en temps réel."
         }
+      },
+      "customizations": {
+        "block-type-page-hero": {
+          "title": "Personnalisations",
+          "description": "Nous travaillons avec vous pour répondre à vos besoins",
+          "mobileTopImageSrc": "/images/pages/travel-agency-software/customizations/background-portfolio-customization.webp",
+          "desktopMainImageSrc": "/images/pages/travel-agency-software/customizations/background-portfolio-customization.webp",
+          "logoImageSrc": "",
+          "ctaImageSrc": ""
+        },
+        "block-type-split": {
+          "heading": "Expériences personnalisées",
+          "description": "En plus de proposer une gamme d’outils exceptionnels pour votre agence, nous offrons des <strong>personnalisations exclusives</strong> à certains clients. Veuillez nous contacter pour plus d’informations. Avec Travelworks, il n’y a <strong>aucune barrière</strong> à la structure de votre entreprise.",
+          "imageSrc": "/images/pages/travel-agency-software/customizations/customized.webp",
+          "imageAlt": "Expériences personnalisées"
+        },
+        "block-type-youtube-video": {
+          "heading": "Découvrez notre dernière réussite client",
+          "videoId": "qG8LDdvA6TE",
+          "channelLabel": "Travelworks Showcase",
+          "description": "Cette vidéo met en avant notre travail avec Acme Corp, démontrant l’efficacité de notre plateforme en temps réel."
+        }
+      },
+      "integrations": {
+        "block-type-page-hero": {
+          "title": "Intégrez-vous à d'autres systèmes",
+          "description": "Connectez-vous à de nombreux partenaires et automatisez vos opérations.",
+          "mobileTopImageSrc": "/images/pages/travel-agency-software/multiple-integration/background-portfolio-multiple-integration.webp",
+          "desktopMainImageSrc": "/images/pages/travel-agency-software/multiple-integration/background-portfolio-multiple-integration.webp",
+          "logoImageSrc": "",
+          "ctaImageSrc": ""
+        },
+        "block-type-features-highlights": {
+          "online-reservation": {
+            "title": "Réservation en ligne et facturation automatisée",
+            "description": "<p>Si vous offrez à vos clients la réservation en ligne via votre site Web, vous pouvez <strong>automatiser la facturation sans aucune intervention manuelle.</strong></p><p>Si vous avez un partenariat avec SoftVoyage pour vos réservations en ligne, la <strong>fonction de facturation automatique peut être activée</strong>.</p><p>Si votre site Web est conçu par un autre fournisseur, nous pouvons <strong>évaluer la faisabilité de l'intégration sur demande.</strong></p>",
+            "linkTitle": "",
+            "linkUrl": "#"
+          },
+          "gds": {
+            "title": "Intégration avec les principaux systèmes mondiaux de distribution (GDS)",
+            "description": "<p>Cela vous permet de récupérer les informations comptables provenant de systèmes tels que : <strong>Sabre, Galileo, Amadeus, Worldspan et SIREV</strong>.</p><p>Une facture automatisée est générée et les transactions sont mises à jour dans le module comptable de TravelWorks.</p>",
+            "linkTitle": "Découvrez nos partenaires",
+            "linkUrl": "#"
+          },
+          "insurance-companies": {
+            "title": "Accès en connexion directe à plusieurs compagnies d'assurance",
+            "description": "L'<strong>interface des compagnies d'assurance</strong> est accessible <strong>en temps réel via TravelWorks</strong>. Une fois la meilleure police sélectionnée pour votre client, les informations sont transmises à la compagnie d'assurance puis automatiquement intégrées à la facturation de TravelWorks, avec le détail des coûts, la commission à recevoir et le numéro d'identification de la police.",
+            "linkTitle": "Découvrez nos partenaires",
+            "linkUrl": "#"
+          }
+        }
       }
     }
   },
