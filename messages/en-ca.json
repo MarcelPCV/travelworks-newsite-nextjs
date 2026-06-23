@@ -331,6 +331,61 @@
           }
         }
       }
+    },
+    "training": {
+      "knowledge-base": {
+        "block-type-comparison-training": {
+          "heading": "Two Ways of Reaching Your Objectives",
+          "knowledgeBase": {
+            "title": "Knowledge Base",
+            "badge": "New",
+            "0": {
+              "title": "Self-Serve Access:",
+              "description": "Independently access training materials anytime."
+            },
+            "1": {
+              "title": "Ideal for Refreshers:",
+              "description": "Great for revisiting key topics without formal training."
+            },
+            "2": {
+              "title": "Supports New Hires:",
+              "description": "Agencies can onboard staff without external scheduling."
+            },
+            "3": {
+              "title": "Flexible Learning:",
+              "description": "Learn at your own pace and revisit content as needed."
+            },
+            "4": {
+              "title": "Reduces Admin Dependency:",
+              "description": "Minimizes training team involvement."
+            }
+          },
+          "trainingPlatform": {
+            "title": "Training Platform",
+            "badge": "New",
+            "0": {
+              "title": "Modular Learning:",
+              "description": "Structured courses for a complete, step-by-step understanding."
+            },
+            "1": {
+              "title": "Flexible & Efficient:",
+              "description": "Self-paced training that is accessible during the onboarding process."
+            },
+            "2": {
+              "title": "Progress Tracking:",
+              "description": "Weekly reports on user course completion."
+            },
+            "3": {
+              "title": "Expert Follow-Up:",
+              "description": "Post-training review ensures readiness to go live."
+            },
+            "4": {
+              "title": "Ongoing Support:",
+              "description": "Continued help available anytime via the HELP button."
+            }
+          }
+        }
+      }
     }
   },
   "home": {

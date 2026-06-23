@@ -1,17 +1,7 @@
 import { CheckCircle2 } from "lucide-react";
+import { ComparisonTrainingCard, ConmparisonTraining } from "./type";
 
-type Feature = {
-  title: string;
-  description: string;
-};
-
-type CardProps = {
-  title: string;
-  badge?: string;
-  features: Feature[];
-};
-
-function ComparisonCard({ title, badge, features }: CardProps) {
+function ComparisonCard({ title, badge, features }: ComparisonTrainingCard) {
   return (
     <div className="w-full">
       <div className="mb-8 flex items-center gap-3">
@@ -45,82 +35,21 @@ function ComparisonCard({ title, badge, features }: CardProps) {
   );
 }
 
-export default function TrainingComparison() {
-  const knowledgeBase = [
-    {
-      title: "Self-Serve Access:",
-      description:
-        "Independently access training materials anytime.",
-    },
-    {
-      title: "Ideal for Refreshers:",
-      description:
-        "Great for revisiting key topics without formal training.",
-    },
-    {
-      title: "Supports New Hires:",
-      description:
-        "Agencies can onboard staff without external scheduling.",
-    },
-    {
-      title: "Flexible Learning:",
-      description:
-        "Learn at your own pace and revisit content as needed.",
-    },
-    {
-      title: "Reduces Admin Dependency:",
-      description:
-        "Minimizes training team involvement.",
-    },
-  ];
-
-  const trainingPlatform = [
-    {
-      title: "Modular Learning:",
-      description:
-        "Structured courses for a complete, step-by-step understanding.",
-    },
-    {
-      title: "Flexible & Efficient:",
-      description:
-        "Self-paced training that is accessible during the onboarding process.",
-    },
-    {
-      title: "Progress Tracking:",
-      description:
-        "Weekly reports on user course completion.",
-    },
-    {
-      title: "Expert Follow-Up:",
-      description:
-        "Post-training review ensures readiness to go live.",
-    },
-    {
-      title: "Ongoing Support:",
-      description:
-        "Continued help available anytime via the HELP button.",
-    },
-  ];
-
+export default function TrainingComparison({
+  heading,
+  knowledgeBase,
+  trainingPlatform,
+}: ConmparisonTraining) {
   return (
     <section className="bg-zinc-700 px-6 py-16 md:px-10 lg:px-16 lg:py-24">
       <div className="mx-auto max-w-7xl">
         <h2 className="mb-16 text-center text-3xl font-light uppercase tracking-wide text-white md:text-5xl">
-          Two Ways of Reaching Your Objectives
+          {heading}
         </h2>
 
         <div className="grid gap-16 lg:grid-cols-2 lg:gap-24">
-          <ComparisonCard
-            title="Knowledge Base"
-            badge="New"
-            features={knowledgeBase}
-          />
-
-          <ComparisonCard
-            title="Training Platform"
-            badge="New"
-            features={trainingPlatform}
-          />
+          <ComparisonCard {...knowledgeBase} />
+          <ComparisonCard {...trainingPlatform} />
         </div>
       </div>
     </section>

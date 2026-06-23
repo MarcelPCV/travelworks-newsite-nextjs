@@ -331,6 +331,61 @@
           }
         }
       }
+    },
+    "training": {
+      "knowledge-base": {
+        "block-type-comparison-training": {
+          "heading": "Deux facons d'atteindre vos objectifs",
+          "knowledgeBase": {
+            "title": "Base de connaissances",
+            "badge": "Nouveau",
+            "0": {
+              "title": "Acces en libre-service :",
+              "description": "Accedez aux ressources de formation en tout temps."
+            },
+            "1": {
+              "title": "Ideal pour les rappels :",
+              "description": "Parfait pour revisiter les sujets cles sans formation formelle."
+            },
+            "2": {
+              "title": "Soutien aux nouvelles embauches :",
+              "description": "Les agences peuvent integrer le personnel sans horaires externes."
+            },
+            "3": {
+              "title": "Apprentissage flexible :",
+              "description": "Apprenez a votre rythme et revisitez le contenu au besoin."
+            },
+            "4": {
+              "title": "Moins de dependance administrative :",
+              "description": "Reduit l'implication de l'equipe de formation."
+            }
+          },
+          "trainingPlatform": {
+            "title": "Plateforme de formation",
+            "badge": "Nouveau",
+            "0": {
+              "title": "Apprentissage modulaire :",
+              "description": "Cours structures pour une comprehension complete, etape par etape."
+            },
+            "1": {
+              "title": "Flexible et efficace :",
+              "description": "Formation autonome accessible pendant l'integration."
+            },
+            "2": {
+              "title": "Suivi de progression :",
+              "description": "Rapports hebdomadaires sur la completion des cours."
+            },
+            "3": {
+              "title": "Suivi d'expert :",
+              "description": "La revue post-formation assure la preparation a la mise en ligne."
+            },
+            "4": {
+              "title": "Soutien continu :",
+              "description": "Aide continue disponible en tout temps via le bouton HELP."
+            }
+          }
+        }
+      }
     }
   },
   "home": {

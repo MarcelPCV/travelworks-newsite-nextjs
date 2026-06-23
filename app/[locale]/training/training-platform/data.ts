@@ -70,7 +70,7 @@ const comparisonFeatures = {
 };
 
 export const IntegrationsPageData: Page = {
-  slug: "training/knowledge-base",
+  slug: "training/training-platform",
   layout: [
     {
       blockType: "PageHero",
@@ -81,7 +81,7 @@ export const IntegrationsPageData: Page = {
       logoImageSrc: "block-type-page-hero.logoImageSrc",
       ctaImageSrc: "block-type-page-hero.ctaImageSrc",
     },
-    {
+        {
       blockType: "ImageBlock",
       title: "block-type-image-block.title",
       description: "block-type-image-block.description",

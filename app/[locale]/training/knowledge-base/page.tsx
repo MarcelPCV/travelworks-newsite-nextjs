@@ -66,12 +66,60 @@ export default async function Page({
 								altText={layout.altText ? t(layout.altText) : ''}
 								widthPercentage={layout.widthPercentage}
 							/>);
+					case "ConmparisonTraining":
+						const translateFeatures = (features: { title: string; description: string }[]) =>
+							features.map((feature) => ({
+								title: t(feature.title),
+								description: t(feature.description),
+							}));
+
+						return (
+							<ComparisonCard
+								key={index}
+								{...layout}
+								heading={layout.heading ? t(layout.heading) : ''}
+								knowledgeBase={{
+									...layout.knowledgeBase,
+									title: t(layout.knowledgeBase.title),
+									badge: layout.knowledgeBase.badge ? t(layout.knowledgeBase.badge) : '',
+									features: translateFeatures(layout.knowledgeBase.features),
+								}}
+								trainingPlatform={{
+									...layout.trainingPlatform,
+									title: t(layout.trainingPlatform.title),
+									badge: layout.trainingPlatform.badge ? t(layout.trainingPlatform.badge) : '',
+									features: translateFeatures(layout.trainingPlatform.features),
+								}}
+							/>);
+					case "ExpertProfile":
+						return (
+							<ExpertProfile
+								key={index}
+								{...layout}
+								heading={layout.heading ? t(layout.heading) : ''}
+								person={{
+									...layout.person,
+									name: layout.person.name ? t(layout.person.name) : '',
+									role: layout.person.role ? t(layout.person.role) : '',
+									image: {
+										src: layout.person.image.src ? t(layout.person.image.src) : '',
+										alt: layout.person.image.alt ? t(layout.person.image.alt) : '',
+									},
+								}}
+								quote={layout.quote ? t(layout.quote) : ''}
+								bio={
+									layout.bio
+										? t.rich(layout.bio as string, {
+											p: (chunks) => <p>{chunks}</p>,
+										})
+										: ''
+								}
+							/>
+						);
 					default:
 						return null;
 				}
 			})}
-			<ComparisonCard/>
-			<ExpertProfile/>
 		</main>
 	);
 }

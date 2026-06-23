@@ -52,7 +52,7 @@ export default function ImageBlock({
       {/* ────────────────────── IMAGE CONTAINER ────────────────────── */}
       {imageSrc &&  (
       <div
-        className="mx-auto w-full"
+        className="mx-auto w-full mt-5"
         style={imageContainerStyle} // applies the % width only on md+ screens
       >
         <div className="relative w-full overflow-hidden rounded-lg">

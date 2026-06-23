@@ -348,14 +348,14 @@
           "description": "Find all the resources you need to master TravelWorks and make the most of our software.",
           "mobileTopImageSrc": "/images/pages/training/knowledge-base/bg-knowledge-base.webp",
           "desktopMainImageSrc": "/images/pages/training/knowledge-base/bg-knowledge-base.webp",
-          "logoImageSrc": "",
+          "logoImageSrc": "/images/pages/training/knowledge-base/new.svg",
           "ctaImageSrc":""
         },
         "block-type-image-block": {
           "title": "Training is a key priority for our company",
           "description": "<strong>The Knowledge Base</strong> is a powerful platform that <strong>centralizes all our training videos and documents</strong> in <strong>one easy-to-access place</strong>. It empowers clients to <strong>complete training on their own schedule</strong>, quickly find the <strong>information they need</strong>, and <strong>stay confident and informed—anytime, anywhere</strong>.",
           "imageSrc": "/images/pages/training/knowledge-base/screen-knowledge-base.jpg",
-          "altText": "Multiple Integrations",
+          "altText": "Knowledge Base",
           "linkHref":"/",
           "linkText":"Request now",
           "captionText": ""
@@ -366,7 +366,10 @@
           "altText": "Happy Learning"
         },
         "block-type-comparison-training": {
+          "heading": "Two Ways of Reaching Your Objectives",
           "knowledgeBase": {
+            "title": "Knowledge Base",
+            "badge": "New",
             "0": {
               "title": "Self-Serve Access:",
               "description": "Independently access training materials anytime."
@@ -389,6 +392,8 @@
             }
           },
           "trainingPlatform": {
+            "title": "Training Platform",
+            "badge": "New",
             "0": {
               "title": "Modular Learning:",
               "description": "Structured courses for a complete, step-by-step understanding."
@@ -410,6 +415,107 @@
               "description": "Continued help available anytime via the HELP button."
             }
           }
+        },
+        "block-type-expert-profile": {
+          "heading": "Product Knowledge Experts",
+          "person": {
+            "name": "Danna Woods",
+            "role": "Director of Operations",
+            "image": {
+              "src": "/images/danna-woods.webp",
+              "alt": "Danna Woods"
+            }
+          },
+          "quote": "Developed by industry experts, this training program addresses common agency challenges with a practical, efficient approach that builds foundational skills and empowers real-world application to boost productivity.",
+          "bio": "<p>With a career spanning over a decade, Danna has cultivated deep expertise in account management, client training, and technical support.</p><p>At TravelWorks, Danna plays a pivotal role in aligning customer needs with innovative software solutions. Her leadership in onboarding, client success, and technical enablement has contributed significantly to the company's reputation for excellence and reliability in the travel sector.</p><p>Her ability to bridge the gap between technology and user experience makes her a trusted advisor to clients and a key asset to the TravelWorks leadership team.</p>"
+        }
+      },
+      "training-platform": {
+        "block-type-page-hero": {
+          "title": "Training Platform",
+          "description": "Unlock the full potential of TravelWorks",
+          "mobileTopImageSrc": "/images/pages/training/training-platform/background-training-platform.webp",
+          "desktopMainImageSrc": "/images/pages/training/training-platform/background-training-platform.webp",
+          "logoImageSrc": "/images/pages/training/training-platform/new.svg",
+          "ctaImageSrc":""
+        },
+        "block-type-image-block": {
+          "title": "Exciting News for TravelWorks Clients",
+          "description": "We are thrilled to announce the launch of our <strong>new training platform</strong> designed exclusively for clients using TravelWorks accounting software for travel agencies. This <strong>innovative platform</strong> is <strong>tailored to enhance your proficiency</strong> and <strong>streamline your accounting processes</strong>.",
+          "imageSrc": "/images/pages/training/training-platform/screen-training-platform.jpg",
+          "altText": "Training Platform",
+          "linkHref":"",
+          "linkText":"",
+          "captionText": ""
+        },
+        "block-type-image-happy-learning": {
+          "title": "Happy Learning",
+          "imageSrc": "/images/pages/training/knowledge-base/fireworks.svg",
+          "altText": "Happy Learning"
+        },
+        "block-type-comparison-training": {
+          "heading": "Two Ways of Reaching Your Objectives",
+          "knowledgeBase": {
+            "title": "Knowledge Base",
+            "badge": "New",
+            "0": {
+              "title": "Self-Serve Access:",
+              "description": "Independently access training materials anytime."
+            },
+            "1": {
+              "title": "Ideal for Refreshers:",
+              "description": "Great for revisiting key topics without formal training."
+            },
+            "2": {
+              "title": "Supports New Hires:",
+              "description": "Agencies can onboard staff without external scheduling."
+            },
+            "3": {
+              "title": "Flexible Learning:",
+              "description": "Learn at your own pace and revisit content as needed."
+            },
+            "4": {
+              "title": "Reduces Admin Dependency:",
+              "description": "Minimizes training team involvement."
+            }
+          },
+          "trainingPlatform": {
+            "title": "Training Platform",
+            "badge": "New",
+            "0": {
+              "title": "Modular Learning:",
+              "description": "Structured courses for a complete, step-by-step understanding."
+            },
+            "1": {
+              "title": "Flexible & Efficient:",
+              "description": "Self-paced training that is accessible during the onboarding process."
+            },
+            "2": {
+              "title": "Progress Tracking:",
+              "description": "Weekly reports on user course completion."
+            },
+            "3": {
+              "title": "Expert Follow-Up:",
+              "description": "Post-training review ensures readiness to go live."
+            },
+            "4": {
+              "title": "Ongoing Support:",
+              "description": "Continued help available anytime via the HELP button."
+            }
+          }
+        },
+        "block-type-expert-profile": {
+          "heading": "Product Knowledge Experts",
+          "person": {
+            "name": "Danna Woods",
+            "role": "Director of Operations",
+            "image": {
+              "src": "/images/danna-woods.webp",
+              "alt": "Danna Woods"
+            }
+          },
+          "quote": "Developed by industry experts, this training program addresses common agency challenges with a practical, efficient approach that builds foundational skills and empowers real-world application to boost productivity.",
+          "bio": "<p>With a career spanning over a decade, Danna has cultivated deep expertise in account management, client training, and technical support.</p><p>At TravelWorks, Danna plays a pivotal role in aligning customer needs with innovative software solutions. Her leadership in onboarding, client success, and technical enablement has contributed significantly to the company's reputation for excellence and reliability in the travel sector.</p><p>Her ability to bridge the gap between technology and user experience makes her a trusted advisor to clients and a key asset to the TravelWorks leadership team.</p>"
         }
       }
     }
