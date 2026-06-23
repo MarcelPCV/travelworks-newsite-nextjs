@@ -310,6 +310,15 @@
           "logoImageSrc": "",
           "ctaImageSrc":""
         },
+        "block-type-image-block": {
+          "title": "",
+          "description": "",
+          "imageSrc": "/images/pages/travel-agency-software/multiple-integration/schema.webp",
+          "altText": "Multiple Integrations",
+          "linkHref":"",
+          "linkText":"",
+          "captionText": ""
+        },
         "block-type-features-highlights": {
           "online-reservation": {
             "title": "Online reservation and automated invoicing",
@@ -328,6 +337,78 @@
             "description": "The <strong>insurance companies interface</strong> is accessible in <strong>real-time via TravelWorks</strong>. Once you select the best policy for your client, the information is transmitted to the insurance company and is then auto populated into TravelWorks invoicing with the price breakdown, commission receivable & policy identification number.",
             "linkTitle": "Discover our Partners",
             "linkUrl": "#"
+          }
+        }
+      }
+    },
+    "training" : {
+      "knowledge-base": {
+        "block-type-page-hero": {
+          "title": "Knowledge Base",
+          "description": "Find all the resources you need to master TravelWorks and make the most of our software.",
+          "mobileTopImageSrc": "/images/pages/training/knowledge-base/bg-knowledge-base.webp",
+          "desktopMainImageSrc": "/images/pages/training/knowledge-base/bg-knowledge-base.webp",
+          "logoImageSrc": "",
+          "ctaImageSrc":""
+        },
+        "block-type-image-block": {
+          "title": "Training is a key priority for our company",
+          "description": "<strong>The Knowledge Base</strong> is a powerful platform that <strong>centralizes all our training videos and documents</strong> in <strong>one easy-to-access place</strong>. It empowers clients to <strong>complete training on their own schedule</strong>, quickly find the <strong>information they need</strong>, and <strong>stay confident and informed—anytime, anywhere</strong>.",
+          "imageSrc": "/images/pages/training/knowledge-base/screen-knowledge-base.jpg",
+          "altText": "Multiple Integrations",
+          "linkHref":"/",
+          "linkText":"Request now",
+          "captionText": ""
+        },
+        "block-type-image-happy-learning": {
+          "title": "Happy Learning",
+          "imageSrc": "/images/pages/training/knowledge-base/fireworks.svg",
+          "altText": "Happy Learning"
+        },
+        "block-type-comparison-training": {
+          "knowledgeBase": {
+            "0": {
+              "title": "Self-Serve Access:",
+              "description": "Independently access training materials anytime."
+            },
+            "1": {
+              "title": "Ideal for Refreshers:",
+              "description": "Great for revisiting key topics without formal training."
+            },
+            "2": {
+              "title": "Supports New Hires:",
+              "description": "Agencies can onboard staff without external scheduling."
+            },
+            "3": {
+              "title": "Flexible Learning:",
+              "description": "Learn at your own pace and revisit content as needed."
+            },
+            "4": {
+              "title": "Reduces Admin Dependency:",
+              "description": "Minimizes training team involvement."
+            }
+          },
+          "trainingPlatform": {
+            "0": {
+              "title": "Modular Learning:",
+              "description": "Structured courses for a complete, step-by-step understanding."
+            },
+            "1": {
+              "title": "Flexible & Efficient:",
+              "description": "Self-paced training that is accessible during the onboarding process."
+            },
+            "2": {
+              "title": "Progress Tracking:",
+              "description": "Weekly reports on user course completion."
+            },
+            "3": {
+              "title": "Expert Follow-Up:",
+              "description": "Post-training review ensures readiness to go live."
+            },
+            "4": {
+              "title": "Ongoing Support:",
+              "description": "Continued help available anytime via the HELP button."
+            }
           }
         }
       }

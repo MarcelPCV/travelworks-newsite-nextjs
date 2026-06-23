@@ -1,49 +1,18 @@
 import { PageHeroModel } from "../../components/shared/page-hero/type";
 import { FeaturesHighlights } from "../../components/features/type";
-import { FeaturesCardsHighlights } from "../../components/features/type";
-import {
-  CircleDollarSign,
-  FileCheck2,
-  Workflow,
-} from 'lucide-react';
 import { ImageBlockModel } from "../../components/shared/image-block/type";
+import { imageHappyLearning } from "../../components/pages-elements/happy-learning/type";
 
 export type Layout =
   | PageHeroModel
   | FeaturesHighlights
-  | ImageBlockModel;
+  | ImageBlockModel
+  | imageHappyLearning;
 
 export type Page = {
   slug: string;
   layout: Layout[];
 };
-
-const featuresCards: FeaturesCardsHighlights[] = [
-  {
-    id: 0,
-    title: 'block-type-features-highlights.online-reservation.title',
-    description: 'block-type-features-highlights.online-reservation.description',
-    icon: FileCheck2,
-    linkTitle: '',
-    linkUrl: ''
-  },
-  {
-    id: 1,
-    title: 'block-type-features-highlights.gds.title',
-    description: 'block-type-features-highlights.gds.description',
-    icon: Workflow,
-    linkTitle: 'block-type-features-highlights.gds.linkTitle',
-    linkUrl: 'block-type-features-highlights.gds.linkUrl'
-  },
-  {
-    id: 2,
-    title: 'block-type-features-highlights.insurance-companies.title',
-    description: 'block-type-features-highlights.insurance-companies.description',
-    icon: CircleDollarSign,
-    linkTitle: 'block-type-features-highlights.insurance-companies.linkTitle',
-    linkUrl: 'block-type-features-highlights.insurance-companies.linkUrl'
-  }
-];
 
 export const IntegrationsPageData: Page = {
   slug: "travel-agency-software/multiple-integration",
@@ -70,8 +39,11 @@ export const IntegrationsPageData: Page = {
       captionText: "block-type-image-block.captionText"
     },
     {
-      blockType: "FeaturesHighlights",
-      cards: featuresCards
-    },
+      blockType: "ImageHappyLearning",
+      title: "block-type-image-happy-learning.title",
+      imageSrc: "block-type-image-happy-learning.imageSrc",
+      altText: "block-type-image-happy-learning.altText",
+      widthPercentage: "100px",
+    }
   ]
 };
