@@ -1,7 +1,6 @@
 import { FeaturesCardsHighlights, FeaturesHighlightsSectionProps } from './type';
 import Link from 'next/link';
 
-
 function HeadingBadge() {
   return (
     <span className="relative mt-1 inline-flex h-6 w-6 shrink-0" aria-hidden="true">
@@ -25,7 +24,6 @@ function HighlightIcon({ item }: { item: FeaturesCardsHighlights }) {
   );
 }
 
-
 export default function FeaturesHighlightsSection({
   cards,
 }: FeaturesHighlightsSectionProps) {
@@ -46,7 +44,7 @@ export default function FeaturesHighlightsSection({
                 </h3>
 
                 <div className="mt-4 space-y-4 text-lg leading-relaxed text-neutral-700">
-                  <p dangerouslySetInnerHTML={{ __html: normalizeClass(item.description) }} />
+                  <div dangerouslySetInnerHTML={{ __html: normalizeClass(item.description) }} />
                 </div>
 
                 {item.linkUrl && item.linkTitle && (

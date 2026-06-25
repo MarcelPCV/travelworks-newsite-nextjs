@@ -339,6 +339,36 @@
             "linkUrl": "#"
           }
         }
+      },
+      "dashboard-reports": {
+        "block-type-page-hero": {
+          "title": "Real-time activity dashboard",
+          "description": "A dashboard displays for all users in real time their key information and important deadlines.",
+          "mobileTopImageSrc": "/images/pages/travel-agency-software/dashboard-reports/slider_wide.webp",
+          "desktopMainImageSrc": "/images/pages/travel-agency-software/dashboard-reports/slider_wide.webp",
+          "logoImageSrc": "",
+          "ctaImageSrc":""
+        },
+        "block-type-features-highlights": {
+          "Internal-communications": {
+            "title": "Internal communications",
+            "description": "<p>TravelWorks is also a <strong>nice communication tool</strong> with your employees.</p><p>If you are the travel agency manager and would like your agents to 'push' a flash promotion to their customers, it is very simple to <strong>display the details of the special offer</strong> in each staff member's dashboard.</p>",
+            "linkTitle": "",
+            "linkUrl": "#"
+          },
+          "deadlines-reminders": {
+            "title": "Important deadlines and reminders",
+            "description": "<p>Keep your agency organized with imminent departures, return dates, birthdays, outstanding payments, and automatic reminders all displayed in one place.</p><p>With <strong>all information centralized</strong> and <strong>easy to consult on the main screen</strong>, every travel agent can quickly access the details they need to follow up with clients and manage daily tasks more efficiently.</p>",
+            "linkTitle": "",
+            "linkUrl": "#"
+          },
+          "sales-performance": {
+            "title": "Real-time sales performance",
+            "description": "<p>Each travel agent can see their revenues accumulated in <strong>real-time</strong> for a specific period and their profits over the same period.</p><p>This a tool that will energize your teams!</p><p>Similarly, <strong>travel agency managers can see the performance of each individual agent if necessary</strong> or even of all of their branches if they are multi branch owners.</p>",
+            "linkTitle": "",
+            "linkUrl": "#"
+          }
+        }
       }
     },
     "training" : {

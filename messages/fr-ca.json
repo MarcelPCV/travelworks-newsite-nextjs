@@ -330,6 +330,36 @@
             "linkUrl": "#"
           }
         }
+      },
+      "dashboard-reports": {
+        "block-type-page-hero": {
+          "title": "Tableau de bord d'activité en temps réel",
+          "description": "Un tableau de bord affiche en temps réel à tous les utilisateurs leurs informations clés et les échéances importantes.",
+          "mobileTopImageSrc": "/images/pages/travel-agency-software/dashboard-reports/slider_wide.webp",
+          "desktopMainImageSrc": "/images/pages/travel-agency-software/dashboard-reports/slider_wide.webp",
+          "logoImageSrc": "",
+          "ctaImageSrc": ""
+        },
+        "block-type-features-highlights": {
+          "Internal-communications": {
+            "title": "Communications internes",
+            "description": "<p>TravelWorks est également un <strong>excellent outil de communication</strong> avec vos employés.</p><p>Si vous êtes gestionnaire d'agence de voyages et souhaitez que vos conseillers diffusent une promotion éclair à leurs clients, il est très simple <strong>d'afficher les détails de l'offre spéciale</strong> directement dans le tableau de bord de chaque membre du personnel.</p>",
+            "linkTitle": "",
+            "linkUrl": "#"
+          },
+          "deadlines-reminders": {
+            "title": "Échéances importantes et rappels",
+            "description": "<p>Gardez votre agence bien organisée grâce à l'affichage centralisé des départs imminents, des dates de retour, des anniversaires, des paiements en attente et des rappels automatiques.</p><p>Avec <strong>toutes les informations centralisées</strong> et <strong>facilement accessibles depuis l'écran principal</strong>, chaque conseiller en voyages peut rapidement consulter les détails nécessaires pour assurer le suivi des clients et gérer ses tâches quotidiennes plus efficacement.</p>",
+            "linkTitle": "",
+            "linkUrl": "#"
+          },
+          "sales-performance": {
+            "title": "Performance des ventes en temps réel",
+            "description": "<p>Chaque conseiller en voyages peut consulter ses revenus accumulés en <strong>temps réel</strong> pour une période donnée ainsi que ses profits pour cette même période.</p><p>Un outil qui saura dynamiser vos équipes&nbsp;!</p><p>De la même façon, <strong>les gestionnaires d'agences peuvent consulter la performance de chaque conseiller individuellement</strong> ou même celle de l'ensemble de leurs succursales s'ils gèrent plusieurs agences.</p>",
+            "linkTitle": "",
+            "linkUrl": "#"
+          }
+        }
       }
     },
     "training": {
@@ -384,6 +414,126 @@
               "description": "Aide continue disponible en tout temps via le bouton HELP."
             }
           }
+        }
+      },
+      "training-platform": {
+        "block-type-page-hero": {
+          "title": "Plateforme de formation",
+          "description": "Exploitez tout le potentiel de TravelWorks",
+          "mobileTopImageSrc": "/images/pages/training/training-platform/background-training-platform.webp",
+          "desktopMainImageSrc": "/images/pages/training/training-platform/background-training-platform.webp",
+          "logoImageSrc": "/images/pages/training/training-platform/new.svg",
+          "ctaImageSrc": ""
+        },
+        "block-type-image-block": {
+          "title": "Une excellente nouvelle pour les clients de TravelWorks",
+          "description": "Nous sommes ravis d’annoncer le lancement de notre <strong>nouvelle plateforme de formation</strong>, conçue exclusivement pour les clients utilisant le logiciel comptable TravelWorks pour agences de voyages. Cette <strong>plateforme innovante</strong> a été <strong>développée pour améliorer votre maîtrise du logiciel</strong> et <strong>optimiser vos processus comptables</strong>.",
+          "imageSrc": "/images/pages/training/training-platform/screen-training-platform.jpg",
+          "altText": "Plateforme de formation",
+          "linkHref": "",
+          "linkText": "",
+          "captionText": ""
+        },
+        "block-type-info-cards": {
+          "0": {
+            "title": "Cours de formation de base",
+            "description": "Des vidéos de formation étape par étape pour vous aider à maîtriser les fonctionnalités de TravelWorks.",
+            "ctaLabel": "En savoir plus",
+            "ctaLink": "/training/basic-courses"
+          },
+          "1": {
+            "title": "Programme de certification",
+            "description": "Obtenez des certifications pour démontrer votre expertise et faire progresser votre carrière.",
+            "ctaLabel": "En savoir plus",
+            "ctaLink": "/training/certification-program"
+          },
+          "2": {
+            "title": "Rapports de progression",
+            "description": "Des rapports sont générés et envoyés à votre administrateur.",
+            "ctaLabel": "En savoir plus",
+            "ctaLink": "/training/progress-reporting"
+          },
+          "3": {
+            "title": "Cours complémentaires",
+            "description": "Des apprentissages pratiques pour les activités du quotidien.",
+            "ctaLabel": "En savoir plus",
+            "ctaLink": "/training/supplemental-courses"
+          },
+          "4": {
+            "title": "Portail client en ligne",
+            "description": "Une base de connaissances offrant un accès à la carte à l’ensemble des formations.",
+            "ctaLabel": "En savoir plus",
+            "ctaLink": "/training/online-client-portal"
+          }
+        },
+        "block-type-image-happy-learning": {
+          "title": "Bon apprentissage",
+          "imageSrc": "/images/pages/training/knowledge-base/fireworks.svg",
+          "altText": "Bon apprentissage"
+        },
+        "block-type-comparison-training": {
+          "heading": "Deux façons d’atteindre vos objectifs",
+          "knowledgeBase": {
+            "title": "Base de connaissances",
+            "badge": "Nouveau",
+            "0": {
+              "title": "Accès en libre-service :",
+              "description": "Accédez aux ressources de formation en tout temps, de façon autonome."
+            },
+            "1": {
+              "title": "Idéal pour les révisions :",
+              "description": "Parfait pour revoir des sujets importants sans suivre une formation formelle."
+            },
+            "2": {
+              "title": "Soutient l’intégration des nouveaux employés :",
+              "description": "Les agences peuvent former leur personnel sans planification externe."
+            },
+            "3": {
+              "title": "Apprentissage flexible :",
+              "description": "Progressez à votre rythme et consultez le contenu aussi souvent que nécessaire."
+            },
+            "4": {
+              "title": "Réduit la dépendance administrative :",
+              "description": "Diminue l’implication de l’équipe de formation."
+            }
+          },
+          "trainingPlatform": {
+            "title": "Plateforme de formation",
+            "badge": "Nouveau",
+            "0": {
+              "title": "Apprentissage modulaire :",
+              "description": "Des cours structurés pour une compréhension complète, étape par étape."
+            },
+            "1": {
+              "title": "Flexible et efficace :",
+              "description": "Une formation à votre rythme, accessible tout au long du processus d’intégration."
+            },
+            "2": {
+              "title": "Suivi des progrès :",
+              "description": "Des rapports hebdomadaires sur l’avancement et la complétion des cours."
+            },
+            "3": {
+              "title": "Suivi par des experts :",
+              "description": "Une révision après la formation pour assurer votre préparation à l’utilisation du système."
+            },
+            "4": {
+              "title": "Soutien continu :",
+              "description": "De l’aide est toujours disponible grâce au bouton AIDE."
+            }
+          }
+        },
+        "block-type-expert-profile": {
+          "heading": "Experts en connaissance du produit",
+          "person": {
+            "name": "Danna Woods",
+            "role": "Directrice des opérations",
+            "image": {
+              "src": "/images/danna-woods.webp",
+              "alt": "Danna Woods"
+            }
+          },
+          "quote": "Développé par des experts de l’industrie, ce programme de formation répond aux défis courants des agences grâce à une approche pratique et efficace qui renforce les compétences fondamentales et favorise leur application concrète afin d’accroître la productivité.",
+          "bio": "<p>Avec une carrière s’étendant sur plus d’une décennie, Danna a développé une expertise approfondie en gestion de comptes, formation des clients et soutien technique.</p><p>Chez TravelWorks, Danna joue un rôle essentiel en harmonisant les besoins des clients avec des solutions logicielles innovantes. Son leadership en matière d’intégration, de réussite client et d’accompagnement technique a contribué de façon significative à la réputation d’excellence et de fiabilité de l’entreprise dans le secteur du voyage.</p><p>Sa capacité à faire le pont entre la technologie et l’expérience utilisateur fait d’elle une conseillère de confiance pour les clients et un atout précieux pour l’équipe de direction de TravelWorks.</p>"
         }
       }
     }
