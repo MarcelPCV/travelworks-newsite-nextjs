@@ -5,6 +5,7 @@ import ImageBlock from "../../components/shared/image-block/image-block";
 import ImageHappyLearning from "../../components/pages-elements/happy-learning/happy-learning";
 import ComparisonCard from "../../components/shared/comparison-training/comparison-training";
 import ExpertProfile from "../../components/shared/training-experts/training-experts";
+import InfoCards from "../../components/pages-elements/info-cards/info-cards";
 
 export default async function Page({
 	params,
@@ -56,6 +57,23 @@ export default async function Page({
 								hasCaption={layout.hasCaption}
 								captionText={layout.captionText ? t(layout.captionText) : ''}
 							/>);
+					case "InfoCards": {
+						const translatedCards = layout.cards.map((card) => ({
+							...card,
+							title: t(card.title),
+							description: t(card.description),
+							icon: card.icon,
+							cta: card.cta,
+							ctaLabel: card.ctaLabel ? t(card.ctaLabel) : undefined,
+							ctaLink: card.ctaLink ? t(card.ctaLink) : undefined,
+						}));
+						return (
+							<InfoCards
+								key={index}
+								{...layout}
+								cards={translatedCards}
+							/>);
+					}
 					case "ImageHappyLearning":
 						return (
 							<ImageHappyLearning

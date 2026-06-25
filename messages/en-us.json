@@ -448,6 +448,38 @@
           "linkText":"",
           "captionText": ""
         },
+        "block-type-info-cards": {
+          "0": {
+            "title": "Basic Training Courses",
+            "description": "Step-by-step instructional videos to help you master TravelWorks functionalities.",
+            "ctaLabel": "Learn More",
+            "ctaLink": "/training/basic-courses"
+          },
+          "1": {
+            "title": "Certification Program",
+            "description": "Earn certifications to showcase your expertise and boost your career.",
+            "ctaLabel": "Learn More",
+            "ctaLink": "/training/certification-program"
+          },
+          "2": {
+            "title": "Progress Reporting",
+            "description": "Reports generated and sent to your Administrator.",
+            "ctaLabel": "Learn More",
+            "ctaLink": "/training/progress-reporting"
+          },
+          "3": {
+            "title": "Supplemental Courses",
+            "description": "Practical learnings for day-to-day activities.",
+            "ctaLabel": "Learn More",
+            "ctaLink": "/training/supplemental-courses"
+          },
+          "4": {
+            "title": "Online Client Portal",
+            "description": "Knowledge base for à la carte access to all trainings.",
+            "ctaLabel": "Learn More",
+            "ctaLink": "/training/online-client-portal"
+          }
+        },
         "block-type-image-happy-learning": {
           "title": "Happy Learning",
           "imageSrc": "/images/pages/training/knowledge-base/fireworks.svg",
