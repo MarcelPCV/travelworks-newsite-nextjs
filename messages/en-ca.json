@@ -310,6 +310,15 @@
           "logoImageSrc": "",
           "ctaImageSrc":""
         },
+        "block-type-image-block": {
+          "title": "",
+          "description": "",
+          "imageSrc": "/images/pages/travel-agency-software/multiple-integration/schema.webp",
+          "altText": "Multiple Integrations",
+          "linkHref":"",
+          "linkText":"",
+          "captionText": ""
+        },
         "block-type-features-highlights": {
           "online-reservation": {
             "title": "Online reservation and automated invoicing",

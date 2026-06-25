@@ -303,30 +303,39 @@
       },
       "integrations": {
         "block-type-page-hero": {
-          "title": "Intégrez-vous à d'autres systèmes",
-          "description": "Connectez-vous à de nombreux partenaires et automatisez vos opérations.",
+          "title": "Intégrer avec d’autres systèmes",
+          "description": "Interagissez avec de nombreux partenaires et automatisez vos opérations.",
           "mobileTopImageSrc": "/images/pages/travel-agency-software/multiple-integration/background-portfolio-multiple-integration.webp",
           "desktopMainImageSrc": "/images/pages/travel-agency-software/multiple-integration/background-portfolio-multiple-integration.webp",
           "logoImageSrc": "",
           "ctaImageSrc": ""
         },
+        "block-type-image-block": {
+          "title": "",
+          "description": "",
+          "imageSrc": "/images/pages/travel-agency-software/multiple-integration/schema.webp",
+          "altText": "Intégrations multiples",
+          "linkHref": "",
+          "linkText": "",
+          "captionText": ""
+        },
         "block-type-features-highlights": {
           "online-reservation": {
             "title": "Réservation en ligne et facturation automatisée",
-            "description": "<p>Si vous offrez à vos clients la réservation en ligne via votre site Web, vous pouvez <strong>automatiser la facturation sans aucune intervention manuelle.</strong></p><p>Si vous avez un partenariat avec SoftVoyage pour vos réservations en ligne, la <strong>fonction de facturation automatique peut être activée</strong>.</p><p>Si votre site Web est conçu par un autre fournisseur, nous pouvons <strong>évaluer la faisabilité de l'intégration sur demande.</strong></p>",
+            "description": "<p>Si vous proposez à vos clients la réservation en ligne via votre site web, vous pouvez <strong>automatiser les factures sans aucune intervention manuelle.</strong></p><p>Si vous avez un partenariat avec Soft Voyages pour vos réservations en ligne, la <strong>fonction de facturation automatique peut être activée</strong>.</p><p>Si votre site web est conçu par un autre fournisseur, nous pouvons <strong>évaluer la faisabilité de l’intégration sur demande.</strong></p>",
             "linkTitle": "",
             "linkUrl": "#"
           },
           "gds": {
-            "title": "Intégration avec les principaux systèmes mondiaux de distribution (GDS)",
-            "description": "<p>Cela vous permet de récupérer les informations comptables provenant de systèmes tels que : <strong>Sabre, Galileo, Amadeus, Worldspan et SIREV</strong>.</p><p>Une facture automatisée est générée et les transactions sont mises à jour dans le module comptable de TravelWorks.</p>",
-            "linkTitle": "Découvrez nos partenaires",
+            "title": "Intégration avec les principaux systèmes de distribution mondiale (GDS)",
+            "description": "<p>Cela vous permet de récupérer les informations comptables depuis des systèmes tels que : <strong>Sabre, Galileo, Amadeus, Worldspan et SIREV</strong>.</p><p>Une facture automatisée est générée et les transactions sont mises à jour dans le module comptable de TravelWorks.</p>",
+            "linkTitle": "Découvrir nos partenaires",
             "linkUrl": "#"
           },
           "insurance-companies": {
-            "title": "Accès en connexion directe à plusieurs compagnies d'assurance",
-            "description": "L'<strong>interface des compagnies d'assurance</strong> est accessible <strong>en temps réel via TravelWorks</strong>. Une fois la meilleure police sélectionnée pour votre client, les informations sont transmises à la compagnie d'assurance puis automatiquement intégrées à la facturation de TravelWorks, avec le détail des coûts, la commission à recevoir et le numéro d'identification de la police.",
-            "linkTitle": "Découvrez nos partenaires",
+            "title": "Accès direct à plusieurs compagnies d’assurance",
+            "description": "L’<strong>interface des compagnies d’assurance</strong> est accessible en <strong>temps réel via TravelWorks</strong>. Une fois la meilleure police sélectionnée pour votre client, les informations sont transmises à la compagnie d’assurance puis automatiquement intégrées dans la facturation TravelWorks avec le détail des prix, la commission à recevoir et le numéro de police.",
+            "linkTitle": "Découvrir nos partenaires",
             "linkUrl": "#"
           }
         }
@@ -364,30 +373,52 @@
     },
     "training": {
       "knowledge-base": {
+        "block-type-page-hero": {
+          "title": "Base de connaissances",
+          "description": "Trouvez toutes les ressources dont vous avez besoin pour maîtriser TravelWorks et tirer le meilleur parti de notre logiciel.",
+          "mobileTopImageSrc": "/images/pages/training/knowledge-base/bg-knowledge-base.webp",
+          "desktopMainImageSrc": "/images/pages/training/knowledge-base/bg-knowledge-base.webp",
+          "logoImageSrc": "/images/pages/training/knowledge-base/new.svg",
+          "ctaImageSrc": ""
+        },
+        "block-type-image-block": {
+          "title": "La formation est une priorité clé pour notre entreprise",
+          "description": "<strong>La Base de connaissances</strong> est une plateforme puissante qui <strong>centralise toutes nos vidéos et documents de formation</strong> dans <strong>un seul endroit facile d’accès</strong>. Elle permet aux clients de <strong>suivre leur formation à leur propre rythme</strong>, de trouver rapidement les <strong>informations dont ils ont besoin</strong>, et de <strong>rester confiants et informés, à tout moment et en tout lieu</strong>.",
+          "imageSrc": "/images/pages/training/knowledge-base/screen-knowledge-base.jpg",
+          "altText": "Base de connaissances",
+          "linkHref": "/",
+          "linkText": "Demander maintenant",
+          "captionText": ""
+        },
+        "block-type-image-happy-learning": {
+          "title": "Bon apprentissage",
+          "imageSrc": "/images/pages/training/knowledge-base/fireworks.svg",
+          "altText": "Bon apprentissage"
+        },
         "block-type-comparison-training": {
-          "heading": "Deux facons d'atteindre vos objectifs",
+          "heading": "Deux façons d’atteindre vos objectifs",
           "knowledgeBase": {
             "title": "Base de connaissances",
             "badge": "Nouveau",
             "0": {
-              "title": "Acces en libre-service :",
-              "description": "Accedez aux ressources de formation en tout temps."
+              "title": "Accès autonome :",
+              "description": "Accédez de manière indépendante aux supports de formation à tout moment."
             },
             "1": {
-              "title": "Ideal pour les rappels :",
-              "description": "Parfait pour revisiter les sujets cles sans formation formelle."
+              "title": "Idéal pour les rappels :",
+              "description": "Parfait pour revoir les sujets clés sans formation formelle."
             },
             "2": {
-              "title": "Soutien aux nouvelles embauches :",
-              "description": "Les agences peuvent integrer le personnel sans horaires externes."
+              "title": "Soutient les nouvelles recrues :",
+              "description": "Permet aux agences d’intégrer le personnel sans planification externe."
             },
             "3": {
               "title": "Apprentissage flexible :",
-              "description": "Apprenez a votre rythme et revisitez le contenu au besoin."
+              "description": "Apprenez à votre rythme et consultez le contenu selon vos besoins."
             },
             "4": {
-              "title": "Moins de dependance administrative :",
-              "description": "Reduit l'implication de l'equipe de formation."
+              "title": "Réduit la dépendance administrative :",
+              "description": "Minimise l’implication de l’équipe de formation."
             }
           },
           "trainingPlatform": {
@@ -395,25 +426,38 @@
             "badge": "Nouveau",
             "0": {
               "title": "Apprentissage modulaire :",
-              "description": "Cours structures pour une comprehension complete, etape par etape."
+              "description": "Cours structurés pour une compréhension complète, étape par étape."
             },
             "1": {
               "title": "Flexible et efficace :",
-              "description": "Formation autonome accessible pendant l'integration."
+              "description": "Formation à votre rythme, accessible durant le processus d’intégration."
             },
             "2": {
-              "title": "Suivi de progression :",
-              "description": "Rapports hebdomadaires sur la completion des cours."
+              "title": "Suivi des progrès :",
+              "description": "Rapports hebdomadaires sur la progression des utilisateurs."
             },
             "3": {
-              "title": "Suivi d'expert :",
-              "description": "La revue post-formation assure la preparation a la mise en ligne."
+              "title": "Suivi par des experts :",
+              "description": "Une révision après formation garantit la préparation au lancement."
             },
             "4": {
-              "title": "Soutien continu :",
-              "description": "Aide continue disponible en tout temps via le bouton HELP."
+              "title": "Support continu :",
+              "description": "Aide disponible à tout moment via le bouton AIDE."
             }
           }
+        },
+        "block-type-expert-profile": {
+          "heading": "Experts en connaissance produit",
+          "person": {
+            "name": "Danna Woods",
+            "role": "Directrice des opérations",
+            "image": {
+              "src": "/images/danna-woods.webp",
+              "alt": "Danna Woods"
+            }
+          },
+          "quote": "Développé par des experts du secteur, ce programme de formation répond aux défis courants des agences avec une approche pratique et efficace qui développe les compétences fondamentales et favorise l’application concrète pour améliorer la productivité.",
+          "bio": "<p>Avec plus de dix ans de carrière, Danna a développé une expertise approfondie en gestion de comptes, formation client et support technique.</p><p>Chez TravelWorks, Danna joue un rôle essentiel en alignant les besoins des clients avec des solutions logicielles innovantes. Son leadership en intégration, succès client et habilitation technique a largement contribué à la réputation d’excellence et de fiabilité de l’entreprise dans le secteur du voyage.</p><p>Sa capacité à faire le lien entre technologie et expérience utilisateur fait d’elle une conseillère de confiance pour les clients et un atout clé pour l’équipe de direction de TravelWorks.</p>"
         }
       },
       "training-platform": {
