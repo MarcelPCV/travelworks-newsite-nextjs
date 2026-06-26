@@ -85,7 +85,7 @@ export const TourOnlinePageData: Page = {
       imageSrc: "block-type-tour-online-cta-area.imageSrc",
       imageAlt: "block-type-tour-online-cta-area.imageAlt",
       ctaLink: "block-type-tour-online-cta-area.ctaLink",
-      ctaText: "block-type-tour-online-cta-area.ctaLabel"
+      ctaText: "block-type-tour-online-cta-area.ctaText"
     }
   ]
 };
