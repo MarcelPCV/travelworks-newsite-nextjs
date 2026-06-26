@@ -1,10 +1,8 @@
 import Image from 'next/image';
 import { useId } from 'react';
 import { SplitSectionModel, ImagePosition } from './type';
+import Link from 'next/link';
 
-type SplitSectionProps = Omit<SplitSectionModel, 'blockType'>;
-
-// --- Component ---
 export default function SplitSection({
   heading,
   description,
@@ -12,7 +10,9 @@ export default function SplitSection({
   imageAlt,
   imagePosition = 'left',
   className,
-}: SplitSectionProps) {
+  ctaLabel,
+  ctaLink,
+}: SplitSectionModel) {
   const headingId = useId();
 
   // 1. Encapsulate dynamic ordering logic for clarity
@@ -46,7 +46,6 @@ export default function SplitSection({
               height={600}
             />
           ) : null}
-          dasdasd
         </div>
 
         {/* Text Content Container */}
@@ -55,9 +54,20 @@ export default function SplitSection({
             {heading}
           </h2>
 
-          <p className="mt-4 text-md leading-8 text-neutral-dark">
+          <div className="mt-4 text-md leading-8 text-neutral-dark">
             {description}
-          </p>
+          </div>
+
+          {ctaLabel && ctaLink && (
+            <div className="mt-8 flex justify-center md:justify-start">
+              <Link
+                href={ctaLink}
+                className="inline-flex items-center justify-center rounded-full bg-brand-blue px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-brand-blue/90"
+              >
+                {ctaLabel}
+              </Link>
+            </div>
+          )}
         </div>
       </div>
     </section>

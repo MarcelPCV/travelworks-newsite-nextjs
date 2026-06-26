@@ -414,6 +414,63 @@
             }
           }
         }
+      },
+      "tour-online": {
+        "block-type-page-hero": {
+          "title": "Tour Online",
+          "description": "Une solution complète pour les voyagistes et les agences de voyages",
+          "mobileTopImageSrc": "/images/pages/travel-agency-software/tour-online/slider_wide.webp",
+          "desktopMainImageSrc": "/images/pages/travel-agency-software/tour-online/slider_wide.webp",
+          "logoImageSrc": "/images/pages/travel-agency-software/tour-online/TourOnline-logo-En.svg",
+          "ctaImageSrc": "/images/pages/travel-agency-software/tour-online/b2b-b2c.svg"
+        },
+        "block-type-split-section-0": {
+          "heading": "Un système unique",
+          "description": "TourOnline permet à vos clients de disposer d’un <strong>site transactionnel bilingue</strong> facile à gérer, pouvant servir de <strong>site principal de votre agence</strong> ou <strong>compléter votre site Web actuel</strong>.",
+          "imageSrc": "/images/pages/travel-agency-software/tour-online/bundle-touronline.webp",
+          "imageAlt": "Expériences personnalisées",
+          "ctaLabel": "Essayez-le maintenant",
+          "ctaLink": "#"
+        },
+        "block-type-split-section-1": {
+          "heading": "Organisé et bien conçu",
+          "description": "Avec TourOnline, vous pouvez <strong>regrouper vos produits de voyage selon les thèmes de votre choix</strong>. Chaque produit est présenté dans une interface élégante regroupant toutes les informations essentielles. De plus, <strong>l’interface s’adapte à différentes tailles d’écran</strong>, faisant de TourOnline une <strong>vitrine attrayante et accessible pour vos produits de voyage</strong>.",
+          "imageSrc": "/images/pages/travel-agency-software/tour-online/touronline-cards-en.webp",
+          "imageAlt": "Expériences personnalisées",
+          "ctaLabel": "",
+          "ctaLink": "#"
+        },
+        "block-type-image-block": {
+          "title": "3 couleurs d'interface différentes",
+          "description": "",
+          "imageSrc": "/images/pages/travel-agency-software/tour-online/bundle3-touronline.webp",
+          "altText": "Intégrations multiples",
+          "linkHref": "",
+          "linkText": "",
+          "captionText": ""
+        },
+        "block-type-split-section-2": {
+          "heading": "",
+          "description": "Vous pouvez choisir parmi <strong>trois thèmes de couleurs</strong> pour personnaliser l’interface de votre site transactionnel. Sélectionnez celui qui s’harmonise le mieux avec <strong>l’identité visuelle de votre agence</strong>.",
+          "imageSrc": "/images/pages/travel-agency-software/tour-online/themeColorsEn.svg",
+          "imageAlt": "Expériences personnalisées",
+          "ctaLabel": "",
+          "ctaLink": "#"
+        },
+        "block-type-split-section-3": {
+          "heading": "Un espace de présentation complet",
+          "description": "<p>Présentez vos produits de voyage de manière professionnelle et attrayante grâce au système d’onglets personnalisable de TourOnline. <strong>Organisez votre contenu en sections claires</strong> et <strong>faciles à parcourir</strong>, permettant aux voyageurs de trouver rapidement les informations recherchées tout en profitant d’une expérience de navigation plus engageante. Affichez de <strong>magnifiques galeries photos</strong>, rédigez des descriptions détaillées et enrichissez chacune de vos offres avec des informations complémentaires en <strong>quelques clics seulement</strong>.</p><p>Bonifiez chaque fiche produit en y ajoutant des documents promotionnels téléchargeables, des vidéos intégrées et des cartes interactives provenant de plateformes externes. Offrez à vos clients <strong>toutes les ressources dont ils ont besoin dans une présentation centralisée et professionnelle</strong>.</p>",
+          "imageSrc": "/images/pages/travel-agency-software/tour-online/bundle2-touronline.webp",
+          "imageAlt": "Expériences personnalisées",
+          "ctaLabel": "",
+          "ctaLink": "#"
+        },
+        "block-type-tour-online-cta-area": {
+          "imageSrc": "/images/pages/travel-agency-software/tour-online/logo-touronline-base.svg",
+          "imageAlt": "Expériences personnalisées",
+          "ctaLink": "#",
+          "ctaText": "Essayez-le maintenant"
+        }
       }
     },
     "training": {

@@ -10,4 +10,6 @@ export type SplitSectionModel = {
   imageAlt: string;
   imagePosition?: ImagePosition;
   className?: string;
+  ctaLabel?: string;
+  ctaLink?: string;
 }

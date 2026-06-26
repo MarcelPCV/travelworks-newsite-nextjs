@@ -414,6 +414,63 @@
             }
           }
         }
+      },
+      "tour-online": {
+        "block-type-page-hero": {
+          "title": "Tour Online",
+          "description": "A complete solution for tour operators and travel agencies",
+          "mobileTopImageSrc": "/images/pages/travel-agency-software/tour-online/slider_wide.webp",
+          "desktopMainImageSrc": "/images/pages/travel-agency-software/tour-online/slider_wide.webp",
+          "logoImageSrc": "/images/pages/travel-agency-software/tour-online/TourOnline-logo-En.svg",
+          "ctaImageSrc":"/images/pages/travel-agency-software/tour-online/b2b-b2c.svg"
+        },
+        "block-type-split-section-0": {
+            "heading": "A unique system",
+            "description": "TourOnline allows clients to have an easy to manage <strong>bilingual E-commerce site</strong> that can works as your <strong>agency's site</strong> or as <strong>an addition to your current website</strong>",
+            "imageSrc": "/images/pages/travel-agency-software/tour-online/bundle-touronline.webp",
+            "imageAlt": "Custom Experiences",
+            "ctaLabel": "Try it now",
+            "ctaLink": "#"
+        },
+        "block-type-split-section-1": {
+            "heading": "Organized and well designed",
+            "description": "With TourOnline you can <strong>group travel products by theme of your choice</strong>. Each product is displayed in a beautiful interface with all essential information at hand. In addition, the <strong>interface adapts to several screen sizes</strong>, which makes TourOnline accessible and a <strong>beautiful showcase for your travel products</strong>.",
+            "imageSrc": "/images/pages/travel-agency-software/tour-online/touronline-cards-en.webp",
+            "imageAlt": "Custom Experiences",
+            "ctaLabel": "",
+            "ctaLink": "#"
+        },
+        "block-type-image-block": {
+          "title": "3 Differents interface's colors",
+          "description": "",
+          "imageSrc": "/images/pages/travel-agency-software/tour-online/bundle3-touronline.webp",
+          "altText": "Multiple Integrations",
+          "linkHref":"",
+          "linkText":"",
+          "captionText": ""
+        },
+        "block-type-split-section-2": {
+          "heading": "",
+          "description": "There are available <strong>three choices of color</strong> to customize the interface of your transactional site. You can select the color that goes well with <strong>your agency's visual identity</strong>.",
+          "imageSrc": "/images/pages/travel-agency-software/tour-online/themeColorsEn.svg",
+          "imageAlt": "Custom Experiences",
+          "ctaLabel": "",
+          "ctaLink": "#"
+        },
+        "block-type-split-section-3": {
+          "heading": "A noble space",
+          "description": "<p>Present your travel products in a professional and engaging way with TourOnline's customizable tab system. <strong>Organize your content into clear</strong>, <strong>easy-to-navigate sections</strong> that help travelers quickly find the information they need while creating a more compelling browsing experience. Display <strong>stunning photo galleries</strong>, write detailed product descriptions, and enrich each offering with supplementary information in <strong>just a few clicks</strong>.</p><p>Enhance every product page by adding downloadable promotional materials, embedded videos, and interactive maps from external platforms. Provide your clients with <strong>all the resources they need in one centralized, professional presentation</strong>.</p>",
+          "imageSrc": "/images/pages/travel-agency-software/tour-online/bundle2-touronline.webp",
+          "imageAlt": "Custom Experiences",
+          "ctaLabel": "",
+          "ctaLink": "#"
+        },
+        "block-type-tour-online-cta-area": {
+          "imageSrc": "/images/pages/travel-agency-software/tour-online/logo-touronline-base.svg",
+          "imageAlt": "Custom Experiences",
+          "ctaLink": "#",
+          "ctaText": "Try it now"
+        }
       }
     },
     "training" : {
