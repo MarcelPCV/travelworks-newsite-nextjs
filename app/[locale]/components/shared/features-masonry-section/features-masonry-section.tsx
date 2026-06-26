@@ -1,13 +1,18 @@
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
+import { ReactNode } from 'react';
 import { FeatureMasonryCard } from './type';
+
+type RenderFeatureMasonryCard = Omit<FeatureMasonryCard, 'items'> & {
+  items: ReactNode[];
+};
 
 type FeaturesMasonrySectionProps = {
   heading?: string;
-  cards?: FeatureMasonryCard[];
+  cards?: RenderFeatureMasonryCard[];
   className?: string;
 };
 
-function FeatureCard({ card }: { card: FeatureMasonryCard }) {
+function FeatureCard({ card }: { card: RenderFeatureMasonryCard }) {
   return (
     <article className="rounded-sm border border-neutral-border bg-neutral-canvas px-6 py-6 shadow-[0_8px_20px_rgba(15,23,42,0.06)]">
       <h3 className="border-l-2 border-brand-orange-dark pl-3 text-[2rem] font-medium uppercase leading-none text-brand-blue">
@@ -29,8 +34,8 @@ function FeatureCard({ card }: { card: FeatureMasonryCard }) {
       ) : null}
 
       <ul className="mt-5 space-y-3">
-        {card.items.map((item) => (
-          <li key={item} className="flex items-start gap-2.5 text-neutral-dark">
+        {card.items.map((item, itemIndex) => (
+          <li key={`${card.id}-${itemIndex}`} className="flex items-start gap-2.5 text-neutral-dark">
             <CheckCircle2
               className="mt-0.5 h-5 w-5 shrink-0 text-brand-orange-dark"
               strokeWidth={2.2}

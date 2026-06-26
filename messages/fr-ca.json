@@ -369,6 +369,51 @@
             "linkUrl": "#"
           }
         }
+      },
+      "crm": {
+        "block-type-page-hero": {
+          "title": "OUTILS CRM POUR UN MARKETING INTÉGRÉ",
+          "description": "Gérez les relations avec vos clients et augmentez la fidélité à votre marque",
+          "mobileTopImageSrc": "/images/pages/travel-agency-software/crm-tools/background-portfolio-crm.webp",
+          "desktopMainImageSrc": "/images/pages/travel-agency-software/crm-tools/background-portfolio-crm.webp",
+          "logoImageSrc": "",
+          "ctaImageSrc": ""
+        },
+        "block-type-split": {
+          "heading": "Des expériences connectées",
+          "description": "Les attentes des clients stimulent l'évolution des outils CRM et marketing. Le CRM de TravelWorks crée une <strong>expérience connectée</strong> avec vos clients et génère des <strong>revenus supplémentaires</strong> pour votre entreprise.",
+          "imageSrc": "/images/pages/travel-agency-software/crm-tools/concept.png",
+          "imageAlt": "Outils CRM"
+        },
+        "block-type-features-masonry": {
+          "heading": "Campagnes courriel ciblées",
+          "target-email-campaigns": {
+            "title": "GROUPES DE PASSAGERS",
+            "topLinkLabel": "",
+            "items": {
+              "0": "Le module CRM de TravelWorks (PC Contact) vous permet de créer une <strong>liste de clients basée sur des critères prédéfinis</strong> enregistrés dans leur profil.",
+              "1": "Vous pouvez utiliser <strong>plusieurs critères</strong> pour identifier rapidement les clients ayant acheté un produit spécifique, dépensé un certain montant ou visité une destination particulière.",
+              "2": "Lancez rapidement des <strong>campagnes marketing personnalisées</strong> afin de générer des revenus supplémentaires."
+            }
+          },
+          "custom-automated-messages": {
+            "title": "Messages automatisés personnalisés",
+            "topLinkLabel": "",
+            "items": {
+              "0": "TravelWorks est également relié à un module optionnel : <strong>PCV Messenger</strong>.",
+              "1": "TravelWorks PCV Messenger vous permet d'envoyer des <strong>messages automatisés de courtoisie</strong>, notamment : « Rappel de solde à payer », « Bon voyage », « Bon retour » et « Joyeux anniversaire ».",
+              "2": "Vos clients voyagent l'esprit tranquille en sachant que TravelWorks veille sur leurs projets de voyage."
+            }
+          },
+          "mobile-app": {
+            "title": "Une application mobile à l'image de votre agence de voyages",
+            "topLinkLabel": "",
+            "items": {
+              "0": "Les communications mobiles sont essentielles pour les agents de voyages et leurs clients. Trip N' Touch est une application abordable pour iOS et Android qui met votre agence en valeur.",
+              "1": "Affichez <strong>le logo de votre agence</strong> tout en offrant à vos voyageurs un accès à des <strong>itinéraires détaillés</strong>, des <strong>cartes interactives</strong>, des <strong>guides de voyage complets</strong>, des <strong>informations sur les destinations</strong> ainsi qu'à un <strong>service de clavardage intégré</strong> permettant une <strong>communication fluide</strong> tout au long de leur voyage."
+            }
+          }
+        }
       }
     },
     "training": {
