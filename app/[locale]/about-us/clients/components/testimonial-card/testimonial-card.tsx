@@ -20,7 +20,7 @@ export default function TestimonialCard({
   testimonial,
 }: Props) {
   return (
-    <article className="rounded-xl bg-white p-8 shadow-sm">
+    <article className="rounded-xl bg-gray-800 p-8 shadow-sm">
       <Quote className="mb-6 h-8 w-8 text-orange-500" />
 
       <p className="text-muted-foreground text-sm leading-7">

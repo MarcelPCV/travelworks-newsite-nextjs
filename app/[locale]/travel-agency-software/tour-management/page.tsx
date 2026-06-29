@@ -1,18 +1,38 @@
-import FeaturesHeroSection from "../../components/shared/page-hero/page-hero";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { IntegrationsPageData } from "./data";
+import PageHero from "../../components/shared/page-hero/page-hero";
+import CardsIconsSection from "../../components/shared/cards-icons/cards-icons";
 
-export default async function Page() {
+export default async function Page({
+	params,
+}: {
+	params: Promise<{ locale: string }>;
+}) {
+	const { locale } = await params;
+	setRequestLocale(locale);
+	const t = await getTranslations('pages.travel-agency-software.tour-management');
 
 	return (
 		<main>
-			<FeaturesHeroSection
-				blockType="PageHero"
-				title="TOUR MANAGEMENT"
-				description="A module designed for Tour Operators and Travel Management specialists."
-				mobileTopImageSrc="/images/pages/travel-agency-software/tour-management/background-portfolio-tour-management.webp"
-				desktopMainImageSrc="/images/pages/travel-agency-software/tour-management/background-portfolio-tour-management.webp"
-				logoImageSrc=""
-				ctaImageSrc=""
-			/>
+			{IntegrationsPageData.layout.map((layout, index) => {
+				switch (layout.blockType) {
+					case "PageHero":
+						return (
+							<PageHero
+								key={index}
+								{...layout}
+								title={layout.title ? t(layout.title) : ''}
+								description={layout.description ? t(layout.description) : ''}
+								mobileTopImageSrc={layout.mobileTopImageSrc ? t(layout.mobileTopImageSrc) : ''}
+								desktopMainImageSrc={layout.desktopMainImageSrc ? t(layout.desktopMainImageSrc) : ''}
+								logoImageSrc={layout.logoImageSrc ? t(layout.logoImageSrc) : ''}
+								ctaImageSrc={layout.ctaImageSrc ? t(layout.ctaImageSrc) : ''}
+							/>);
+					default:
+						return null;
+				}
+			})}
+			<CardsIconsSection/>
 		</main>
 	);
 }

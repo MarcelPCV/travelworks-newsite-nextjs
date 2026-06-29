@@ -471,6 +471,16 @@
           "ctaLink": "#",
           "ctaText": "Essayez-le maintenant"
         }
+      },
+      "tour-management": {
+        "block-type-page-hero": {
+          "title": "GESTION DES CIRCUITS",
+          "description": "Un module conçu pour les voyagistes et les spécialistes de la gestion des voyages.",
+          "mobileTopImageSrc": "/images/pages/travel-agency-software/tour-management/background-portfolio-tour-management.webp",
+          "desktopMainImageSrc": "/images/pages/travel-agency-software/tour-management/background-portfolio-tour-management.webp",
+          "logoImageSrc": "",
+          "ctaImageSrc": ""
+        }
       }
     },
     "training": {
@@ -680,6 +690,34 @@
           },
           "quote": "Développé par des experts de l’industrie, ce programme de formation répond aux défis courants des agences grâce à une approche pratique et efficace qui renforce les compétences fondamentales et favorise leur application concrète afin d’accroître la productivité.",
           "bio": "<p>Avec une carrière s’étendant sur plus d’une décennie, Danna a développé une expertise approfondie en gestion de comptes, formation des clients et soutien technique.</p><p>Chez TravelWorks, Danna joue un rôle essentiel en harmonisant les besoins des clients avec des solutions logicielles innovantes. Son leadership en matière d’intégration, de réussite client et d’accompagnement technique a contribué de façon significative à la réputation d’excellence et de fiabilité de l’entreprise dans le secteur du voyage.</p><p>Sa capacité à faire le pont entre la technologie et l’expérience utilisateur fait d’elle une conseillère de confiance pour les clients et un atout précieux pour l’équipe de direction de TravelWorks.</p>"
+        }
+      }
+    },
+    "about-us": {
+      "the-company": {
+        "block-type-page-hero": {
+          "title": "À propos de TravelWorks",
+          "description": "Une technologie de pointe au service de l'industrie du voyage",
+          "mobileTopImageSrc": "/images/pages/about-us/the-company/slider_wide-mobile.webp",
+          "desktopMainImageSrc": "/images/pages/about-us/the-company/slider_wide-mobile.webp",
+          "logoImageSrc": "",
+          "ctaImageSrc": ""
+        },
+        "block-type-text-section": {
+          "text": "<p>TravelWorks (une division de PC Voyages) est une entreprise nord-américaine spécialisée dans les logiciels qui œuvre <strong>dans l'industrie du voyage depuis 1988</strong>. Nous sommes devenus <strong>des chefs de file en comptabilité pour agences de voyages</strong> et en <strong>systèmes de back-office, avec des utilisateurs partout dans le monde</strong>. TravelWorks s'intègre à tous les principaux moteurs de réservation et systèmes GDS, et est devenu un outil essentiel pour des milliers d'utilisateurs.</p><p>Nous investissons environ <strong>750 000 $ en recherche et développement chaque année</strong> afin de faire évoluer nos solutions grâce à des <strong>technologies de pointe adaptées aux besoins du marché</strong>.</p><p>Parmi nos services les plus appréciés : des formations à distance efficaces, un soutien technique professionnel avec des délais de réponse très rapides, ainsi que des solutions clés en main incluant, au besoin, l'importation de données provenant d'autres systèmes.</p>"
+        }
+      },
+      "careers": {
+        "block-type-page-hero": {
+          "title": "Carrières",
+          "description": "Pour relever des défis technologiques au cœur de la passionnante industrie du voyage !",
+          "mobileTopImageSrc": "/images/pages/about-us/the-company/slider_wide-mobile.webp",
+          "desktopMainImageSrc": "/images/pages/about-us/the-company/slider_wide-mobile.webp",
+          "logoImageSrc": "",
+          "ctaImageSrc": ""
+        },
+        "block-type-text-section": {
+          "text": "<p>L'équipe de TravelWorks est constamment à la recherche de <strong>nouveaux talents</strong>. Faire carrière chez nous, c'est évoluer au sein d'une <strong>équipe dynamique et énergique</strong>, expérimentée dans les <strong>domaines de la technologie et du voyage</strong>.</p><p>Nous sommes convaincus que le succès de notre entreprise repose sur celui de nos employés. C'est pourquoi nous offrons les meilleures conditions afin de créer un <strong>environnement de travail agréable et inspirant</strong> : de spacieux bureaux au centre-ville, une ambiance familiale et détendue, ainsi que diverses activités de groupe entre collègues. Les qualités essentielles pour réussir chez nous sont l'initiative, la <strong>capacité à travailler en équipe</strong> et <strong>la volonté de toujours s'améliorer</strong>.</p><p>Les personnes possédant ces qualités auront une excellente occasion de bâtir une carrière florissante au sein de notre entreprise. Faites-nous parvenir votre candidature à <strong><a>career@travelworkssolution.com</a></strong>.</p>"
         }
       }
     }

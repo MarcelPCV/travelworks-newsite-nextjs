@@ -19,7 +19,7 @@ export default function ClientsLogoMarquee({
   const duplicatedClients = [...clients, ...clients];
 
   return (
-    <section className="overflow-hidden border-y bg-white py-8">
+    <section className="overflow-hidden border-y bg-white text-gray-800 py-8">
       <div className="marquee">
         <div className="marquee-content">
           {duplicatedClients.map((client, index) => (

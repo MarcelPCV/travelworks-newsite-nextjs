@@ -1,7 +1,7 @@
-import ClientsHero from "@/app/[locale]/components/clients/clients-hero/clients-hero";
-import ClientsLogoMarquee from "@/app/[locale]/components/clients/clients-logo-marquee/clients-logo-marquee";
-import TestimonialsGrid from "@/app/[locale]/components/clients/testimonial-grid/testimonial-grid";
-import VideoTestimonials from "../../components/clients/video-testimonials/video-testimonials";
+import ClientsHero from "@/app/[locale]/about-us/clients/components/clients-hero/clients-hero"
+import ClientsLogoMarquee from "@/app/[locale]/about-us/clients/components/clients-logo-marquee/clients-logo-marquee";
+import TestimonialsGrid from "@/app/[locale]/about-us/clients/components/testimonial-grid/testimonial-grid";
+import VideoTestimonials from "@/app/[locale]/about-us/clients/components/video-testimonials/video-testimonials";
 
 export const clientsPageData = {
   hero: {
