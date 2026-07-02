@@ -1,71 +1,36 @@
-"use client";
-
 import {
   ArrowRight,
   CircleDollarSign,
-  Cloud,
-  Network,
-  Users,
 } from 'lucide-react';
-import { WhyTravelworksItem } from './type';
-import { useTranslations } from 'next-intl';
+import { WhyTravelworksSection, WhyTravelworksItems } from './type';
 
+function WhyTravelworksIcon({ iconComponent, icon }: WhyTravelworksItems) {
+  const Icon = iconComponent ?? CircleDollarSign;
 
-function WhyTravelworksIcon({ item }: { item: WhyTravelworksItem }) {
-  const Icon = item.iconComponent ?? CircleDollarSign;
-
-  if (item.icon) {
-    return <div className="h-20 w-20 [&>svg]:h-full [&>svg]:w-full">{item.icon}</div>;
+  if (icon) {
+    return <div className="h-20 w-20 [&>svg]:h-full [&>svg]:w-full">{icon}</div>;
   }
 
   return <Icon className="h-20 w-20 text-brand-orange-dark" strokeWidth={1.7} />;
 }
 
-export default function WhyTravelworksSection() {
-  const t = useTranslations('home.why-travelworks');
-
-  const whyItems: WhyTravelworksItem[] = [
-    {
-      id: 0,
-      title: t('optimize.title'),
-      description: t('optimize.description'),
-      iconComponent: CircleDollarSign,
-    },
-    {
-      id: 1,
-      title: t('gds.title'),
-      description: t('gds.description'),
-      iconComponent: Network,
-    },
-    {
-      id: 2,
-      title: t('cloud.title'),
-      description: t('cloud.description'),
-      iconComponent: Cloud,
-    },
-    {
-      id: 3,
-      title: t('crm.title'),
-      description: t('crm.description'),
-      iconComponent: Users,
-    },
-  ];
-
+export default function WhyTravelworks({ title, items }: WhyTravelworksSection) {
+  
   return (
     <section className="w-full mx-auto max-w-7xl rounded-2xl bg-neutral-background py-8" aria-labelledby="why-travelworks-heading">
-      {t('title') && (
-         <h2 dangerouslySetInnerHTML={{ __html: t('title') }} className="text-center text-3xl py-4 font-medium uppercase tracking-tight text-brand-blue sm:text-4xl"/>
+      {title && (
+         <h2 dangerouslySetInnerHTML={{ __html: title }} className="text-center text-3xl py-4 font-medium uppercase tracking-tight text-brand-blue sm:text-4xl"/>
       )}
 
       <div className="grid grid-cols-1 overflow-hidden rounded-xl border border-neutral-border sm:grid-cols-2 xl:grid-cols-4">
-        {whyItems.map((item) => {
+        {items && items.map((item, index) => {
           return (
             <article
-              key={item.id}
+              key={index}
               className="flex min-h-[26rem] flex-col border-b border-neutral-border last:border-b-0 sm:min-h-[24rem] sm:[&:nth-last-child(-n+2)]:border-b-0 xl:min-h-[27rem] xl:border-b-0 xl:border-r xl:last:border-r-0"
             >
               <div className="flex h-56 items-center justify-center bg-[#ebe6dc] px-6">
-                <WhyTravelworksIcon item={item} />
+                <WhyTravelworksIcon {...item} />
               </div>
 
               <div className="flex flex-1 flex-col bg-neutral-dark p-6 text-neutral-canvas">

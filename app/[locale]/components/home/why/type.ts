@@ -3,10 +3,16 @@ import {
 } from 'lucide-react';
 import type { ReactNode } from 'react';
 
-export type WhyTravelworksItem = {
+export type WhyTravelworksItems = {
   id: number;
-  title: string;
+  title: ReactNode;
   description: string;
   icon?: ReactNode;
   iconComponent?: LucideIcon;
+}
+
+export type WhyTravelworksSection = {
+  blockType: "WhyTravelworksSection";
+  title: string;
+  items?: WhyTravelworksItems[];
 };

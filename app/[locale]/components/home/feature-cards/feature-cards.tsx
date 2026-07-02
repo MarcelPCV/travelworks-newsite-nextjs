@@ -3,7 +3,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { FeatureCardsSection, FeatureCard } from './type';
-import { useTranslations } from 'next-intl';
 
 function FeatureCards({ item }: { item: FeatureCard }) {
   return (
@@ -26,100 +25,21 @@ function FeatureCards({ item }: { item: FeatureCard }) {
   );
 }
 
-export default function IconsFeatures() {
-  const t = useTranslations('home.features-cards');
-
-  const featureCardsData: FeatureCardsSection = {
-    title: String(t.raw('title')),
-    items: [
-      {
-        id: '0',
-        title: t('items.backoffice-tools.title'),
-        ctaHref: '/feature-1',
-        image: {
-          src: '/images/components/feature-cards/feature_strategic_management_tool.gif',
-          alt: 'Feature 1',
-          width: 400,
-          height: 300,
-        },
-      },
-      {
-        id: '1',
-        title: t('items.reservation-management.title'),
-        ctaHref: '/feature-1',
-        image: {
-          src: '/images/components/feature-cards/feature_strategic_management_tool.gif',
-          alt: 'Feature 1',
-          width: 400,
-          height: 300,
-        },
-      },
-      {
-        id: '2',
-        title: t('items.strategic-management-tool.title'),
-        ctaHref: '/feature-1',
-        image: {
-          src: '/images/components/feature-cards/feature_strategic_management_tool.gif',
-          alt: 'Feature 1',
-          width: 400,
-          height: 300,
-        },
-      },
-      {
-        id: '3',
-        title: t('items.tour-management.title'),
-        ctaHref: '/feature-1',
-        image: {
-          src: '/images/components/feature-cards/feature_strategic_management_tool.gif',
-          alt: 'Feature 1',
-          width: 400,
-          height: 300,
-        },
-      },
-      {
-        id: '4',
-        title: t('items.online-tour-booking.title'),
-        ctaHref: '/feature-1',
-        image: {
-          src: '/images/components/feature-cards/feature_strategic_management_tool.gif',
-          alt: 'Feature 1',
-          width: 400,
-          height: 300,
-        },
-      },
-      {
-        id: '5',
-        title: t('items.crm-tools.title'),
-        ctaHref: '/feature-1',
-        image: {
-          src: '/images/components/feature-cards/feature_strategic_management_tool.gif',
-          alt: 'Feature 1',
-          width: 400,
-          height: 300,
-        },
-      },
-      {
-        id: '6',
-        title: t('items.multiple-integration.title'),
-        ctaHref: '/feature-1',
-        image: {
-          src: '/images/components/feature-cards/feature_strategic_management_tool.gif',
-          alt: 'Feature 1',
-          width: 400,
-          height: 300,
-        },
-      }
-    ]
-  }
+export default function IconsFeatures(props?: Partial<FeatureCardsSection>) {
+  const { title, items = [] } = props ?? {};
 
   return (
     <section className='w-full mx-auto max-w-7xl rounded-2xl bg-[#e7e7e7] px-5 py-10 sm:px-8 lg:px-10' aria-labelledby="technology-features-heading">
-      {featureCardsData.title && (
-         <h2 dangerouslySetInnerHTML={{ __html: featureCardsData.title }} className="text-center text-3xl font-medium uppercase tracking-tight text-brand-blue sm:text-4xl"/>
+      {title && (
+         typeof title === 'string' ? (
+           <h2 dangerouslySetInnerHTML={{ __html: title }} className="text-center text-3xl font-medium uppercase tracking-tight text-brand-blue sm:text-4xl"/>
+         ) : (
+           <h2 className="text-center text-3xl font-medium uppercase tracking-tight text-brand-blue sm:text-4xl">{title}</h2>
+         )
       )}
 
       <div className="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-10">
-         {featureCardsData.items.map((featureCard) => {
+         {items.map((featureCard) => {
            return (
             <article
                key={featureCard.id}

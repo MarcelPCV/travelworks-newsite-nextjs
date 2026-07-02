@@ -2,23 +2,15 @@
 
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
-import { useMemo, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import { A11y, Autoplay, EffectFade } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import type { Swiper as SwiperType } from 'swiper/types';
-import { useTranslations } from 'next-intl';
-import type { HeroSlide } from './type';
+import type { HeroCarouselSection } from './type';
 
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 
-type HeroCarouselProps = {
-  slides?: HeroSlide[];
-  effect?: 'fade';
-  navigation?: boolean;
-  pagination?: boolean;
-  contentAlignment?: 'left' | 'right' | 'alternate';
-};
 
 const backgrounds = [
   'bg-[radial-gradient(circle_at_85%_34%,rgba(255,170,59,0.9)_0_28%,transparent_29%),linear-gradient(135deg,#ffffff_0%,#f8fafc_45%,#eef3fb_100%)]',
@@ -27,49 +19,18 @@ const backgrounds = [
 ];
 
 export default function HeroCarousel({
-  slides = [],
+  slides,
   effect = 'fade',
   navigation = true,
   pagination = true,
   contentAlignment = 'alternate',
-}: HeroCarouselProps) {
+}: HeroCarouselSection) {
   const [activeSlide, setActiveSlide] = useState(0);
   const swiperRef = useRef<SwiperType | null>(null);
 
-  const t = useTranslations('home.hero-caroussel');
-
   const stripHtml = (s: string) => s.replace(/<[^>]+>/g, '');
 
-  const items: HeroSlide[] = useMemo(() => {
-    if (slides.length) return slides;
 
-    return [
-      {
-        id: 'slide-1',
-        title: String(t.raw('concept.title')),
-        ctaLabel: t('concept.cta'),
-        ctaHref: '/travel-agency-software',
-        image: '/images/components/hero-carousel/hero.png',
-        contentPosition: 'left',
-      },
-      {
-        id: 'slide-2',
-        title: String(t.raw('promo.title')),
-        ctaLabel: t('promo.cta'),
-        ctaHref: '/solutions',
-        image: '/images/components/hero-carousel/hero.png',
-        contentPosition: 'right',
-      },
-      {
-        id: 'slide-3',
-        title: String(t.raw('tourOnline.title')),
-        ctaLabel: t('tourOnline.cta'),
-        ctaHref: '/online-booking',
-        image: '/images/components/hero-carousel/hero.png',
-        contentPosition: 'left',
-      },
-    ];
-  }, [slides, t]);
 
   return (
     <section
@@ -90,7 +51,7 @@ export default function HeroCarousel({
         }}
         className="h-[500px] sm:h-[560px] lg:h-[540px]"
       >
-        {items.map((slide, index) => {
+        {slides.map((slide, index) => {
           const effectiveAlignment =
             slide.contentPosition ??
             (contentAlignment === 'alternate'
@@ -121,10 +82,9 @@ export default function HeroCarousel({
                   <div
                     className={`order-2 flex h-[46%] flex-col justify-center px-6 pb-12 text-brand-blue sm:px-10 ${textOrderClass} lg:h-full lg:w-1/2 lg:px-12 lg:pb-16`}
                   >
-                    <h2
-                      className="mt-3 max-w-xl text-4xl leading-[1.08] tracking-tight text-brand-blue"
-                      dangerouslySetInnerHTML={{ __html: slide.title }}
-                    />
+                    <h2 className="mt-3 max-w-xl text-4xl leading-[1.08] tracking-tight text-brand-blue">
+                      {slide.titleRich ?? slide.titlePlain ?? slide.title}
+                    </h2>
 
                     <div className="mt-7">
                       <a
@@ -143,7 +103,7 @@ export default function HeroCarousel({
                     <div className="relative h-full w-full overflow-hidden rounded-xl border border-white/45 bg-white/15 shadow-2xl">
                       <Image
                         src={slide.image}
-                        alt={stripHtml(slide.title)}
+                        alt={stripHtml(slide.titlePlain ?? '')}
                         fill
                         priority
                         sizes="(max-width: 768px) 100vw, 50vw"
@@ -184,7 +144,7 @@ export default function HeroCarousel({
       {/* PAGINATION */}
       {pagination && (
         <div className="absolute bottom-4 left-1/2 z-20 flex -translate-x-1/2 items-center gap-3">
-          {items.map((slide, index) => {
+          {slides.map((slide, index) => {
             const isActive = activeSlide === index;
 
             return (

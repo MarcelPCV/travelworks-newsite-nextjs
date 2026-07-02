@@ -799,6 +799,47 @@
     },
     "client-trust-section": {
       "title": "More than <strong>1,000 travel agencies</strong> trust us"
+    },
+    "ask-for-a-demo": {
+      "title": "Request a Demo",
+      "heroPlaceholder": "Final visual will be integrated here",
+      "form": {
+        "heading": "Schedule your demo",
+        "formName": "Demo Request Form",
+        "fields": {
+          "fullName": "Full name",
+          "email": "Email",
+          "phone": "Phone",
+          "agencyName": "Name of Travel Agency",
+          "country": "Country"
+        },
+        "countryPlaceholder": "Please choose an option",
+        "submit": "Send",
+        "submitPending": "Sending...",
+        "feedback": {
+          "success": "Request sent successfully.",
+          "error": "Something went wrong. Please try again."
+        }
+      },
+      "highlights": {
+        "users": "6000 plus users worldwide",
+        "support": "Now in Australia with a local support team",
+        "security": "Secured cloud-based systems: anywhere and anytime"
+      },
+      "solutions": {
+        "title": "Comprehensive solution",
+        "cards": {
+          "0": "Interface with all the major GDS systems",
+          "1": "Corporate account management",
+          "2": "Trip builder, quotes and invoices",
+          "3": "Full client history by booking number",
+          "4": "Accounts payable and receivables",
+          "5": "Dynamic reporting",
+          "6": "Secure credit card payments",
+          "7": "Client management system",
+          "8": "Marketing"
+        }
+      }
     }
   },
   "features": {

@@ -1,3 +1,5 @@
+import { ReactNode } from 'react';
+
 export type FeatureCard = {
   id: string;
   title: string;
@@ -14,6 +16,11 @@ export type MediaImage = {
 };
 
 export type FeatureCardsSection = {
-  title: string;
+  blockType: "FeatureCards";
+  title: ReactNode;
   items: FeatureCard[];
+};
+
+export type FeatureCardsSectionData = Omit<FeatureCardsSection, 'title'> & {
+  title: string;
 };

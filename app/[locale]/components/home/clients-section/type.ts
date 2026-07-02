@@ -2,10 +2,11 @@ import { ReactNode } from 'react';
 
 export type Client = {
   name: string;
-  logo: string; // path like "/logo.gif" (you can replace later)
+  logo: string;
 };
 
 export type ClientsSectionModel = {
+  blockType: "ClientTrustSection";
   title: ReactNode;
   clients: Client[];
 };

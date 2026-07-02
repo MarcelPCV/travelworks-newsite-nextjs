@@ -28,11 +28,23 @@ export default async function Page({
 								logoImageSrc={layout.logoImageSrc ? t(layout.logoImageSrc) : ''}
 								ctaImageSrc={layout.ctaImageSrc ? t(layout.ctaImageSrc) : ''}
 							/>);
+					case "CardsIcons":
+						return (
+							<CardsIconsSection
+								key={index}
+								{...layout}
+								title={layout.title ? t(layout.title) : ''}
+								cards={layout.cards ? layout.cards.map(card => ({
+									...card,
+									title: card.title ? t(card.title) : '',
+									description: card.description ? t(card.description) : ''
+								})) : []}
+							/>
+						);
 					default:
 						return null;
 				}
 			})}
-			<CardsIconsSection/>
 		</main>
 	);
 }

@@ -799,6 +799,47 @@
     },
     "client-trust-section": {
       "title": "Plus de <strong>1 000 agences de voyages</strong> nous font confiance"
+    },
+    "ask-for-a-demo": {
+      "title": "Demander une démo",
+      "heroPlaceholder": "Le visuel final sera intégré ici",
+      "form": {
+        "heading": "Planifiez votre démo",
+        "formName": "Formulaire de demande de démo",
+        "fields": {
+          "fullName": "Nom complet",
+          "email": "Courriel",
+          "phone": "Téléphone",
+          "agencyName": "Nom de l'agence de voyages",
+          "country": "Pays"
+        },
+        "countryPlaceholder": "Veuillez choisir une option",
+        "submit": "Envoyer",
+        "submitPending": "Envoi en cours...",
+        "feedback": {
+          "success": "Demande envoyée avec succès.",
+          "error": "Une erreur est survenue. Veuillez réessayer."
+        }
+      },
+      "highlights": {
+        "users": "Plus de 6000 utilisateurs dans le monde",
+        "support": "Maintenant en Australie avec une équipe de soutien locale",
+        "security": "Systèmes infonuagiques sécurisés: partout et en tout temps"
+      },
+      "solutions": {
+        "title": "Solution complète",
+        "cards": {
+          "0": "Interface avec tous les principaux systèmes GDS",
+          "1": "Gestion des comptes corporatifs",
+          "2": "Création de voyages, soumissions et factures",
+          "3": "Historique complet des clients par numéro de réservation",
+          "4": "Comptes fournisseurs et comptes clients",
+          "5": "Rapports dynamiques",
+          "6": "Paiements sécurisés par carte de crédit",
+          "7": "Système de gestion de la clientèle",
+          "8": "Marketing"
+        }
+      }
     }
 
   },

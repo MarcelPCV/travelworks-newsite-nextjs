@@ -1,7 +1,7 @@
 import type { LucideIcon } from 'lucide-react';
 
 export type CardIcon = {
-  id: string;
+  id: number;
   title: string;
   description: string;
   Icon: LucideIcon;
@@ -9,7 +9,8 @@ export type CardIcon = {
   iconColor?: string;
 };
 
-export type CardsIconsSectionProps = {
+export type CardsIconsSection = {
+  blockType: "CardsIcons";
   cards?: CardIcon[];
   title?: string;
 };
