@@ -1,5 +1,116 @@
 {
   "pages": {
+    "home": {
+      "block-type-carrousel": {
+        "slides": {
+          "concept": {
+            "title": "Une <strong>solution complète</strong> : réservations, CRM, inventaire, facturation, comptabilité et marketing",
+            "ctaLabel": "Découvrir TravelWorks",
+            "ctaHref": "#",
+            "image": "/images/components/hero-carousel/hero.png"
+          },
+          "promo": {
+            "title": "Des <strong>systèmes infonuagiques sécurisés</strong> idéaux pour les équipes en télétravail",
+            "ctaLabel": "Découvrir TravelWorks",
+            "ctaHref": "#",
+            "image": "/images/components/hero-carousel/hero.png"
+          },
+          "tourOnline": {
+            "title": "Une <strong>solution complète</strong> : réservations, CRM, inventaire, facturation, comptabilité et marketing",
+            "cta": "Découvrir TourOnline",
+            "ctaLabel": "Découvrir TravelWorks",
+            "ctaHref": "#",
+            "image": "/images/components/hero-carousel/hero.png"
+          }
+        }
+      },
+      "block-type-features-cards": {
+        "title": "<span>Une technologie <strong>adaptée</strong> à <strong>l'industrie du voyage</strong></span>",
+        "items": {
+          "backoffice-tools": {
+            "title": "Gestion des réservations"
+          },
+          "reservation-management": {
+            "title": "Gestion des dossiers"
+          },
+          "strategic-management-tool": {
+            "title": "Outil de gestion stratégique"
+          },
+          "tour-management": {
+            "title": "Gestion des circuits"
+          },
+          "online-tour-booking": {
+            "title": "Réservation de circuits en ligne"
+          },
+          "crm-tools": {
+            "title": "Outils CRM"
+          },
+          "multiple-integration": {
+            "title": "Intégrations multiples"
+          }
+        }
+      },
+      "block-type-platform-showcase": {
+        "title": "Conçu pour simplifier le travail des agences de voyages",
+        "description": "Un environnement de travail agréable pour les conseillers en voyages, un gain de temps considérable pour les comptables et un outil de gestion essentiel pour les gestionnaires d'agences de voyages.",
+        "mainImage": "/images/components/platform-showcase/bundle_home_en.webp",
+        "secondaryImage": "/images/components/platform-showcase/30years.svg"
+      },
+      "block-type-why-travelworks": {
+        "title": "Pourquoi TravelWorks",
+        "items": {
+          "0": {
+            "title": "<strong>Optimisez la facturation</strong> et la <strong>comptabilité</strong>",
+            "description": "Générez des factures professionnelles et uniformisées. Automatisez leur création et optimisez vos processus comptables grâce aux meilleures pratiques."
+          },
+          "1": {
+            "title": "Intégré aux <strong>GDS</strong> et aux <strong>moteurs de réservation</strong>",
+            "description": "Effectuez vos réservations avec vos moteurs de réservation actuels (Sabre, Galileo, Amadeus, Worldspan, SIREV) et les factures seront générées automatiquement dans notre logiciel. Il en va de même pour les compagnies d'assurance."
+          },
+          "2": {
+            "title": "<strong>Système infonuagique</strong>, une solution clé en main",
+            "description": "Travaillez de n'importe où grâce à une plateforme infonuagique sécurisée. Profitez d'une solution clé en main, toujours à jour et accessible en tout temps."
+          },
+          "3": {
+            "title": "<strong>CRM</strong> et <strong>marketing intégré</strong>",
+            "description": "Générez des revenus supplémentaires grâce à des campagnes courriel ciblées. Améliorez le service à la clientèle et fidélisez vos clients avec des messages automatisés."
+          }
+        }
+      },
+      "block-type-clients-trust": {
+        "title": "Plus de 1 000 agences de voyages nous font confiance"
+      },
+      "block-type-benefits-banner-1": {
+        "heading": "Une solution complète",
+        "buttonLabel": "Découvrir les avantages",
+        "imagePlaceholderLabel": "Espace réservé pour l'image de l'ordinateur portable",
+        "buttonHref": "#",
+        "list": {
+          "0": "Une comptabilité adaptée aux agences de voyages",
+          "1": "Améliore la productivité",
+          "2": "Robuste et sécurisée",
+          "3": "Simple d'utilisation et intuitive"
+        }
+      },
+      "block-type-benefits-banner-2": {
+        "heading": "L'application mobile pour les agences de voyages",
+        "buttonLabel": "Découvrir les avantages",
+        "imagePlaceholderLabel": "Espace réservé pour l'image de l'ordinateur portable",
+        "buttonHref": "#",
+        "list": {
+          "0": "Bonifiez l'expérience des voyageurs",
+          "1": "Améliorez la satisfaction et la fidélisation des clients",
+          "2": "Accroissez la notoriété de votre marque",
+          "3": "Générez davantage de revenus"
+        }
+      },
+      "block-type-news-ticker": {
+        "sectionTitle": "Actualités",
+        "newsLabel": "TravelWorks lance de nouveaux outils pour optimiser la gestion comptable.",
+        "newsCtaHref": "#",
+        "phone": "+1 (514) 123-4567"
+      }
+    },
     "travel-agency-software": {
       "features": {
         "block-type-page-hero": {

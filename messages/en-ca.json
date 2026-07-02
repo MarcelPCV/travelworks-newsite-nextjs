@@ -1,5 +1,116 @@
 {
   "pages": {
+    "home": {
+      "block-type-carrousel": {
+        "slides": {
+          "concept" : {
+            "title": "A <strong>comprehensive solution</strong> : booking, CRM, inventory, billing, accounting and marketing",
+            "ctaLabel": "Discover TravelWorks",
+                "ctaHref": "#",
+                "image": "/images/components/hero-carousel/hero.png"
+          },
+          "promo": {
+            "title": "<strong>Secured cloud systems </strong>ideal for staff working remotely",
+            "ctaLabel": "Discover TravelWorks",
+                "ctaHref": "#",
+                "image": "/images/components/hero-carousel/hero.png"
+          },
+          "tourOnline": {
+            "title": "A <strong>comprehensive solution</strong> : booking, CRM, inventory, billing, accounting and marketing",
+            "cta": "Discover TourOnline",
+            "ctaLabel": "Discover TravelWorks",
+            "ctaHref": "#",
+            "image": "/images/components/hero-carousel/hero.png"
+          }
+        }
+      },
+      "block-type-features-cards": {
+        "title": "<span>Technology <strong>tailored</strong> to <strong>travel industry</strong></span>",
+        "items": {
+          "backoffice-tools": {
+            "title": "Booking Management"
+          },
+          "reservation-management": {
+            "title": "Reservation Management"
+          },
+          "strategic-management-tool": {
+            "title": "Strategic Management Tool"
+          },
+          "tour-management": {
+            "title": "Tour Management"
+          },
+          "online-tour-booking": {
+            "title": "Online Tour Booking"
+          },
+          "crm-tools": {
+            "title": "CRM Tools"
+          },
+          "multiple-integration": {
+            "title": "Multiple Integration"
+          }
+        }
+      },
+      "block-type-platform-showcase": {
+        "title": "Built to Simplify Travel Agency Workflows",
+        "description": "A pleasant work environment for travel agents, considerable time-saving for accountants and an essential management tool for travel agency managers.",
+        "mainImage": "/images/components/platform-showcase/bundle_home_en.webp",
+        "secondaryImage": "/images/components/platform-showcase/30years.svg"
+      },
+      "block-type-why-travelworks": {
+        "title": "Why TravelWorks",
+        "items": {
+          "0": {
+            "title": "<strong>Optimize Invoicing </strong>and <strong>Accounting</strong>",
+            "description": "Generate profesionnal and standardized invoices. Automate the invoice creation. Maximize your accounting processes with good practices!"
+          },
+          "1": {
+            "title": "Integrated to <strong>GDS</strong> and <strong>Booking Engines</strong>",
+            "description": "Make a reservation with your current booking engines (Sabre, Galileo, Amadeus, Worldspan, SIREV), the invoice will be automatically generated in our software. The same as with insurance companies."
+          },
+          "2": {
+            "title": "<strong>Cloud System</strong>, a Turnkey Solution",
+            "description": "Make a reservation with your current booking engines (Sabre, Galileo, Amadeus, Worldspan, SIREV), the invoice will be automatically generated in our software. The same as with insurance companies."
+          },
+          "3": {
+            "title": "<strong>CRM</strong> Tool and<strong> Integrated Marketing</strong>",
+            "description": "Generate additional revenues with targeted email campaigns. Improve customer service and increase brand loyalty with automated courtesy messages."
+          }
+        }
+      },
+      "block-type-clients-trust": {
+        "title": "More than 1,000 travel agencies trust us"
+      },
+      "block-type-benefits-banner-1": {
+        "heading": "A complete solution",
+        "buttonLabel": "Discover Benefits",
+        "imagePlaceholderLabel": "Laptop Image Placeholder",
+        "buttonHref": "#",
+        "list": {
+          "0": "Accounting tailored to the travel agency",
+          "1": "Improves productivity",
+          "2": "Robust and secured",
+          "3": "Easy to use and intuitive"
+        }
+      },
+      "block-type-benefits-banner-2": {
+        "heading": "The mobile application for travel agencies",
+        "buttonLabel": "Discover Benefits",
+        "imagePlaceholderLabel": "Laptop Image Placeholder",
+        "buttonHref": "#",
+        "list": {
+          "0": "Enhance travelers' stays",
+          "1": "Improve customer satisfaction and brand loyalty",
+          "2": "Increase brand awareness",
+          "3": "Generate more revenues"
+        }
+      },
+      "block-type-news-ticker": {
+        "sectionTitle": "News",
+        "newsLabel": "Travelworks launches new tools to master accounting software.",
+        "newsCtaHref": "#",
+        "phone": "+1 (514) 123-4567"
+      }
+    },
     "travel-agency-software": {
       "features": {
         "block-type-page-hero": {
