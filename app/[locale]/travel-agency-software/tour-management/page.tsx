@@ -2,6 +2,10 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { IntegrationsPageData } from "./data";
 import PageHero from "../../components/shared/page-hero/page-hero";
 import CardsIconsSection from "../../components/shared/cards-icons/cards-icons";
+import SplitSection from "../../components/shared/SplitSection/SplitSection";
+import SplitBannerSection from "@/app/[locale]/components/shared/split-banner-section/SplitBannerSection";
+import ComparisonSolutionSection from "../../components/shared/comparison-solution-section/comparison-solution-section";
+import { ComparisonColumn, ComparisonSolutionRow } from "../../components/shared/comparison-solution-section/type";
 
 export default async function Page({
 	params,
@@ -41,6 +45,62 @@ export default async function Page({
 								})) : []}
 							/>
 						);
+						case "SplitSection":
+							return (
+								<SplitSection
+									key={index}
+									{...layout}
+									heading={typeof layout.heading === 'string' ? t(layout.heading) : ''}
+									description={typeof layout.description === 'string' ? t(layout.description) : ''}
+									imageSrc={typeof layout.imageSrc === 'string' ? t(layout.imageSrc) : ''}
+									imageAlt={typeof layout.imageAlt === 'string' ? t(layout.imageAlt) : ''}
+								/>
+							);
+						case "SplitBannerSection":
+							return (
+								<SplitBannerSection
+									key={index}
+									{...layout}
+									title={typeof layout.title === 'string' ? t(layout.title) : ''}
+									heading={typeof layout.heading === 'string' ? t(layout.heading) : ''}
+									description={typeof layout.description === 'string' ? t(layout.description) : ''}
+									imageSrc={typeof layout.imageSrc === 'string' ? t(layout.imageSrc) : ''}
+									imageAlt={typeof layout.imageAlt === 'string' ? t(layout.imageAlt) : ''}
+									imageSecondarySrc={typeof layout.imageSecondarySrc === 'string' ? t(layout.imageSecondarySrc) : ''}
+									imageSecondaryAlt={typeof layout.imageSecondaryAlt === 'string' ? t(layout.imageSecondaryAlt) : ''}
+									backgroundColor={typeof layout.backgroundColor === 'string' ? layout.backgroundColor : ''}
+									ctaLabel={typeof layout.ctaLabel === 'string' ? t(layout.ctaLabel) : ''}
+									ctaLink={typeof layout.ctaLink === 'string' ? t(layout.ctaLink) : ''}
+								/>
+							);
+						case "ComparisonSolution":
+							const translatedColumns: ComparisonColumn[] = (layout.columns ?? []).map((column) => {
+								try {
+									return { ...column, label: t(column.label) };
+								} catch {
+									return column;
+								}
+							});
+	
+							const translatedRows: ComparisonSolutionRow[] = (layout.rows ?? []).map((row) => {
+								try {
+									return { ...row, label: t(row.label) };
+								} catch {
+									return row;
+								}
+							});
+	
+							return (
+								<ComparisonSolutionSection
+									key={index}
+									{...layout}
+									heading={layout.heading ? t(layout.heading) : ''}
+									imageSrc={layout.imageSrc ? t(layout.imageSrc) : ''}
+									imageAlt={layout.imageAlt ? t(layout.imageAlt) : ''}
+									columns={translatedColumns}
+									rows={translatedRows}
+								/>
+							);
 					default:
 						return null;
 				}

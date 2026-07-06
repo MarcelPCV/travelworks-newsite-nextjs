@@ -178,17 +178,44 @@ export default async function Page({
                   logo: client.logo,
                 })) : []}
               />);
+          case "PlanningDemoSection":
+            return (
+              <div key={index} className="flex w-full flex-col gap-4 py-2">
+                <PlanningDemoSection
+                  countries={countries}
+                  locale={messageLocale}
+                  model={{
+                    ...layout,
+                    heading: t(layout.heading),
+                    image: {
+                      ...layout.image,
+                      placeholderLabel: t(layout.image.placeholderLabel),
+                    },
+                    form: {
+                      ...layout.form,
+                      fields: layout.form.fields.map((field) => ({
+                        ...field,
+                        label: t(field.label),
+                        placeholder: field.placeholder ? t(field.placeholder) : undefined,
+                      })),
+                      country: {
+                        ...layout.form.country,
+                        label: t(layout.form.country.label),
+                        placeholder: t(layout.form.country.placeholder),
+                      },
+                      submitButton: {
+                        ...layout.form.submitButton,
+                        label: t(layout.form.submitButton.label),
+                      },
+                    },
+                  }}
+                />
+              </div>
+            );
           default:
             return null;
         }
       })}
-
-      <div className="flex w-full flex-col gap-4 py-2">
-        <PlanningDemoSection
-          countries={countries}
-          locale={messageLocale}
-        />
-      </div>
     </main>
   );
 }

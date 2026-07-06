@@ -2,44 +2,21 @@
 
 import { ArrowRight } from 'lucide-react';
 import { useState } from 'react';
-import type { PlanningDemoSectionModel } from './type';
 import type { CountryOption } from '@/app/lib/countries';
+import type { PlanningDemoSectionModel } from './type';
 import { demoRequestSchema, type DemoRequestErrors } from './zod-validations';
 
 type Props = {
   countries: CountryOption[];
   locale: string;
+  model: PlanningDemoSectionModel;
 };
 
-export const planningDemoSection: PlanningDemoSectionModel = {
-  heading: 'Planning a Demo',
-  image: {
-    placeholderLabel: 'Teamwork Image Placeholder',
-  },
-  form: {
-    fields: [
-      { id: 'full-name',    name: 'fullName',    label: 'Full name',           type: 'text'  },
-      { id: 'email',        name: 'email',       label: 'Email',               type: 'email' },
-      { id: 'phone',        name: 'phone',       label: 'Phone',               type: 'tel'   },
-      { id: 'agency-name',  name: 'agencyName',  label: 'Name of Travel Agency', type: 'text'},
-    ],
-    country: {
-      label: 'Country',
-      placeholder: 'Please choose an option',
-    },
-    submitButton: {
-      label: 'Ask for Demo',
-    },
-  },
-};
-
-export default function PlanningDemoSection({ countries, locale }: Props) {
+export default function PlanningDemoSection({ countries, locale, model }: Props) {
   const [isSubmitting, setIsSubmitting]   = useState(false);
   const [status, setStatus]               = useState<'idle' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage]   = useState<string | null>(null);
   const [fieldErrors, setFieldErrors]     = useState<DemoRequestErrors>({});
-
-  const model = planningDemoSection;
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();

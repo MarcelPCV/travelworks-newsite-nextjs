@@ -9,6 +9,7 @@ export type PlanningDemoField = {
 };
 
 export type PlanningDemoSectionModel = {
+  blockType: 'PlanningDemoSection';
   heading: string;
   image: {
     placeholderLabel: string;

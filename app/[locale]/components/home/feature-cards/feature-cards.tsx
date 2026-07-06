@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { FeatureCardsSection, FeatureCard } from './type';
+import TitleSection from '../../ui/title-section';
 
 function FeatureCards({ item }: { item: FeatureCard }) {
   return (
@@ -31,11 +32,12 @@ export default function IconsFeatures(props?: Partial<FeatureCardsSection>) {
   return (
     <section className='w-full mx-auto max-w-7xl rounded-2xl bg-[#e7e7e7] px-5 py-10 sm:px-8 lg:px-10' aria-labelledby="technology-features-heading">
       {title && (
-         typeof title === 'string' ? (
-           <h2 dangerouslySetInnerHTML={{ __html: title }} className="text-center text-3xl font-medium uppercase tracking-tight text-brand-blue sm:text-4xl"/>
-         ) : (
-           <h2 className="text-center text-3xl font-medium uppercase tracking-tight text-brand-blue sm:text-4xl">{title}</h2>
-         )
+        <TitleSection 
+          title={title} 
+          alignment="center" 
+          size="extra-large" 
+          color="text-brand-blue" 
+        />
       )}
 
       <div className="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-10">

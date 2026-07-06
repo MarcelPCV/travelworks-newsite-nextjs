@@ -109,6 +109,21 @@
         "newsLabel": "Travelworks launches new tools to master accounting software.",
         "newsCtaHref": "#",
         "phone": "+1 (514) 123-4567"
+      },
+      "block-type-planning-demo-section": {
+        "heading": "Planning a Demo",
+        "image": {
+          "placeholderLabel": "Teamwork Image Placeholder"
+        },
+        "form": {
+          "nameLabel": "Name",
+          "emailLabel": "Email",
+          "companyLabel": "Agency Name",
+          "countryLabel": "Country",
+          "countryPlaceholder": "Please choose an option",
+          "phoneLabel": "Phone",
+          "submitButtonLabel": "Request a Demo"
+        }
       }
     },
     "travel-agency-software": {
@@ -610,6 +625,92 @@
              "title": "Manage your business in a unique system",
              "description": "Centralize customer, bookings and reporting in one place."
           }
+        },
+        "block-type-split": {
+          "heading": "OUR CUSTOMERS CAN TESTIFY",
+          "description": "Gain real-time access to inventory for a faster, more efficient reservation process. Easily configure tours with built-in online booking capabilities, while streamlining agency commission management to support wholesalers and maximize operational efficiency",
+          "imageSrc": "/images/pages/travel-agency-software/tour-management/note_en.webp",
+          "imageAlt": "Tour Management Overview"
+        },
+        "block-type-split2": {
+          "title": "TOUR ONLINE: YOUR RESERVATION SITE",
+          "heading": "OUR CUSTOMERS CAN TESTIFY",
+          "description": "Gain real-time access to inventory for a faster, more efficient reservation process. Easily configure tours with built-in online booking capabilities, while streamlining agency commission management to support wholesalers and maximize operational efficiency",
+          "imageSrc": "/images/pages/travel-agency-software/tour-management/tourOnline_01.webp",
+          "imageAlt": "Tour Management Overview",
+          "imageSecondarySrc": "/images/pages/travel-agency-software/tour-management/b2b-b2c.png",
+          "imageSecondaryAlt": "B2B and B2C",
+          "ctaLabel": "Try it now",
+          "ctaLink": "#"
+        },
+        "block-type-comparison-solution": {
+          "heading": "PREMIUM OR LITE? Which version best suits your business",
+          "imageSrc": "/images/pages/travel-agency-software/tour-management/premium-or-lite.webp",
+          "imageAlt": "Travel agent smiling at a desk with a laptop",
+          "columns": {
+            "0": {
+              "id": "tour-premium",
+              "label": "Tour Premium"
+            },
+            "1": {
+              "id": "tour-lite",
+              "label": "Tour Lite"
+            }
+          },
+          "rows": {
+            "0": {
+              "id": "voucher-creation",
+              "label": "Voucher creation"
+            },
+            "1": {
+              "id": "b2b-invoice",
+              "label": "B2B invoice generation including travel agency commissions"
+            },
+            "2": {
+              "id": "multi-currency-management",
+              "label": "Multi-currency management with suppliers"
+            },
+            "3": {
+              "id": "commission-rule",
+              "label": "Commission rule management tailored to travel agency categories"
+            },
+            "4": {
+              "id": "integrated-accounting",
+              "label": "Integrated to our TravelWorks accounting solution"
+            },
+            "5": {
+              "id": "manifest-management",
+              "label": "Manifest management (list of passengers)"
+            },
+            "6": {
+              "id": "inventory-management",
+              "label": "Inventory management in real-time in calendar"
+            },
+            "7": {
+              "id": "multi-product-management",
+              "label": "Multi-product management (hotel rooms, boat cabins, bus seats, tours, activities...)"
+            },
+            "8": {
+              "id": "room-sharing-possibility",
+              "label": "Possibility of room sharing in the booking process"
+            },
+            "9": {
+              "id": "price-management",
+              "label": "Price management linked to calendar (low season, high season etc.)"
+            },
+            "10": {
+              "id": "advanced-sales-reports",
+              "label": "Advanced sales reports"
+            },
+            "11": {
+              "id": "dashboard-timelines",
+              "label": "Dashboard with key timelines per agent"
+            },
+            "12": {
+              "id": "online-reservation",
+              "label": "Online reservation integrated to a customized website (API available)"
+            }
+          }
         }
       }
     },
@@ -835,6 +936,21 @@
         },
         "block-type-text-section": {
           "text": "<p>TravelWorks (a division of PC Voyages) is a North American software company that has been working <strong>in the travel industry since 1988</strong>. We have become <strong>leaders in travel agency accounting</strong> and <strong>back-office systems with users worldwide</strong>. TravelWorks interfaces with all the major booking engines and GDS, and has become an essential tool for thousands. </p><p>We invest around <strong>$750,000 in R&D every year</strong> in order to make our solutions evolve with <strong>cutting-edge technologies according to the needs of the market</strong>.</p><p>Among our valuable services: effective remote training, professional technical support with very quick response time and turnkey solutions including data import from other systems if necessary.</p>"
+        },
+        "block-type-planning-demo-section": {
+          "heading": "Planning a Demo",
+          "image": {
+            "placeholderLabel": "Teamwork Image Placeholder"
+          },
+          "form": {
+            "nameLabel": "Name",
+            "emailLabel": "Email",
+            "companyLabel": "Agency Name",
+            "countryLabel": "Country",
+            "countryPlaceholder": "Please choose an option",
+            "phoneLabel": "Phone",
+            "submitButtonLabel": "Request a Demo"
+          }
         }
       },
       "careers": {

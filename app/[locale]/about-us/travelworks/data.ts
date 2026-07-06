@@ -1,9 +1,11 @@
 import { PageHeroModel } from "../../components/shared/page-hero/type";
 import { TextSection } from "../../components/shared/text-section-comp/type";
+import { PlanningDemoSectionModel } from "../../components/home/demo-section/type";
 
 export type Layout =
   | PageHeroModel
-  | TextSection;
+  | TextSection
+  | PlanningDemoSectionModel;
 export type Page = {
   slug: string;
   layout: Layout[];
@@ -25,5 +27,27 @@ export const TourOnlinePageData: Page = {
       blockType: "TextSection",
       text: "block-type-text-section.text",
     },
+    {
+      blockType: 'PlanningDemoSection',
+      heading: 'block-type-planning-demo-section.heading',
+      image: {
+        placeholderLabel: 'block-type-planning-demo-section.image.placeholderLabel',
+      },
+      form: {
+        fields: [
+          { id: 'full-name',   name: 'fullName',   label: 'block-type-planning-demo-section.form.nameLabel', type: 'text' },
+          { id: 'email',       name: 'email',      label: 'block-type-planning-demo-section.form.emailLabel', type: 'email' },
+          { id: 'agency-name', name: 'agencyName', label: 'block-type-planning-demo-section.form.companyLabel', type: 'text' },
+          { id: 'phone',       name: 'phone',      label: 'block-type-planning-demo-section.form.phoneLabel', type: 'tel' },
+        ],
+        country: {
+          label: 'block-type-planning-demo-section.form.countryLabel',
+          placeholder: 'block-type-planning-demo-section.form.countryPlaceholder',
+        },
+        submitButton: {
+          label: 'block-type-planning-demo-section.form.submitButtonLabel',
+        },
+      },
+    }
   ]
 };

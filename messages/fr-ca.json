@@ -109,6 +109,21 @@
         "newsLabel": "TravelWorks lance de nouveaux outils pour optimiser la gestion comptable.",
         "newsCtaHref": "#",
         "phone": "+1 (514) 123-4567"
+      },
+      "block-type-planning-demo-section": {
+        "heading": "Planifier une démonstration",
+        "image": {
+          "placeholderLabel": "Image de l'équipe"
+        },
+        "form": {
+          "nameLabel": "Nom",
+          "emailLabel": "Courriel",
+          "companyLabel": "Nom de l'agence",
+          "countryLabel": "Pays",
+          "countryPlaceholder": "Veuillez choisir une option",
+          "phoneLabel": "Téléphone",
+          "submitButtonLabel": "Demander une démonstration"
+        }
       }
     },
     "travel-agency-software": {
@@ -591,6 +606,111 @@
           "desktopMainImageSrc": "/images/pages/travel-agency-software/tour-management/background-portfolio-tour-management.webp",
           "logoImageSrc": "",
           "ctaImageSrc": ""
+        },
+        "block-type-cards-icons": {
+          "title": "Avantages",
+          "0": {
+            "title": "Optimisez votre inventaire et la gestion de vos circuits",
+            "description": "Améliorez la visibilité et le contrôle de vos circuits et de leurs disponibilités."
+          },
+          "1": {
+            "title": "Générez des revenus supplémentaires en ligne",
+            "description": "Ouvrez de nouveaux canaux pour vendre davantage de circuits et de forfaits en ligne."
+          },
+          "2": {
+            "title": "Automatisez vos processus opérationnels",
+            "description": "Simplifiez les flux de travail et réduisez les tâches manuelles dans l'ensemble de vos équipes."
+          },
+          "3": {
+            "title": "Gérez votre entreprise dans un système unique",
+            "description": "Centralisez les clients, les réservations et les rapports au même endroit."
+          }
+        },
+        "block-type-split": {
+          "heading": "NOS CLIENTS EN TÉMOIGNENT",
+          "description": "Accédez à votre inventaire en temps réel pour un processus de réservation plus rapide et plus efficace. Configurez facilement vos circuits avec des capacités de réservation en ligne intégrées, tout en simplifiant la gestion des commissions des agences afin de soutenir les grossistes et d'optimiser votre efficacité opérationnelle.",
+          "imageSrc": "/images/pages/travel-agency-software/tour-management/note_en.webp",
+          "imageAlt": "Aperçu de la gestion des circuits"
+        },
+        "block-type-split2": {
+          "title": "TOUR ONLINE : VOTRE SITE DE RÉSERVATION",
+          "heading": "NOS CLIENTS EN TÉMOIGNENT",
+          "description": "Accédez à votre inventaire en temps réel pour un processus de réservation plus rapide et plus efficace. Configurez facilement vos circuits avec des capacités de réservation en ligne intégrées, tout en simplifiant la gestion des commissions des agences afin de soutenir les grossistes et d'optimiser votre efficacité opérationnelle.",
+          "imageSrc": "/images/pages/travel-agency-software/tour-management/tourOnline_01.webp",
+          "imageAlt": "Aperçu de la gestion des circuits",
+          "imageSecondarySrc": "/images/pages/travel-agency-software/tour-management/b2b-b2c.png",
+          "imageSecondaryAlt": "B2B et B2C",
+          "ctaLabel": "Essayez-le maintenant",
+          "ctaLink": "#"
+        },
+        "block-type-comparison-solution": {
+          "heading": "PREMIUM OU LITE ? Quelle version convient le mieux à votre entreprise ?",
+          "imageSrc": "/images/pages/travel-agency-software/tour-management/premium-or-lite.webp",
+          "imageAlt": "Agent de voyages souriant à son bureau avec un ordinateur portable",
+          "columns": {
+            "0": {
+              "id": "tour-premium",
+              "label": "Tour Premium"
+            },
+            "1": {
+              "id": "tour-lite",
+              "label": "Tour Lite"
+            }
+          },
+          "rows": {
+            "0": {
+              "id": "voucher-creation",
+              "label": "Création de bons d'échange (vouchers)"
+            },
+            "1": {
+              "id": "b2b-invoice",
+              "label": "Génération de factures B2B incluant les commissions des agences de voyages"
+            },
+            "2": {
+              "id": "multi-currency-management",
+              "label": "Gestion multidevise avec les fournisseurs"
+            },
+            "3": {
+              "id": "commission-rule",
+              "label": "Gestion des règles de commission adaptées aux catégories d'agences de voyages"
+            },
+            "4": {
+              "id": "integrated-accounting",
+              "label": "Intégration avec notre solution comptable TravelWorks"
+            },
+            "5": {
+              "id": "manifest-management",
+              "label": "Gestion des manifestes (liste des passagers)"
+            },
+            "6": {
+              "id": "inventory-management",
+              "label": "Gestion de l'inventaire en temps réel dans le calendrier"
+            },
+            "7": {
+              "id": "multi-product-management",
+              "label": "Gestion multi-produits (chambres d'hôtel, cabines de bateau, sièges d'autobus, circuits, activités, etc.)"
+            },
+            "8": {
+              "id": "room-sharing-possibility",
+              "label": "Possibilité de partage de chambre lors du processus de réservation"
+            },
+            "9": {
+              "id": "price-management",
+              "label": "Gestion des tarifs liée au calendrier (basse saison, haute saison, etc.)"
+            },
+            "10": {
+              "id": "advanced-sales-reports",
+              "label": "Rapports de ventes avancés"
+            },
+            "11": {
+              "id": "dashboard-timelines",
+              "label": "Tableau de bord avec les échéanciers clés par agent"
+            },
+            "12": {
+              "id": "online-reservation",
+              "label": "Réservation en ligne intégrée à un site Web personnalisé (API disponible)"
+            }
+          }
         }
       }
     },
@@ -816,6 +936,21 @@
         },
         "block-type-text-section": {
           "text": "<p>TravelWorks (une division de PC Voyages) est une entreprise nord-américaine spécialisée dans les logiciels qui œuvre <strong>dans l'industrie du voyage depuis 1988</strong>. Nous sommes devenus <strong>des chefs de file en comptabilité pour agences de voyages</strong> et en <strong>systèmes de back-office, avec des utilisateurs partout dans le monde</strong>. TravelWorks s'intègre à tous les principaux moteurs de réservation et systèmes GDS, et est devenu un outil essentiel pour des milliers d'utilisateurs.</p><p>Nous investissons environ <strong>750 000 $ en recherche et développement chaque année</strong> afin de faire évoluer nos solutions grâce à des <strong>technologies de pointe adaptées aux besoins du marché</strong>.</p><p>Parmi nos services les plus appréciés : des formations à distance efficaces, un soutien technique professionnel avec des délais de réponse très rapides, ainsi que des solutions clés en main incluant, au besoin, l'importation de données provenant d'autres systèmes.</p>"
+        },
+        "block-type-planning-demo-section": {
+          "heading": "Planifier une démonstration",
+          "image": {
+            "placeholderLabel": "Image de l'équipe"
+          },
+          "form": {
+            "nameLabel": "Nom",
+            "emailLabel": "Courriel",
+            "companyLabel": "Nom de l'agence",
+            "countryLabel": "Pays",
+            "countryPlaceholder": "Veuillez choisir une option",
+            "phoneLabel": "Téléphone",
+            "submitButtonLabel": "Demander une démonstration"
+          }
         }
       },
       "careers": {

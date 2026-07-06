@@ -6,6 +6,7 @@ import { PlatformShowcaseModel } from "./components/home/platform-showcase/type"
 import { WhyTravelworksSection, WhyTravelworksItems } from "./components/home/why/type";
 import { CircleDollarSign, Cloud, Network, Users } from "lucide-react";
 import { ClientsSectionModel, Client } from "./components/home/clients-section/type";
+import { PlanningDemoSectionModel } from "./components/home/demo-section/type";
 
 export type Layout =
   | BenefitsBanner
@@ -14,6 +15,7 @@ export type Layout =
   | WhyTravelworksSection
   | ClientsSectionModel
   | PlatformShowcaseModel
+  | PlanningDemoSectionModel
   | HeroCarouselSection;
 
 export type Page = {
@@ -274,6 +276,28 @@ export const HomePage: Page = {
       buttonHref: "block-type-benefits-banner-2.buttonHref",
       hideButton: false,
       imagePlaceholderLabel: "block-type-benefits-banner-2.imagePlaceholderLabel",
+    },
+    {
+      blockType: 'PlanningDemoSection',
+      heading: 'block-type-planning-demo-section.heading',
+      image: {
+        placeholderLabel: 'block-type-planning-demo-section.image.placeholderLabel',
+      },
+      form: {
+        fields: [
+          { id: 'full-name',   name: 'fullName',   label: 'block-type-planning-demo-section.form.nameLabel', type: 'text' },
+          { id: 'email',       name: 'email',      label: 'block-type-planning-demo-section.form.emailLabel', type: 'email' },
+          { id: 'agency-name', name: 'agencyName', label: 'block-type-planning-demo-section.form.companyLabel', type: 'text' },
+          { id: 'phone',       name: 'phone',      label: 'block-type-planning-demo-section.form.phoneLabel', type: 'tel' },
+        ],
+        country: {
+          label: 'block-type-planning-demo-section.form.countryLabel',
+          placeholder: 'block-type-planning-demo-section.form.countryPlaceholder',
+        },
+        submitButton: {
+          label: 'block-type-planning-demo-section.form.submitButtonLabel',
+        },
+      },
     }
   ],
 };
