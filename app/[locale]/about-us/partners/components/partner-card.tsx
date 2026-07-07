@@ -1,5 +1,5 @@
-import Image from "next/image";
-import { Partner } from "./types";
+import Image from 'next/image';
+import { Partner } from './types';
 
 interface Props {
   partner: Partner;
@@ -18,9 +18,7 @@ export default function PartnerCard({ partner }: Props) {
         />
       </div>
 
-      <span className="mt-2 text-center text-xs text-gray-800">
-        {partner.name}
-      </span>
+      <span className="mt-2 text-center text-xs text-gray-800">{partner.name}</span>
     </div>
   );
 }

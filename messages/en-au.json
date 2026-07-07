@@ -3,17 +3,17 @@
     "home": {
       "block-type-carrousel": {
         "slides": {
-          "concept" : {
+          "concept": {
             "title": "A <strong>comprehensive solution</strong> : booking, CRM, inventory, billing, accounting and marketing",
             "ctaLabel": "Discover TravelWorks",
-                "ctaHref": "#",
-                "image": "/images/components/hero-carousel/hero.png"
+            "ctaHref": "#",
+            "image": "/images/components/hero-carousel/hero.png"
           },
           "promo": {
             "title": "<strong>Secured cloud systems </strong>ideal for staff working remotely",
             "ctaLabel": "Discover TravelWorks",
-                "ctaHref": "#",
-                "image": "/images/components/hero-carousel/hero.png"
+            "ctaHref": "#",
+            "image": "/images/components/hero-carousel/hero.png"
           },
           "tourOnline": {
             "title": "A <strong>comprehensive solution</strong> : booking, CRM, inventory, billing, accounting and marketing",
@@ -131,10 +131,10 @@
         "block-type-page-hero": {
           "title": "Travelworks",
           "description": "State of the art technology solutions for travel agencies and tour operators.",
-          "mobileTopImageSrc":"/images/pages/travel-agency-software/features/background-portfolio-features-mobile.webp",
-          "desktopMainImageSrc":"/images/pages/travel-agency-software/features/background-portfolio-features-mobile.webp",
+          "mobileTopImageSrc": "/images/pages/travel-agency-software/features/background-portfolio-features-mobile.webp",
+          "desktopMainImageSrc": "/images/pages/travel-agency-software/features/background-portfolio-features-mobile.webp",
           "logoImageSrc": "",
-          "ctaImageSrc":"/images/pages/travel-agency-software/features/30-logo-en.svg"
+          "ctaImageSrc": "/images/pages/travel-agency-software/features/30-logo-en.svg"
         },
         "block-type-split": {
           "heading": "Powerful and smart tools",
@@ -163,7 +163,7 @@
               "2": "Internal communications for targeted weekly promotions."
             }
           },
-          "crm-marketing":{
+          "crm-marketing": {
             "title": "CRM and Marketing Tools",
             "items": {
               "0": "CRM and targeted email campaigns",
@@ -293,10 +293,10 @@
         "block-type-page-hero": {
           "title": "ACCOUNTING AND INVOICING",
           "description": "Create standardized & professional invoices. Efficiently automate your operations and maintain reliable accounting",
-          "mobileTopImageSrc":"/images/pages/travel-agency-software/back-office-travel-agency/background-portfolio-backoffice.webp",
-          "desktopMainImageSrc":"/images/pages/travel-agency-software/back-office-travel-agency/background-portfolio-backoffice.webp",
+          "mobileTopImageSrc": "/images/pages/travel-agency-software/back-office-travel-agency/background-portfolio-backoffice.webp",
+          "desktopMainImageSrc": "/images/pages/travel-agency-software/back-office-travel-agency/background-portfolio-backoffice.webp",
           "logoImageSrc": "",
-          "ctaImageSrc":""
+          "ctaImageSrc": ""
         },
         "block-type-split": {
           "heading": "Modern accounting: less paper, more efficiency.",
@@ -340,7 +340,7 @@
               "1": "TravelWorks allows you to handle these specific methods of payment in addition to all others."
             }
           },
-          "advanced-reports":{
+          "advanced-reports": {
             "title": "ADVANCED REPORTS",
             "items": {
               "0": "Travel agency managers want to be able to monitor their travel agency's performances in real-time.",
@@ -383,7 +383,7 @@
             "items": {
               "0": "Upon opening the software each day, agents have the possibility of viewing important dates coming up, promotions to push as well as their real-time results (revenue, profits...).",
               "1": "Dashboards are customized for travel agency managers and owners in order to enable them to consult all agents' performance indicators in real-time.",
-              "2": "Multi-branch owners can also carry out this type of follow-up on all branches." 
+              "2": "Multi-branch owners can also carry out this type of follow-up on all branches."
             },
             "ctaLabel": "",
             "ctaHref": ""
@@ -409,10 +409,10 @@
         "block-type-page-hero": {
           "title": "Customizations",
           "description": "We work with you to meet your needs",
-          "mobileTopImageSrc":"/images/pages/travel-agency-software/customizations/background-portfolio-customization.webp",
-          "desktopMainImageSrc":"/images/pages/travel-agency-software/customizations/background-portfolio-customization.webp",
+          "mobileTopImageSrc": "/images/pages/travel-agency-software/customizations/background-portfolio-customization.webp",
+          "desktopMainImageSrc": "/images/pages/travel-agency-software/customizations/background-portfolio-customization.webp",
           "logoImageSrc": "",
-          "ctaImageSrc":""
+          "ctaImageSrc": ""
         },
         "block-type-split": {
           "heading": "Custom Experiences",
@@ -434,15 +434,15 @@
           "mobileTopImageSrc": "/images/pages/travel-agency-software/multiple-integration/background-portfolio-multiple-integration.webp",
           "desktopMainImageSrc": "/images/pages/travel-agency-software/multiple-integration/background-portfolio-multiple-integration.webp",
           "logoImageSrc": "",
-          "ctaImageSrc":""
+          "ctaImageSrc": ""
         },
         "block-type-image-block": {
           "title": "",
           "description": "",
           "imageSrc": "/images/pages/travel-agency-software/multiple-integration/schema.webp",
           "altText": "Multiple Integrations",
-          "linkHref":"",
-          "linkText":"",
+          "linkHref": "",
+          "linkText": "",
           "captionText": ""
         },
         "block-type-features-highlights": {
@@ -473,7 +473,7 @@
           "mobileTopImageSrc": "/images/pages/travel-agency-software/dashboard-reports/slider_wide.webp",
           "desktopMainImageSrc": "/images/pages/travel-agency-software/dashboard-reports/slider_wide.webp",
           "logoImageSrc": "",
-          "ctaImageSrc":""
+          "ctaImageSrc": ""
         },
         "block-type-features-highlights": {
           "Internal-communications": {
@@ -503,7 +503,7 @@
           "mobileTopImageSrc": "/images/pages/travel-agency-software/crm-tools/background-portfolio-crm.webp",
           "desktopMainImageSrc": "/images/pages/travel-agency-software/crm-tools/background-portfolio-crm.webp",
           "logoImageSrc": "",
-          "ctaImageSrc":""
+          "ctaImageSrc": ""
         },
         "block-type-split": {
           "heading": "Connected experiences",
@@ -548,31 +548,31 @@
           "mobileTopImageSrc": "/images/pages/travel-agency-software/tour-online/slider_wide.webp",
           "desktopMainImageSrc": "/images/pages/travel-agency-software/tour-online/slider_wide.webp",
           "logoImageSrc": "/images/pages/travel-agency-software/tour-online/TourOnline-logo-En.svg",
-          "ctaImageSrc":"/images/pages/travel-agency-software/tour-online/b2b-b2c.svg"
+          "ctaImageSrc": "/images/pages/travel-agency-software/tour-online/b2b-b2c.svg"
         },
         "block-type-split-section-0": {
-            "heading": "A unique system",
-            "description": "TourOnline allows clients to have an easy to manage <strong>bilingual E-commerce site</strong> that can works as your <strong>agency's site</strong> or as <strong>an addition to your current website</strong>",
-            "imageSrc": "/images/pages/travel-agency-software/tour-online/bundle-touronline.webp",
-            "imageAlt": "Custom Experiences",
-            "ctaLabel": "Try it now",
-            "ctaLink": "#"
+          "heading": "A unique system",
+          "description": "TourOnline allows clients to have an easy to manage <strong>bilingual E-commerce site</strong> that can works as your <strong>agency's site</strong> or as <strong>an addition to your current website</strong>",
+          "imageSrc": "/images/pages/travel-agency-software/tour-online/bundle-touronline.webp",
+          "imageAlt": "Custom Experiences",
+          "ctaLabel": "Try it now",
+          "ctaLink": "#"
         },
         "block-type-split-section-1": {
-            "heading": "Organized and well designed",
-            "description": "With TourOnline you can <strong>group travel products by theme of your choice</strong>. Each product is displayed in a beautiful interface with all essential information at hand. In addition, the <strong>interface adapts to several screen sizes</strong>, which makes TourOnline accessible and a <strong>beautiful showcase for your travel products</strong>.",
-            "imageSrc": "/images/pages/travel-agency-software/tour-online/touronline-cards-en.webp",
-            "imageAlt": "Custom Experiences",
-            "ctaLabel": "",
-            "ctaLink": "#"
+          "heading": "Organized and well designed",
+          "description": "With TourOnline you can <strong>group travel products by theme of your choice</strong>. Each product is displayed in a beautiful interface with all essential information at hand. In addition, the <strong>interface adapts to several screen sizes</strong>, which makes TourOnline accessible and a <strong>beautiful showcase for your travel products</strong>.",
+          "imageSrc": "/images/pages/travel-agency-software/tour-online/touronline-cards-en.webp",
+          "imageAlt": "Custom Experiences",
+          "ctaLabel": "",
+          "ctaLink": "#"
         },
         "block-type-image-block": {
           "title": "3 Differents interface's colors",
           "description": "",
           "imageSrc": "/images/pages/travel-agency-software/tour-online/bundle3-touronline.webp",
           "altText": "Multiple Integrations",
-          "linkHref":"",
-          "linkText":"",
+          "linkHref": "",
+          "linkText": "",
           "captionText": ""
         },
         "block-type-split-section-2": {
@@ -605,25 +605,25 @@
           "mobileTopImageSrc": "/images/pages/travel-agency-software/tour-management/background-portfolio-tour-management.webp",
           "desktopMainImageSrc": "/images/pages/travel-agency-software/tour-management/background-portfolio-tour-management.webp",
           "logoImageSrc": "",
-          "ctaImageSrc":""
+          "ctaImageSrc": ""
         },
         "block-type-cards-icons": {
           "title": "Benefits",
           "0": {
-             "title": "Maximize tour inventory and tour management",
-             "description": "Improve visibility and control over your tours and availability."
+            "title": "Maximize tour inventory and tour management",
+            "description": "Improve visibility and control over your tours and availability."
           },
           "1": {
-             "title": "Generate additional revenues online",
-             "description": "Open new channels to sell more tours and packages online."
+            "title": "Generate additional revenues online",
+            "description": "Open new channels to sell more tours and packages online."
           },
           "2": {
-             "title": "Automate your operational processes'",
-             "description": "Streamline workflows and reduce manual tasks across teams."
+            "title": "Automate your operational processes'",
+            "description": "Streamline workflows and reduce manual tasks across teams."
           },
           "3": {
-             "title": "Manage your business in a unique system",
-             "description": "Centralize customer, bookings and reporting in one place."
+            "title": "Manage your business in a unique system",
+            "description": "Centralize customer, bookings and reporting in one place."
           }
         },
         "block-type-split": {
@@ -712,9 +712,83 @@
             }
           }
         }
+      },
+      "trip-details": {
+        "block-type-page-hero": {
+          "title": "",
+          "description": "Introducing TravelWorks' Trip-Itinerary Software, designed to connect your clients with the adventure",
+          "mobileTopImageSrc": "/images/pages/travel-agency-software/trip-details/hero-image.webp",
+          "desktopMainImageSrc": "/images/pages/travel-agency-software/trip-details/hero-image.webp",
+          "logoImageSrc": "/images/pages/travel-agency-software/trip-details/trip-details.png",
+          "ctaImageSrc": ""
+        },
+        "block-type-text-section": {
+          "title": "A travel itinerary document <strong>like never before</strong>",
+          "description": "With <strong>Trip Details</strong>, you can easily provide real-time itineraries in a beautifully designed format, complete with templates and colors that match the spirit of the adventure. Keep your clients informed and inspired throughout their trip. Plus, they can download their full itinerary as a PDF whenever they need it. Accessible, easy to share or print. Trip Details is available via:"
+        },
+        "block-type-image-block": {
+          "title": "",
+          "description": "",
+          "imageSrc": "/images/pages/travel-agency-software/trip-details/trip-details-ipad-en.jpg",
+          "altText": "Multiple Integrations",
+          "linkHref": "",
+          "linkText": "",
+          "captionText": "",
+          "ctaLabel": "Request a demo",
+          "ctaLink": "#"
+        },
+        "block-type-share-items": {
+          "0": {
+            "title": "Email"
+          },
+          "1": {
+            "title": "Web Link"
+          },
+          "2": {
+            "title": "PDF"
+          }
+        },
+        "block-type-image-block2": {
+          "title": "CREATE BEAUTIFUL TRIP ITINERARIES",
+          "description": "Easily upload photos to your galleries, add your content, and build stunning travel documents. Fast, simple, and designed to deliver great results every time.",
+          "imageSrc": "/images/pages/travel-agency-software/trip-details/easy-to-use-en.webp",
+          "altText": "Multiple Integrations",
+          "linkHref": "",
+          "linkText": "",
+          "captionText": ""
+        },
+        "block-type-image-block3": {
+          "title": "3 amazing designs",
+          "description": "Trip Details presents three stunning design styles — Standard, Classic, and Modern — each crafted to elevate the way you showcase your travel experiences. Whether you prefer a clean and practical layout, a timeless and elegant aesthetic, or a bold and contemporary look, Trip Details delivers a design that matches your brand's agency.",
+          "imageSrc": "/images/pages/travel-agency-software/trip-details/designs-en.webp",
+          "altText": "Multiple Integrations",
+          "linkHref": "",
+          "linkText": "",
+          "captionText": ""
+        },
+        "block-type-image-block4": {
+          "title": "Colors",
+          "description": "Trip Details includes four base color options across the three designs, and clients can further personalize them with their own branding colors* by coordinating with our support team.\n\n* For customized colors, additional fees may apply.",
+          "imageSrc": "/images/pages/travel-agency-software/trip-details/colors-en.png",
+          "altText": "Color options for Trip Details",
+          "linkHref": "",
+          "linkText": "",
+          "captionText": ""
+        },
+        "block-type-image-block5": {
+          "title": "Mobile first",
+          "description": "Your clients can access anywhere, on any device. Continuously updated with the latest information, optimized for mobile-first viewing to ensure a seamless experience on phones, tablets, and desktops.",
+          "imageSrc": "/images/pages/travel-agency-software/trip-details/mobile-first-en.webp",
+          "altText": "Color options for Trip Details",
+          "linkHref": "",
+          "linkText": "",
+          "captionText": "",
+          "ctaLabel": "Request a demo",
+          "ctaLink": "#"
+        }
       }
     },
-    "training" : {
+    "training": {
       "knowledge-base": {
         "block-type-page-hero": {
           "title": "Knowledge Base",
@@ -722,15 +796,15 @@
           "mobileTopImageSrc": "/images/pages/training/knowledge-base/bg-knowledge-base.webp",
           "desktopMainImageSrc": "/images/pages/training/knowledge-base/bg-knowledge-base.webp",
           "logoImageSrc": "/images/pages/training/knowledge-base/new.svg",
-          "ctaImageSrc":""
+          "ctaImageSrc": ""
         },
         "block-type-image-block": {
           "title": "Training is a key priority for our company",
           "description": "<strong>The Knowledge Base</strong> is a powerful platform that <strong>centralizes all our training videos and documents</strong> in <strong>one easy-to-access place</strong>. It empowers clients to <strong>complete training on their own schedule</strong>, quickly find the <strong>information they need</strong>, and <strong>stay confident and informed—anytime, anywhere</strong>.",
           "imageSrc": "/images/pages/training/knowledge-base/screen-knowledge-base.jpg",
           "altText": "Knowledge Base",
-          "linkHref":"/",
-          "linkText":"Request now",
+          "linkHref": "/",
+          "linkText": "Request now",
           "captionText": ""
         },
         "block-type-image-happy-learning": {
@@ -810,15 +884,15 @@
           "mobileTopImageSrc": "/images/pages/training/training-platform/background-training-platform.webp",
           "desktopMainImageSrc": "/images/pages/training/training-platform/background-training-platform.webp",
           "logoImageSrc": "/images/pages/training/training-platform/new.svg",
-          "ctaImageSrc":""
+          "ctaImageSrc": ""
         },
         "block-type-image-block": {
           "title": "Exciting News for TravelWorks Clients",
           "description": "We are thrilled to announce the launch of our <strong>new training platform</strong> designed exclusively for clients using TravelWorks accounting software for travel agencies. This <strong>innovative platform</strong> is <strong>tailored to enhance your proficiency</strong> and <strong>streamline your accounting processes</strong>.",
           "imageSrc": "/images/pages/training/training-platform/screen-training-platform.jpg",
           "altText": "Training Platform",
-          "linkHref":"",
-          "linkText":"",
+          "linkHref": "",
+          "linkText": "",
           "captionText": ""
         },
         "block-type-info-cards": {
@@ -932,10 +1006,10 @@
           "mobileTopImageSrc": "/images/pages/about-us/the-company/slider_wide-mobile.webp",
           "desktopMainImageSrc": "/images/pages/about-us/the-company/slider_wide-mobile.webp",
           "logoImageSrc": "",
-          "ctaImageSrc":""
+          "ctaImageSrc": ""
         },
         "block-type-text-section": {
-          "text": "<p>TravelWorks (a division of PC Voyages) is a North American software company that has been working <strong>in the travel industry since 1988</strong>. We have become <strong>leaders in travel agency accounting</strong> and <strong>back-office systems with users worldwide</strong>. TravelWorks interfaces with all the major booking engines and GDS, and has become an essential tool for thousands. </p><p>We invest around <strong>$750,000 in R&D every year</strong> in order to make our solutions evolve with <strong>cutting-edge technologies according to the needs of the market</strong>.</p><p>Among our valuable services: effective remote training, professional technical support with very quick response time and turnkey solutions including data import from other systems if necessary.</p>"
+          "description": "<p>TravelWorks (a division of PC Voyages) is a North American software company that has been working <strong>in the travel industry since 1988</strong>. We have become <strong>leaders in travel agency accounting</strong> and <strong>back-office systems with users worldwide</strong>. TravelWorks interfaces with all the major booking engines and GDS, and has become an essential tool for thousands. </p><p>We invest around <strong>$750,000 in R&D every year</strong> in order to make our solutions evolve with <strong>cutting-edge technologies according to the needs of the market</strong>.</p><p>Among our valuable services: effective remote training, professional technical support with very quick response time and turnkey solutions including data import from other systems if necessary.</p>"
         },
         "block-type-planning-demo-section": {
           "heading": "Planning a Demo",
@@ -960,10 +1034,79 @@
           "mobileTopImageSrc": "/images/pages/about-us/the-company/slider_wide-mobile.webp",
           "desktopMainImageSrc": "/images/pages/about-us/the-company/slider_wide-mobile.webp",
           "logoImageSrc": "",
-          "ctaImageSrc":""
+          "ctaImageSrc": ""
         },
         "block-type-text-section": {
-          "text": "<p>The TravelWorks team is constantly seeking <strong>new valuable candidates</strong>. A career with us means working with a <strong>dynamic and energetic team</strong>, experienced in the <strong>fields of technology and travel</strong>.</p><p> We are aware that the success of our company depends on the success of our employees. We therefore provide the most favourable conditions in order to create a <strong>pleasant and inspiring work environment</strong>: spacious downtown offices, relaxed family atmosphere, ad hoc group activities among employees. The qualities required to succeed within our company are initiative, the <strong>ability to work in a team</strong> and the <strong>ambition to constantly improve</strong>.</p><p> Employees with such qualities will have an excellent opportunity to build a flourishing career within our company. Send us your application at <strong><a>career@travelworkssolution.com</a></strong></p>"
+          "description": "<p>The TravelWorks team is constantly seeking <strong>new valuable candidates</strong>. A career with us means working with a <strong>dynamic and energetic team</strong>, experienced in the <strong>fields of technology and travel</strong>.</p><p> We are aware that the success of our company depends on the success of our employees. We therefore provide the most favourable conditions in order to create a <strong>pleasant and inspiring work environment</strong>: spacious downtown offices, relaxed family atmosphere, ad hoc group activities among employees. The qualities required to succeed within our company are initiative, the <strong>ability to work in a team</strong> and the <strong>ambition to constantly improve</strong>.</p><p> Employees with such qualities will have an excellent opportunity to build a flourishing career within our company. Send us your application at <strong><a>career@travelworkssolution.com</a></strong></p>"
+        }
+      },
+      "contact": {
+        "hero": {
+          "title": "Contact"
+        },
+        "form": {
+          "title": "Email Us",
+          "formName": "Contact Form",
+          "fields": {
+            "fullName": "Full name",
+            "email": "Email",
+            "phone": "Phone",
+            "agencyName": "Name of Travel Agency",
+            "country": "Country",
+            "topics": "To know more about:",
+            "message": "Message"
+          },
+          "countryPlaceholder": "Please choose an option",
+          "topics": {
+            "travelWorks": "TravelWorks",
+            "tourPremium": "Tour Premium",
+            "tourOnline": "TourOnline",
+            "tripnTouch": "Trip'n Touch",
+            "other": "Other"
+          },
+          "submit": "Send",
+          "submitPending": "Sending...",
+          "feedback": {
+            "success": "Request sent successfully.",
+            "error": "Something went wrong. Please try again."
+          }
+        },
+        "offices": {
+          "title": "Our Offices",
+          "northAmerica": {
+            "region": "North America",
+            "office": "Head Office",
+            "address": "75 Queen Suite 1400, Montreal, QC, H3C 2N6",
+            "phone1": "+1 514 282 4556",
+            "phone2": "1 877 282 4556",
+            "email": "info@travelworkssolution.com"
+          },
+          "australia": {
+            "region": "Australia",
+            "office": "Black Sheep Tourism",
+            "address": "PO Box 471, Cronulla NSW 2230",
+            "phone1": "1300 936 568",
+            "phone2": "+61 (0)2 8880 8387",
+            "email": "hello@blacksheeptourism.com.au"
+          },
+          "unitedKingdom": {
+            "region": "United Kingdom",
+            "office": "Apex House",
+            "address": "Apex House, 6 Calthorpe Road, Birmingham, B15 1TR",
+            "phone1": "+44 121 5822 747",
+            "phone2": "",
+            "email": "info@portwaysystems.com"
+          }
+        },
+        "trainingCta": {
+          "title": "Online Training",
+          "description": "Increase your productivity as quickly as possible with TravelWorks!",
+          "imagePlaceholder": "Training image placeholder",
+          "button": "See more"
+        },
+        "map": {
+          "title": "Montreal Head Office",
+          "iframeTitle": "TravelWorks Montreal office location"
         }
       }
     }
@@ -975,7 +1118,7 @@
       "phone": "1 877 282-4556"
     },
     "hero-caroussel": {
-      "concept" : {
+      "concept": {
         "title": "A <strong>comprehensive solution</strong> : booking, CRM, inventory, billing, accounting and marketing",
         "cta": "Discover TravelWorks"
       },
@@ -1044,7 +1187,7 @@
         "description": "Generate additional revenue with targeted campaigns and improve customer service with automated communication."
       }
     },
-    "footer-demo" : {
+    "footer-demo": {
       "title": "Ready to see how TravelWorks can transform your travel agency?",
       "cta": "Request a demo"
     },

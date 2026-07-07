@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 
 export type ImageBlockModel = {
-  blockType: "ImageBlock";
+  blockType: 'ImageBlock';
   title: string;
   description: ReactNode;
   imageSrc: string;
@@ -11,4 +11,7 @@ export type ImageBlockModel = {
   widthPercentage?: string;
   hasCaption?: boolean;
   captionText?: string;
-}
+  ctaLabel?: string;
+  ctaLink?: string;
+  backgroundColor?: string;
+};

@@ -1,5 +1,5 @@
-import { CheckCircle2 } from "lucide-react";
-import { ComparisonTrainingCard, ConmparisonTraining } from "./type";
+import { CheckCircle2 } from 'lucide-react';
+import { ComparisonTrainingCard, ConmparisonTraining } from './type';
 
 function ComparisonCard({ title, badge, features }: ComparisonTrainingCard) {
   return (
@@ -17,15 +17,10 @@ function ComparisonCard({ title, badge, features }: ComparisonTrainingCard) {
       <ul className="space-y-6">
         {features.map((feature) => (
           <li key={feature.title} className="flex items-start gap-4">
-            <CheckCircle2
-              className="mt-1 h-7 w-7 flex-shrink-0 text-orange-500"
-              strokeWidth={2}
-            />
+            <CheckCircle2 className="mt-1 h-7 w-7 flex-shrink-0 text-orange-500" strokeWidth={2} />
 
             <p className="text-lg leading-relaxed text-white/95">
-              <strong className="font-semibold text-orange-300">
-                {feature.title}
-              </strong>{" "}
+              <strong className="font-semibold text-orange-300">{feature.title}</strong>{' '}
               {feature.description}
             </p>
           </li>

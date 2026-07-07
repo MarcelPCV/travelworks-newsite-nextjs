@@ -10,8 +10,7 @@ type SecurityBannerCardProps = {
 
 export default function SecurityBannerCard({
   title = 'Robust, Fast, Reliable and Secured',
-  description =
-    'Years of development were spent developing software focused on robustness, speed, reliability and security.',
+  description = 'Years of development were spent developing software focused on robustness, speed, reliability and security.',
   buttonLabel = 'See More',
   buttonHref = '#',
   className,
@@ -39,7 +38,9 @@ export default function SecurityBannerCard({
       </div>
 
       <div className="bg-brand-blue px-6 pb-8 pt-7 text-center text-white sm:px-8 sm:pb-10 sm:pt-8">
-        <h3 className="text-[2.1rem] font-medium uppercase leading-tight sm:text-[2.45rem]">{title}</h3>
+        <h3 className="text-[2.1rem] font-medium uppercase leading-tight sm:text-[2.45rem]">
+          {title}
+        </h3>
         <p className="mx-auto mt-5 max-w-[22ch] text-[1.35rem] leading-tight text-white/95 sm:text-[1.5rem] sm:leading-tight">
           {description}
         </p>

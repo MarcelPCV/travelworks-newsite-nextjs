@@ -21,7 +21,8 @@ export default function SplitSection({
     textOrder: position === 'right' ? 'md:order-1' : 'md:order-2',
   });
 
-  const { imageOrder: imageOrderClassName, textOrder: textOrderClassName } = getOrderClasses(imagePosition);
+  const { imageOrder: imageOrderClassName, textOrder: textOrderClassName } =
+    getOrderClasses(imagePosition);
 
   // 2. Define base classes for better separation of concerns
   const rootBaseClasses = [
@@ -31,32 +32,35 @@ export default function SplitSection({
   const contentGridClasses = `grid grid-cols-1 gap-5 overflow-hidden rounded-[1.6rem] md:grid-cols-[minmax(0,1.08fr)_minmax(0,0.92fr)] md:gap-0`;
   const hasValidImageSrc =
     typeof imageSrc === 'string' &&
-    (imageSrc.startsWith('/') || imageSrc.startsWith('http://') || imageSrc.startsWith('https://') || imageSrc.startsWith('data:'));
+    (imageSrc.startsWith('/') ||
+      imageSrc.startsWith('http://') ||
+      imageSrc.startsWith('https://') ||
+      imageSrc.startsWith('data:'));
 
   return (
     <section className={`${rootBaseClasses} ${className}`} aria-labelledby={headingId}>
       <div className={contentGridClasses}>
         {/* Image Container */}
-        <div className={`relative flex items-center min-h-68 overflow-hidden md:min-h-96 lg:min-h-112 ${imageOrderClassName}`}>
+        <div
+          className={`relative flex items-center min-h-68 overflow-hidden md:min-h-96 lg:min-h-112 ${imageOrderClassName}`}
+        >
           {hasValidImageSrc ? (
-            <Image
-              src={imageSrc}
-              alt={imageAlt ?? ''}
-              width={800}
-              height={600}
-            />
+            <Image src={imageSrc} alt={imageAlt ?? ''} width={800} height={600} />
           ) : null}
         </div>
 
         {/* Text Content Container */}
-        <div className={`flex flex-col justify-center px-5 py-6 text-center sm:px-7 sm:py-8 md:px-8 md:py-10 md:text-left lg:px-10 lg:py-12 ${textOrderClassName}`}>
-          <h2 id={headingId} className="mt-3 text-2xl font-semibold uppercase tracking-[0.04em] text-brand-blue">
+        <div
+          className={`flex flex-col justify-center px-5 py-6 text-center sm:px-7 sm:py-8 md:px-8 md:py-10 md:text-left lg:px-10 lg:py-12 ${textOrderClassName}`}
+        >
+          <h2
+            id={headingId}
+            className="mt-3 text-2xl font-semibold uppercase tracking-[0.04em] text-brand-blue"
+          >
             {heading}
           </h2>
 
-          <div className="mt-4 text-md leading-8 text-neutral-dark">
-            {description}
-          </div>
+          <div className="mt-4 text-md leading-8 text-neutral-dark">{description}</div>
 
           {ctaLabel && ctaLink && (
             <div className="mt-8 flex justify-center md:justify-start">

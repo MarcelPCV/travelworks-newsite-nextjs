@@ -66,37 +66,37 @@ export const travelAgencySoftwareSlugs: Record<string, Record<string, string>> =
     'fr-ca': 'avantages',
     'en-au': 'benefits',
   },
-  "back-office-travel-agency": {
+  'back-office-travel-agency': {
     en: 'back-office-travel-agency',
     'en-ca': 'back-office-travel-agency',
     'fr-ca': 'back-office-agence-voyage',
     'en-au': 'back-office-travel-agency',
   },
-  "trip-details": {
+  'trip-details': {
     en: 'trip-details',
     'en-ca': 'trip-details',
     'fr-ca': 'details-du-voyage',
     'en-au': 'trip-details',
   },
-  "tour-management": {
+  'tour-management': {
     en: 'tour-management',
     'en-ca': 'tour-management',
     'fr-ca': 'gestion-des-tours',
     'en-au': 'tour-management',
   },
-  "crm-tools": {
+  'crm-tools': {
     en: 'crm-tools',
     'en-ca': 'crm-tools',
     'fr-ca': 'outils-crm',
     'en-au': 'crm-tools',
   },
-  "multiple-integration": {
+  'multiple-integration': {
     en: 'multiple-integration',
     'en-ca': 'multiple-integration',
     'fr-ca': 'integration-multiple',
     'en-au': 'multiple-integration',
   },
-  "dashboard-reports": {
+  'dashboard-reports': {
     en: 'dashboard-reports',
     'en-ca': 'dashboard-reports',
     'fr-ca': 'tableau-de-bord-rapports',
@@ -107,7 +107,7 @@ export const travelAgencySoftwareSlugs: Record<string, Record<string, string>> =
     'en-ca': 'customizations',
     'fr-ca': 'customizations',
     'en-au': 'customizations',
-  }
+  },
 };
 
 export const aboutUsSlugs: Record<string, Record<string, string>> = {
@@ -117,27 +117,27 @@ export const aboutUsSlugs: Record<string, Record<string, string>> = {
     'fr-ca': 'partenaires',
     'en-au': 'partners',
   },
-  "travelworks": {
+  travelworks: {
     en: 'travelworks',
     'en-ca': 'travelworks',
     'fr-ca': 'pc-voyages',
     'en-au': 'travelworks',
-  }
+  },
 };
 
 export const trainingSlugs: Record<string, Record<string, string>> = {
-  "training-platform": {
+  'training-platform': {
     en: 'training-platform',
     'en-ca': 'training-platform',
     'fr-ca': 'plateforme-de-formation',
     'en-au': 'training-platform',
   },
-  "knowledge-base": {
+  'knowledge-base': {
     en: 'knowledge-base',
     'en-ca': 'knowledge-base',
     'fr-ca': 'base-de-connaissances',
     'en-au': 'knowledge-base',
-  }
+  },
 };
 
 const travelAgencySoftwareSlugToCanonicalByLocale: Record<string, Record<string, string>> = {};
@@ -172,9 +172,14 @@ Object.entries(trainingSlugs).forEach(([canonical, byLocale]) => {
 
 const knownRouteLocales = new Set(localeOptions.map((item) => item.routeLocale));
 
-const knownTravelAgencySoftwareSegments = new Set(Object.values(travelAgencySoftwareSegmentByRouteLocale));
+const knownTravelAgencySoftwareSegments = new Set(
+  Object.values(travelAgencySoftwareSegmentByRouteLocale),
+);
 export function getTravelAgencySoftwareSegment(routeLocale: string): string {
-  return travelAgencySoftwareSegmentByRouteLocale[routeLocale] ?? travelAgencySoftwareSegmentByRouteLocale.en;
+  return (
+    travelAgencySoftwareSegmentByRouteLocale[routeLocale] ??
+    travelAgencySoftwareSegmentByRouteLocale.en
+  );
 }
 
 const knownAboutUsSegments = new Set(Object.values(aboutUsSegmentByRouteLocale));
@@ -222,7 +227,8 @@ export function replaceLocaleInPath(pathname: string, targetLocale: string): str
     // Also translate the page slug in this section when it has a locale-specific value.
     if (segments.length > 1) {
       const currentSlug = segments[1];
-      const canonicalSlug = travelAgencySoftwareSlugToCanonicalByLocale[currentLocale]?.[currentSlug];
+      const canonicalSlug =
+        travelAgencySoftwareSlugToCanonicalByLocale[currentLocale]?.[currentSlug];
       if (canonicalSlug && travelAgencySoftwareSlugs[canonicalSlug]?.[targetLocale]) {
         segments[1] = travelAgencySoftwareSlugs[canonicalSlug][targetLocale];
       }

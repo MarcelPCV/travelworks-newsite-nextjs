@@ -4,7 +4,7 @@ export type BenefitsBannerItem = {
 };
 
 export type BenefitsBanner = {
-  blockType: "BenefitsBanner";
+  blockType: 'BenefitsBanner';
   heading?: string;
   items?: BenefitsBannerItem[];
   buttonLabel?: string;

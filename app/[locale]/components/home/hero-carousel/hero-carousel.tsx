@@ -11,7 +11,6 @@ import type { HeroCarouselSection } from './type';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 
-
 const backgrounds = [
   'bg-[radial-gradient(circle_at_85%_34%,rgba(255,170,59,0.9)_0_28%,transparent_29%),linear-gradient(135deg,#ffffff_0%,#f8fafc_45%,#eef3fb_100%)]',
   'bg-[radial-gradient(circle_at_78%_24%,rgba(243,112,34,0.75)_0_24%,transparent_25%),linear-gradient(130deg,#ffffff_0%,#f0f6ff_52%,#e7eefc_100%)]',
@@ -29,8 +28,6 @@ export default function HeroCarousel({
   const swiperRef = useRef<SwiperType | null>(null);
 
   const stripHtml = (s: string) => s.replace(/<[^>]+>/g, '');
-
-
 
   return (
     <section
@@ -60,11 +57,9 @@ export default function HeroCarousel({
                 : 'right'
               : contentAlignment);
 
-          const textOrderClass =
-            effectiveAlignment === 'left' ? 'lg:order-1' : 'lg:order-2';
+          const textOrderClass = effectiveAlignment === 'left' ? 'lg:order-1' : 'lg:order-2';
 
-          const mediaOrderClass =
-            effectiveAlignment === 'left' ? 'lg:order-2' : 'lg:order-1';
+          const mediaOrderClass = effectiveAlignment === 'left' ? 'lg:order-2' : 'lg:order-1';
 
           return (
             <SwiperSlide key={slide.id}>
@@ -153,9 +148,7 @@ export default function HeroCarousel({
                 type="button"
                 onClick={() => swiperRef.current?.slideToLoop(index)}
                 className={`h-3 w-3 rounded-full transition-all duration-300 ${
-                  isActive
-                    ? 'bg-brand-blue'
-                    : 'bg-neutral-muted opacity-40 hover:opacity-70'
+                  isActive ? 'bg-brand-blue' : 'bg-neutral-muted opacity-40 hover:opacity-70'
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
               />

@@ -16,7 +16,7 @@ export type MediaImage = {
 };
 
 export type FeatureCardsSection = {
-  blockType: "FeatureCards";
+  blockType: 'FeatureCards';
   title: ReactNode;
   items: FeatureCard[];
 };

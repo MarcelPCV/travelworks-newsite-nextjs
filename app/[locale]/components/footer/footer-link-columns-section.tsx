@@ -97,7 +97,9 @@ export default function FooterLinkColumnsSection({
   copyrightText = '© Pc Voyages 2000 Inc. All rights reserved',
   className,
 }: FooterLinkColumnsSectionProps) {
-  const rootClassName = ['w-full overflow-hidden rounded-2xl bg-brand-blue text-white', className].filter(Boolean).join(' ');
+  const rootClassName = ['w-full overflow-hidden rounded-2xl bg-brand-blue text-white', className]
+    .filter(Boolean)
+    .join(' ');
 
   return (
     <section className={rootClassName} aria-labelledby="footer-link-columns-heading">

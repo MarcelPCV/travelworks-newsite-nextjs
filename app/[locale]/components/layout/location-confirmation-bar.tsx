@@ -4,7 +4,12 @@ import { ChevronDown, X } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
 import { usePathname, useRouter } from 'next/navigation';
 import { useEffect, useMemo, useState } from 'react';
-import { DEFAULT_ROUTE_LOCALE, localeOptions, replaceLocaleInPath, routeToMessageLocale } from '@/app/[locale]/locale-config';
+import {
+  DEFAULT_ROUTE_LOCALE,
+  localeOptions,
+  replaceLocaleInPath,
+  routeToMessageLocale,
+} from '@/app/[locale]/locale-config';
 
 const DISMISSED_STORAGE_KEY = 'travelworks.location_bar.dismissed';
 
@@ -19,7 +24,8 @@ export default function LocationConfirmationBar() {
   const [hasPendingSelection, setHasPendingSelection] = useState(false);
 
   const activeRouteLocale =
-    localeOptions.find((item) => item.messageLocale === activeMessageLocale)?.routeLocale ?? DEFAULT_ROUTE_LOCALE;
+    localeOptions.find((item) => item.messageLocale === activeMessageLocale)?.routeLocale ??
+    DEFAULT_ROUTE_LOCALE;
 
   const [selectedRouteLocale, setSelectedRouteLocale] = useState(activeRouteLocale);
 
@@ -39,7 +45,8 @@ export default function LocationConfirmationBar() {
   const effectiveRouteLocale = hasPendingSelection ? selectedRouteLocale : activeRouteLocale;
 
   const selectedLabel =
-    localeOptions.find((item) => item.routeLocale === effectiveRouteLocale)?.label ?? localeOptions[0].label;
+    localeOptions.find((item) => item.routeLocale === effectiveRouteLocale)?.label ??
+    localeOptions[0].label;
 
   const localeLinks = useMemo(
     () =>
@@ -48,7 +55,7 @@ export default function LocationConfirmationBar() {
         href: replaceLocaleInPath(pathname, item.routeLocale),
         isActive: routeToMessageLocale[item.routeLocale] === activeMessageLocale,
       })),
-    [pathname, activeMessageLocale]
+    [pathname, activeMessageLocale],
   );
 
   const targetHref = replaceLocaleInPath(pathname, effectiveRouteLocale);
@@ -93,7 +100,9 @@ export default function LocationConfirmationBar() {
                     key={item.routeLocale}
                     type="button"
                     className={`block w-full rounded px-3 py-2 text-left text-sm transition ${
-                      item.routeLocale === selectedRouteLocale ? 'bg-zinc-100 text-zinc-900' : 'text-zinc-100 hover:bg-zinc-800'
+                      item.routeLocale === selectedRouteLocale
+                        ? 'bg-zinc-100 text-zinc-900'
+                        : 'text-zinc-100 hover:bg-zinc-800'
                     }`}
                     onClick={() => {
                       setSelectedRouteLocale(item.routeLocale);

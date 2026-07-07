@@ -10,7 +10,7 @@ export type CardIcon = {
 };
 
 export type CardsIconsSection = {
-  blockType: "CardsIcons";
+  blockType: 'CardsIcons';
   cards?: CardIcon[];
   title?: string;
 };

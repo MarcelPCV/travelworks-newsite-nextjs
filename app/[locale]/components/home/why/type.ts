@@ -1,6 +1,4 @@
-import {
-  type LucideIcon,
-} from 'lucide-react';
+import { type LucideIcon } from 'lucide-react';
 import type { ReactNode } from 'react';
 
 export type WhyTravelworksItems = {
@@ -9,10 +7,10 @@ export type WhyTravelworksItems = {
   description: string;
   icon?: ReactNode;
   iconComponent?: LucideIcon;
-}
+};
 
 export type WhyTravelworksSection = {
-  blockType: "WhyTravelworksSection";
+  blockType: 'WhyTravelworksSection';
   title: string;
   items?: WhyTravelworksItems[];
 };

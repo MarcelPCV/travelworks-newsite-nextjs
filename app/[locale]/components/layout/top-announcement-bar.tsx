@@ -87,7 +87,10 @@ export default function TopAnnouncementBar() {
             onClick={(event) => event.stopPropagation()}
           >
             <div className="mb-4 flex items-start justify-between gap-4">
-              <h2 id="top-announcement-modal-title" className="text-xl font-semibold tracking-tight text-zinc-900">
+              <h2
+                id="top-announcement-modal-title"
+                className="text-xl font-semibold tracking-tight text-zinc-900"
+              >
                 {t('modal.title')}
               </h2>
               <button

@@ -10,7 +10,10 @@ export default function ComparisonSolutionSection({
   rows = [],
   className,
 }: ComparisonSolution) {
-  const rootClassName = ['w-full mx-auto max-w-7xl bg-[#e7e7e7] px-3 py-7 sm:px-4 sm:py-8 lg:px-5 lg:py-10', className]
+  const rootClassName = [
+    'w-full mx-auto max-w-7xl bg-[#e7e7e7] px-3 py-7 sm:px-4 sm:py-8 lg:px-5 lg:py-10',
+    className,
+  ]
     .filter(Boolean)
     .join(' ');
 
@@ -39,10 +42,16 @@ export default function ComparisonSolutionSection({
           </div>
 
           <div className="overflow-x-auto bg-brand-blue">
-            <table className="w-full min-w-[32rem] border-collapse text-left text-white lg:min-w-0" aria-label="Travel software comparison table">
+            <table
+              className="w-full min-w-[32rem] border-collapse text-left text-white lg:min-w-0"
+              aria-label="Travel software comparison table"
+            >
               <thead>
                 <tr className="bg-[#255a9f]">
-                  <th scope="col" className="w-[50%] px-4 py-4 text-xs font-medium uppercase tracking-[0.07em] text-transparent sm:text-sm">
+                  <th
+                    scope="col"
+                    className="w-[50%] px-4 py-4 text-xs font-medium uppercase tracking-[0.07em] text-transparent sm:text-sm"
+                  >
                     Feature
                   </th>
                   {columns.map((column) => (
@@ -59,13 +68,20 @@ export default function ComparisonSolutionSection({
               <tbody>
                 {rows.map((row, rowIndex) => (
                   <tr key={row.id} className={rowIndex % 2 === 0 ? 'bg-[#2963ac]' : 'bg-[#255a9f]'}>
-                    <th scope="row" className="px-4 py-3 text-sm font-medium leading-tight text-white sm:text-[1rem]">
+                    <th
+                      scope="row"
+                      className="px-4 py-3 text-sm font-medium leading-tight text-white sm:text-[1rem]"
+                    >
                       {row.label}
                     </th>
                     {columns.map((column) => (
                       <td key={column.id} className="px-2 py-3 text-center sm:px-3">
                         {row.values[column.id] ? (
-                          <Check className="mx-auto h-4 w-4 text-brand-orange-light sm:h-5 sm:w-5" strokeWidth={3} aria-hidden="true" />
+                          <Check
+                            className="mx-auto h-4 w-4 text-brand-orange-light sm:h-5 sm:w-5"
+                            strokeWidth={3}
+                            aria-hidden="true"
+                          />
                         ) : (
                           <span className="sr-only">Not available</span>
                         )}

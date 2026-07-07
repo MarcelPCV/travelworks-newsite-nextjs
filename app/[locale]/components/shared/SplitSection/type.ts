@@ -3,7 +3,7 @@ import { ReactNode } from 'react';
 export type ImagePosition = 'left' | 'right';
 
 export type SplitSectionModel = {
-  blockType: "SplitSection";
+  blockType: 'SplitSection';
   heading: string;
   description: ReactNode;
   imageSrc: string;
@@ -12,4 +12,4 @@ export type SplitSectionModel = {
   className?: string;
   ctaLabel?: string;
   ctaLink?: string;
-}
+};

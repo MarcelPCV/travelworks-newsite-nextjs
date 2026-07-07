@@ -1,5 +1,5 @@
 export type NewsTicker = {
-  blockType: "NewsTicker";
+  blockType: 'NewsTicker';
   id: string;
   sectionTitle: string;
   newsLabel: string;

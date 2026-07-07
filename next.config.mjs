@@ -112,7 +112,7 @@ const nextConfig = {
       {
         source: '/fr-ca/demander-une-demo',
         destination: '/fr-ca/ask-for-a-demo',
-      }
+      },
     ];
   },
 
@@ -131,7 +131,6 @@ const nextConfig = {
       },
     ],
   },
-  
 };
 
 export default withNextIntl(nextConfig);

@@ -10,7 +10,7 @@ export type ComparisonSolutionRow = {
 };
 
 export type ComparisonSolution = {
-  blockType: "ComparisonSolution";
+  blockType: 'ComparisonSolution';
   heading?: string;
   imageSrc?: string;
   imageAlt?: string;

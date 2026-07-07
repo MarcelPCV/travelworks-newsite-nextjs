@@ -1,7 +1,7 @@
 export type imageHappyLearning = {
-  blockType: "ImageHappyLearning";
+  blockType: 'ImageHappyLearning';
   title: string;
   imageSrc: string;
   widthPercentage?: string;
   altText: string;
-}
+};

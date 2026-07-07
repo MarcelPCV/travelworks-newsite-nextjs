@@ -35,7 +35,10 @@ function FeatureCard({ card }: { card: RenderFeatureMasonryCard }) {
 
       <ul className="mt-5 space-y-3">
         {card.items.map((item, itemIndex) => (
-          <li key={`${card.id}-${itemIndex}`} className="flex items-start gap-2.5 text-neutral-dark">
+          <li
+            key={`${card.id}-${itemIndex}`}
+            className="flex items-start gap-2.5 text-neutral-dark"
+          >
             <CheckCircle2
               className="mt-0.5 h-5 w-5 shrink-0 text-brand-orange-dark"
               strokeWidth={2.2}

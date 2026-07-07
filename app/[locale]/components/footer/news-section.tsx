@@ -37,13 +37,19 @@ const defaultItems: NewsItem[] = [
 
 function NewsCard({ item }: { item: NewsItem }) {
   return (
-    <article className="group relative min-h-[14rem] overflow-hidden lg:min-h-[16rem]" aria-labelledby={`news-title-${item.id}`}>
+    <article
+      className="group relative min-h-[14rem] overflow-hidden lg:min-h-[16rem]"
+      aria-labelledby={`news-title-${item.id}`}
+    >
       <div className={`absolute inset-0 ${item.backgroundClassName ?? 'bg-brand-navy'}`} />
       <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,13,23,0.15)_0%,rgba(7,13,23,0.55)_100%)]" />
 
       <div className="relative z-10 flex h-full flex-col justify-end p-6 text-neutral-canvas sm:p-7">
         <p className="text-[1.15rem] font-medium text-brand-orange-light">{item.category}</p>
-        <h3 id={`news-title-${item.id}`} className="mt-2 text-[1.9rem] font-medium leading-[1.25] text-white">
+        <h3
+          id={`news-title-${item.id}`}
+          className="mt-2 text-[1.9rem] font-medium leading-[1.25] text-white"
+        >
           {item.title}
         </h3>
       </div>
@@ -54,8 +60,14 @@ function NewsCard({ item }: { item: NewsItem }) {
   );
 }
 
-export default function NewsSection({ heading = 'News', items = defaultItems, className }: NewsSectionProps) {
-  const rootClassName = ['w-full rounded-2xl bg-neutral-background py-6 sm:py-8', className].filter(Boolean).join(' ');
+export default function NewsSection({
+  heading = 'News',
+  items = defaultItems,
+  className,
+}: NewsSectionProps) {
+  const rootClassName = ['w-full rounded-2xl bg-neutral-background py-6 sm:py-8', className]
+    .filter(Boolean)
+    .join(' ');
 
   return (
     <section className={rootClassName} aria-labelledby="news-section-heading">

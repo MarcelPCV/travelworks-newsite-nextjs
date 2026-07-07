@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 
 export type ExpertProfile = {
-	blockType: "ExpertProfile";
+  blockType: 'ExpertProfile';
   heading: string;
   person: {
     name: string;

@@ -23,15 +23,19 @@ export type CtaButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 };
 
 const variantClassNames: Record<CtaButtonVariant, string> = {
-  default: 'border-transparent bg-[#2563eb] text-white hover:bg-[#1d4ed8] active:bg-[#1e40af] focus-visible:ring-[#93c5fd]',
+  default:
+    'border-transparent bg-[#2563eb] text-white hover:bg-[#1d4ed8] active:bg-[#1e40af] focus-visible:ring-[#93c5fd]',
   blue: 'border-transparent bg-[#2563eb] text-white hover:bg-[#1d4ed8] active:bg-[#1e40af] focus-visible:ring-[#93c5fd]',
   secondary:
     'border-[#334155] bg-[#1f2937] text-[#cbd5e1] hover:bg-[#273446] active:bg-[#1b2432] focus-visible:ring-[#64748b]',
   tertiary:
     'border-[#1e293b] bg-[#0f172a] text-[#cbd5e1] hover:bg-[#162236] active:bg-[#0b1425] focus-visible:ring-[#475569]',
-  success: 'border-transparent bg-[#2f9f77] text-white hover:bg-[#288b68] active:bg-[#22785a] focus-visible:ring-[#6ee7b7]',
-  danger: 'border-transparent bg-[#c31643] text-white hover:bg-[#ad133b] active:bg-[#961134] focus-visible:ring-[#fda4af]',
-  warning: 'border-transparent bg-[#f06b00] text-white hover:bg-[#d86100] active:bg-[#bf5600] focus-visible:ring-[#fdba74]',
+  success:
+    'border-transparent bg-[#2f9f77] text-white hover:bg-[#288b68] active:bg-[#22785a] focus-visible:ring-[#6ee7b7]',
+  danger:
+    'border-transparent bg-[#c31643] text-white hover:bg-[#ad133b] active:bg-[#961134] focus-visible:ring-[#fda4af]',
+  warning:
+    'border-transparent bg-[#f06b00] text-white hover:bg-[#d86100] active:bg-[#bf5600] focus-visible:ring-[#fdba74]',
   dark: 'border-transparent bg-[#1e293b] text-white hover:bg-[#273548] active:bg-[#172131] focus-visible:ring-[#94a3b8]',
   ghost:
     'border-transparent bg-transparent text-white shadow-none hover:bg-white/10 active:bg-white/20 focus-visible:ring-[#94a3b8]',
@@ -83,9 +87,17 @@ export default function CtaButton({
 
   return (
     <button type={type} className={rootClassName} {...props}>
-      {showIconBefore ? <span className={`inline-flex items-center justify-center shrink-0 ${iconClassName}`}>{icon}</span> : null}
+      {showIconBefore ? (
+        <span className={`inline-flex items-center justify-center shrink-0 ${iconClassName}`}>
+          {icon}
+        </span>
+      ) : null}
       <span className="inline-flex items-center leading-none">{label}</span>
-      {showIconAfter ? <span className={`inline-flex items-center justify-center shrink-0 ${iconClassName}`}>{icon}</span> : null}
+      {showIconAfter ? (
+        <span className={`inline-flex items-center justify-center shrink-0 ${iconClassName}`}>
+          {icon}
+        </span>
+      ) : null}
     </button>
   );
 }

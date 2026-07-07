@@ -42,7 +42,8 @@ export type AboutUsLinkKey = (typeof aboutUsLinks)[number];
 export const trainingLinks = ['platform', 'knowledgeBase'] as const;
 export type TrainingLinkKey = (typeof trainingLinks)[number];
 
-export const menuItemIconClassName = 'w-5 h-5 transition duration-150 text-zinc-900 group-hover:text-zinc-700 rounded-full';
+export const menuItemIconClassName =
+  'w-5 h-5 transition duration-150 text-zinc-900 group-hover:text-zinc-700 rounded-full';
 
 export const productLinkIcons: Record<ProductLinkKey, LucideIcon> = {
   features: Settings,
@@ -96,7 +97,10 @@ export const trainingSlugByKey: Record<TrainingLinkKey, string> = {
   knowledgeBase: 'knowledge-base',
 };
 
-export const loginSlugByOptionId: Record<'Travelworks' | 'Support' | 'Training' | 'Knowledge Base', string> = {
+export const loginSlugByOptionId: Record<
+  'Travelworks' | 'Support' | 'Training' | 'Knowledge Base',
+  string
+> = {
   Travelworks: 'travelworks',
   Support: 'support',
   Training: 'training-platform',

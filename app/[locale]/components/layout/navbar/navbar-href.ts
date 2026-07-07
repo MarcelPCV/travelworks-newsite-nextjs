@@ -25,7 +25,7 @@ export function getOneLevelHref(slug: string, withLocalePrefix: WithLocalePrefix
 export function getSolutionHref(
   linkKey: ProductLinkKey,
   routeLocale: string,
-  withLocalePrefix: WithLocalePrefix
+  withLocalePrefix: WithLocalePrefix,
 ): string {
   const canonicalSlug = productSlugByKey[linkKey];
   const localizedSlug = travelAgencySoftwareSlugs[canonicalSlug]?.[routeLocale] ?? canonicalSlug;
@@ -36,18 +36,20 @@ export function getSolutionHref(
 export function getAboutUsHref(
   linkKey: AboutUsLinkKey,
   routeLocale: string,
-  withLocalePrefix: WithLocalePrefix
+  withLocalePrefix: WithLocalePrefix,
 ): string {
   const canonicalSlug = aboutUsSlugByKey[linkKey];
   const localizedSlug = aboutUsSlugs[canonicalSlug]?.[routeLocale] ?? canonicalSlug;
   const localizedSegment = getAboutUsSegment(routeLocale);
-  return localizedSlug ? withLocalePrefix(`/${localizedSegment}/${localizedSlug}`) : withLocalePrefix(`/${localizedSegment}`);
+  return localizedSlug
+    ? withLocalePrefix(`/${localizedSegment}/${localizedSlug}`)
+    : withLocalePrefix(`/${localizedSegment}`);
 }
 
 export function getTrainingHref(
   linkKey: TrainingLinkKey,
   routeLocale: string,
-  withLocalePrefix: WithLocalePrefix
+  withLocalePrefix: WithLocalePrefix,
 ): string {
   const canonicalSlug = trainingSlugByKey[linkKey];
   const localizedSlug = trainingSlugs[canonicalSlug]?.[routeLocale] ?? canonicalSlug;

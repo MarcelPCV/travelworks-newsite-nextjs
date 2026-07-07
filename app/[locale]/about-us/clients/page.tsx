@@ -1,169 +1,166 @@
-import ClientsHero from "@/app/[locale]/about-us/clients/components/clients-hero/clients-hero"
-import ClientsLogoMarquee from "@/app/[locale]/about-us/clients/components/clients-logo-marquee/clients-logo-marquee";
-import TestimonialsGrid from "@/app/[locale]/about-us/clients/components/testimonial-grid/testimonial-grid";
-import VideoTestimonials from "@/app/[locale]/about-us/clients/components/video-testimonials/video-testimonials";
+import ClientsHero from '@/app/[locale]/about-us/clients/components/clients-hero/clients-hero';
+import ClientsLogoMarquee from '@/app/[locale]/about-us/clients/components/clients-logo-marquee/clients-logo-marquee';
+import TestimonialsGrid from '@/app/[locale]/about-us/clients/components/testimonial-grid/testimonial-grid';
+import VideoTestimonials from '@/app/[locale]/about-us/clients/components/video-testimonials/video-testimonials';
 
 export const clientsPageData = {
   hero: {
-    title: "More Than 1000 Travel Agencies Trust Us",
+    title: 'More Than 1000 Travel Agencies Trust Us',
     subtitle:
-      "TravelWorks powers agencies across Canada with modern accounting and back-office solutions.",
+      'TravelWorks powers agencies across Canada with modern accounting and back-office solutions.',
   },
 
   clients: [
     {
-      id: "club-voyages",
-      name: "Club Voyages",
+      id: 'club-voyages',
+      name: 'Club Voyages',
       logo: {
-        src: "/images/clients/club-voyages.webp",
-        alt: "Club Voyages",
+        src: '/images/clients/club-voyages.webp',
+        alt: 'Club Voyages',
       },
     },
     {
-      id: "selloff",
-      name: "SellOff Vacations",
+      id: 'selloff',
+      name: 'SellOff Vacations',
       logo: {
-        src: "/images/clients/selloff.webp",
-        alt: "SellOff Vacations",
+        src: '/images/clients/selloff.webp',
+        alt: 'SellOff Vacations',
       },
     },
     {
-      id: "plein-soleil",
-      name: "Voyages Plein Soleil",
+      id: 'plein-soleil',
+      name: 'Voyages Plein Soleil',
       logo: {
-        src: "/images/clients/plein-soleil.webp",
-        alt: "Voyages Plein Soleil",
+        src: '/images/clients/plein-soleil.webp',
+        alt: 'Voyages Plein Soleil',
       },
     },
     {
-      id: "vivid",
-      name: "Vivid Travel",
+      id: 'vivid',
+      name: 'Vivid Travel',
       logo: {
-        src: "/images/clients/vivid.webp",
-        alt: "Vivid Travel",
+        src: '/images/clients/vivid.webp',
+        alt: 'Vivid Travel',
       },
     },
     {
-      id: "marlin",
-      name: "Marlin Travel",
+      id: 'marlin',
+      name: 'Marlin Travel',
       logo: {
-        src: "/images/clients/marlin.webp",
-        alt: "Marlin Travel",
+        src: '/images/clients/marlin.webp',
+        alt: 'Marlin Travel',
       },
     },
     {
-      id: "thomas-cook",
-      name: "Thomas Cook",
+      id: 'thomas-cook',
+      name: 'Thomas Cook',
       logo: {
-        src: "/images/clients/thomas-cook.webp",
-        alt: "Thomas Cook",
+        src: '/images/clients/thomas-cook.webp',
+        alt: 'Thomas Cook',
       },
     },
   ],
 
   testimonials: [
     {
-      id: "1",
+      id: '1',
       quote:
-        "We have been working with TravelWorks for over 20 years. The system is easy to use and gives us centralized access to all our information.",
-      author: "Pierre Couture",
-      company: "Club Voyage Agathe Leclerc / Orford",
+        'We have been working with TravelWorks for over 20 years. The system is easy to use and gives us centralized access to all our information.',
+      author: 'Pierre Couture',
+      company: 'Club Voyage Agathe Leclerc / Orford',
       logo: {
-        src: "/images/clients/club-voyages.webp",
-        alt: "Club Voyages",
+        src: '/images/clients/club-voyages.webp',
+        alt: 'Club Voyages',
       },
     },
 
     {
-      id: "2",
+      id: '2',
       quote:
-        "TravelWorks is visually well designed and the accounting tools help us avoid costly mistakes while improving efficiency.",
-      author: "Chantal Lizotte",
-      company: "Club Voyages Daniel",
+        'TravelWorks is visually well designed and the accounting tools help us avoid costly mistakes while improving efficiency.',
+      author: 'Chantal Lizotte',
+      company: 'Club Voyages Daniel',
       logo: {
-        src: "/images/clients/club-voyages.webp",
-        alt: "Club Voyages",
+        src: '/images/clients/club-voyages.webp',
+        alt: 'Club Voyages',
       },
     },
 
     {
-      id: "3",
+      id: '3',
       quote:
-        "The software significantly improved productivity by reducing manual accounting tasks and improving data integrity.",
-      author: "Manon Pellerin",
-      company: "Voyages Revasol",
+        'The software significantly improved productivity by reducing manual accounting tasks and improving data integrity.',
+      author: 'Manon Pellerin',
+      company: 'Voyages Revasol',
       logo: {
-        src: "/images/clients/revasol.webp",
-        alt: "Voyages Revasol",
+        src: '/images/clients/revasol.webp',
+        alt: 'Voyages Revasol',
       },
     },
 
     {
-      id: "4",
+      id: '4',
       quote:
-        "The web version is accessible from anywhere and the support team is always responsive and helpful.",
-      author: "Manon Lacelle-Lacroix",
-      company: "Marlin Travel",
+        'The web version is accessible from anywhere and the support team is always responsive and helpful.',
+      author: 'Manon Lacelle-Lacroix',
+      company: 'Marlin Travel',
       logo: {
-        src: "/images/clients/marlin.webp",
-        alt: "Marlin Travel",
+        src: '/images/clients/marlin.webp',
+        alt: 'Marlin Travel',
       },
     },
 
     {
-      id: "5",
+      id: '5',
       quote:
         "TravelWorks gives us instant reporting and a complete overview of our agency's performance.",
-      author: "Hélène Boulianne",
-      company: "Plein Soleil Voyages",
+      author: 'Hélène Boulianne',
+      company: 'Plein Soleil Voyages',
       logo: {
-        src: "/images/clients/plein-soleil.webp",
-        alt: "Plein Soleil Voyages",
+        src: '/images/clients/plein-soleil.webp',
+        alt: 'Plein Soleil Voyages',
       },
     },
 
     {
-      id: "6",
+      id: '6',
       quote:
-        "Even users with limited technical experience find the software intuitive and easy to use.",
-      author: "Nathalie Germain",
-      company: "Vitesse de Croisière",
+        'Even users with limited technical experience find the software intuitive and easy to use.',
+      author: 'Nathalie Germain',
+      company: 'Vitesse de Croisière',
       logo: {
-        src: "/images/clients/vitesse.webp",
-        alt: "Vitesse de Croisière",
+        src: '/images/clients/vitesse.webp',
+        alt: 'Vitesse de Croisière',
       },
     },
   ],
 
   videos: [
     {
-      id: "video-1",
-      thumbnail: "/images/testimonials/video-1.webp",
-      videoUrl: "https://youtube.com/watch?v=example1",
-      quote:
-        "TravelWorks is the backbone of our agency. We couldn't run the business without it.",
-      author: "Agency Owner",
-      company: "Club Voyages",
+      id: 'video-1',
+      thumbnail: '/images/testimonials/video-1.webp',
+      videoUrl: 'https://youtube.com/watch?v=example1',
+      quote: "TravelWorks is the backbone of our agency. We couldn't run the business without it.",
+      author: 'Agency Owner',
+      company: 'Club Voyages',
     },
 
     {
-      id: "video-2",
-      thumbnail: "/images/testimonials/video-2.webp",
-      videoUrl: "https://youtube.com/watch?v=example2",
-      quote:
-        "The customer service is exceptional. Their team always responds quickly.",
-      author: "Agency Manager",
-      company: "Plein Soleil",
+      id: 'video-2',
+      thumbnail: '/images/testimonials/video-2.webp',
+      videoUrl: 'https://youtube.com/watch?v=example2',
+      quote: 'The customer service is exceptional. Their team always responds quickly.',
+      author: 'Agency Manager',
+      company: 'Plein Soleil',
     },
 
     {
-      id: "video-3",
-      thumbnail: "/images/testimonials/video-3.webp",
-      videoUrl: "https://youtube.com/watch?v=example3",
-      quote:
-        "Being able to access everything from one place has transformed our operations.",
-      author: "Agency Director",
-      company: "Voyages Revasol",
+      id: 'video-3',
+      thumbnail: '/images/testimonials/video-3.webp',
+      videoUrl: 'https://youtube.com/watch?v=example3',
+      quote: 'Being able to access everything from one place has transformed our operations.',
+      author: 'Agency Director',
+      company: 'Voyages Revasol',
     },
   ],
 };
@@ -171,23 +168,13 @@ export const clientsPageData = {
 export default function ClientsPage() {
   return (
     <>
-      <ClientsHero
-        title={clientsPageData.hero.title}
-        subtitle={clientsPageData.hero.subtitle}
-      />
+      <ClientsHero title={clientsPageData.hero.title} subtitle={clientsPageData.hero.subtitle} />
 
-      <ClientsLogoMarquee
-        clients={clientsPageData.clients}
-      />
+      <ClientsLogoMarquee clients={clientsPageData.clients} />
 
+      <TestimonialsGrid testimonials={clientsPageData.testimonials} />
 
-      <TestimonialsGrid
-        testimonials={clientsPageData.testimonials}
-      />
-
-		<VideoTestimonials
-        videos={clientsPageData.videos}
-      />
+      <VideoTestimonials videos={clientsPageData.videos} />
     </>
   );
 }

@@ -1,8 +1,8 @@
 export type YoutubeVideoModel = {
-  blockType: "YoutubeVideo";
+  blockType: 'YoutubeVideo';
   heading?: string;
   videoId?: string;
   channelLabel?: string;
   className?: string;
-  description?: string; 
+  description?: string;
 };

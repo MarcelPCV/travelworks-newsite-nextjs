@@ -33,17 +33,20 @@ description: Next.js 15 standards for this project
 - Validate external data
 
 Preferred:
+
 - async page components
 - server actions
 - route handlers
 
 Avoid:
+
 - excessive useEffect fetching
 - unnecessary API calls
 
 ## Client Components
 
 Only use "use client" when needed:
+
 - forms
 - browser APIs
 - animations
@@ -79,7 +82,7 @@ Avoid inline styles.
 
 - Use Clerk authentication
 - Protect server routes
- - Use proxy when necessary (`proxy.ts`); keep `middleware.ts` shim for compatibility
+- Use proxy when necessary (`proxy.ts`); keep `middleware.ts` shim for compatibility
 - Never expose secrets in client components
 - Always validate sessions in server actions
 
@@ -118,6 +121,7 @@ Avoid inline styles.
 ## Project Stack
 
 This project uses:
+
 - Next.js 15
 - App Router
 - TypeScript

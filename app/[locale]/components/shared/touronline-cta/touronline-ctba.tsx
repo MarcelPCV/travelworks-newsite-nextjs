@@ -3,24 +3,15 @@ import Link from 'next/link';
 import clsx from 'clsx';
 import { TourOnlineCTAArea } from './type';
 
-export default function TourOnlineCTA({
-  imageSrc,
-  imageAlt,
-  ctaLink,
-  ctaText,
-}: TourOnlineCTAArea) {
+export default function TourOnlineCTA({ imageSrc, imageAlt, ctaLink, ctaText }: TourOnlineCTAArea) {
   return (
     <section
       className={clsx(
-        'flex flex-col items-center justify-center gap-6 rounded-lg bg-primary px-6 py-8 md:flex-row md:justify-center bg-blue-900'
+        'flex flex-col items-center justify-center gap-6 rounded-lg bg-primary px-6 py-8 md:flex-row md:justify-center bg-blue-900',
       )}
     >
       <div className="relative h-44 w-full max-w-[450px] overflow-hidden rounded-md">
-        <Image
-          src={imageSrc}
-          alt={imageAlt}
-          fill
-        />
+        <Image src={imageSrc} alt={imageAlt} fill />
       </div>
 
       <Link

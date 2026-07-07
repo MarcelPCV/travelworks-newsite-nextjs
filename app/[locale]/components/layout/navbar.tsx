@@ -10,15 +10,11 @@ import {
   replaceLocaleInPath,
   routeToMessageLocale,
 } from '@/app/[locale]/locale-config';
-import {
-  ChevronDown,
-  Globe,
-  CircleArrowRight,
-  Search,
-  X,
-} from 'lucide-react';
+import { ChevronDown, Globe, CircleArrowRight, Search, X } from 'lucide-react';
 import CtaButton from '@/app/[locale]/components/ui/cta-button';
-import DropdownCtaButton, { type DropdownCtaOption } from '@/app/[locale]/components/ui/dropdown-cta-button';
+import DropdownCtaButton, {
+  type DropdownCtaOption,
+} from '@/app/[locale]/components/ui/dropdown-cta-button';
 import {
   aboutUsLinkIcons,
   aboutUsLinks,
@@ -48,9 +44,12 @@ export default function Navbar() {
   const t = useTranslations('nav');
 
   const [activeDesktopPanel, setActiveDesktopPanel] = useState<DesktopPanel>(null);
-  const [activeProductCategory, setActiveProductCategory] = useState<ProductCategory>('travelworks');
+  const [activeProductCategory, setActiveProductCategory] =
+    useState<ProductCategory>('travelworks');
   const [isMobileOpen, setIsMobileOpen] = useState(false);
-  const [mobileSection, setMobileSection] = useState<'products' | 'aboutUs' | 'training' | null>(null);
+  const [mobileSection, setMobileSection] = useState<'products' | 'aboutUs' | 'training' | null>(
+    null,
+  );
   const [isLangOpen, setIsLangOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [loginDropdownCloseSignal, setLoginDropdownCloseSignal] = useState(0);
@@ -59,28 +58,35 @@ export default function Navbar() {
   const headerRef = useRef<HTMLElement | null>(null);
 
   const currentRouteLocale =
-    localeOptions.find((item) => item.messageLocale === activeMessageLocale)?.routeLocale ?? DEFAULT_ROUTE_LOCALE;
+    localeOptions.find((item) => item.messageLocale === activeMessageLocale)?.routeLocale ??
+    DEFAULT_ROUTE_LOCALE;
 
   const withLocalePrefix = useCallback(
-    (path: string) => (currentRouteLocale === DEFAULT_ROUTE_LOCALE ? path : `/${currentRouteLocale}${path}`),
-    [currentRouteLocale]
+    (path: string) =>
+      currentRouteLocale === DEFAULT_ROUTE_LOCALE ? path : `/${currentRouteLocale}${path}`,
+    [currentRouteLocale],
   );
 
-  const oneLevelHref = useCallback((slug: string) => getOneLevelHref(slug, withLocalePrefix), [withLocalePrefix]);
+  const oneLevelHref = useCallback(
+    (slug: string) => getOneLevelHref(slug, withLocalePrefix),
+    [withLocalePrefix],
+  );
 
   const solutionHref = useCallback(
     (linkKey: ProductLinkKey) => getSolutionHref(linkKey, currentRouteLocale, withLocalePrefix),
-    [currentRouteLocale, withLocalePrefix]
+    [currentRouteLocale, withLocalePrefix],
   );
 
   const aboutUsHref = useCallback(
-    (linkKey: (typeof aboutUsLinks)[number]) => getAboutUsHref(linkKey, currentRouteLocale, withLocalePrefix),
-    [currentRouteLocale, withLocalePrefix]
+    (linkKey: (typeof aboutUsLinks)[number]) =>
+      getAboutUsHref(linkKey, currentRouteLocale, withLocalePrefix),
+    [currentRouteLocale, withLocalePrefix],
   );
 
   const trainingHref = useCallback(
-    (linkKey: (typeof trainingLinks)[number]) => getTrainingHref(linkKey, currentRouteLocale, withLocalePrefix),
-    [currentRouteLocale, withLocalePrefix]
+    (linkKey: (typeof trainingLinks)[number]) =>
+      getTrainingHref(linkKey, currentRouteLocale, withLocalePrefix),
+    [currentRouteLocale, withLocalePrefix],
   );
 
   const homeHref = currentRouteLocale === DEFAULT_ROUTE_LOCALE ? '/' : `/${currentRouteLocale}`;
@@ -114,16 +120,21 @@ export default function Navbar() {
     },
   ];
 
-  const getLanguageLabel = useCallback((route: string) => {
-    const key = `languages.${route}`;
-    try {
-      const translated = t(key);
-      if (translated && !translated.includes('languages.')) return translated;
-    } catch {
-      // ignore and fallback
-    }
-    return localeOptions.find((item) => item.routeLocale === route)?.label ?? localeOptions[0].label;
-  }, [t]);
+  const getLanguageLabel = useCallback(
+    (route: string) => {
+      const key = `languages.${route}`;
+      try {
+        const translated = t(key);
+        if (translated && !translated.includes('languages.')) return translated;
+      } catch {
+        // ignore and fallback
+      }
+      return (
+        localeOptions.find((item) => item.routeLocale === route)?.label ?? localeOptions[0].label
+      );
+    },
+    [t],
+  );
 
   const activeLanguageLabel = getLanguageLabel(currentRouteLocale);
 
@@ -135,7 +146,7 @@ export default function Navbar() {
         href: replaceLocaleInPath(pathname, item.routeLocale),
         isActive: routeToMessageLocale[item.routeLocale] === activeMessageLocale,
       })),
-    [pathname, activeMessageLocale, getLanguageLabel]
+    [pathname, activeMessageLocale, getLanguageLabel],
   );
 
   const isProductsOpen = activeDesktopPanel === 'products';
@@ -226,164 +237,168 @@ export default function Navbar() {
           }
         }}
       >
-      <nav className="mx-auto flex w-full max-w-7xl items-center px-4 py-3 sm:px-6 lg:px-8">
-        <Link href={homeHref} className="text-xl font-semibold tracking-tight text-zinc-900">
-          {t('brand.name')}
-        </Link>
+        <nav className="mx-auto flex w-full max-w-7xl items-center px-4 py-3 sm:px-6 lg:px-8">
+          <Link href={homeHref} className="text-xl font-semibold tracking-tight text-zinc-900">
+            {t('brand.name')}
+          </Link>
 
-        <button
-          type="button"
-          className="ml-auto inline-flex items-center rounded-md border border-zinc-300 px-3 py-2 text-sm font-medium text-zinc-700 hover:bg-zinc-50 lg:hidden"
-          aria-expanded={isMobileOpen}
-          aria-controls="mobile-menu"
-          onClick={() => {
-            setIsMobileOpen((prev) => !prev);
-            setMobileSection(null);
-            setActiveDesktopPanel(null);
-            setIsLangOpen(false);
-          }}
-        >
-          {isMobileOpen ? t('close') : t('menu')}
-        </button>
+          <button
+            type="button"
+            className="ml-auto inline-flex items-center rounded-md border border-zinc-300 px-3 py-2 text-sm font-medium text-zinc-700 hover:bg-zinc-50 lg:hidden"
+            aria-expanded={isMobileOpen}
+            aria-controls="mobile-menu"
+            onClick={() => {
+              setIsMobileOpen((prev) => !prev);
+              setMobileSection(null);
+              setActiveDesktopPanel(null);
+              setIsLangOpen(false);
+            }}
+          >
+            {isMobileOpen ? t('close') : t('menu')}
+          </button>
 
-        <div className="ml-2 hidden flex-1 items-center justify-between lg:flex">
-          <ul className="flex items-center gap-1">
-            <li>
-              <button
-                type="button"
-                className="inline-flex items-center rounded-md px-3 py-2 text-sm font-medium text-zinc-800 uppercase transition duration-150 hover:bg-zinc-100"
-                aria-expanded={isProductsOpen}
-                aria-controls="products-mega-menu"
-                aria-haspopup="menu"
-                onMouseEnter={() => openDesktopPanel('products')}
-                onFocus={() => openDesktopPanel('products')}
-                onClick={() => {
-                  setActiveDesktopPanel((prev) => (prev === 'products' ? null : 'products'));
-                  setIsLangOpen(false);
-                }}
-                onKeyDown={(event) => {
-                  if (event.key === 'ArrowDown') {
-                    event.preventDefault();
-                    openDesktopPanel('products');
-                  }
-                }}
-              >
-                <span>{t('topLevel.products')}</span>
-                <ChevronDown
-                  className={`ml-1 inline-block h-4 w-4 transition-transform duration-150 ${
-                    isProductsOpen ? 'rotate-180' : 'rotate-0'
+          <div className="ml-2 hidden flex-1 items-center justify-between lg:flex">
+            <ul className="flex items-center gap-1">
+              <li>
+                <button
+                  type="button"
+                  className="inline-flex items-center rounded-md px-3 py-2 text-sm font-medium text-zinc-800 uppercase transition duration-150 hover:bg-zinc-100"
+                  aria-expanded={isProductsOpen}
+                  aria-controls="products-mega-menu"
+                  aria-haspopup="menu"
+                  onMouseEnter={() => openDesktopPanel('products')}
+                  onFocus={() => openDesktopPanel('products')}
+                  onClick={() => {
+                    setActiveDesktopPanel((prev) => (prev === 'products' ? null : 'products'));
+                    setIsLangOpen(false);
+                  }}
+                  onKeyDown={(event) => {
+                    if (event.key === 'ArrowDown') {
+                      event.preventDefault();
+                      openDesktopPanel('products');
+                    }
+                  }}
+                >
+                  <span>{t('topLevel.products')}</span>
+                  <ChevronDown
+                    className={`ml-1 inline-block h-4 w-4 transition-transform duration-150 ${
+                      isProductsOpen ? 'rotate-180' : 'rotate-0'
+                    }`}
+                    aria-hidden="true"
+                  />
+                </button>
+              </li>
+              <li className="relative">
+                <button
+                  type="button"
+                  className="inline-flex items-center rounded-md px-3 py-2 text-sm font-medium text-zinc-800 uppercase transition duration-150 hover:bg-zinc-100"
+                  aria-expanded={isAboutUsOpen}
+                  aria-controls="about-us-menu"
+                  aria-haspopup="menu"
+                  onMouseEnter={() => openDesktopPanel('aboutUs')}
+                  onFocus={() => openDesktopPanel('aboutUs')}
+                  onClick={() => {
+                    setActiveDesktopPanel((prev) => (prev === 'aboutUs' ? null : 'aboutUs'));
+                    setIsLangOpen(false);
+                  }}
+                >
+                  <span>{t('topLevel.aboutUs')}</span>
+                  <ChevronDown
+                    className={`ml-1 inline-block h-4 w-4 transition-transform duration-150 ${
+                      isAboutUsOpen ? 'rotate-180' : 'rotate-0'
+                    }`}
+                    aria-hidden="true"
+                  />
+                </button>
+
+                <div
+                  id="about-us-menu"
+                  role="menu"
+                  aria-label={t('topLevel.aboutUs')}
+                  aria-hidden={!isAboutUsOpen}
+                  className={`absolute left-0 top-full mt-3 w-56 rounded-xl border border-zinc-200 bg-background/90 backdrop-blur-md p-3 shadow-lg transition duration-200 motion-reduce:transition-none ${
+                    isAboutUsOpen
+                      ? 'visible translate-y-0 opacity-100'
+                      : 'pointer-events-none invisible -translate-y-1 opacity-0'
                   }`}
-                  aria-hidden="true"
-                />
-              </button>
-            </li>
-            <li className="relative">
-              <button
-                type="button"
-                className="inline-flex items-center rounded-md px-3 py-2 text-sm font-medium text-zinc-800 uppercase transition duration-150 hover:bg-zinc-100"
-                aria-expanded={isAboutUsOpen}
-                aria-controls="about-us-menu"
-                aria-haspopup="menu"
-                onMouseEnter={() => openDesktopPanel('aboutUs')}
-                onFocus={() => openDesktopPanel('aboutUs')}
-                onClick={() => {
-                  setActiveDesktopPanel((prev) => (prev === 'aboutUs' ? null : 'aboutUs'));
-                  setIsLangOpen(false);
-                }}
-              >
-                <span>{t('topLevel.aboutUs')}</span>
-                <ChevronDown
-                  className={`ml-1 inline-block h-4 w-4 transition-transform duration-150 ${
-                    isAboutUsOpen ? 'rotate-180' : 'rotate-0'
-                  }`}
-                  aria-hidden="true"
-                />
-              </button>
+                >
+                  {aboutUsLinks.map((link) =>
+                    (() => {
+                      const Icon = aboutUsLinkIcons[link];
+                      return (
+                        <Link
+                          key={link}
+                          href={aboutUsHref(link)}
+                          role="menuitem"
+                          className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium text-white hover:text-zinc-900 transition duration-150 hover:bg-white"
+                          onClick={() => setActiveDesktopPanel(null)}
+                        >
+                          <div className="w-10 h-10 shrink-0 bg-zinc-100 flex items-center justify-center rounded-full shadow-xl">
+                            <Icon className={menuItemIconClassName} aria-hidden="true" />
+                          </div>
+                          {t(`aboutUs.${link}`)}
+                        </Link>
+                      );
+                    })(),
+                  )}
+                </div>
+              </li>
+              <li className="relative">
+                <button
+                  type="button"
+                  className="inline-flex items-center rounded-md px-3 py-2 text-sm font-medium text-zinc-800 uppercase transition duration-150 hover:bg-zinc-100"
+                  aria-expanded={isTrainingOpen}
+                  aria-controls="training-menu"
+                  aria-haspopup="menu"
+                  onMouseEnter={() => openDesktopPanel('training')}
+                  onFocus={() => openDesktopPanel('training')}
+                  onClick={() => {
+                    setActiveDesktopPanel((prev) => (prev === 'training' ? null : 'training'));
+                    setIsLangOpen(false);
+                  }}
+                >
+                  <span>{t('topLevel.training')}</span>
+                  <ChevronDown
+                    className={`ml-1 inline-block h-4 w-4 transition-transform duration-150 ${
+                      isTrainingOpen ? 'rotate-180' : 'rotate-0'
+                    }`}
+                    aria-hidden="true"
+                  />
+                </button>
 
-              <div
-                id="about-us-menu"
-                role="menu"
-                aria-label={t('topLevel.aboutUs')}
-                aria-hidden={!isAboutUsOpen}
-                className={`absolute left-0 top-full mt-3 w-56 rounded-xl border border-zinc-200 bg-background/90 backdrop-blur-md p-3 shadow-lg transition duration-200 motion-reduce:transition-none ${
-                  isAboutUsOpen ? 'visible translate-y-0 opacity-100' : 'pointer-events-none invisible -translate-y-1 opacity-0'
-                }`}
-              >
-                {aboutUsLinks.map((link) => (
-                  (() => {
-                    const Icon = aboutUsLinkIcons[link];
-                    return (
-                  <Link
-                    key={link}
-                    href={aboutUsHref(link)}
-                    role="menuitem"
-                    className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium text-white hover:text-zinc-900 transition duration-150 hover:bg-white"
-                    onClick={() => setActiveDesktopPanel(null)}
-                  >
-                    <div className="w-10 h-10 shrink-0 bg-zinc-100 flex items-center justify-center rounded-full shadow-xl">
-                      <Icon className={menuItemIconClassName} aria-hidden="true" />
-                    </div>
-                    {t(`aboutUs.${link}`)}
-                  </Link>
-                    );
-                  })()
-                ))}
-              </div>
-            </li>
-            <li className="relative">
-              <button
-                type="button"
-                className="inline-flex items-center rounded-md px-3 py-2 text-sm font-medium text-zinc-800 uppercase transition duration-150 hover:bg-zinc-100"
-                aria-expanded={isTrainingOpen}
-                aria-controls="training-menu"
-                aria-haspopup="menu"
-                onMouseEnter={() => openDesktopPanel('training')}
-                onFocus={() => openDesktopPanel('training')}
-                onClick={() => {
-                  setActiveDesktopPanel((prev) => (prev === 'training' ? null : 'training'));
-                  setIsLangOpen(false);
-                }}
-              >
-                <span>{t('topLevel.training')}</span>
-                <ChevronDown
-                  className={`ml-1 inline-block h-4 w-4 transition-transform duration-150 ${
-                    isTrainingOpen ? 'rotate-180' : 'rotate-0'
+                <div
+                  id="training-menu"
+                  role="menu"
+                  aria-label={t('topLevel.training')}
+                  aria-hidden={!isTrainingOpen}
+                  className={`absolute left-0 top-full mt-3 w-56 rounded-xl border border-zinc-200 bg-background/90 backdrop-blur-md p-3 shadow-lg transition duration-200 motion-reduce:transition-none ${
+                    isTrainingOpen
+                      ? 'visible translate-y-0 opacity-100'
+                      : 'pointer-events-none invisible -translate-y-1 opacity-0'
                   }`}
-                  aria-hidden="true"
-                />
-              </button>
-
-              <div
-                id="training-menu"
-                role="menu"
-                aria-label={t('topLevel.training')}
-                aria-hidden={!isTrainingOpen}
-                className={`absolute left-0 top-full mt-3 w-56 rounded-xl border border-zinc-200 bg-background/90 backdrop-blur-md p-3 shadow-lg transition duration-200 motion-reduce:transition-none ${
-                  isTrainingOpen ? 'visible translate-y-0 opacity-100' : 'pointer-events-none invisible -translate-y-1 opacity-0'
-                }`}
-              >
-                {trainingLinks.map((link) => (
-                  (() => {
-                    const Icon = trainingLinkIcons[link];
-                    return (
-                  <Link
-                    key={link}
-                    href={trainingHref(link)}
-                    role="menuitem"
-                    className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium text-white hover:text-zinc-900 transition duration-150 hover:bg-white"
-                    onClick={() => setActiveDesktopPanel(null)}
-                  >
-                    <div className="w-10 h-10 shrink-0 bg-zinc-100 flex items-center justify-center rounded-full shadow-xl">
-                      <Icon className={menuItemIconClassName} aria-hidden="true" />
-                    </div>
-                    {t(`training.${link}`)}
-                  </Link>
-                    );
-                  })()
-                ))}
-              </div>
-            </li>
-            {/* <li>
+                >
+                  {trainingLinks.map((link) =>
+                    (() => {
+                      const Icon = trainingLinkIcons[link];
+                      return (
+                        <Link
+                          key={link}
+                          href={trainingHref(link)}
+                          role="menuitem"
+                          className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium text-white hover:text-zinc-900 transition duration-150 hover:bg-white"
+                          onClick={() => setActiveDesktopPanel(null)}
+                        >
+                          <div className="w-10 h-10 shrink-0 bg-zinc-100 flex items-center justify-center rounded-full shadow-xl">
+                            <Icon className={menuItemIconClassName} aria-hidden="true" />
+                          </div>
+                          {t(`training.${link}`)}
+                        </Link>
+                      );
+                    })(),
+                  )}
+                </div>
+              </li>
+              {/* <li>
               <Link
                 href="#"
                 className="rounded-md px-3 py-2 text-sm font-medium text-zinc-800 uppercase transition duration-150 hover:bg-zinc-100"
@@ -391,322 +406,336 @@ export default function Navbar() {
                 {t('topLevel.support')}
               </Link>
             </li> */}
-          </ul>
+            </ul>
 
-          <div className="flex items-center gap-2">
-            <button
-              type="button"
-              className="inline-flex h-10 w-10 items-center justify-center rounded-md text-zinc-700 transition hover:bg-zinc-200"
-              aria-label="Open search"
-              onClick={() => {
-                setIsSearchOpen(true);
-                setActiveDesktopPanel(null);
-                setIsLangOpen(false);
-                setLoginDropdownCloseSignal((prev) => prev + 1);
-              }}
-            >
-              <Search className="h-5 w-5" aria-hidden="true" />
-            </button>
-            <Link href={askForDemoHref}>
-              <CtaButton label={t('cta.askForDemo')} variant="orangeGradient" size="xs" />
-            </Link>
-            <div
-              onMouseEnter={() => {
-                clearScheduledClose();
-                setActiveDesktopPanel(null);
-                setIsLangOpen(false);
-              }}
-              onFocusCapture={() => {
-                setActiveDesktopPanel(null);
-                setIsLangOpen(false);
-              }}
-            >
-              <DropdownCtaButton
-                key={`desktop-login-${loginDropdownCloseSignal}`}
-                label={t('cta.logIn')}
-                variant="blue"
-                size="xs"
-                options={logInOptions}
-                align="left"
-              />
-            </div>
-
-            <div className="relative">
+            <div className="flex items-center gap-2">
               <button
                 type="button"
-                className="inline-flex items-center rounded-md border border-zinc-300 px-3 py-2 text-sm font-medium text-zinc-700 transition hover:bg-zinc-100"
-                aria-expanded={isLangOpen}
-                aria-controls="language-menu"
-                aria-haspopup="menu"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-md text-zinc-700 transition hover:bg-zinc-200"
+                aria-label="Open search"
                 onClick={() => {
-                  setIsLangOpen((prev) => !prev);
+                  setIsSearchOpen(true);
                   setActiveDesktopPanel(null);
+                  setIsLangOpen(false);
+                  setLoginDropdownCloseSignal((prev) => prev + 1);
                 }}
               >
-                <Globe className="mr-2 inline-block h-4 w-4" />
-                {t('languagePrefix', { language: activeLanguageLabel })}
-                <ChevronDown
-                  className={`ml-1 inline-block h-4 w-4 transition-transform duration-150 ${
-                    isLangOpen ? 'rotate-180' : 'rotate-0'
-                  }`}
-                  aria-hidden="true"
-                />
+                <Search className="h-5 w-5" aria-hidden="true" />
               </button>
-              {isLangOpen ? (
-                <div
-                  id="language-menu"
-                  role="menu"
-                  className="absolute right-0 top-full mt-2 w-64 rounded-xl border border-zinc-200 bg-white p-2 shadow-lg"
+              <Link href={askForDemoHref}>
+                <CtaButton label={t('cta.askForDemo')} variant="orangeGradient" size="xs" />
+              </Link>
+              <div
+                onMouseEnter={() => {
+                  clearScheduledClose();
+                  setActiveDesktopPanel(null);
+                  setIsLangOpen(false);
+                }}
+                onFocusCapture={() => {
+                  setActiveDesktopPanel(null);
+                  setIsLangOpen(false);
+                }}
+              >
+                <DropdownCtaButton
+                  key={`desktop-login-${loginDropdownCloseSignal}`}
+                  label={t('cta.logIn')}
+                  variant="blue"
+                  size="xs"
+                  options={logInOptions}
+                  align="left"
+                />
+              </div>
+
+              <div className="relative">
+                <button
+                  type="button"
+                  className="inline-flex items-center rounded-md border border-zinc-300 px-3 py-2 text-sm font-medium text-zinc-700 transition hover:bg-zinc-100"
+                  aria-expanded={isLangOpen}
+                  aria-controls="language-menu"
+                  aria-haspopup="menu"
+                  onClick={() => {
+                    setIsLangOpen((prev) => !prev);
+                    setActiveDesktopPanel(null);
+                  }}
                 >
-                  {languageLinks.map((item) => (
-                    <Link
-                      key={item.routeLocale}
-                      href={item.href}
-                      role="menuitem"
-                      className={`block rounded-md px-3 py-2 text-sm transition ${
-                        item.isActive ? 'bg-zinc-900 text-white' : 'text-zinc-700 hover:bg-zinc-100'
-                      }`}
-                      onClick={() => setIsLangOpen(false)}
-                    >
-                      {item.label}
-                    </Link>
-                  ))}
-                </div>
-              ) : null}
+                  <Globe className="mr-2 inline-block h-4 w-4" />
+                  {t('languagePrefix', { language: activeLanguageLabel })}
+                  <ChevronDown
+                    className={`ml-1 inline-block h-4 w-4 transition-transform duration-150 ${
+                      isLangOpen ? 'rotate-180' : 'rotate-0'
+                    }`}
+                    aria-hidden="true"
+                  />
+                </button>
+                {isLangOpen ? (
+                  <div
+                    id="language-menu"
+                    role="menu"
+                    className="absolute right-0 top-full mt-2 w-64 rounded-xl border border-zinc-200 bg-white p-2 shadow-lg"
+                  >
+                    {languageLinks.map((item) => (
+                      <Link
+                        key={item.routeLocale}
+                        href={item.href}
+                        role="menuitem"
+                        className={`block rounded-md px-3 py-2 text-sm transition ${
+                          item.isActive
+                            ? 'bg-zinc-900 text-white'
+                            : 'text-zinc-700 hover:bg-zinc-100'
+                        }`}
+                        onClick={() => setIsLangOpen(false)}
+                      >
+                        {item.label}
+                      </Link>
+                    ))}
+                  </div>
+                ) : null}
+              </div>
             </div>
           </div>
-        </div>
-      </nav>
+        </nav>
 
-      <div
-        id="products-mega-menu"
-        role="menu"
-        aria-label={t('topLevel.products')}
-        aria-hidden={!isProductsOpen}
-        className={`absolute inset-x-0 top-full hidden border-t border-zinc-200 bg-background/90 backdrop-blur-md  rounded-b-2xl lg:block ${
-          isProductsOpen ? 'pointer-events-auto visible' : 'pointer-events-none invisible'
-        }`}
-      >
         <div
-          className={`mx-auto w-full max-w-6xl px-6 pb-6 pt-4 transition duration-200 motion-reduce:transition-none ${
-            isProductsOpen ? 'translate-y-0 opacity-100' : '-translate-y-1 opacity-0'
+          id="products-mega-menu"
+          role="menu"
+          aria-label={t('topLevel.products')}
+          aria-hidden={!isProductsOpen}
+          className={`absolute inset-x-0 top-full hidden border-t border-zinc-200 bg-background/90 backdrop-blur-md  rounded-b-2xl lg:block ${
+            isProductsOpen ? 'pointer-events-auto visible' : 'pointer-events-none invisible'
           }`}
         >
-          <div className="grid min-h-64 grid-cols-[260px_1fr] overflow-hidden">
-            <div className="border-r border-zinc-600 p-8">
-              <p className="max-w-[12ch] text-2xl font-semibold leading-[1.4] tracking-tight text-white">
-                {t('products.promoMessage')}
-              </p>
-            </div>
+          <div
+            className={`mx-auto w-full max-w-6xl px-6 pb-6 pt-4 transition duration-200 motion-reduce:transition-none ${
+              isProductsOpen ? 'translate-y-0 opacity-100' : '-translate-y-1 opacity-0'
+            }`}
+          >
+            <div className="grid min-h-64 grid-cols-[260px_1fr] overflow-hidden">
+              <div className="border-r border-zinc-600 p-8">
+                <p className="max-w-[12ch] text-2xl font-semibold leading-[1.4] tracking-tight text-white">
+                  {t('products.promoMessage')}
+                </p>
+              </div>
 
-            <div className="p-7">
-              <div className="grid grid-cols-3 gap-x-10 gap-y-8">
-                {productColumnsByCategory[activeProductCategory].map((column, columnIndex) => (
-                  <div key={`${activeProductCategory}-${columnIndex}`} className="space-y-2">
-                    {column.map((linkKey) => {
-                      const Icon = productLinkIcons[linkKey];
+              <div className="p-7">
+                <div className="grid grid-cols-3 gap-x-10 gap-y-8">
+                  {productColumnsByCategory[activeProductCategory].map((column, columnIndex) => (
+                    <div key={`${activeProductCategory}-${columnIndex}`} className="space-y-2">
+                      {column.map((linkKey) => {
+                        const Icon = productLinkIcons[linkKey];
 
-                      return (
-                        <Link
-                          key={linkKey}
-                          href={solutionHref(linkKey)}
-                          role="menuitem"
-                          onClick={() => setActiveDesktopPanel(null)}
-                          className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium text-white hover:text-zinc-900 transition duration-150 hover:bg-zinc-300"
-                        >
-                          <div className="w-10 h-10 shrink-0 bg-zinc-100 flex items-center justify-center rounded-full shadow-xl">
-                            <Icon className={menuItemIconClassName} aria-hidden="true" />
-                          </div>
+                        return (
+                          <Link
+                            key={linkKey}
+                            href={solutionHref(linkKey)}
+                            role="menuitem"
+                            onClick={() => setActiveDesktopPanel(null)}
+                            className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium text-white hover:text-zinc-900 transition duration-150 hover:bg-zinc-300"
+                          >
+                            <div className="w-10 h-10 shrink-0 bg-zinc-100 flex items-center justify-center rounded-full shadow-xl">
+                              <Icon className={menuItemIconClassName} aria-hidden="true" />
+                            </div>
 
-                          <span className="min-w-40 break-words">
-                            {t(`products.links.${linkKey}`)}
-                          </span>
-                        </Link>
-                      );
-                    })}
-                  </div>
-                ))}
+                            <span className="min-w-40 break-words">
+                              {t(`products.links.${linkKey}`)}
+                            </span>
+                          </Link>
+                        );
+                      })}
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      {isMobileOpen ? (
-        <div id="mobile-menu" className="border-t border-zinc-200 bg-white px-4 py-3 lg:hidden">
-          <ul className="space-y-2">
-            <li>
-              <button
-                type="button"
-                className="flex w-full items-center justify-between rounded-md px-3 py-2 text-left text-sm font-medium text-zinc-700 hover:bg-zinc-100"
-                onClick={() => setMobileSection((prev) => (prev === 'products' ? null : 'products'))}
-              >
-                <span>{t('topLevel.products')}</span>
-                <ChevronDown
-                  className={`ml-1 inline-block h-4 w-4 transition-transform duration-150 ${
-                    mobileSection === 'products' ? 'rotate-180' : 'rotate-0'
-                  }`}
-                  aria-hidden="true"
-                />
-              </button>
-              {mobileSection === 'products' ? (
-                <div className="mt-2 rounded-xl bg-zinc-100 p-3">
-                  <div className="mb-3 flex flex-wrap gap-2">
-                    {productCategories.map((category) => (
-                      <button
-                        key={category}
-                        type="button"
-                        className={`rounded-full px-3 py-1 text-xs font-semibold transition ${
-                          activeProductCategory === category ? 'bg-white text-zinc-900 shadow-sm' : 'bg-zinc-200 text-zinc-700'
-                        }`}
-                        onClick={() => setActiveProductCategory(category)}
-                      >
-                        {t(`products.categories.${category}`)}
-                      </button>
-                    ))}
-                  </div>
-
-                  <div className="space-y-1">
-                    {productColumnsByCategory[activeProductCategory].flat().map((linkKey) => (
-                      (() => {
-                        const Icon = productLinkIcons[linkKey];
-                        return (
-                      <Link
-                        key={`mobile-${linkKey}`}
-                        href={solutionHref(linkKey)}
-                        className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium text-zinc-700 hover:bg-white"
-                      >
-                        <Icon className={menuItemIconClassName} aria-hidden="true" />
-                        {t(`products.links.${linkKey}`)}
-                      </Link>
-                        );
-                      })()
-                    ))}
-                  </div>
-                </div>
-              ) : null}
-            </li>
-
-            <li>
-              <button
-                type="button"
-                className="flex w-full items-center justify-between rounded-md px-3 py-2 text-left text-sm font-medium text-zinc-700 hover:bg-zinc-100"
-                onClick={() => setMobileSection((prev) => (prev === 'aboutUs' ? null : 'aboutUs'))}
-              >
-                <span>{t('topLevel.aboutUs')}</span>
-                <ChevronDown
-                  className={`ml-1 inline-block h-4 w-4 transition-transform duration-150 ${
-                    mobileSection === 'aboutUs' ? 'rotate-180' : 'rotate-0'
-                  }`}
-                  aria-hidden="true"
-                />
-              </button>
-              {mobileSection === 'aboutUs' ? (
-                <div className="mt-2 rounded-xl bg-zinc-100 p-3">
-                  {aboutUsLinks.map((link) => (
-                    (() => {
-                      const Icon = aboutUsLinkIcons[link];
-                      return (
-                    <Link
-                      key={`mobile-${link}`}
-                      href={aboutUsHref(link)}
-                      className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium text-zinc-700 hover:bg-white"
-                    >
-                      <Icon className={menuItemIconClassName} aria-hidden="true" />
-                      {t(`aboutUs.${link}`)}
-                    </Link>
-                      );
-                    })()
-                  ))}
-                </div>
-              ) : null}
-            </li>
-
-            <li>
-              <button
-                type="button"
-                className="flex w-full items-center justify-between rounded-md px-3 py-2 text-left text-sm font-medium text-zinc-700 hover:bg-zinc-100"
-                onClick={() => setMobileSection((prev) => (prev === 'training' ? null : 'training'))}
-              >
-                <span>{t('topLevel.training')}</span>
-                <ChevronDown
-                  className={`ml-1 inline-block h-4 w-4 transition-transform duration-150 ${
-                    mobileSection === 'training' ? 'rotate-180' : 'rotate-0'
-                  }`}
-                  aria-hidden="true"
-                />
-              </button>
-              {mobileSection === 'training' ? (
-                <div className="mt-2 rounded-xl bg-zinc-100 p-3">
-                  {trainingLinks.map((link) => (
-                    (() => {
-                      const Icon = trainingLinkIcons[link];
-                      return (
-                    <Link
-                      key={`mobile-${link}`}
-                      href={trainingHref(link)}
-                      className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium text-zinc-700 hover:bg-white"
-                    >
-                      <Icon className={menuItemIconClassName} aria-hidden="true" />
-                      {t(`training.${link}`)}
-                    </Link>
-                      );
-                    })()
-                  ))}
-                </div>
-              ) : null}
-            </li>
-
-            <li>
-              <Link href={supportHref} className="block rounded-md px-3 py-2 text-sm font-medium text-zinc-700 hover:bg-zinc-100">
-                {t('topLevel.support')}
-              </Link>
-            </li>
-          </ul>
-
-          <ul className="mt-3">
-            <li className="py-2">
-              <Link href={askForDemoHref}>
-                <CtaButton label={t('cta.askForDemo')} variant="orangeGradient" size="xs" />
-              </Link>
-            </li>
-            <li className="py-2">
-              <DropdownCtaButton
-                key={`mobile-login-${loginDropdownCloseSignal}`}
-                label={t('cta.logIn')}
-                variant="blue"
-                size="xs"
-                options={logInOptions}
-                className="w-full"
-                align="left"
-                menuClassName="w-full min-w-0"
-              />
-            </li>
-          </ul>
-
-          <div className="mt-3 border-t border-zinc-200 pt-3">
-            <p className="px-3 text-xs font-semibold uppercase tracking-wide text-zinc-500">{t('languageTitle')}</p>
-            <div className="mt-2 space-y-1">
-              {languageLinks.map((item) => (
-                <Link
-                  key={item.routeLocale}
-                  href={item.href}
-                  className={`block rounded-md px-3 py-2 text-sm transition ${
-                    item.isActive ? 'bg-zinc-900 text-white' : 'text-zinc-700 hover:bg-zinc-100'
-                  }`}
-                  onClick={() => {
-                    setIsMobileOpen(false);
-                    setMobileSection(null);
-                  }}
+        {isMobileOpen ? (
+          <div id="mobile-menu" className="border-t border-zinc-200 bg-white px-4 py-3 lg:hidden">
+            <ul className="space-y-2">
+              <li>
+                <button
+                  type="button"
+                  className="flex w-full items-center justify-between rounded-md px-3 py-2 text-left text-sm font-medium text-zinc-700 hover:bg-zinc-100"
+                  onClick={() =>
+                    setMobileSection((prev) => (prev === 'products' ? null : 'products'))
+                  }
                 >
-                  {item.label}
+                  <span>{t('topLevel.products')}</span>
+                  <ChevronDown
+                    className={`ml-1 inline-block h-4 w-4 transition-transform duration-150 ${
+                      mobileSection === 'products' ? 'rotate-180' : 'rotate-0'
+                    }`}
+                    aria-hidden="true"
+                  />
+                </button>
+                {mobileSection === 'products' ? (
+                  <div className="mt-2 rounded-xl bg-zinc-100 p-3">
+                    <div className="mb-3 flex flex-wrap gap-2">
+                      {productCategories.map((category) => (
+                        <button
+                          key={category}
+                          type="button"
+                          className={`rounded-full px-3 py-1 text-xs font-semibold transition ${
+                            activeProductCategory === category
+                              ? 'bg-white text-zinc-900 shadow-sm'
+                              : 'bg-zinc-200 text-zinc-700'
+                          }`}
+                          onClick={() => setActiveProductCategory(category)}
+                        >
+                          {t(`products.categories.${category}`)}
+                        </button>
+                      ))}
+                    </div>
+
+                    <div className="space-y-1">
+                      {productColumnsByCategory[activeProductCategory].flat().map((linkKey) =>
+                        (() => {
+                          const Icon = productLinkIcons[linkKey];
+                          return (
+                            <Link
+                              key={`mobile-${linkKey}`}
+                              href={solutionHref(linkKey)}
+                              className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium text-zinc-700 hover:bg-white"
+                            >
+                              <Icon className={menuItemIconClassName} aria-hidden="true" />
+                              {t(`products.links.${linkKey}`)}
+                            </Link>
+                          );
+                        })(),
+                      )}
+                    </div>
+                  </div>
+                ) : null}
+              </li>
+
+              <li>
+                <button
+                  type="button"
+                  className="flex w-full items-center justify-between rounded-md px-3 py-2 text-left text-sm font-medium text-zinc-700 hover:bg-zinc-100"
+                  onClick={() =>
+                    setMobileSection((prev) => (prev === 'aboutUs' ? null : 'aboutUs'))
+                  }
+                >
+                  <span>{t('topLevel.aboutUs')}</span>
+                  <ChevronDown
+                    className={`ml-1 inline-block h-4 w-4 transition-transform duration-150 ${
+                      mobileSection === 'aboutUs' ? 'rotate-180' : 'rotate-0'
+                    }`}
+                    aria-hidden="true"
+                  />
+                </button>
+                {mobileSection === 'aboutUs' ? (
+                  <div className="mt-2 rounded-xl bg-zinc-100 p-3">
+                    {aboutUsLinks.map((link) =>
+                      (() => {
+                        const Icon = aboutUsLinkIcons[link];
+                        return (
+                          <Link
+                            key={`mobile-${link}`}
+                            href={aboutUsHref(link)}
+                            className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium text-zinc-700 hover:bg-white"
+                          >
+                            <Icon className={menuItemIconClassName} aria-hidden="true" />
+                            {t(`aboutUs.${link}`)}
+                          </Link>
+                        );
+                      })(),
+                    )}
+                  </div>
+                ) : null}
+              </li>
+
+              <li>
+                <button
+                  type="button"
+                  className="flex w-full items-center justify-between rounded-md px-3 py-2 text-left text-sm font-medium text-zinc-700 hover:bg-zinc-100"
+                  onClick={() =>
+                    setMobileSection((prev) => (prev === 'training' ? null : 'training'))
+                  }
+                >
+                  <span>{t('topLevel.training')}</span>
+                  <ChevronDown
+                    className={`ml-1 inline-block h-4 w-4 transition-transform duration-150 ${
+                      mobileSection === 'training' ? 'rotate-180' : 'rotate-0'
+                    }`}
+                    aria-hidden="true"
+                  />
+                </button>
+                {mobileSection === 'training' ? (
+                  <div className="mt-2 rounded-xl bg-zinc-100 p-3">
+                    {trainingLinks.map((link) =>
+                      (() => {
+                        const Icon = trainingLinkIcons[link];
+                        return (
+                          <Link
+                            key={`mobile-${link}`}
+                            href={trainingHref(link)}
+                            className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium text-zinc-700 hover:bg-white"
+                          >
+                            <Icon className={menuItemIconClassName} aria-hidden="true" />
+                            {t(`training.${link}`)}
+                          </Link>
+                        );
+                      })(),
+                    )}
+                  </div>
+                ) : null}
+              </li>
+
+              <li>
+                <Link
+                  href={supportHref}
+                  className="block rounded-md px-3 py-2 text-sm font-medium text-zinc-700 hover:bg-zinc-100"
+                >
+                  {t('topLevel.support')}
                 </Link>
-              ))}
+              </li>
+            </ul>
+
+            <ul className="mt-3">
+              <li className="py-2">
+                <Link href={askForDemoHref}>
+                  <CtaButton label={t('cta.askForDemo')} variant="orangeGradient" size="xs" />
+                </Link>
+              </li>
+              <li className="py-2">
+                <DropdownCtaButton
+                  key={`mobile-login-${loginDropdownCloseSignal}`}
+                  label={t('cta.logIn')}
+                  variant="blue"
+                  size="xs"
+                  options={logInOptions}
+                  className="w-full"
+                  align="left"
+                  menuClassName="w-full min-w-0"
+                />
+              </li>
+            </ul>
+
+            <div className="mt-3 border-t border-zinc-200 pt-3">
+              <p className="px-3 text-xs font-semibold uppercase tracking-wide text-zinc-500">
+                {t('languageTitle')}
+              </p>
+              <div className="mt-2 space-y-1">
+                {languageLinks.map((item) => (
+                  <Link
+                    key={item.routeLocale}
+                    href={item.href}
+                    className={`block rounded-md px-3 py-2 text-sm transition ${
+                      item.isActive ? 'bg-zinc-900 text-white' : 'text-zinc-700 hover:bg-zinc-100'
+                    }`}
+                    onClick={() => {
+                      setIsMobileOpen(false);
+                      setMobileSection(null);
+                    }}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-      ) : null}
-
+        ) : null}
       </header>
 
       {isSearchOpen ? (
@@ -744,7 +773,9 @@ export default function Navbar() {
                 </button>
               </div>
 
-              <p className="mt-4 px-1 text-sm text-zinc-500">Type at least 2 characters to start searching.</p>
+              <p className="mt-4 px-1 text-sm text-zinc-500">
+                Type at least 2 characters to start searching.
+              </p>
             </div>
           </div>
         </div>

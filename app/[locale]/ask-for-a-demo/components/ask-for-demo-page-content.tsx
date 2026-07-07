@@ -4,7 +4,10 @@ import { ArrowRight, BadgeCheck, Globe, Headset } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { useMemo, useState } from 'react';
 import type { CountryOption } from '@/app/lib/countries';
-import { demoRequestSchema, type DemoRequestErrors } from '../../components/home/demo-section/zod-validations';
+import {
+  demoRequestSchema,
+  type DemoRequestErrors,
+} from '../../components/home/demo-section/zod-validations';
 
 type Props = {
   countries: CountryOption[];
@@ -24,23 +27,29 @@ export default function AskForDemoPageContent({ countries, locale }: Props) {
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [fieldErrors, setFieldErrors] = useState<DemoRequestErrors>({});
 
-  const highlightItems = useMemo<HighlightItem[]>(() => [
-    { id: 'users', text: t('highlights.users'), icon: Globe },
-    { id: 'support', text: t('highlights.support'), icon: Headset },
-    { id: 'security', text: t('highlights.security'), icon: BadgeCheck },
-  ], [t]);
+  const highlightItems = useMemo<HighlightItem[]>(
+    () => [
+      { id: 'users', text: t('highlights.users'), icon: Globe },
+      { id: 'support', text: t('highlights.support'), icon: Headset },
+      { id: 'security', text: t('highlights.security'), icon: BadgeCheck },
+    ],
+    [t],
+  );
 
-  const solutions = useMemo(() => [
-    t('solutions.cards.0'),
-    t('solutions.cards.1'),
-    t('solutions.cards.2'),
-    t('solutions.cards.3'),
-    t('solutions.cards.4'),
-    t('solutions.cards.5'),
-    t('solutions.cards.6'),
-    t('solutions.cards.7'),
-    t('solutions.cards.8'),
-  ], [t]);
+  const solutions = useMemo(
+    () => [
+      t('solutions.cards.0'),
+      t('solutions.cards.1'),
+      t('solutions.cards.2'),
+      t('solutions.cards.3'),
+      t('solutions.cards.4'),
+      t('solutions.cards.5'),
+      t('solutions.cards.6'),
+      t('solutions.cards.7'),
+      t('solutions.cards.8'),
+    ],
+    [t],
+  );
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -243,7 +252,9 @@ export default function AskForDemoPageContent({ countries, locale }: Props) {
                 <div className="mb-3 rounded-full bg-brand-orange-light/20 p-3 text-brand-orange-dark">
                   <Icon className="h-9 w-9" strokeWidth={1.8} />
                 </div>
-                <p className="max-w-[22ch] text-[1.05rem] leading-snug text-brand-blue">{item.text}</p>
+                <p className="max-w-[22ch] text-[1.05rem] leading-snug text-brand-blue">
+                  {item.text}
+                </p>
               </article>
             );
           })}

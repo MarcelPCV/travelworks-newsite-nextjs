@@ -13,10 +13,10 @@ type Props = {
 };
 
 export default function PlanningDemoSection({ countries, locale, model }: Props) {
-  const [isSubmitting, setIsSubmitting]   = useState(false);
-  const [status, setStatus]               = useState<'idle' | 'success' | 'error'>('idle');
-  const [errorMessage, setErrorMessage]   = useState<string | null>(null);
-  const [fieldErrors, setFieldErrors]     = useState<DemoRequestErrors>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const [fieldErrors, setFieldErrors] = useState<DemoRequestErrors>({});
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -32,13 +32,13 @@ export default function PlanningDemoSection({ countries, locale, model }: Props)
       const errors: DemoRequestErrors = {};
       for (const issue of result.error.issues) {
         const key = issue.path[0] as keyof DemoRequestErrors;
-        if (!errors[key]) errors[key] = issue.message;   // keep first error per field
+        if (!errors[key]) errors[key] = issue.message; // keep first error per field
       }
       setFieldErrors(errors);
       return;
     }
 
-    setFieldErrors({});   // clear stale errors before submitting
+    setFieldErrors({}); // clear stale errors before submitting
     setIsSubmitting(true);
     setStatus('idle');
     setErrorMessage(null);
@@ -91,11 +91,17 @@ export default function PlanningDemoSection({ countries, locale, model }: Props)
                       name={field.name}
                       type={field.type ?? 'text'}
                       placeholder={field.placeholder}
-                      aria-describedby={fieldErrors[field.name as keyof DemoRequestErrors] ? `${field.id}-error` : undefined}
+                      aria-describedby={
+                        fieldErrors[field.name as keyof DemoRequestErrors]
+                          ? `${field.id}-error`
+                          : undefined
+                      }
                       className={`mt-2 w-full border-b bg-transparent py-2 text-[1.2rem] outline-none
-                        ${fieldErrors[field.name as keyof DemoRequestErrors]
-                          ? 'border-red-500'
-                          : 'border-neutral-border'}`}
+                        ${
+                          fieldErrors[field.name as keyof DemoRequestErrors]
+                            ? 'border-red-500'
+                            : 'border-neutral-border'
+                        }`}
                     />
 
                     {fieldErrors[field.name as keyof DemoRequestErrors] && (
@@ -120,7 +126,9 @@ export default function PlanningDemoSection({ countries, locale, model }: Props)
                   >
                     <option value="">{model.form.country.placeholder}</option>
                     {countries.map((c) => (
-                      <option key={c.value} value={c.value}>{c.label}</option>
+                      <option key={c.value} value={c.value}>
+                        {c.label}
+                      </option>
                     ))}
                   </select>
 
@@ -141,9 +149,7 @@ export default function PlanningDemoSection({ countries, locale, model }: Props)
                 <ArrowRight className="h-5 w-5" />
               </button>
 
-              {status === 'success' && (
-                <p className="text-green-600">Request sent successfully.</p>
-              )}
+              {status === 'success' && <p className="text-green-600">Request sent successfully.</p>}
               {status === 'error' && (
                 <p className="text-red-600">{errorMessage ?? 'Something went wrong.'}</p>
               )}

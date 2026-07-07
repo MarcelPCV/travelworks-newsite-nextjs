@@ -10,7 +10,7 @@ export type ComparisonTrainingCard = {
 };
 
 export type ConmparisonTraining = {
-  blockType: "ConmparisonTraining";
+  blockType: 'ConmparisonTraining';
   heading: string;
   knowledgeBase: ComparisonTrainingCard;
   trainingPlatform: ComparisonTrainingCard;

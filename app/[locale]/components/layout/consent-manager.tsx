@@ -40,8 +40,7 @@ export default function ConsentManager() {
                   className="underline underline-offset-2 decoration-current transition-opacity hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
                 >
                   {t('privacyPolicyLabel')}
-                </a>
-                {' '}
+                </a>{' '}
                 {t('betweenLinksText')}{' '}
                 <a
                   href={t('cookiePolicyUrl')}

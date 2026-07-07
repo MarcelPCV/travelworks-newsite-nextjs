@@ -3,7 +3,7 @@ import { ReactNode } from 'react';
 export type ImagePosition = 'left' | 'right';
 
 export type SplitBannerSectionModel = {
-  blockType: "SplitBannerSection";
+  blockType: 'SplitBannerSection';
   title: string;
   heading: string;
   description: ReactNode;
@@ -16,4 +16,4 @@ export type SplitBannerSectionModel = {
   ctaLabel?: string;
   ctaLink?: string;
   backgroundColor?: string;
-}
+};

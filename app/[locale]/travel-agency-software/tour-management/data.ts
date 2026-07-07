@@ -1,9 +1,13 @@
-import { PageHeroModel } from "../../components/shared/page-hero/type";
-import { CardIcon, CardsIconsSection,  } from "../../components/shared/cards-icons/type";
-import { DollarSign, Monitor, Rocket, Settings } from "lucide-react";
-import { SplitSectionModel } from "../../components/shared/SplitSection/type";
-import { SplitBannerSectionModel } from "../../components/shared/split-banner-section/type";
-import { ComparisonSolution, ComparisonSolutionRow, ComparisonColumn } from "../../components/shared/comparison-solution-section/type";
+import { PageHeroModel } from '../../components/shared/page-hero/type';
+import { CardIcon, CardsIconsSection } from '../../components/shared/cards-icons/type';
+import { DollarSign, Monitor, Rocket, Settings } from 'lucide-react';
+import { SplitSectionModel } from '../../components/shared/SplitSection/type';
+import { SplitBannerSectionModel } from '../../components/shared/split-banner-section/type';
+import {
+  ComparisonSolution,
+  ComparisonSolutionRow,
+  ComparisonColumn,
+} from '../../components/shared/comparison-solution-section/type';
 
 export type Layout =
   | PageHeroModel
@@ -52,14 +56,14 @@ const defaultCards: CardIcon[] = [
 ];
 
 const defaultColumns: ComparisonColumn[] = [
-  { 
+  {
     id: 0,
-     label: 'block-type-comparison-solution.columns.0.label' 
+    label: 'block-type-comparison-solution.columns.0.label',
   },
-  { 
-    id: 1, 
-    label: 'block-type-comparison-solution.columns.1.label' 
-  }
+  {
+    id: 1,
+    label: 'block-type-comparison-solution.columns.1.label',
+  },
 ];
 
 const defaultRows: ComparisonSolutionRow[] = [
@@ -93,7 +97,6 @@ const defaultRows: ComparisonSolutionRow[] = [
     values: {
       '0': true,
       '1': true,
-
     },
   },
   {
@@ -101,7 +104,7 @@ const defaultRows: ComparisonSolutionRow[] = [
     label: 'block-type-comparison-solution.rows.4.label',
     values: {
       '0': true,
-      '1': true
+      '1': true,
     },
   },
   {
@@ -171,51 +174,51 @@ const defaultRows: ComparisonSolutionRow[] = [
 ];
 
 export const IntegrationsPageData: Page = {
-  slug: "travel-agency-software/multiple-integration",
+  slug: 'travel-agency-software/multiple-integration',
   layout: [
     {
-      blockType: "PageHero",
-      title: "block-type-page-hero.title",
-      description:"block-type-page-hero.description",
-      mobileTopImageSrc:"block-type-page-hero.mobileTopImageSrc",
-      desktopMainImageSrc:"block-type-page-hero.desktopMainImageSrc",
-      logoImageSrc: "block-type-page-hero.logoImageSrc",
-      ctaImageSrc: "block-type-page-hero.ctaImageSrc",
+      blockType: 'PageHero',
+      title: 'block-type-page-hero.title',
+      description: 'block-type-page-hero.description',
+      mobileTopImageSrc: 'block-type-page-hero.mobileTopImageSrc',
+      desktopMainImageSrc: 'block-type-page-hero.desktopMainImageSrc',
+      logoImageSrc: 'block-type-page-hero.logoImageSrc',
+      ctaImageSrc: 'block-type-page-hero.ctaImageSrc',
     },
     {
-      blockType: "CardsIcons",
+      blockType: 'CardsIcons',
       cards: defaultCards,
-      title: "block-type-cards-icons.title",
+      title: 'block-type-cards-icons.title',
     },
     {
-      blockType: "SplitSection",
-      heading: "block-type-split.heading",
-      description: "block-type-split.description",
-      imageSrc: "block-type-split.imageSrc",
-      imageAlt: "block-type-split.imageAlt",
-      imagePosition: "left"
+      blockType: 'SplitSection',
+      heading: 'block-type-split.heading',
+      description: 'block-type-split.description',
+      imageSrc: 'block-type-split.imageSrc',
+      imageAlt: 'block-type-split.imageAlt',
+      imagePosition: 'left',
     },
     {
-      blockType: "SplitBannerSection",
-      title: "block-type-split2.title",
-      heading: "block-type-split2.heading",
-      description: "block-type-split2.description",
-      imageSrc: "block-type-split2.imageSrc",
-      imageAlt: "block-type-split2.imageAlt",
-      imagePosition: "left",
-      imageSecondarySrc: "block-type-split2.imageSecondarySrc",
-      imageSecondaryAlt: "block-type-split2.imageSecondaryAlt",
-      ctaLabel: "block-type-split2.ctaLabel",
-      ctaLink: "block-type-split2.ctaLink",
-      backgroundColor: "#005BAA"
+      blockType: 'SplitBannerSection',
+      title: 'block-type-split2.title',
+      heading: 'block-type-split2.heading',
+      description: 'block-type-split2.description',
+      imageSrc: 'block-type-split2.imageSrc',
+      imageAlt: 'block-type-split2.imageAlt',
+      imagePosition: 'left',
+      imageSecondarySrc: 'block-type-split2.imageSecondarySrc',
+      imageSecondaryAlt: 'block-type-split2.imageSecondaryAlt',
+      ctaLabel: 'block-type-split2.ctaLabel',
+      ctaLink: 'block-type-split2.ctaLink',
+      backgroundColor: '#005BAA',
     },
     {
-      blockType: "ComparisonSolution",
-      heading: "block-type-comparison-solution.heading",
-      imageSrc: "block-type-comparison-solution.imageSrc",
-      imageAlt: "block-type-comparison-solution.imageAlt",
+      blockType: 'ComparisonSolution',
+      heading: 'block-type-comparison-solution.heading',
+      imageSrc: 'block-type-comparison-solution.imageSrc',
+      imageAlt: 'block-type-comparison-solution.imageAlt',
       columns: defaultColumns,
-      rows: defaultRows
-    }
-  ]
+      rows: defaultRows,
+    },
+  ],
 };

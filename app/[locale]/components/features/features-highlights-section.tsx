@@ -24,11 +24,12 @@ function HighlightIcon({ item }: { item: FeaturesCardsHighlights }) {
   );
 }
 
-export default function FeaturesHighlightsSection({
-  cards,
-}: FeaturesHighlightsSectionProps) {
+export default function FeaturesHighlightsSection({ cards }: FeaturesHighlightsSectionProps) {
   return (
-    <section className="w-full mx-auto max-w-7xl rounded-2xl bg-[#e7e7e7] px-4 py-8 sm:px-6 lg:px-10 lg:py-12" aria-label="Feature highlights">
+    <section
+      className="w-full mx-auto max-w-7xl rounded-2xl bg-[#e7e7e7] px-4 py-8 sm:px-6 lg:px-10 lg:py-12"
+      aria-label="Feature highlights"
+    >
       <div className="grid grid-cols-1 gap-x-16 gap-y-12 lg:grid-cols-2 lg:gap-y-14">
         {cards.map((item) => {
           return (
@@ -48,7 +49,10 @@ export default function FeaturesHighlightsSection({
                 </div>
 
                 {item.linkUrl && item.linkTitle && (
-                  <Link href={item.linkUrl} className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-white bg-brand-blue px-2 py-1 rounded-md">
+                  <Link
+                    href={item.linkUrl}
+                    className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-white bg-brand-blue px-2 py-1 rounded-md"
+                  >
                     {item.linkTitle}
                   </Link>
                 )}

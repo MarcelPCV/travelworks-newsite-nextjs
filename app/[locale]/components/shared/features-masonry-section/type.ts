@@ -6,10 +6,9 @@ export type FeatureMasonryCard = {
   ctaHref?: string;
   ctaLabel?: string;
   hasPreview?: boolean;
-}
+};
 
 export type FeatureMasonry = {
-  blockType: "FeatureMasonry";
+  blockType: 'FeatureMasonry';
   cards: FeatureMasonryCard[];
-
 };

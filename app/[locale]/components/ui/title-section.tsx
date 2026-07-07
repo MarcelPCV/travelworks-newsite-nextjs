@@ -1,10 +1,5 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { clsx } from 'clsx';
-import { ReactNode } from 'react';
-
-// This is a Server Component by default (no 'use client' needed —
-// it has no state, effects, or event handlers). If you later add
-// interactivity, add 'use client' at the top of the file.
 
 type Alignment = 'left' | 'center' | 'right';
 type Size = 'normal' | 'large' | 'extra-large';
@@ -17,6 +12,7 @@ interface TitleSectionProps {
   textCase?: TextCase;
   color?: string;
   className?: string;
+  html?: boolean;
 }
 
 const sizeClassMap: Record<Size, string> = {
@@ -43,24 +39,30 @@ export default function TitleSection({
   textCase = 'normal',
   color,
   className,
+  html = false,
 }: TitleSectionProps) {
   const isTailwindColorClass = color?.startsWith('text-');
-  const isStringTitle = typeof title === 'string';
+
+  const titleContent =
+    html && typeof title === 'string' ? (
+      <span dangerouslySetInnerHTML={{ __html: title }} />
+    ) : (
+      title
+    );
 
   return (
-    <div className={clsx('py-5 sm:py-5', alignmentClassMap[alignment], className)}>
+    <div className={clsx('py-5 sm:py-5 uppercase', alignmentClassMap[alignment], className)}>
       <h2
         className={clsx(
-          'font-medium uppercase tracking-tight text-brand-blue',
+          'font-medium tracking-tight text-brand-blue',
           sizeClassMap[size],
           caseClassMap[textCase],
-          isTailwindColorClass && color
+          isTailwindColorClass && color,
         )}
         style={!isTailwindColorClass && color ? { color } : undefined}
-        aria-label={`${title} section title`}
-        {...(isStringTitle && { dangerouslySetInnerHTML: { __html: title } })}
+        aria-label={typeof title === 'string' ? `${title} section title` : undefined}
       >
-        {!isStringTitle && title}
+        {titleContent}
       </h2>
     </div>
   );

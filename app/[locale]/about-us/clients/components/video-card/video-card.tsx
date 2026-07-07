@@ -1,5 +1,5 @@
-import Image from "next/image";
-import { Play } from "lucide-react";
+import Image from 'next/image';
+import { Play } from 'lucide-react';
 
 type VideoTestimonial = {
   id: string;
@@ -14,17 +14,10 @@ type Props = {
   video: VideoTestimonial;
 };
 
-export default function VideoCard({
-  video,
-}: Props) {
+export default function VideoCard({ video }: Props) {
   return (
     <article>
-      <a
-        href={video.videoUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="bg-gray-700"
-      >
+      <a href={video.videoUrl} target="_blank" rel="noopener noreferrer" className="bg-gray-700">
         <div className="group relative aspect-video overflow-hidden rounded-xl bg-gray-600">
           <Image
             fill
@@ -41,18 +34,12 @@ export default function VideoCard({
         </div>
       </a>
 
-      <p className="mt-6 text-sm leading-7">
-        {video.quote}
-      </p>
+      <p className="mt-6 text-sm leading-7">{video.quote}</p>
 
       <div className="mt-4">
-        <h3 className="font-semibold">
-          {video.author}
-        </h3>
+        <h3 className="font-semibold">{video.author}</h3>
 
-        <p className="text-muted-foreground text-sm">
-          {video.company}
-        </p>
+        <p className="text-muted-foreground text-sm">{video.company}</p>
       </div>
     </article>
   );

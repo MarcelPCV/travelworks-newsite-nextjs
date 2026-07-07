@@ -1,22 +1,25 @@
-import { PageHeroModel } from "../../components/shared/page-hero/type";
-import { SplitSectionModel } from "../../components/shared/SplitSection/type";
-import { FeatureMasonry, FeatureMasonryCard } from "../../components/shared/features-masonry-section/type";
-import { YoutubeVideoModel } from "../../components/shared/video/type";
-import { ComparisonSolution, ComparisonSolutionRow, ComparisonColumn } from "../../components/shared/comparison-solution-section/type";
+import { PageHeroModel } from '../../components/shared/page-hero/type';
+import { SplitSectionModel } from '../../components/shared/SplitSection/type';
+import {
+  FeatureMasonry,
+  FeatureMasonryCard,
+} from '../../components/shared/features-masonry-section/type';
+import { YoutubeVideoModel } from '../../components/shared/video/type';
+import {
+  ComparisonSolution,
+  ComparisonSolutionRow,
+  ComparisonColumn,
+} from '../../components/shared/comparison-solution-section/type';
 
 export type Layout =
-  | PageHeroModel
-  | SplitSectionModel
-  | FeatureMasonry
-  | YoutubeVideoModel
-  | ComparisonSolution;
+  PageHeroModel | SplitSectionModel | FeatureMasonry | YoutubeVideoModel | ComparisonSolution;
 
 export type Page = {
   slug: string;
-//   seo: {
-//     titleKey: string;
-//     descriptionKey: string;
-//   };
+  //   seo: {
+  //     titleKey: string;
+  //     descriptionKey: string;
+  //   };
   layout: Layout[];
 };
 
@@ -100,17 +103,17 @@ const defaultCards: FeatureMasonryCard[] = [
 ];
 
 const defaultColumns: ComparisonColumn[] = [
-  { 
+  {
     id: 0,
-     label: 'block-type-comparison-solution.columns.0.label' 
+    label: 'block-type-comparison-solution.columns.0.label',
   },
-  { 
-    id: 1, 
-    label: 'block-type-comparison-solution.columns.1.label' 
+  {
+    id: 1,
+    label: 'block-type-comparison-solution.columns.1.label',
   },
-  { 
-    id: 2, 
-    label: 'block-type-comparison-solution.columns.2.label' 
+  {
+    id: 2,
+    label: 'block-type-comparison-solution.columns.2.label',
   },
 ];
 
@@ -234,52 +237,51 @@ const defaultRows: ComparisonSolutionRow[] = [
   },
 ];
 
-
 export const FeaturesPage: Page = {
-  slug: "travel-agency-software/features",
+  slug: 'travel-agency-software/features',
 
-//   seo: {
-//     titleKey: "travel-agency-software.features.seo.title",
-//     descriptionKey: "travel-agency-software.features.seo.description",
-//       "travel-agency-software.features.seo.description",
-//   },
+  //   seo: {
+  //     titleKey: "travel-agency-software.features.seo.title",
+  //     descriptionKey: "travel-agency-software.features.seo.description",
+  //       "travel-agency-software.features.seo.description",
+  //   },
 
   layout: [
     {
-      blockType: "PageHero",
-      title: "block-type-page-hero.title",
-      description:"block-type-page-hero.description",
-      mobileTopImageSrc:"block-type-page-hero.mobileTopImageSrc",
-      desktopMainImageSrc:"block-type-page-hero.desktopMainImageSrc",
-      logoImageSrc: "block-type-page-hero.logoImageSrc",
-      ctaImageSrc: "block-type-page-hero.ctaImageSrc",
+      blockType: 'PageHero',
+      title: 'block-type-page-hero.title',
+      description: 'block-type-page-hero.description',
+      mobileTopImageSrc: 'block-type-page-hero.mobileTopImageSrc',
+      desktopMainImageSrc: 'block-type-page-hero.desktopMainImageSrc',
+      logoImageSrc: 'block-type-page-hero.logoImageSrc',
+      ctaImageSrc: 'block-type-page-hero.ctaImageSrc',
     },
     {
-      blockType: "SplitSection",
-      heading: "block-type-split.heading",
-      description: "block-type-split.description",
-      imageSrc: "block-type-split.imageSrc",
-      imageAlt: "block-type-split.imageAlt",
-      imagePosition: "left"
+      blockType: 'SplitSection',
+      heading: 'block-type-split.heading',
+      description: 'block-type-split.description',
+      imageSrc: 'block-type-split.imageSrc',
+      imageAlt: 'block-type-split.imageAlt',
+      imagePosition: 'left',
     },
     {
-      blockType: "FeatureMasonry",
+      blockType: 'FeatureMasonry',
       cards: defaultCards,
     },
     {
-      blockType: "YoutubeVideo",
-      heading: "block-type-youtube-video.heading",
-      videoId: "block-type-youtube-video.videoId",
-      channelLabel: "block-type-youtube-video.channelLabel",
-      description: "block-type-youtube-video.description"
+      blockType: 'YoutubeVideo',
+      heading: 'block-type-youtube-video.heading',
+      videoId: 'block-type-youtube-video.videoId',
+      channelLabel: 'block-type-youtube-video.channelLabel',
+      description: 'block-type-youtube-video.description',
     },
     {
-      blockType: "ComparisonSolution",
-      heading: "block-type-comparison-solution.heading",
-      imageSrc: "block-type-comparison-solution.imageSrc",
-      imageAlt: "block-type-comparison-solution.imageAlt",
+      blockType: 'ComparisonSolution',
+      heading: 'block-type-comparison-solution.heading',
+      imageSrc: 'block-type-comparison-solution.imageSrc',
+      imageAlt: 'block-type-comparison-solution.imageAlt',
       columns: defaultColumns,
-      rows: defaultRows
-    }
+      rows: defaultRows,
+    },
   ],
 };

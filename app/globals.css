@@ -1,5 +1,5 @@
-@import "tailwindcss";
-@import "@c15t/nextjs/styles.css";
+@import 'tailwindcss';
+@import '@c15t/nextjs/styles.css';
 
 :root {
   --background: #ffffff;

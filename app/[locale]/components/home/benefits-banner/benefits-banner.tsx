@@ -1,5 +1,5 @@
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
-import { BenefitsBanner } from "@/app/[locale]/components/home/benefits-banner/type";
+import { BenefitsBanner } from '@/app/[locale]/components/home/benefits-banner/type';
 
 export default function BenefitsBannerSection({
   heading,
@@ -9,7 +9,10 @@ export default function BenefitsBannerSection({
   hideButton,
 }: BenefitsBanner) {
   return (
-    <section className="mx-auto max-w-7xl relative overflow-hidden rounded-2xl bg-neutral-background" aria-labelledby="benefits-banner-title">
+    <section
+      className="mx-auto max-w-7xl relative overflow-hidden rounded-2xl bg-neutral-background"
+      aria-labelledby="benefits-banner-title"
+    >
       <div className="pointer-events-none absolute inset-0">
         <span className="absolute -left-20 top-0 h-[140%] w-28 rotate-45 bg-neutral-border/45" />
         <span className="absolute right-[-5.5rem] top-0 h-[135%] w-28 -rotate-45 bg-neutral-border/40" />
@@ -18,30 +21,28 @@ export default function BenefitsBannerSection({
       </div>
 
       <div className="flex justify-center text-blue-900 text-4xl uppercase">
-          <h2>
-            {heading}
-          </h2>
+        <h2>{heading}</h2>
       </div>
 
       <div className="relative grid grid-cols-1 gap-8 px-5 py-8 sm:px-8 lg:grid-cols-[1.15fr_1fr] lg:gap-10 lg:px-12 lg:py-12">
         <div className="flex items-end justify-center lg:justify-start">
           <div className="w-full max-w-3xl rounded-2xl border border-neutral-border/80 bg-neutral-canvas p-3 shadow-[0_16px_38px_rgba(15,23,42,0.18)] sm:p-4">
-            <div className="flex aspect-[16/10] items-center justify-center rounded-xl border-2 border-dashed border-brand-blue/35 bg-[linear-gradient(180deg,#ffffff_0%,#eef3fb_100%)] px-6 text-center text-sm font-semibold uppercase tracking-[0.14em] text-brand-blue/80 sm:text-base">
-            </div>
+            <div className="flex aspect-[16/10] items-center justify-center rounded-xl border-2 border-dashed border-brand-blue/35 bg-[linear-gradient(180deg,#ffffff_0%,#eef3fb_100%)] px-6 text-center text-sm font-semibold uppercase tracking-[0.14em] text-brand-blue/80 sm:text-base"></div>
           </div>
         </div>
 
         <div className="mx-auto flex w-full max-w-xl flex-col justify-center lg:mx-0 lg:pr-4">
-
           <ul className="space-y-4 sm:space-y-5" aria-label={heading}>
-            {items && items.map((item) => (
-              <li key={item.id} className="flex items-start gap-3.5 text-brand-blue sm:gap-4">
-                <CheckCircle2 className="mt-0.5 h-7 w-7 shrink-0 text-brand-orange-dark" strokeWidth={2.2} />
-                <span className="text-lg font-medium leading-tight">
-                  {item.label}
-                </span>
-              </li>
-            ))}
+            {items &&
+              items.map((item) => (
+                <li key={item.id} className="flex items-start gap-3.5 text-brand-blue sm:gap-4">
+                  <CheckCircle2
+                    className="mt-0.5 h-7 w-7 shrink-0 text-brand-orange-dark"
+                    strokeWidth={2.2}
+                  />
+                  <span className="text-lg font-medium leading-tight">{item.label}</span>
+                </li>
+              ))}
           </ul>
 
           {!hideButton ? (

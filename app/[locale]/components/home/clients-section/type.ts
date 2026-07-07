@@ -6,7 +6,7 @@ export type Client = {
 };
 
 export type ClientsSectionModel = {
-  blockType: "ClientTrustSection";
+  blockType: 'ClientTrustSection';
   title: ReactNode;
   clients: Client[];
 };

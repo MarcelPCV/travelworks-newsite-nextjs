@@ -5,7 +5,10 @@ import { NewsTicker } from './type';
 
 export default function NewsTickerBar({ sectionTitle, newsLabel, newsCtaHref, phone }: NewsTicker) {
   return (
-    <section className="mx-auto w-full max-w-7xl border border-zinc-300 rounded-sm bg-[#f5f5f5]" aria-label={sectionTitle}>
+    <section
+      className="mx-auto w-full max-w-7xl border border-zinc-300 rounded-sm bg-[#f5f5f5]"
+      aria-label={sectionTitle}
+    >
       <div className="mx-auto flex w-full max-w-7xl items-center gap-3 px-4 py-1 sm:px-6 lg:px-8">
         <span className="shrink-0 text-[13px] font-semibold uppercase leading-none tracking-tight text-zinc-950">
           {sectionTitle}
@@ -14,9 +17,7 @@ export default function NewsTickerBar({ sectionTitle, newsLabel, newsCtaHref, ph
         <span className="h-4 w-px shrink-0 bg-brand-blue" aria-hidden="true" />
 
         <div className="min-w-0 flex-1 truncate text-[13px] font-medium text-zinc-800">
-          <a href={newsCtaHref}>
-          {newsLabel}
-          </a>
+          <a href={newsCtaHref}>{newsLabel}</a>
         </div>
 
         <a

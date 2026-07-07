@@ -2,7 +2,14 @@
 
 import Link from 'next/link';
 import { ChevronDown } from 'lucide-react';
-import { useEffect, useId, useRef, useState, type ButtonHTMLAttributes, type ReactNode } from 'react';
+import {
+  useEffect,
+  useId,
+  useRef,
+  useState,
+  type ButtonHTMLAttributes,
+  type ReactNode,
+} from 'react';
 import CtaButton, { type CtaButtonProps } from './cta-button';
 
 type DropdownCtaButtonVariant = NonNullable<CtaButtonProps['variant']>;
@@ -137,7 +144,12 @@ export default function DropdownCtaButton({
           clearScheduledClose();
           setIsOpen((prev) => !prev);
         }}
-        icon={<ChevronDown className={`transition-transform duration-150 ${isOpen ? 'rotate-180' : 'rotate-0'}`} aria-hidden="true" />}
+        icon={
+          <ChevronDown
+            className={`transition-transform duration-150 ${isOpen ? 'rotate-180' : 'rotate-0'}`}
+            aria-hidden="true"
+          />
+        }
         iconPosition="after"
         {...props}
       />
@@ -147,7 +159,9 @@ export default function DropdownCtaButton({
         role="menu"
         aria-hidden={!isOpen}
         className={`absolute ${alignmentClassName} top-full z-50 mt-3 w-56 rounded-xl border border-zinc-300 bg-[#e5e5e5] p-3 shadow-lg transition duration-200 motion-reduce:transition-none ${
-          isOpen ? 'visible translate-y-0 opacity-100' : 'pointer-events-none invisible -translate-y-1 opacity-0'
+          isOpen
+            ? 'visible translate-y-0 opacity-100'
+            : 'pointer-events-none invisible -translate-y-1 opacity-0'
         } ${menuClassName ?? ''}`}
       >
         <ul className="space-y-1">
@@ -155,7 +169,11 @@ export default function DropdownCtaButton({
             const content = (
               <>
                 {option.icon ? (
-                  <span className={`inline-flex shrink-0 items-center justify-center ${optionIconClassName} [&>svg]:text-zinc-800`}>{option.icon}</span>
+                  <span
+                    className={`inline-flex shrink-0 items-center justify-center ${optionIconClassName} [&>svg]:text-zinc-800`}
+                  >
+                    {option.icon}
+                  </span>
                 ) : null}
                 <span>{option.label}</span>
               </>

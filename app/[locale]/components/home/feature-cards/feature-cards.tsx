@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import Image from 'next/image';
 import Link from 'next/link';
@@ -30,32 +30,30 @@ export default function IconsFeatures(props?: Partial<FeatureCardsSection>) {
   const { title, items = [] } = props ?? {};
 
   return (
-    <section className='w-full mx-auto max-w-7xl rounded-2xl bg-[#e7e7e7] px-5 py-10 sm:px-8 lg:px-10' aria-labelledby="technology-features-heading">
+    <section
+      className="w-full mx-auto max-w-7xl rounded-2xl bg-[#e7e7e7] px-5 py-10 sm:px-8 lg:px-10"
+      aria-labelledby="technology-features-heading"
+    >
       {title && (
-        <TitleSection 
-          title={title} 
-          alignment="center" 
-          size="extra-large" 
-          color="text-brand-blue" 
-        />
+        <TitleSection title={title} alignment="center" size="extra-large" color="text-brand-blue" />
       )}
 
       <div className="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-10">
-         {items.map((featureCard) => {
-           return (
+        {items.map((featureCard) => {
+          return (
             <article
-               key={featureCard.id}
-               className="flex w-[calc(50%-0.75rem)] max-w-44 flex-col items-center text-center sm:w-[calc(33.333%-1.3rem)] md:w-[calc(20%-1.5rem)] xl:w-[calc(14.285%-1.7rem)]"
-             >
+              key={featureCard.id}
+              className="flex w-[calc(50%-0.75rem)] max-w-44 flex-col items-center text-center sm:w-[calc(33.333%-1.3rem)] md:w-[calc(20%-1.5rem)] xl:w-[calc(14.285%-1.7rem)]"
+            >
               <FeatureCards item={featureCard} />
-              <p className="mt-3 max-w-[12ch] text-md font-medium leading-tight text-brand-blue">{featureCard.title}</p>
-             </article>
-           );
-         })}
-       </div>
-      <Link href="">
-
-      </Link>
+              <p className="mt-3 max-w-[12ch] text-md font-medium leading-tight text-brand-blue">
+                {featureCard.title}
+              </p>
+            </article>
+          );
+        })}
+      </div>
+      <Link href=""></Link>
     </section>
   );
 }

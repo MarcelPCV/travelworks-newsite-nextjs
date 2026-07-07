@@ -712,6 +712,80 @@
             }
           }
         }
+      },
+      "trip-details": {
+        "block-type-page-hero": {
+          "title": "",
+          "description": "Découvrez le logiciel Trip Details de TravelWorks, conçu pour connecter vos clients à l'aventure.",
+          "mobileTopImageSrc": "/images/pages/travel-agency-software/trip-details/hero-image.webp",
+          "desktopMainImageSrc": "/images/pages/travel-agency-software/trip-details/hero-image.webp",
+          "logoImageSrc": "/images/pages/travel-agency-software/trip-details/trip-details.png",
+          "ctaImageSrc": ""
+        },
+        "block-type-text-section": {
+          "title": "Un document d’itinéraire de voyage <strong>comme jamais auparavant</strong>",
+          "description": "Avec <strong>Trip Details</strong>, vous pouvez facilement fournir des itinéraires en temps réel dans une présentation élégante, avec des modèles et des couleurs qui reflètent l’esprit de chaque aventure. Gardez vos clients informés et inspirés tout au long de leur voyage. De plus, ils peuvent télécharger leur itinéraire complet en format PDF à tout moment. Accessible, facile à partager ou à imprimer, Trip Details est disponible via :"
+        },
+        "block-type-image-block": {
+          "title": "",
+          "description": "",
+          "imageSrc": "/images/pages/travel-agency-software/trip-details/trip-details-ipad-en.jpg",
+          "altText": "Intégrations multiples",
+          "linkHref": "",
+          "linkText": "",
+          "captionText": "",
+          "ctaLabel": "Demander une démonstration",
+          "ctaLink": "#"
+        },
+        "block-type-share-items": {
+          "0": {
+            "title": "Courriel"
+          },
+          "1": {
+            "title": "Lien Web"
+          },
+          "2": {
+            "title": "PDF"
+          }
+        },
+        "block-type-image-block2": {
+          "title": "CRÉEZ DE MAGNIFIQUES ITINÉRAIRES DE VOYAGE",
+          "description": "Téléversez facilement vos photos dans vos galeries, ajoutez votre contenu et créez de superbes documents de voyage. Rapide, simple et conçu pour offrir un résultat exceptionnel à chaque fois.",
+          "imageSrc": "/images/pages/travel-agency-software/trip-details/easy-to-use-en.webp",
+          "altText": "Intégrations multiples",
+          "linkHref": "",
+          "linkText": "",
+          "captionText": ""
+        },
+        "block-type-image-block3": {
+          "title": "3 designs exceptionnels",
+          "description": "Trip Details propose trois styles de présentation remarquables — Standard, Classique et Moderne — chacun conçu pour mettre en valeur vos itinéraires de voyage. Que vous préfériez une mise en page simple et fonctionnelle, une apparence élégante et intemporelle ou un style audacieux et contemporain, Trip Details offre un design qui s'harmonise parfaitement avec l'image de votre agence.",
+          "imageSrc": "/images/pages/travel-agency-software/trip-details/designs-en.webp",
+          "altText": "Intégrations multiples",
+          "linkHref": "",
+          "linkText": "",
+          "captionText": ""
+        },
+        "block-type-image-block4": {
+          "title": "Couleurs",
+          "description": "Trip Details comprend quatre palettes de couleurs de base pour chacun des trois modèles. Les agences peuvent également personnaliser les couleurs afin de refléter leur identité visuelle*, en collaboration avec notre équipe de soutien.\n\n* Des frais supplémentaires peuvent s’appliquer pour la personnalisation des couleurs.",
+          "imageSrc": "/images/pages/travel-agency-software/trip-details/colors-en.png",
+          "altText": "Options de couleurs pour Trip Details",
+          "linkHref": "",
+          "linkText": "",
+          "captionText": ""
+        },
+        "block-type-image-block5": {
+          "title": "Conçu d'abord pour le mobile",
+          "description": "Vos clients peuvent accéder à leur itinéraire où qu’ils soient, sur n’importe quel appareil. Toujours à jour avec les plus récentes informations, Trip Details est optimisé selon une approche mobile-first afin d’offrir une expérience fluide sur téléphone, tablette et ordinateur.",
+          "imageSrc": "/images/pages/travel-agency-software/trip-details/mobile-first-en.webp",
+          "altText": "Options de couleurs pour Trip Details",
+          "linkHref": "",
+          "linkText": "",
+          "captionText": "",
+          "ctaLabel": "Demander une démonstration",
+          "ctaLink": "#"
+        }
       }
     },
     "training": {
@@ -935,7 +1009,7 @@
           "ctaImageSrc": ""
         },
         "block-type-text-section": {
-          "text": "<p>TravelWorks (une division de PC Voyages) est une entreprise nord-américaine spécialisée dans les logiciels qui œuvre <strong>dans l'industrie du voyage depuis 1988</strong>. Nous sommes devenus <strong>des chefs de file en comptabilité pour agences de voyages</strong> et en <strong>systèmes de back-office, avec des utilisateurs partout dans le monde</strong>. TravelWorks s'intègre à tous les principaux moteurs de réservation et systèmes GDS, et est devenu un outil essentiel pour des milliers d'utilisateurs.</p><p>Nous investissons environ <strong>750 000 $ en recherche et développement chaque année</strong> afin de faire évoluer nos solutions grâce à des <strong>technologies de pointe adaptées aux besoins du marché</strong>.</p><p>Parmi nos services les plus appréciés : des formations à distance efficaces, un soutien technique professionnel avec des délais de réponse très rapides, ainsi que des solutions clés en main incluant, au besoin, l'importation de données provenant d'autres systèmes.</p>"
+          "description": "<p>TravelWorks (une division de PC Voyages) est une entreprise nord-américaine spécialisée dans les logiciels qui œuvre <strong>dans l'industrie du voyage depuis 1988</strong>. Nous sommes devenus <strong>des chefs de file en comptabilité pour agences de voyages</strong> et en <strong>systèmes de back-office, avec des utilisateurs partout dans le monde</strong>. TravelWorks s'intègre à tous les principaux moteurs de réservation et systèmes GDS, et est devenu un outil essentiel pour des milliers d'utilisateurs.</p><p>Nous investissons environ <strong>750 000 $ en recherche et développement chaque année</strong> afin de faire évoluer nos solutions grâce à des <strong>technologies de pointe adaptées aux besoins du marché</strong>.</p><p>Parmi nos services les plus appréciés : des formations à distance efficaces, un soutien technique professionnel avec des délais de réponse très rapides, ainsi que des solutions clés en main incluant, au besoin, l'importation de données provenant d'autres systèmes.</p>"
         },
         "block-type-planning-demo-section": {
           "heading": "Planifier une démonstration",
@@ -963,7 +1037,76 @@
           "ctaImageSrc": ""
         },
         "block-type-text-section": {
-          "text": "<p>L'équipe de TravelWorks est constamment à la recherche de <strong>nouveaux talents</strong>. Faire carrière chez nous, c'est évoluer au sein d'une <strong>équipe dynamique et énergique</strong>, expérimentée dans les <strong>domaines de la technologie et du voyage</strong>.</p><p>Nous sommes convaincus que le succès de notre entreprise repose sur celui de nos employés. C'est pourquoi nous offrons les meilleures conditions afin de créer un <strong>environnement de travail agréable et inspirant</strong> : de spacieux bureaux au centre-ville, une ambiance familiale et détendue, ainsi que diverses activités de groupe entre collègues. Les qualités essentielles pour réussir chez nous sont l'initiative, la <strong>capacité à travailler en équipe</strong> et <strong>la volonté de toujours s'améliorer</strong>.</p><p>Les personnes possédant ces qualités auront une excellente occasion de bâtir une carrière florissante au sein de notre entreprise. Faites-nous parvenir votre candidature à <strong><a>career@travelworkssolution.com</a></strong>.</p>"
+          "description": "<p>L'équipe de TravelWorks est constamment à la recherche de <strong>nouveaux talents</strong>. Faire carrière chez nous, c'est évoluer au sein d'une <strong>équipe dynamique et énergique</strong>, expérimentée dans les <strong>domaines de la technologie et du voyage</strong>.</p><p>Nous sommes convaincus que le succès de notre entreprise repose sur celui de nos employés. C'est pourquoi nous offrons les meilleures conditions afin de créer un <strong>environnement de travail agréable et inspirant</strong> : de spacieux bureaux au centre-ville, une ambiance familiale et détendue, ainsi que diverses activités de groupe entre collègues. Les qualités essentielles pour réussir chez nous sont l'initiative, la <strong>capacité à travailler en équipe</strong> et <strong>la volonté de toujours s'améliorer</strong>.</p><p>Les personnes possédant ces qualités auront une excellente occasion de bâtir une carrière florissante au sein de notre entreprise. Faites-nous parvenir votre candidature à <strong><a>career@travelworkssolution.com</a></strong>.</p>"
+        }
+      },
+      "contact": {
+        "hero": {
+          "title": "Contact"
+        },
+        "form": {
+          "title": "Écrivez-nous",
+          "formName": "Formulaire de contact",
+          "fields": {
+            "fullName": "Nom complet",
+            "email": "Courriel",
+            "phone": "Téléphone",
+            "agencyName": "Nom de l'agence de voyages",
+            "country": "Pays",
+            "topics": "Pour en savoir plus sur :",
+            "message": "Message"
+          },
+          "countryPlaceholder": "Veuillez choisir une option",
+          "topics": {
+            "travelWorks": "TravelWorks",
+            "tourPremium": "Tour Premium",
+            "tourOnline": "TourOnline",
+            "tripnTouch": "Trip'n Touch",
+            "other": "Autre"
+          },
+          "submit": "Envoyer",
+          "submitPending": "Envoi en cours...",
+          "feedback": {
+            "success": "Demande envoyée avec succès.",
+            "error": "Une erreur est survenue. Veuillez réessayer."
+          }
+        },
+        "offices": {
+          "title": "Nos bureaux",
+          "northAmerica": {
+            "region": "Amérique du Nord",
+            "office": "Siège social",
+            "address": "75 Queen Suite 1400, Montréal, QC, H3C 2N6",
+            "phone1": "+1 514 282 4556",
+            "phone2": "1 877 282 4556",
+            "email": "info@travelworkssolution.com"
+          },
+          "australia": {
+            "region": "Australie",
+            "office": "Black Sheep Tourism",
+            "address": "PO Box 471, Cronulla NSW 2230",
+            "phone1": "1300 936 568",
+            "phone2": "+61 (0)2 8880 8387",
+            "email": "hello@blacksheeptourism.com.au"
+          },
+          "unitedKingdom": {
+            "region": "Royaume-Uni",
+            "office": "Apex House",
+            "address": "Apex House, 6 Calthorpe Road, Birmingham, B15 1TR",
+            "phone1": "+44 121 5822 747",
+            "phone2": "",
+            "email": "info@portwaysystems.com"
+          }
+        },
+        "trainingCta": {
+          "title": "Formation en ligne",
+          "description": "Augmentez votre productivité le plus rapidement possible avec TravelWorks !",
+          "imagePlaceholder": "Espace réservé à l'image de formation",
+          "button": "Voir plus"
+        },
+        "map": {
+          "title": "Siège social de Montréal",
+          "iframeTitle": "Emplacement du bureau de TravelWorks à Montréal"
         }
       }
     }
@@ -1087,7 +1230,6 @@
         }
       }
     }
-
   },
   "features": {
     "highlights": {
@@ -1147,7 +1289,7 @@
         "backofficeSystem": "Systeme Backoffice",
         "tripDetails": "Details du voyage",
         "tourManagement": "Gestion des tours",
-         "tourOnline": "TourOnline",
+        "tourOnline": "TourOnline",
         "crmTools": "Outils CRM",
         "dashboardReports": "Rapports de tableau de bord",
         "integrations": "Integrations",

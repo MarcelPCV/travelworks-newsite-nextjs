@@ -1,7 +1,7 @@
 export type TourOnlineCTAArea = {
-  blockType: "TourOnlineCTAArea";
+  blockType: 'TourOnlineCTAArea';
   imageSrc: string;
   imageAlt: string;
   ctaLink: string;
-  ctaText: string
-}
+  ctaText: string;
+};

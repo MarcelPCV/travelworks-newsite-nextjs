@@ -1,6 +1,4 @@
-import {
-  type LucideIcon,
-} from 'lucide-react';
+import { type LucideIcon } from 'lucide-react';
 
 export type FeaturesCardsHighlights = {
   id: number;
@@ -12,11 +10,10 @@ export type FeaturesCardsHighlights = {
 };
 
 export type FeaturesHighlights = {
-  blockType: "FeaturesHighlights"
+  blockType: 'FeaturesHighlights';
   cards: FeaturesCardsHighlights[];
 };
 
 export type FeaturesHighlightsSectionProps = {
   cards: FeaturesCardsHighlights[];
 };
-

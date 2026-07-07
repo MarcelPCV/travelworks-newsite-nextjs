@@ -1,12 +1,12 @@
-import { BenefitsBannerItem, BenefitsBanner } from "./components/home/benefits-banner/type";
-import { NewsTicker } from "./components/home/news-ticker/type";
-import { HeroCarouselSection } from "./components/home/hero-carousel/type";
-import { FeatureCardsSectionData } from "./components/home/feature-cards/type";
-import { PlatformShowcaseModel } from "./components/home/platform-showcase/type";
-import { WhyTravelworksSection, WhyTravelworksItems } from "./components/home/why/type";
-import { CircleDollarSign, Cloud, Network, Users } from "lucide-react";
-import { ClientsSectionModel, Client } from "./components/home/clients-section/type";
-import { PlanningDemoSectionModel } from "./components/home/demo-section/type";
+import { BenefitsBannerItem, BenefitsBanner } from './components/home/benefits-banner/type';
+import { NewsTicker } from './components/home/news-ticker/type';
+import { HeroCarouselSection } from './components/home/hero-carousel/type';
+import { FeatureCardsSectionData } from './components/home/feature-cards/type';
+import { PlatformShowcaseModel } from './components/home/platform-showcase/type';
+import { WhyTravelworksSection, WhyTravelworksItems } from './components/home/why/type';
+import { CircleDollarSign, Cloud, Network, Users } from 'lucide-react';
+import { ClientsSectionModel, Client } from './components/home/clients-section/type';
+import { PlanningDemoSectionModel } from './components/home/demo-section/type';
 
 export type Layout =
   | BenefitsBanner
@@ -31,7 +31,7 @@ const defaultItems: BenefitsBannerItem[] = [
 ];
 
 const defaultItems2: BenefitsBannerItem[] = [
-  { id: 0, label: "block-type-benefits-banner-2.list.0" },
+  { id: 0, label: 'block-type-benefits-banner-2.list.0' },
   { id: 1, label: 'block-type-benefits-banner-2.list.1' },
   { id: 2, label: 'block-type-benefits-banner-2.list.2' },
   { id: 3, label: 'block-type-benefits-banner-2.list.3' },
@@ -62,12 +62,12 @@ const slides: HeroCarouselSection['slides'] = [
     image: 'block-type-carrousel.slides.tourOnline.image',
     contentPosition: 'left',
   },
-]
+];
 
 const featureCards: FeatureCardsSectionData['items'] = [
   {
     id: '0',
-    title: "block-type-features-cards.items.backoffice-tools.title",
+    title: 'block-type-features-cards.items.backoffice-tools.title',
     ctaHref: '/feature-1',
     image: {
       src: '/images/components/feature-cards/feature_strategic_management_tool.gif',
@@ -78,7 +78,7 @@ const featureCards: FeatureCardsSectionData['items'] = [
   },
   {
     id: '1',
-    title: "block-type-features-cards.items.reservation-management.title",
+    title: 'block-type-features-cards.items.reservation-management.title',
     ctaHref: '/feature-1',
     image: {
       src: '/images/components/feature-cards/feature_strategic_management_tool.gif',
@@ -89,7 +89,7 @@ const featureCards: FeatureCardsSectionData['items'] = [
   },
   {
     id: '2',
-    title: "block-type-features-cards.items.strategic-management-tool.title",
+    title: 'block-type-features-cards.items.strategic-management-tool.title',
     ctaHref: '/feature-1',
     image: {
       src: '/images/components/feature-cards/feature_strategic_management_tool.gif',
@@ -100,7 +100,7 @@ const featureCards: FeatureCardsSectionData['items'] = [
   },
   {
     id: '3',
-    title: "block-type-features-cards.items.tour-management.title",
+    title: 'block-type-features-cards.items.tour-management.title',
     ctaHref: '/feature-1',
     image: {
       src: '/images/components/feature-cards/feature_strategic_management_tool.gif',
@@ -111,7 +111,7 @@ const featureCards: FeatureCardsSectionData['items'] = [
   },
   {
     id: '4',
-    title: "block-type-features-cards.items.online-tour-booking.title",
+    title: 'block-type-features-cards.items.online-tour-booking.title',
     ctaHref: '/feature-1',
     image: {
       src: '/images/components/feature-cards/feature_strategic_management_tool.gif',
@@ -122,7 +122,7 @@ const featureCards: FeatureCardsSectionData['items'] = [
   },
   {
     id: '5',
-    title: "block-type-features-cards.items.crm-tools.title",
+    title: 'block-type-features-cards.items.crm-tools.title',
     ctaHref: '/feature-1',
     image: {
       src: '/images/components/feature-cards/feature_strategic_management_tool.gif',
@@ -133,7 +133,7 @@ const featureCards: FeatureCardsSectionData['items'] = [
   },
   {
     id: '6',
-    title: "block-type-features-cards.items.multiple-integration.title",
+    title: 'block-type-features-cards.items.multiple-integration.title',
     ctaHref: '/feature-1',
     image: {
       src: '/images/components/feature-cards/feature_strategic_management_tool.gif',
@@ -141,32 +141,32 @@ const featureCards: FeatureCardsSectionData['items'] = [
       width: 400,
       height: 300,
     },
-  }
-]
+  },
+];
 
 const whyItems: WhyTravelworksItems[] = [
   {
     id: 0,
-    title: "block-type-why-travelworks.items.0.title",
-    description: "block-type-why-travelworks.items.0.description",
+    title: 'block-type-why-travelworks.items.0.title',
+    description: 'block-type-why-travelworks.items.0.description',
     iconComponent: CircleDollarSign,
   },
   {
     id: 1,
-    title: "block-type-why-travelworks.items.1.title",
-    description: "block-type-why-travelworks.items.1.description",
+    title: 'block-type-why-travelworks.items.1.title',
+    description: 'block-type-why-travelworks.items.1.description',
     iconComponent: Network,
   },
   {
     id: 2,
-    title: "block-type-why-travelworks.items.2.title",
-    description: "block-type-why-travelworks.items.2.description",
+    title: 'block-type-why-travelworks.items.2.title',
+    description: 'block-type-why-travelworks.items.2.description',
     iconComponent: Cloud,
   },
   {
     id: 3,
-    title: "block-type-why-travelworks.items.3.title",
-    description: "block-type-why-travelworks.items.3.description",
+    title: 'block-type-why-travelworks.items.3.title',
+    description: 'block-type-why-travelworks.items.3.description',
     iconComponent: Users,
   },
 ];
@@ -220,62 +220,62 @@ const clientsSectionData: Client[] = [
     name: 'Vaisse De Croisiere',
     logo: '/images/components/client-trust-section/logo.jpg',
   },
-]
+];
 
 export const HomePage: Page = {
-  slug: "home",
+  slug: 'home',
   layout: [
     {
-      blockType: "NewsTicker",
-      id: "news-ticker-1",
-      sectionTitle: "block-type-news-ticker.sectionTitle",
-      newsLabel: "block-type-news-ticker.newsLabel",
-      newsCtaHref: "block-type-news-ticker.newsCtaHref",
-      phone: "block-type-news-ticker.phone",
+      blockType: 'NewsTicker',
+      id: 'news-ticker-1',
+      sectionTitle: 'block-type-news-ticker.sectionTitle',
+      newsLabel: 'block-type-news-ticker.newsLabel',
+      newsCtaHref: 'block-type-news-ticker.newsCtaHref',
+      phone: 'block-type-news-ticker.phone',
     },
     {
-      blockType: "HeroCarousel",
-      slides: slides
+      blockType: 'HeroCarousel',
+      slides: slides,
     },
     {
-      blockType: "FeatureCards",
-      title: "block-type-features-cards.title",
-      items: featureCards
+      blockType: 'FeatureCards',
+      title: 'block-type-features-cards.title',
+      items: featureCards,
     },
     {
-      blockType: "PlatformShowcase",
-      title: "block-type-platform-showcase.title",
-      description: "block-type-platform-showcase.description",
-      mainImage: "block-type-platform-showcase.mainImage",
-      secondaryImage: "block-type-platform-showcase.secondaryImage"
+      blockType: 'PlatformShowcase',
+      title: 'block-type-platform-showcase.title',
+      description: 'block-type-platform-showcase.description',
+      mainImage: 'block-type-platform-showcase.mainImage',
+      secondaryImage: 'block-type-platform-showcase.secondaryImage',
     },
     {
-      blockType: "WhyTravelworksSection",
-      title: "block-type-why-travelworks.title",
-      items: whyItems
+      blockType: 'WhyTravelworksSection',
+      title: 'block-type-why-travelworks.title',
+      items: whyItems,
     },
     {
-      blockType: "BenefitsBanner",
-      heading: "block-type-benefits-banner-1.heading",
+      blockType: 'BenefitsBanner',
+      heading: 'block-type-benefits-banner-1.heading',
       items: defaultItems,
-      buttonLabel: "block-type-benefits-banner-1.buttonLabel",
-      buttonHref: "block-type-benefits-banner-1.buttonHref",
+      buttonLabel: 'block-type-benefits-banner-1.buttonLabel',
+      buttonHref: 'block-type-benefits-banner-1.buttonHref',
       hideButton: false,
-      imagePlaceholderLabel: "block-type-benefits-banner-1.imagePlaceholderLabel",
+      imagePlaceholderLabel: 'block-type-benefits-banner-1.imagePlaceholderLabel',
     },
     {
-      blockType: "ClientTrustSection",
-      title: "block-type-clients-trust.title",
-      clients: clientsSectionData
+      blockType: 'ClientTrustSection',
+      title: 'block-type-clients-trust.title',
+      clients: clientsSectionData,
     },
     {
-      blockType: "BenefitsBanner",
-      heading: "block-type-benefits-banner-2.heading",
+      blockType: 'BenefitsBanner',
+      heading: 'block-type-benefits-banner-2.heading',
       items: defaultItems2,
-      buttonLabel: "block-type-benefits-banner-2.buttonLabel",
-      buttonHref: "block-type-benefits-banner-2.buttonHref",
+      buttonLabel: 'block-type-benefits-banner-2.buttonLabel',
+      buttonHref: 'block-type-benefits-banner-2.buttonHref',
       hideButton: false,
-      imagePlaceholderLabel: "block-type-benefits-banner-2.imagePlaceholderLabel",
+      imagePlaceholderLabel: 'block-type-benefits-banner-2.imagePlaceholderLabel',
     },
     {
       blockType: 'PlanningDemoSection',
@@ -285,10 +285,30 @@ export const HomePage: Page = {
       },
       form: {
         fields: [
-          { id: 'full-name',   name: 'fullName',   label: 'block-type-planning-demo-section.form.nameLabel', type: 'text' },
-          { id: 'email',       name: 'email',      label: 'block-type-planning-demo-section.form.emailLabel', type: 'email' },
-          { id: 'agency-name', name: 'agencyName', label: 'block-type-planning-demo-section.form.companyLabel', type: 'text' },
-          { id: 'phone',       name: 'phone',      label: 'block-type-planning-demo-section.form.phoneLabel', type: 'tel' },
+          {
+            id: 'full-name',
+            name: 'fullName',
+            label: 'block-type-planning-demo-section.form.nameLabel',
+            type: 'text',
+          },
+          {
+            id: 'email',
+            name: 'email',
+            label: 'block-type-planning-demo-section.form.emailLabel',
+            type: 'email',
+          },
+          {
+            id: 'agency-name',
+            name: 'agencyName',
+            label: 'block-type-planning-demo-section.form.companyLabel',
+            type: 'text',
+          },
+          {
+            id: 'phone',
+            name: 'phone',
+            label: 'block-type-planning-demo-section.form.phoneLabel',
+            type: 'tel',
+          },
         ],
         country: {
           label: 'block-type-planning-demo-section.form.countryLabel',
@@ -298,6 +318,6 @@ export const HomePage: Page = {
           label: 'block-type-planning-demo-section.form.submitButtonLabel',
         },
       },
-    }
+    },
   ],
 };

@@ -30,21 +30,27 @@ export async function POST(request: Request) {
     ) {
       return NextResponse.json(
         { success: false, error: 'Missing required fields' },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
     const from = process.env.RESEND_FROM_EMAIL ?? 'Website <noreply@yourdomain.com>';
     const toEnv = process.env.RESEND_TO_EMAIL ?? 'sales@yourdomain.com';
-    const to = toEnv.split(',').map((s) => s.trim()).filter(Boolean);
+    const to = toEnv
+      .split(',')
+      .map((s) => s.trim())
+      .filter(Boolean);
 
     const countryName = (() => {
       try {
         const parts = String(locale).split('-');
-        const bcp47 = parts.length === 1
-          ? parts[0].toLowerCase()
-          : `${parts[0].toLowerCase()}-${parts[1].toUpperCase()}`;
-        return new Intl.DisplayNames([bcp47], { type: 'region' }).of(String(country)) ?? String(country);
+        const bcp47 =
+          parts.length === 1
+            ? parts[0].toLowerCase()
+            : `${parts[0].toLowerCase()}-${parts[1].toUpperCase()}`;
+        return (
+          new Intl.DisplayNames([bcp47], { type: 'region' }).of(String(country)) ?? String(country)
+        );
       } catch {
         return String(country);
       }

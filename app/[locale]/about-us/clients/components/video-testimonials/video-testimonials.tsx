@@ -1,12 +1,10 @@
-import VideoCard from "../video-card/video-card";
+import VideoCard from '../video-card/video-card';
 
 type Props = {
   videos: any[];
 };
 
-export default function VideoTestimonials({
-  videos,
-}: Props) {
+export default function VideoTestimonials({ videos }: Props) {
   return (
     <section className="bg-gray-800 py-20">
       <div className="container mx-auto px-4">
@@ -16,10 +14,7 @@ export default function VideoTestimonials({
 
         <div className="grid gap-8 lg:grid-cols-3">
           {videos.map((video) => (
-            <VideoCard
-              key={video.id}
-              video={video}
-            />
+            <VideoCard key={video.id} video={video} />
           ))}
         </div>
       </div>

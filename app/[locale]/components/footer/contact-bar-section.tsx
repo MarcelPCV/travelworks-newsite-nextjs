@@ -32,7 +32,10 @@ export default function ContactBarSection({
     }
   };
 
-  const rootClassName = ['w-full rounded-2xl bg-neutral-canvas px-4 py-6 sm:px-6 lg:px-8', className]
+  const rootClassName = [
+    'w-full rounded-2xl bg-neutral-canvas px-4 py-6 sm:px-6 lg:px-8',
+    className,
+  ]
     .filter(Boolean)
     .join(' ');
 
@@ -70,7 +73,13 @@ export default function ContactBarSection({
             rel="noopener noreferrer"
             className="p-2 rounded-md hover:bg-neutral-100"
           >
-            <svg className="h-5 w-5 text-neutral-800" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+            <svg
+              className="h-5 w-5 text-neutral-800"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden
+            >
               <rect width="24" height="24" rx="4" fill="#FF0000" />
               <path d="M9 8l6 4-6 4V8z" fill="#fff" />
             </svg>
@@ -82,9 +91,18 @@ export default function ContactBarSection({
             rel="noopener noreferrer"
             className="p-2 rounded-md hover:bg-neutral-100"
           >
-            <svg className="h-5 w-5 text-neutral-800" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+            <svg
+              className="h-5 w-5 text-neutral-800"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden
+            >
               <rect width="24" height="24" rx="4" fill="#0A66C2" />
-              <path d="M7 10v7H4v-7h3zm-1.5-5a1.75 1.75 0 110 3.5 1.75 1.75 0 010-3.5zM12 10v7h-3v-7h3zm1.5 0h2.8v1.1h.04c.39-.73 1.34-1.5 2.76-1.5 2.95 0 3.5 1.94 3.5 4.46V17h-3v-3.2c0-.76-.01-1.74-1.06-1.74-1.06 0-1.22.83-1.22 1.67V17h-3v-7z" fill="#fff" />
+              <path
+                d="M7 10v7H4v-7h3zm-1.5-5a1.75 1.75 0 110 3.5 1.75 1.75 0 010-3.5zM12 10v7h-3v-7h3zm1.5 0h2.8v1.1h.04c.39-.73 1.34-1.5 2.76-1.5 2.95 0 3.5 1.94 3.5 4.46V17h-3v-3.2c0-.76-.01-1.74-1.06-1.74-1.06 0-1.22.83-1.22 1.67V17h-3v-7z"
+                fill="#fff"
+              />
             </svg>
           </a>
           <a
@@ -94,9 +112,18 @@ export default function ContactBarSection({
             rel="noopener noreferrer"
             className="p-2 rounded-md hover:bg-neutral-100"
           >
-            <svg className="h-5 w-5 text-neutral-800" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+            <svg
+              className="h-5 w-5 text-neutral-800"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden
+            >
               <rect width="24" height="24" rx="4" fill="#1877F2" />
-              <path d="M15 8h1.5V5.5H15c-1.38 0-2.5 1.12-2.5 2.5V10H11v2h1.5v5H15v-5h1.5l.5-2H15V8z" fill="#fff" />
+              <path
+                d="M15 8h1.5V5.5H15c-1.38 0-2.5 1.12-2.5 2.5V10H11v2h1.5v5H15v-5h1.5l.5-2H15V8z"
+                fill="#fff"
+              />
             </svg>
           </a>
 
