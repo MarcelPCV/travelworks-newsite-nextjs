@@ -6,6 +6,32 @@ import ImageHappyLearning from '../../components/pages-elements/happy-learning/h
 import ComparisonCard from '../../components/shared/comparison-training/comparison-training';
 import ExpertProfile from '../../components/shared/training-experts/training-experts';
 import InfoCards from '../../components/pages-elements/info-cards/info-cards';
+import { getAlternates } from '@/app/lib/SEO/getAlternates';
+import { Metadata } from 'next';
+import { Locale } from 'next-intl';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: Locale }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({locale, namespace: 'metadata.training'});
+
+  return {
+    title: `${t('training-platform.title')}`,
+    description: t('training-platform.description'),
+    alternates: getAlternates(
+      {
+        en: '/training/training-platform',
+        'en-ca': '/en-ca/training/training-platform',
+        'en-au': '/en-au/training/training-platform',
+        'fr-ca': '/fr-ca/formation/plateforme-de-formation',
+      },
+      locale
+    ),
+  };
+}
 
 export default async function Page({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;

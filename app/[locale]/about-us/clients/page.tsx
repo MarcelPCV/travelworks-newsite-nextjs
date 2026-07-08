@@ -2,6 +2,35 @@ import ClientsHero from '@/app/[locale]/about-us/clients/components/clients-hero
 import ClientsLogoMarquee from '@/app/[locale]/about-us/clients/components/clients-logo-marquee/clients-logo-marquee';
 import TestimonialsGrid from '@/app/[locale]/about-us/clients/components/testimonial-grid/testimonial-grid';
 import VideoTestimonials from '@/app/[locale]/about-us/clients/components/video-testimonials/video-testimonials';
+import { getAlternates } from '@/app/lib/SEO/getAlternates';
+import { Metadata } from 'next';
+import { Locale } from 'next-intl';
+import {
+  getTranslations
+} from 'next-intl/server';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: Locale }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({locale, namespace: 'metadata.about-us'});
+
+  return {
+    title: `${t('clients.title')}`,
+    description: t('clients.description'),
+    alternates: getAlternates(
+      {
+        en: '/about-us/clients',
+        'en-ca': '/en-ca/about-us/clients',
+        'en-au': '/en-au/about-us/clients',
+        'fr-ca': '/fr-ca/a-propos/clients',
+      },
+      locale
+    ),
+  };
+}
 
 export const clientsPageData = {
   hero: {

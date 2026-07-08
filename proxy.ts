@@ -1,10 +1,33 @@
 import { NextRequest, NextResponse } from 'next/server';
+import {
+  aboutUsSegmentByRouteLocale,
+  aboutUsSlugs,
+  demoByRouteLocale,
+  trainingSegmentByRouteLocale,
+  trainingSlugs,
+  travelAgencySoftwareSegmentByRouteLocale,
+  travelAgencySoftwareSlugs,
+} from '@/app/[locale]/locale-config';
 
 const DEFAULT_ROUTE_LOCALE = 'en';
 const SUPPORTED_ROUTE_LOCALES = ['en', 'en-ca', 'fr-ca', 'en-au'] as const;
 
 function getFirstSegment(pathname: string) {
   return pathname.split('/')[1] ?? '';
+}
+
+function getCanonicalSlug(
+  slugsByCanonical: Record<string, Record<string, string>>,
+  routeLocale: string,
+  localizedSlug: string,
+): string {
+  for (const [canonical, byLocale] of Object.entries(slugsByCanonical)) {
+    if (byLocale[routeLocale] === localizedSlug) {
+      return canonical;
+    }
+  }
+
+  return localizedSlug;
 }
 
 export function proxy(request: NextRequest) {
@@ -34,6 +57,60 @@ export function proxy(request: NextRequest) {
     const url = request.nextUrl.clone();
     url.pathname = `/${DEFAULT_ROUTE_LOCALE}${pathname === '/' ? '' : pathname}`;
     return NextResponse.rewrite(url);
+  }
+
+  // Rewrite localized locale-prefixed routes to canonical file-system routes.
+  const routeLocale = firstSegment;
+  const pathSegments = pathname.split('/').filter(Boolean);
+  const routeSegments = pathSegments.slice(1);
+
+  if (routeSegments.length > 0) {
+    let rewritten = false;
+
+    if (routeSegments[0] === aboutUsSegmentByRouteLocale[routeLocale]) {
+      routeSegments[0] = 'about-us';
+      rewritten = true;
+
+      if (routeSegments.length > 1) {
+        routeSegments[1] = getCanonicalSlug(aboutUsSlugs, routeLocale, routeSegments[1]);
+      }
+    }
+
+    if (routeSegments[0] === travelAgencySoftwareSegmentByRouteLocale[routeLocale]) {
+      routeSegments[0] = 'travel-agency-software';
+      rewritten = true;
+
+      if (routeSegments.length > 1) {
+        routeSegments[1] = getCanonicalSlug(
+          travelAgencySoftwareSlugs,
+          routeLocale,
+          routeSegments[1],
+        );
+      }
+    }
+
+    if (routeSegments[0] === trainingSegmentByRouteLocale[routeLocale]) {
+      routeSegments[0] = 'training';
+      rewritten = true;
+
+      if (routeSegments.length > 1) {
+        routeSegments[1] = getCanonicalSlug(trainingSlugs, routeLocale, routeSegments[1]);
+      }
+    }
+
+    if (routeSegments[0] === demoByRouteLocale[routeLocale]) {
+      routeSegments[0] = 'ask-for-a-demo';
+      rewritten = true;
+    }
+
+    if (rewritten) {
+      const rewrittenPath = `/${routeLocale}/${routeSegments.join('/')}`;
+      if (rewrittenPath !== pathname) {
+        const url = request.nextUrl.clone();
+        url.pathname = rewrittenPath;
+        return NextResponse.rewrite(url);
+      }
+    }
   }
 
   return NextResponse.next();

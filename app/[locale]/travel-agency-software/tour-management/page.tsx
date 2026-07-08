@@ -9,6 +9,32 @@ import {
   ComparisonColumn,
   ComparisonSolutionRow,
 } from '../../components/shared/comparison-solution-section/type';
+import { getAlternates } from '@/app/lib/SEO/getAlternates';
+import { Metadata } from 'next';
+import { Locale } from 'next-intl';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: Locale }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({locale, namespace: 'metadata.travel-agency-software'});
+
+  return {
+    title: `${t('tour-management.title')}`,
+    description: t('tour-management.description'),
+    alternates: getAlternates(
+      {
+        en: '/travel-agency-software/tour-management',
+        'en-ca': '/en-ca/travel-agency-software/tour-management',
+        'en-au': '/en-au/travel-agency-software/tour-management',
+        'fr-ca': '/fr-ca/logiciel-agence-voyage/gestion-des-tours',
+      },
+      locale
+    ),
+  };
+}
 
 export default async function Page({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;

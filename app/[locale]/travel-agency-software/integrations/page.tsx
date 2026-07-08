@@ -4,6 +4,32 @@ import PageHero from '../../components/shared/page-hero/page-hero';
 import { FeaturesCardsHighlights } from '../../components/features/type';
 import FeaturesHighlightsSection from '../../components/features/features-highlights-section';
 import ImageBlock from '../../components/shared/image-block/image-block';
+import { getAlternates } from '@/app/lib/SEO/getAlternates';
+import { Metadata } from 'next';
+import { Locale } from 'next-intl';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: Locale }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({locale, namespace: 'metadata.travel-agency-software'});
+
+  return {
+    title: `${t('integrations.title')}`,
+    description: t('integrations.description'),
+    alternates: getAlternates(
+      {
+        en: '/travel-agency-software/integrations',
+        'en-ca': '/en-ca/travel-agency-software/integrations',
+        'en-au': '/en-au/travel-agency-software/integrations',
+        'fr-ca': '/fr-ca/logiciel-agence-voyage/integrations',
+      },
+      locale
+    ),
+  };
+}
 
 export default async function Page({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;

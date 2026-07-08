@@ -5,6 +5,32 @@ import TextSectionComp from '../../components/shared/text-section-comp/text-sect
 import PlanningDemoSection from '../../components/home/demo-section/planning-demo-section';
 import { getCountryOptions } from '@/app/lib/countries';
 import { routeToMessageLocale } from '@/app/[locale]/locale-config';
+import { getAlternates } from '@/app/lib/SEO/getAlternates';
+import { Metadata } from 'next';
+import { Locale } from 'next-intl';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: Locale }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({locale, namespace: 'metadata.about-us'});
+
+  return {
+    title: t('the-company.title'),
+    description: t('the-company.description'),
+    alternates: getAlternates(
+      {
+        en: '/about-us/travelworks',
+        'en-ca': '/en-ca/about-us/travelworks',
+        'en-au': '/en-au/about-us/travelworks',
+        'fr-ca': '/fr-ca/a-propos/pcvoyages',
+      },
+      locale
+    ),
+  };
+}
 
 export default async function Page({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;

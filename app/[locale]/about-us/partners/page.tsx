@@ -1,5 +1,32 @@
+import { getTranslations } from 'next-intl/server';
 import PartnersSection from './components/partners-section';
 import { PartnersSectionModel } from './components/types';
+import { getAlternates } from '@/app/lib/SEO/getAlternates';
+import { Metadata } from 'next';
+import { Locale } from 'next-intl';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: Locale }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({locale, namespace: 'metadata.about-us'});
+
+  return {
+    title: t('partners.title'),
+    description: t('partners.description'),
+    alternates: getAlternates(
+      {
+        en: '/about-us/partners',
+        'en-ca': '/en-ca/about-us/partners',
+        'en-au': '/en-au/about-us/partners',
+        'fr-ca': '/fr-ca/a-propos/partenaires',
+      },
+      locale
+    ),
+  };
+}
 
 const partnerSections: PartnersSectionModel[] = [
   {

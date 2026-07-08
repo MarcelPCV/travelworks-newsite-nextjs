@@ -5,6 +5,32 @@ import ImageBlock from '../../components/shared/image-block/image-block';
 import ImageHappyLearning from '../../components/pages-elements/happy-learning/happy-learning';
 import ComparisonCard from '../../components/shared/comparison-training/comparison-training';
 import ExpertProfile from '../../components/shared/training-experts/training-experts';
+import { getAlternates } from '@/app/lib/SEO/getAlternates';
+import { Metadata } from 'next';
+import { Locale } from 'next-intl';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: Locale }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({locale, namespace: 'metadata.training'});
+
+  return {
+    title: `${t('knowledge-base.title')}`,
+    description: t('knowledge-base.description'),
+    alternates: getAlternates(
+      {
+        en: '/training/knowledge-base',
+        'en-ca': '/en-ca/training/knowledge-base',
+        'en-au': '/en-au/training/knowledge-base',
+        'fr-ca': '/fr-ca/formation/base-de-connaissances',
+      },
+      locale
+    ),
+  };
+}
 
 export default async function Page({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;

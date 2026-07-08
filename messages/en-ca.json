@@ -1,4 +1,88 @@
 {
+  "metadata": {
+    "home": {
+      "title": "TravelWorks - Travel Agency Software",
+      "description": "Discover TravelWorks, the comprehensive travel agency software that streamlines booking, CRM, inventory, billing, accounting, and marketing for travel agencies and tour operators."
+    },
+    "about-us": {
+      "careers": {
+        "title": "Careers - TravelWorks",
+        "description": "Join our team and be part of a dynamic and innovative company that is shaping the future of travel technology."
+      },
+      "clients": {
+        "title": "Clients - TravelWorks",
+        "description": "Discover how TravelWorks has helped travel agencies and tour operators streamline their operations and improve customer service."
+      },
+      "contact": {
+        "title": "Contact Us - TravelWorks",
+        "description": "Get in touch with TravelWorks for inquiries, support, or to learn more about our travel technology solutions."
+      },
+      "partners": {
+        "title": "Partners - TravelWorks",
+        "description": "Explore our partnerships with leading travel technology providers and how they enhance our solutions."
+      },
+      "the-company": {
+        "title": "The Company - TravelWorks",
+        "description": "Learn more about TravelWorks, our mission, and how we are revolutionizing the travel industry with our comprehensive solutions."
+      }
+    },
+    "ask-for-a-demo": {
+      "title": "Request a Demo - TravelWorks",
+      "description": "Schedule a demo with TravelWorks to see how our solutions can benefit your travel agency or tour operation."
+    },
+    "training": {
+      "training-platform": {
+        "title": "Training - TravelWorks",
+        "description": "Access training resources and materials to help you get the most out of TravelWorks' travel technology solutions."
+      },
+      "knowledge-base": {
+        "title": "Knowledge Base - TravelWorks",
+        "description": "Find answers to common questions and learn how to use TravelWorks' features effectively through our knowledge base."
+      }
+    },
+    "travel-agency-software": {
+      "back-office-travel-agency": {
+        "title": "Back Office Travel Agency - TravelWorks",
+        "description": "Discover how TravelWorks' back office solutions streamline accounting, invoicing, and operations for travel agencies."
+      },
+      "benefits": {
+        "title": "Benefits - TravelWorks",
+        "description": "Explore the key benefits of using TravelWorks' travel agency software, designed to enhance efficiency, scalability, and security."
+      },
+      "crm": {
+        "title": "CRM Tools - TravelWorks",
+        "description": "Learn how TravelWorks' CRM tools help travel agencies manage customer relationships and drive targeted marketing campaigns."
+      },
+      "customizations": {
+        "title": "Customizations - TravelWorks",
+        "description": "Discover how TravelWorks can provide tailored solutions to meet the unique needs of your travel agency or tour operation."
+      },
+      "dashboard-reports": {
+        "title": "Dashboard & Reports - TravelWorks",
+        "description": "Access real-time dashboards and comprehensive reporting tools to monitor your travel agency's performance and make informed decisions."
+      },
+      "features": {
+        "title": "Features - TravelWorks",
+        "description": "Explore the wide range of features offered by TravelWorks' travel agency software, designed to optimize operations and enhance customer service."
+      },
+      "integrations": {
+        "title": "Integrations - TravelWorks",
+        "description": "Learn about the various integrations available with TravelWorks, allowing seamless connectivity with other systems and partners in the travel industry."
+      },
+      "tour-management": {
+        "title": "Tour Management - TravelWorks",
+        "description": "Discover how TravelWorks' tour management solutions help travel agencies efficiently manage tours, inventory, and bookings."
+      },
+      "tour-online": {
+        "title": "Tour Online - TravelWorks",
+        "description": "Learn about TourOnline, TravelWorks' comprehensive solution for tour operators and travel agencies, offering a user-friendly e-commerce platform for online bookings."
+      },
+      "trip-details": {
+        "title": "Trip Details - TravelWorks",
+        "description": "Access detailed trip information and itineraries through TravelWorks' platform, enhancing the travel experience for your clients."
+      }
+    }
+  },
   "pages": {
     "home": {
       "block-type-carrousel": {

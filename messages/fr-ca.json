@@ -1,4 +1,88 @@
 {
+  "metadata": {
+    "home": {
+      "title": "PC Voyages - Logiciel pour agences de voyages",
+      "description": "Découvrez PC Voyages, le logiciel complet pour agences de voyages qui simplifie les réservations, le CRM, la gestion des stocks, la facturation, la comptabilité et le marketing pour les agences de voyages et les voyagistes."
+    },
+    "about-us": {
+      "careers": {
+        "title": "Carrières - PC Voyages",
+        "description": "Joignez-vous à notre équipe et faites partie d'une entreprise dynamique et innovante qui façonne l'avenir des technologies du voyage."
+      },
+      "clients": {
+        "title": "Clients - PC Voyages",
+        "description": "Découvrez comment PC Voyages aide les agences de voyages et les voyagistes à simplifier leurs opérations et à améliorer leur service à la clientèle."
+      },
+      "contact": {
+        "title": "Contactez-nous - PC Voyages",
+        "description": "Communiquez avec PC Voyages pour toute demande d'information, de soutien ou pour en savoir plus sur nos solutions technologiques destinées à l'industrie du voyage."
+      },
+      "partners": {
+        "title": "Partenaires - PC Voyages",
+        "description": "Découvrez nos partenariats avec les principaux fournisseurs de technologies du voyage et la façon dont ils enrichissent nos solutions."
+      },
+      "the-company": {
+        "title": "L'entreprise - PC Voyages",
+        "description": "Apprenez-en davantage sur PC Voyages, notre mission et la façon dont nous révolutionnons l'industrie du voyage grâce à nos solutions complètes."
+      }
+    },
+    "ask-for-a-demo": {
+      "title": "Demander une démonstration - PC Voyages",
+      "description": "Planifiez une démonstration avec PC Voyages pour découvrir comment nos solutions peuvent bénéficier à votre agence de voyages ou à votre entreprise de voyagisme."
+    },
+    "training": {
+      "training-platform": {
+        "title": "Formation - PC Voyages",
+        "description": "Accédez à des ressources et à du matériel de formation pour tirer le meilleur parti des solutions technologiques de PC Voyages."
+      },
+      "knowledge-base": {
+        "title": "Base de connaissances - PC Voyages",
+        "description": "Trouvez des réponses aux questions les plus fréquentes et apprenez à utiliser efficacement les fonctionnalités de PC Voyages grâce à notre base de connaissances."
+      }
+    },
+    "travel-agency-software": {
+      "back-office-travel-agency": {
+        "title": "Back-office pour agences de voyages - PC Voyages",
+        "description": "Découvrez comment les solutions de back-office de PC Voyages simplifient la comptabilité, la facturation et les opérations des agences de voyages."
+      },
+      "benefits": {
+        "title": "Avantages - PC Voyages",
+        "description": "Découvrez les principaux avantages du logiciel pour agences de voyages de PC Voyages, conçu pour améliorer l'efficacité, l'évolutivité et la sécurité."
+      },
+      "crm": {
+        "title": "Outils CRM - PC Voyages",
+        "description": "Découvrez comment les outils CRM de PC Voyages aident les agences de voyages à gérer leurs relations clients et à mettre en œuvre des campagnes marketing ciblées."
+      },
+      "customizations": {
+        "title": "Personnalisation - PC Voyages",
+        "description": "Découvrez comment PC Voyages peut offrir des solutions personnalisées adaptées aux besoins uniques de votre agence de voyages ou de votre entreprise de voyagisme."
+      },
+      "dashboard-reports": {
+        "title": "Tableaux de bord et rapports - PC Voyages",
+        "description": "Accédez à des tableaux de bord en temps réel et à des outils de rapports complets pour suivre les performances de votre agence de voyages et prendre des décisions éclairées."
+      },
+      "features": {
+        "title": "Fonctionnalités - PC Voyages",
+        "description": "Découvrez la vaste gamme de fonctionnalités offertes par le logiciel pour agences de voyages de PC Voyages, conçu pour optimiser les opérations et améliorer le service à la clientèle."
+      },
+      "integrations": {
+        "title": "Intégrations - PC Voyages",
+        "description": "Découvrez les différentes intégrations offertes par PC Voyages, permettant une connectivité fluide avec d'autres systèmes et partenaires de l'industrie du voyage."
+      },
+      "tour-management": {
+        "title": "Gestion des circuits - PC Voyages",
+        "description": "Découvrez comment les solutions de gestion des circuits de PC Voyages permettent aux agences de voyages de gérer efficacement les circuits, les stocks et les réservations."
+      },
+      "tour-online": {
+        "title": "TourOnline - PC Voyages",
+        "description": "Découvrez TourOnline, la solution complète de PC Voyages destinée aux voyagistes et aux agences de voyages, offrant une plateforme de commerce électronique conviviale pour les réservations en ligne."
+      },
+      "trip-details": {
+        "title": "Détails du voyage - PC Voyages",
+        "description": "Accédez aux informations détaillées sur les voyages et aux itinéraires grâce à la plateforme de PC Voyages, afin d'offrir une meilleure expérience à vos clients."
+      }
+    }
+  },
   "pages": {
     "home": {
       "block-type-carrousel": {

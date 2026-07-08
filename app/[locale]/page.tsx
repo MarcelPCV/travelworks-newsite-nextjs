@@ -10,6 +10,32 @@ import ClientTrustSection from './components/home/clients-section/client-trust-s
 import PlanningDemoSection from './components/home/demo-section/planning-demo-section';
 import { getCountryOptions } from '@/app/lib/countries';
 import { routeToMessageLocale } from './locale-config';
+import { getAlternates } from '@/app/lib/SEO/getAlternates';
+import { Metadata } from 'next';
+import { Locale } from 'next-intl';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: Locale }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({locale, namespace: 'metadata.home'});
+
+  return {
+    title: `${t('home.title')}`,
+    description: t('home.description'),
+    alternates: getAlternates(
+      {
+        en: '/',
+        'en-ca': '/en-ca',
+        'en-au': '/en-au',
+        'fr-ca': '/fr-ca',
+      },
+      locale
+    ),
+  };
+}
 
 export default async function Page({ params }: { params: Promise<{ locale: string }> }) {
   const { locale: routeLocale } = await params;

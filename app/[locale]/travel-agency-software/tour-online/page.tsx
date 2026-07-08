@@ -4,6 +4,32 @@ import PageHero from '../../components/shared/page-hero/page-hero';
 import SplitSection from '../../components/shared/SplitSection/SplitSection';
 import ImageBlock from '../../components/shared/image-block/image-block';
 import TourOnlineCTA from '../../components/shared/touronline-cta/touronline-ctba';
+import { getAlternates } from '@/app/lib/SEO/getAlternates';
+import { Metadata } from 'next';
+import { Locale } from 'next-intl';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: Locale }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({locale, namespace: 'metadata.travel-agency-software'});
+
+  return {
+    title: `${t('tour-online.title')}`,
+    description: t('tour-online.description'),
+    alternates: getAlternates(
+      {
+        en: '/travel-agency-software/tour-online',
+        'en-ca': '/en-ca/travel-agency-software/tour-online',
+        'en-au': '/en-au/travel-agency-software/tour-online',
+        'fr-ca': '/fr-ca/logiciel-agence-voyage/tour-online',
+      },
+      locale
+    ),
+  };
+}
 
 export default async function Page({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;

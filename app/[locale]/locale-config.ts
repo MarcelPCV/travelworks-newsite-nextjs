@@ -123,6 +123,12 @@ export const aboutUsSlugs: Record<string, Record<string, string>> = {
     'fr-ca': 'pc-voyages',
     'en-au': 'travelworks',
   },
+  careers: {
+    en: 'careers',
+    'en-ca': 'careers',
+    'fr-ca': 'carrieres',
+    'en-au': 'careers',
+  }
 };
 
 export const trainingSlugs: Record<string, Record<string, string>> = {

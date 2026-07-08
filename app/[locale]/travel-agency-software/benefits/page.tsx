@@ -1,5 +1,32 @@
+import { getTranslations } from 'next-intl/server';
 import FeatureSection from './components/section';
 import { Cloud, Zap, BarChart3, Shield, Lightbulb, BadgeCheck, Rocket } from 'lucide-react';
+import { getAlternates } from '@/app/lib/SEO/getAlternates';
+import { Metadata } from 'next';
+import { Locale } from 'next-intl';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: Locale }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({locale, namespace: 'metadata.travel-agency-software'});
+
+  return {
+    title: `${t('benefits.title')}`,
+    description: t('benefits.description'),
+    alternates: getAlternates(
+      {
+        en: '/travel-agency-software/benefits',
+        'en-ca': '/en-ca/travel-agency-software/benefits',
+        'en-au': '/en-au/travel-agency-software/benefits',
+        'fr-ca': '/fr-ca/logiciel-agence-voyage/avantages',
+      },
+      locale
+    ),
+  };
+}
 
 export default function TravelWorksFeatures() {
   const sections = [

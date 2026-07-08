@@ -3,6 +3,32 @@ import { CustomizationsPage } from './data';
 import PageHero from '../../components/shared/page-hero/page-hero';
 import SplitSection from '../../components/shared/SplitSection/SplitSection';
 import YoutubeVideoSection from '../../components/shared/video/youtube-video-section';
+import { getAlternates } from '@/app/lib/SEO/getAlternates';
+import { Metadata } from 'next';
+import { Locale } from 'next-intl';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: Locale }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({locale, namespace: 'metadata.travel-agency-software'});
+
+  return {
+    title: `${t('customizations.title')}`,
+    description: t('customizations.description'),
+    alternates: getAlternates(
+      {
+        en: '/travel-agency-software/customizations',
+        'en-ca': '/en-ca/travel-agency-software/customizations',
+        'en-au': '/en-au/travel-agency-software/customizations',
+        'fr-ca': '/fr-ca/logiciel-agence-voyage/customizations',
+      },
+      locale
+    ),
+  };
+}
 
 export default async function Page({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
