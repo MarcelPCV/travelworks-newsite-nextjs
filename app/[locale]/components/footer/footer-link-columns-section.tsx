@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export type FooterLinkItem = {
   label: string;
   href?: string;
@@ -78,12 +80,16 @@ function FooterLinkColumnList({ column }: { column: FooterLinkColumn }) {
       <ul className="mt-4 space-y-2.5">
         {column.links.map((link) => (
           <li key={`${column.id}-${link.label}`}>
-            <a
-              href={link.href ?? '#'}
-              className="type-normal-16 inline-flex text-white/95 transition-colors duration-200 hover:text-brand-orange-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange-light/80 focus-visible:ring-offset-2 focus-visible:ring-offset-brand-blue"
-            >
-              {link.label}
-            </a>
+            {link.href ? (
+              <Link
+                href={link.href}
+                className="type-normal-16 inline-flex text-white/95 transition-colors duration-200 hover:text-brand-orange-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange-light/80 focus-visible:ring-offset-2 focus-visible:ring-offset-brand-blue"
+              >
+                {link.label}
+              </Link>
+            ) : (
+              <span className="type-normal-16 inline-flex text-white/95">{link.label}</span>
+            )}
           </li>
         ))}
       </ul>

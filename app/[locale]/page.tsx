@@ -23,8 +23,8 @@ export async function generateMetadata({
   const t = await getTranslations({locale, namespace: 'metadata.home'});
 
   return {
-    title: `${t('home.title')}`,
-    description: t('home.description'),
+    title: `${t('title')}`,
+    description: t('description'),
     alternates: getAlternates(
       {
         en: '/',
