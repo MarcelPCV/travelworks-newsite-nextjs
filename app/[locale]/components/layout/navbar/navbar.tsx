@@ -322,7 +322,7 @@ export default function Navbar() {
                 <button
                   type="button"
                   className={`inline-flex items-center rounded-md px-3 py-2 text-sm uppercase transition duration-150 hover:bg-zinc-100 ${
-                    isAboutUsActive ? 'font-semibold text-zinc-900' : 'font-medium text-zinc-800'
+                    isAboutUsActive ? 'font-bold text-[#015caa]' : 'font-medium text-zinc-800'
                   }`}
                   aria-expanded={isAboutUsOpen}
                   aria-controls="about-us-menu"
@@ -387,7 +387,7 @@ export default function Navbar() {
                 <button
                   type="button"
                   className={`inline-flex items-center rounded-md px-3 py-2 text-sm uppercase transition duration-150 hover:bg-zinc-100 ${
-                    isTrainingActive ? 'font-semibold text-zinc-900' : 'font-medium text-zinc-800'
+                    isTrainingActive ? 'font-bold text-[#015caa]' : 'font-medium text-zinc-800'
                   }`}
                   aria-expanded={isTrainingOpen}
                   aria-controls="training-menu"
