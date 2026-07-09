@@ -1360,7 +1360,7 @@
       "products": "The Solution",
       "aboutUs": "About Us",
       "training": "Training",
-      "support": "Support"
+      "news": "News"
     },
     "brand": {
       "name": "TravelWorks"
@@ -1404,6 +1404,7 @@
       "logIn": "LOG IN",
       "logInOptions": {
         "travelworks": "Travelworks",
+        "travelworksLegacy": "Travelworks Classic version",
         "support": "Support",
         "trainingPlatform": "Training Platform",
         "knowledgeBase": "Knowledge Base"

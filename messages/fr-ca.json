@@ -1355,7 +1355,7 @@
       "products": "La Solution",
       "aboutUs": "A propos",
       "training": "Formation",
-      "support": "Support"
+      "news": "Nouvelles"
     },
     "brand": {
       "name": "PcVoyages"
@@ -1399,6 +1399,7 @@
       "logIn": "SE CONNECTER",
       "logInOptions": {
         "travelworks": "PCVoyages",
+        "travelworksLegacy": "PCVoyages Version Classique",
         "support": "Support",
         "trainingPlatform": "Plateforme de formation",
         "knowledgeBase": "Base de connaissances"

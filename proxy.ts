@@ -3,6 +3,9 @@ import {
   aboutUsSegmentByRouteLocale,
   aboutUsSlugs,
   demoByRouteLocale,
+  newsCategorySegmentByRouteLocale,
+  newsCategorySlugs,
+  newsSegmentByRouteLocale,
   trainingSegmentByRouteLocale,
   trainingSlugs,
   travelAgencySoftwareSegmentByRouteLocale,
@@ -101,6 +104,19 @@ export function proxy(request: NextRequest) {
     if (routeSegments[0] === demoByRouteLocale[routeLocale]) {
       routeSegments[0] = 'ask-for-a-demo';
       rewritten = true;
+    }
+
+    if (routeSegments[0] === newsSegmentByRouteLocale[routeLocale]) {
+      routeSegments[0] = 'news';
+      rewritten = true;
+
+      if (routeSegments.length > 1 && routeSegments[1] === newsCategorySegmentByRouteLocale[routeLocale]) {
+        routeSegments[1] = 'category';
+
+        if (routeSegments.length > 2) {
+          routeSegments[2] = getCanonicalSlug(newsCategorySlugs, routeLocale, routeSegments[2]);
+        }
+      }
     }
 
     if (rewritten) {

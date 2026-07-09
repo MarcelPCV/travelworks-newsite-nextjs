@@ -36,6 +36,36 @@ const nextConfig = {
         destination: '/fr-ca/logiciel-agence-voyage/:slug',
         permanent: true,
       },
+      {
+        source: '/fr-ca/news',
+        destination: '/fr-ca/nouvelles',
+        permanent: true,
+      },
+      {
+        source: '/fr-ca/news/page/:page',
+        destination: '/fr-ca/nouvelles/page/:page',
+        permanent: true,
+      },
+      {
+        source: '/fr-ca/news/category/accounting',
+        destination: '/fr-ca/nouvelles/categorie/comptabilite',
+        permanent: true,
+      },
+      {
+        source: '/fr-ca/news/category/agency-owner',
+        destination: '/fr-ca/nouvelles/categorie/proprietaire-agence',
+        permanent: true,
+      },
+      {
+        source: '/fr-ca/news/category/it-manager',
+        destination: '/fr-ca/nouvelles/categorie/gestionnaire-ti',
+        permanent: true,
+      },
+      {
+        source: '/fr-ca/news/category/technology',
+        destination: '/fr-ca/nouvelles/categorie/technologie',
+        permanent: true,
+      },
     ];
   },
 
@@ -112,6 +142,34 @@ const nextConfig = {
       {
         source: '/fr-ca/demander-une-demo',
         destination: '/fr-ca/ask-for-a-demo',
+      },
+      {
+        source: '/fr-ca/nouvelles',
+        destination: '/fr-ca/news',
+      },
+      {
+        source: '/fr-ca/nouvelles/page/:page',
+        destination: '/fr-ca/news/page/:page',
+      },
+      {
+        source: '/fr-ca/nouvelles/categorie/comptabilite',
+        destination: '/fr-ca/news/category/accounting',
+      },
+      {
+        source: '/fr-ca/nouvelles/categorie/proprietaire-agence',
+        destination: '/fr-ca/news/category/agency-owner',
+      },
+      {
+        source: '/fr-ca/nouvelles/categorie/gestionnaire-ti',
+        destination: '/fr-ca/news/category/it-manager',
+      },
+      {
+        source: '/fr-ca/nouvelles/categorie/technologie',
+        destination: '/fr-ca/news/category/technology',
+      },
+      {
+        source: '/fr-ca/nouvelles/:slug',
+        destination: '/fr-ca/news/:slug',
       },
     ];
   },

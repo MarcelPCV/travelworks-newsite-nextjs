@@ -15,6 +15,7 @@ import CtaButton, { type CtaButtonProps } from './cta-button';
 type DropdownCtaButtonVariant = NonNullable<CtaButtonProps['variant']>;
 type DropdownCtaButtonSize = NonNullable<CtaButtonProps['size']>;
 type DropdownCtaAlign = 'left' | 'right';
+const EXTERNAL_RETURN_REFRESH_KEY = 'travelworks.navbar.external-return-refresh';
 
 const optionIconSizeClassNames: Record<DropdownCtaButtonSize, string> = {
   xs: 'w-5 h-5',
@@ -106,9 +107,37 @@ export default function DropdownCtaButton({
     };
   }, [isOpen]);
 
+  useEffect(() => {
+    const onPageShow = (event: PageTransitionEvent) => {
+      if (!event.persisted) {
+        return;
+      }
+
+      clearScheduledClose();
+      setIsOpen(false);
+    };
+
+    window.addEventListener('pageshow', onPageShow);
+
+    return () => {
+      window.removeEventListener('pageshow', onPageShow);
+    };
+  }, []);
+
   const onOptionSelect = (option: DropdownCtaOption) => {
     if (option.disabled) {
       return;
+    }
+
+    if (option.href) {
+      try {
+        const targetUrl = new URL(option.href, window.location.origin);
+        if (targetUrl.origin !== window.location.origin) {
+          window.sessionStorage.setItem(EXTERNAL_RETURN_REFRESH_KEY, '1');
+        }
+      } catch {
+        // Ignore invalid URLs and continue with regular selection behavior.
+      }
     }
 
     option.onSelect?.();
@@ -127,8 +156,27 @@ export default function DropdownCtaButton({
         clearScheduledClose();
         setIsOpen(true);
       }}
+      onMouseMove={() => {
+        if (!isOpen) {
+          clearScheduledClose();
+          setIsOpen(true);
+        }
+      }}
       onMouseLeave={() => {
         scheduleClose();
+      }}
+      onFocusCapture={() => {
+        clearScheduledClose();
+        setIsOpen(true);
+      }}
+      onBlurCapture={(event) => {
+        const currentTarget = event.currentTarget;
+        requestAnimationFrame(() => {
+          const activeElement = document.activeElement;
+          if (!activeElement || !currentTarget.contains(activeElement)) {
+            scheduleClose(0);
+          }
+        });
       }}
     >
       <CtaButton
@@ -143,6 +191,10 @@ export default function DropdownCtaButton({
         onClick={() => {
           clearScheduledClose();
           setIsOpen((prev) => !prev);
+        }}
+        onFocus={() => {
+          clearScheduledClose();
+          setIsOpen(true);
         }}
         icon={
           <ChevronDown

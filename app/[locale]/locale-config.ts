@@ -53,6 +53,47 @@ export const demoByRouteLocale: Record<string, string> = {
   'en-au': 'ask-for-a-demo',
 };
 
+export const newsSegmentByRouteLocale: Record<string, string> = {
+  en: 'news',
+  'en-ca': 'news',
+  'fr-ca': 'nouvelles',
+  'en-au': 'news',
+};
+
+export const newsCategorySegmentByRouteLocale: Record<string, string> = {
+  en: 'category',
+  'en-ca': 'category',
+  'fr-ca': 'categorie',
+  'en-au': 'category',
+};
+
+export const newsCategorySlugs: Record<string, Record<string, string>> = {
+  accounting: {
+    en: 'accounting',
+    'en-ca': 'accounting',
+    'fr-ca': 'comptabilite',
+    'en-au': 'accounting',
+  },
+  'agency-owner': {
+    en: 'agency-owner',
+    'en-ca': 'agency-owner',
+    'fr-ca': 'proprietaire-agence',
+    'en-au': 'agency-owner',
+  },
+  'it-manager': {
+    en: 'it-manager',
+    'en-ca': 'it-manager',
+    'fr-ca': 'gestionnaire-ti',
+    'en-au': 'it-manager',
+  },
+  technology: {
+    en: 'technology',
+    'en-ca': 'technology',
+    'fr-ca': 'technologie',
+    'en-au': 'technology',
+  },
+};
+
 export const travelAgencySoftwareSlugs: Record<string, Record<string, string>> = {
   features: {
     en: 'features',
@@ -188,6 +229,16 @@ Object.entries(trainingSlugs).forEach(([canonical, byLocale]) => {
   });
 });
 
+const newsCategorySlugToCanonicalByLocale: Record<string, Record<string, string>> = {};
+Object.entries(newsCategorySlugs).forEach(([canonical, byLocale]) => {
+  Object.entries(byLocale).forEach(([locale, slug]) => {
+    if (!newsCategorySlugToCanonicalByLocale[locale]) {
+      newsCategorySlugToCanonicalByLocale[locale] = {};
+    }
+    newsCategorySlugToCanonicalByLocale[locale][slug] = canonical;
+  });
+});
+
 const knownRouteLocales = new Set(localeOptions.map((item) => item.routeLocale));
 
 const knownTravelAgencySoftwareSegments = new Set(
@@ -213,6 +264,36 @@ export function getTrainingSegment(routeLocale: string): string {
 const knownDemoSlugs = new Set(Object.values(demoByRouteLocale));
 export function getDemoSlug(routeLocale: string): string {
   return demoByRouteLocale[routeLocale] ?? demoByRouteLocale.en;
+}
+
+const knownNewsSegments = new Set(Object.values(newsSegmentByRouteLocale));
+export function getNewsSegment(routeLocale: string): string {
+  return newsSegmentByRouteLocale[routeLocale] ?? newsSegmentByRouteLocale.en;
+}
+
+export function getNewsCategorySegment(routeLocale: string): string {
+  return (
+    newsCategorySegmentByRouteLocale[routeLocale] ?? newsCategorySegmentByRouteLocale.en
+  );
+}
+
+export function getNewsCategorySlug(routeLocale: string, canonicalSlug: string): string {
+  return (
+    newsCategorySlugs[canonicalSlug]?.[routeLocale] ??
+    newsCategorySlugs[canonicalSlug]?.en ??
+    canonicalSlug
+  );
+}
+
+export function getNewsCategoryCanonicalSlug(
+  routeLocale: string,
+  localizedSlug: string,
+): string {
+  return (
+    newsCategorySlugToCanonicalByLocale[routeLocale]?.[localizedSlug] ??
+    newsCategorySlugToCanonicalByLocale.en?.[localizedSlug] ??
+    localizedSlug
+  );
 }
 
 export function getHomepageSlug(routeLocale: string): string {
@@ -282,6 +363,27 @@ export function replaceLocaleInPath(pathname: string, targetLocale: string): str
   // Keep one-level demo page slug localized when switching locales.
   if (segments.length > 0 && knownDemoSlugs.has(segments[0])) {
     segments[0] = getDemoSlug(targetLocale);
+  }
+
+  // Keep the static news/category segments localized when switching locales.
+  if (segments.length > 0 && knownNewsSegments.has(segments[0])) {
+    segments[0] = getNewsSegment(targetLocale);
+
+    if (segments.length > 1 && segments[1] === getNewsCategorySegment(currentLocale)) {
+      segments[1] = getNewsCategorySegment(targetLocale);
+
+      if (segments.length > 2) {
+        const currentCategorySlug = segments[2];
+        const canonicalCategorySlug = getNewsCategoryCanonicalSlug(
+          currentLocale,
+          currentCategorySlug,
+        );
+        const translatedCategorySlug = getNewsCategorySlug(targetLocale, canonicalCategorySlug);
+        if (translatedCategorySlug) {
+          segments[2] = translatedCategorySlug;
+        }
+      }
+    }
   }
 
   const suffixPath = segments.join('/');

@@ -40,6 +40,7 @@ import {
 } from '@/app/[locale]/components/layout/navbar/navbar-href';
 
 type DesktopPanel = 'products' | 'aboutUs' | 'training' | null;
+const EXTERNAL_RETURN_REFRESH_KEY = 'travelworks.navbar.external-return-refresh';
 
 function normalizePath(path: string): string {
   if (!path) return '/';
@@ -100,18 +101,34 @@ export default function Navbar() {
   const homeHref = currentRouteLocale === DEFAULT_ROUTE_LOCALE ? '/' : `/${currentRouteLocale}`;
   const askForDemoHref = getAskForDemoHref(currentRouteLocale, withLocalePrefix);
   const supportHref = oneLevelHref('support');
+  const travelworks= "https://new.pcvweb.com/#/login/"
+  const travelworksLegacy= "https://www.pcvweb.com/Login.aspx?lang=EN"
+  const knowledgeBaseHref = "https://www.tw-pcv-learning.com/en"
+  const supportLoginHref = 'https://support.pcvweb.com/auth/v3/signin?brand_id=360003288198&locale=en-ca&return_to=https%3A%2F%2Fsupport.pcvweb.com%2Fhc%2Fen-ca%2Frequests%2Fnew&role=end_user';
 
   const logInOptions: DropdownCtaOption[] = [
     {
       id: 'Travelworks',
       label: t('cta.logInOptions.travelworks'),
-      href: oneLevelHref(loginSlugByOptionId.Travelworks),
+      href: travelworks,
+      target: '_blank',
+      rel: 'noopener noreferrer',
+      icon: <CircleArrowRight aria-hidden="true" />,
+    },
+    {
+      id: 'TravelworksLegacy',
+      label: t('cta.logInOptions.travelworksLegacy'),
+      href: travelworksLegacy,
+      target: '_blank',
+      rel: 'noopener noreferrer',
       icon: <CircleArrowRight aria-hidden="true" />,
     },
     {
       id: 'Support',
       label: t('cta.logInOptions.support'),
-      href: oneLevelHref(loginSlugByOptionId.Support),
+      href: supportLoginHref,
+      target: '_blank',
+      rel: 'noopener noreferrer',
       icon: <CircleArrowRight aria-hidden="true" />,
     },
     {
@@ -123,7 +140,9 @@ export default function Navbar() {
     {
       id: 'Knowledge Base',
       label: t('cta.logInOptions.knowledgeBase'),
-      href: oneLevelHref(loginSlugByOptionId['Knowledge Base']),
+      href: knowledgeBaseHref,
+      target: '_blank',
+      rel: 'noopener noreferrer',
       icon: <CircleArrowRight aria-hidden="true" />,
     },
   ];
@@ -213,16 +232,20 @@ export default function Navbar() {
 
   useEffect(() => {
     const onDocumentClick = (event: MouseEvent) => {
-      if (!headerRef.current) {
+      const target = event.target;
+      if (!(target instanceof Element)) {
         return;
       }
 
-      const target = event.target as Node;
-      if (!headerRef.current.contains(target)) {
-        setActiveDesktopPanel(null);
-        setIsLangOpen(false);
-        setLoginDropdownCloseSignal((prev) => prev + 1);
+      // Use a DOM marker instead of only ref.contains() so BFCache restores do not
+      // incorrectly classify inside clicks as outside interactions.
+      if (target.closest('[data-navbar-root="true"]')) {
+        return;
       }
+
+      setActiveDesktopPanel(null);
+      setIsLangOpen(false);
+      setLoginDropdownCloseSignal((prev) => prev + 1);
     };
 
     const onEscape = (event: KeyboardEvent) => {
@@ -245,10 +268,76 @@ export default function Navbar() {
     };
   }, []);
 
+  useEffect(() => {
+    const recoverFromExternalReturn = () => {
+      const shouldRefreshAfterExternalReturn =
+        window.sessionStorage.getItem(EXTERNAL_RETURN_REFRESH_KEY) === '1';
+
+      if (shouldRefreshAfterExternalReturn) {
+        window.sessionStorage.removeItem(EXTERNAL_RETURN_REFRESH_KEY);
+        window.location.reload();
+        return true;
+      }
+
+      return false;
+    };
+
+    const onPageShow = (event: PageTransitionEvent) => {
+      if (recoverFromExternalReturn()) {
+        return;
+      }
+
+      if (!event.persisted) {
+        return;
+      }
+
+      if (closeTimerRef.current) {
+        clearTimeout(closeTimerRef.current);
+        closeTimerRef.current = null;
+      }
+
+      setActiveDesktopPanel(null);
+      setIsLangOpen(false);
+      setIsMobileOpen(false);
+      setMobileSection(null);
+      setIsSearchOpen(false);
+      setLoginDropdownCloseSignal((prev) => prev + 1);
+    };
+
+    const onFocus = () => {
+      recoverFromExternalReturn();
+    };
+
+    const onPopState = () => {
+      recoverFromExternalReturn();
+    };
+
+    const onVisibilityChange = () => {
+      if (document.visibilityState === 'visible') {
+        recoverFromExternalReturn();
+      }
+    };
+
+    recoverFromExternalReturn();
+
+    window.addEventListener('pageshow', onPageShow);
+    window.addEventListener('focus', onFocus);
+    window.addEventListener('popstate', onPopState);
+    document.addEventListener('visibilitychange', onVisibilityChange);
+
+    return () => {
+      window.removeEventListener('pageshow', onPageShow);
+      window.removeEventListener('focus', onFocus);
+      window.removeEventListener('popstate', onPopState);
+      document.removeEventListener('visibilitychange', onVisibilityChange);
+    };
+  }, []);
+
   return (
     <>
       <header
         ref={headerRef}
+        data-navbar-root="true"
         className="sticky top-0 z-40 border-b border-zinc-200 bg-white/95 backdrop-blur"
         onMouseEnter={clearScheduledClose}
         onMouseLeave={() => {
@@ -257,15 +346,18 @@ export default function Navbar() {
           setLoginDropdownCloseSignal((prev) => prev + 1);
         }}
         onBlurCapture={(event) => {
-          const nextFocused = event.relatedTarget as Node | null;
-          if (!nextFocused || !event.currentTarget.contains(nextFocused)) {
-            setActiveDesktopPanel(null);
-            setIsLangOpen(false);
-            setLoginDropdownCloseSignal((prev) => prev + 1);
-          }
+          const currentTarget = event.currentTarget;
+          requestAnimationFrame(() => {
+            const activeElement = document.activeElement;
+            if (!activeElement || !currentTarget.contains(activeElement)) {
+              setActiveDesktopPanel(null);
+              setIsLangOpen(false);
+              setLoginDropdownCloseSignal((prev) => prev + 1);
+            }
+          });
         }}
       >
-        <nav className="mx-auto flex w-full max-w-7xl items-center px-4 py-3 sm:px-6 lg:px-8">
+        <nav className="mx-auto flex w-full max-w-7xl items-center px-2 py-3 sm:px-6 lg:px-2">
           <Link href={homeHref} className="text-xl font-semibold tracking-tight text-zinc-900 uppercase">
             {t('brand.name')}
           </Link>
@@ -448,14 +540,24 @@ export default function Navbar() {
                   )}
                 </div>
               </li>
-              {/* <li>
-              <Link
-                href="#"
-                className="rounded-md px-3 py-2 text-sm font-medium text-zinc-800 uppercase transition duration-150 hover:bg-zinc-100"
-              >
-                {t('topLevel.support')}
-              </Link>
-            </li> */}
+              <li>
+                <Link
+                  href="/news"
+                  className="rounded-md px-3 py-2 text-sm font-medium text-zinc-800 uppercase transition duration-150 hover:bg-zinc-100"
+                  onMouseEnter={() => {
+                    clearScheduledClose();
+                    setActiveDesktopPanel(null);
+                    setIsLangOpen(false);
+                  }}
+                  onFocus={() => {
+                    clearScheduledClose();
+                    setActiveDesktopPanel(null);
+                    setIsLangOpen(false);
+                  }}
+                >
+                  {t('topLevel.news')}
+                </Link>
+              </li>
             </ul>
 
             <div className="flex items-center gap-2">
