@@ -1346,6 +1346,7 @@
   "docs": "Documentation",
   "nav": {
     "menu": "Menu",
+    "more": "More",
     "close": "Close",
     "languageTitle": "Languages",
     "languagePrefix": "{language}",

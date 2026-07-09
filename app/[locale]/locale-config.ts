@@ -84,6 +84,12 @@ export const travelAgencySoftwareSlugs: Record<string, Record<string, string>> =
     'fr-ca': 'gestion-des-tours',
     'en-au': 'tour-management',
   },
+  'tour-online': {
+    en: 'tour-online',
+    'en-ca': 'tour-online',
+    'fr-ca': 'tour-online',
+    'en-au': 'tour-online',
+  },
   'crm-tools': {
     en: 'crm-tools',
     'en-ca': 'crm-tools',
@@ -95,6 +101,12 @@ export const travelAgencySoftwareSlugs: Record<string, Record<string, string>> =
     'en-ca': 'multiple-integration',
     'fr-ca': 'integration-multiple',
     'en-au': 'multiple-integration',
+  },
+  integrations: {
+    en: 'integrations',
+    'en-ca': 'integrations',
+    'fr-ca': 'integration-multiple',
+    'en-au': 'integrations',
   },
   'dashboard-reports': {
     en: 'dashboard-reports',

@@ -6,6 +6,9 @@ import { useEffect, useMemo, useRef, useState, useCallback } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import {
   DEFAULT_ROUTE_LOCALE,
+  getAboutUsSegment,
+  getTrainingSegment,
+  getTravelAgencySoftwareSegment,
   localeOptions,
   replaceLocaleInPath,
   routeToMessageLocale,
@@ -37,6 +40,11 @@ import {
 } from '@/app/[locale]/components/layout/navbar/navbar-href';
 
 type DesktopPanel = 'products' | 'aboutUs' | 'training' | null;
+
+function normalizePath(path: string): string {
+  if (!path) return '/';
+  return path.length > 1 && path.endsWith('/') ? path.slice(0, -1) : path;
+}
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -153,6 +161,21 @@ export default function Navbar() {
   const isAboutUsOpen = activeDesktopPanel === 'aboutUs';
   const isTrainingOpen = activeDesktopPanel === 'training';
 
+  const normalizedPathname = normalizePath(pathname);
+  const pathnameSegments = normalizedPathname.split('/').filter(Boolean);
+  const contentPathSegments =
+    currentRouteLocale === DEFAULT_ROUTE_LOCALE
+      ? pathnameSegments
+      : pathnameSegments.length > 0
+        ? pathnameSegments.slice(1)
+        : [];
+
+  const activeTopLevelSection = contentPathSegments[0] ?? '';
+  const isProductsActive =
+    activeTopLevelSection === getTravelAgencySoftwareSegment(currentRouteLocale);
+  const isAboutUsActive = activeTopLevelSection === getAboutUsSegment(currentRouteLocale);
+  const isTrainingActive = activeTopLevelSection === getTrainingSegment(currentRouteLocale);
+
   const clearScheduledClose = () => {
     if (closeTimerRef.current) {
       clearTimeout(closeTimerRef.current);
@@ -170,6 +193,11 @@ export default function Navbar() {
     clearScheduledClose();
     closeTimerRef.current = setTimeout(() => setActiveDesktopPanel(null), delay);
   };
+
+  const isHrefActive = useCallback(
+    (href: string) => normalizePath(pathname) === normalizePath(href),
+    [pathname],
+  );
 
   useEffect(() => {
     if (!isSearchOpen) {
@@ -238,7 +266,7 @@ export default function Navbar() {
         }}
       >
         <nav className="mx-auto flex w-full max-w-7xl items-center px-4 py-3 sm:px-6 lg:px-8">
-          <Link href={homeHref} className="text-xl font-semibold tracking-tight text-zinc-900">
+          <Link href={homeHref} className="text-xl font-semibold tracking-tight text-zinc-900 uppercase">
             {t('brand.name')}
           </Link>
 
@@ -262,7 +290,9 @@ export default function Navbar() {
               <li>
                 <button
                   type="button"
-                  className="inline-flex items-center rounded-md px-3 py-2 text-sm font-medium text-zinc-800 uppercase transition duration-150 hover:bg-zinc-100"
+                  className={`inline-flex items-center rounded-md px-3 py-2 text-sm uppercase transition duration-150 hover:bg-zinc-100 ${
+                    isProductsActive ? 'font-bold text-[#015caa]' : 'font-medium text-zinc-800'
+                  }`}
                   aria-expanded={isProductsOpen}
                   aria-controls="products-mega-menu"
                   aria-haspopup="menu"
@@ -291,7 +321,9 @@ export default function Navbar() {
               <li className="relative">
                 <button
                   type="button"
-                  className="inline-flex items-center rounded-md px-3 py-2 text-sm font-medium text-zinc-800 uppercase transition duration-150 hover:bg-zinc-100"
+                  className={`inline-flex items-center rounded-md px-3 py-2 text-sm uppercase transition duration-150 hover:bg-zinc-100 ${
+                    isAboutUsActive ? 'font-semibold text-zinc-900' : 'font-medium text-zinc-800'
+                  }`}
                   aria-expanded={isAboutUsOpen}
                   aria-controls="about-us-menu"
                   aria-haspopup="menu"
@@ -325,18 +357,26 @@ export default function Navbar() {
                   {aboutUsLinks.map((link) =>
                     (() => {
                       const Icon = aboutUsLinkIcons[link];
+                      const href = aboutUsHref(link);
+                      const isActive = isHrefActive(href);
                       return (
                         <Link
                           key={link}
-                          href={aboutUsHref(link)}
+                          href={href}
                           role="menuitem"
-                          className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium text-white hover:text-zinc-900 transition duration-150 hover:bg-white"
+                          className={`flex items-center gap-2 rounded-md border-l-2 px-3 py-2 text-sm transition duration-150 ${
+                            isActive
+                              ? 'border-orange-400 bg-white text-zinc-900'
+                              : 'border-transparent text-white hover:bg-white hover:text-zinc-900'
+                          }`}
                           onClick={() => setActiveDesktopPanel(null)}
                         >
                           <div className="w-10 h-10 shrink-0 bg-zinc-100 flex items-center justify-center rounded-full shadow-xl">
                             <Icon className={menuItemIconClassName} aria-hidden="true" />
                           </div>
-                          {t(`aboutUs.${link}`)}
+                          <span className={isActive ? 'font-semibold' : 'font-medium'}>
+                            {t(`aboutUs.${link}`)}
+                          </span>
                         </Link>
                       );
                     })(),
@@ -346,7 +386,9 @@ export default function Navbar() {
               <li className="relative">
                 <button
                   type="button"
-                  className="inline-flex items-center rounded-md px-3 py-2 text-sm font-medium text-zinc-800 uppercase transition duration-150 hover:bg-zinc-100"
+                  className={`inline-flex items-center rounded-md px-3 py-2 text-sm uppercase transition duration-150 hover:bg-zinc-100 ${
+                    isTrainingActive ? 'font-semibold text-zinc-900' : 'font-medium text-zinc-800'
+                  }`}
                   aria-expanded={isTrainingOpen}
                   aria-controls="training-menu"
                   aria-haspopup="menu"
@@ -380,18 +422,26 @@ export default function Navbar() {
                   {trainingLinks.map((link) =>
                     (() => {
                       const Icon = trainingLinkIcons[link];
+                      const href = trainingHref(link);
+                      const isActive = isHrefActive(href);
                       return (
                         <Link
                           key={link}
-                          href={trainingHref(link)}
+                          href={href}
                           role="menuitem"
-                          className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium text-white hover:text-zinc-900 transition duration-150 hover:bg-white"
+                          className={`flex items-center gap-2 rounded-md border-l-2 px-3 py-2 text-sm transition duration-150 ${
+                            isActive
+                              ? 'border-orange-400 bg-white text-zinc-900'
+                              : 'border-transparent text-white hover:bg-white hover:text-zinc-900'
+                          }`}
                           onClick={() => setActiveDesktopPanel(null)}
                         >
                           <div className="w-10 h-10 shrink-0 bg-zinc-100 flex items-center justify-center rounded-full shadow-xl">
                             <Icon className={menuItemIconClassName} aria-hidden="true" />
                           </div>
-                          {t(`training.${link}`)}
+                          <span className={isActive ? 'font-semibold' : 'font-medium'}>
+                            {t(`training.${link}`)}
+                          </span>
                         </Link>
                       );
                     })(),
@@ -522,20 +572,26 @@ export default function Navbar() {
                     <div key={`${activeProductCategory}-${columnIndex}`} className="space-y-2">
                       {column.map((linkKey) => {
                         const Icon = productLinkIcons[linkKey];
+                        const href = solutionHref(linkKey);
+                        const isActive = isHrefActive(href);
 
                         return (
                           <Link
                             key={linkKey}
-                            href={solutionHref(linkKey)}
+                            href={href}
                             role="menuitem"
                             onClick={() => setActiveDesktopPanel(null)}
-                            className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium text-white hover:text-zinc-900 transition duration-150 hover:bg-zinc-300"
+                            className={`flex items-center gap-2 rounded-md border-l-2 px-3 py-2 text-sm transition duration-150 ${
+                              isActive
+                                ? 'border-orange-400 bg-zinc-300 text-zinc-900'
+                                : 'border-transparent text-white hover:bg-zinc-300 hover:text-zinc-900'
+                            }`}
                           >
                             <div className="w-10 h-10 shrink-0 bg-zinc-100 flex items-center justify-center rounded-full shadow-xl">
                               <Icon className={menuItemIconClassName} aria-hidden="true" />
                             </div>
 
-                            <span className="min-w-40 break-words">
+                            <span className={`min-w-40 break-words ${isActive ? 'font-semibold' : 'font-medium'}`}>
                               {t(`products.links.${linkKey}`)}
                             </span>
                           </Link>
