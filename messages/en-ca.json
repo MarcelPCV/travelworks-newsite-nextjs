@@ -1441,12 +1441,12 @@
     "close": "Close"
   },
   "topAnnouncement": {
-    "message": "Important Information: Fraud Awareness Notice",
+    "message": "<strong>Important Information</strong>: Fraud Awareness Notice",
     "learnMore": "Learn more",
     "dismiss": "Dismiss announcement",
     "modal": {
       "title": "Alert:",
-      "description": "Beware of a scammer using our TravelWorks branding. He uses WhatsApp by offering you a job by registering on the site www.travelworks-travel.com. Don't do it! Our website is https://travelworkssolution.com/ NOT affiliated with www.Travelworks-Travel.com",
+      "description": "Beware of a scammer using our TravelWorks branding. He uses WhatsApp by offering you a job by registering on the site <strong>www.travelworks-travel.com</strong>. Don't do it! Our website is <strong>https://travelworkssolution.com/</strong> NOT affiliated with <strong>www.Travelworks-Travel.com</strong>",
       "close": "Close modal",
       "button": "Close"
     }

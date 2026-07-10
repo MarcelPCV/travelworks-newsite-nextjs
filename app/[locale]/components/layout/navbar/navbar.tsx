@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useMemo, useRef, useState, useCallback } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
+import Image from 'next/image';
 import {
   DEFAULT_ROUTE_LOCALE,
   getAboutUsSegment,
@@ -24,7 +25,6 @@ import {
   aboutUsLinks,
   loginSlugByOptionId,
   menuItemIconClassName,
-  productCategories,
   productColumnsByCategory,
   productLinkIcons,
   trainingLinkIcons,
@@ -52,9 +52,10 @@ export default function Navbar() {
   const pathname = usePathname();
   const activeMessageLocale = useLocale();
   const t = useTranslations('nav');
+  const locale = useLocale();
 
   const [activeDesktopPanel, setActiveDesktopPanel] = useState<DesktopPanel>(null);
-  const [activeProductCategory, setActiveProductCategory] =
+  const [activeProductCategory] =
     useState<ProductCategory>('travelworks');
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [mobileSection, setMobileSection] = useState<'products' | 'aboutUs' | 'training' | null>(
@@ -330,7 +331,15 @@ export default function Navbar() {
       <header
         ref={headerRef}
         data-navbar-root="true"
-        className="sticky top-0 z-40 border-b border-zinc-200 bg-white/95 backdrop-blur"
+        className="
+          sticky top-0 z-40
+          bg-white/60
+          backdrop-blur-xl
+          backdrop-brightness-105
+          backdrop-saturate-200
+          border-b border-white/80
+          shadow-lg shadow-zinc-900/5
+        "
         onBlurCapture={(event) => {
           const currentTarget = event.currentTarget;
           requestAnimationFrame(() => {
@@ -343,9 +352,28 @@ export default function Navbar() {
           });
         }}
       >
-        <nav className="mx-auto flex w-full max-w-7xl items-center px-2 py-3 sm:px-6 lg:px-2">
-          <Link href={homeHref} className="text-xl font-semibold tracking-tight text-zinc-900 uppercase">
-            {t('brand.name')}
+        <nav className="mx-auto flex w-full max-w-[1600px] items-center py-2 px-4 sm:px-6 lg:px-8">
+          <Link
+            href={homeHref}
+            className="text-xl font-semibold tracking-tight text-zinc-900 uppercase"
+          >
+            {locale === 'fr-ca' ? (
+              <Image
+                src="/images/branding/pcvoyages.svg"
+                alt="PC Voyages"
+                width={0}
+                height={0}
+                className="h-16 w-auto"
+              />
+            ) : (
+              <Image
+                src="/images/branding/travelworks.svg"
+                alt="TravelWorks"
+                width={0}
+                height={0}
+                className="h-16 w-auto"
+              />
+            )}
           </Link>
 
           <button
@@ -369,7 +397,7 @@ export default function Navbar() {
               <li>
                 <button
                   type="button"
-                  className={`inline-flex items-center rounded-md px-3 py-2 text-sm uppercase transition duration-150 hover:bg-zinc-100 ${
+                  className={`inline-flex items-center rounded-md px-3 py-2 text-sm uppercase transition duration-150 hover:bg-zinc-100 hover:border-b-2 hover:border-amber-600 ${
                     isProductsActive ? 'font-bold text-[#015caa]' : 'font-medium text-zinc-800'
                   }`}
                   aria-expanded={isProductsOpen}
@@ -392,7 +420,7 @@ export default function Navbar() {
               <li className="relative">
                 <button
                   type="button"
-                  className={`inline-flex items-center rounded-md px-3 py-2 text-sm uppercase transition duration-150 hover:bg-zinc-100 ${
+                  className={`inline-flex items-center rounded-md px-3 py-2 text-sm uppercase transition duration-150 hover:bg-zinc-100 hover:border-b-2 hover:border-amber-600 ${
                     isAboutUsActive ? 'font-bold text-[#015caa]' : 'font-medium text-zinc-800'
                   }`}
                   aria-expanded={isAboutUsOpen}
@@ -455,7 +483,7 @@ export default function Navbar() {
               <li className="relative">
                 <button
                   type="button"
-                  className={`inline-flex items-center rounded-md px-3 py-2 text-sm uppercase transition duration-150 hover:bg-zinc-100 ${
+                  className={`inline-flex items-center rounded-md px-3 py-2 text-sm uppercase transition duration-150 hover:bg-zinc-100 hover:border-b-2 hover:border-amber-600 ${
                     isTrainingActive ? 'font-bold text-[#015caa]' : 'font-medium text-zinc-800'
                   }`}
                   aria-expanded={isTrainingOpen}
@@ -902,7 +930,18 @@ export default function Navbar() {
 
       {isSearchOpen ? (
         <div
-          className="fixed inset-0 z-70 flex items-center justify-center bg-black/60 px-4 sm:px-6"
+          className="
+            fixed 
+            inset-0 
+            z-70 
+            flex 
+            items-center 
+            justify-center   
+            bg-white/60
+            backdrop-blur-xl
+            backdrop-saturate-150
+            border-b border-white/10 px-4 sm:px-6
+          "
           role="dialog"
           aria-modal="true"
           aria-label="Site search"

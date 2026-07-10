@@ -1441,12 +1441,12 @@
     "close": "Fermer"
   },
   "topAnnouncement": {
-    "message": "Information importante : Avis de sensibilisation à la fraude",
+    "message": "<strong>Information importante</strong>: Avis de sensibilisation à la fraude",
     "learnMore": "En savoir plus",
     "dismiss": "Fermer l'annonce",
     "modal": {
       "title": "Alerte:",
-      "description": "Méfiez-vous des fraudeurs utilisant notre marque TravelWorks. Il utilise WhatsApp en vous proposant un emploi en vous inscrivant sur le site www.travelworks-travel.com. Ne le fais pas ! Notre site Web est https://travelworkssolution.com/ NON affilié à www.Travelworks-Travel.com",
+      "description": "Méfiez-vous des fraudeurs utilisant notre marque TravelWorks. Il utilise WhatsApp en vous proposant un emploi en vous inscrivant sur le site <strong>www.travelworks-travel.com</strong>. Ne le fais pas ! Notre site Web est <strong>https://travelworkssolution.com/</strong> NON affilié à <strong>www.Travelworks-Travel.com</strong>",
       "close": "Fermer la fenetre",
       "button": "Fermer"
     }

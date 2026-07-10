@@ -31,7 +31,7 @@ export default function HeroCarousel({
 
   return (
     <section
-      className="relative mx-auto w-full max-w-7xl overflow-hidden rounded-2xl border border-neutral-border shadow-[0_10px_35px_rgba(11,30,74,0.12)]"
+      className="relative mx-auto w-full max-w-[1600px] overflow-hidden rounded-2xl border border-neutral-border shadow-[0_10px_35px_rgba(11,30,74,0.12)]"
       aria-label="Hero carousel"
     >
       <Swiper
