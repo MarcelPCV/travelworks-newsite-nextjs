@@ -109,28 +109,56 @@
         }
       },
       "block-type-features-cards": {
-        "title": "<span>Une technologie <strong>adaptée</strong> à <strong>l'industrie du voyage</strong></span>",
+        "title": "<span>Une technologie <strong>spécialisée</strong> à <strong>l'industrie du voyage</strong></span>",
         "items": {
           "backoffice-tools": {
-            "title": "Gestion des réservations"
+            "title": "Gestion des réservations",
+            "ctaHref": "/fr-ca/logiciel-agence-voyage/back-office-agence-voyage",
+            "image": {
+              "alt": "Outils de back-office Travelworks"
+            }
           },
           "reservation-management": {
-            "title": "Gestion des dossiers"
+            "title": "Gestion des dossiers",
+            "ctaHref": "/fr-ca/logiciel-agence-voyage/fonctionnalites",
+            "image": {
+              "alt": "Outils de gestion des dossiers Travelworks"
+            }
           },
           "strategic-management-tool": {
-            "title": "Outil de gestion stratégique"
+            "title": "Outil de gestion stratégique",
+            "ctaHref": "/fr-ca/logiciel-agence-voyage/fonctionnalites",
+            "image": {
+              "alt": "Outil de gestion stratégique Travelworks"
+            }
           },
           "tour-management": {
-            "title": "Gestion des circuits"
+            "title": "Gestion des circuits",
+            "ctaHref": "/fr-ca/logiciel-agence-voyage/gestion-des-tours",
+            "image": {
+              "alt": "Outils de gestion des circuits Travelworks"
+            }
           },
           "online-tour-booking": {
-            "title": "Réservation de circuits en ligne"
+            "title": "Réservation de circuits en ligne",
+            "ctaHref": "/fr-ca/logiciel-agence-voyage/tour-online",
+            "image": {
+              "alt": "Réservation de circuits en ligne Travelworks"
+            }
           },
           "crm-tools": {
-            "title": "Outils CRM"
+            "title": "Outils CRM",
+            "ctaHref": "/fr-ca/logiciel-agence-voyage/outils-crm",
+            "image": {
+              "alt": "Outils CRM Travelworks"
+            }
           },
           "multiple-integration": {
-            "title": "Intégrations multiples"
+            "title": "Intégrations multiples",
+            "ctaHref": "/fr-ca/logiciel-agence-voyage/integrations",
+            "image": {
+              "alt": "Intégrations multiples Travelworks"
+            }
           }
         }
       },

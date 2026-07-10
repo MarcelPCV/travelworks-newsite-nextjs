@@ -137,16 +137,10 @@ export const travelAgencySoftwareSlugs: Record<string, Record<string, string>> =
     'fr-ca': 'outils-crm',
     'en-au': 'crm-tools',
   },
-  'multiple-integration': {
-    en: 'multiple-integration',
-    'en-ca': 'multiple-integration',
-    'fr-ca': 'integration-multiple',
-    'en-au': 'multiple-integration',
-  },
   integrations: {
     en: 'integrations',
     'en-ca': 'integrations',
-    'fr-ca': 'integration-multiple',
+    'fr-ca': 'integrations',
     'en-au': 'integrations',
   },
   'dashboard-reports': {

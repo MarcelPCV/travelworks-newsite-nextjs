@@ -116,8 +116,8 @@ const nextConfig = {
         destination: '/fr-ca/travel-agency-software/crm-tools',
       },
       {
-        source: '/fr-ca/logiciel-agence-voyage/integration-multiple',
-        destination: '/fr-ca/travel-agency-software/multiple-integration',
+        source: '/fr-ca/logiciel-agence-voyage/integrations',
+        destination: '/fr-ca/travel-agency-software/inegrations',
       },
       {
         source: '/fr-ca/logiciel-agence-voyage/tableau-de-bord-rapports',

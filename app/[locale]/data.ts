@@ -68,10 +68,10 @@ const featureCards: FeatureCardsSectionData['items'] = [
   {
     id: '0',
     title: 'block-type-features-cards.items.backoffice-tools.title',
-    ctaHref: '/feature-1',
+    ctaHref: 'block-type-features-cards.items.backoffice-tools.ctaHref',
     image: {
-      src: '/images/components/feature-cards/feature_strategic_management_tool.gif',
-      alt: 'Feature 1',
+      src: '/images/pages/home/feature-cards/travelworks-pcvoyages-feature-backoffice.webp',
+      alt: 'block-type-features-cards.items.backoffice-tools.image.alt',
       width: 400,
       height: 300,
     },
@@ -79,10 +79,10 @@ const featureCards: FeatureCardsSectionData['items'] = [
   {
     id: '1',
     title: 'block-type-features-cards.items.reservation-management.title',
-    ctaHref: '/feature-1',
+    ctaHref: 'block-type-features-cards.items.reservation-management.ctaHref',
     image: {
-      src: '/images/components/feature-cards/feature_strategic_management_tool.gif',
-      alt: 'Feature 1',
+      src: '/images/pages/home/feature-cards/travelworks-pcvoyages-feature-reservation-management.webp',
+      alt: 'block-type-features-cards.items.reservation-management.image.alt',
       width: 400,
       height: 300,
     },
@@ -90,10 +90,10 @@ const featureCards: FeatureCardsSectionData['items'] = [
   {
     id: '2',
     title: 'block-type-features-cards.items.strategic-management-tool.title',
-    ctaHref: '/feature-1',
+    ctaHref: 'block-type-features-cards.items.strategic-management-tool.ctaHref',
     image: {
-      src: '/images/components/feature-cards/feature_strategic_management_tool.gif',
-      alt: 'Feature 1',
+      src: '/images/pages/home/feature-cards/travelworks-pcvoyages-feature-strategic-management-tool.webp',
+      alt: 'block-type-features-cards.items.strategic-management-tool.image.alt',
       width: 400,
       height: 300,
     },
@@ -101,10 +101,10 @@ const featureCards: FeatureCardsSectionData['items'] = [
   {
     id: '3',
     title: 'block-type-features-cards.items.tour-management.title',
-    ctaHref: '/feature-1',
+    ctaHref: 'block-type-features-cards.items.tour-management.ctaHref',
     image: {
-      src: '/images/components/feature-cards/feature_strategic_management_tool.gif',
-      alt: 'Feature 1',
+      src: '/images/pages/home/feature-cards/travelworks-pcvoyages-feature-tour-management.webp',
+      alt: 'block-type-features-cards.items.tour-management.image.alt',
       width: 400,
       height: 300,
     },
@@ -112,10 +112,10 @@ const featureCards: FeatureCardsSectionData['items'] = [
   {
     id: '4',
     title: 'block-type-features-cards.items.online-tour-booking.title',
-    ctaHref: '/feature-1',
+    ctaHref: 'block-type-features-cards.items.online-tour-booking.ctaHref',
     image: {
-      src: '/images/components/feature-cards/feature_strategic_management_tool.gif',
-      alt: 'Feature 1',
+      src: '/images/pages/home/feature-cards/travelworks-pcvoyages-feature-online-tour-booking.webp',
+      alt: 'block-type-features-cards.items.online-tour-booking.image.alt',
       width: 400,
       height: 300,
     },
@@ -123,10 +123,10 @@ const featureCards: FeatureCardsSectionData['items'] = [
   {
     id: '5',
     title: 'block-type-features-cards.items.crm-tools.title',
-    ctaHref: '/feature-1',
+    ctaHref: 'block-type-features-cards.items.crm-tools.ctaHref',
     image: {
-      src: '/images/components/feature-cards/feature_strategic_management_tool.gif',
-      alt: 'Feature 1',
+      src: '/images/pages/home/feature-cards/travelworks-pcvoyages-feature-crm-tools.webp',
+      alt: 'block-type-features-cards.items.crm-tools.image.alt',
       width: 400,
       height: 300,
     },
@@ -134,10 +134,10 @@ const featureCards: FeatureCardsSectionData['items'] = [
   {
     id: '6',
     title: 'block-type-features-cards.items.multiple-integration.title',
-    ctaHref: '/feature-1',
+    ctaHref: 'block-type-features-cards.items.multiple-integration.ctaHref',
     image: {
-      src: '/images/components/feature-cards/feature_strategic_management_tool.gif',
-      alt: 'Feature 1',
+      src: '/images/pages/home/feature-cards/travelworks-pcvoyages-feature-multiple_integration.webp',
+      alt: 'block-type-features-cards.items.multiple-integration.image.alt',
       width: 400,
       height: 300,
     },

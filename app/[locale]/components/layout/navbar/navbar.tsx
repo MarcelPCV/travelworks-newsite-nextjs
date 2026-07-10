@@ -7,6 +7,7 @@ import { useLocale, useTranslations } from 'next-intl';
 import {
   DEFAULT_ROUTE_LOCALE,
   getAboutUsSegment,
+  getNewsSegment,
   getTrainingSegment,
   getTravelAgencySoftwareSegment,
   localeOptions,
@@ -59,10 +60,10 @@ export default function Navbar() {
   const [mobileSection, setMobileSection] = useState<'products' | 'aboutUs' | 'training' | null>(
     null,
   );
+  const [isMobileLoginOpen, setIsMobileLoginOpen] = useState(false);
   const [isLangOpen, setIsLangOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [loginDropdownCloseSignal, setLoginDropdownCloseSignal] = useState(0);
-  const closeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const searchInputRef = useRef<HTMLInputElement | null>(null);
   const headerRef = useRef<HTMLElement | null>(null);
 
@@ -98,9 +99,18 @@ export default function Navbar() {
     [currentRouteLocale, withLocalePrefix],
   );
 
-  const homeHref = currentRouteLocale === DEFAULT_ROUTE_LOCALE ? '/' : `/${currentRouteLocale}`;
+  const homeHrefByRouteLocale: Record<string, string> = {
+    [DEFAULT_ROUTE_LOCALE]: '/',
+    'en-ca': '/en-ca',
+    'fr-ca': '/fr-ca',
+    'en-au': '/en-au',
+  };
+
+  const homeHref =
+    homeHrefByRouteLocale[currentRouteLocale] ??
+    (currentRouteLocale === DEFAULT_ROUTE_LOCALE ? '/' : `/${currentRouteLocale}`);
   const askForDemoHref = getAskForDemoHref(currentRouteLocale, withLocalePrefix);
-  const supportHref = oneLevelHref('support');
+  const newsHref = withLocalePrefix(`/${getNewsSegment(currentRouteLocale)}`);
   const travelworks= "https://new.pcvweb.com/#/login/"
   const travelworksLegacy= "https://www.pcvweb.com/Login.aspx?lang=EN"
   const knowledgeBaseHref = "https://www.tw-pcv-learning.com/en"
@@ -195,28 +205,17 @@ export default function Navbar() {
   const isAboutUsActive = activeTopLevelSection === getAboutUsSegment(currentRouteLocale);
   const isTrainingActive = activeTopLevelSection === getTrainingSegment(currentRouteLocale);
 
-  const clearScheduledClose = () => {
-    if (closeTimerRef.current) {
-      clearTimeout(closeTimerRef.current);
-      closeTimerRef.current = null;
-    }
-  };
-
-  const openDesktopPanel = (panel: Exclude<DesktopPanel, null>) => {
-    clearScheduledClose();
-    setActiveDesktopPanel(panel);
-    setIsLangOpen(false);
-  };
-
-  const schedulePanelClose = (delay = 120) => {
-    clearScheduledClose();
-    closeTimerRef.current = setTimeout(() => setActiveDesktopPanel(null), delay);
-  };
-
   const isHrefActive = useCallback(
     (href: string) => normalizePath(pathname) === normalizePath(href),
     [pathname],
   );
+
+  const closeMobileMenu = useCallback(() => {
+    setIsMobileOpen(false);
+    setMobileSection(null);
+    setIsMobileLoginOpen(false);
+    setLoginDropdownCloseSignal((prev) => prev + 1);
+  }, []);
 
   useEffect(() => {
     if (!isSearchOpen) {
@@ -252,7 +251,7 @@ export default function Navbar() {
       if (event.key === 'Escape') {
         setActiveDesktopPanel(null);
         setIsLangOpen(false);
-        setIsMobileOpen(false);
+        closeMobileMenu();
         setIsSearchOpen(false);
         setLoginDropdownCloseSignal((prev) => prev + 1);
       }
@@ -264,9 +263,8 @@ export default function Navbar() {
     return () => {
       document.removeEventListener('mousedown', onDocumentClick);
       document.removeEventListener('keydown', onEscape);
-      clearScheduledClose();
     };
-  }, []);
+  }, [closeMobileMenu]);
 
   useEffect(() => {
     const recoverFromExternalReturn = () => {
@@ -291,15 +289,9 @@ export default function Navbar() {
         return;
       }
 
-      if (closeTimerRef.current) {
-        clearTimeout(closeTimerRef.current);
-        closeTimerRef.current = null;
-      }
-
       setActiveDesktopPanel(null);
       setIsLangOpen(false);
-      setIsMobileOpen(false);
-      setMobileSection(null);
+      closeMobileMenu();
       setIsSearchOpen(false);
       setLoginDropdownCloseSignal((prev) => prev + 1);
     };
@@ -331,7 +323,7 @@ export default function Navbar() {
       window.removeEventListener('popstate', onPopState);
       document.removeEventListener('visibilitychange', onVisibilityChange);
     };
-  }, []);
+  }, [closeMobileMenu]);
 
   return (
     <>
@@ -339,12 +331,6 @@ export default function Navbar() {
         ref={headerRef}
         data-navbar-root="true"
         className="sticky top-0 z-40 border-b border-zinc-200 bg-white/95 backdrop-blur"
-        onMouseEnter={clearScheduledClose}
-        onMouseLeave={() => {
-          schedulePanelClose();
-          setIsLangOpen(false);
-          setLoginDropdownCloseSignal((prev) => prev + 1);
-        }}
         onBlurCapture={(event) => {
           const currentTarget = event.currentTarget;
           requestAnimationFrame(() => {
@@ -370,6 +356,7 @@ export default function Navbar() {
             onClick={() => {
               setIsMobileOpen((prev) => !prev);
               setMobileSection(null);
+              setIsMobileLoginOpen(false);
               setActiveDesktopPanel(null);
               setIsLangOpen(false);
             }}
@@ -388,17 +375,9 @@ export default function Navbar() {
                   aria-expanded={isProductsOpen}
                   aria-controls="products-mega-menu"
                   aria-haspopup="menu"
-                  onMouseEnter={() => openDesktopPanel('products')}
-                  onFocus={() => openDesktopPanel('products')}
                   onClick={() => {
                     setActiveDesktopPanel((prev) => (prev === 'products' ? null : 'products'));
                     setIsLangOpen(false);
-                  }}
-                  onKeyDown={(event) => {
-                    if (event.key === 'ArrowDown') {
-                      event.preventDefault();
-                      openDesktopPanel('products');
-                    }
                   }}
                 >
                   <span>{t('topLevel.products')}</span>
@@ -419,8 +398,6 @@ export default function Navbar() {
                   aria-expanded={isAboutUsOpen}
                   aria-controls="about-us-menu"
                   aria-haspopup="menu"
-                  onMouseEnter={() => openDesktopPanel('aboutUs')}
-                  onFocus={() => openDesktopPanel('aboutUs')}
                   onClick={() => {
                     setActiveDesktopPanel((prev) => (prev === 'aboutUs' ? null : 'aboutUs'));
                     setIsLangOpen(false);
@@ -484,8 +461,6 @@ export default function Navbar() {
                   aria-expanded={isTrainingOpen}
                   aria-controls="training-menu"
                   aria-haspopup="menu"
-                  onMouseEnter={() => openDesktopPanel('training')}
-                  onFocus={() => openDesktopPanel('training')}
                   onClick={() => {
                     setActiveDesktopPanel((prev) => (prev === 'training' ? null : 'training'));
                     setIsLangOpen(false);
@@ -542,15 +517,13 @@ export default function Navbar() {
               </li>
               <li>
                 <Link
-                  href="/news"
+                  href={newsHref}
                   className="rounded-md px-3 py-2 text-sm font-medium text-zinc-800 uppercase transition duration-150 hover:bg-zinc-100"
                   onMouseEnter={() => {
-                    clearScheduledClose();
                     setActiveDesktopPanel(null);
                     setIsLangOpen(false);
                   }}
                   onFocus={() => {
-                    clearScheduledClose();
                     setActiveDesktopPanel(null);
                     setIsLangOpen(false);
                   }}
@@ -578,11 +551,6 @@ export default function Navbar() {
                 <CtaButton label={t('cta.askForDemo')} variant="orangeGradient" size="xs" />
               </Link>
               <div
-                onMouseEnter={() => {
-                  clearScheduledClose();
-                  setActiveDesktopPanel(null);
-                  setIsLangOpen(false);
-                }}
                 onFocusCapture={() => {
                   setActiveDesktopPanel(null);
                   setIsLangOpen(false);
@@ -728,23 +696,6 @@ export default function Navbar() {
                 </button>
                 {mobileSection === 'products' ? (
                   <div className="mt-2 rounded-xl bg-zinc-100 p-3">
-                    <div className="mb-3 flex flex-wrap gap-2">
-                      {productCategories.map((category) => (
-                        <button
-                          key={category}
-                          type="button"
-                          className={`rounded-full px-3 py-1 text-xs font-semibold transition ${
-                            activeProductCategory === category
-                              ? 'bg-white text-zinc-900 shadow-sm'
-                              : 'bg-zinc-200 text-zinc-700'
-                          }`}
-                          onClick={() => setActiveProductCategory(category)}
-                        >
-                          {t(`products.categories.${category}`)}
-                        </button>
-                      ))}
-                    </div>
-
                     <div className="space-y-1">
                       {productColumnsByCategory[activeProductCategory].flat().map((linkKey) =>
                         (() => {
@@ -754,6 +705,7 @@ export default function Navbar() {
                               key={`mobile-${linkKey}`}
                               href={solutionHref(linkKey)}
                               className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium text-zinc-700 hover:bg-white"
+                              onClick={closeMobileMenu}
                             >
                               <Icon className={menuItemIconClassName} aria-hidden="true" />
                               {t(`products.links.${linkKey}`)}
@@ -792,6 +744,7 @@ export default function Navbar() {
                             key={`mobile-${link}`}
                             href={aboutUsHref(link)}
                             className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium text-zinc-700 hover:bg-white"
+                            onClick={closeMobileMenu}
                           >
                             <Icon className={menuItemIconClassName} aria-hidden="true" />
                             {t(`aboutUs.${link}`)}
@@ -829,6 +782,7 @@ export default function Navbar() {
                             key={`mobile-${link}`}
                             href={trainingHref(link)}
                             className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium text-zinc-700 hover:bg-white"
+                            onClick={closeMobileMenu}
                           >
                             <Icon className={menuItemIconClassName} aria-hidden="true" />
                             {t(`training.${link}`)}
@@ -842,36 +796,87 @@ export default function Navbar() {
 
               <li>
                 <Link
-                  href={supportHref}
+                  href={newsHref}
                   className="block rounded-md px-3 py-2 text-sm font-medium text-zinc-700 hover:bg-zinc-100"
+                  onClick={closeMobileMenu}
                 >
-                  {t('topLevel.support')}
+                  {t('topLevel.news')}
                 </Link>
+              </li>
+              <li className="border-t border-zinc-200 pt-2">
+                <Link
+                  href={askForDemoHref}
+                  className="block rounded-md px-3 py-2 text-sm font-medium text-zinc-700 hover:bg-zinc-100"
+                  onClick={closeMobileMenu}
+                >
+                  {t('cta.askForDemo')}
+                </Link>
+              </li>
+
+              <li>
+                <button
+                  type="button"
+                  className="flex w-full items-center justify-between rounded-md px-3 py-2 text-left text-sm font-medium text-zinc-700 hover:bg-zinc-100"
+                  aria-expanded={isMobileLoginOpen}
+                  aria-controls="mobile-login-menu"
+                  onClick={() => setIsMobileLoginOpen((prev) => !prev)}
+                >
+                  <span>{t('cta.logIn')}</span>
+                  <ChevronDown
+                    className={`ml-1 inline-block h-4 w-4 transition-transform duration-150 ${
+                      isMobileLoginOpen ? 'rotate-180' : 'rotate-0'
+                    }`}
+                    aria-hidden="true"
+                  />
+                </button>
+
+                {isMobileLoginOpen ? (
+                  <div id="mobile-login-menu" className="mt-2 rounded-xl bg-zinc-100 p-3">
+                    <div className="space-y-1">
+                      {logInOptions.map((option) => (
+                        <Link
+                          key={`mobile-login-option-${option.id}`}
+                          href={option.href ?? '#'}
+                          target={option.target}
+                          rel={option.rel}
+                          className={`flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium transition ${
+                            option.disabled
+                              ? 'pointer-events-none text-zinc-400'
+                              : 'text-zinc-700 hover:bg-white'
+                          }`}
+                          onClick={(event) => {
+                            if (option.disabled) {
+                              event.preventDefault();
+                              return;
+                            }
+
+                            if (option.href) {
+                              try {
+                                const targetUrl = new URL(option.href, window.location.origin);
+                                if (targetUrl.origin !== window.location.origin) {
+                                  window.sessionStorage.setItem(EXTERNAL_RETURN_REFRESH_KEY, '1');
+                                }
+                              } catch {
+                                // Ignore invalid URL and proceed with regular navigation behavior.
+                              }
+                            }
+
+                            option.onSelect?.();
+                            closeMobileMenu();
+                          }}
+                          aria-disabled={option.disabled ? 'true' : undefined}
+                        >
+                          {option.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                ) : null}
               </li>
             </ul>
 
-            <ul className="mt-3">
-              <li className="py-2">
-                <Link href={askForDemoHref}>
-                  <CtaButton label={t('cta.askForDemo')} variant="orangeGradient" size="xs" />
-                </Link>
-              </li>
-              <li className="py-2">
-                <DropdownCtaButton
-                  key={`mobile-login-${loginDropdownCloseSignal}`}
-                  label={t('cta.logIn')}
-                  variant="blue"
-                  size="xs"
-                  options={logInOptions}
-                  className="w-full"
-                  align="left"
-                  menuClassName="w-full min-w-0"
-                />
-              </li>
-            </ul>
-
-            <div className="mt-3 border-t border-zinc-200 pt-3">
-              <p className="px-3 text-xs font-semibold uppercase tracking-wide text-zinc-500">
+            <div className="mt-2 border-t border-zinc-200 pt-2">
+              <p className="px-3 pb-1 text-xs font-semibold uppercase tracking-wide text-zinc-500">
                 {t('languageTitle')}
               </p>
               <div className="mt-2 space-y-1">
@@ -880,12 +885,11 @@ export default function Navbar() {
                     key={item.routeLocale}
                     href={item.href}
                     className={`block rounded-md px-3 py-2 text-sm transition ${
-                      item.isActive ? 'bg-zinc-900 text-white' : 'text-zinc-700 hover:bg-zinc-100'
+                      item.isActive
+                        ? 'font-semibold text-zinc-900 hover:bg-zinc-100'
+                        : 'font-medium text-zinc-700 hover:bg-zinc-100'
                     }`}
-                    onClick={() => {
-                      setIsMobileOpen(false);
-                      setMobileSection(null);
-                    }}
+                    onClick={closeMobileMenu}
                   >
                     {item.label}
                   </Link>

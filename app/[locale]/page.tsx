@@ -133,10 +133,10 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
                 items={layout.items.map((item) => ({
                   ...item,
                   title: item.title ? t(item.title) : '',
-                  ctaHref: item.ctaHref || '#',
+                  ctaHref: item.ctaHref ? t(item.ctaHref) : '',
                   image: {
                     ...item.image,
-                    alt: item.image.alt || '',
+                    alt: item.image.alt ? t(item.image.alt) : '',
                   },
                 }))}
               />

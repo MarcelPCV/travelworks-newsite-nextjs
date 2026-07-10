@@ -112,25 +112,53 @@
         "title": "<span>Technology <strong>tailored</strong> to <strong>travel industry</strong></span>",
         "items": {
           "backoffice-tools": {
-            "title": "Booking Management"
+            "title": "Booking Management",
+            "ctaHref": "/travel-agency-software/back-office-travel-agency",
+            "image": {
+              "alt": "Travelworks - Backoffice Tools"
+            }
           },
           "reservation-management": {
-            "title": "Reservation Management"
+            "title": "Reservation Management",
+            "ctaHref": "/travel-agency-software/features",
+            "image": {
+              "alt": "Travelworks - Reservation Management"
+            }
           },
           "strategic-management-tool": {
-            "title": "Strategic Management Tool"
+            "title": "Strategic Management Tool",
+            "ctaHref": "/travel-agency-software/features",
+            "image": {
+              "alt": "Travelworks - Strategic Management Tool"
+            }
           },
           "tour-management": {
-            "title": "Tour Management"
+            "title": "Tour Management",
+            "ctaHref": "/travel-agency-software/tour-management",
+            "image": {
+              "alt": "Travelworks - Tour Management"
+            }
           },
           "online-tour-booking": {
-            "title": "Online Tour Booking"
+            "title": "Online Tour Booking",
+            "ctaHref": "/travel-agency-software/tour-online",
+            "image": {
+              "alt": "Travelworks - Online Tour Booking"
+            }
           },
           "crm-tools": {
-            "title": "CRM Tools"
+            "title": "CRM Tools",
+            "ctaHref": "/travel-agency-software/crm-tools",
+            "image": {
+              "alt": "Travelworks - CRM Tools"
+            }
           },
           "multiple-integration": {
-            "title": "Multiple Integration"
+            "title": "Multiple Integration",
+            "ctaHref": "/travel-agency-software/integrations",
+            "image": {
+              "alt": "Travelworks - Multiple Integration"
+            }
           }
         }
       },

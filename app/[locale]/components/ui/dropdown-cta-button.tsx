@@ -61,20 +61,7 @@ export default function DropdownCtaButton({
 }: DropdownCtaButtonProps) {
   const [isOpen, setIsOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement | null>(null);
-  const closeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const menuId = `dropdown-cta-menu-${useId()}`;
-
-  const clearScheduledClose = () => {
-    if (closeTimerRef.current) {
-      clearTimeout(closeTimerRef.current);
-      closeTimerRef.current = null;
-    }
-  };
-
-  const scheduleClose = (delay = 120) => {
-    clearScheduledClose();
-    closeTimerRef.current = setTimeout(() => setIsOpen(false), delay);
-  };
 
   useEffect(() => {
     if (!isOpen) {
@@ -103,7 +90,6 @@ export default function DropdownCtaButton({
     return () => {
       document.removeEventListener('mousedown', onDocumentClick);
       document.removeEventListener('keydown', onEscape);
-      clearScheduledClose();
     };
   }, [isOpen]);
 
@@ -113,7 +99,6 @@ export default function DropdownCtaButton({
         return;
       }
 
-      clearScheduledClose();
       setIsOpen(false);
     };
 
@@ -152,29 +137,12 @@ export default function DropdownCtaButton({
     <div
       ref={rootRef}
       className="relative inline-flex"
-      onMouseEnter={() => {
-        clearScheduledClose();
-        setIsOpen(true);
-      }}
-      onMouseMove={() => {
-        if (!isOpen) {
-          clearScheduledClose();
-          setIsOpen(true);
-        }
-      }}
-      onMouseLeave={() => {
-        scheduleClose();
-      }}
-      onFocusCapture={() => {
-        clearScheduledClose();
-        setIsOpen(true);
-      }}
       onBlurCapture={(event) => {
         const currentTarget = event.currentTarget;
         requestAnimationFrame(() => {
           const activeElement = document.activeElement;
           if (!activeElement || !currentTarget.contains(activeElement)) {
-            scheduleClose(0);
+            setIsOpen(false);
           }
         });
       }}
@@ -189,12 +157,7 @@ export default function DropdownCtaButton({
         aria-controls={menuId}
         aria-haspopup="menu"
         onClick={() => {
-          clearScheduledClose();
           setIsOpen((prev) => !prev);
-        }}
-        onFocus={() => {
-          clearScheduledClose();
-          setIsOpen(true);
         }}
         icon={
           <ChevronDown
