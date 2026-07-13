@@ -163,29 +163,39 @@
         }
       },
       "block-type-platform-showcase": {
-        "title": "Conçu pour simplifier le travail des agences de voyages",
+        "title": "Conçu pour simplifier le <strong>travail des agences de voyages</strong>",
         "description": "Un environnement de travail agréable pour les conseillers en voyages, un gain de temps considérable pour les comptables et un outil de gestion essentiel pour les gestionnaires d'agences de voyages.",
-        "mainImage": "/images/components/platform-showcase/bundle_home_en.webp",
-        "secondaryImage": "/images/components/platform-showcase/30years.svg"
+        "mainImage": "/images/pages/home/platform-showcase/pcvoyages_bundle_home_fr.webp",
+        "mainImageAlt": "Plateforme PcVoyages",
+        "secondaryImage": "/images/pages/home/platform-showcase/pcvoyages-30-ans.svg",
+        "secondaryImageAlt": "PcVoyages 30 ans"
       },
       "block-type-why-travelworks": {
-        "title": "Pourquoi TravelWorks",
+        "title": "Pourquoi PcVoyages",
         "items": {
           "0": {
             "title": "<strong>Optimisez la facturation</strong> et la <strong>comptabilité</strong>",
-            "description": "Générez des factures professionnelles et uniformisées. Automatisez leur création et optimisez vos processus comptables grâce aux meilleures pratiques."
+            "description": "Générez des factures professionnelles et normalisées. Automatisez la création de vos factures. Optimisez vos processus comptables grâce aux meilleures pratiques.",
+            "imageAlt": "Optimisez la facturation et la comptabilité",
+            "blockLink": "/fr-ca/logiciel-agence-voyage/back-office-agence-voyage"
           },
           "1": {
             "title": "Intégré aux <strong>GDS</strong> et aux <strong>moteurs de réservation</strong>",
-            "description": "Effectuez vos réservations avec vos moteurs de réservation actuels (Sabre, Galileo, Amadeus, Worldspan, SIREV) et les factures seront générées automatiquement dans notre logiciel. Il en va de même pour les compagnies d'assurance."
+            "description": "Effectuez vos réservations avec vos moteurs de réservation actuels (Sabre, Galileo, Amadeus, Worldspan, SIREV). Les factures sont automatiquement générées dans notre logiciel. Il en va de même pour les compagnies d'assurance.",
+            "imageAlt": "Intégré aux GDS et aux moteurs de réservation",
+            "blockLink": "/fr-ca/logiciel-agence-voyage/integrations"
           },
           "2": {
             "title": "<strong>Système infonuagique</strong>, une solution clé en main",
-            "description": "Travaillez de n'importe où grâce à une plateforme infonuagique sécurisée. Profitez d'une solution clé en main, toujours à jour et accessible en tout temps."
+            "description": "Accédez à votre logiciel où que vous soyez grâce à une solution infonuagique sécurisée. Profitez d’une plateforme clé en main, sans installation complexe, toujours à jour et accessible en tout temps.",
+            "imageAlt": "Système infonuagique, une solution clé en main",
+            "blockLink": "/fr-ca/logiciel-agence-voyage/avantages"
           },
           "3": {
-            "title": "<strong>CRM</strong> et <strong>marketing intégré</strong>",
-            "description": "Générez des revenus supplémentaires grâce à des campagnes courriel ciblées. Améliorez le service à la clientèle et fidélisez vos clients avec des messages automatisés."
+            "title": "Outil <strong>CRM</strong> et <strong>marketing intégré</strong>",
+            "description": "Générez des revenus supplémentaires grâce à des campagnes courriel ciblées. Améliorez votre service à la clientèle et fidélisez vos clients avec des messages de courtoisie automatisés.",
+            "imageAlt": "Outil CRM et marketing intégré",
+            "blockLink": "/fr-ca/logiciel-agence-voyage/outils-crm"
           }
         }
       },

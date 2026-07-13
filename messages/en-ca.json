@@ -163,29 +163,39 @@
         }
       },
       "block-type-platform-showcase": {
-        "title": "Built to Simplify Travel Agency Workflows",
+        "title": "Built to Simplify <strong>Travel Agency Workflows</strong>",
         "description": "A pleasant work environment for travel agents, considerable time-saving for accountants and an essential management tool for travel agency managers.",
-        "mainImage": "/images/components/platform-showcase/bundle_home_en.webp",
-        "secondaryImage": "/images/components/platform-showcase/30years.svg"
+        "mainImage": "/images/pages/home/platform-showcase/travelworks_bundle_home_en.webp",
+        "mainImageAlt": "TravelWorks platform",
+        "secondaryImage": "/images/pages/home/platform-showcase/travelworks-30-years.svg",
+        "secondaryImageAlt": "TravelWorks 30 years"
       },
       "block-type-why-travelworks": {
         "title": "Why TravelWorks",
         "items": {
           "0": {
             "title": "<strong>Optimize Invoicing </strong>and <strong>Accounting</strong>",
-            "description": "Generate profesionnal and standardized invoices. Automate the invoice creation. Maximize your accounting processes with good practices!"
+            "description": "Generate profesionnal and standardized invoices. Automate the invoice creation. Maximize your accounting processes with good practices!",
+            "imageAlt": "Optimize Invoicing and Accounting",
+            "blockLink": "/en-ca/travel-agency-software/back-office-travel-agency"
           },
           "1": {
             "title": "Integrated to <strong>GDS</strong> and <strong>Booking Engines</strong>",
-            "description": "Make a reservation with your current booking engines (Sabre, Galileo, Amadeus, Worldspan, SIREV), the invoice will be automatically generated in our software. The same as with insurance companies."
+            "description": "Make a reservation with your current booking engines (Sabre, Galileo, Amadeus, Worldspan, SIREV), the invoice will be automatically generated in our software. The same as with insurance companies.",
+            "imageAlt": "Integrated to GDS and Booking Engines",
+            "blockLink": "/en-ca/travel-agency-software/integrations"
           },
           "2": {
             "title": "<strong>Cloud System</strong>, a Turnkey Solution",
-            "description": "Make a reservation with your current booking engines (Sabre, Galileo, Amadeus, Worldspan, SIREV), the invoice will be automatically generated in our software. The same as with insurance companies."
+            "description": "Make a reservation with your current booking engines (Sabre, Galileo, Amadeus, Worldspan, SIREV), the invoice will be automatically generated in our software. The same as with insurance companies.",
+            "imageAlt": "Cloud System, a Turnkey Solution",
+            "blockLink": "/en-ca/travel-agency-software/benefits"
           },
           "3": {
             "title": "<strong>CRM</strong> Tool and<strong> Integrated Marketing</strong>",
-            "description": "Generate additional revenues with targeted email campaigns. Improve customer service and increase brand loyalty with automated courtesy messages."
+            "description": "Generate additional revenues with targeted email campaigns. Improve customer service and increase brand loyalty with automated courtesy messages.",
+            "imageAlt": "CRM Tool and Integrated Marketing",
+            "blockLink": "/en-ca/travel-agency-software/crm-tools"
           }
         }
       },

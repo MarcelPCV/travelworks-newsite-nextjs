@@ -148,26 +148,38 @@ const whyItems: WhyTravelworksItems[] = [
   {
     id: 0,
     title: 'block-type-why-travelworks.items.0.title',
+    imageHref: '/images/pages/home/why/optimize-invoicing-accounting.webp',
+    imageAlt: 'block-type-why-travelworks.items.0.imageAlt',
     description: 'block-type-why-travelworks.items.0.description',
     iconComponent: CircleDollarSign,
+    blockLink: 'block-type-why-travelworks.items.0.blockLink',
   },
   {
     id: 1,
     title: 'block-type-why-travelworks.items.1.title',
+    imageHref: '/images/pages/home/why/integrated-gds-booking-engines.webp',
+    imageAlt: 'block-type-why-travelworks.items.1.imageAlt',
     description: 'block-type-why-travelworks.items.1.description',
     iconComponent: Network,
+    blockLink: 'block-type-why-travelworks.items.1.blockLink',
   },
   {
     id: 2,
     title: 'block-type-why-travelworks.items.2.title',
+    imageHref: '/images/pages/home/why/cloud-system.webp',
+    imageAlt: 'block-type-why-travelworks.items.2.imageAlt',
     description: 'block-type-why-travelworks.items.2.description',
     iconComponent: Cloud,
+    blockLink: 'block-type-why-travelworks.items.2.blockLink',
   },
   {
     id: 3,
     title: 'block-type-why-travelworks.items.3.title',
+    imageHref: '/images/pages/home/why/crm-tools.webp',
+    imageAlt: 'block-type-why-travelworks.items.3.imageAlt',
     description: 'block-type-why-travelworks.items.3.description',
     iconComponent: Users,
+    blockLink: 'block-type-why-travelworks.items.3.blockLink',
   },
 ];
 
@@ -247,7 +259,9 @@ export const HomePage: Page = {
       title: 'block-type-platform-showcase.title',
       description: 'block-type-platform-showcase.description',
       mainImage: 'block-type-platform-showcase.mainImage',
+      mainImageAlt: 'block-type-platform-showcase.mainImageAlt',
       secondaryImage: 'block-type-platform-showcase.secondaryImage',
+      secondaryImageAlt: 'block-type-platform-showcase.secondaryImageAlt',
     },
     {
       blockType: 'WhyTravelworksSection',

@@ -167,7 +167,9 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
                     : ''
                 }
                 mainImage={layout.mainImage ? t(layout.mainImage) : ''}
+                mainImageAlt={layout.mainImageAlt ? t(layout.mainImageAlt) : ''}
                 secondaryImage={layout.secondaryImage ? t(layout.secondaryImage) : ''}
+                secondaryImageAlt={layout.secondaryImageAlt ? t(layout.secondaryImageAlt) : ''}
               />
             );
           case 'WhyTravelworksSection':
@@ -187,6 +189,8 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
                               })
                             : item.title,
                         description: item.description ? t(item.description) : '',
+                        imageAlt: item.imageAlt ? t(item.imageAlt) : '',
+                        blockLink: item.blockLink ? t(item.blockLink) : '',
                       }))
                     : []
                 }

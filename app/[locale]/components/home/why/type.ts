@@ -5,8 +5,11 @@ export type WhyTravelworksItems = {
   id: number;
   title: ReactNode;
   description: string;
+  imageHref: string;
+  imageAlt?: string;
   icon?: ReactNode;
   iconComponent?: LucideIcon;
+  blockLink?: string;
 };
 
 export type WhyTravelworksSection = {
