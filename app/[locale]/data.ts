@@ -125,7 +125,7 @@ const featureCards: FeatureCardsSectionData['items'] = [
     title: 'block-type-features-cards.items.crm-tools.title',
     ctaHref: 'block-type-features-cards.items.crm-tools.ctaHref',
     image: {
-      src: '/images/pages/home/feature-cards/travelworks-pcvoyages-feature-crm-tools.webp',
+      src: '/images/pages/home/feature-cards/travelworks-pcvoyages-feature-crm.webp',
       alt: 'block-type-features-cards.items.crm-tools.image.alt',
       width: 400,
       height: 300,
