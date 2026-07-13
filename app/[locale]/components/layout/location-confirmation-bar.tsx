@@ -4,6 +4,7 @@ import { ChevronDown, X } from 'lucide-react';
 import { useLocale, useTranslations } from 'next-intl';
 import { usePathname, useRouter } from 'next/navigation';
 import { useEffect, useMemo, useState } from 'react';
+import { GlobeCheck } from 'lucide-react';
 import {
   DEFAULT_ROUTE_LOCALE,
   localeOptions,
@@ -78,8 +79,12 @@ export default function LocationConfirmationBar() {
   return (
     <div className="border-b border-zinc-700 bg-zinc-900 text-zinc-100">
       <div className="mx-auto flex w-full max-w-[1600px] flex-col gap-3 px-4 py-3 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
-        <p className="text-sm leading-5 text-zinc-100">{t('message')}</p>
-
+        <div className="flex items-center gap-2 lg:flex-row lg:items-center">
+          <div className='w-6'>
+            <GlobeCheck className="h-6 w-6 text-gray-400" />
+          </div>
+          <p className="text-sm leading-5 text-zinc-100">{t('message')}</p>
+        </div>
         <div className="flex items-center gap-2 self-start lg:self-auto">
           <div className="relative">
             <button
@@ -120,7 +125,7 @@ export default function LocationConfirmationBar() {
 
           <button
             type="button"
-            className="rounded-full border border-zinc-300 bg-zinc-100 px-4 py-2 text-sm font-medium text-zinc-900 transition hover:bg-white"
+            className="rounded-md border border-zinc-300 bg-zinc-100 px-4 py-2 text-sm font-medium text-zinc-900 transition hover:bg-white"
             onClick={handleContinue}
           >
             {t('continue')}

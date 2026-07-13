@@ -10,7 +10,7 @@ export default function WhyTravelworks({
 }: WhyTravelworksSection) {
   return (
     <section
-      className="mx-auto w-full max-w-[1500px] rounded-2xl bg-neutral-background py-8 my-5"
+      className="mx-auto w-full max-w-[1600px] rounded-2xl bg-neutral-background py-8 my-5"
       aria-labelledby="why-travelworks-heading"
     >
       {title && (
@@ -23,12 +23,12 @@ export default function WhyTravelworks({
         />
       )}
 
-      <div className="grid grid-cols-1 overflow-hidden rounded-xl border border-neutral-border sm:grid-cols-2 xl:grid-cols-4">
+      <div className="grid grid-cols-1 overflow-hidden rounded-xl sm:grid-cols-2 xl:grid-cols-4">
         {items?.map((item, index) => (
           <Link
             href={item.blockLink ?? '#'}
             key={index}
-            className="group flex min-h-104 flex-col border-b border-neutral-border last:border-b-0 sm:min-h-[24rem] sm:[&:nth-last-child(-n+2)]:border-b-0 xl:min-h-[27rem] xl:border-b-0 xl:border-r xl:last:border-r-0"
+            className="group flex min-h-104 flex-col"
           >
             <div className="relative h-60 overflow-hidden bg-[#ebe6dc]">
               <Image

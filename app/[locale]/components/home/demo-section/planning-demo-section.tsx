@@ -69,7 +69,7 @@ export default function PlanningDemoSection({ countries, locale, model }: Props)
   }
 
   return (
-    <section className="w-full mx-auto max-w-7xl rounded-2xl bg-neutral-background py-10 text-zinc-900">
+    <section className="w-full mx-auto max-w-[1600px] rounded-2xl bg-neutral-background py-10 text-zinc-900">
       <h2 className="text-center text-[2.2rem] font-medium uppercase tracking-[0.06em] text-brand-blue sm:text-[2.6rem]">
         {model.heading}
       </h2>

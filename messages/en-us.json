@@ -205,8 +205,10 @@
       "block-type-benefits-banner-1": {
         "heading": "A complete solution",
         "buttonLabel": "Discover Benefits",
+        "imageHref": "/images/pages/home/banner-complete-solution/travelworks-complete-solution-en.webp",
+        "imageAlt": "TravelWorks Complete solution",
         "imagePlaceholderLabel": "Laptop Image Placeholder",
-        "buttonHref": "#",
+        "buttonHref": "/travel-agency-software/features",
         "list": {
           "0": "Accounting tailored to the travel agency",
           "1": "Improves productivity",
@@ -216,9 +218,11 @@
       },
       "block-type-benefits-banner-2": {
         "heading": "The mobile application for travel agencies",
-        "buttonLabel": "Discover Benefits",
+        "buttonLabel": "Discover Trip n'Touch",
+        "imageHref": "/images/pages/home/banner-tripntouch/travelworks-tripntouch-mobile-en.webp",
+        "imageAlt": "TravelWorks Mobile Application",
         "imagePlaceholderLabel": "Laptop Image Placeholder",
-        "buttonHref": "#",
+        "buttonHref": "/travel-agency-software/trip-n-trouch",
         "list": {
           "0": "Enhance travelers' stays",
           "1": "Improve customer satisfaction and brand loyalty",
@@ -909,6 +913,22 @@
           "ctaLabel": "Request a demo",
           "ctaLink": "#"
         }
+      },
+      "trip-n-touch": {
+        "block-type-page-hero": {
+          "title": "Trip'n Touch",
+          "description": "Support your customer throughout the entire travel cycle",
+          "mobileTopImageSrc": "/images/pages/travel-agency-software/trip-n-touch/trip-n-touch.webp",
+          "desktopMainImageSrc": "/images/pages/travel-agency-software/trip-n-touch/trip-n-touch.webp",
+          "logoImageSrc": "",
+          "ctaImageSrc": ""
+        },
+        "block-type-youtube-video": {
+          "heading": "Trip'n touch: A unique mobile experience for your clients",
+          "videoId": "qPlFym3htLc",
+          "channelLabel": "Travelworks Showcase",
+          "description": "This video highlights our work with Acme Corp, demonstrating our platform's efficiency in real-time."
+        }
       }
     },
     "training": {
@@ -1360,7 +1380,8 @@
         "integrations": "Integrations",
         "customizations": "Customizations",
         "tryIt": "Try It",
-        "askForDemo": "Ask for a Demo"
+        "askForDemo": "Ask for a Demo",
+        "trip-n-trouch": "Trip'n Touch"
       }
     },
     "aboutUs": {

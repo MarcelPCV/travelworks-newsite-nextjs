@@ -205,8 +205,10 @@
       "block-type-benefits-banner-1": {
         "heading": "Une solution complète",
         "buttonLabel": "Découvrir les avantages",
+        "imageHref": "/images/pages/home/banner-complete-solution/travelworks-complete-solution-fr.webp",
+        "imageAlt": "PcVoyages - Une solution complète",
         "imagePlaceholderLabel": "Espace réservé pour l'image de l'ordinateur portable",
-        "buttonHref": "#",
+        "buttonHref": "/fr-ca/logiciel-agence-voyage/fonctionnalites",
         "list": {
           "0": "Une comptabilité adaptée aux agences de voyages",
           "1": "Améliore la productivité",
@@ -216,9 +218,11 @@
       },
       "block-type-benefits-banner-2": {
         "heading": "L'application mobile pour les agences de voyages",
-        "buttonLabel": "Découvrir les avantages",
+        "buttonLabel": "Découvrir Trip n'Touch",
+        "imageHref": "/images/pages/home/banner-tripntouch/pcvoyages-tripntouch-mobile-fr.webp",
+        "imageAlt": "Application mobile PcVoyages",
         "imagePlaceholderLabel": "Espace réservé pour l'image de l'ordinateur portable",
-        "buttonHref": "#",
+        "buttonHref": "/fr-ca/logiciel-agence-voyage/trip-n-trouch",
         "list": {
           "0": "Bonifiez l'expérience des voyageurs",
           "1": "Améliorez la satisfaction et la fidélisation des clients",
@@ -908,6 +912,22 @@
           "ctaLabel": "Demander une démonstration",
           "ctaLink": "#"
         }
+      },
+      "trip-n-touch": {
+        "block-type-page-hero": {
+          "title": "Trip'n Touch",
+          "description": "Accompagnez vos clients tout au long de leur parcours de voyage",
+          "mobileTopImageSrc": "/images/pages/travel-agency-software/trip-n-touch/trip-n-touch.webp",
+          "desktopMainImageSrc": "/images/pages/travel-agency-software/trip-n-touch/trip-n-touch.webp",
+          "logoImageSrc": "",
+          "ctaImageSrc": ""
+        },
+        "block-type-youtube-video": {
+          "heading": "Trip'n Touch : Une expérience mobile unique pour vos clients",
+          "videoId": "qPlFym3htLc",
+          "channelLabel": "Présentation de TravelWorks",
+          "description": "Cette vidéo présente notre collaboration avec Acme Corp et démontre l'efficacité de notre plateforme en temps réel."
+        }
       }
     },
     "training": {
@@ -1418,7 +1438,8 @@
         "integrations": "Integrations",
         "customizations": "Personnalisations",
         "tryIt": "Essayer",
-        "askForDemo": "Demander une demo"
+        "askForDemo": "Demander une demo",
+        "trip-n-trouch": "Trip'n Touch"
       }
     },
     "aboutUs": {

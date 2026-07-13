@@ -32,4 +32,5 @@ export const travelAgencyMenuItems: TravelAgencyMenuItem[] = [
   { key: 'integrations', canonicalSlug: 'integrations', icon: Link2 },
   { key: 'dashboardReports', canonicalSlug: 'dashboard-reports', icon: BarChart3 },
   { key: 'customizations', canonicalSlug: 'customizations', icon: SlidersHorizontal },
+  { key: 'trip-n-trouch', canonicalSlug: 'trip-n-trouch', icon: SlidersHorizontal },
 ];

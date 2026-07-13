@@ -113,7 +113,7 @@ export default function Navbar() {
   const askForDemoHref = getAskForDemoHref(currentRouteLocale, withLocalePrefix);
   const newsHref = withLocalePrefix(`/${getNewsSegment(currentRouteLocale)}`);
   const travelworks= "https://new.pcvweb.com/#/login/"
-  const travelworksLegacy= "https://www.pcvweb.com/Login.aspx?lang=EN"
+  const travelworksLegacy= locale === 'fr-ca' ? "https://www.pcvweb.com/Login.aspx?lang=FR" : "https://www.pcvweb.com/Login.aspx?lang=EN"
   const knowledgeBaseHref = "https://www.tw-pcv-learning.com/en"
   const supportLoginHref = 'https://support.pcvweb.com/auth/v3/signin?brand_id=360003288198&locale=en-ca&return_to=https%3A%2F%2Fsupport.pcvweb.com%2Fhc%2Fen-ca%2Frequests%2Fnew&role=end_user';
 
@@ -236,9 +236,7 @@ export default function Navbar() {
       if (!(target instanceof Element)) {
         return;
       }
-
-      // Use a DOM marker instead of only ref.contains() so BFCache restores do not
-      // incorrectly classify inside clicks as outside interactions.
+      
       if (target.closest('[data-navbar-root="true"]')) {
         return;
       }
@@ -587,7 +585,7 @@ export default function Navbar() {
                 <DropdownCtaButton
                   key={`desktop-login-${loginDropdownCloseSignal}`}
                   label={t('cta.logIn')}
-                  variant="blue"
+                  variant="default"
                   size="xs"
                   options={logInOptions}
                   align="left"

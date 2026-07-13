@@ -64,6 +64,8 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
                     : []
                 }
                 buttonLabel={layout.buttonLabel ? t(layout.buttonLabel) : ''}
+                imageHref={layout.imageHref ? t(layout.imageHref) : ''}
+                imageAlt={layout.imageAlt ? t(layout.imageAlt) : ''}
                 buttonHref={layout.buttonHref ? t(layout.buttonHref) : ''}
                 hideButton={layout.hideButton}
                 imagePlaceholderLabel={
