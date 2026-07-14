@@ -5,6 +5,8 @@ import { useState } from 'react';
 import type { CountryOption } from '@/app/lib/countries';
 import type { PlanningDemoSectionModel } from './type';
 import { demoRequestSchema, type DemoRequestErrors } from './zod-validations';
+import Image from 'next/image';
+import TitleSection from '../../ui/title-section';
 
 type Props = {
   countries: CountryOption[];
@@ -70,14 +72,24 @@ export default function PlanningDemoSection({ countries, locale, model }: Props)
 
   return (
     <section className="w-full mx-auto max-w-[1600px] rounded-2xl bg-neutral-background py-10 text-zinc-900">
-      <h2 className="text-center text-[2.2rem] font-medium uppercase tracking-[0.06em] text-brand-blue sm:text-[2.6rem]">
-        {model.heading}
-      </h2>
+      <div className="mb-5">
+        {model.heading && (
+          <TitleSection title={model.heading} alignment="center" size="extra-large" color="text-brand-blue" />
+        )}
+      </div>
 
       <div className="mt-8 overflow-hidden rounded-xl border border-neutral-border bg-neutral-canvas">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.95fr]">
-          <div className="flex min-h-[20rem] items-center justify-center bg-gradient-to-br from-slate-200 to-slate-100 text-center text-sm font-semibold uppercase text-brand-blue/70">
-            {model.image.placeholderLabel}
+          <div className="hidden md:block">
+            {model.image.linkHref && model.image.placeholderLabel && (  
+              <Image 
+                src={model.image.linkHref} 
+                alt={model.image.placeholderLabel} 
+                width={1000} 
+                height={800}
+                className="h-full w-full object-cover"
+              />
+            )}
           </div>
 
           <div className="p-6 sm:p-8 lg:p-10">

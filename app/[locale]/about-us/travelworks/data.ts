@@ -29,6 +29,7 @@ export const TourOnlinePageData: Page = {
       heading: 'block-type-planning-demo-section.heading',
       image: {
         placeholderLabel: 'block-type-planning-demo-section.image.placeholderLabel',
+        linkHref: 'block-type-planning-demo-section.image.linkHref',
       },
       form: {
         fields: [

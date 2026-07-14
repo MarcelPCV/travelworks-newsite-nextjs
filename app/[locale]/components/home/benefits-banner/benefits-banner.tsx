@@ -10,8 +10,7 @@ export default function BenefitsBannerSection({
   imageHref,
   imageAlt,
   buttonLabel,
-  buttonHref,
-  hideButton,
+  buttonHref
 }: BenefitsBanner) {
   return (
     <section className="mx-auto px-5 py-8 sm:px-8 lg:px-12 lg:py-12">
@@ -47,7 +46,7 @@ export default function BenefitsBannerSection({
           </div>
 
           <div className="mx-auto flex w-full max-w-xl flex-col justify-center lg:mx-0 lg:pr-4">
-            <ul className="space-y-4 sm:space-y-5" aria-label={heading}>
+            <ul className="space-y-4 sm:space-y-5" aria-label={heading ?? undefined}>
               {items &&
                 items.map((item) => (
                   <li key={item.id} className="flex items-start gap-3.5 text-brand-blue sm:gap-4">

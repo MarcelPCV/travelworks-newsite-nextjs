@@ -8,5 +8,7 @@ export type Client = {
 export type ClientsSectionModel = {
   blockType: 'ClientTrustSection';
   title: ReactNode;
+  buttonLabel?: string;
+  buttonHref?: string;
   clients: Client[];
 };

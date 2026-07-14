@@ -13,6 +13,7 @@ export type PlanningDemoSectionModel = {
   heading: string;
   image: {
     placeholderLabel: string;
+    linkHref: string;
   };
   form: {
     fields: PlanningDemoField[];

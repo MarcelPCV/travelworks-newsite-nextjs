@@ -1,3 +1,5 @@
+import TitleSection from "../ui/title-section";
+
 export type NewsItem = {
   id: string;
   category: string;
@@ -71,12 +73,11 @@ export default function NewsSection({
 
   return (
     <section className={rootClassName} aria-labelledby="news-section-heading">
-      <h2
-        id="news-section-heading"
-        className="mb-6 text-center text-[2.2rem] font-medium uppercase tracking-[0.08em] text-brand-blue sm:mb-8 sm:text-[2.6rem]"
-      >
-        {heading}
-      </h2>
+      <div className="mb-5">
+        {heading && (
+          <TitleSection title={heading} alignment="center" size="extra-large" color="text-brand-blue" />
+        )}
+      </div>
 
       <div className="grid grid-cols-1 overflow-hidden rounded-xl border border-neutral-border lg:grid-cols-3 lg:divide-x lg:divide-neutral-border">
         {items.map((item) => (

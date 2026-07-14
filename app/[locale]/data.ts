@@ -186,51 +186,51 @@ const whyItems: WhyTravelworksItems[] = [
 const clientsSectionData: Client[] = [
   {
     name: 'Carlson Wagonlit Travel',
-    logo: '/images/components/client-trust-section/logo.jpg',
+    logo: '/images/pages/home/clients/CarlsonWagonTravel.jpg',
   },
   {
     name: 'Ensemble Travel Group',
-    logo: '/images/components/client-trust-section/logo.jpg',
+    logo: '/images/pages/home/clients/ensemble.jpg',
   },
   {
     name: 'Voyages En Direct',
-    logo: '/images/components/client-trust-section/logo.jpg',
+    logo: '/images/pages/home/clients/VoyagesEnDirect.jpg',
   },
   {
     name: 'Thomas Cook',
-    logo: '/images/components/client-trust-section/logo.jpg',
+    logo: '/images/pages/home/clients/ThomasCook.jpg',
   },
   {
     name: 'Revasol',
-    logo: '/images/components/client-trust-section/logo.jpg',
+    logo: '/images/pages/home/clients/voyages-revasol.jpg',
   },
   {
     name: 'Voyages Bergeron',
-    logo: '/images/components/client-trust-section/logo.jpg',
+    logo: '/images/pages/home/clients/voyages-bergeron.jpg',
   },
   {
     name: 'Club Voyages',
-    logo: '/images/components/client-trust-section/logo.jpg',
+    logo: '/images/pages/home/clients/ClubVoyages.jpg',
   },
   {
     name: 'Transat',
-    logo: '/images/components/client-trust-section/logo.jpg',
+    logo: '/images/pages/home/clients/Transat.jpg',
   },
   {
     name: 'Vasco Travel',
-    logo: '/images/components/client-trust-section/logo.jpg',
+    logo: '/images/pages/home/clients/Vasco.jpg',
   },
   {
     name: 'Voyages Plein Soleil',
-    logo: '/images/components/client-trust-section/logo.jpg',
+    logo: '/images/pages/home/clients/voyages-plein-soleil.jpg',
   },
   {
     name: 'Marlin Travel',
-    logo: '/images/components/client-trust-section/logo.jpg',
+    logo: '/images/pages/home/clients/marlin-travel.jpg',
   },
   {
-    name: 'Vaisse De Croisiere',
-    logo: '/images/components/client-trust-section/logo.jpg',
+    name: 'SellOff Vacations',
+    logo: '/images/pages/home/clients/SellOffVacations.jpg',
   },
 ];
 
@@ -283,6 +283,8 @@ export const HomePage: Page = {
       blockType: 'ClientTrustSection',
       title: 'block-type-clients-trust.title',
       clients: clientsSectionData,
+      buttonLabel: 'block-type-clients-trust.buttonLabel',
+      buttonHref: 'block-type-clients-trust.buttonHref',
     },
     {
       blockType: 'BenefitsBanner',
@@ -300,6 +302,7 @@ export const HomePage: Page = {
       heading: 'block-type-planning-demo-section.heading',
       image: {
         placeholderLabel: 'block-type-planning-demo-section.image.placeholderLabel',
+        linkHref: '/images/pages/home/planning-demo/travelworks.jpg',
       },
       form: {
         fields: [

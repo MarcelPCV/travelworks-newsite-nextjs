@@ -80,6 +80,10 @@
       "trip-details": {
         "title": "Trip Details - TravelWorks",
         "description": "Access detailed trip information and itineraries through TravelWorks' platform, enhancing the travel experience for your clients."
+      },
+      "trip-n-touch": {
+        "title": "Trip n'Touch - TravelWorks",
+        "description": "Discover Trip n'Touch, TravelWorks' mobile application that allows travel agencies to provide an enhanced travel experience for their clients with detailed itineraries, maps, and destination guides."
       }
     }
   },
@@ -200,7 +204,9 @@
         }
       },
       "block-type-clients-trust": {
-        "title": "More than 1,000 travel agencies trust us"
+        "title": "More than <strong>1,000 travel agencies</strong> trust us",
+        "buttonLabel": "Discover our clients",
+        "buttonHref": "/en-au/about-us/clients"
       },
       "block-type-benefits-banner-1": {
         "heading": "A complete solution",
@@ -217,7 +223,7 @@
         }
       },
       "block-type-benefits-banner-2": {
-        "heading": "The mobile application for travel agencies",
+        "heading": "<strong>The mobile application</strong> for travel agencies",
         "buttonLabel": "Discover Trip n'Touch",
         "imageHref": "/images/pages/home/banner-tripntouch/travelworks-tripntouch-mobile-en.webp",
         "imageAlt": "TravelWorks Mobile Application",

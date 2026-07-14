@@ -80,6 +80,10 @@
       "trip-details": {
         "title": "Détails du voyage - PC Voyages",
         "description": "Accédez aux informations détaillées sur les voyages et aux itinéraires grâce à la plateforme de PC Voyages, afin d'offrir une meilleure expérience à vos clients."
+      },
+      "trip-n-touch": {
+        "title": "Trip n'Touch - PC Voyages",
+        "description": "Découvrez Trip n'Touch, l'application mobile de PC Voyages qui permet aux agences de voyages d'offrir à leurs clients une expérience de voyage améliorée avec des itinéraires détaillés, des cartes et des guides de destination."
       }
     }
   },
@@ -200,7 +204,9 @@
         }
       },
       "block-type-clients-trust": {
-        "title": "Plus de 1 000 agences de voyages nous font confiance"
+        "title": "Plus de <strong>1 000 agences de voyages</strong> nous font confiance",
+        "buttonLabel": "Découvrez nos clients",
+        "buttonHref": "/fr-ca/a-propos/clients"
       },
       "block-type-benefits-banner-1": {
         "heading": "Une solution complète",
@@ -217,7 +223,7 @@
         }
       },
       "block-type-benefits-banner-2": {
-        "heading": "L'application mobile pour les agences de voyages",
+        "heading": "<strong>L'application mobile</strong> pour les agences de voyages",
         "buttonLabel": "Découvrir Trip n'Touch",
         "imageHref": "/images/pages/home/banner-tripntouch/pcvoyages-tripntouch-mobile-fr.webp",
         "imageAlt": "Application mobile PcVoyages",

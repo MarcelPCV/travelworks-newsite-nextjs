@@ -15,14 +15,14 @@ export async function generateMetadata({
   const t = await getTranslations({locale, namespace: 'metadata.travel-agency-software'});
 
   return {
-    title: `${t('customizations.title')}`,
-    description: t('customizations.description'),
+    title: `${t('trip-n-touch.title')}`,
+    description: t('trip-n-touch.description'),
     alternates: getAlternates(
       {
-        en: '/travel-agency-software/customizations',
-        'en-ca': '/en-ca/travel-agency-software/customizations',
-        'en-au': '/en-au/travel-agency-software/customizations',
-        'fr-ca': '/fr-ca/logiciel-agence-voyage/customizations',
+        en: '/travel-agency-software/trip-n-touch',
+        'en-ca': '/en-ca/travel-agency-software/trip-n-touch',
+        'en-au': '/en-au/travel-agency-software/trip-n-touch',
+        'fr-ca': '/fr-ca/logiciel-agence-voyage/trip-n-touch',
       },
       locale
     ),

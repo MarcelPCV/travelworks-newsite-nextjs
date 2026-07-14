@@ -54,7 +54,9 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
               <BenefitsBanner
                 key={index}
                 {...layout}
-                heading={layout.heading ? t(layout.heading) : ''}
+                heading={layout.heading ? (t.rich(layout.heading, {
+                  strong: (chunks) => <strong>{chunks}</strong>,
+                }) as unknown as string) : ''}
                 items={
                   layout.items
                     ? layout.items.map((item) => ({
@@ -212,6 +214,8 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
                       : layout.title
                     : ''
                 }
+                buttonLabel={layout.buttonLabel ? t(layout.buttonLabel) : ''}
+                buttonHref={layout.buttonHref ? t(layout.buttonHref) : ''}
                 clients={
                   layout.clients
                     ? layout.clients.map((client) => ({
