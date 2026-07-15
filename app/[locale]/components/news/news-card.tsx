@@ -26,7 +26,9 @@ export function NewsCard({ article, href, categoryLabel }: NewsCardProps) {
       </Link>
       <div className="flex flex-1 flex-col px-5 py-4">
         {categoryLabel ? (
-          <p className="text-xs font-semibold uppercase tracking-wide text-blue-700">{categoryLabel}</p>
+          <p className="text-xs font-semibold uppercase tracking-wide text-blue-700">
+            {categoryLabel}
+          </p>
         ) : null}
         <h3 className="mt-2 text-xl font-semibold text-slate-900">
           <Link href={href} className="hover:text-blue-700">

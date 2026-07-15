@@ -48,13 +48,20 @@ export const newsMdxComponents: MDXComponents = {
       <table className="min-w-full border-collapse" {...props} />
     </div>
   ),
-  th: (props) => <th className="bg-slate-100 px-3 py-2 text-left text-sm font-semibold" {...props} />,
-  td: (props) => <td className="border-t border-slate-200 px-3 py-2 text-sm text-slate-700" {...props} />,
+  th: (props) => (
+    <th className="bg-slate-100 px-3 py-2 text-left text-sm font-semibold" {...props} />
+  ),
+  td: (props) => (
+    <td className="border-t border-slate-200 px-3 py-2 text-sm text-slate-700" {...props} />
+  ),
   code: (props) => (
     <code className="rounded bg-slate-100 px-1.5 py-0.5 text-sm text-slate-800" {...props} />
   ),
   pre: (props) => (
-    <pre className="my-6 overflow-x-auto rounded-xl bg-slate-900 p-4 text-sm text-slate-100" {...props} />
+    <pre
+      className="my-6 overflow-x-auto rounded-xl bg-slate-900 p-4 text-sm text-slate-100"
+      {...props}
+    />
   ),
   img: (props) => (
     <Image

@@ -1,4 +1,4 @@
-import TitleSection from "../ui/title-section";
+import TitleSection from '../ui/title-section';
 
 export type NewsItem = {
   id: string;
@@ -75,7 +75,12 @@ export default function NewsSection({
     <section className={rootClassName} aria-labelledby="news-section-heading">
       <div className="mb-5">
         {heading && (
-          <TitleSection title={heading} alignment="center" size="extra-large" color="text-brand-blue" />
+          <TitleSection
+            title={heading}
+            alignment="center"
+            size="extra-large"
+            color="text-brand-blue"
+          />
         )}
       </div>
 

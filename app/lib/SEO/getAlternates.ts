@@ -7,14 +7,10 @@ export function getAlternates(
     'en-au': string;
     'fr-ca': string;
   },
-  locale: Locale | string
+  locale: Locale | string,
 ) {
   const routeLocale: Locale =
-    locale === 'en-ca' ||
-    locale === 'en-au' ||
-    locale === 'fr-ca'
-      ? locale
-      : 'en';
+    locale === 'en-ca' || locale === 'en-au' || locale === 'fr-ca' ? locale : 'en';
 
   return {
     canonical: paths[routeLocale],

@@ -8,7 +8,11 @@ import {
   getNewsCategoryPath,
   getNewsListPath,
 } from '@/app/[locale]/news/lib/categories';
-import { getCategoryAlternates, getRouteLocales, getArticlesByCategory } from '@/app/[locale]/news/lib/news';
+import {
+  getCategoryAlternates,
+  getRouteLocales,
+  getArticlesByCategory,
+} from '@/app/[locale]/news/lib/news';
 import { getNewsLabels } from '@/app/[locale]/news/lib/labels';
 import { CategoryBadge } from '@/app/[locale]/components/news/category-badge';
 import { NewsGrid } from '@/app/[locale]/components/news/news-grid';

@@ -27,7 +27,9 @@ export function CategorySidebar({
               <Link
                 href={getNewsCategoryPath(locale, category.id)}
                 className={`text-sm transition hover:text-blue-700 ${
-                  activeCategoryId === category.id ? 'font-semibold text-blue-700' : 'text-slate-600'
+                  activeCategoryId === category.id
+                    ? 'font-semibold text-blue-700'
+                    : 'text-slate-600'
                 }`}
               >
                 {category.name}
@@ -42,7 +44,10 @@ export function CategorySidebar({
         <ul className="mt-3 space-y-3">
           {recentArticles.map((article) => (
             <li key={`${article.id}-${article.slug}`}>
-              <Link href={getNewsArticlePath(locale, article.slug)} className="text-sm text-slate-600 hover:text-blue-700">
+              <Link
+                href={getNewsArticlePath(locale, article.slug)}
+                className="text-sm text-slate-600 hover:text-blue-700"
+              >
                 {article.title}
               </Link>
             </li>
@@ -55,7 +60,10 @@ export function CategorySidebar({
         <ul className="mt-3 space-y-3">
           {relatedArticles.map((article) => (
             <li key={`${article.id}-${article.slug}`}>
-              <Link href={getNewsArticlePath(locale, article.slug)} className="text-sm text-slate-600 hover:text-blue-700">
+              <Link
+                href={getNewsArticlePath(locale, article.slug)}
+                className="text-sm text-slate-600 hover:text-blue-700"
+              >
                 {article.title}
               </Link>
             </li>

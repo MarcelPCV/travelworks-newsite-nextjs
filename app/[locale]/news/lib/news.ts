@@ -160,8 +160,8 @@ async function loadArticlesForContentLocale(contentLocale: ContentLocale): Promi
     return toArticle(frontmatter, content, contentLocale);
   });
 
-  const articles = (await Promise.all(articlePromises)).filter(
-    (article): article is NewsArticle => Boolean(article),
+  const articles = (await Promise.all(articlePromises)).filter((article): article is NewsArticle =>
+    Boolean(article),
   );
 
   return sortArticles(articles);
@@ -297,7 +297,9 @@ export function getRouteLocales(): RouteLocale[] {
   return ['en', 'en-ca', 'en-au', 'fr-ca'];
 }
 
-export async function getArticleAlternates(articleId: string): Promise<Record<RouteLocale, string>> {
+export async function getArticleAlternates(
+  articleId: string,
+): Promise<Record<RouteLocale, string>> {
   const alternates: Record<RouteLocale, string> = {
     en: getNewsListPath('en'),
     'en-ca': getNewsListPath('en-ca'),

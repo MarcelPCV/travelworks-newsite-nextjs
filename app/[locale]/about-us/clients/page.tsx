@@ -5,9 +5,7 @@ import VideoTestimonials from '@/app/[locale]/about-us/clients/components/video-
 import { getAlternates } from '@/app/lib/SEO/getAlternates';
 import { Metadata } from 'next';
 import { Locale } from 'next-intl';
-import {
-  getTranslations
-} from 'next-intl/server';
+import { getTranslations } from 'next-intl/server';
 
 export async function generateMetadata({
   params,
@@ -15,7 +13,7 @@ export async function generateMetadata({
   params: Promise<{ locale: Locale }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({locale, namespace: 'metadata.about-us'});
+  const t = await getTranslations({ locale, namespace: 'metadata.about-us' });
 
   return {
     title: `${t('clients.title')}`,
@@ -27,7 +25,7 @@ export async function generateMetadata({
         'en-au': '/en-au/about-us/clients',
         'fr-ca': '/fr-ca/a-propos/clients',
       },
-      locale
+      locale,
     ),
   };
 }

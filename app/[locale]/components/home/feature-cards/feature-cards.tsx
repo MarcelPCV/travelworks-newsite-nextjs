@@ -7,9 +7,7 @@ import TitleSection from '../../ui/title-section';
 
 function FeatureCards({ item }: { item: FeatureCard }) {
   return (
-    <div
-      className="relative flex h-20 w-20 items-center justify-center rounded-full bg-brand-blue"
-    >
+    <div className="relative flex h-20 w-20 items-center justify-center rounded-full bg-brand-blue">
       {item.image.src && (
         <div className="relative h-20 w-20 overflow-hidden rounded-full shadow-xl">
           <Image

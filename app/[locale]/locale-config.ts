@@ -175,7 +175,7 @@ export const aboutUsSlugs: Record<string, Record<string, string>> = {
     'en-ca': 'careers',
     'fr-ca': 'carrieres',
     'en-au': 'careers',
-  }
+  },
 };
 
 export const trainingSlugs: Record<string, Record<string, string>> = {
@@ -266,9 +266,7 @@ export function getNewsSegment(routeLocale: string): string {
 }
 
 export function getNewsCategorySegment(routeLocale: string): string {
-  return (
-    newsCategorySegmentByRouteLocale[routeLocale] ?? newsCategorySegmentByRouteLocale.en
-  );
+  return newsCategorySegmentByRouteLocale[routeLocale] ?? newsCategorySegmentByRouteLocale.en;
 }
 
 export function getNewsCategorySlug(routeLocale: string, canonicalSlug: string): string {
@@ -279,10 +277,7 @@ export function getNewsCategorySlug(routeLocale: string, canonicalSlug: string):
   );
 }
 
-export function getNewsCategoryCanonicalSlug(
-  routeLocale: string,
-  localizedSlug: string,
-): string {
+export function getNewsCategoryCanonicalSlug(routeLocale: string, localizedSlug: string): string {
   return (
     newsCategorySlugToCanonicalByLocale[routeLocale]?.[localizedSlug] ??
     newsCategorySlugToCanonicalByLocale.en?.[localizedSlug] ??

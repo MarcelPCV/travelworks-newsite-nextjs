@@ -12,7 +12,9 @@ export function NewsGrid({ locale, articles, categories }: NewsGridProps) {
   return (
     <section className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
       {articles.map((article) => {
-        const firstCategory = categories.find((category) => article.categories.includes(category.id));
+        const firstCategory = categories.find((category) =>
+          article.categories.includes(category.id),
+        );
 
         return (
           <NewsCard

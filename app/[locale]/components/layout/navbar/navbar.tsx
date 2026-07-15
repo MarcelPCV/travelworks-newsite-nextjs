@@ -55,8 +55,7 @@ export default function Navbar() {
   const locale = useLocale();
 
   const [activeDesktopPanel, setActiveDesktopPanel] = useState<DesktopPanel>(null);
-  const [activeProductCategory] =
-    useState<ProductCategory>('travelworks');
+  const [activeProductCategory] = useState<ProductCategory>('travelworks');
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [mobileSection, setMobileSection] = useState<'products' | 'aboutUs' | 'training' | null>(
     null,
@@ -112,10 +111,14 @@ export default function Navbar() {
     (currentRouteLocale === DEFAULT_ROUTE_LOCALE ? '/' : `/${currentRouteLocale}`);
   const askForDemoHref = getAskForDemoHref(currentRouteLocale, withLocalePrefix);
   const newsHref = withLocalePrefix(`/${getNewsSegment(currentRouteLocale)}`);
-  const travelworks= "https://new.pcvweb.com/#/login/"
-  const travelworksLegacy= locale === 'fr-ca' ? "https://www.pcvweb.com/Login.aspx?lang=FR" : "https://www.pcvweb.com/Login.aspx?lang=EN"
-  const knowledgeBaseHref = "https://www.tw-pcv-learning.com/en"
-  const supportLoginHref = 'https://support.pcvweb.com/auth/v3/signin?brand_id=360003288198&locale=en-ca&return_to=https%3A%2F%2Fsupport.pcvweb.com%2Fhc%2Fen-ca%2Frequests%2Fnew&role=end_user';
+  const travelworks = 'https://new.pcvweb.com/#/login/';
+  const travelworksLegacy =
+    locale === 'fr-ca'
+      ? 'https://www.pcvweb.com/Login.aspx?lang=FR'
+      : 'https://www.pcvweb.com/Login.aspx?lang=EN';
+  const knowledgeBaseHref = 'https://www.tw-pcv-learning.com/en';
+  const supportLoginHref =
+    'https://support.pcvweb.com/auth/v3/signin?brand_id=360003288198&locale=en-ca&return_to=https%3A%2F%2Fsupport.pcvweb.com%2Fhc%2Fen-ca%2Frequests%2Fnew&role=end_user';
 
   const logInOptions: DropdownCtaOption[] = [
     {
@@ -236,7 +239,7 @@ export default function Navbar() {
       if (!(target instanceof Element)) {
         return;
       }
-      
+
       if (target.closest('[data-navbar-root="true"]')) {
         return;
       }
@@ -687,7 +690,9 @@ export default function Navbar() {
                               <Icon className={menuItemIconClassName} aria-hidden="true" />
                             </div>
 
-                            <span className={`min-w-40 break-words ${isActive ? 'font-semibold' : 'font-medium'}`}>
+                            <span
+                              className={`min-w-40 break-words ${isActive ? 'font-semibold' : 'font-medium'}`}
+                            >
                               {t(`products.links.${linkKey}`)}
                             </span>
                           </Link>

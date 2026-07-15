@@ -15,7 +15,11 @@ import {
   getRelatedArticles,
   getRouteLocales,
 } from '@/app/[locale]/news/lib/news';
-import { getCategories, getNewsArticlePath, getNewsListPath } from '@/app/[locale]/news/lib/categories';
+import {
+  getCategories,
+  getNewsArticlePath,
+  getNewsListPath,
+} from '@/app/[locale]/news/lib/categories';
 import { buildNewsArticleSchema, generateNewsMetadata } from '@/app/[locale]/news/lib/seo';
 
 export async function generateStaticParams() {

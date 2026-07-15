@@ -20,7 +20,7 @@ export async function generateMetadata({
   params: Promise<{ locale: Locale }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({locale, namespace: 'metadata.home'});
+  const t = await getTranslations({ locale, namespace: 'metadata.home' });
 
   return {
     title: `${t('title')}`,
@@ -32,7 +32,7 @@ export async function generateMetadata({
         'en-au': '/en-au',
         'fr-ca': '/fr-ca',
       },
-      locale
+      locale,
     ),
   };
 }
@@ -54,9 +54,13 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
               <BenefitsBanner
                 key={index}
                 {...layout}
-                heading={layout.heading ? (t.rich(layout.heading, {
-                  strong: (chunks) => <strong>{chunks}</strong>,
-                }) as unknown as string) : ''}
+                heading={
+                  layout.heading
+                    ? (t.rich(layout.heading, {
+                        strong: (chunks) => <strong>{chunks}</strong>,
+                      }) as unknown as string)
+                    : ''
+                }
                 items={
                   layout.items
                     ? layout.items.map((item) => ({
@@ -101,8 +105,10 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
                         strong: (chunks) => chunks,
                       })
                     : '';
+                  const translatedCtaLabel = slide.ctaLabel ? t(slide.ctaLabel) : '';
                   const translatedHref = slide.ctaHref ? t(slide.ctaHref) : '';
-                  const translatedImage = slide.image ? t(slide.image) : '';
+                  const translatedDesktopImage = slide.desktopImage ? t(slide.desktopImage) : '';
+                  const translatedMobileImage = slide.mobileImage ? t(slide.mobileImage) : '';
 
                   return {
                     ...slide,
@@ -112,9 +118,10 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
                         })
                       : undefined,
                     titlePlain: translatedTitle,
-                    ctaLabel: slide.ctaLabel ? t(slide.ctaLabel) : '',
+                    ctaLabel: translatedCtaLabel,
                     ctaHref: translatedHref || '#',
-                    image: translatedImage || '/images/components/hero-carousel/hero.png',
+                    desktopImage: translatedDesktopImage || '',
+                    mobileImage: translatedMobileImage || '',
                   };
                 })}
               />

@@ -59,7 +59,8 @@ export default function MenuTravelAgencySoftware() {
   const items = useMemo<ResolvedMenuItem[]>(
     () =>
       travelAgencyMenuItems.map((item) => {
-        const localizedSlug = travelAgencySoftwareSlugs[item.canonicalSlug]?.[routeLocale] ?? item.canonicalSlug;
+        const localizedSlug =
+          travelAgencySoftwareSlugs[item.canonicalSlug]?.[routeLocale] ?? item.canonicalSlug;
         return {
           key: item.key,
           label: t(item.key),
@@ -75,7 +76,11 @@ export default function MenuTravelAgencySoftware() {
     const normalized = normalizePathname(pathname);
     const segments = normalized.split('/').filter(Boolean);
     const pathSegments =
-      routeLocale === DEFAULT_ROUTE_LOCALE ? segments : segments.length > 0 ? segments.slice(1) : [];
+      routeLocale === DEFAULT_ROUTE_LOCALE
+        ? segments
+        : segments.length > 0
+          ? segments.slice(1)
+          : [];
 
     if (pathSegments[0] !== localizedSegment || pathSegments.length !== 2) {
       return null;
@@ -211,10 +216,7 @@ export default function MenuTravelAgencySoftware() {
           </div>
 
           {showMore ? (
-            <div
-              ref={dropdownRef}
-              className="absolute right-0 top-1/2 z-30 -translate-y-1/2"
-            >
+            <div ref={dropdownRef} className="absolute right-0 top-1/2 z-30 -translate-y-1/2">
               <button
                 type="button"
                 className="inline-flex items-center gap-1 rounded-md border border-zinc-500 px-3 py-2 text-sm font-medium text-zinc-100 transition-colors hover:border-zinc-300 hover:text-white"
@@ -223,7 +225,9 @@ export default function MenuTravelAgencySoftware() {
                 onClick={() => setIsMoreOpen((prev) => !prev)}
               >
                 {tNav('more')}
-                <ChevronDown className={`h-4 w-4 transition-transform ${isMoreOpen ? 'rotate-180' : ''}`} />
+                <ChevronDown
+                  className={`h-4 w-4 transition-transform ${isMoreOpen ? 'rotate-180' : ''}`}
+                />
               </button>
 
               <div
@@ -265,7 +269,10 @@ export default function MenuTravelAgencySoftware() {
         </div>
       </div>
 
-      <div className="pointer-events-none absolute left-[-9999px] top-0 opacity-0" aria-hidden="true">
+      <div
+        className="pointer-events-none absolute left-[-9999px] top-0 opacity-0"
+        aria-hidden="true"
+      >
         <div className="flex items-center gap-2">
           {items.map((item) => {
             const Icon = item.icon;

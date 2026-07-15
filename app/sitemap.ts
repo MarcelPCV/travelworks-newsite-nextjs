@@ -1,5 +1,11 @@
 import type { MetadataRoute } from 'next';
-import { getCategories, getNewsCategoryPath, getNewsListPath, getNewsPagePath, getNewsArticlePath } from '@/app/[locale]/news/lib/categories';
+import {
+  getCategories,
+  getNewsCategoryPath,
+  getNewsListPath,
+  getNewsPagePath,
+  getNewsArticlePath,
+} from '@/app/[locale]/news/lib/categories';
 import { getAllArticles, getRouteLocales } from '@/app/[locale]/news/lib/news';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://travelworks.com';

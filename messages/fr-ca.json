@@ -92,23 +92,26 @@
       "block-type-carrousel": {
         "slides": {
           "concept": {
-            "title": "Une <strong>solution complète</strong> : réservations, CRM, inventaire, facturation, comptabilité et marketing",
+            "title": "Des solutions technologiques pour les <strong>agences de voyages</strong> et les <strong>voyagistes</strong>",
             "ctaLabel": "Découvrir TravelWorks",
-            "ctaHref": "#",
-            "image": "/images/components/hero-carousel/hero.png"
+            "ctaHref": "/fr-ca/travel-agency-software/features",
+            "desktopImage": "/images/pages/home/hero-carousel/travelworks-technology-solutions-travel-agencies.webp",
+            "mobileImage": "/images/pages/home/hero-carousel/travelworks-technology-solutions-travel-agencies-mobile.webp"
           },
           "promo": {
-            "title": "Des <strong>systèmes infonuagiques sécurisés</strong> idéaux pour les équipes en télétravail",
-            "ctaLabel": "Découvrir TravelWorks",
-            "ctaHref": "#",
-            "image": "/images/components/hero-carousel/hero.png"
+            "title": "<strong>Des systèmes cloud sécurisés</strong> adaptés au travail à distance",
+            "ctaLabel": "Découvrir les avantages",
+            "ctaHref": "/fr-ca/travel-agency-software/benefits",
+            "desktopImage": "/images/pages/home/hero-carousel/travelworks-secured-cloud-systems.webp",
+            "mobileImage": "/images/pages/home/hero-carousel/travelworks-secured-cloud-systems-mobile.webp"
           },
           "tourOnline": {
-            "title": "Une <strong>solution complète</strong> : réservations, CRM, inventaire, facturation, comptabilité et marketing",
+            "title": "Une <strong>solution complète</strong> : réservation, CRM, inventaire, facturation, comptabilité et marketing",
             "cta": "Découvrir TourOnline",
             "ctaLabel": "Découvrir TravelWorks",
-            "ctaHref": "#",
-            "image": "/images/components/hero-carousel/hero.png"
+            "ctaHref": "/fr-ca/travel-agency-software/tour-online",
+            "desktopImage": "/images/pages/home/hero-carousel/travelworks-comprehensive-solution.webp",
+            "mobileImage": "/images/pages/home/hero-carousel/travelworks-comprehensive-solution-mobile.webp"
           }
         }
       },

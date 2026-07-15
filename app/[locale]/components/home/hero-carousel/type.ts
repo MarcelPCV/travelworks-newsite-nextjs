@@ -7,7 +7,8 @@ export type HeroSlide = {
   titlePlain?: string;
   ctaLabel: string;
   ctaHref: string;
-  image: string;
+  desktopImage: string;
+  mobileImage: string;
   contentPosition?: 'left' | 'right';
 };
 

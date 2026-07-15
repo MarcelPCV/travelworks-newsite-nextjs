@@ -28,10 +28,15 @@ export function FeaturedNewsCard({ article, href }: { article: NewsArticle; href
           </h2>
           <p className="mt-3 text-sm text-slate-600">{article.excerpt}</p>
           <div className="mt-5 flex items-center gap-4 text-xs text-slate-500">
-            <time dateTime={article.date}>{new Date(article.date).toLocaleDateString('en-CA')}</time>
+            <time dateTime={article.date}>
+              {new Date(article.date).toLocaleDateString('en-CA')}
+            </time>
             <ReadingTime minutes={article.readingTimeMinutes} />
           </div>
-          <Link href={href} className="mt-6 inline-block text-sm font-semibold text-blue-700 hover:text-blue-800">
+          <Link
+            href={href}
+            className="mt-6 inline-block text-sm font-semibold text-blue-700 hover:text-blue-800"
+          >
             Read story
           </Link>
         </div>

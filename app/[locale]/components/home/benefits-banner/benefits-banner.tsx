@@ -10,19 +10,19 @@ export default function BenefitsBannerSection({
   imageHref,
   imageAlt,
   buttonLabel,
-  buttonHref
+  buttonHref,
 }: BenefitsBanner) {
   return (
     <section className="mx-auto px-5 py-8 sm:px-8 lg:px-12 lg:py-12">
-        {heading && (
-          <TitleSection
-            title={heading}
-            alignment="center"
-            size="extra-large"
-            color="text-brand-blue"
-            className="mb-5"
-          />
-        )}
+      {heading && (
+        <TitleSection
+          title={heading}
+          alignment="center"
+          size="extra-large"
+          color="text-brand-blue"
+          className="mb-5"
+        />
+      )}
       <div
         className="mx-auto relative overflow-hidden rounded-2xl bg-gray-100"
         aria-labelledby="benefits-banner-title"
@@ -36,13 +36,15 @@ export default function BenefitsBannerSection({
 
         <div className="mx-auto max-w-[1600px] relative grid grid-cols-1 gap-8 px-5 py-8 sm:px-8 lg:grid-cols-[1.15fr_1fr] lg:gap-10 lg:px-12 lg:py-12">
           <div className="flex max-w-[700px] items-end justify-center lg:justify-start">
-            {imageHref && <Image
-              src={imageHref}
-              alt={imageAlt ?? ""}
-              width={700}
-              height={400}
-              className="h-auto w-full rounded-lg object-cover"
-            />}
+            {imageHref && (
+              <Image
+                src={imageHref}
+                alt={imageAlt ?? ''}
+                width={700}
+                height={400}
+                className="h-auto w-full rounded-lg object-cover"
+              />
+            )}
           </div>
 
           <div className="mx-auto flex w-full max-w-xl flex-col justify-center lg:mx-0 lg:pr-4">
@@ -70,7 +72,7 @@ export default function BenefitsBannerSection({
                   className="mt-6"
                 />
               </a>
-            )} 
+            )}
           </div>
         </div>
       </div>

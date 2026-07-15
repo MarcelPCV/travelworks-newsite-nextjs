@@ -4,10 +4,7 @@ import { WhyTravelworksSection } from './type';
 import TitleSection from '../../ui/title-section';
 import Link from 'next/link';
 
-export default function WhyTravelworks({
-  title,
-  items,
-}: WhyTravelworksSection) {
+export default function WhyTravelworks({ title, items }: WhyTravelworksSection) {
   return (
     <section
       className="mx-auto w-full max-w-[1600px] rounded-2xl bg-neutral-background py-8 my-5"
@@ -25,16 +22,12 @@ export default function WhyTravelworks({
 
       <div className="grid grid-cols-1 overflow-hidden rounded-xl sm:grid-cols-2 xl:grid-cols-4">
         {items?.map((item, index) => (
-          <Link
-            href={item.blockLink ?? '#'}
-            key={index}
-            className="group flex min-h-104 flex-col"
-          >
+          <Link href={item.blockLink ?? '#'} key={index} className="group flex min-h-104 flex-col">
             <div className="relative h-60 overflow-hidden bg-[#ebe6dc]">
               <Image
                 src={item.imageHref}
-                alt={item.imageAlt ?? ""}
-                title={item.imageAlt ?? ""}
+                alt={item.imageAlt ?? ''}
+                title={item.imageAlt ?? ''}
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
                 sizes="(max-width: 640px) 100vw,
@@ -45,9 +38,7 @@ export default function WhyTravelworks({
 
             <div className="flex flex-1 flex-col bg-gray-800 p-6 text-neutral-canvas">
               <div className="flex items-start justify-between gap-4">
-                <h3 className="text-[1.4rem] font-medium leading-tight">
-                  {item.title}
-                </h3>
+                <h3 className="text-[1.4rem] font-medium leading-tight">{item.title}</h3>
 
                 <ArrowRight
                   className="mt-1 h-7 w-7 shrink-0 text-brand-orange-light transition-transform duration-300 group-hover:translate-x-1"
@@ -55,9 +46,7 @@ export default function WhyTravelworks({
                 />
               </div>
 
-              <p className="mt-5 type-normal-16 text-neutral-canvas/90">
-                {item.description}
-              </p>
+              <p className="mt-5 type-normal-16 text-neutral-canvas/90">{item.description}</p>
             </div>
           </Link>
         ))}

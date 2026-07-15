@@ -12,7 +12,7 @@ export async function generateMetadata({
   params: Promise<{ locale: Locale }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({locale, namespace: 'metadata.travel-agency-software'});
+  const t = await getTranslations({ locale, namespace: 'metadata.travel-agency-software' });
 
   return {
     title: `${t('trip-n-touch.title')}`,
@@ -24,7 +24,7 @@ export async function generateMetadata({
         'en-au': '/en-au/travel-agency-software/trip-n-touch',
         'fr-ca': '/fr-ca/logiciel-agence-voyage/trip-n-touch',
       },
-      locale
+      locale,
     ),
   };
 }

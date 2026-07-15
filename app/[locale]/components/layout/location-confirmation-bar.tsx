@@ -80,7 +80,7 @@ export default function LocationConfirmationBar() {
     <div className="border-b border-zinc-700 bg-zinc-900 text-zinc-100">
       <div className="mx-auto flex w-full max-w-[1600px] flex-col gap-3 px-4 py-3 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
         <div className="flex items-center gap-2 lg:flex-row lg:items-center">
-          <div className='w-6'>
+          <div className="w-6">
             <GlobeCheck className="h-6 w-6 text-gray-400" />
           </div>
           <p className="text-sm leading-5 text-zinc-100">{t('message')}</p>

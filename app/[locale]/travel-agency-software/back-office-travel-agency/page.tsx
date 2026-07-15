@@ -18,7 +18,7 @@ export async function generateMetadata({
   params: Promise<{ locale: Locale }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({locale, namespace: 'metadata.travel-agency-software'});
+  const t = await getTranslations({ locale, namespace: 'metadata.travel-agency-software' });
 
   return {
     title: `${t('back-office-travel-agency.title')}`,
@@ -30,7 +30,7 @@ export async function generateMetadata({
         'en-au': '/en-au/travel-agency-software/back-office-travel-agency',
         'fr-ca': '/fr-ca/logiciel-agence-voyage/back-office-agence-de-voyage',
       },
-      locale
+      locale,
     ),
   };
 }

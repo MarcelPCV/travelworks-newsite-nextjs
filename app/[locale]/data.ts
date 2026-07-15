@@ -43,7 +43,8 @@ const slides: HeroCarouselSection['slides'] = [
     title: 'block-type-carrousel.slides.concept.title',
     ctaLabel: 'block-type-carrousel.slides.concept.ctaLabel',
     ctaHref: 'block-type-carrousel.slides.concept.ctaHref',
-    image: 'block-type-carrousel.slides.concept.image',
+    desktopImage: 'block-type-carrousel.slides.concept.desktopImage',
+    mobileImage: 'block-type-carrousel.slides.concept.mobileImage',
     contentPosition: 'left',
   },
   {
@@ -51,7 +52,8 @@ const slides: HeroCarouselSection['slides'] = [
     title: 'block-type-carrousel.slides.promo.title',
     ctaLabel: 'block-type-carrousel.slides.promo.ctaLabel',
     ctaHref: 'block-type-carrousel.slides.promo.ctaHref',
-    image: 'block-type-carrousel.slides.promo.image',
+    desktopImage: 'block-type-carrousel.slides.promo.desktopImage',
+    mobileImage: 'block-type-carrousel.slides.promo.mobileImage',
     contentPosition: 'right',
   },
   {
@@ -59,7 +61,8 @@ const slides: HeroCarouselSection['slides'] = [
     title: 'block-type-carrousel.slides.tourOnline.title',
     ctaLabel: 'block-type-carrousel.slides.tourOnline.ctaLabel',
     ctaHref: 'block-type-carrousel.slides.tourOnline.ctaHref',
-    image: 'block-type-carrousel.slides.tourOnline.image',
+    desktopImage: 'block-type-carrousel.slides.tourOnline.desktopImage',
+    mobileImage: 'block-type-carrousel.slides.tourOnline.mobileImage',
     contentPosition: 'left',
   },
 ];

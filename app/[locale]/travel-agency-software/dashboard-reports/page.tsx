@@ -13,7 +13,7 @@ export async function generateMetadata({
   params: Promise<{ locale: Locale }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({locale, namespace: 'metadata.travel-agency-software'});
+  const t = await getTranslations({ locale, namespace: 'metadata.travel-agency-software' });
 
   return {
     title: `${t('dashboard-reports.title')}`,
@@ -25,7 +25,7 @@ export async function generateMetadata({
         'en-au': '/en-au/travel-agency-software/dashboard-reports',
         'fr-ca': '/fr-ca/logiciel-agence-voyage/tableau-de-bord-rapports',
       },
-      locale
+      locale,
     ),
   };
 }

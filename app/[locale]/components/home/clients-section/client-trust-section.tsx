@@ -4,13 +4,23 @@ import CtaButton from '../../ui/cta-button';
 import { ArrowRight } from 'lucide-react';
 import TitleSection from '../../ui/title-section';
 
-export default function ClientTrustSection({ title, clients, buttonLabel, buttonHref }: ClientsSectionModel) {
+export default function ClientTrustSection({
+  title,
+  clients,
+  buttonLabel,
+  buttonHref,
+}: ClientsSectionModel) {
   return (
     <section className="w-full py-16">
       <div className="mx-auto max-w-[1600px] px-4">
         <div className="mb-5">
           {title && (
-            <TitleSection title={title} alignment="center" size="extra-large" color="text-brand-blue" />
+            <TitleSection
+              title={title}
+              alignment="center"
+              size="extra-large"
+              color="text-brand-blue"
+            />
           )}
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
@@ -28,9 +38,7 @@ export default function ClientTrustSection({ title, clients, buttonLabel, button
                   />
                 </div>
               </div>
-              <p className="text-sm text-center text-gray-700 pt-5">
-                {client.name}
-              </p>
+              <p className="text-sm text-center text-gray-700 pt-5">{client.name}</p>
             </div>
           ))}
         </div>
@@ -46,7 +54,7 @@ export default function ClientTrustSection({ title, clients, buttonLabel, button
                 className="mt-6"
               />
             </a>
-          )} 
+          )}
         </div>
       </div>
     </section>

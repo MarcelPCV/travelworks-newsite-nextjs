@@ -1,21 +1,21 @@
 ---
-title: "TravelWorks lance son nouveau logiciel de comptabilite"
-description: "Decouvrez nos nouveaux outils comptables."
-excerpt: "TravelWorks presente une nouvelle plateforme comptable adaptee aux agences de voyages."
-id: "accounting-software"
-slug: "travelworks-lance-son-nouveau-logiciel"
-date: "2026-04-06"
-updated: "2026-04-08"
-author: "TravelWorks"
+title: 'TravelWorks lance son nouveau logiciel de comptabilite'
+description: 'Decouvrez nos nouveaux outils comptables.'
+excerpt: 'TravelWorks presente une nouvelle plateforme comptable adaptee aux agences de voyages.'
+id: 'accounting-software'
+slug: 'travelworks-lance-son-nouveau-logiciel'
+date: '2026-04-06'
+updated: '2026-04-08'
+author: 'TravelWorks'
 category:
   - accounting
   - technology
 featured: true
-coverImage: "/images/components/hero-carousel/hero.png"
-thumbnail: "/images/components/hero-carousel/hero.png"
+coverImage: '/images/components/hero-carousel/hero.png'
+thumbnail: '/images/components/hero-carousel/hero.png'
 seo:
-  title: "TravelWorks lance son nouveau logiciel de comptabilite"
-  description: "Decouvrez la plateforme comptable TravelWorks."
+  title: 'TravelWorks lance son nouveau logiciel de comptabilite'
+  description: 'Decouvrez la plateforme comptable TravelWorks.'
   keywords:
     - logiciel comptabilite
     - logiciel agence voyages

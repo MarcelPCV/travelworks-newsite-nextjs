@@ -110,7 +110,10 @@ export function proxy(request: NextRequest) {
       routeSegments[0] = 'news';
       rewritten = true;
 
-      if (routeSegments.length > 1 && routeSegments[1] === newsCategorySegmentByRouteLocale[routeLocale]) {
+      if (
+        routeSegments.length > 1 &&
+        routeSegments[1] === newsCategorySegmentByRouteLocale[routeLocale]
+      ) {
         routeSegments[1] = 'category';
 
         if (routeSegments.length > 2) {

@@ -7,7 +7,7 @@ import Link from 'next/link';
 export default function NewsTickerBar({ sectionTitle, newsLabel, newsCtaHref, phone }: NewsTicker) {
   return (
     <section
-      className="mx-auto w-full max-w-[1600px] border border-zinc-300 rounded-sm bg-white mt-2 mb-3"
+      className="mx-auto w-full max-w-[1600px] border border-zinc-300 rounded-sm bg-white mt-3 mb-3"
       aria-label={sectionTitle}
     >
       <div className="mx-auto flex w-full items-center gap-3 px-4 py-1 sm:px-6 lg:px-8">

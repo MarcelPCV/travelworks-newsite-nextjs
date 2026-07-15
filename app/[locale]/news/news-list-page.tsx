@@ -33,7 +33,9 @@ export async function NewsListPage({
   const labels = getNewsLabels(locale);
 
   const allArticles = activeCategory
-    ? (await getAllArticles(locale)).filter((article) => article.categories.includes(activeCategory))
+    ? (await getAllArticles(locale)).filter((article) =>
+        article.categories.includes(activeCategory),
+      )
     : await getAllArticles(locale);
 
   const paginated = paginateArticles(allArticles, page, PAGE_SIZE);

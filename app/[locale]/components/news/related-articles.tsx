@@ -2,13 +2,7 @@ import type { NewsArticle } from '@/app/[locale]/news/types';
 import { getNewsArticlePath } from '@/app/[locale]/news/lib/categories';
 import { NewsCard } from './news-card';
 
-export function RelatedArticles({
-  locale,
-  articles,
-}: {
-  locale: string;
-  articles: NewsArticle[];
-}) {
+export function RelatedArticles({ locale, articles }: { locale: string; articles: NewsArticle[] }) {
   if (articles.length === 0) {
     return null;
   }

@@ -74,18 +74,23 @@ export default function PlanningDemoSection({ countries, locale, model }: Props)
     <section className="w-full mx-auto max-w-[1600px] rounded-2xl bg-neutral-background py-10 text-zinc-900">
       <div className="mb-5">
         {model.heading && (
-          <TitleSection title={model.heading} alignment="center" size="extra-large" color="text-brand-blue" />
+          <TitleSection
+            title={model.heading}
+            alignment="center"
+            size="extra-large"
+            color="text-brand-blue"
+          />
         )}
       </div>
 
       <div className="mt-8 overflow-hidden rounded-xl border border-neutral-border bg-neutral-canvas">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.95fr]">
           <div className="hidden md:block">
-            {model.image.linkHref && model.image.placeholderLabel && (  
-              <Image 
-                src={model.image.linkHref} 
-                alt={model.image.placeholderLabel} 
-                width={1000} 
+            {model.image.linkHref && model.image.placeholderLabel && (
+              <Image
+                src={model.image.linkHref}
+                alt={model.image.placeholderLabel}
+                width={1000}
                 height={800}
                 className="h-full w-full object-cover"
               />

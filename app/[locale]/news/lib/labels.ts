@@ -11,26 +11,22 @@ const LABELS: Record<ContentLocale, NewsUiLabels> = {
   'en-us': {
     allNews: 'All News',
     pageTitle: 'TravelWorks News',
-    pageDescription:
-      'News, updates, and practical insights for travel agencies using TravelWorks.',
+    pageDescription: 'News, updates, and practical insights for travel agencies using TravelWorks.',
   },
   'en-ca': {
     allNews: 'All News',
     pageTitle: 'TravelWorks News',
-    pageDescription:
-      'News, updates, and practical insights for travel agencies using TravelWorks.',
+    pageDescription: 'News, updates, and practical insights for travel agencies using TravelWorks.',
   },
   'en-au': {
     allNews: 'All News',
     pageTitle: 'TravelWorks News',
-    pageDescription:
-      'News, updates, and practical insights for travel agencies using TravelWorks.',
+    pageDescription: 'News, updates, and practical insights for travel agencies using TravelWorks.',
   },
   'fr-ca': {
     allNews: 'Toutes les nouvelles',
     pageTitle: 'Nouvelles TravelWorks',
-    pageDescription:
-      'Nouvelles, mises a jour et conseils pratiques pour les agences de voyages.',
+    pageDescription: 'Nouvelles, mises a jour et conseils pratiques pour les agences de voyages.',
   },
 };
 

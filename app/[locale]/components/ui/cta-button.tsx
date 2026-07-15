@@ -92,9 +92,7 @@ export default function CtaButton({
           {icon}
         </span>
       ) : null}
-      <span className="inline-flex items-center leading-none">
-        {label}
-      </span>
+      <span className="inline-flex items-center leading-none">{label}</span>
       {showIconAfter ? (
         <span className={`inline-flex items-center justify-center shrink-0 ${iconClassName}`}>
           {icon}

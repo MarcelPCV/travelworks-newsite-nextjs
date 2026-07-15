@@ -5,7 +5,6 @@ import { useTranslations } from 'next-intl';
 import { useEffect, useState } from 'react';
 import { ShieldAlert } from 'lucide-react';
 
-
 const DISMISSED_STORAGE_KEY = 'travelworks.top_announcement.dismissed';
 
 export default function TopAnnouncementBar() {
@@ -65,9 +64,7 @@ export default function TopAnnouncementBar() {
               className="text-sm font-medium underline underline-offset-4 transition hover:opacity-90"
               onClick={() => setIsModalOpen(true)}
             >
-              <span>
-                {t('learnMore')}  
-              </span>
+              <span>{t('learnMore')}</span>
             </button>
 
             <button
@@ -100,9 +97,7 @@ export default function TopAnnouncementBar() {
                 className="flex items-center text-xl font-semibold text-brand-blue"
               >
                 <ShieldAlert className="h-8 w-8 text-orange-500" />
-                <span className="ml-2">
-                  {t('modal.title')}
-                </span>
+                <span className="ml-2">{t('modal.title')}</span>
               </h2>
               <button
                 type="button"

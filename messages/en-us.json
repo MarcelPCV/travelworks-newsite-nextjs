@@ -92,23 +92,26 @@
       "block-type-carrousel": {
         "slides": {
           "concept": {
-            "title": "A <strong>comprehensive solution</strong> : booking, CRM, inventory, billing, accounting and marketing",
+            "title": "Technology solutions for <strong>travel agencies</strong> and <strong>tour-operators</strong>",
             "ctaLabel": "Discover TravelWorks",
-            "ctaHref": "#",
-            "image": "/images/components/hero-carousel/hero.png"
+            "ctaHref": "/travel-agency-software/features",
+            "desktopImage": "/images/pages/home/hero-carousel/travelworks-technology-solutions-travel-agencies.webp",
+            "mobileImage": "/images/pages/home/hero-carousel/travelworks-technology-solutions-travel-agencies-mobile.webp"
           },
           "promo": {
             "title": "<strong>Secured cloud systems </strong>ideal for staff working remotely",
-            "ctaLabel": "Discover TravelWorks",
-            "ctaHref": "#",
-            "image": "/images/components/hero-carousel/hero.png"
+            "ctaLabel": "know the benefits",
+            "ctaHref": "/travel-agency-software/benefits",
+            "desktopImage": "/images/pages/home/hero-carousel/travelworks-secured-cloud-systems.webp",
+            "mobileImage": "/images/pages/home/hero-carousel/travelworks-secured-cloud-systems-mobile.webp"
           },
           "tourOnline": {
             "title": "A <strong>comprehensive solution</strong> : booking, CRM, inventory, billing, accounting and marketing",
             "cta": "Discover TourOnline",
             "ctaLabel": "Discover TravelWorks",
-            "ctaHref": "#",
-            "image": "/images/components/hero-carousel/hero.png"
+            "ctaHref": "/travel-agency-software/tour-online",
+            "desktopImage": "/images/pages/home/hero-carousel/travelworks-comprehensive-solution.webp",
+            "mobileImage": "/images/pages/home/hero-carousel/travelworks-comprehensive-solution-mobile.webp"
           }
         }
       },

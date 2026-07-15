@@ -1,4 +1,3 @@
-
 export type BenefitsBannerItem = {
   id: number;
   label: string;

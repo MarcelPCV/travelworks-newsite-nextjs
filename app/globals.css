@@ -115,22 +115,79 @@ body {
   }
 }
 
-
-
 .css-gradient-background-animation {
-  background: linear-gradient(126deg, #014b8f, #0e7ce2, #014b8f, #0069cb, #014b8f, #107ee4, #014b8f, #0069cb);
+  background: linear-gradient(
+    126deg,
+    #014b8f,
+    #0e7ce2,
+    #014b8f,
+    #0069cb,
+    #014b8f,
+    #107ee4,
+    #014b8f,
+    #0069cb
+  );
   background-size: 400% 400%;
 
   animation: ContinuousReverse 8s linear infinite;
 }
 
 @keyframes ContinuousReverse {
-    0% {
-        /* Starts at the far end */
-        background-position: 100% 100%;
-    }
-    100% {
-        /* Moves backward to the origin for the opposite flow effect */
-        background-position: 0% 0%;
-    }
+  0% {
+    /* Starts at the far end */
+    background-position: 100% 100%;
+  }
+  100% {
+    /* Moves backward to the origin for the opposite flow effect */
+    background-position: 0% 0%;
+  }
+}
+
+/* Apply this class to your slider or banner container */
+.slider-bg {
+  position: relative;
+  width: 100%;
+  height: 100%; /* Adjust height as needed for your design */
+  overflow: hidden;
+  background-color: #ffffff;
+
+  /* Creates the subtle white diagonal shadow line in the middle-left background */
+  background-image: linear-gradient(
+    135deg,
+    transparent 45%,
+    rgba(0, 0, 0, 0.03) 46%,
+    rgba(0, 0, 0, 0.05) 50%,
+    transparent 54%
+  );
+  background-size: 200% 100%;
+  background-position: left center;
+}
+
+/* Common properties for both orange capsules */
+.slider-bg::before,
+.slider-bg::after {
+  content: '';
+  position: absolute;
+  background: linear-gradient(135deg, #ffb84d, #ffa621);
+  border-radius: 999px;
+  transform: rotate(-45deg);
+  transform-origin: center;
+}
+
+/* Bottom-Left Orange Capsule */
+.slider-bg::before {
+  bottom: -80px;
+  left: -80px;
+  width: 140px;
+  height: 240px;
+  box-shadow: 10px -10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Top-Right Large Orange Capsule */
+.slider-bg::after {
+  top: -120px;
+  right: -60px;
+  width: 200px;
+  height: 550px;
+  box-shadow: -20px 20px 40px rgba(0, 0, 0, 0.12);
 }

@@ -177,10 +177,7 @@ export function getCategoryById(locale: string, categoryId: NewsCategoryId): New
   return category;
 }
 
-export function getCategoryIdFromSlug(
-  locale: string,
-  categorySlug: string,
-): NewsCategoryId | null {
+export function getCategoryIdFromSlug(locale: string, categorySlug: string): NewsCategoryId | null {
   const routeLocale = normalizeRouteLocale(locale);
   const categories = getCategories(routeLocale);
   const match = categories.find(

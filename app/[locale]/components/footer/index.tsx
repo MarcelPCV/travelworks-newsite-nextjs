@@ -1,11 +1,8 @@
-"use client";
+'use client';
 
 import { useCallback } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
-import {
-  DEFAULT_ROUTE_LOCALE,
-  localeOptions,
-} from '@/app/[locale]/locale-config';
+import { DEFAULT_ROUTE_LOCALE, localeOptions } from '@/app/[locale]/locale-config';
 import {
   aboutUsLinks,
   loginSlugByOptionId,

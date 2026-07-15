@@ -12,7 +12,7 @@ export async function generateMetadata({
   params: Promise<{ locale: Locale }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({locale, namespace: 'metadata.about-us'});
+  const t = await getTranslations({ locale, namespace: 'metadata.about-us' });
 
   return {
     title: t('careers.title'),
@@ -24,7 +24,7 @@ export async function generateMetadata({
         'en-au': '/en-au/about-us/careers',
         'fr-ca': '/fr-ca/a-propos/carrieres',
       },
-      locale
+      locale,
     ),
   };
 }
