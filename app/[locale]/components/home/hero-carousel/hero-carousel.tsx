@@ -124,7 +124,7 @@ export default function HeroCarousel({
                   </div>
 
                   {/* ================= DESKTOP ================= */}
-                  <div className="hidden h-full items-center md:flex">
+                  <div className="hidden h-full items-center md:flex lg:px-10 xl:px-20">
                     <div className="md:max-w-[500px] xl:max-w-2xl px-8 md:px-20 lg:px-22">
                       <h2 className="md:text-xl xl:text-3xl text-brand-blue">
                         {slide.titleRich ?? slide.titlePlain ?? slide.title}
@@ -171,14 +171,14 @@ export default function HeroCarousel({
             onClick={() => swiperRef.current?.slidePrev()}
             aria-label="Previous slide"
           >
-            <ChevronLeft
-              className="
-                h-9
-                w-9
-                sm:h-10
-                sm:w-10
-              "
-            />
+            <div className="flex h-9 w-9 items-center justify-center rounded-full bg-white/85 sm:h-10 sm:w-10 shadow-md">
+              <ChevronLeft
+                className="
+                  h-8
+                  w-8
+                "
+              />
+            </div>
           </button>
 
           <button
@@ -196,14 +196,14 @@ export default function HeroCarousel({
             onClick={() => swiperRef.current?.slideNext()}
             aria-label="Next slide"
           >
-            <ChevronRight
-              className="
-                h-9
-                w-9
-                sm:h-10
-                sm:w-10
-              "
-            />
+            <div className="flex h-9 w-9 items-center justify-center rounded-full bg-white/85 sm:h-10 sm:w-10 shadow-md">
+              <ChevronRight
+                className="
+                  h-8
+                  w-8
+                "
+              />
+            </div>
           </button>
         </>
       )}
