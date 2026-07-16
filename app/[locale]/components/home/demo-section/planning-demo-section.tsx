@@ -7,6 +7,7 @@ import type { PlanningDemoSectionModel } from './type';
 import { demoRequestSchema, type DemoRequestErrors } from './zod-validations';
 import Image from 'next/image';
 import TitleSection from '../../ui/title-section';
+import CtaButton from '../../ui/cta-button';
 
 type Props = {
   countries: CountryOption[];
@@ -160,7 +161,7 @@ export default function PlanningDemoSection({ countries, locale, model }: Props)
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="inline-flex items-center gap-2 rounded-md bg-brand-blue px-6 py-3 text-white disabled:opacity-50"
+                className="inline-flex font-semibold items-center gap-2 rounded-md bg-brand-blue px-6 py-3 text-white disabled:opacity-50"
               >
                 {isSubmitting ? 'Sending…' : model.form.submitButton.label}
                 <ArrowRight className="h-5 w-5" />

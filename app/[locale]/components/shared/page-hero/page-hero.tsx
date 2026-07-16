@@ -10,16 +10,11 @@ export default function PageHero({
   logoImageSrc,
   ctaImageSrc,
 }: PageHeroModel) {
-  const rootClassName = [
-    'relative mx-auto max-w-7xl w-full overflow-hidden bg-[#e5e5e5]',
-    'before:pointer-events-none before:absolute before:inset-0 before:hidden before:bg-[radial-gradient(circle_at_8%_88%,rgba(255,170,59,0.55),transparent_13%),radial-gradient(circle_at_16%_14%,rgba(255,255,255,0.5),transparent_18%),linear-gradient(132deg,rgba(255,255,255,0.54)_0%,rgba(255,255,255,0)_34%),linear-gradient(-132deg,rgba(255,255,255,0.5)_0%,rgba(255,255,255,0)_30%),radial-gradient(circle_at_87%_17%,rgba(255,170,59,0.6),transparent_14%),radial-gradient(circle_at_80%_88%,rgba(255,170,59,0.5),transparent_12%)] before:lg:block',
-  ]
-    .filter(Boolean)
-    .join(' ');
 
   return (
-    <section className={rootClassName} aria-labelledby="features-hero-title">
-      <div className="mx-auto w-full max-w-7xl lg:px-8">
+    <section className="relative mx-auto max-w-[1600px] w-full overflow-hidden bg-[#e5e5e5]" aria-labelledby="features-hero-title">
+      <div className='slider-bg z-0'></div>
+      <div className="relative z-10 mx-auto w-full max-w-[1600px] lg:px-8">
         <div className="grid w-full lg:min-h-140 lg:grid-cols-[1fr_1.22fr] lg:gap-8 lg:py-3">
           <div className="flex flex-col lg:justify-center">
             {mobileTopImageSrc ? (
@@ -29,7 +24,7 @@ export default function PageHero({
                   alt="Travelworks hero highlight"
                   fill
                   priority
-                  className="rounded-sm object-cover"
+                  className="object-cover rounded-md shadow-2xl"
                   sizes="100vw"
                 />
               </div>
@@ -86,7 +81,7 @@ export default function PageHero({
                   alt="Travelworks platform preview"
                   fill
                   priority
-                  className="object-cover"
+                  className="object-cover rounded-2xl border-2 border-white"
                   sizes="50vw"
                 />
               </div>
