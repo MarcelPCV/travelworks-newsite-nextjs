@@ -2,6 +2,15 @@
 
 import React, { ReactNode } from 'react';
 import { ArrowUp } from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
+import {
+  DEFAULT_ROUTE_LOCALE,
+  localeOptions,
+} from '@/app/[locale]/locale-config';
+import { useLocale } from 'next-intl';
+import {useTranslations} from 'next-intl';
+import { Mail, Phone } from 'lucide-react';
 
 type SocialLinks = {
   youtube?: string;
@@ -19,13 +28,16 @@ type ContactBarSectionProps = {
 };
 
 export default function ContactBarSection({
-  logo,
-  phone = '+1 (555) 555-5555',
-  email = 'hello@example.com',
-  socialLinks = {},
   className,
   showBackToTop = true,
 }: ContactBarSectionProps) {
+  const t = useTranslations('footer.block-type-contact-bar-section');
+  const phone = t('phone');
+  const phone2 = t('phone2');
+  const email = t('email');
+  const title = t('title');
+  const locale = useLocale();
+  const activeMessageLocale = useLocale();
   const handleBackToTop = () => {
     if (typeof window !== 'undefined') {
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -39,27 +51,92 @@ export default function ContactBarSection({
     .filter(Boolean)
     .join(' ');
 
+  const homeHrefByRouteLocale: Record<string, string> = {
+    [DEFAULT_ROUTE_LOCALE]: '/',
+    'en-ca': '/en-ca',
+    'fr-ca': '/fr-ca',
+    'en-au': '/en-au',
+  };
+
+  const currentRouteLocale =
+    localeOptions.find((item) => item.messageLocale === activeMessageLocale)?.routeLocale ??
+    DEFAULT_ROUTE_LOCALE;
+
+  const homeHref =
+    homeHrefByRouteLocale[currentRouteLocale] ??
+    (currentRouteLocale === DEFAULT_ROUTE_LOCALE ? '/' : `/${currentRouteLocale}`);
+
+  
+
   return (
     <section className={rootClassName} aria-labelledby="contact-bar-heading">
       <div className="mx-auto max-w-7xl flex flex-col items-center gap-3 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex items-center justify-center sm:justify-start">
-          {logo ? (
-            <div className="h-10">{logo}</div>
-          ) : (
-            <div className="text-[2.05rem] font-semibold text-brand-blue">TravelWorks</div>
-          )}
+          <Link
+            href={homeHref}
+            className="text-xl font-semibold tracking-tight text-zinc-900 uppercase"
+          >
+            {locale === 'fr-ca' ? (
+              <Image
+                src="/images/branding/pcvoyages.svg"
+                alt="PC Voyages"
+                width={0}
+                height={0}
+                className="h-16 w-auto"
+              />
+            ) : (
+              <Image
+                src="/images/branding/travelworks.svg"
+                alt="TravelWorks"
+                width={0}
+                height={0}
+                className="h-16 w-auto"
+              />
+            )}
+          </Link>
         </div>
 
         <address className="not-italic text-center sm:text-left">
-          <div className="type-normal-16 text-neutral-700">
-            <span className="mr-2">Call us:</span>
-            <a href={`tel:${phone}`} className="font-semibold text-brand-blue hover:underline">
-              {phone}
-            </a>
+          <div className="text-lg text-neutral-700">
+            <div className="mr-2">
+              {title}
+            </div>
+
+            {phone && 
+              <div className="flex items-center justify-center gap-2 sm:justify-start">
+                <span className="mr-2">
+                  <Phone className="h-5 w-5 text-amber-600" />
+                </span>
+                <a
+                  href={`tel:${phone}`}
+                  className="text-md font-semibold text-brand-blue hover:underline"
+                >
+                  {phone}
+                </a>
+              </div>
+            }
+            {phone2 && 
+              <div className="flex items-center justify-center gap-2 sm:justify-start">
+                <span className="mr-2">
+                  <Phone className="h-5 w-5 text-amber-600" />
+                </span>
+                <a
+                  href={`tel:${phone2}`}
+                  className="text-md font-semibold text-brand-blue hover:underline"
+                >
+                  {phone2}
+                </a>
+              </div>
+            }
           </div>
-          <div className="type-normal-16 text-neutral-700">
-            <span className="mr-2">Email:</span>
-            <a href={`mailto:${email}`} className="font-semibold text-brand-blue hover:underline">
+          <div className="flex items-center justify-center gap-2 sm:justify-start">
+            <span className="mr-2">
+              <Mail className="h-5 w-5 text-amber-600" />
+            </span>
+            <a 
+              href={`mailto:${email}`}
+              className="text-md font-semibold text-brand-blue hover:underline"
+            >
               {email}
             </a>
           </div>
@@ -67,64 +144,28 @@ export default function ContactBarSection({
 
         <div className="flex items-center justify-center gap-2">
           <a
-            href={socialLinks.youtube ?? '#'}
+            href="https://www.youtube.com/channel/UCL7XrLRtCA2k1bNnHX3biVA"
             aria-label="YouTube"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-2 rounded-md hover:bg-neutral-100"
           >
-            <svg
-              className="h-5 w-5 text-neutral-800"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              aria-hidden
-            >
-              <rect width="24" height="24" rx="4" fill="#FF0000" />
-              <path d="M9 8l6 4-6 4V8z" fill="#fff" />
-            </svg>
+            <Image src="/images/branding/youtube.svg" alt="YouTube" width={35} height={35} />
           </a>
           <a
-            href={socialLinks.linkedin ?? '#'}
+            href="https://www.linkedin.com/company/travelworks---pc-voyages"
             aria-label="LinkedIn"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-2 rounded-md hover:bg-neutral-100"
           >
-            <svg
-              className="h-5 w-5 text-neutral-800"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              aria-hidden
-            >
-              <rect width="24" height="24" rx="4" fill="#0A66C2" />
-              <path
-                d="M7 10v7H4v-7h3zm-1.5-5a1.75 1.75 0 110 3.5 1.75 1.75 0 010-3.5zM12 10v7h-3v-7h3zm1.5 0h2.8v1.1h.04c.39-.73 1.34-1.5 2.76-1.5 2.95 0 3.5 1.94 3.5 4.46V17h-3v-3.2c0-.76-.01-1.74-1.06-1.74-1.06 0-1.22.83-1.22 1.67V17h-3v-7z"
-                fill="#fff"
-              />
-            </svg>
+            <Image src="/images/branding/linkedin.svg" alt="LinkedIn" width={35} height={35} />
           </a>
           <a
-            href={socialLinks.facebook ?? '#'}
+            href="https://www.facebook.com/TravelWorks-Div-of-PC-Voyages-113096271414403"
             aria-label="Facebook"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-2 rounded-md hover:bg-neutral-100"
           >
-            <svg
-              className="h-5 w-5 text-neutral-800"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              aria-hidden
-            >
-              <rect width="24" height="24" rx="4" fill="#1877F2" />
-              <path
-                d="M15 8h1.5V5.5H15c-1.38 0-2.5 1.12-2.5 2.5V10H11v2h1.5v5H15v-5h1.5l.5-2H15V8z"
-                fill="#fff"
-              />
-            </svg>
+            <Image src="/images/branding/facebook.svg" alt="Facebook" width={35} height={35} />
           </a>
 
           {showBackToTop && (

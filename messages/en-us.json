@@ -1263,6 +1263,14 @@
       }
     }
   },
+  "footer": {
+    "block-type-contact-bar-section": {
+      "title": "Contact Us",
+      "phone": "1 877 282-4556",
+      "phone2": "",
+      "email": "info@travelworkssolution.com"
+    }
+  },
   "home": {
     "news-ticker": {
       "section-title": "News",

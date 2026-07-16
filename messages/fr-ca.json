@@ -240,7 +240,7 @@
         }
       },
       "block-type-news-ticker": {
-        "sectionTitle": "Actualités",
+        "sectionTitle": "Nouvelles",
         "newsLabel": "TravelWorks lance de nouveaux outils pour optimiser la gestion comptable.",
         "newsCtaHref": "#",
         "phone": "+1 (514) 123-4567"
@@ -1260,6 +1260,14 @@
           "iframeTitle": "Emplacement du bureau de TravelWorks à Montréal"
         }
       }
+    }
+  },
+    "footer": {
+    "block-type-contact-bar-section": {
+      "title": "Contactez-nous",
+      "phone": "1 877 282-4556",
+      "phone2": "",
+      "email": "info@travelworkssolution.com"
     }
   },
   "home": {

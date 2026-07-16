@@ -89,7 +89,7 @@
   },
   "pages": {
     "home": {
-"block-type-carrousel": {
+      "block-type-carrousel": {
         "slides": {
           "concept": {
             "title": "Technology solutions for <strong>travel agencies</strong> and <strong>tour-operators</strong>",
@@ -1260,6 +1260,14 @@
           "iframeTitle": "TravelWorks Montreal office location"
         }
       }
+    }
+  },
+  "footer": {
+    "block-type-contact-bar-section": {
+      "title": "Contact Us",
+      "phone": "1 877 282-4556",
+      "phone2": "",
+      "email": "info@travelworkssolution.com"
     }
   },
   "home": {

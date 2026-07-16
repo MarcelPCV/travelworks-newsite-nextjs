@@ -1262,6 +1262,14 @@
       }
     }
   },
+  "footer": {
+    "block-type-contact-bar-section": {
+      "title": "Contact Us",
+      "phone": "1300 936 568",
+      "phone2": "+61 (0) 2 8880 8387",
+      "email": "hello@blacksheeptourism.com.au"
+    }
+  },
   "home": {
     "news-ticker": {
       "section-title": "News",
