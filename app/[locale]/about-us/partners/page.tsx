@@ -2,8 +2,12 @@ import { getTranslations } from 'next-intl/server';
 import PartnersSection from './components/partners-section';
 import { PartnersSectionModel } from './components/types';
 import { getAlternates } from '@/app/lib/SEO/getAlternates';
+import { Breadcrumb } from '@/app/[locale]/components/news/breadcrumb';
+import type { BreadcrumbItem } from '@/app/[locale]/news/types';
+import { setRequestLocale } from 'next-intl/server';
 import { Metadata } from 'next';
 import { Locale } from 'next-intl';
+import Image from 'next/image';
 
 export async function generateMetadata({
   params,
@@ -34,19 +38,19 @@ const partnerSections: PartnersSectionModel[] = [
     partners: [
       {
         name: 'ARF Québec',
-        logo: '/images/partners/arf-quebec.webp',
+        logo: '/images/pages/about-us/partners/ARF-Quebec.webp',
       },
       {
         name: 'ACTA',
-        logo: '/images/partners/acta.webp',
+        logo: '/images/pages/about-us/partners/acta.webp',
       },
       {
-        name: 'CBTA',
-        logo: '/images/partners/cbta.webp',
+        name: 'GBTA',
+        logo: '/images/pages/about-us/partners/gbta.webp',
       },
       {
         name: 'ASTA',
-        logo: '/images/partners/asta.webp',
+        logo: '/images/pages/about-us/partners/asta.webp',
       },
     ],
   },
@@ -56,19 +60,19 @@ const partnerSections: PartnersSectionModel[] = [
     partners: [
       {
         name: 'Manulife',
-        logo: '/images/partners/manulife.webp',
+        logo: '/images/pages/about-us/partners/manuviegif.webp',
       },
       {
         name: 'TIPS',
-        logo: '/images/partners/tips.webp',
+        logo: '/images/pages/about-us/partners/tips.webp',
       },
       {
         name: 'Croix Bleue',
-        logo: '/images/partners/croix-bleue.webp',
+        logo: '/images/pages/about-us/partners/Croix-bleue.webp',
       },
       {
         name: 'RBC Insurance',
-        logo: '/images/partners/rbc.webp',
+        logo: '/images/pages/about-us/partners/rbc.webp',
       },
     ],
   },
@@ -78,15 +82,15 @@ const partnerSections: PartnersSectionModel[] = [
     partners: [
       {
         name: 'Amadeus',
-        logo: '/images/partners/amadeus.webp',
+        logo: '/images/pages/about-us/partners/amadeus.webp',
       },
       {
         name: 'Sabre',
-        logo: '/images/partners/sabre.webp',
+        logo: '/images/pages/about-us/partners/sabre-1.webp',
       },
       {
         name: 'Travelport Galileo',
-        logo: '/images/partners/travelport.webp',
+        logo: '/images/pages/about-us/partners/travelport-galilleo.webp',
       },
     ],
   },
@@ -96,55 +100,55 @@ const partnerSections: PartnersSectionModel[] = [
     partners: [
       {
         name: 'Expedia TAAP',
-        logo: '/images/partners/expedia.webp',
+        logo: '/images/pages/about-us/partners/expedia-taap2.webp',
       },
       {
         name: 'WooCommerce',
-        logo: '/images/partners/woocommerce.webp',
+        logo: '/images/pages/about-us/partners/woocommerce.webp',
       },
       {
         name: 'Revelex',
-        logo: '/images/partners/revelex.webp',
+        logo: '/images/pages/about-us/partners/revelex.webp',
       },
       {
         name: 'Vibe',
-        logo: '/images/partners/vibe.webp',
+        logo: '/images/pages/about-us/partners/vibe.webp',
       },
       {
         name: 'TravelBrands',
-        logo: '/images/partners/travelbrands.webp',
+        logo: '/images/pages/about-us/partners/travelbrands.webp',
       },
       {
         name: 'AGW',
-        logo: '/images/partners/agw.webp',
+        logo: '/images/pages/about-us/partners/agw.webp',
       },
       {
         name: 'Aeronology',
-        logo: '/images/partners/aeronology.webp',
+        logo: '/images/pages/about-us/partners/Aeronology.webp',
       },
       {
         name: 'Flight Network',
-        logo: '/images/partners/flight-network.webp',
+        logo: '/images/pages/about-us/partners/flight-network.webp',
       },
       {
         name: 'Bonotel',
-        logo: '/images/partners/bonotel.webp',
+        logo: '/images/pages/about-us/partners/bonotel.webp',
       },
       {
         name: 'Travolutionary',
-        logo: '/images/partners/travolutionary.webp',
+        logo: '/images/pages/about-us/partners/travolutionary.webp',
       },
       {
         name: 'Softvoyage',
-        logo: '/images/partners/softvoyage.webp',
+        logo: '/images/pages/about-us/partners/softvoyage.webp',
       },
       {
         name: 'Sirev',
-        logo: '/images/partners/sirev.webp',
+        logo: '/images/pages/about-us/partners/sirev.webp',
       },
       {
         name: 'Express Travel Group',
-        logo: '/images/partners/express.webp',
+        logo: '/images/pages/about-us/partners/expressTravelGroup.webp',
       },
     ],
   },
@@ -154,71 +158,71 @@ const partnerSections: PartnersSectionModel[] = [
     partners: [
       {
         name: 'Clover',
-        logo: '/images/partners/clover.webp',
+        logo: '/images/pages/about-us/partners/clover.webp',
       },
       {
         name: 'Nuvei',
-        logo: '/images/partners/nuvei.webp',
+        logo: '/images/pages/about-us/partners/nuvei.webp',
       },
       {
         name: 'Revolut',
-        logo: '/images/partners/revolut.webp',
+        logo: '/images/pages/about-us/partners/Revolut.webp',
       },
       {
         name: 'TravelPay',
-        logo: '/images/partners/travelpay.webp',
+        logo: '/images/pages/about-us/partners/travelpay.webp',
       },
       {
         name: 'Global Payments',
-        logo: '/images/partners/global-payments.webp',
+        logo: '/images/pages/about-us/partners/GlobalPayments.webp',
       },
       {
         name: 'Payline',
-        logo: '/images/partners/payline.webp',
+        logo: '/images/pages/about-us/partners/PayLine.webp',
       },
       {
         name: 'Exact Payments',
-        logo: '/images/partners/exact.webp',
+        logo: '/images/pages/about-us/partners/Exact.webp',
       },
       {
         name: 'Square',
-        logo: '/images/partners/square.webp',
+        logo: '/images/pages/about-us/partners/Square.webp',
       },
       {
         name: 'Bambora',
-        logo: '/images/partners/bambora.webp',
+        logo: '/images/pages/about-us/partners/Bambora.webp',
       },
       {
         name: 'First Data',
-        logo: '/images/partners/firstdata.webp',
+        logo: '/images/pages/about-us/partners/first-data.webp',
       },
       {
         name: 'Stripe',
-        logo: '/images/partners/stripe.webp',
+        logo: '/images/pages/about-us/partners/stripe.webp',
       },
       {
         name: 'Elavon',
-        logo: '/images/partners/elavon.webp',
+        logo: '/images/pages/about-us/partners/elavon.webp',
       },
       {
         name: 'PsiGate',
-        logo: '/images/partners/psigate.webp',
+        logo: '/images/pages/about-us/partners/psigate.webp',
       },
       {
         name: 'Moneris',
-        logo: '/images/partners/moneris.webp',
+        logo: '/images/pages/about-us/partners/moneris.webp',
       },
       {
         name: 'Chase',
-        logo: '/images/partners/chase.webp',
+        logo: '/images/pages/about-us/partners/chase.webp',
       },
       {
         name: 'PayPal',
-        logo: '/images/partners/paypal.webp',
+        logo: '/images/pages/about-us/partners/paypal.webp',
       },
       {
         name: 'Helcim',
-        logo: '/images/partners/helcim.webp',
+        logo: '/images/pages/about-us/partners/helcim.webp',
       },
     ],
   },
@@ -228,104 +232,137 @@ const partnerSections: PartnersSectionModel[] = [
     partners: [
       {
         name: 'SignatureAPI',
-        logo: '/images/partners/signatureapi.webp',
+        logo: '/images/pages/about-us/partners/signatureApi.webp',
       },
       {
         name: 'InputKit',
-        logo: '/images/partners/inputkit.webp',
+        logo: '/images/pages/about-us/partners/inputkit.webp',
       },
       {
         name: 'Umapped',
-        logo: '/images/partners/umapped.webp',
+        logo: '/images/pages/about-us/partners/umappedl.webp',
       },
       {
         name: 'Portway Systems',
-        logo: '/images/partners/portway.webp',
+        logo: '/images/pages/about-us/partners/portway.webp',
       },
       {
         name: 'Black Sheep Tourism',
-        logo: '/images/partners/blacksheep.webp',
+        logo: '/images/pages/about-us/partners/blacksheepl.webp',
       },
       {
         name: 'PRISM',
-        logo: '/images/partners/prism.webp',
+        logo: '/images/pages/about-us/partners/Prism.webp',
       },
       {
         name: 'TripStax',
-        logo: '/images/partners/tripstax.webp',
+        logo: '/images/pages/about-us/partners/tripStax.webp',
       },
       {
         name: 'mTrip',
-        logo: '/images/partners/mtrip.webp',
+        logo: '/images/pages/about-us/partners/mtrip.webp',
       },
       {
         name: 'Zendesk',
-        logo: '/images/partners/zendesk.webp',
+        logo: '/images/pages/about-us/partners/Zendesk.webp',
       },
     ],
   },
 
   {
-    title: 'Tourism Schools: Software Taught to Students',
+    title: 'Tourism Schools',
     partners: [
       {
         name: 'École Hôtelière de la Capitale',
-        logo: '/images/partners/ecole-hoteliere.webp',
+        logo: '/images/pages/about-us/partners/ecole-capitale.webp',
       },
       {
-        name: 'École des Métiers',
-        logo: '/images/partners/ecole-metiers.webp',
+        name: 'École des Métiers de la Restauration',
+        logo: '/images/pages/about-us/partners/restauration-tourisme.webp',
       },
       {
         name: 'Cégep de Rivière-du-Loup',
-        logo: '/images/partners/riviere-du-loup.webp',
+        logo: '/images/pages/about-us/partners/riviere-du-loup.webp',
       },
       {
-        name: 'Cégep de Sainte-Foy',
-        logo: '/images/partners/sainte-foy.webp',
+        name: 'Cegep St-Félicien',
+        logo: '/images/pages/about-us/partners/st-felicien.webp',
       },
       {
         name: 'Collège Laflèche',
-        logo: '/images/partners/lafleche.webp',
+        logo: '/images/pages/about-us/partners/La-fleche.webp',
       },
       {
         name: 'Collège Mérici',
-        logo: '/images/partners/merici.webp',
+        logo: '/images/pages/about-us/partners/merici.webp',
       },
       {
         name: 'Collège Sigma',
-        logo: '/images/partners/sigma.webp',
+        logo: '/images/pages/about-us/partners/sigma.webp',
       },
       {
         name: 'LaSalle College',
-        logo: '/images/partners/lasalle.webp',
+        logo: '/images/pages/about-us/partners/LaSalle.webp',
       },
       {
         name: 'Collège Montmorency',
-        logo: '/images/partners/montmorency.webp',
+        logo: '/images/pages/about-us/partners/montmorency.webp',
       },
       {
         name: 'Collège April-Fortier',
-        logo: '/images/partners/april-fortier.webp',
+        logo: '/images/pages/about-us/partners/april-fortier.webp',
       },
       {
-        name: 'École de Voyages',
-        logo: '/images/partners/ecole-voyages.webp',
+        name: 'École de voyage de Lanaudière',
+        logo: '/images/pages/about-us/partners/lanaudiere.webp',
       },
     ],
   },
 ];
 
-export default function PartnersPage() {
-  return (
-    <main className="bg-gray-50 py-16">
-      <div className="mx-auto max-w-7xl px-6">
-        <h1 className="mb-16 text-center text-3xl font-bold uppercase tracking-widest text-blue-800">
-          Partners
-        </h1>
+export default async function PartnersPage({
+  params,
+}: {
+  params: Promise<{ locale: Locale }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
 
-        {partnerSections.map((section) => (
-          <PartnersSection key={section.title} {...section} />
+  const homeHref = locale === 'en' ? '/' : `/${locale}`;
+  const aboutPath = locale === 'fr-ca' ? 'a-propos' : 'about-us';
+  const aboutHref = locale === 'en' ? `/${aboutPath}` : `/${locale}/${aboutPath}`;
+
+  const breadcrumbItems: BreadcrumbItem[] = [
+    { label: locale === 'fr-ca' ? 'À Propos' : 'About Us', href: aboutHref },
+    { label: locale === 'fr-ca' ? 'Partenaires' : 'Partners', href: '#' },
+  ];
+
+  return (
+    <main className="bg-gray-50">
+      <section className="overflow-hidden bg-[#015CAA] h-30 md:h-40  text-white">
+        <div className='relative mx-auto max-w-[1600px] h-full'>
+          <Image
+            src="/images/pages/about-us/partners/partnerts-travelworks.webp"
+            alt=""
+            width={600}
+            height={400}
+            className="absolute right-0 top-[-30px] w-200 h-auto"
+          />
+          <div className="relative mx-auto w-full h-full max-w-[1600px] px-4 sm:px-6 lg:px-8">
+            <h1 className="flex items-center h-full text-[2rem] font-light uppercase tracking-[0.06em] sm:text-[2.4rem]">
+              {locale === 'fr-ca' ? 'Partenaires' : 'Partners'}
+            </h1>
+          </div>
+        </div>
+      </section>
+      <Breadcrumb items={breadcrumbItems} homeHref={homeHref} />
+      <div className="mx-auto">
+        {partnerSections.map((section, idx) => (
+          <PartnersSection
+            key={section.title}
+            {...section}
+            bgClass={idx % 2 === 0 ? 'bg-gray-50' : 'bg-gray-100'}
+          />
         ))}
       </div>
     </main>

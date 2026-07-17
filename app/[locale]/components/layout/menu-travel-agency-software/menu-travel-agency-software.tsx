@@ -178,7 +178,7 @@ export default function MenuTravelAgencySoftware() {
   return (
     <div className="relative z-20 hidden border-b border-zinc-600 bg-zinc-800 md:block">
       <div className="mx-auto w-full max-w-7xl px-3 sm:px-6 lg:px-8">
-        <div ref={containerRef} className="relative flex min-h-20 items-center justify-center">
+        <div ref={containerRef} className="relative flex min-h-15 items-center justify-center">
           <div
             className={`flex min-w-0 flex-1 justify-center overflow-hidden ${
               showMore ? 'pr-24' : ''

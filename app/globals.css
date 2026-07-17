@@ -192,3 +192,9 @@ body {
   height: 550px;
   box-shadow: -20px 20px 40px rgba(0, 0, 0, 0.12);
 }
+
+
+
+.animated-gradient {
+background: linear-gradient(44deg, #141414 0%, #2d2d2d 24%, #212121 24%, #262626 46%, #494949 100%);
+}

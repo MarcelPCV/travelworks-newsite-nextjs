@@ -1,16 +1,26 @@
+import TitleSection from '@/app/[locale]/components/ui/title-section';
 import PartnerCard from './partner-card';
 import { PartnersSectionModel } from './types';
 
-export default function PartnersSection({ title, partners }: PartnersSectionModel) {
+export default function PartnersSection({
+  title,
+  partners,
+  bgClass,
+}: PartnersSectionModel & { bgClass?: string }) {
   return (
-    <section className="mb-16">
-      <h2 className="mb-8 text-center text-sm font-semibold uppercase tracking-widest text-blue-700">
-        {title}
-      </h2>
+    <section className={`my-6 py-10 ${bgClass ?? ''}`}>
+      {title && (
+        <TitleSection
+          title={title}
+          alignment="center"
+          size="large"
+          color="text-brand-blue"
+        />
+      )}
 
-      <div className="flex flex-wrap justify-center gap-4">
+      <div className="max-w-[1600px] mx-auto flex flex-wrap justify-center gap-4">
         {partners.map((partner) => (
-          <div key={partner.name} className="basis-[calc(50%-0.5rem)] md:basis-[220px] grow-0">
+          <div key={partner.name} className="basis-[calc(50%-0.5rem)] md:basis-[260px] grow-0">
             <PartnerCard partner={partner} />
           </div>
         ))}
