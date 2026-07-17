@@ -11,7 +11,7 @@ export function Breadcrumb({
 }) {
   return (
     <section
-      className="mx-auto mt-3 mb-3 w-full max-w-[1600px] rounded-md border border-zinc-300 bg-white px-4 py-2 shadow"
+      className="mx-auto mt-3 mb-3 w-full max-w-[1600px] rounded-md border border-zinc-300 bg-white px-4 py-2"
       aria-label="Breadcrumb"
     >
       <nav aria-label="Breadcrumb">
