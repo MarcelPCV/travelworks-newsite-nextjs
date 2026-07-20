@@ -5,6 +5,8 @@ import TextSectionComp from '../../components/shared/text-section-comp/text-sect
 import { getAlternates } from '@/app/lib/SEO/getAlternates';
 import { Metadata } from 'next';
 import { Locale } from 'next-intl';
+import { Breadcrumb } from '../../components/news/breadcrumb';
+import type { BreadcrumbItem } from '@/app/[locale]/news/types';
 
 export async function generateMetadata({
   params,
@@ -29,13 +31,25 @@ export async function generateMetadata({
   };
 }
 
-export default async function Page({ params }: { params: Promise<{ locale: string }> }) {
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ locale: Locale }>;
+}
+) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations('pages.about-us.careers');
+    const homeHref = locale === 'en' ? '/' : `/${locale}`;
+    const breadcrumbItems: BreadcrumbItem[] = [
+      { label: t('breadcrumb.about-us-label'), href: t('breadcrumb.about-us-link') },
+      { label: t('breadcrumb.careers-label'), href: '#' },
+    ];
+  
 
   return (
     <main>
+      <Breadcrumb items={breadcrumbItems} homeHref={homeHref} />
       {TourOnlinePageData.layout.map((layout, index) => {
         switch (layout.blockType) {
           case 'PageHero':

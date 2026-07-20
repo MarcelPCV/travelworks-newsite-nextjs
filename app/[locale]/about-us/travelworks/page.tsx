@@ -8,6 +8,8 @@ import { routeToMessageLocale } from '@/app/[locale]/locale-config';
 import { getAlternates } from '@/app/lib/SEO/getAlternates';
 import { Metadata } from 'next';
 import { Locale } from 'next-intl';
+import { Breadcrumb } from '@/app/[locale]/components/news/breadcrumb';
+import type { BreadcrumbItem } from '@/app/[locale]/news/types';
 
 export async function generateMetadata({
   params,
@@ -39,9 +41,14 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
   const t = await getTranslations('pages.about-us.the-company');
   const messageLocale = routeToMessageLocale[routeLocale] ?? 'en-us';
   const countries = getCountryOptions(messageLocale);
+  const homeHref = locale === 'en' ? '/' : `/${locale}`;
+  const breadcrumbItems: BreadcrumbItem[] = [
+    { label: t('breadcrumb.the-company-label'), href: '#' },
+  ];
 
   return (
     <main>
+            <Breadcrumb items={breadcrumbItems} homeHref={homeHref} />
       {TourOnlinePageData.layout.map((layout, index) => {
         switch (layout.blockType) {
           case 'PageHero':

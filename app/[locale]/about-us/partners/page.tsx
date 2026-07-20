@@ -7,7 +7,7 @@ import type { BreadcrumbItem } from '@/app/[locale]/news/types';
 import { setRequestLocale } from 'next-intl/server';
 import { Metadata } from 'next';
 import { Locale } from 'next-intl';
-import Image from 'next/image';
+import TitleHero from '../../components/shared/title-hero/title-hero';
 
 export async function generateMetadata({
   params,
@@ -327,35 +327,18 @@ export default async function PartnersPage({
 }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations('pages.about-us.partners');
 
   const homeHref = locale === 'en' ? '/' : `/${locale}`;
-  const aboutPath = locale === 'fr-ca' ? 'a-propos' : 'about-us';
-  const aboutHref = locale === 'en' ? `/${aboutPath}` : `/${locale}/${aboutPath}`;
-
   const breadcrumbItems: BreadcrumbItem[] = [
-    { label: locale === 'fr-ca' ? 'À Propos' : 'About Us', href: aboutHref },
-    { label: locale === 'fr-ca' ? 'Partenaires' : 'Partners', href: '#' },
+    { label: t('breadcrumb.about-us-label'), href: t('breadcrumb.about-us-link') },
+    { label: t('breadcrumb.about-us-partners-label'), href: '#' },
   ];
 
   return (
     <main className="bg-gray-50">
-      <section className="overflow-hidden bg-[#015CAA] h-30 md:h-40  text-white">
-        <div className='relative mx-auto max-w-[1600px] h-full'>
-          <Image
-            src="/images/pages/about-us/partners/partnerts-travelworks.webp"
-            alt=""
-            width={600}
-            height={400}
-            className="absolute right-0 top-[-30px] w-200 h-auto"
-          />
-          <div className="relative mx-auto w-full h-full max-w-[1600px] px-4 sm:px-6 lg:px-8">
-            <h1 className="flex items-center h-full text-[2rem] font-light uppercase tracking-[0.06em] sm:text-[2.4rem]">
-              {locale === 'fr-ca' ? 'Partenaires' : 'Partners'}
-            </h1>
-          </div>
-        </div>
-      </section>
       <Breadcrumb items={breadcrumbItems} homeHref={homeHref} />
+      <TitleHero title={t('title-hero.title')} />
       <div className="mx-auto">
         {partnerSections.map((section, idx) => (
           <PartnersSection

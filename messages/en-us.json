@@ -263,6 +263,9 @@
     },
     "travel-agency-software": {
       "features": {
+        "breadcrumb": {
+          "features-label": "Features"
+        },
         "block-type-page-hero": {
           "title": "Travelworks",
           "description": "State of the art technology solutions for travel agencies and tour operators.",
@@ -424,7 +427,19 @@
           }
         }
       },
+      "benefits": {
+        "breadcrumb": {
+          "features-label": "The Solution",
+          "features-link": "/travel-agency-software/features",
+          "benefits-label": "Benefits"
+        }
+      },
       "back-office-travel-agency": {
+        "breadcrumb": {
+          "about-us-label": "The Solution",
+          "about-us-link": "/travel-agency-software/features",
+          "back-office-label": "BackOffice System"
+        },
         "block-type-page-hero": {
           "title": "ACCOUNTING AND INVOICING",
           "description": "Create standardized & professional invoices. Efficiently automate your operations and maintain reliable accounting",
@@ -850,6 +865,11 @@
         }
       },
       "trip-details": {
+        "breadcrumb": {
+          "features-label": "The Solution",
+          "features-link": "/travel-agency-software/features",
+          "trip-details-label": "Trip Details"
+        },
         "block-type-page-hero": {
           "title": "",
           "description": "Introducing TravelWorks' Trip-Itinerary Software, designed to connect your clients with the adventure",
@@ -942,6 +962,9 @@
     },
     "training": {
       "knowledge-base": {
+        "breadcrumb": {
+          "knowledge-base-label": "Knowledge Base"
+        },
         "block-type-page-hero": {
           "title": "Knowledge Base",
           "description": "Find all the resources you need to master TravelWorks and make the most of our software.",
@@ -1030,6 +1053,9 @@
         }
       },
       "training-platform": {
+        "breadcrumb": {
+          "training-platform-label": "Training Platform"
+        },
         "block-type-page-hero": {
           "title": "Training Platform",
           "description": "Unlock the full potential of TravelWorks",
@@ -1152,6 +1178,9 @@
     },
     "about-us": {
       "the-company": {
+        "breadcrumb": {
+          "the-company-label": "Travelworks"
+        },
         "block-type-page-hero": {
           "title": "About TravelWorks",
           "description": "Cutting-edge technology at the service of the travel industry",
@@ -1179,7 +1208,22 @@
           }
         }
       },
+      "partners": {
+        "title-hero": {
+          "title": "Partners"
+        },
+        "breadcrumb": {
+          "about-us-label": "About Us",
+          "about-us-link": "/about-us/travelworks",
+          "about-us-partners-label": "Partners"
+        }
+      },
       "careers": {
+        "breadcrumb": {
+          "about-us-label": "About Us",
+          "about-us-link": "/about-us/travelworks",
+          "careers-label": "Careers"
+        },
         "block-type-page-hero": {
           "title": "Careers",
           "description": "For technological challenges within the exciting travel industry!",
@@ -1192,8 +1236,20 @@
           "description": "<p>The TravelWorks team is constantly seeking <strong>new valuable candidates</strong>. A career with us means working with a <strong>dynamic and energetic team</strong>, experienced in the <strong>fields of technology and travel</strong>.</p><p> We are aware that the success of our company depends on the success of our employees. We therefore provide the most favourable conditions in order to create a <strong>pleasant and inspiring work environment</strong>: spacious downtown offices, relaxed family atmosphere, ad hoc group activities among employees. The qualities required to succeed within our company are initiative, the <strong>ability to work in a team</strong> and the <strong>ambition to constantly improve</strong>.</p><p> Employees with such qualities will have an excellent opportunity to build a flourishing career within our company. Send us your application at <strong><a>career@travelworkssolution.com</a></strong></p>"
         }
       },
+      "clients": {
+        "breadcrumb": {
+          "about-us-label": "About Us",
+          "about-us-link": "/about-us/travelworks",
+          "clients-label": "Clients"
+        }
+      },
       "contact": {
-        "hero": {
+        "breadcrumb": {
+          "about-us-label": "About Us",
+          "about-us-link": "/about-us/travelworks",
+          "contact-label": "Contact"
+        },
+        "title-hero": {
           "title": "Contact"
         },
         "form": {

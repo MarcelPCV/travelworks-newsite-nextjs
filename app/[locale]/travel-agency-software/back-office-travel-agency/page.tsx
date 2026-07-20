@@ -11,6 +11,8 @@ import { FeaturesCardsHighlights } from '../../components/features/type';
 import { getAlternates } from '@/app/lib/SEO/getAlternates';
 import { Metadata } from 'next';
 import { Locale } from 'next-intl';
+import { BreadcrumbItem } from '../../news/types';
+import { Breadcrumb } from '../../components/news/breadcrumb';
 
 export async function generateMetadata({
   params,
@@ -40,8 +42,15 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
   setRequestLocale(locale);
   const t = await getTranslations('pages.travel-agency-software.back-office-travel-agency');
 
+  const homeHref = locale === 'en' ? '/' : `/${locale}`;
+  const breadcrumbItems: BreadcrumbItem[] = [
+    { label: t('breadcrumb.about-us-label'), href: t('breadcrumb.about-us-link') },
+    { label: t('breadcrumb.back-office-label'), href: '#' },
+  ];
+  
   return (
     <main>
+      <Breadcrumb items={breadcrumbItems} homeHref={homeHref} />
       {BackOfficeTravelAgencyPage.layout.map((layout, index) => {
         switch (layout.blockType) {
           case 'PageHero':

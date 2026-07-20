@@ -263,6 +263,9 @@
     },
     "travel-agency-software": {
       "features": {
+        "breadcrumb": {
+          "features-label": "Fonctionnalités"
+        },
         "block-type-page-hero": {
           "title": "PcVoyages",
           "description": "Des solutions technologiques de pointe pour les agences de voyages et les voyagistes.",
@@ -424,7 +427,19 @@
           }
         }
       },
+      "benefits": {
+        "breadcrumb": {
+          "features-label": "La solution",
+          "features-link": "/fr-ca/logiciel-agence-voyage/fonctionnalites",
+          "benefits-label": "Avantages"
+        }
+      },
       "back-office-travel-agency": {
+        "breadcrumb": {
+          "about-us-label": "La solution",
+          "about-us-link": "/fr-ca/logiciel-agence-voyage/fonctionnalites",
+          "back-office-label": "Système BackOffice"
+        },
         "block-type-page-hero": {
           "title": "COMPTABILITÉ ET FACTURATION",
           "description": "Créez des factures standardisées et professionnelles. Automatisez efficacement vos opérations et maintenez une comptabilité fiable.",
@@ -849,6 +864,11 @@
         }
       },
       "trip-details": {
+        "breadcrumb": {
+          "features-label": "La solution",
+          "features-link": "/fr-ca/logiciel-agence-voyage/fonctionnalites",
+          "trip-details-label": "Détails du voyage"
+        },
         "block-type-page-hero": {
           "title": "",
           "description": "Découvrez le logiciel Trip Details de TravelWorks, conçu pour connecter vos clients à l'aventure.",
@@ -941,6 +961,9 @@
     },
     "training": {
       "knowledge-base": {
+        "breadcrumb": {
+          "knowledge-base-label": "Base de connaissances"
+        },
         "block-type-page-hero": {
           "title": "Base de connaissances",
           "description": "Trouvez toutes les ressources dont vous avez besoin pour maîtriser TravelWorks et tirer le meilleur parti de notre logiciel.",
@@ -1029,6 +1052,9 @@
         }
       },
       "training-platform": {
+        "breadcrumb": {
+          "training-platform-label": "Plateforme de formation"
+        },
         "block-type-page-hero": {
           "title": "Plateforme de formation",
           "description": "Exploitez tout le potentiel de TravelWorks",
@@ -1151,6 +1177,9 @@
     },
     "about-us": {
       "the-company": {
+        "breadcrumb": {
+          "the-company-label": "PcVoyages"
+        },
         "block-type-page-hero": {
           "title": "À propos de TravelWorks",
           "description": "Une technologie de pointe au service de l'industrie du voyage",
@@ -1178,7 +1207,22 @@
           }
         }
       },
+      "partners": {
+        "title-hero": {
+          "title": "Partenaires"
+        },
+        "breadcrumb": {
+          "about-us-label": "À Propos",
+          "about-us-link": "/fr-ca/a-propos/pc-voyages",
+          "about-us-partners-label": "Partenaires"
+        }
+      },
       "careers": {
+        "breadcrumb": {
+          "about-us-label": "À Propos",
+          "about-us-link": "/fr-ca/a-propos/pc-voyages",
+          "careers-label": "Carrières"
+        },
         "block-type-page-hero": {
           "title": "Carrières",
           "description": "Pour relever des défis technologiques au cœur de la passionnante industrie du voyage !",
@@ -1191,8 +1235,20 @@
           "description": "<p>L'équipe de TravelWorks est constamment à la recherche de <strong>nouveaux talents</strong>. Faire carrière chez nous, c'est évoluer au sein d'une <strong>équipe dynamique et énergique</strong>, expérimentée dans les <strong>domaines de la technologie et du voyage</strong>.</p><p>Nous sommes convaincus que le succès de notre entreprise repose sur celui de nos employés. C'est pourquoi nous offrons les meilleures conditions afin de créer un <strong>environnement de travail agréable et inspirant</strong> : de spacieux bureaux au centre-ville, une ambiance familiale et détendue, ainsi que diverses activités de groupe entre collègues. Les qualités essentielles pour réussir chez nous sont l'initiative, la <strong>capacité à travailler en équipe</strong> et <strong>la volonté de toujours s'améliorer</strong>.</p><p>Les personnes possédant ces qualités auront une excellente occasion de bâtir une carrière florissante au sein de notre entreprise. Faites-nous parvenir votre candidature à <strong><a>career@travelworkssolution.com</a></strong>.</p>"
         }
       },
+      "clients": {
+        "breadcrumb": {
+          "about-us-label": "À Propos",
+          "about-us-link": "/fr-ca/a-propos/pc-voyages",
+          "clients-label": "Clients"
+        }
+      },
       "contact": {
-        "hero": {
+        "breadcrumb": {
+          "about-us-label": "À Propos",
+          "about-us-link": "/fr-ca/a-propos/pc-voyages",
+          "contact-label": "Contact"
+        },
+        "title-hero": {
           "title": "Contact"
         },
         "form": {

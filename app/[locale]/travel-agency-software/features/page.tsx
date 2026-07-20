@@ -14,6 +14,8 @@ import {
 import { getAlternates } from '@/app/lib/SEO/getAlternates';
 import { Metadata } from 'next';
 import { Locale } from 'next-intl';
+import { Breadcrumb } from '@/app/[locale]/components/news/breadcrumb';
+import type { BreadcrumbItem } from '@/app/[locale]/news/types';
 
 export async function generateMetadata({
   params,
@@ -42,8 +44,15 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations('pages.travel-agency-software.features');
+
+  const homeHref = locale === 'en' ? '/' : `/${locale}`;
+  const breadcrumbItems: BreadcrumbItem[] = [
+    { label: t('breadcrumb.features-label'), href: '#' },
+  ];
+
   return (
     <main>
+      <Breadcrumb items={breadcrumbItems} homeHref={homeHref} />
       {FeaturesPage.layout.map((layout, index) => {
         switch (layout.blockType) {
           case 'PageHero':

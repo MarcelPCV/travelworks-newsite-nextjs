@@ -6,6 +6,9 @@ import { getAlternates } from '@/app/lib/SEO/getAlternates';
 import { Metadata } from 'next';
 import { Locale } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
+import { Breadcrumb } from '@/app/[locale]/components/news/breadcrumb';
+import type { BreadcrumbItem } from '@/app/[locale]/news/types';
+
 
 export async function generateMetadata({
   params,
@@ -192,9 +195,22 @@ export const clientsPageData = {
   ],
 };
 
-export default function ClientsPage() {
+export default async function ClientsPage({
+  params,
+}: {
+  params: Promise<{ locale: Locale }>;
+}) {
+  const { locale } = await params;
+  const homeHref = locale === 'en' ? '/' : `/${locale}`;
+  const t = await getTranslations('pages.about-us.clients');
+  const breadcrumbItems: BreadcrumbItem[] = [
+    { label: t('breadcrumb.about-us-label'), href: t('breadcrumb.about-us-link') },
+    { label: t('breadcrumb.clients-label'), href: '#' },
+  ];
   return (
     <>
+      <Breadcrumb items={breadcrumbItems} homeHref={homeHref} />
+
       <ClientsHero title={clientsPageData.hero.title} subtitle={clientsPageData.hero.subtitle} />
 
       <ClientsLogoMarquee clients={clientsPageData.clients} />

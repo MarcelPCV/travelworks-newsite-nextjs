@@ -7,6 +7,8 @@ import ShareItems from '../../components/trip-details/share-items/share-items';
 import { getAlternates } from '@/app/lib/SEO/getAlternates';
 import { Metadata } from 'next';
 import { Locale } from 'next-intl';
+import { Breadcrumb } from '../../components/news/breadcrumb';
+import type { BreadcrumbItem } from '@/app/[locale]/news/types';
 
 export async function generateMetadata({
   params,
@@ -36,8 +38,15 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
   setRequestLocale(locale);
   const t = await getTranslations('pages.travel-agency-software.trip-details');
 
+  const homeHref = locale === 'en' ? '/' : `/${locale}`;
+  const breadcrumbItems: BreadcrumbItem[] = [
+    { label: t('breadcrumb.features-label'), href: t('breadcrumb.features-link') },
+    { label: t('breadcrumb.trip-details-label'), href: '#' },
+  ];
+
   return (
     <main>
+      <Breadcrumb items={breadcrumbItems} homeHref={homeHref} />
       {IntegrationsPageData.layout.map((layout, index) => {
         switch (layout.blockType) {
           case 'PageHero':

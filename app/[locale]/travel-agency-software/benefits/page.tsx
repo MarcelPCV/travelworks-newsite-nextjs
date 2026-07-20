@@ -4,6 +4,8 @@ import { Cloud, Zap, BarChart3, Shield, Lightbulb, BadgeCheck, Rocket } from 'lu
 import { getAlternates } from '@/app/lib/SEO/getAlternates';
 import { Metadata } from 'next';
 import { Locale } from 'next-intl';
+import { Breadcrumb } from '../../components/news/breadcrumb';
+import type { BreadcrumbItem } from '@/app/[locale]/news/types';
 
 export async function generateMetadata({
   params,
@@ -28,7 +30,11 @@ export async function generateMetadata({
   };
 }
 
-export default function TravelWorksFeatures() {
+export default async function TravelWorksFeatures({
+  params,
+}: {
+  params: Promise<{ locale: Locale }>;
+}) {
   const sections = [
     {
       id: 'cloud',
@@ -156,8 +162,18 @@ export default function TravelWorksFeatures() {
     },
   ];
 
+  const {locale } = await params;
+  const homeHref = locale === 'en' ? '/' : `/${locale}`;
+  const t = await getTranslations('pages.travel-agency-software.benefits');
+
+  const breadcrumbItems: BreadcrumbItem[] = [
+    { label: t('breadcrumb.features-label'), href: t('breadcrumb.features-link') },
+    { label: t('breadcrumb.benefits-label'), href: '#' },
+  ];
+
   return (
     <div className="scroll-smooth">
+      <Breadcrumb items={breadcrumbItems} homeHref={homeHref} />
       {/* Hero */}
       <section className="bg-[#005ea8] text-white">
         <div className="mx-auto max-w-7xl px-6 py-16">

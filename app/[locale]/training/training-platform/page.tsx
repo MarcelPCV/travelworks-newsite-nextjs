@@ -9,6 +9,8 @@ import InfoCards from '../../components/pages-elements/info-cards/info-cards';
 import { getAlternates } from '@/app/lib/SEO/getAlternates';
 import { Metadata } from 'next';
 import { Locale } from 'next-intl';
+import { Breadcrumb } from '../../components/news/breadcrumb';
+import type { BreadcrumbItem } from '@/app/[locale]/news/types';
 
 export async function generateMetadata({
   params,
@@ -38,8 +40,14 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
   setRequestLocale(locale);
   const t = await getTranslations('pages.training.training-platform');
 
+  const homeHref = locale === 'en' ? '/' : `/${locale}`;
+  const breadcrumbItems: BreadcrumbItem[] = [
+    { label: t('breadcrumb.training-platform-label'), href: '#' },
+  ];
+
   return (
     <main>
+      <Breadcrumb items={breadcrumbItems} homeHref={homeHref} />
       {IntegrationsPageData.layout.map((layout, index) => {
         switch (layout.blockType) {
           case 'PageHero':
