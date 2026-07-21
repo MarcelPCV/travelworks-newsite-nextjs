@@ -31,21 +31,15 @@ export async function generateMetadata({
   };
 }
 
-export default async function Page({
-  params,
-}: {
-  params: Promise<{ locale: Locale }>;
-}
-) {
+export default async function Page({ params }: { params: Promise<{ locale: Locale }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations('pages.about-us.careers');
-    const homeHref = locale === 'en' ? '/' : `/${locale}`;
-    const breadcrumbItems: BreadcrumbItem[] = [
-      { label: t('breadcrumb.about-us-label'), href: t('breadcrumb.about-us-link') },
-      { label: t('breadcrumb.careers-label'), href: '#' },
-    ];
-  
+  const homeHref = locale === 'en' ? '/' : `/${locale}`;
+  const breadcrumbItems: BreadcrumbItem[] = [
+    { label: t('breadcrumb.about-us-label'), href: t('breadcrumb.about-us-link') },
+    { label: t('breadcrumb.careers-label'), href: '#' },
+  ];
 
   return (
     <main>
@@ -57,8 +51,24 @@ export default async function Page({
               <PageHero
                 key={index}
                 {...layout}
-                title={layout.title ? t(layout.title) : ''}
-                description={layout.description ? t(layout.description) : ''}
+                title={
+                  layout.title
+                    ? t.rich(layout.title as string, {
+                        strong: (chunks) => (
+                          <strong className="font-semibold text-brand-blue">{chunks}</strong>
+                        ),
+                      })
+                    : ''
+                }
+                description={
+                  layout.description
+                    ? t.rich(layout.description as string, {
+                        strong: (chunks) => (
+                          <strong className="font-semibold text-brand-blue">{chunks}</strong>
+                        ),
+                      })
+                    : ''
+                }
                 mobileTopImageSrc={layout.mobileTopImageSrc ? t(layout.mobileTopImageSrc) : ''}
                 desktopMainImageSrc={
                   layout.desktopMainImageSrc ? t(layout.desktopMainImageSrc) : ''

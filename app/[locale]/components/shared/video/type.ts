@@ -1,8 +1,10 @@
+import { ReactNode } from 'react';
+
 export type YoutubeVideoModel = {
   blockType: 'YoutubeVideo';
-  heading?: string;
+  heading?: ReactNode;
   videoId?: string;
   channelLabel?: string;
   className?: string;
-  description?: string;
+  description?: ReactNode;
 };

@@ -17,9 +17,7 @@ export default function PartnerCard({ partner }: Props) {
         />
       </div>
 
-      <span className="mt-5 text-center text-md text-gray-800">
-        {partner.name}
-      </span>
+      <span className="mt-5 text-center text-md text-gray-800">{partner.name}</span>
     </div>
   );
 }

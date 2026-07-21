@@ -9,9 +9,11 @@ export type ComparisonSolutionRow = {
   values: Record<string, boolean>;
 };
 
+import { ReactNode } from 'react';
+
 export type ComparisonSolution = {
   blockType: 'ComparisonSolution';
-  heading?: string;
+  heading?: ReactNode;
   imageSrc?: string;
   imageAlt?: string;
   columns?: ComparisonColumn[];

@@ -233,7 +233,7 @@ export default function MenuTravelAgencySoftware() {
               <div
                 role="menu"
                 aria-hidden={!isMoreOpen}
-                className={`absolute right-0 top-full z-50 mt-2 w-72 rounded-lg border border-zinc-600 bg-zinc-900 p-2 shadow-xl transition duration-150 ${
+                className={`absolute right-0 top-full z-50 mt-2 w-72 max-w-[calc(100vw-1rem)] rounded-lg border border-zinc-600 bg-zinc-900 p-2 shadow-xl transition duration-150 ${
                   isMoreOpen ? 'visible opacity-100' : 'pointer-events-none invisible opacity-0'
                 }`}
               >
@@ -269,10 +269,7 @@ export default function MenuTravelAgencySoftware() {
         </div>
       </div>
 
-      <div
-        className="pointer-events-none absolute left-[-9999px] top-0 opacity-0"
-        aria-hidden="true"
-      >
+      <div className="pointer-events-none fixed left-0 top-0 -z-10 opacity-0" aria-hidden="true">
         <div className="flex items-center gap-2">
           {items.map((item) => {
             const Icon = item.icon;

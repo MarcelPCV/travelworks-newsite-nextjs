@@ -4,12 +4,9 @@ import React, { ReactNode } from 'react';
 import { ArrowUp } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import {
-  DEFAULT_ROUTE_LOCALE,
-  localeOptions,
-} from '@/app/[locale]/locale-config';
+import { DEFAULT_ROUTE_LOCALE, localeOptions } from '@/app/[locale]/locale-config';
 import { useLocale } from 'next-intl';
-import {useTranslations} from 'next-intl';
+import { useTranslations } from 'next-intl';
 import { Mail, Phone } from 'lucide-react';
 
 type SocialLinks = {
@@ -66,8 +63,6 @@ export default function ContactBarSection({
     homeHrefByRouteLocale[currentRouteLocale] ??
     (currentRouteLocale === DEFAULT_ROUTE_LOCALE ? '/' : `/${currentRouteLocale}`);
 
-  
-
   return (
     <section className={rootClassName} aria-labelledby="contact-bar-heading">
       <div className="mx-auto max-w-7xl flex flex-col items-center gap-3 sm:flex-row sm:items-center sm:justify-between">
@@ -98,11 +93,9 @@ export default function ContactBarSection({
 
         <address className="not-italic text-center sm:text-left">
           <div className="text-lg text-neutral-700">
-            <div className="mr-2">
-              {title}
-            </div>
+            <div className="mr-2">{title}</div>
 
-            {phone && 
+            {phone && (
               <div className="flex items-center justify-center gap-2 sm:justify-start">
                 <span className="mr-2">
                   <Phone className="h-5 w-5 text-amber-600" />
@@ -114,8 +107,8 @@ export default function ContactBarSection({
                   {phone}
                 </a>
               </div>
-            }
-            {phone2 && 
+            )}
+            {phone2 && (
               <div className="flex items-center justify-center gap-2 sm:justify-start">
                 <span className="mr-2">
                   <Phone className="h-5 w-5 text-amber-600" />
@@ -127,13 +120,13 @@ export default function ContactBarSection({
                   {phone2}
                 </a>
               </div>
-            }
+            )}
           </div>
           <div className="flex items-center justify-center gap-2 sm:justify-start">
             <span className="mr-2">
               <Mail className="h-5 w-5 text-amber-600" />
             </span>
-            <a 
+            <a
               href={`mailto:${email}`}
               className="text-md font-semibold text-brand-blue hover:underline"
             >

@@ -28,6 +28,7 @@ const defaultCards: FeatureMasonryCard[] = [
     id: 'reservation-management',
     title: 'block-type-features-masonry.reservation-management.title',
     topLinkLabel: 'block-type-features-masonry.reservation-management.topLinkLabel',
+    topLinkHref: 'block-type-features-masonry.reservation-management.topLinkHref',
     hasPreview: true,
     items: [
       'block-type-features-masonry.reservation-management.items.0',
@@ -57,7 +58,7 @@ const defaultCards: FeatureMasonryCard[] = [
       'block-type-features-masonry.crm-marketing.items.2',
     ],
     ctaLabel: 'block-type-features-masonry.crm-marketing.ctaLabel',
-    ctaHref: '#',
+    ctaHref: 'block-type-features-masonry.crm-marketing.ctaHref',
   },
   {
     id: 'accounting',
@@ -71,7 +72,7 @@ const defaultCards: FeatureMasonryCard[] = [
       'block-type-features-masonry.accounting.items.4',
     ],
     ctaLabel: 'block-type-features-masonry.accounting.ctaLabel',
-    ctaHref: '#',
+    ctaHref: 'block-type-features-masonry.accounting.ctaHref',
   },
   {
     id: 'invoicing',
@@ -85,7 +86,7 @@ const defaultCards: FeatureMasonryCard[] = [
       'block-type-features-masonry.invoicing.items.4',
     ],
     ctaLabel: 'block-type-features-masonry.invoicing.ctaLabel',
-    ctaHref: '#',
+    ctaHref: 'block-type-features-masonry.invoicing.ctaHref',
   },
   {
     id: 'tour-management',
@@ -98,7 +99,7 @@ const defaultCards: FeatureMasonryCard[] = [
       'block-type-features-masonry.tour-management.items.3',
     ],
     ctaLabel: 'block-type-features-masonry.tour-management.ctaLabel',
-    ctaHref: '#',
+    ctaHref: 'block-type-features-masonry.tour-management.ctaHref',
   },
 ];
 
@@ -239,13 +240,6 @@ const defaultRows: ComparisonSolutionRow[] = [
 
 export const FeaturesPage: Page = {
   slug: 'travel-agency-software/features',
-
-  //   seo: {
-  //     titleKey: "travel-agency-software.features.seo.title",
-  //     descriptionKey: "travel-agency-software.features.seo.description",
-  //       "travel-agency-software.features.seo.description",
-  //   },
-
   layout: [
     {
       blockType: 'PageHero',

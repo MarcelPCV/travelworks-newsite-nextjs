@@ -162,7 +162,7 @@ export default async function TravelWorksFeatures({
     },
   ];
 
-  const {locale } = await params;
+  const { locale } = await params;
   const homeHref = locale === 'en' ? '/' : `/${locale}`;
   const t = await getTranslations('pages.travel-agency-software.benefits');
 

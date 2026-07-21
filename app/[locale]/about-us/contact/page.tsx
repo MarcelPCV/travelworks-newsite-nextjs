@@ -31,11 +31,7 @@ export async function generateMetadata({
   };
 }
 
-export default async function Page({
-  params,
-}: {
-  params: Promise<{ locale: Locale }>;
-}) {
+export default async function Page({ params }: { params: Promise<{ locale: Locale }> }) {
   const { locale: routeLocale, locale } = await params;
   setRequestLocale(routeLocale);
   const t = await getTranslations('pages.about-us.contact');

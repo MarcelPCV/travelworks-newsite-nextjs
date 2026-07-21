@@ -47,7 +47,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
     { label: t('breadcrumb.about-us-label'), href: t('breadcrumb.about-us-link') },
     { label: t('breadcrumb.back-office-label'), href: '#' },
   ];
-  
+
   return (
     <main>
       <Breadcrumb items={breadcrumbItems} homeHref={homeHref} />
@@ -58,8 +58,12 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
               <PageHero
                 key={index}
                 {...layout}
-                title={layout.title ? t(layout.title) : ''}
-                description={layout.description ? t(layout.description) : ''}
+                title={typeof layout.title === 'string' ? t(layout.title) : (layout.title ?? '')}
+                description={
+                  typeof layout.description === 'string'
+                    ? t(layout.description)
+                    : (layout.description ?? '')
+                }
                 mobileTopImageSrc={layout.mobileTopImageSrc ? t(layout.mobileTopImageSrc) : ''}
                 desktopMainImageSrc={
                   layout.desktopMainImageSrc ? t(layout.desktopMainImageSrc) : ''
@@ -73,7 +77,15 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
               <SplitSection
                 key={index}
                 {...layout}
-                heading={typeof layout.heading === 'string' ? t(layout.heading) : ''}
+                heading={
+                  typeof layout.heading === 'string'
+                    ? t.rich(layout.heading, {
+                        strong: (chunks) => (
+                          <div className="font-semibold text-brand-blue">{chunks}</div>
+                        ),
+                      })
+                    : ''
+                }
                 description={typeof layout.description === 'string' ? t(layout.description) : ''}
                 imageSrc={typeof layout.imageSrc === 'string' ? t(layout.imageSrc) : ''}
                 imageAlt={typeof layout.imageAlt === 'string' ? t(layout.imageAlt) : ''}
@@ -94,30 +106,31 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
               ...card,
               title: t(card.title),
               topLinkLabel: card.topLinkLabel ? t(card.topLinkLabel) : undefined,
+              topLinkHref: card.topLinkHref ? t(card.topLinkHref) : undefined,
               items: card.items.map((item) => t(item)),
               ctaLabel: card.ctaLabel ? t(card.ctaLabel) : undefined,
             }));
 
             return (
-              <div key={index} className="mx-auto max-w-7xl flex flex-col lg:flex-row gap-10 mt-10">
-                <FeaturesMasonrySection
-                  heading={t('block-type-features-masonry.heading')}
-                  cards={translatedCards}
-                />
-                <div className="hidden lg:block">
-                  <SecurityBannerCard />
-                </div>
-              </div>
+              <FeaturesMasonrySection
+                key={index}
+                heading={t('block-type-features-masonry.heading')}
+                cards={translatedCards}
+              />
             );
           case 'YoutubeVideo':
             return (
               <YoutubeVideoSection
                 key={index}
                 {...layout}
-                heading={layout.heading ? t(layout.heading) : ''}
-                videoId={layout.videoId ? t(layout.videoId) : ''}
-                channelLabel={layout.channelLabel ? t(layout.channelLabel) : ''}
-                description={layout.description ? t(layout.description) : ''}
+                heading={typeof layout.heading === 'string' ? t(layout.heading) : ''}
+                videoId={typeof layout.videoId === 'string' ? t(layout.videoId) : ''}
+                channelLabel={typeof layout.channelLabel === 'string' ? t(layout.channelLabel) : ''}
+                description={
+                  typeof layout.description === 'string'
+                    ? t(layout.description)
+                    : (layout.description ?? '')
+                }
               />
             );
           default:

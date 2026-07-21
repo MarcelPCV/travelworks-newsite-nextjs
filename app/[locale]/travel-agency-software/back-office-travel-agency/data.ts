@@ -104,7 +104,7 @@ const defaultCards: FeatureMasonryCard[] = [
       'block-type-features-masonry.pci-compliance.items.1',
     ],
     ctaLabel: 'block-type-features-masonry.pci-compliance.ctaLabel',
-    ctaHref: '#',
+    ctaHref: 'https://www.pcisecuritystandards.org/',
   },
 ];
 

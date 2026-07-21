@@ -320,11 +320,7 @@ const partnerSections: PartnersSectionModel[] = [
   },
 ];
 
-export default async function PartnersPage({
-  params,
-}: {
-  params: Promise<{ locale: Locale }>;
-}) {
+export default async function PartnersPage({ params }: { params: Promise<{ locale: Locale }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations('pages.about-us.partners');

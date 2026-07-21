@@ -4,7 +4,7 @@ export type ImagePosition = 'left' | 'right';
 
 export type SplitSectionModel = {
   blockType: 'SplitSection';
-  heading: string;
+  heading: ReactNode;
   description: ReactNode;
   imageSrc: string;
   imageAlt: string;

@@ -48,7 +48,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
 
   return (
     <main>
-            <Breadcrumb items={breadcrumbItems} homeHref={homeHref} />
+      <Breadcrumb items={breadcrumbItems} homeHref={homeHref} />
       {TourOnlinePageData.layout.map((layout, index) => {
         switch (layout.blockType) {
           case 'PageHero':
@@ -56,8 +56,24 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
               <PageHero
                 key={index}
                 {...layout}
-                title={layout.title ? t(layout.title) : ''}
-                description={layout.description ? t(layout.description) : ''}
+                title={
+                  layout.title
+                    ? t.rich(layout.title as string, {
+                        strong: (chunks) => (
+                          <strong className="font-semibold text-brand-blue">{chunks}</strong>
+                        ),
+                      })
+                    : ''
+                }
+                description={
+                  layout.description
+                    ? t.rich(layout.description as string, {
+                        strong: (chunks) => (
+                          <strong className="font-semibold text-brand-blue">{chunks}</strong>
+                        ),
+                      })
+                    : ''
+                }
                 mobileTopImageSrc={layout.mobileTopImageSrc ? t(layout.mobileTopImageSrc) : ''}
                 desktopMainImageSrc={
                   layout.desktopMainImageSrc ? t(layout.desktopMainImageSrc) : ''

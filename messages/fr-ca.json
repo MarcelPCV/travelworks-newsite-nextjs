@@ -285,6 +285,7 @@
           "reservation-management": {
             "title": "Gestion des réservations",
             "topLinkLabel": "Cliquez ici et découvrez SIREV : le moteur de réservation en ligne",
+            "topLinkHref": "/fr-ca/sirev",
             "items": {
               "0": "Gestion des comptes corporatifs",
               "1": "Gestion des groupes de passagers",
@@ -309,7 +310,7 @@
               "2": "Application mobile avec détails d’itinéraire, cartes et contenu de destination"
             },
             "ctaLabel": "Fonctionnalités CRM",
-            "ctaHref": "#"
+            "ctaHref": "/fr-ca/logiciel-agence-voyage/outils-crm"
           },
           "accounting": {
             "title": "Comptabilité",
@@ -321,7 +322,7 @@
               "4": "Rapports"
             },
             "ctaLabel": "Fonctionnalités comptables",
-            "ctaHref": "#"
+            "ctaHref": "/fr-ca/logiciel-agence-voyage/back-office-agence-voyage"
           },
           "invoicing": {
             "title": "Facturation",
@@ -333,7 +334,7 @@
               "4": "Génération de chèques en lot"
             },
             "ctaLabel": "Fonctionnalités de facturation",
-            "ctaHref": "#"
+            "ctaHref": "/fr-ca/logiciel-agence-voyage/back-office-agence-voyage"
           },
           "tour-management": {
             "title": "Gestion des voyages",
@@ -344,11 +345,11 @@
               "3": "Suivi automatisé des paiements"
             },
             "ctaLabel": "Fonctionnalités de gestion des voyages",
-            "ctaHref": "#"
+            "ctaHref": "/fr-ca/logiciel-agence-voyage/gestion-des-tours"
           }
         },
         "block-type-youtube-video": {
-          "heading": "Découvrez notre dernière histoire de réussite client",
+          "heading": "Boostez l'efficacité de votre agence de voyages !",
           "videoId": "qG8LDdvA6TE",
           "channelLabel": "Vitrine Travelworks",
           "description": "Cette vidéo met en lumière notre travail avec Acme Corp, démontrant l'efficacité de notre plateforme en temps réel."
@@ -473,7 +474,7 @@
           }
         },
         "block-type-features-masonry": {
-          "heading": "La comptabilité d’une agence de voyages comporte des exigences très spécifiques. Notre système a été conçu pour toutes les couvrir.",
+          "heading": "Toute la comptabilité des agences de voyages, réunie dans un seul système",
           "passenger-groups": {
             "title": "GROUPES DE PASSAGERS",
             "topLinkLabel": "",
@@ -497,8 +498,8 @@
               "1": "TravelWorks génère de multiples rapports selon différents critères (destination, type de produit, fournisseur, etc.).",
               "2": "Des communications périodiques par courriel contenant des rapports peuvent être configurées selon vos besoins."
             },
-            "ctaLabel": "",
-            "ctaHref": ""
+            "ctaLabel": "Fonctionnalités du rapport",
+            "ctaHref": "/fr-ca/logiciel-agence-voyage/tableau-de-bord-rapports"
           },
           "mobile-solutions": {
             "title": "SOLUTIONS MOBILES",
@@ -508,7 +509,7 @@
               "2": "Des informations utiles qui simplifient leur voyage et améliorent leur expérience sur place."
             },
             "ctaLabel": "Découvrir Trip n'Touch",
-            "ctaHref": "#"
+            "ctaHref": "fr-ca/logiciel-agence-voyage/trip-n-trouch"
           },
           "travel-agents-commissions": {
             "title": "COMMISSIONS DES CONSEILLERS EN VOYAGES",
@@ -549,13 +550,18 @@
           }
         },
         "block-type-youtube-video": {
-          "heading": "Découvrez notre plus récente histoire de réussite client",
+          "heading": "Boostez l'efficacité de votre agence de voyages !",
           "videoId": "qG8LDdvA6TE",
           "channelLabel": "Présentation de TravelWorks",
           "description": "Cette vidéo présente notre collaboration avec Acme Corp et démontre l’efficacité de notre plateforme en temps réel."
         }
       },
       "customizations": {
+        "breadcrumb": {
+          "features-label": "La solution",
+          "features-link": "/fr-ca/logiciel-agence-voyage/fonctionnalites",
+          "customizations-label": "Customizations"
+        },
         "block-type-page-hero": {
           "title": "Personnalisations",
           "description": "Nous travaillons avec vous pour répondre à vos besoins",
@@ -578,6 +584,11 @@
         }
       },
       "integrations": {
+        "breadcrumb": {
+          "features-label": "La solution",
+          "features-link": "/fr-ca/logiciel-agence-voyage/fonctionnalites",
+          "integrations-label": "Integrations"
+        },
         "block-type-page-hero": {
           "title": "Intégrer avec d’autres systèmes",
           "description": "Interagissez avec de nombreux partenaires et automatisez vos opérations.",
@@ -617,6 +628,11 @@
         }
       },
       "dashboard-reports": {
+        "breadcrumb": {
+          "features-label": "La solution",
+          "features-link": "/fr-ca/logiciel-agence-voyage/fonctionnalites",
+          "dashboard-label": "Dashboard and Reports"
+        },
         "block-type-page-hero": {
           "title": "Tableau de bord d'activité en temps réel",
           "description": "Un tableau de bord affiche en temps réel à tous les utilisateurs leurs informations clés et les échéances importantes.",
@@ -647,6 +663,11 @@
         }
       },
       "crm": {
+        "breadcrumb": {
+          "features-label": "La solution",
+          "features-link": "/fr-ca/logiciel-agence-voyage/fonctionnalites",
+          "crm-label": "Outils CRM"
+        },
         "block-type-page-hero": {
           "title": "OUTILS CRM POUR UN MARKETING INTÉGRÉ",
           "description": "Gérez les relations avec vos clients et augmentez la fidélité à votre marque",
@@ -692,6 +713,11 @@
         }
       },
       "tour-online": {
+        "breadcrumb": {
+          "features-label": "La solution",
+          "features-link": "/fr-ca/logiciel-agence-voyage/fonctionnalites",
+          "touronline-label": "Tour Online"
+        },
         "block-type-page-hero": {
           "title": "Tour Online",
           "description": "Une solution complète pour les voyagistes et les agences de voyages",
@@ -749,6 +775,11 @@
         }
       },
       "tour-management": {
+        "breadcrumb": {
+          "features-label": "La solution",
+          "features-link": "/fr-ca/logiciel-agence-voyage/fonctionnalites",
+          "tour-management-label": "Tour Management"
+        },
         "block-type-page-hero": {
           "title": "GESTION DES CIRCUITS",
           "description": "Un module conçu pour les voyagistes et les spécialistes de la gestion des voyages.",
@@ -943,6 +974,11 @@
         }
       },
       "trip-n-touch": {
+        "breadcrumb": {
+          "features-label": "La solution",
+          "features-link": "/fr-ca/logiciel-agence-voyage/fonctionnalites",
+          "trip-n-touch-label": "Trip'n Touch"
+        },
         "block-type-page-hero": {
           "title": "Trip'n Touch",
           "description": "Accompagnez vos clients tout au long de leur parcours de voyage",
@@ -1318,7 +1354,7 @@
       }
     }
   },
-    "footer": {
+  "footer": {
     "block-type-contact-bar-section": {
       "title": "Contactez-nous",
       "phone": "1 877 282-4556",

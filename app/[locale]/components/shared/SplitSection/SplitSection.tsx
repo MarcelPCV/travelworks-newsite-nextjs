@@ -26,7 +26,7 @@ export default function SplitSection({
 
   // 2. Define base classes for better separation of concerns
   const rootBaseClasses = [
-    'w-full mx-auto max-w-7xl rounded-[2rem] bg-neutral-background py-5 sm:py-6 lg:py-8',
+    'w-full mx-auto max-w-[1600px] rounded-[2rem] bg-neutral-background py-5 sm:py-6 lg:py-8',
   ].join(' ');
 
   const contentGridClasses = `grid grid-cols-1 gap-5 overflow-hidden rounded-[1.6rem] md:grid-cols-[minmax(0,1.08fr)_minmax(0,0.92fr)] md:gap-0`;

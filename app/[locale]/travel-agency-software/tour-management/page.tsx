@@ -12,6 +12,8 @@ import {
 import { getAlternates } from '@/app/lib/SEO/getAlternates';
 import { Metadata } from 'next';
 import { Locale } from 'next-intl';
+import { Breadcrumb } from '../../components/news/breadcrumb';
+import type { BreadcrumbItem } from '@/app/[locale]/news/types';
 
 export async function generateMetadata({
   params,
@@ -41,8 +43,15 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
   setRequestLocale(locale);
   const t = await getTranslations('pages.travel-agency-software.tour-management');
 
+  const homeHref = locale === 'en' ? '/' : `/${locale}`;
+  const breadcrumbItems: BreadcrumbItem[] = [
+    { label: t('breadcrumb.features-label'), href: t('breadcrumb.features-link') },
+    { label: t('breadcrumb.tour-management-label'), href: '#' },
+  ];
+
   return (
     <main>
+      <Breadcrumb items={breadcrumbItems} homeHref={homeHref} />
       {IntegrationsPageData.layout.map((layout, index) => {
         switch (layout.blockType) {
           case 'PageHero':
@@ -50,8 +59,24 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
               <PageHero
                 key={index}
                 {...layout}
-                title={layout.title ? t(layout.title) : ''}
-                description={layout.description ? t(layout.description) : ''}
+                title={
+                  layout.title
+                    ? t.rich(layout.title as string, {
+                        strong: (chunks) => (
+                          <strong className="font-semibold text-brand-blue">{chunks}</strong>
+                        ),
+                      })
+                    : ''
+                }
+                description={
+                  layout.description
+                    ? t.rich(layout.description as string, {
+                        strong: (chunks) => (
+                          <strong className="font-semibold text-brand-blue">{chunks}</strong>
+                        ),
+                      })
+                    : ''
+                }
                 mobileTopImageSrc={layout.mobileTopImageSrc ? t(layout.mobileTopImageSrc) : ''}
                 desktopMainImageSrc={
                   layout.desktopMainImageSrc ? t(layout.desktopMainImageSrc) : ''
@@ -111,34 +136,42 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
                 ctaLink={typeof layout.ctaLink === 'string' ? t(layout.ctaLink) : ''}
               />
             );
-          case 'ComparisonSolution':
-            const translatedColumns: ComparisonColumn[] = (layout.columns ?? []).map((column) => {
-              try {
-                return { ...column, label: t(column.label) };
-              } catch {
-                return column;
-              }
-            });
-
-            const translatedRows: ComparisonSolutionRow[] = (layout.rows ?? []).map((row) => {
-              try {
-                return { ...row, label: t(row.label) };
-              } catch {
-                return row;
-              }
-            });
-
-            return (
-              <ComparisonSolutionSection
-                key={index}
-                {...layout}
-                heading={layout.heading ? t(layout.heading) : ''}
-                imageSrc={layout.imageSrc ? t(layout.imageSrc) : ''}
-                imageAlt={layout.imageAlt ? t(layout.imageAlt) : ''}
-                columns={translatedColumns}
-                rows={translatedRows}
-              />
-            );
+           case 'ComparisonSolution':
+              const translatedColumns: ComparisonColumn[] = (layout.columns ?? []).map((column) => {
+                try {
+                  return { ...column, label: t(column.label) };
+                } catch {
+                  return column;
+                }
+              });
+  
+              const translatedRows: ComparisonSolutionRow[] = (layout.rows ?? []).map((row) => {
+                try {
+                  return { ...row, label: t(row.label) };
+                } catch {
+                  return row;
+                }
+              });
+  
+              return (
+                <ComparisonSolutionSection
+                  key={index}
+                  {...layout}
+                  heading={
+                    layout.heading
+                      ? t.rich(layout.heading as string, {
+                          strong: (chunks) => (
+                            <strong className="font-semibold text-brand-blue">{chunks}</strong>
+                          ),
+                        })
+                      : ''
+                  }
+                  imageSrc={layout.imageSrc ? t(layout.imageSrc) : ''}
+                  imageAlt={layout.imageAlt ? t(layout.imageAlt) : ''}
+                  columns={translatedColumns}
+                  rows={translatedRows}
+                />
+              );
           default:
             return null;
         }

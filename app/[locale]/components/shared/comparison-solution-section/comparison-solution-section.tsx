@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { Check } from 'lucide-react';
 import { ComparisonColumn, ComparisonSolutionRow, ComparisonSolution } from './type';
+import TitleSection from '../../ui/title-section';
 
 export default function ComparisonSolutionSection({
   heading,
@@ -10,22 +11,21 @@ export default function ComparisonSolutionSection({
   rows = [],
   className,
 }: ComparisonSolution) {
-  const rootClassName = [
-    'w-full mx-auto max-w-7xl bg-[#e7e7e7] px-3 py-7 sm:px-4 sm:py-8 lg:px-5 lg:py-10',
-    className,
-  ]
+  const rootClassName = ['w-full mx-auto max-w-[1600px] my-10', className]
     .filter(Boolean)
     .join(' ');
 
   return (
     <section className={rootClassName} aria-labelledby="comparison-solution-heading">
       <div className="mx-auto w-full max-w-620">
-        <h2
-          id="comparison-solution-heading"
-          className="text-center text-[2.1rem] font-medium uppercase tracking-[0.04em] text-brand-blue sm:text-[2.4rem]"
-        >
-          {heading}
-        </h2>
+        {heading && (
+          <TitleSection
+            title={heading}
+            alignment="center"
+            size="extra-large"
+            color="text-brand-blue"
+          />
+        )}
 
         <div className="mt-4 grid grid-cols-1 overflow-hidden border border-neutral-border/70 bg-neutral-canvas lg:grid-cols-[1.9fr_1fr]">
           <div className="relative min-h-[21rem] sm:min-h-[26rem] lg:min-h-full">
@@ -70,7 +70,7 @@ export default function ComparisonSolutionSection({
                   <tr key={row.id} className={rowIndex % 2 === 0 ? 'bg-[#2963ac]' : 'bg-[#255a9f]'}>
                     <th
                       scope="row"
-                      className="px-4 py-3 text-sm font-medium leading-tight text-white sm:text-[1rem]"
+                      className="px-4 py-3 text-[.9rem] font-medium leading-tight text-white"
                     >
                       {row.label}
                     </th>

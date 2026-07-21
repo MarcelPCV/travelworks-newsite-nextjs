@@ -10,12 +10,7 @@ export default function PartnersSection({
   return (
     <section className={`my-6 py-10 ${bgClass ?? ''}`}>
       {title && (
-        <TitleSection
-          title={title}
-          alignment="center"
-          size="large"
-          color="text-brand-blue"
-        />
+        <TitleSection title={title} alignment="center" size="large" color="text-brand-blue" />
       )}
 
       <div className="max-w-[1600px] mx-auto flex flex-wrap justify-center gap-4">

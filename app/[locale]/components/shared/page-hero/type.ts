@@ -1,9 +1,13 @@
+import { ReactNode } from 'react';
+
 export type PageHeroModel = {
   blockType: 'PageHero';
-  title?: string;
-  description?: string;
+  title?: ReactNode;
+  description?: ReactNode;
   mobileTopImageSrc?: string;
   desktopMainImageSrc?: string;
   logoImageSrc?: string;
+  logoWidth?: number;
   ctaImageSrc?: string;
+  ctaWidth?: number;
 };

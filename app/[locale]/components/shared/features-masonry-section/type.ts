@@ -3,6 +3,7 @@ export type FeatureMasonryCard = {
   title: string;
   items: string[];
   topLinkLabel?: string;
+  topLinkHref?: string;
   ctaHref?: string;
   ctaLabel?: string;
   hasPreview?: boolean;

@@ -285,6 +285,7 @@
           "reservation-management": {
             "title": "Reservation Management",
             "topLinkLabel": "Click Here and discover SIREV: The Online Booking Engine",
+            "topLinkHref": "/en-ca/sirev",
             "items": {
               "0": "Management of corporate accounts",
               "1": "Management of passenger groups",
@@ -309,7 +310,7 @@
               "2": "Mobile app with itinerary details, maps, and destination content"
             },
             "ctaLabel": "CRM Tools Features",
-            "ctaHref": "#"
+            "ctaHref": "/en-ca/travel-agency-software/crm-tools"
           },
           "accounting": {
             "title": "Accounting",
@@ -321,7 +322,7 @@
               "4": "Reporting"
             },
             "ctaLabel": "Accounting Features",
-            "ctaHref": "#"
+            "ctaHref": "/en-ca/travel-agency-software/back-office-travel-agency"
           },
           "invoicing": {
             "title": "Invoicing",
@@ -333,7 +334,7 @@
               "4": "Batch cheque generation"
             },
             "ctaLabel": "Invoicing Features",
-            "ctaHref": "#"
+            "ctaHref": "/en-ca/travel-agency-software/back-office-travel-agency"
           },
           "tour-management": {
             "title": "Tour Management",
@@ -344,11 +345,11 @@
               "3": "Automated payment follow-up"
             },
             "ctaLabel": "Tour Management Features",
-            "ctaHref": "#"
+            "ctaHref": "/en-ca/travel-agency-software/tour-management"
           }
         },
         "block-type-youtube-video": {
-          "heading": "See Our Latest Client Success Story",
+          "heading": "BOOST THE EFFICIENCY OF YOUR TRAVEL AGENCY!",
           "videoId": "qG8LDdvA6TE",
           "channelLabel": "Travelworks Showcase",
           "description": "This video highlights our work with Acme Corp, demonstrating our platform's efficiency in real-time."
@@ -473,7 +474,7 @@
           }
         },
         "block-type-features-masonry": {
-          "heading": "Travel agency accounting has very specific requirements that need to be considered and our system has been designed to cover them all.",
+          "heading": "All travel agency accounting, consolidated into a single system.",
           "passenger-groups": {
             "title": "PASSENGER GROUPS",
             "topLinkLabel": "",
@@ -497,8 +498,8 @@
               "1": "TravelWorks generates multiple reports based on several criteria (by destination, by product type, by supplier etc.).",
               "2": "Periodic reporting email communications can be configured to your needs"
             },
-            "ctaLabel": "",
-            "ctaHref": ""
+            "ctaLabel": "Reports Features",
+            "ctaHref": "/en-ca/travel-agency-software/dashboard-reports"
           },
           "mobile-solutions": {
             "title": "MOBILE SOLUTIONS",
@@ -508,7 +509,7 @@
               "2": "Useful information that will simplify their journey and enhance their stay."
             },
             "ctaLabel": "Discover Trip n'Touch",
-            "ctaHref": "#"
+            "ctaHref": "/en-ca/travel-agency-software/trip-n-trouch"
           },
           "travel-agents-commissions": {
             "title": "TRAVEL AGENTS' COMMISSIONS",
@@ -545,17 +546,22 @@
               "1": "TravelWorks is designed with PCI compliance in mind, helping travel agencies maintain a secure payment environment while safeguarding customer data and supporting industry security requirements."
             },
             "ctaLabel": "Consult Security Standards",
-            "ctaHref": "https://www.pcisecuritystandards.org/"
+            "ctaHref": ""
           }
         },
         "block-type-youtube-video": {
-          "heading": "See Our Latest Client Success Story",
+          "heading": "BOOST THE EFFICIENCY OF YOUR TRAVEL AGENCY!",
           "videoId": "qG8LDdvA6TE",
           "channelLabel": "Travelworks Showcase",
           "description": "This video highlights our work with Acme Corp, demonstrating our platform's efficiency in real-time."
         }
       },
       "customizations": {
+        "breadcrumb": {
+          "features-label": "The Solution",
+          "features-link": "/en-ca/travel-agency-software/features",
+          "customizations-label": "Customizations"
+        },
         "block-type-page-hero": {
           "title": "Customizations",
           "description": "We work with you to meet your needs",
@@ -578,6 +584,11 @@
         }
       },
       "integrations": {
+        "breadcrumb": {
+          "features-label": "The Solution",
+          "features-link": "/en-ca/travel-agency-software/features",
+          "integrations-label": "Integrations"
+        },
         "block-type-page-hero": {
           "title": "Integrate with other systems",
           "description": "Interface with numerous partners and automate your operations.",
@@ -617,6 +628,11 @@
         }
       },
       "dashboard-reports": {
+        "breadcrumb": {
+          "features-label": "The Solution",
+          "features-link": "/en-ca/travel-agency-software/features",
+          "dashboard-label": "Dashboard and Reports"
+        },
         "block-type-page-hero": {
           "title": "Real-time activity dashboard",
           "description": "A dashboard displays for all users in real time their key information and important deadlines.",
@@ -647,6 +663,11 @@
         }
       },
       "crm": {
+        "breadcrumb": {
+          "features-label": "The Solution",
+          "features-link": "/en-ca/travel-agency-software/features",
+          "crm-label": "CRM Tools"
+        },
         "block-type-page-hero": {
           "title": "CRM TOOLS FOR INTEGRATED MARKETING",
           "description": "Manage customer relations and increase brand loyalty",
@@ -692,6 +713,11 @@
         }
       },
       "tour-online": {
+        "breadcrumb": {
+          "features-label": "The Solution",
+          "features-link": "/en-ca/travel-agency-software/features",
+          "touronline-label": "Tour Online"
+        },
         "block-type-page-hero": {
           "title": "Tour Online",
           "description": "A complete solution for tour operators and travel agencies",
@@ -749,6 +775,11 @@
         }
       },
       "tour-management": {
+        "breadcrumb": {
+          "features-label": "The Solution",
+          "features-link": "/en-ca/travel-agency-software/features",
+          "tour-management-label": "Tour Management"
+        },
         "block-type-page-hero": {
           "title": "TOUR MANAGEMENT",
           "description": "A module designed for Tour Operators and Travel Management specialists.",
@@ -943,6 +974,11 @@
         }
       },
       "trip-n-touch": {
+        "breadcrumb": {
+          "features-label": "The Solution",
+          "features-link": "/en-ca/travel-agency-software/features",
+          "trip-n-touch-label": "Trip'n Touch"
+        },
         "block-type-page-hero": {
           "title": "Trip'n Touch",
           "description": "Support your customer throughout the entire travel cycle",

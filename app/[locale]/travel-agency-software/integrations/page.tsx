@@ -7,6 +7,8 @@ import ImageBlock from '../../components/shared/image-block/image-block';
 import { getAlternates } from '@/app/lib/SEO/getAlternates';
 import { Metadata } from 'next';
 import { Locale } from 'next-intl';
+import { Breadcrumb } from '../../components/news/breadcrumb';
+import type { BreadcrumbItem } from '@/app/[locale]/news/types';
 
 export async function generateMetadata({
   params,
@@ -36,8 +38,15 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
   setRequestLocale(locale);
   const t = await getTranslations('pages.travel-agency-software.integrations');
 
+  const homeHref = locale === 'en' ? '/' : `/${locale}`;
+  const breadcrumbItems: BreadcrumbItem[] = [
+    { label: t('breadcrumb.features-label'), href: t('breadcrumb.features-link') },
+    { label: t('breadcrumb.integrations-label'), href: '#' },
+  ];
+
   return (
     <main>
+      <Breadcrumb items={breadcrumbItems} homeHref={homeHref} />
       {IntegrationsPageData.layout.map((layout, index) => {
         switch (layout.blockType) {
           case 'PageHero':
@@ -45,8 +54,24 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
               <PageHero
                 key={index}
                 {...layout}
-                title={layout.title ? t(layout.title) : ''}
-                description={layout.description ? t(layout.description) : ''}
+                title={
+                  layout.title
+                    ? t.rich(layout.title as string, {
+                        strong: (chunks) => (
+                          <strong className="font-semibold text-brand-blue">{chunks}</strong>
+                        ),
+                      })
+                    : ''
+                }
+                description={
+                  layout.description
+                    ? t.rich(layout.description as string, {
+                        strong: (chunks) => (
+                          <strong className="font-semibold text-brand-blue">{chunks}</strong>
+                        ),
+                      })
+                    : ''
+                }
                 mobileTopImageSrc={layout.mobileTopImageSrc ? t(layout.mobileTopImageSrc) : ''}
                 desktopMainImageSrc={
                   layout.desktopMainImageSrc ? t(layout.desktopMainImageSrc) : ''

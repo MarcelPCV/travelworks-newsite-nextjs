@@ -6,6 +6,8 @@ import YoutubeVideoSection from '../../components/shared/video/youtube-video-sec
 import { getAlternates } from '@/app/lib/SEO/getAlternates';
 import { Metadata } from 'next';
 import { Locale } from 'next-intl';
+import { Breadcrumb } from '../../components/news/breadcrumb';
+import type { BreadcrumbItem } from '@/app/[locale]/news/types';
 
 export async function generateMetadata({
   params,
@@ -35,8 +37,15 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
   setRequestLocale(locale);
   const t = await getTranslations('pages.travel-agency-software.customizations');
 
+  const homeHref = locale === 'en' ? '/' : `/${locale}`;
+  const breadcrumbItems: BreadcrumbItem[] = [
+    { label: t('breadcrumb.features-label'), href: t('breadcrumb.features-link') },
+    { label: t('breadcrumb.customizations-label'), href: '#' },
+  ];
+
   return (
     <main>
+      <Breadcrumb items={breadcrumbItems} homeHref={homeHref} />
       {CustomizationsPage.layout.map((layout, index) => {
         switch (layout.blockType) {
           case 'PageHero':
@@ -44,8 +53,24 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
               <PageHero
                 key={index}
                 {...layout}
-                title={layout.title ? t(layout.title) : ''}
-                description={layout.description ? t(layout.description) : ''}
+                title={
+                  layout.title
+                    ? t.rich(layout.title as string, {
+                        strong: (chunks) => (
+                          <strong className="font-semibold text-brand-blue">{chunks}</strong>
+                        ),
+                      })
+                    : ''
+                }
+                description={
+                  layout.description
+                    ? t.rich(layout.description as string, {
+                        strong: (chunks) => (
+                          <strong className="font-semibold text-brand-blue">{chunks}</strong>
+                        ),
+                      })
+                    : ''
+                }
                 mobileTopImageSrc={layout.mobileTopImageSrc ? t(layout.mobileTopImageSrc) : ''}
                 desktopMainImageSrc={
                   layout.desktopMainImageSrc ? t(layout.desktopMainImageSrc) : ''
@@ -59,30 +84,48 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
               <SplitSection
                 key={index}
                 {...layout}
-                heading={layout.heading ? t(layout.heading) : ''}
-                description={
-                  layout.description
-                    ? t.rich(layout.description as string, {
-                        strong: (chunks) => <strong>{chunks}</strong>,
-                      })
-                    : ''
-                }
+                heading={t.rich(layout.heading as string, {
+                  strong: (chunks) => (
+                    <strong className="font-semibold text-brand-blue">{chunks}</strong>
+                  ),
+                })}
+                description={t.rich(layout.description as string, {
+                  strong: (chunks) => (
+                    <strong className="font-semibold text-brand-blue">{chunks}</strong>
+                  ),
+                })}
                 imageSrc={layout.imageSrc ? t(layout.imageSrc) : ''}
                 imageAlt={layout.imageAlt ? t(layout.imageAlt) : ''}
               />
             );
-          case 'YoutubeVideo':
-            return (
-              <YoutubeVideoSection
-                key={index}
-                {...layout}
-                heading={layout.heading ? t(layout.heading) : ''}
-                videoId={layout.videoId ? t(layout.videoId) : ''}
-                channelLabel={layout.channelLabel ? t(layout.channelLabel) : ''}
-                description={layout.description ? t(layout.description) : ''}
-              />
-            );
-          default:
+            case 'YoutubeVideo':
+              return (
+                <YoutubeVideoSection
+                  key={index}
+                  {...layout}
+                  heading={
+                    layout.heading
+                      ? t.rich(layout.heading as string, {
+                          strong: (chunks) => (
+                            <strong className="font-semibold text-brand-blue">{chunks}</strong>
+                          ),
+                        })
+                      : ''
+                  }
+                  videoId={layout.videoId ? t(layout.videoId) : ''}
+                  channelLabel={layout.channelLabel ? t(layout.channelLabel) : ''}
+                  description={
+                    layout.description
+                      ? t.rich(layout.description as string, {
+                          strong: (chunks) => (
+                            <strong className="font-semibold text-brand-blue">{chunks}</strong>
+                          ),
+                        })
+                      : ''
+                  }
+                />
+              );
+            default:
             return null;
         }
       })}

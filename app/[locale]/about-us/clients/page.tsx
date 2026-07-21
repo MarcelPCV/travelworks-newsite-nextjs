@@ -9,7 +9,6 @@ import { getTranslations } from 'next-intl/server';
 import { Breadcrumb } from '@/app/[locale]/components/news/breadcrumb';
 import type { BreadcrumbItem } from '@/app/[locale]/news/types';
 
-
 export async function generateMetadata({
   params,
 }: {
@@ -195,11 +194,7 @@ export const clientsPageData = {
   ],
 };
 
-export default async function ClientsPage({
-  params,
-}: {
-  params: Promise<{ locale: Locale }>;
-}) {
+export default async function ClientsPage({ params }: { params: Promise<{ locale: Locale }> }) {
   const { locale } = await params;
   const homeHref = locale === 'en' ? '/' : `/${locale}`;
   const t = await getTranslations('pages.about-us.clients');

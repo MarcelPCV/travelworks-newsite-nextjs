@@ -46,9 +46,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
   const t = await getTranslations('pages.travel-agency-software.features');
 
   const homeHref = locale === 'en' ? '/' : `/${locale}`;
-  const breadcrumbItems: BreadcrumbItem[] = [
-    { label: t('breadcrumb.features-label'), href: '#' },
-  ];
+  const breadcrumbItems: BreadcrumbItem[] = [{ label: t('breadcrumb.features-label'), href: '#' }];
 
   return (
     <main>
@@ -60,14 +58,32 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
               <PageHero
                 key={index}
                 {...layout}
-                title={layout.title ? t(layout.title) : ''}
-                description={layout.description ? t(layout.description) : ''}
+                title={
+                  layout.title
+                    ? t.rich(layout.title as string, {
+                        strong: (chunks) => (
+                          <strong className="font-semibold text-brand-blue">{chunks}</strong>
+                        ),
+                      })
+                    : ''
+                }
+                description={
+                  layout.description
+                    ? t.rich(layout.description as string, {
+                        strong: (chunks) => (
+                          <strong className="font-semibold text-brand-blue">{chunks}</strong>
+                        ),
+                      })
+                    : ''
+                }
                 mobileTopImageSrc={layout.mobileTopImageSrc ? t(layout.mobileTopImageSrc) : ''}
                 desktopMainImageSrc={
                   layout.desktopMainImageSrc ? t(layout.desktopMainImageSrc) : ''
                 }
                 logoImageSrc={layout.logoImageSrc ? t(layout.logoImageSrc) : ''}
+                logoWidth={200}
                 ctaImageSrc={layout.ctaImageSrc ? t(layout.ctaImageSrc) : ''}
+                ctaWidth={150}
               />
             );
           case 'SplitSection':
@@ -75,8 +91,16 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
               <SplitSection
                 key={index}
                 {...layout}
-                heading={typeof layout.heading === 'string' ? t(layout.heading) : ''}
-                description={typeof layout.description === 'string' ? t(layout.description) : ''}
+                heading={t.rich(layout.heading as string, {
+                  strong: (chunks) => (
+                    <strong className="font-semibold text-brand-blue">{chunks}</strong>
+                  ),
+                })}
+                description={t.rich(layout.description as string, {
+                  strong: (chunks) => (
+                    <strong className="font-semibold text-brand-blue">{chunks}</strong>
+                  ),
+                })}
                 imageSrc={typeof layout.imageSrc === 'string' ? t(layout.imageSrc) : ''}
                 imageAlt={typeof layout.imageAlt === 'string' ? t(layout.imageAlt) : ''}
               />
@@ -86,30 +110,44 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
               ...card,
               title: t(card.title),
               topLinkLabel: card.topLinkLabel ? t(card.topLinkLabel) : undefined,
+              topLinkHref: card.topLinkHref ? t(card.topLinkHref) : undefined,
               items: card.items.map((item) => t(item)),
               ctaLabel: card.ctaLabel ? t(card.ctaLabel) : undefined,
+              ctaHref: card.ctaHref ? t(card.ctaHref) : undefined,
             }));
 
             return (
-              <div key={index} className="mx-auto max-w-7xl flex flex-col lg:flex-row gap-10 mt-10">
-                <FeaturesMasonrySection
-                  heading={t('block-type-features-masonry.heading')}
-                  cards={translatedCards}
-                />
-                <div className="hidden lg:block">
-                  <SecurityBannerCard />
-                </div>
-              </div>
+              <FeaturesMasonrySection
+                key={index}
+                heading={t('block-type-features-masonry.heading')}
+                cards={translatedCards}
+              />
             );
           case 'YoutubeVideo':
             return (
               <YoutubeVideoSection
                 key={index}
                 {...layout}
-                heading={layout.heading ? t(layout.heading) : ''}
+                heading={
+                  layout.heading
+                    ? t.rich(layout.heading as string, {
+                        strong: (chunks) => (
+                          <strong className="font-semibold text-brand-blue">{chunks}</strong>
+                        ),
+                      })
+                    : ''
+                }
                 videoId={layout.videoId ? t(layout.videoId) : ''}
                 channelLabel={layout.channelLabel ? t(layout.channelLabel) : ''}
-                description={layout.description ? t(layout.description) : ''}
+                description={
+                  layout.description
+                    ? t.rich(layout.description as string, {
+                        strong: (chunks) => (
+                          <strong className="font-semibold text-brand-blue">{chunks}</strong>
+                        ),
+                      })
+                    : ''
+                }
               />
             );
           case 'ComparisonSolution':
@@ -133,7 +171,15 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
               <ComparisonSolutionSection
                 key={index}
                 {...layout}
-                heading={layout.heading ? t(layout.heading) : ''}
+                heading={
+                  layout.heading
+                    ? t.rich(layout.heading as string, {
+                        strong: (chunks) => (
+                          <strong className="font-semibold text-brand-blue">{chunks}</strong>
+                        ),
+                      })
+                    : ''
+                }
                 imageSrc={layout.imageSrc ? t(layout.imageSrc) : ''}
                 imageAlt={layout.imageAlt ? t(layout.imageAlt) : ''}
                 columns={translatedColumns}

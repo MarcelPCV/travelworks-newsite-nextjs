@@ -1,6 +1,7 @@
 import React from 'react';
 import YouTubePlayer from './YouTubePlayer';
 import { YoutubeVideoModel } from './type';
+import TitleSection from '../../ui/title-section';
 
 export default function YoutubeVideoSection({
   heading,
@@ -10,7 +11,7 @@ export default function YoutubeVideoSection({
   description,
 }: YoutubeVideoModel) {
   const rootClassName = [
-    'w-full mx-auto max-w-7xl rounded-[2rem] bg-[#3f3f41] px-4 py-8 sm:px-6 sm:py-10 lg:px-8',
+    'w-full mx-auto bg-[#3f3f41] px-4 py-8 sm:px-6 sm:py-10 lg:px-8',
     className,
   ]
     .filter(Boolean)
@@ -20,9 +21,9 @@ export default function YoutubeVideoSection({
   if (!videoId) {
     return (
       <section className={rootClassName} aria-label="Video presentation placeholder">
-        <h2 className="text-center text-2xl font-medium uppercase tracking-[0.06em] text-white sm:text-3xl lg:text-[2.35rem]">
-          {heading || 'Video Content Unavailable'}
-        </h2>
+        {heading && (
+          <TitleSection title={heading} alignment="center" size="extra-large" color="white" />
+        )}
         <div
           className="mx-auto mt-6 w-full max-w-5xl overflow-hidden border-4 border-[#66696c] bg-black shadow-[0_18px_38px_rgba(0,0,0,0.28)] p-10 text-center"
           role="alert"
@@ -47,16 +48,6 @@ export default function YoutubeVideoSection({
 
       {/* Use the dedicated player component */}
       <YouTubePlayer videoId={videoId} channelLabel={channelLabel} />
-
-      {/* Display description if provided */}
-      {description && (
-        <p
-          id="video-description"
-          className="text-center mt-4 text-sm text-gray-300 max-w-xl mx-auto"
-        >
-          {description}
-        </p>
-      )}
     </section>
   );
 }

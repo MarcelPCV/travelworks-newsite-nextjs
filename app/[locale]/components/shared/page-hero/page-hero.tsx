@@ -1,4 +1,5 @@
 'use client';
+
 import Image from 'next/image';
 import { PageHeroModel } from './type';
 
@@ -9,11 +10,15 @@ export default function PageHero({
   desktopMainImageSrc,
   logoImageSrc,
   ctaImageSrc,
+  logoWidth = 440,
+  ctaWidth = 160,
 }: PageHeroModel) {
-
   return (
-    <section className="relative mx-auto max-w-[1600px] w-full overflow-hidden bg-[#e5e5e5]" aria-labelledby="features-hero-title">
-      <div className='slider-bg z-0'></div>
+    <section
+      className="relative mx-auto w-full overflow-hidden bg-[#e5e5e5]"
+      aria-labelledby="features-hero-title"
+    >
+      <div className="slider-bg inset-0 z-0"></div>
       <div className="relative z-10 mx-auto w-full max-w-[1600px] lg:px-8">
         <div className="grid w-full lg:min-h-140 lg:grid-cols-[1fr_1.22fr] lg:gap-8 lg:py-3">
           <div className="flex flex-col lg:justify-center">
@@ -24,7 +29,7 @@ export default function PageHero({
                   alt="Travelworks hero highlight"
                   fill
                   priority
-                  className="object-cover rounded-md shadow-2xl"
+                  className="rounded-md object-cover shadow-2xl"
                   sizes="100vw"
                 />
               </div>
@@ -32,20 +37,18 @@ export default function PageHero({
               <div className="aspect-video w-full rounded-sm lg:hidden" aria-hidden="true" />
             )}
 
-            <div className="px-6 pb-10 pt-4 text-center sm:px-10 sm:pb-12 lg:px-0 lg:pb-0 lg:pt-0">
-              <div className="mx-auto w-full max-w-65 sm:max-w-70 lg:max-w-57.5">
-                {logoImageSrc && (
-                  <div className="relative aspect-auto w-full overflow-hidden rounded-sm">
-                    <Image
-                      src={logoImageSrc}
-                      alt="Travelworks logo image"
-                      width={440}
-                      height={200}
-                      className="h-auto w-full"
-                    />
-                  </div>
-                )}
-              </div>
+            <div className="px-6 pt-4 pb-10 text-center sm:px-10 sm:pb-12 lg:px-0 lg:pt-0 lg:pb-0">
+              {logoImageSrc && (
+                <div className="flex justify-center">
+                  <Image
+                    src={logoImageSrc}
+                    alt="Travelworks logo image"
+                    width={logoWidth}
+                    height={Math.round(logoWidth * 0.45)}
+                    className="h-auto"
+                  />
+                </div>
+              )}
 
               <h1
                 id="features-hero-title"
@@ -54,20 +57,18 @@ export default function PageHero({
                 {title}
               </h1>
 
-              <p className="mx-auto mt-4 max-w-[22ch] text-[1.4rem] leading-tight text-neutral-dark sm:max-w-[24ch]">
+              <p className="mx-auto mt-4 max-w-[500px] text-[1.2rem] leading-tight text-neutral-dark">
                 {description}
               </p>
 
-              <div className="flex justify-center mt-10 w-full">
+              <div className="mt-10 flex w-full justify-center">
                 {ctaImageSrc && (
-                  <div>
-                    <Image
-                      src={ctaImageSrc}
-                      alt="Travelworks call to action image"
-                      width={160}
-                      height={50}
-                    />
-                  </div>
+                  <Image
+                    src={ctaImageSrc}
+                    alt="Travelworks call to action image"
+                    width={ctaWidth}
+                    height={Math.round(ctaWidth * 0.3125)}
+                  />
                 )}
               </div>
             </div>
@@ -81,7 +82,7 @@ export default function PageHero({
                   alt="Travelworks platform preview"
                   fill
                   priority
-                  className="object-cover rounded-2xl border-2 border-white"
+                  className="rounded-2xl border-2 border-white object-cover"
                   sizes="50vw"
                 />
               </div>

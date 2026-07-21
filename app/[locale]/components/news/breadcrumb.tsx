@@ -3,13 +3,7 @@ import type { BreadcrumbItem } from '@/app/[locale]/news/types';
 import { Home } from 'lucide-react';
 import { useLocale } from 'next-intl';
 
-export function Breadcrumb({
-  items,
-  homeHref,
-}: {
-  items: BreadcrumbItem[];
-  homeHref: string;
-}) {
+export function Breadcrumb({ items, homeHref }: { items: BreadcrumbItem[]; homeHref: string }) {
   const locale = useLocale();
   return (
     <section
@@ -19,12 +13,9 @@ export function Breadcrumb({
       <nav aria-label="Breadcrumb">
         <ol className="flex flex-wrap items-center gap-2 text-sm text-gray-800">
           <li>
-            <Link
-              className="flex items-center hover:text-slate-700"
-              href={homeHref}
-            >
-              <Home className="mr-2 h-4 w-4" />
-                {locale === 'fr-ca' ? 'Accueil' : 'Home'}
+            <Link className="flex items-center hover:text-slate-700" href={homeHref}>
+              <Home className="mr-2 h-5 w-5 text-amber-600" />
+              {locale === 'fr-ca' ? 'Accueil' : 'Home'}
             </Link>
           </li>
 
@@ -32,10 +23,7 @@ export function Breadcrumb({
             const isLast = index === items.length - 1;
 
             return (
-              <li
-                key={`${item.label}-${index}`}
-                className="flex items-center gap-2"
-              >
+              <li key={`${item.label}-${index}`} className="flex items-center gap-2">
                 <span>/</span>
 
                 {item.href === '#' ? (
@@ -44,9 +32,7 @@ export function Breadcrumb({
                   </span>
                 ) : (
                   <Link
-                    className={`hover:text-slate-700 ${
-                      isLast ? 'font-semibold' : ''
-                    }`}
+                    className={`hover:text-slate-700 ${isLast ? 'font-semibold' : ''}`}
                     href={item.href}
                   >
                     {item.label}
