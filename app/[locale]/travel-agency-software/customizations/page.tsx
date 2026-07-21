@@ -7,7 +7,7 @@ import { getAlternates } from '@/app/lib/SEO/getAlternates';
 import { Metadata } from 'next';
 import { Locale } from 'next-intl';
 import { Breadcrumb } from '../../components/news/breadcrumb';
-import type { BreadcrumbItem } from '@/app/[locale]/news/types';
+import type { BreadcrumbItem } from '@/app/[locale]/(pages)/news/types';
 
 export async function generateMetadata({
   params,

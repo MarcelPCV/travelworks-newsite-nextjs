@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import type { MDXComponents } from 'mdx/types';
-import { getBlurDataURL } from '@/app/[locale]/news/lib/image';
+import { getBlurDataURL } from '@/app/[locale]/(pages)/news/lib/image';
 
 type CalloutProps = {
   type?: 'info' | 'warning' | 'success';

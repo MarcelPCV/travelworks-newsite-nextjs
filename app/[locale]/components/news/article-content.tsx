@@ -2,7 +2,7 @@ import { MDXRemote } from 'next-mdx-remote/rsc';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeSlug from 'rehype-slug';
 import remarkGfm from 'remark-gfm';
-import type { ArticleTocItem } from '@/app/[locale]/news/types';
+import type { ArticleTocItem } from '@/app/[locale]/(pages)/news/types';
 import { newsMdxComponents } from './mdx-components';
 
 export function ArticleContent({ content, toc }: { content: string; toc: ArticleTocItem[] }) {

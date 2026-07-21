@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { getSiteAbsoluteUrl } from '@/app/[locale]/news/lib/seo';
+import { getSiteAbsoluteUrl } from '@/app/[locale]/(pages)/news/lib/seo';
 
 export function ShareButtons({ path, title }: { path: string; title: string }) {
   const url = encodeURIComponent(getSiteAbsoluteUrl(path));

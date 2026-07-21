@@ -4,14 +4,13 @@ import PageHero from '../../components/shared/page-hero/page-hero';
 import SplitSection from '../../components/shared/SplitSection/SplitSection';
 import FeaturesHighlightsSection from '../../components/features/features-highlights-section';
 import FeaturesMasonrySection from '../../components/shared/features-masonry-section/features-masonry-section';
-import SecurityBannerCard from '../../components/shared/security-banner-card/security-banner-card';
 import { FeatureMasonryCard } from '../../components/shared/features-masonry-section/type';
 import YoutubeVideoSection from '../../components/shared/video/youtube-video-section';
 import { FeaturesCardsHighlights } from '../../components/features/type';
 import { getAlternates } from '@/app/lib/SEO/getAlternates';
 import { Metadata } from 'next';
 import { Locale } from 'next-intl';
-import { BreadcrumbItem } from '../../news/types';
+import { BreadcrumbItem } from '../../(pages)/news/types';
 import { Breadcrumb } from '../../components/news/breadcrumb';
 
 export async function generateMetadata({

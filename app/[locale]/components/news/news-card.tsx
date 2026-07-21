@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import type { NewsArticle } from '@/app/[locale]/news/types';
-import { getBlurDataURL } from '@/app/[locale]/news/lib/image';
+import type { NewsArticle } from '@/app/[locale]/(pages)/news/types';
+import { getBlurDataURL } from '@/app/[locale]/(pages)/news/lib/image';
 import { ReadingTime } from './reading-time';
 
 type NewsCardProps = {

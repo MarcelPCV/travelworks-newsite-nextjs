@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { getNewsPagePath } from '@/app/[locale]/news/lib/categories';
+import { getNewsPagePath } from '@/app/[locale]/(pages)/news/lib/categories';
 
 function getPages(totalPages: number): number[] {
   return Array.from({ length: totalPages }, (_, index) => index + 1);

@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import { getBlurDataURL } from '@/app/[locale]/news/lib/image';
-import type { NewsArticle } from '@/app/[locale]/news/types';
+import { getBlurDataURL } from '@/app/[locale]/(pages)/news/lib/image';
+import type { NewsArticle } from '@/app/[locale]/(pages)/news/types';
 import { ReadingTime } from './reading-time';
 
 export function ArticleHeader({

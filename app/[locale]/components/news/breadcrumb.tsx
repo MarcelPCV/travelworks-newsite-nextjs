@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import type { BreadcrumbItem } from '@/app/[locale]/news/types';
+import type { BreadcrumbItem } from '@/app/[locale]/(pages)/news/types';
 import { Home } from 'lucide-react';
 import { useLocale } from 'next-intl';
 

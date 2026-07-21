@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import type { NewsArticle, NewsCategory, NewsCategoryId } from '@/app/[locale]/news/types';
-import { getNewsArticlePath, getNewsCategoryPath } from '@/app/[locale]/news/lib/categories';
+import type { NewsArticle, NewsCategory, NewsCategoryId } from '@/app/[locale]/(pages)/news/types';
+import { getNewsArticlePath, getNewsCategoryPath } from '@/app/[locale]/(pages)/news/lib/categories';
 
 type CategorySidebarProps = {
   locale: string;

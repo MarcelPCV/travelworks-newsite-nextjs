@@ -1,5 +1,5 @@
-import type { NewsArticle, NewsCategory } from '@/app/[locale]/news/types';
-import { getNewsArticlePath } from '@/app/[locale]/news/lib/categories';
+import type { NewsArticle, NewsCategory } from '@/app/[locale]/(pages)/news/types';
+import { getNewsArticlePath } from '@/app/[locale]/(pages)/news/lib/categories';
 import { NewsCard } from './news-card';
 
 type NewsGridProps = {

@@ -5,7 +5,6 @@ import YoutubeVideoSection from '../../components/shared/video/youtube-video-sec
 import ComparisonSolutionSection from '../../components/shared/comparison-solution-section/comparison-solution-section';
 import { FeaturesPage } from './data';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import SecurityBannerCard from './../../components/shared/security-banner-card/security-banner-card';
 import { FeatureMasonryCard } from '../../components/shared/features-masonry-section/type';
 import {
   ComparisonColumn,
@@ -15,7 +14,7 @@ import { getAlternates } from '@/app/lib/SEO/getAlternates';
 import { Metadata } from 'next';
 import { Locale } from 'next-intl';
 import { Breadcrumb } from '@/app/[locale]/components/news/breadcrumb';
-import type { BreadcrumbItem } from '@/app/[locale]/news/types';
+import type { BreadcrumbItem } from '@/app/[locale]/(pages)/news/types';
 
 export async function generateMetadata({
   params,

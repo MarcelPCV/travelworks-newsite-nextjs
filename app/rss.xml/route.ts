@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
-import { getAllArticles, getRouteLocales } from '@/app/[locale]/news/lib/news';
-import { getNewsArticlePath } from '@/app/[locale]/news/lib/categories';
-import { getSiteAbsoluteUrl } from '@/app/[locale]/news/lib/seo';
+import { getAllArticles, getRouteLocales } from '@/app/[locale]/(pages)/news/lib/news';
+import { getNewsArticlePath } from '@/app/[locale]/(pages)/news/lib/categories';
+import { getSiteAbsoluteUrl } from '@/app/[locale]/(pages)/news/lib/seo';
 
 export const revalidate = 3600;
 
