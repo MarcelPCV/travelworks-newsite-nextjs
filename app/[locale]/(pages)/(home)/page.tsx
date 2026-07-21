@@ -1,18 +1,24 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { HomePage } from '../../data';
-import NewsTickerBar from '../../components/home/news-ticker/news-ticker-bar';
-import HeroCarousel from '../../components/home/hero-carousel/hero-carousel';
-import FeatureCards from '../../components/home/feature-cards/feature-cards';
-import PlatformShowcase from '../../components/home/platform-showcase/platform-showcase';
+import { HomePage } from './data';
+import NewsTickerBar from './components/news-ticker/news-ticker-bar';
+import HeroCarousel from './components/hero-carousel/hero-carousel';
+import FeatureCards from './components/feature-cards/feature-cards';
+import PlatformShowcase from './components/platform-showcase/platform-showcase';
 import WhyTravelworks from '../../components/home/why/why-travelworks-section';
-import BenefitsBanner from '../../components/home/benefits-banner/benefits-banner';
-import ClientTrustSection from '../../components/home/clients-section/client-trust-section';
-import PlanningDemoSection from '../../components/home/demo-section/planning-demo-section';
+import BenefitsBanner from './components/benefits-banner/benefits-banner';
+import ClientTrustSection from '@/app/[locale]/(pages)/(home)/components/clients-section/client-trust-section'
+import PlanningDemoSection from '@/app/[locale]/(pages)/(home)/components/demo-section/planning-demo-section';
 import { getCountryOptions } from '@/app/lib/countries';
 import { routeToMessageLocale } from '../../locale-config';
 import { getAlternates } from '@/app/lib/SEO/getAlternates';
 import { Metadata } from 'next';
 import { Locale } from 'next-intl';
+import { HeroSlide } from './components/hero-carousel/type';
+import { FeatureCard } from './components/feature-cards/type';
+import { WhyTravelworksItems } from '../../components/home/why/type';
+import { Client } from './components/clients-section/type';
+import { PlanningDemoField } from './components/demo-section/type';
+import { BenefitsBannerItem } from './components/benefits-banner/type';
 
 export async function generateMetadata({
   params,
@@ -63,7 +69,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
                 }
                 items={
                   layout.items
-                    ? layout.items.map((item) => ({
+                    ? layout.items.map((item: BenefitsBannerItem) => ({
                         ...item,
                         label: t(item.label),
                       }))
@@ -99,7 +105,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
                 navigation={layout.navigation}
                 pagination={layout.pagination}
                 contentAlignment={layout.contentAlignment}
-                slides={layout.slides.map((slide) => {
+                slides={layout.slides.map((slide: HeroSlide) => {
                   const translatedTitle = slide.title
                     ? t.markup(slide.title, {
                         strong: (chunks) => chunks,
@@ -141,7 +147,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
                       : layout.title
                     : ''
                 }
-                items={layout.items.map((item) => ({
+                items={layout.items.map((item: FeatureCard) => ({
                   ...item,
                   title: item.title ? t(item.title) : '',
                   ctaHref: item.ctaHref ? t(item.ctaHref) : '',
@@ -191,7 +197,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
                 title={layout.title ? t(layout.title) : ''}
                 items={
                   layout.items
-                    ? layout.items.map((item) => ({
+                    ? layout.items.map((item: WhyTravelworksItems) => ({
                         ...item,
                         title:
                           typeof item.title === 'string'
@@ -225,7 +231,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
                 buttonHref={layout.buttonHref ? t(layout.buttonHref) : ''}
                 clients={
                   layout.clients
-                    ? layout.clients.map((client) => ({
+                    ? layout.clients.map((client: Client) => ({
                         ...client,
                         name: client.name,
                         logo: client.logo,
@@ -249,7 +255,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
                     },
                     form: {
                       ...layout.form,
-                      fields: layout.form.fields.map((field) => ({
+                      fields: layout.form.fields.map((field: PlanningDemoField) => ({
                         ...field,
                         label: t(field.label),
                         placeholder: field.placeholder ? t(field.placeholder) : undefined,

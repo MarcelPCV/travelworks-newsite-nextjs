@@ -2,7 +2,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { TourOnlinePageData } from './data';
 import PageHero from '@/app/[locale]/components/shared/page-hero/page-hero';
 import TextSectionComp from '@/app/[locale]/components/shared/text-section-comp/text-section-comp';
-import PlanningDemoSection from '@/app/[locale]/components/home/demo-section/planning-demo-section';
+import PlanningDemoSection from '@/app/[locale]/(pages)/(home)/components/demo-section/planning-demo-section';
 import { getCountryOptions } from '@/app/lib/countries';
 import { routeToMessageLocale } from '@/app/[locale]/locale-config';
 import { getAlternates } from '@/app/lib/SEO/getAlternates';

@@ -7,7 +7,7 @@ import type { CountryOption } from '@/app/lib/countries';
 import {
   demoRequestSchema,
   type DemoRequestErrors,
-} from '@/app/[locale]/components/home/demo-section/zod-validations';
+} from '@/app/[locale]/(pages)/(home)/components/demo-section/zod-validations';
 
 type Props = {
   countries: CountryOption[];

@@ -1,6 +1,6 @@
 import { PageHeroModel } from '@/app/[locale]/components/shared/page-hero/type';
 import { TextSection } from '@/app/[locale]/components/shared/text-section-comp/type';
-import { PlanningDemoSectionModel } from '@/app/[locale]/components/home/demo-section/type';
+import { PlanningDemoSectionModel } from '@/app/[locale]/(pages)/(home)/components/demo-section/type';
 
 export type Layout = PageHeroModel | TextSection | PlanningDemoSectionModel;
 export type Page = {
