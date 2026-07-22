@@ -433,6 +433,118 @@
           "features-label": "The Solution",
           "features-link": "/travel-agency-software/features",
           "benefits-label": "Benefits"
+        },
+        "block-type-sections": {
+          "0": {
+            "title": "Cloud Based",
+            "image": "/images/pages/travel-agency-software/benefits/en/cloud-based.webp",
+            "points": {
+              "0": {
+                "title": "Easy Web Access",
+                "description": "On the Desktop, laptop or tablet, with Travelworks, <strong>you can use your favourite device in your favourite location</strong>. Just with a simple internet connection, you have access to your entire office with full security!"
+              },
+              "1": {
+                "title": "No IT Staff",
+                "description": "<strong>No installation is required</strong>, data access through highly secured servers. Travelworks is a cloud software installed on servers with the <strong>highest security standards</strong>. We work with experts in security who allow us to encapsulate data in case of potential fraud as well as simulate attacks by hackers."
+              },
+              "2": {
+                "title": "No backups to think",
+                "description": "We provide <strong>software hosting and our license includes all backups.</strong> In the event that your computer crashes, a simple web reconnection with your new computer and you can immediately re-access your data in the software thanks to your username and password."
+              },
+              "3": {
+                "title": "No Updates to worry about",
+                "description": "We always perform our updates during the night, <strong>so as not to disrupt the users' workday.</strong> You start your day in the morning and discover our new features made available the day before without any intervention on your end."
+              }
+            }
+          },
+          "1": {
+            "title": "Efficient",
+            "image": "/images/pages/travel-agency-software/benefits/en/efficient.webp",
+            "points": {
+              "0": {
+                "title": "No lag",
+                "description": "<strong>Screen navigation is fluid</strong> and <strong>the click response time is fast</strong> despite the fact that our customers' databases are sometimes very large."
+              },
+              "1": {
+                "title": "Easy to use",
+                "description": "The incidents and service requests relating to our software have been reduced by 50% since the launch of the Cloud version in 2011. The software is very easy to use and the requests that are sent to us mainly concern <strong>support for good practices in our industry.</strong>"
+              },
+              "2": {
+                "title": "Reduce time spent on administrative tasks",
+                "description": "Invoicing and accounting can be precious time-consuming in a travel agent's workday. Being able to reduce each transaction by x minutes for each customer, multiplied by the number of transactions carried out by each travel agent means <strong>much more money in your travel agency's pockets at the end of the year.</strong>"
+              }
+            }
+          },
+          "2": {
+            "title": "Scalable",
+            "image": "/images/pages/travel-agency-software/benefits/en/scalable.webp",
+            "points": {
+              "0": {
+                "title": "Designed for your travel agency size",
+                "description": "Our software is <strong>scalable</strong> and <strong>adaptive to your agency's currents and future needs</strong>. The profile creation makes it possible to manage agent information and agent access permissions. So you can create seamless multidisciplinary teams from one to as many agents as needed."
+              },
+              "1": {
+                "title": "No worries to grow",
+                "description": "Travelworks is always by your side and follows the growth of your business. You will be able to create new franchises and organize work teams strategically."
+              }
+            }
+          },
+          "3": {
+            "title": "Secure",
+            "image": "/images/pages/travel-agency-software/benefits/en/secure.webp",
+            "points": {
+              "0": {
+                "title": "Optimized data",
+                "description": "Our turnkey software is hosted by a <strong>reliable and internationally renowned supplier</strong> (Azure - Microsoft) for optimum data protection. Servers are installed in cascade so that data is automatically saved on a 2nd server if the first server would be defective. We take responsibility for backups to guarantee that there is no risk to our customers."
+              },
+              "1": {
+                "title": "Confidentiality",
+                "description": "Furthermore, <strong>access to the software is customizable according to staff responsibilities</strong> and the information's confidentiality. Ideal for external agents with limited access to your travel agency"
+              }
+            }
+          },
+          "4": {
+            "title": "Smart",
+            "image": "/images/pages/travel-agency-software/benefits/en/smart.webp",
+            "points": {
+              "0": {
+                "title": "Intuitive Interface",
+                "description": "Whatever module you navigate, our screens always display the information in a similar way allowing you to easily."
+              },
+              "1": {
+                "title": "Advanced search",
+                "description": "The search fields can be performed by selecting many specific parameters. <strong>Intelligent Tables</strong> with fields at the top of the columns also allow you to enter quick searches that relate only to the selected column."
+              },
+              "2": {
+                "title": "Customizable",
+                "description": "The column's display is configurable depending on your travel agency's needs."
+              }
+            }
+          },
+          "5": {
+            "title": "Reliable",
+            "image": "/images/pages/travel-agency-software/benefits/en/reliable.webp",
+            "points": {
+              "0": {
+                "title": "Real-time Data",
+                "description": "Each billing operation has an immediate impact on the accounting module of the software. Changes in files are available in real-time in the reports."
+              },
+              "1": {
+                "title": "Everything Syncronized",
+                "description": "Everything is centralized in our system <strong>without any risk of error</strong> due to double entries into multiple software or manual handling e.g. in Excel files."
+              }
+            }
+          },
+          "6": {
+            "title": "Evolutionary",
+            "image": "/images/pages/travel-agency-software/benefits/en/evolutionary.webp",
+            "points": {
+              "0": {
+                "title": "Never stop to give you the best experience",
+                "description": "Years of development were spent developing perfect software in terms of <strong>robustness</strong>, <strong>speed</strong>, <strong>reliability</strong> and <strong>security</strong>."
+              }
+            }
+          }
         }
       },
       "back-office-travel-agency": {
@@ -466,7 +578,7 @@
           },
           "accounting-integration": {
             "title": "Accurate Accounting In Real Time",
-            "description": "Your travel agency is dealing with an external accountant; how valuable it is for them to consult your data without having to travel to your location. Your up-to-date accounting helps quickly identify files that require additional screening and close accounting periods without wasting time.<strong className='font-semibold text-brand-blue'>. Less work for your accountant means more money in your travel agency&apos;s pockets.</strong>"
+            "description": "Your travel agency is dealing with an external accountant; how valuable it is for them to consult your data without having to travel to your location. Your up-to-date accounting helps quickly identify files that require additional screening and close accounting periods without wasting time.<strong className='font-semibold text-brand-blue'> Less work for your accountant means more money in your travel agency&apos;s pockets.</strong>"
           },
           "data-anywhere": {
             "title": "Available Data From Anywhere, Even For Accountants",

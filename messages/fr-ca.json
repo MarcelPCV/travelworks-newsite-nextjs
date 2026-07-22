@@ -433,6 +433,118 @@
           "features-label": "La solution",
           "features-link": "/fr-ca/logiciel-agence-voyage/fonctionnalites",
           "benefits-label": "Avantages"
+        },
+        "block-type-sections": {
+          "0": {
+            "title": "Basé sur le cloud",
+            "image": "/images/pages/travel-agency-software/benefits/fr/cloud-based.webp",
+            "points": {
+              "0": {
+                "title": "Accès Web facile",
+                "description": "Sur ordinateur, portable ou tablette, avec Travelworks, <strong>vous pouvez utiliser votre appareil préféré depuis l'endroit de votre choix</strong>. Avec une simple connexion Internet, vous avez accès à l'ensemble de votre bureau en toute sécurité !"
+              },
+              "1": {
+                "title": "Aucun personnel informatique requis",
+                "description": "<strong>Aucune installation n'est nécessaire</strong>, vos données sont accessibles via des serveurs hautement sécurisés. Travelworks est un logiciel infonuagique installé sur des serveurs répondant aux <strong>plus hauts standards de sécurité</strong>. Nous travaillons avec des experts en sécurité qui nous permettent de protéger vos données contre les fraudes potentielles et de simuler des attaques de pirates informatiques."
+              },
+              "2": {
+                "title": "Plus besoin de penser aux sauvegardes",
+                "description": "Nous fournissons <strong>l'hébergement du logiciel et notre licence inclut toutes les sauvegardes.</strong> En cas de panne de votre ordinateur, il suffit de vous reconnecter au Web avec votre nouvel ordinateur pour retrouver immédiatement vos données dans le logiciel grâce à votre nom d'utilisateur et votre mot de passe."
+              },
+              "3": {
+                "title": "Plus besoin de vous soucier des mises à jour",
+                "description": "Nous effectuons toujours nos mises à jour durant la nuit, <strong>afin de ne pas perturber la journée de travail des utilisateurs.</strong> Vous commencez votre journée et découvrez nos nouvelles fonctionnalités ajoutées la veille, sans aucune intervention de votre part."
+              }
+            }
+          },
+          "1": {
+            "title": "Efficace",
+            "image": "/images/pages/travel-agency-software/benefits/fr/efficient.webp",
+            "points": {
+              "0": {
+                "title": "Aucun ralentissement",
+                "description": "<strong>La navigation entre les écrans est fluide</strong> et <strong>le temps de réponse aux clics est rapide</strong>, même lorsque les bases de données de nos clients sont parfois très volumineuses."
+              },
+              "1": {
+                "title": "Facile à utiliser",
+                "description": "Les incidents et demandes de service liés à notre logiciel ont diminué de 50 % depuis le lancement de la version Cloud en 2011. Le logiciel est très facile à utiliser et les demandes reçues concernent principalement <strong>l'accompagnement vers les meilleures pratiques de notre industrie.</strong>"
+              },
+              "2": {
+                "title": "Réduire le temps consacré aux tâches administratives",
+                "description": "La facturation et la comptabilité peuvent représenter une part importante du temps de travail d'un agent de voyages. Réduire de quelques minutes chaque transaction pour chaque client, multiplié par le nombre de transactions effectuées, signifie <strong>beaucoup plus d'argent dans les poches de votre agence à la fin de l'année.</strong>"
+              }
+            }
+          },
+          "2": {
+            "title": "Échelonnable",
+            "image": "/images/pages/travel-agency-software/benefits/en/scalable.webp",
+            "points": {
+              "0": {
+                "title": "Conçu pour la taille de votre agence",
+                "description": "Notre logiciel est <strong>évolutif</strong> et <strong>s'adapte aux besoins actuels et futurs de votre agence</strong>. La création de profils permet de gérer les informations des agents et leurs permissions d'accès. Vous pouvez ainsi créer des équipes multidisciplinaires efficaces, d'un seul agent jusqu'à plusieurs dizaines d'utilisateurs."
+              },
+              "1": {
+                "title": "Grandir en toute confiance",
+                "description": "Travelworks vous accompagne toujours et suit la croissance de votre entreprise. Vous pourrez créer de nouvelles franchises et organiser vos équipes de travail de façon stratégique."
+              }
+            }
+          },
+          "3": {
+            "title": "Sécurisé",
+            "image": "/images/pages/travel-agency-software/benefits/en/secure.webp",
+            "points": {
+              "0": {
+                "title": "Données optimisées",
+                "description": "Notre logiciel clé en main est hébergé par un <strong>fournisseur fiable et reconnu internationalement</strong> (Azure - Microsoft) afin d'assurer une protection optimale des données. Les serveurs sont installés en cascade afin que les données soient automatiquement sauvegardées sur un deuxième serveur en cas de défaillance du premier. Nous prenons en charge les sauvegardes pour garantir qu'il n'y ait aucun risque pour nos clients."
+              },
+              "1": {
+                "title": "Confidentialité",
+                "description": "De plus, <strong>l'accès au logiciel est personnalisable selon les responsabilités du personnel</strong> et le niveau de confidentialité requis. Idéal pour les agents externes ayant un accès limité aux informations de votre agence de voyages."
+              }
+            }
+          },
+          "4": {
+            "title": "Intelligent",
+            "image": "/images/pages/travel-agency-software/benefits/en/smart.webp",
+            "points": {
+              "0": {
+                "title": "Interface intuitive",
+                "description": "Quel que soit le module utilisé, nos écrans affichent toujours les informations de manière similaire, vous permettant ainsi de naviguer facilement."
+              },
+              "1": {
+                "title": "Recherche avancée",
+                "description": "Les champs de recherche peuvent être utilisés en sélectionnant plusieurs paramètres spécifiques. Les <strong>tableaux intelligents</strong> avec des champs au-dessus des colonnes permettent également d'effectuer rapidement des recherches ciblées uniquement sur la colonne sélectionnée."
+              },
+              "2": {
+                "title": "Personnalisable",
+                "description": "L'affichage des colonnes peut être configuré selon les besoins de votre agence de voyages."
+              }
+            }
+          },
+          "5": {
+            "title": "Fiable",
+            "image": "/images/pages/travel-agency-software/benefits/en/reliable.webp",
+            "points": {
+              "0": {
+                "title": "Données en temps réel",
+                "description": "Chaque opération de facturation a un impact immédiat sur le module comptable du logiciel. Les modifications apportées aux dossiers sont disponibles en temps réel dans les rapports."
+              },
+              "1": {
+                "title": "Tout est synchronisé",
+                "description": "Tout est centralisé dans notre système <strong>sans aucun risque d'erreur</strong> lié aux doubles saisies dans plusieurs logiciels ou aux manipulations manuelles, par exemple dans des fichiers Excel."
+              }
+            }
+          },
+          "6": {
+            "title": "Évolutif",
+            "image": "/images/pages/travel-agency-software/benefits/fr/evolutionary.webp",
+            "points": {
+              "0": {
+                "title": "Toujours évoluer pour vous offrir la meilleure expérience",
+                "description": "Des années de développement ont été consacrées à créer un logiciel parfait en matière de <strong>robustesse</strong>, de <strong>rapidité</strong>, de <strong>fiabilité</strong> et de <strong>sécurité</strong>."
+              }
+            }
+          }
         }
       },
       "back-office-travel-agency": {
