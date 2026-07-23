@@ -85,7 +85,7 @@ export const IntegrationsPageData: Page = {
       altText: 'block-type-image-block.altText',
       linkHref: 'block-type-image-block.linkHref',
       linkText: 'block-type-image-block.linkText',
-      widthPercentage: '100%',
+      maxWidth: '100%',
       hasCaption: true,
       captionText: 'block-type-image-block.captionText',
     },

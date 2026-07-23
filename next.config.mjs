@@ -170,7 +170,7 @@ const nextConfig = {
       {
         source: '/fr-ca/nouvelles/:slug',
         destination: '/fr-ca/news/:slug',
-      },
+      }
     ];
   },
 

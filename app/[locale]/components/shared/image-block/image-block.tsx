@@ -5,6 +5,8 @@ import Link from 'next/link';
 import React from 'react';
 import { ImageBlockModel } from './type';
 import CtaButton from '../../ui/cta-button';
+import { ArrowRight } from 'lucide-react';
+import TitleSection from '../../ui/title-section';
 
 export default function ImageBlock({
   title,
@@ -12,38 +14,37 @@ export default function ImageBlock({
   imageSrc,
   altText,
   linkHref,
-  linkText = 'Learn more',
-  widthPercentage = '60%',
+  linkText,
+  maxWidth,
   hasCaption = false,
   captionText = '',
   ctaLabel,
   ctaLink,
   backgroundColor,
 }: ImageBlockModel) {
-  const imageContainerStyle: React.CSSProperties = {
-    width: widthPercentage,
-  };
-
   return (
     <div>
       <div
-        className="mx-auto max-w-7xl flex flex-col text-center rounded-xl md:items-start"
+        className="flex flex-col text-center rounded-xl md:items-start"
         style={{ backgroundColor }}
       >
-        <div className="mx-auto flex-1 space-y-4">
+        <div className="mx-auto max-w-[1600px] flex-1 space-y-4 mt-5">
           {title && (
-            <h2 className="mt-3 text-2xl font-semibold uppercase tracking-[0.04em] text-brand-blue">
-              {title}
-            </h2>
+            <TitleSection
+              title={title}
+              alignment="center"
+              size="extra-large"
+              color="text-brand-blue"
+              titleMaxWidth="max-w-3xl"
+            />
           )}
 
           {description && (
-            <p className="mx-auto max-w-2xl mt-4 text-md leading-8 text-neutral-dark">
+            <p className="mx-auto max-w-2xl text-md leading-8 text-neutral-dark">
               {description}
             </p>
           )}
 
-          {/* Call‑to‑action link */}
           {linkHref && linkText && (
             <Link
               href={linkHref}
@@ -55,26 +56,42 @@ export default function ImageBlock({
         </div>
 
         {imageSrc && (
-          <div className="mx-auto w-full mt-5" style={imageContainerStyle}>
-            <div className="relative w-full overflow-hidden rounded-lg">
-              <Image src={imageSrc} alt={altText} width={800} height={450} className="w-full" />
-            </div>
+          <div className="w-full mt-5">
+            <div
+              className="mx-auto w-full"
+              style={{ maxWidth }}
+            >
+              <div className="relative w-full overflow-hidden rounded-lg">
+                <Image
+                  src={imageSrc}
+                  alt={altText}
+                  width={800}
+                  height={450}
+                  className="w-full"
+                />
+              </div>
 
-            {hasCaption && captionText && (
-              <p className="mt-2 text-sm italic text-gray-500">{captionText}</p>
-            )}
+              {hasCaption && captionText && (
+                <p className="mt-2 text-sm italic text-gray-500">
+                  {captionText}
+                </p>
+              )}
+            </div>
           </div>
         )}
       </div>
+
       <div className="flex justify-center my-5">
         {ctaLink && ctaLabel && (
-          <div>
-            {ctaLink && ctaLabel && (
-              <Link href={ctaLink}>
-                <CtaButton label={ctaLabel} variant="default" size="xs" />
-              </Link>
-            )}
-          </div>
+          <Link href={ctaLink}>
+            <CtaButton
+              label={ctaLabel}
+              variant="default"
+              size="xs"
+              icon={<ArrowRight className="h-6 w-6" strokeWidth={2.4} />}
+              iconPosition="after"
+            />
+          </Link>
         )}
       </div>
     </div>

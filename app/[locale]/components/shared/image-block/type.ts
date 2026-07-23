@@ -8,7 +8,7 @@ export type ImageBlockModel = {
   altText: string;
   linkHref: string;
   linkText?: string;
-  widthPercentage?: string;
+  maxWidth?: string;
   hasCaption?: boolean;
   captionText?: string;
   ctaLabel?: string;

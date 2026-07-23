@@ -102,16 +102,16 @@
             "title": "<strong>Secured cloud systems </strong>ideal for staff working remotely",
             "ctaLabel": "know the benefits",
             "ctaHref": "/en-ca/travel-agency-software/benefits",
-            "desktopImage": "/images/pages/home/hero-carousel/travelworks-secured-cloud-systems.webp",
-            "mobileImage": "/images/pages/home/hero-carousel/travelworks-secured-cloud-systems-mobile.webp"
+            "desktopImage": "/images/pages/home/hero-carousel/travelworks-secured-cloud-systems-en.webp",
+            "mobileImage": "/images/pages/home/hero-carousel/travelworks-secured-cloud-systems-mobile-en.webp"
           },
           "tourOnline": {
             "title": "A <strong>comprehensive solution</strong> : booking, CRM, inventory, billing, accounting and marketing",
             "cta": "Discover TourOnline",
             "ctaLabel": "Discover TravelWorks",
             "ctaHref": "/en-ca/travel-agency-software/tour-online",
-            "desktopImage": "/images/pages/home/hero-carousel/travelworks-comprehensive-solution.webp",
-            "mobileImage": "/images/pages/home/hero-carousel/travelworks-comprehensive-solution-mobile.webp"
+            "desktopImage": "/images/pages/home/hero-carousel/travelworks-comprehensive-solution-desktop-en.webp",
+            "mobileImage": "/images/pages/home/hero-carousel/travelworks-comprehensive-solution-mobile-en.webp"
           }
         }
       },
@@ -831,7 +831,7 @@
           "touronline-label": "Tour Online"
         },
         "block-type-page-hero": {
-          "title": "Tour Online",
+          "title": "",
           "description": "A complete solution for tour operators and travel agencies",
           "mobileTopImageSrc": "/images/pages/travel-agency-software/tour-online/slider_wide.webp",
           "desktopMainImageSrc": "/images/pages/travel-agency-software/tour-online/slider_wide.webp",
@@ -844,7 +844,7 @@
           "imageSrc": "/images/pages/travel-agency-software/tour-online/bundle-touronline.webp",
           "imageAlt": "Custom Experiences",
           "ctaLabel": "Try it now",
-          "ctaLink": "#"
+          "ctaLink": "https://preview.touronline.shop/#/"
         },
         "block-type-split-section-1": {
           "heading": "Organized and well designed",
@@ -1032,8 +1032,8 @@
           "linkHref": "",
           "linkText": "",
           "captionText": "",
-          "ctaLabel": "Request a demo",
-          "ctaLink": "#"
+          "ctaLabel": "Resquest a demo",
+          "ctaLink": "/en-ca/demo-trip-details"
         },
         "block-type-share-items": {
           "0": {
@@ -1081,8 +1081,8 @@
           "linkHref": "",
           "linkText": "",
           "captionText": "",
-          "ctaLabel": "Request a demo",
-          "ctaLink": "#"
+          "ctaLabel": "Resquest a demo",
+          "ctaLink": "/en-ca/demo-trip-details"
         }
       },
       "trip-n-touch": {

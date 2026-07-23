@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import { ReactNode } from 'react';
 import { clsx } from 'clsx';
 
 type Alignment = 'left' | 'center' | 'right';
@@ -13,6 +13,7 @@ interface TitleSectionProps {
   color?: string;
   className?: string;
   html?: boolean;
+  titleMaxWidth?: string; // Optional Tailwind max-width class
 }
 
 const sizeClassMap: Record<Size, string> = {
@@ -40,6 +41,7 @@ export default function TitleSection({
   color,
   className,
   html = false,
+  titleMaxWidth,
 }: TitleSectionProps) {
   const isTailwindColorClass = color?.startsWith('text-');
 
@@ -51,16 +53,25 @@ export default function TitleSection({
     );
 
   return (
-    <div className={clsx('py-5 sm:py-5 uppercase', alignmentClassMap[alignment], className)}>
+    <div
+      className={clsx(
+        'py-5 sm:py-5 uppercase flex justify-center',
+        alignmentClassMap[alignment],
+        className
+      )}
+    >
       <h2
         className={clsx(
-          'font-medium tracking-tight text-brand-blue',
+          'font-light tracking-tight text-brand-blue [&_strong]:font-semibold',
           sizeClassMap[size],
           caseClassMap[textCase],
-          isTailwindColorClass && color,
+          titleMaxWidth,
+          isTailwindColorClass && color
         )}
         style={!isTailwindColorClass && color ? { color } : undefined}
-        aria-label={typeof title === 'string' ? `${title} section title` : undefined}
+        aria-label={
+          typeof title === 'string' ? `${title} section title` : undefined
+        }
       >
         {titleContent}
       </h2>

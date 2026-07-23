@@ -133,7 +133,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
                   typeof layout.backgroundColor === 'string' ? layout.backgroundColor : ''
                 }
                 ctaLabel={typeof layout.ctaLabel === 'string' ? t(layout.ctaLabel) : ''}
-                ctaLink={typeof layout.ctaLink === 'string' ? t(layout.ctaLink) : ''}
+                ctaLink={typeof layout.ctaLink === 'string' ? layout.ctaLink : ''}
               />
             );
            case 'ComparisonSolution':

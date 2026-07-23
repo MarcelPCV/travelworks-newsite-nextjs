@@ -98,7 +98,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
                 altText={layout.altText ? t(layout.altText) : ''}
                 linkHref={layout.linkHref ? t(layout.linkHref) : ''}
                 linkText={layout.linkText ? t(layout.linkText) : ''}
-                widthPercentage={layout.widthPercentage}
+                maxWidth={layout.maxWidth}
                 hasCaption={layout.hasCaption}
                 captionText={layout.captionText ? t(layout.captionText) : ''}
               />

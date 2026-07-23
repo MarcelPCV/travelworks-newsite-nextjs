@@ -1,10 +1,20 @@
+import TitleSection from '../../ui/title-section';
 import type { CardsIconsSection } from './type';
 
 export default function CardsIconsSection({ cards, title }: CardsIconsSection) {
   return (
     <section className="py-12 bg-neutral-50">
-      <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-center text-3xl font-semibold text-[#0b66a6] mb-8">{title}</h2>
+      <div className="max-w-[1600px] mx-auto px-4">
+        <div className="mb-5">
+          {title && (
+            <TitleSection
+              title={title}
+              alignment="center"
+              size="extra-large"
+              color="text-brand-blue"
+            />
+          )}
+        </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {cards?.map((card) => (
             <article key={card.id} className="bg-white rounded-lg p-8 shadow-sm">

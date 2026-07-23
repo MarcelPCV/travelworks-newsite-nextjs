@@ -9,6 +9,7 @@ import { Metadata } from 'next';
 import { Locale } from 'next-intl';
 import { Breadcrumb } from '../../../components/news/breadcrumb';
 import type { BreadcrumbItem } from '@/app/[locale]/(pages)/news/types';
+import SplitSectionMini from '@/app/[locale]/components/shared/split-section-mini/SplitSectionMini';
 
 export async function generateMetadata({
   params,
@@ -77,7 +78,9 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
                   layout.desktopMainImageSrc ? t(layout.desktopMainImageSrc) : ''
                 }
                 logoImageSrc={layout.logoImageSrc ? t(layout.logoImageSrc) : ''}
+                logoWidth={240}
                 ctaImageSrc={layout.ctaImageSrc ? t(layout.ctaImageSrc) : ''}
+                ctaWidth={100}
               />
             );
           case 'SplitSection':
@@ -90,12 +93,33 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
                   layout.description
                     ? t.rich(layout.description as string, {
                         p: (chunks) => <p className="mb-4 last:mb-0">{chunks}</p>,
-                        strong: (chunks) => <strong>{chunks}</strong>,
+                        strong: (chunks) => <strong className='text-brand-blue font-semibold'>{chunks}</strong>,
                       })
                     : ''
                 }
                 imageSrc={typeof layout.imageSrc === 'string' ? t(layout.imageSrc) : ''}
                 imageAlt={typeof layout.imageAlt === 'string' ? t(layout.imageAlt) : ''}
+                ctaLabel={typeof layout.ctaLabel === 'string' ? t(layout.ctaLabel) : ''}
+                ctaLink={typeof layout.ctaLink === 'string' ? t(layout.ctaLink) : ''}
+              />
+            );
+          case 'SplitSectionMini':
+            return (
+              <SplitSectionMini
+                key={index}
+                {...layout}
+                heading={typeof layout.heading === 'string' ? t(layout.heading) : ''}
+                description={
+                  layout.description
+                    ? t.rich(layout.description as string, {
+                        p: (chunks) => <p className="mb-4 last:mb-0">{chunks}</p>,
+                        strong: (chunks) => <strong className='text-brand-blue font-semibold'>{chunks}</strong>,
+                      })
+                    : ''
+                }
+                imageSrc={typeof layout.imageSrc === 'string' ? t(layout.imageSrc) : ''}
+                imageAlt={typeof layout.imageAlt === 'string' ? t(layout.imageAlt) : ''}
+                imageMaxWidth='max-w-[400px]'
                 ctaLabel={typeof layout.ctaLabel === 'string' ? t(layout.ctaLabel) : ''}
                 ctaLink={typeof layout.ctaLink === 'string' ? t(layout.ctaLink) : ''}
               />
@@ -109,7 +133,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
                 description={
                   layout.description
                     ? t.rich(layout.description as string, {
-                        strong: (chunks) => <strong>{chunks}</strong>,
+                        strong: (chunks) => <strong className='text-brand-blue font-semibold'>{chunks}</strong>,
                       })
                     : ''
                 }
@@ -117,7 +141,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
                 altText={layout.altText ? t(layout.altText) : ''}
                 linkHref={layout.linkHref ? t(layout.linkHref) : ''}
                 linkText={layout.linkText ? t(layout.linkText) : ''}
-                widthPercentage={layout.widthPercentage}
+                maxWidth={layout.maxWidth}
                 hasCaption={layout.hasCaption}
                 captionText={layout.captionText ? t(layout.captionText) : ''}
               />

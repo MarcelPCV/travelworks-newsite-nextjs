@@ -77,6 +77,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
                   layout.desktopMainImageSrc ? t(layout.desktopMainImageSrc) : ''
                 }
                 logoImageSrc={layout.logoImageSrc ? t(layout.logoImageSrc) : ''}
+                logoWidth={240}
                 ctaImageSrc={layout.ctaImageSrc ? t(layout.ctaImageSrc) : ''}
               />
             );
@@ -88,14 +89,14 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
                 title={
                   layout.title
                     ? t.rich(layout.title as string, {
-                        strong: (chunks) => <strong>{chunks}</strong>,
+                        strong: (chunks) => <strong className='font-semibold text-brand-blue'>{chunks}</strong>,
                       })
                     : ''
                 }
                 description={
                   layout.description
                     ? t.rich(layout.description as string, {
-                        strong: (chunks) => <strong>{chunks}</strong>,
+                        strong: (chunks) => <strong className='font-semibold text-brand-blue'>{chunks}</strong>,
                       })
                     : ''
                 }
@@ -124,7 +125,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
                 altText={layout.altText ? t(layout.altText) : ''}
                 linkHref={layout.linkHref ? t(layout.linkHref) : ''}
                 linkText={layout.linkText ? t(layout.linkText) : ''}
-                widthPercentage={layout.widthPercentage}
+                maxWidth={layout.maxWidth}
                 hasCaption={layout.hasCaption}
                 captionText={layout.captionText ? t(layout.captionText) : ''}
                 ctaLabel={layout.ctaLabel ? t(layout.ctaLabel) : ''}

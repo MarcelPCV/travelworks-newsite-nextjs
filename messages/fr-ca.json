@@ -102,16 +102,16 @@
             "title": "<strong>Des systèmes cloud sécurisés</strong> adaptés au travail à distance",
             "ctaLabel": "Découvrir les avantages",
             "ctaHref": "/fr-ca/travel-agency-software/benefits",
-            "desktopImage": "/images/pages/home/hero-carousel/travelworks-secured-cloud-systems.webp",
-            "mobileImage": "/images/pages/home/hero-carousel/travelworks-secured-cloud-systems-mobile.webp"
+            "desktopImage": "/images/pages/home/hero-carousel/travelworks-secured-cloud-systems-fr.webp",
+            "mobileImage": "/images/pages/home/hero-carousel/travelworks-secured-cloud-systems-mobile-fr.webp"
           },
           "tourOnline": {
             "title": "Une <strong>solution complète</strong> : réservation, CRM, inventaire, facturation, comptabilité et marketing",
             "cta": "Découvrir TourOnline",
             "ctaLabel": "Découvrir TravelWorks",
             "ctaHref": "/fr-ca/travel-agency-software/tour-online",
-            "desktopImage": "/images/pages/home/hero-carousel/travelworks-comprehensive-solution.webp",
-            "mobileImage": "/images/pages/home/hero-carousel/travelworks-comprehensive-solution-mobile.webp"
+            "desktopImage": "/images/pages/home/hero-carousel/travelworks-comprehensive-solution-desktop-fr.webp",
+            "mobileImage": "/images/pages/home/hero-carousel/travelworks-comprehensive-solution-mobile-fr.webp"
           }
         }
       },
@@ -564,7 +564,7 @@
         "block-type-split": {
           "heading": "Une comptabilité moderne : moins de papier, plus d’efficacité.",
           "description": "Avec TravelWorks, optimisez vos processus comptables grâce à de bonnes pratiques et à des outils performants !",
-          "imageSrc": "/images/pages/travel-agency-software/back-office-travel-agency/travelworks_paperless.webp",
+          "imageSrc": "/images/pages/travel-agency-software/back-office-travel-agency/pcvoyages_paperless.webp",
           "imageAlt": "Aperçu de la plateforme TravelWorks"
         },
         "block-type-features-highlights": {
@@ -831,7 +831,7 @@
           "touronline-label": "Tour Online"
         },
         "block-type-page-hero": {
-          "title": "Tour Online",
+          "title": "",
           "description": "Une solution complète pour les voyagistes et les agences de voyages",
           "mobileTopImageSrc": "/images/pages/travel-agency-software/tour-online/slider_wide.webp",
           "desktopMainImageSrc": "/images/pages/travel-agency-software/tour-online/slider_wide.webp",
@@ -844,12 +844,12 @@
           "imageSrc": "/images/pages/travel-agency-software/tour-online/bundle-touronline.webp",
           "imageAlt": "Expériences personnalisées",
           "ctaLabel": "Essayez-le maintenant",
-          "ctaLink": "#"
+          "ctaLink": "https://preview.touronline.shop/#/"
         },
         "block-type-split-section-1": {
           "heading": "Organisé et bien conçu",
           "description": "Avec TourOnline, vous pouvez <strong>regrouper vos produits de voyage selon les thèmes de votre choix</strong>. Chaque produit est présenté dans une interface élégante regroupant toutes les informations essentielles. De plus, <strong>l’interface s’adapte à différentes tailles d’écran</strong>, faisant de TourOnline une <strong>vitrine attrayante et accessible pour vos produits de voyage</strong>.",
-          "imageSrc": "/images/pages/travel-agency-software/tour-online/touronline-cards-en.webp",
+          "imageSrc": "/images/pages/travel-agency-software/tour-online/touronline-cards-fr.webp",
           "imageAlt": "Expériences personnalisées",
           "ctaLabel": "",
           "ctaLink": "#"
@@ -866,7 +866,7 @@
         "block-type-split-section-2": {
           "heading": "",
           "description": "Vous pouvez choisir parmi <strong>trois thèmes de couleurs</strong> pour personnaliser l’interface de votre site transactionnel. Sélectionnez celui qui s’harmonise le mieux avec <strong>l’identité visuelle de votre agence</strong>.",
-          "imageSrc": "/images/pages/travel-agency-software/tour-online/themeColorsEn.svg",
+          "imageSrc": "/images/pages/travel-agency-software/tour-online/themeColorsFr.svg",
           "imageAlt": "Expériences personnalisées",
           "ctaLabel": "",
           "ctaLink": "#"
@@ -1017,7 +1017,7 @@
           "description": "Découvrez le logiciel Trip Details de TravelWorks, conçu pour connecter vos clients à l'aventure.",
           "mobileTopImageSrc": "/images/pages/travel-agency-software/trip-details/hero-image.webp",
           "desktopMainImageSrc": "/images/pages/travel-agency-software/trip-details/hero-image.webp",
-          "logoImageSrc": "/images/pages/travel-agency-software/trip-details/trip-details.png",
+          "logoImageSrc": "/images/pages/travel-agency-software/trip-details/details-du-voyage.png",
           "ctaImageSrc": ""
         },
         "block-type-text-section": {
@@ -1027,13 +1027,13 @@
         "block-type-image-block": {
           "title": "",
           "description": "",
-          "imageSrc": "/images/pages/travel-agency-software/trip-details/trip-details-ipad-en.jpg",
+          "imageSrc": "/images/pages/travel-agency-software/trip-details/details-du-voyage-ipad-fr.jpg",
           "altText": "Intégrations multiples",
           "linkHref": "",
           "linkText": "",
           "captionText": "",
           "ctaLabel": "Demander une démonstration",
-          "ctaLink": "#"
+          "ctaLink": "/fr-ca/demo-trip-details"
         },
         "block-type-share-items": {
           "0": {
@@ -1049,7 +1049,7 @@
         "block-type-image-block2": {
           "title": "CRÉEZ DE MAGNIFIQUES ITINÉRAIRES DE VOYAGE",
           "description": "Téléversez facilement vos photos dans vos galeries, ajoutez votre contenu et créez de superbes documents de voyage. Rapide, simple et conçu pour offrir un résultat exceptionnel à chaque fois.",
-          "imageSrc": "/images/pages/travel-agency-software/trip-details/easy-to-use-en.webp",
+          "imageSrc": "/images/pages/travel-agency-software/trip-details/easy-to-use-fr.webp",
           "altText": "Intégrations multiples",
           "linkHref": "",
           "linkText": "",
@@ -1058,7 +1058,7 @@
         "block-type-image-block3": {
           "title": "3 designs exceptionnels",
           "description": "Trip Details propose trois styles de présentation remarquables — Standard, Classique et Moderne — chacun conçu pour mettre en valeur vos itinéraires de voyage. Que vous préfériez une mise en page simple et fonctionnelle, une apparence élégante et intemporelle ou un style audacieux et contemporain, Trip Details offre un design qui s'harmonise parfaitement avec l'image de votre agence.",
-          "imageSrc": "/images/pages/travel-agency-software/trip-details/designs-en.webp",
+          "imageSrc": "/images/pages/travel-agency-software/trip-details/designs-fr.webp",
           "altText": "Intégrations multiples",
           "linkHref": "",
           "linkText": "",
@@ -1067,7 +1067,7 @@
         "block-type-image-block4": {
           "title": "Couleurs",
           "description": "Trip Details comprend quatre palettes de couleurs de base pour chacun des trois modèles. Les agences peuvent également personnaliser les couleurs afin de refléter leur identité visuelle*, en collaboration avec notre équipe de soutien.\n\n* Des frais supplémentaires peuvent s’appliquer pour la personnalisation des couleurs.",
-          "imageSrc": "/images/pages/travel-agency-software/trip-details/colors-en.png",
+          "imageSrc": "/images/pages/travel-agency-software/trip-details/colors-fr.png",
           "altText": "Options de couleurs pour Trip Details",
           "linkHref": "",
           "linkText": "",
@@ -1076,13 +1076,13 @@
         "block-type-image-block5": {
           "title": "Conçu d'abord pour le mobile",
           "description": "Vos clients peuvent accéder à leur itinéraire où qu’ils soient, sur n’importe quel appareil. Toujours à jour avec les plus récentes informations, Trip Details est optimisé selon une approche mobile-first afin d’offrir une expérience fluide sur téléphone, tablette et ordinateur.",
-          "imageSrc": "/images/pages/travel-agency-software/trip-details/mobile-first-en.webp",
+          "imageSrc": "/images/pages/travel-agency-software/trip-details/mobile-first-fr.webp",
           "altText": "Options de couleurs pour Trip Details",
           "linkHref": "",
           "linkText": "",
           "captionText": "",
           "ctaLabel": "Demander une démonstration",
-          "ctaLink": "#"
+          "ctaLink": "/fr-ca/demo-trip-details"
         }
       },
       "trip-n-touch": {

@@ -3,9 +3,10 @@ import { FeaturesHighlights } from '../../../components/features/type';
 import { SplitSectionModel } from '../../../components/shared/SplitSection/type';
 import { ImageBlockModel } from '../../../components/shared/image-block/type';
 import { TourOnlineCTAArea } from '../../../components/shared/touronline-cta/type';
+import { SplitSectionMiniModel } from '@/app/[locale]/components/shared/split-section-mini/type';
 
 export type Layout =
-  PageHeroModel | SplitSectionModel | FeaturesHighlights | ImageBlockModel | TourOnlineCTAArea;
+  PageHeroModel | SplitSectionModel | FeaturesHighlights | ImageBlockModel | TourOnlineCTAArea | SplitSectionMiniModel;
 
 export type Page = {
   slug: string;
@@ -52,12 +53,12 @@ export const TourOnlinePageData: Page = {
       altText: 'block-type-image-block.altText',
       linkHref: 'block-type-image-block.linkHref',
       linkText: 'block-type-image-block.linkText',
-      widthPercentage: '100%',
+      maxWidth: '1500px',
       hasCaption: true,
       captionText: 'block-type-image-block.captionText',
     },
     {
-      blockType: 'SplitSection',
+      blockType: 'SplitSectionMini',
       heading: 'block-type-split-section-2.heading',
       description: 'block-type-split-section-2.description',
       imageSrc: 'block-type-split-section-2.imageSrc',

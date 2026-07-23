@@ -209,7 +209,7 @@ export const IntegrationsPageData: Page = {
       imageSecondarySrc: 'block-type-split2.imageSecondarySrc',
       imageSecondaryAlt: 'block-type-split2.imageSecondaryAlt',
       ctaLabel: 'block-type-split2.ctaLabel',
-      ctaLink: 'block-type-split2.ctaLink',
+      ctaLink: 'https://preview.touronline.shop/#/',
       backgroundColor: '#005BAA',
     },
     {
