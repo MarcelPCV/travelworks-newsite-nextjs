@@ -12,4 +12,5 @@ export type SplitSectionModel = {
   className?: string;
   ctaLabel?: string;
   ctaLink?: string;
+  backgroundClass?: string;
 };

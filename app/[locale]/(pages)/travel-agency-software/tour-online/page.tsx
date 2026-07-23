@@ -101,6 +101,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
                 imageAlt={typeof layout.imageAlt === 'string' ? t(layout.imageAlt) : ''}
                 ctaLabel={typeof layout.ctaLabel === 'string' ? t(layout.ctaLabel) : ''}
                 ctaLink={typeof layout.ctaLink === 'string' ? t(layout.ctaLink) : ''}
+                backgroundClass={typeof layout.backgroundClass === 'string' ? layout.backgroundClass : ''}
               />
             );
           case 'SplitSectionMini':

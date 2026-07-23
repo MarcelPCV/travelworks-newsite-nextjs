@@ -44,6 +44,7 @@ export const TourOnlinePageData: Page = {
       imagePosition: 'right',
       ctaLabel: 'block-type-split-section-1.ctaLabel',
       ctaLink: 'block-type-split-section-1.ctaLink',
+      backgroundClass: 'bg-gray-200',
     },
     {
       blockType: 'ImageBlock',
@@ -76,6 +77,7 @@ export const TourOnlinePageData: Page = {
       imagePosition: 'left',
       ctaLabel: 'block-type-split-section-3.ctaLabel',
       ctaLink: 'block-type-split-section-3.ctaLink',
+      backgroundClass: 'bg-gray-200',
     },
     {
       blockType: 'TourOnlineCTAArea',
