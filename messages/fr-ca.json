@@ -426,6 +426,21 @@
               "label": "Version tablette du logiciel"
             }
           }
+        },
+        "block-type-planning-demo-section": {
+          "heading": "Planifier une démonstration",
+          "image": {
+            "placeholderLabel": "Image de l'équipe"
+          },
+          "form": {
+            "nameLabel": "Nom",
+            "emailLabel": "Courriel",
+            "companyLabel": "Nom de l'agence",
+            "countryLabel": "Pays",
+            "countryPlaceholder": "Veuillez choisir une option",
+            "phoneLabel": "Téléphone",
+            "submitButtonLabel": "Demander une démonstration"
+          }
         }
       },
       "benefits": {
@@ -666,6 +681,21 @@
           "videoId": "qG8LDdvA6TE",
           "channelLabel": "Présentation de TravelWorks",
           "description": "Cette vidéo présente notre collaboration avec Acme Corp et démontre l’efficacité de notre plateforme en temps réel."
+        },
+        "block-type-planning-demo-section": {
+          "heading": "Planifier une démonstration",
+          "image": {
+            "placeholderLabel": "Image de l'équipe"
+          },
+          "form": {
+            "nameLabel": "Nom",
+            "emailLabel": "Courriel",
+            "companyLabel": "Nom de l'agence",
+            "countryLabel": "Pays",
+            "countryPlaceholder": "Veuillez choisir une option",
+            "phoneLabel": "Téléphone",
+            "submitButtonLabel": "Demander une démonstration"
+          }
         }
       },
       "customizations": {
@@ -689,10 +719,25 @@
           "imageAlt": "Expériences personnalisées"
         },
         "block-type-youtube-video": {
-          "heading": "Découvrez notre dernière réussite client",
+          "heading": "Boostez l'efficacité de votre agence de voyages !",
           "videoId": "qG8LDdvA6TE",
-          "channelLabel": "Travelworks Showcase",
-          "description": "Cette vidéo met en avant notre travail avec Acme Corp, démontrant l’efficacité de notre plateforme en temps réel."
+          "channelLabel": "Vitrine Travelworks",
+          "description": "Cette vidéo met en lumière notre travail avec Acme Corp, démontrant l'efficacité de notre plateforme en temps réel."
+        },
+        "block-type-planning-demo-section": {
+          "heading": "Planifier une démonstration",
+          "image": {
+            "placeholderLabel": "Image de l'équipe"
+          },
+          "form": {
+            "nameLabel": "Nom",
+            "emailLabel": "Courriel",
+            "companyLabel": "Nom de l'agence",
+            "countryLabel": "Pays",
+            "countryPlaceholder": "Veuillez choisir une option",
+            "phoneLabel": "Téléphone",
+            "submitButtonLabel": "Demander une démonstration"
+          }
         }
       },
       "integrations": {
@@ -712,7 +757,7 @@
         "block-type-image-block": {
           "title": "",
           "description": "",
-          "imageSrc": "/images/pages/travel-agency-software/multiple-integration/schema.webp",
+          "imageSrc": "/images/pages/travel-agency-software/multiple-integration/schema-fr.webp",
           "altText": "Intégrations multiples",
           "linkHref": "",
           "linkText": "",
@@ -736,6 +781,21 @@
             "description": "L’<strong>interface des compagnies d’assurance</strong> est accessible en <strong>temps réel via TravelWorks</strong>. Une fois la meilleure police sélectionnée pour votre client, les informations sont transmises à la compagnie d’assurance puis automatiquement intégrées dans la facturation TravelWorks avec le détail des prix, la commission à recevoir et le numéro de police.",
             "linkTitle": "Découvrir nos partenaires",
             "linkUrl": "#"
+          }
+        },
+        "block-type-planning-demo-section": {
+          "heading": "Planifier une démonstration",
+          "image": {
+            "placeholderLabel": "Image de l'équipe"
+          },
+          "form": {
+            "nameLabel": "Nom",
+            "emailLabel": "Courriel",
+            "companyLabel": "Nom de l'agence",
+            "countryLabel": "Pays",
+            "countryPlaceholder": "Veuillez choisir une option",
+            "phoneLabel": "Téléphone",
+            "submitButtonLabel": "Demander une démonstration"
           }
         }
       },
@@ -771,6 +831,21 @@
             "description": "<p>Chaque conseiller en voyages peut consulter ses revenus accumulés en <strong>temps réel</strong> pour une période donnée ainsi que ses profits pour cette même période.</p><p>Un outil qui saura dynamiser vos équipes&nbsp;!</p><p>De la même façon, <strong>les gestionnaires d'agences peuvent consulter la performance de chaque conseiller individuellement</strong> ou même celle de l'ensemble de leurs succursales s'ils gèrent plusieurs agences.</p>",
             "linkTitle": "",
             "linkUrl": "#"
+          }
+        },
+        "block-type-planning-demo-section": {
+          "heading": "Planifier une démonstration",
+          "image": {
+            "placeholderLabel": "Image de l'équipe"
+          },
+          "form": {
+            "nameLabel": "Nom",
+            "emailLabel": "Courriel",
+            "companyLabel": "Nom de l'agence",
+            "countryLabel": "Pays",
+            "countryPlaceholder": "Veuillez choisir une option",
+            "phoneLabel": "Téléphone",
+            "submitButtonLabel": "Demander une démonstration"
           }
         }
       },
@@ -821,6 +896,27 @@
               "0": "Les communications mobiles sont essentielles pour les agents de voyages et leurs clients. Trip N' Touch est une application abordable pour iOS et Android qui met votre agence en valeur.",
               "1": "Affichez <strong>le logo de votre agence</strong> tout en offrant à vos voyageurs un accès à des <strong>itinéraires détaillés</strong>, des <strong>cartes interactives</strong>, des <strong>guides de voyage complets</strong>, des <strong>informations sur les destinations</strong> ainsi qu'à un <strong>service de clavardage intégré</strong> permettant une <strong>communication fluide</strong> tout au long de leur voyage."
             }
+          }
+        },
+        "block-type-youtube-video": {
+          "heading": "Boostez l'efficacité de votre agence de voyages !",
+          "videoId": "qG8LDdvA6TE",
+          "channelLabel": "Vitrine Travelworks",
+          "description": "Cette vidéo met en lumière notre travail avec Acme Corp, démontrant l'efficacité de notre plateforme en temps réel."
+        },
+        "block-type-planning-demo-section": {
+          "heading": "Planifier une démonstration",
+          "image": {
+            "placeholderLabel": "Image de l'équipe"
+          },
+          "form": {
+            "nameLabel": "Nom",
+            "emailLabel": "Courriel",
+            "companyLabel": "Nom de l'agence",
+            "countryLabel": "Pays",
+            "countryPlaceholder": "Veuillez choisir une option",
+            "phoneLabel": "Téléphone",
+            "submitButtonLabel": "Demander une démonstration"
           }
         }
       },
@@ -884,6 +980,21 @@
           "imageAlt": "Expériences personnalisées",
           "ctaLink": "#",
           "ctaText": "Essayez-le maintenant"
+        },
+        "block-type-planning-demo-section": {
+          "heading": "Planifier une démonstration",
+          "image": {
+            "placeholderLabel": "Image de l'équipe"
+          },
+          "form": {
+            "nameLabel": "Nom",
+            "emailLabel": "Courriel",
+            "companyLabel": "Nom de l'agence",
+            "countryLabel": "Pays",
+            "countryPlaceholder": "Veuillez choisir une option",
+            "phoneLabel": "Téléphone",
+            "submitButtonLabel": "Demander une démonstration"
+          }
         }
       },
       "tour-management": {
@@ -1004,6 +1115,21 @@
               "label": "Réservation en ligne intégrée à un site Web personnalisé (API disponible)"
             }
           }
+        },
+        "block-type-planning-demo-section": {
+          "heading": "Planifier une démonstration",
+          "image": {
+            "placeholderLabel": "Image de l'équipe"
+          },
+          "form": {
+            "nameLabel": "Nom",
+            "emailLabel": "Courriel",
+            "companyLabel": "Nom de l'agence",
+            "countryLabel": "Pays",
+            "countryPlaceholder": "Veuillez choisir une option",
+            "phoneLabel": "Téléphone",
+            "submitButtonLabel": "Demander une démonstration"
+          }
         }
       },
       "trip-details": {
@@ -1104,6 +1230,21 @@
           "videoId": "qPlFym3htLc",
           "channelLabel": "Présentation de TravelWorks",
           "description": "Cette vidéo présente notre collaboration avec Acme Corp et démontre l'efficacité de notre plateforme en temps réel."
+        },
+        "block-type-planning-demo-section": {
+          "heading": "Planifier une démonstration",
+          "image": {
+            "placeholderLabel": "Image de l'équipe"
+          },
+          "form": {
+            "nameLabel": "Nom",
+            "emailLabel": "Courriel",
+            "companyLabel": "Nom de l'agence",
+            "countryLabel": "Pays",
+            "countryPlaceholder": "Veuillez choisir une option",
+            "phoneLabel": "Téléphone",
+            "submitButtonLabel": "Demander une démonstration"
+          }
         }
       }
     },
@@ -1197,6 +1338,21 @@
           },
           "quote": "Développé par des experts du secteur, ce programme de formation répond aux défis courants des agences avec une approche pratique et efficace qui développe les compétences fondamentales et favorise l’application concrète pour améliorer la productivité.",
           "bio": "<p>Avec plus de dix ans de carrière, Danna a développé une expertise approfondie en gestion de comptes, formation client et support technique.</p><p>Chez TravelWorks, Danna joue un rôle essentiel en alignant les besoins des clients avec des solutions logicielles innovantes. Son leadership en intégration, succès client et habilitation technique a largement contribué à la réputation d’excellence et de fiabilité de l’entreprise dans le secteur du voyage.</p><p>Sa capacité à faire le lien entre technologie et expérience utilisateur fait d’elle une conseillère de confiance pour les clients et un atout clé pour l’équipe de direction de TravelWorks.</p>"
+        },
+        "block-type-planning-demo-section": {
+          "heading": "Planifier une démonstration",
+          "image": {
+            "placeholderLabel": "Image de l'équipe"
+          },
+          "form": {
+            "nameLabel": "Nom",
+            "emailLabel": "Courriel",
+            "companyLabel": "Nom de l'agence",
+            "countryLabel": "Pays",
+            "countryPlaceholder": "Veuillez choisir une option",
+            "phoneLabel": "Téléphone",
+            "submitButtonLabel": "Demander une démonstration"
+          }
         }
       },
       "training-platform": {
@@ -1320,6 +1476,21 @@
           },
           "quote": "Développé par des experts de l’industrie, ce programme de formation répond aux défis courants des agences grâce à une approche pratique et efficace qui renforce les compétences fondamentales et favorise leur application concrète afin d’accroître la productivité.",
           "bio": "<p>Avec une carrière s’étendant sur plus d’une décennie, Danna a développé une expertise approfondie en gestion de comptes, formation des clients et soutien technique.</p><p>Chez TravelWorks, Danna joue un rôle essentiel en harmonisant les besoins des clients avec des solutions logicielles innovantes. Son leadership en matière d’intégration, de réussite client et d’accompagnement technique a contribué de façon significative à la réputation d’excellence et de fiabilité de l’entreprise dans le secteur du voyage.</p><p>Sa capacité à faire le pont entre la technologie et l’expérience utilisateur fait d’elle une conseillère de confiance pour les clients et un atout précieux pour l’équipe de direction de TravelWorks.</p>"
+        },
+        "block-type-planning-demo-section": {
+          "heading": "Planifier une démonstration",
+          "image": {
+            "placeholderLabel": "Image de l'équipe"
+          },
+          "form": {
+            "nameLabel": "Nom",
+            "emailLabel": "Courriel",
+            "companyLabel": "Nom de l'agence",
+            "countryLabel": "Pays",
+            "countryPlaceholder": "Veuillez choisir une option",
+            "phoneLabel": "Téléphone",
+            "submitButtonLabel": "Demander une démonstration"
+          }
         }
       }
     },

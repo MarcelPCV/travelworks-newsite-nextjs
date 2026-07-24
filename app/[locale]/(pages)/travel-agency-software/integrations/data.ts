@@ -3,8 +3,9 @@ import { FeaturesHighlights } from '../../../components/features/type';
 import { FeaturesCardsHighlights } from '../../../components/features/type';
 import { CircleDollarSign, FileCheck2, Workflow } from 'lucide-react';
 import { ImageBlockModel } from '../../../components/shared/image-block/type';
+import { PlanningDemoSectionModel } from '../../(home)/components/demo-section/type';
 
-export type Layout = PageHeroModel | FeaturesHighlights | ImageBlockModel;
+export type Layout = PageHeroModel | FeaturesHighlights | ImageBlockModel | PlanningDemoSectionModel;
 
 export type Page = {
   slug: string;
@@ -58,13 +59,56 @@ export const IntegrationsPageData: Page = {
       altText: 'block-type-image-block.altText',
       linkHref: 'block-type-image-block.linkHref',
       linkText: 'block-type-image-block.linkText',
-      maxWidth: '900px',
+      maxWidth: '1000px',
       hasCaption: true,
       captionText: 'block-type-image-block.captionText',
     },
     {
       blockType: 'FeaturesHighlights',
       cards: featuresCards,
+    },
+    {
+      blockType: 'PlanningDemoSection',
+      heading: 'block-type-planning-demo-section.heading',
+      image: {
+        placeholderLabel: 'block-type-planning-demo-section.image.placeholderLabel',
+        linkHref: '/images/pages/home/planning-demo/travelworks.jpg',
+      },
+      form: {
+        fields: [
+          {
+            id: 'full-name',
+            name: 'fullName',
+            label: 'block-type-planning-demo-section.form.nameLabel',
+            type: 'text',
+          },
+          {
+            id: 'email',
+            name: 'email',
+            label: 'block-type-planning-demo-section.form.emailLabel',
+            type: 'email',
+          },
+          {
+            id: 'agency-name',
+            name: 'agencyName',
+            label: 'block-type-planning-demo-section.form.companyLabel',
+            type: 'text',
+          },
+          {
+            id: 'phone',
+            name: 'phone',
+            label: 'block-type-planning-demo-section.form.phoneLabel',
+            type: 'tel',
+          },
+        ],
+        country: {
+          label: 'block-type-planning-demo-section.form.countryLabel',
+          placeholder: 'block-type-planning-demo-section.form.countryPlaceholder',
+        },
+        submitButton: {
+          label: 'block-type-planning-demo-section.form.submitButtonLabel',
+        },
+      },
     },
   ],
 };

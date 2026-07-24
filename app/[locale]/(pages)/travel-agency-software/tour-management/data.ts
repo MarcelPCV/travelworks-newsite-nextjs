@@ -8,12 +8,14 @@ import {
   ComparisonSolutionRow,
   ComparisonColumn,
 } from '../../../components/shared/comparison-solution-section/type';
+import { PlanningDemoSectionModel } from '../../(home)/components/demo-section/type';
 
 export type Layout =
   | PageHeroModel
   | CardsIconsSection
   | SplitSectionModel
   | SplitBannerSectionModel
+  | PlanningDemoSectionModel
   | ComparisonSolution;
 export type Page = {
   slug: string;
@@ -197,6 +199,7 @@ export const IntegrationsPageData: Page = {
       imageSrc: 'block-type-split.imageSrc',
       imageAlt: 'block-type-split.imageAlt',
       imagePosition: 'left',
+      backgroundClass: 'bg-gray-200',
     },
     {
       blockType: 'SplitBannerSection',
@@ -219,6 +222,49 @@ export const IntegrationsPageData: Page = {
       imageAlt: 'block-type-comparison-solution.imageAlt',
       columns: defaultColumns,
       rows: defaultRows,
+    },
+    {
+    blockType: 'PlanningDemoSection',
+      heading: 'block-type-planning-demo-section.heading',
+      image: {
+        placeholderLabel: 'block-type-planning-demo-section.image.placeholderLabel',
+        linkHref: '/images/pages/home/planning-demo/travelworks.jpg',
+      },
+      form: {
+        fields: [
+          {
+            id: 'full-name',
+            name: 'fullName',
+            label: 'block-type-planning-demo-section.form.nameLabel',
+            type: 'text',
+          },
+          {
+            id: 'email',
+            name: 'email',
+            label: 'block-type-planning-demo-section.form.emailLabel',
+            type: 'email',
+          },
+          {
+            id: 'agency-name',
+            name: 'agencyName',
+            label: 'block-type-planning-demo-section.form.companyLabel',
+            type: 'text',
+          },
+          {
+            id: 'phone',
+            name: 'phone',
+            label: 'block-type-planning-demo-section.form.phoneLabel',
+            type: 'tel',
+          },
+        ],
+        country: {
+          label: 'block-type-planning-demo-section.form.countryLabel',
+          placeholder: 'block-type-planning-demo-section.form.countryPlaceholder',
+        },
+        submitButton: {
+          label: 'block-type-planning-demo-section.form.submitButtonLabel',
+        },
+      },
     },
   ],
 };

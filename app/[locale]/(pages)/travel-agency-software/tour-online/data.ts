@@ -4,9 +4,10 @@ import { SplitSectionModel } from '../../../components/shared/SplitSection/type'
 import { ImageBlockModel } from '../../../components/shared/image-block/type';
 import { TourOnlineCTAArea } from '../../../components/shared/touronline-cta/type';
 import { SplitSectionMiniModel } from '@/app/[locale]/components/shared/split-section-mini/type';
+import { PlanningDemoSectionModel } from '../../(home)/components/demo-section/type';
 
 export type Layout =
-  PageHeroModel | SplitSectionModel | FeaturesHighlights | ImageBlockModel | TourOnlineCTAArea | SplitSectionMiniModel;
+  PageHeroModel | SplitSectionModel | FeaturesHighlights | ImageBlockModel | TourOnlineCTAArea | SplitSectionMiniModel | PlanningDemoSectionModel;
 
 export type Page = {
   slug: string;
@@ -85,6 +86,49 @@ export const TourOnlinePageData: Page = {
       imageAlt: 'block-type-tour-online-cta-area.imageAlt',
       ctaLink: 'block-type-tour-online-cta-area.ctaLink',
       ctaText: 'block-type-tour-online-cta-area.ctaText',
+    },
+    {
+      blockType: 'PlanningDemoSection',
+      heading: 'block-type-planning-demo-section.heading',
+      image: {
+        placeholderLabel: 'block-type-planning-demo-section.image.placeholderLabel',
+        linkHref: '/images/pages/home/planning-demo/travelworks.jpg',
+      },
+      form: {
+        fields: [
+          {
+            id: 'full-name',
+            name: 'fullName',
+            label: 'block-type-planning-demo-section.form.nameLabel',
+            type: 'text',
+          },
+          {
+            id: 'email',
+            name: 'email',
+            label: 'block-type-planning-demo-section.form.emailLabel',
+            type: 'email',
+          },
+          {
+            id: 'agency-name',
+            name: 'agencyName',
+            label: 'block-type-planning-demo-section.form.companyLabel',
+            type: 'text',
+          },
+          {
+            id: 'phone',
+            name: 'phone',
+            label: 'block-type-planning-demo-section.form.phoneLabel',
+            type: 'tel',
+          },
+        ],
+        country: {
+          label: 'block-type-planning-demo-section.form.countryLabel',
+          placeholder: 'block-type-planning-demo-section.form.countryPlaceholder',
+        },
+        submitButton: {
+          label: 'block-type-planning-demo-section.form.submitButtonLabel',
+        },
+      },
     },
   ],
 };

@@ -426,6 +426,21 @@
               "label": "Tablet application version of the software"
             }
           }
+        },
+        "block-type-planning-demo-section": {
+          "heading": "Planning a Demo",
+          "image": {
+            "placeholderLabel": "Teamwork Image Placeholder"
+          },
+          "form": {
+            "nameLabel": "Name",
+            "emailLabel": "Email",
+            "companyLabel": "Agency Name",
+            "countryLabel": "Country",
+            "countryPlaceholder": "Please choose an option",
+            "phoneLabel": "Phone",
+            "submitButtonLabel": "Request a Demo"
+          }
         }
       },
       "benefits": {
@@ -689,10 +704,25 @@
           "imageAlt": "Custom Experiences"
         },
         "block-type-youtube-video": {
-          "heading": "See Our Latest Client Success Story",
+          "heading": "BOOST THE EFFICIENCY OF YOUR TRAVEL AGENCY!",
           "videoId": "qG8LDdvA6TE",
           "channelLabel": "Travelworks Showcase",
           "description": "This video highlights our work with Acme Corp, demonstrating our platform's efficiency in real-time."
+        },
+        "block-type-planning-demo-section": {
+          "heading": "Planning a Demo",
+          "image": {
+            "placeholderLabel": "Teamwork Image Placeholder"
+          },
+          "form": {
+            "nameLabel": "Name",
+            "emailLabel": "Email",
+            "companyLabel": "Agency Name",
+            "countryLabel": "Country",
+            "countryPlaceholder": "Please choose an option",
+            "phoneLabel": "Phone",
+            "submitButtonLabel": "Request a Demo"
+          }
         }
       },
       "integrations": {
@@ -712,7 +742,7 @@
         "block-type-image-block": {
           "title": "",
           "description": "",
-          "imageSrc": "/images/pages/travel-agency-software/multiple-integration/schema.webp",
+          "imageSrc": "/images/pages/travel-agency-software/multiple-integration/schema-en.webp",
           "altText": "Multiple Integrations",
           "linkHref": "",
           "linkText": "",
@@ -736,6 +766,21 @@
             "description": "The <strong>insurance companies interface</strong> is accessible in <strong>real-time via TravelWorks</strong>. Once you select the best policy for your client, the information is transmitted to the insurance company and is then auto populated into TravelWorks invoicing with the price breakdown, commission receivable & policy identification number.",
             "linkTitle": "Discover our Partners",
             "linkUrl": "#"
+          }
+        },
+        "block-type-planning-demo-section": {
+          "heading": "Planning a Demo",
+          "image": {
+            "placeholderLabel": "Teamwork Image Placeholder"
+          },
+          "form": {
+            "nameLabel": "Name",
+            "emailLabel": "Email",
+            "companyLabel": "Agency Name",
+            "countryLabel": "Country",
+            "countryPlaceholder": "Please choose an option",
+            "phoneLabel": "Phone",
+            "submitButtonLabel": "Request a Demo"
           }
         }
       },
@@ -771,6 +816,21 @@
             "description": "<p>Each travel agent can see their revenues accumulated in <strong>real-time</strong> for a specific period and their profits over the same period.</p><p>This a tool that will energize your teams!</p><p>Similarly, <strong>travel agency managers can see the performance of each individual agent if necessary</strong> or even of all of their branches if they are multi branch owners.</p>",
             "linkTitle": "",
             "linkUrl": "#"
+          }
+        },
+        "block-type-planning-demo-section": {
+          "heading": "Planning a Demo",
+          "image": {
+            "placeholderLabel": "Teamwork Image Placeholder"
+          },
+          "form": {
+            "nameLabel": "Name",
+            "emailLabel": "Email",
+            "companyLabel": "Agency Name",
+            "countryLabel": "Country",
+            "countryPlaceholder": "Please choose an option",
+            "phoneLabel": "Phone",
+            "submitButtonLabel": "Request a Demo"
           }
         }
       },
@@ -821,6 +881,27 @@
               "0": "Mobile communications are essential for travel agents and their customers. Trip N' Touch is a reasonably priced IOS & Android application that showcases",
               "1": "Showcase your travel agency's brand with <strong>your agency logo</strong> while giving travelers access to detailed itineraries, <strong>interactive maps</strong>, <strong>comprehensive travel guides</strong>, <strong>destination information</strong>, and a <strong>built-in agency chat</strong> for <strong>seamless communication</strong> throughout their journey."
             }
+          }
+        },
+        "block-type-youtube-video": {
+          "heading": "BOOST THE EFFICIENCY OF YOUR TRAVEL AGENCY!",
+          "videoId": "qG8LDdvA6TE",
+          "channelLabel": "Travelworks Showcase",
+          "description": "This video highlights our work with Acme Corp, demonstrating our platform's efficiency in real-time."
+        },
+        "block-type-planning-demo-section": {
+          "heading": "Planning a Demo",
+          "image": {
+            "placeholderLabel": "Teamwork Image Placeholder"
+          },
+          "form": {
+            "nameLabel": "Name",
+            "emailLabel": "Email",
+            "companyLabel": "Agency Name",
+            "countryLabel": "Country",
+            "countryPlaceholder": "Please choose an option",
+            "phoneLabel": "Phone",
+            "submitButtonLabel": "Request a Demo"
           }
         }
       },
@@ -884,6 +965,21 @@
           "imageAlt": "Custom Experiences",
           "ctaLink": "#",
           "ctaText": "Try it now"
+        },
+        "block-type-planning-demo-section": {
+          "heading": "Planning a Demo",
+          "image": {
+            "placeholderLabel": "Teamwork Image Placeholder"
+          },
+          "form": {
+            "nameLabel": "Name",
+            "emailLabel": "Email",
+            "companyLabel": "Agency Name",
+            "countryLabel": "Country",
+            "countryPlaceholder": "Please choose an option",
+            "phoneLabel": "Phone",
+            "submitButtonLabel": "Request a Demo"
+          }
         }
       },
       "tour-management": {
@@ -1004,6 +1100,21 @@
               "label": "Online reservation integrated to a customized website (API available)"
             }
           }
+        },
+        "block-type-planning-demo-section": {
+          "heading": "Planning a Demo",
+          "image": {
+            "placeholderLabel": "Teamwork Image Placeholder"
+          },
+          "form": {
+            "nameLabel": "Name",
+            "emailLabel": "Email",
+            "companyLabel": "Agency Name",
+            "countryLabel": "Country",
+            "countryPlaceholder": "Please choose an option",
+            "phoneLabel": "Phone",
+            "submitButtonLabel": "Request a Demo"
+          }
         }
       },
       "trip-details": {
@@ -1104,6 +1215,21 @@
           "videoId": "qPlFym3htLc",
           "channelLabel": "Travelworks Showcase",
           "description": "This video highlights our work with Acme Corp, demonstrating our platform's efficiency in real-time."
+        },
+        "block-type-planning-demo-section": {
+          "heading": "Planning a Demo",
+          "image": {
+            "placeholderLabel": "Teamwork Image Placeholder"
+          },
+          "form": {
+            "nameLabel": "Name",
+            "emailLabel": "Email",
+            "companyLabel": "Agency Name",
+            "countryLabel": "Country",
+            "countryPlaceholder": "Please choose an option",
+            "phoneLabel": "Phone",
+            "submitButtonLabel": "Request a Demo"
+          }
         }
       }
     },
@@ -1197,6 +1323,21 @@
           },
           "quote": "Developed by industry experts, this training program addresses common agency challenges with a practical, efficient approach that builds foundational skills and empowers real-world application to boost productivity.",
           "bio": "<p>With a career spanning over a decade, Danna has cultivated deep expertise in account management, client training, and technical support.</p><p>At TravelWorks, Danna plays a pivotal role in aligning customer needs with innovative software solutions. Her leadership in onboarding, client success, and technical enablement has contributed significantly to the company's reputation for excellence and reliability in the travel sector.</p><p>Her ability to bridge the gap between technology and user experience makes her a trusted advisor to clients and a key asset to the TravelWorks leadership team.</p>"
+        },
+        "block-type-planning-demo-section": {
+          "heading": "Planning a Demo",
+          "image": {
+            "placeholderLabel": "Teamwork Image Placeholder"
+          },
+          "form": {
+            "nameLabel": "Name",
+            "emailLabel": "Email",
+            "companyLabel": "Agency Name",
+            "countryLabel": "Country",
+            "countryPlaceholder": "Please choose an option",
+            "phoneLabel": "Phone",
+            "submitButtonLabel": "Request a Demo"
+          }
         }
       },
       "training-platform": {
@@ -1320,6 +1461,21 @@
           },
           "quote": "Developed by industry experts, this training program addresses common agency challenges with a practical, efficient approach that builds foundational skills and empowers real-world application to boost productivity.",
           "bio": "<p>With a career spanning over a decade, Danna has cultivated deep expertise in account management, client training, and technical support.</p><p>At TravelWorks, Danna plays a pivotal role in aligning customer needs with innovative software solutions. Her leadership in onboarding, client success, and technical enablement has contributed significantly to the company's reputation for excellence and reliability in the travel sector.</p><p>Her ability to bridge the gap between technology and user experience makes her a trusted advisor to clients and a key asset to the TravelWorks leadership team.</p>"
+        },
+        "block-type-planning-demo-section": {
+          "heading": "Planning a Demo",
+          "image": {
+            "placeholderLabel": "Teamwork Image Placeholder"
+          },
+          "form": {
+            "nameLabel": "Name",
+            "emailLabel": "Email",
+            "companyLabel": "Agency Name",
+            "countryLabel": "Country",
+            "countryPlaceholder": "Please choose an option",
+            "phoneLabel": "Phone",
+            "submitButtonLabel": "Request a Demo"
+          }
         }
       }
     },

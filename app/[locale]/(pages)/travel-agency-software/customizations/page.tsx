@@ -8,6 +8,10 @@ import { Metadata } from 'next';
 import { Locale } from 'next-intl';
 import { Breadcrumb } from '../../../components/news/breadcrumb';
 import type { BreadcrumbItem } from '@/app/[locale]/(pages)/news/types';
+import PlanningDemoSection from '../../(home)/components/demo-section/planning-demo-section';
+import { PlanningDemoField } from '../../(home)/components/demo-section/type';
+import { getCountryOptions } from '@/app/lib/countries';
+import { routeToMessageLocale } from '@/app/[locale]/locale-config';
 
 export async function generateMetadata({
   params,
@@ -42,6 +46,11 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
     { label: t('breadcrumb.features-label'), href: t('breadcrumb.features-link') },
     { label: t('breadcrumb.customizations-label'), href: '#' },
   ];
+
+  const { locale: routeLocale } = await params;
+  setRequestLocale(routeLocale);
+  const messageLocale = routeToMessageLocale[routeLocale] ?? 'en-us';
+  const countries = getCountryOptions(messageLocale);
 
   return (
     <main>
@@ -124,6 +133,40 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
                       : ''
                   }
                 />
+              );
+            case 'PlanningDemoSection':
+              return (
+                <div key={index} className="flex w-full flex-col gap-4 py-2">
+                  <PlanningDemoSection
+                    countries={countries}
+                    locale={messageLocale}
+                    model={{
+                      ...layout,
+                      heading: t(layout.heading),
+                      image: {
+                        ...layout.image,
+                        placeholderLabel: t(layout.image.placeholderLabel),
+                      },
+                      form: {
+                        ...layout.form,
+                        fields: layout.form.fields.map((field: PlanningDemoField) => ({
+                          ...field,
+                          label: t(field.label),
+                          placeholder: field.placeholder ? t(field.placeholder) : undefined,
+                        })),
+                        country: {
+                          ...layout.form.country,
+                          label: t(layout.form.country.label),
+                          placeholder: t(layout.form.country.placeholder),
+                        },
+                        submitButton: {
+                          ...layout.form.submitButton,
+                          label: t(layout.form.submitButton.label),
+                        },
+                      },
+                    }}
+                  />
+                </div>
               );
             default:
             return null;
