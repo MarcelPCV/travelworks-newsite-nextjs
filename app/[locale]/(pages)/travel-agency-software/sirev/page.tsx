@@ -1,21 +1,18 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { BackOfficeTravelAgencyPage } from './data';
+import { CustomizationsPage } from './data';
 import PageHero from '../../../components/shared/page-hero/page-hero';
 import SplitSection from '../../../components/shared/SplitSection/SplitSection';
-import FeaturesHighlightsSection from '../../../components/features/features-highlights-section';
-import FeaturesMasonrySection from '../../../components/shared/features-masonry-section/features-masonry-section';
-import { FeatureMasonryCard } from '../../../components/shared/features-masonry-section/type';
-import YoutubeVideoSection from '../../../components/shared/video/youtube-video-section';
-import { FeaturesCardsHighlights } from '../../../components/features/type';
 import { getAlternates } from '@/app/lib/SEO/getAlternates';
 import { Metadata } from 'next';
 import { Locale } from 'next-intl';
-import { BreadcrumbItem } from '../../news/types';
 import { Breadcrumb } from '../../../components/news/breadcrumb';
-import PlanningDemoSection from '../../(home)/components/demo-section/planning-demo-section';
+import type { BreadcrumbItem } from '@/app/[locale]/(pages)/news/types';
 import { PlanningDemoField } from '../../(home)/components/demo-section/type';
+import PlanningDemoSection from '../../(home)/components/demo-section/planning-demo-section';
 import { getCountryOptions } from '@/app/lib/countries';
 import { routeToMessageLocale } from '@/app/[locale]/locale-config';
+import { FeaturesCardsHighlights } from '@/app/[locale]/components/features/type';
+import FeaturesHighlightsSection from '@/app/[locale]/components/features/features-highlights-section';
 
 export async function generateMetadata({
   params,
@@ -26,14 +23,13 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: 'metadata.travel-agency-software' });
 
   return {
-    title: `${t('back-office-travel-agency.title')}`,
-    description: t('back-office-travel-agency.description'),
-    alternates: getAlternates(
-      {
-        en: '/travel-agency-software/back-office-travel-agency',
-        'en-ca': '/en-ca/travel-agency-software/back-office-travel-agency',
-        'en-au': '/en-au/travel-agency-software/back-office-travel-agency',
-        'fr-ca': '/fr-ca/logiciel-agence-voyage/back-office-agence-de-voyage',
+    title: `${t('crm.title')}`,
+    description: t('crm.description'),
+    alternates: getAlternates({
+        en: '/travel-agency-software/crm-tools',
+        'en-ca': '/en-ca/travel-agency-software/crm-tools',
+        'en-au': '/en-au/travel-agency-software/crm-tools',
+        'fr-ca': '/fr-ca/logiciel-agence-voyage/outils-crm',
       },
       locale,
     ),
@@ -43,7 +39,8 @@ export async function generateMetadata({
 export default async function Page({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const t = await getTranslations('pages.travel-agency-software.back-office-travel-agency');
+  const t = await getTranslations('pages.travel-agency-software.sirev');
+
   const { locale: routeLocale } = await params;
   setRequestLocale(routeLocale);
   const messageLocale = routeToMessageLocale[routeLocale] ?? 'en-us';
@@ -51,14 +48,14 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
 
   const homeHref = locale === 'en' ? '/' : `/${locale}`;
   const breadcrumbItems: BreadcrumbItem[] = [
-    { label: t('breadcrumb.about-us-label'), href: t('breadcrumb.about-us-link') },
-    { label: t('breadcrumb.back-office-label'), href: '#' },
+    { label: t('breadcrumb.features-label'), href: t('breadcrumb.features-link') },
+    { label: t('breadcrumb.crm-label'), href: '#' },
   ];
 
   return (
     <main>
       <Breadcrumb items={breadcrumbItems} homeHref={homeHref} />
-      {BackOfficeTravelAgencyPage.layout.map((layout, index) => {
+      {CustomizationsPage.layout.map((layout, index) => {
         switch (layout.blockType) {
           case 'PageHero':
             return (
@@ -76,6 +73,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
                   layout.desktopMainImageSrc ? t(layout.desktopMainImageSrc) : ''
                 }
                 logoImageSrc={layout.logoImageSrc ? t(layout.logoImageSrc) : ''}
+                logoWidth={120}
                 ctaImageSrc={layout.ctaImageSrc ? t(layout.ctaImageSrc) : ''}
               />
             );
@@ -85,17 +83,19 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
                 key={index}
                 {...layout}
                 heading={
-                  typeof layout.heading === 'string'
-                    ? t.rich(layout.heading, {
-                        strong: (chunks) => (
-                          <div className="font-semibold text-brand-blue">{chunks}</div>
-                        ),
+                  typeof layout.heading === 'string' ? t(layout.heading) : (layout.heading ?? '')
+                }
+                description={
+                  layout.description
+                    ? t.rich(layout.description as string, {
+                        strong: (chunks) => <strong className='text-semibold text-brand-blue'>{chunks}</strong>,
                       })
                     : ''
                 }
-                description={typeof layout.description === 'string' ? t(layout.description) : ''}
-                imageSrc={typeof layout.imageSrc === 'string' ? t(layout.imageSrc) : ''}
-                imageAlt={typeof layout.imageAlt === 'string' ? t(layout.imageAlt) : ''}
+                imageSrc={layout.imageSrc ? t(layout.imageSrc) : ''}
+                imageAlt={layout.imageAlt ? t(layout.imageAlt) : ''}
+                ctaLabel={layout.ctaLabel ? t(layout.ctaLabel) : ''}
+                ctaLink={layout.ctaLink ? t(layout.ctaLink) : ''}
               />
             );
           case 'FeaturesHighlights':
@@ -107,38 +107,6 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
               }),
             );
             return <FeaturesHighlightsSection key={index} cards={translatedHighlightCards} />;
-          case 'FeatureMasonry':
-            const translatedCards: FeatureMasonryCard[] = layout.cards.map((card) => ({
-              ...card,
-              title: t(card.title),
-              topLinkLabel: card.topLinkLabel ? t(card.topLinkLabel) : undefined,
-              topLinkHref: card.topLinkHref ? t(card.topLinkHref) : undefined,
-              items: card.items.map((item) => t(item)),
-              ctaLabel: card.ctaLabel ? t(card.ctaLabel) : undefined,
-            }));
-
-            return (
-              <FeaturesMasonrySection
-                key={index}
-                heading={t('block-type-features-masonry.heading')}
-                cards={translatedCards}
-              />
-            );
-          case 'YoutubeVideo':
-            return (
-              <YoutubeVideoSection
-                key={index}
-                {...layout}
-                heading={typeof layout.heading === 'string' ? t(layout.heading) : ''}
-                videoId={typeof layout.videoId === 'string' ? t(layout.videoId) : ''}
-                channelLabel={typeof layout.channelLabel === 'string' ? t(layout.channelLabel) : ''}
-                description={
-                  typeof layout.description === 'string'
-                    ? t(layout.description)
-                    : (layout.description ?? '')
-                }
-              />
-            );
           case 'PlanningDemoSection':
             return (
               <div key={index} className="flex w-full flex-col gap-4 py-2">

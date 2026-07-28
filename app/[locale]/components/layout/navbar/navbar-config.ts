@@ -25,6 +25,7 @@ export type ProductLinkKey =
   | 'integrations'
   | 'dashboardReports'
   | 'customizations'
+  | 'sirev'
   | 'trip-n-trouch';
 
 export const productCategories: ProductCategory[] = ['travelworks'];
@@ -33,7 +34,7 @@ export const productColumnsByCategory: Record<ProductCategory, ProductLinkKey[][
   travelworks: [
     ['features', 'benefits', 'backofficeSystem', 'tripDetails'],
     ['tourManagement', 'tourOnline', 'crmTools', 'integrations'],
-    ['dashboardReports', 'customizations', 'trip-n-trouch'],
+    ['dashboardReports', 'customizations', 'sirev', 'trip-n-trouch'],
   ],
 };
 
@@ -57,6 +58,7 @@ export const productLinkIcons: Record<ProductLinkKey, LucideIcon> = {
   dashboardReports: BarChart3,
   integrations: Link2,
   customizations: SlidersHorizontal,
+  sirev: Link2,
   'trip-n-trouch': SlidersHorizontal,
 };
 
@@ -84,6 +86,7 @@ export const productSlugByKey: Record<ProductLinkKey, string> = {
   integrations: 'integrations',
   dashboardReports: 'dashboard-reports',
   customizations: 'customizations',
+  sirev: 'sirev',
   'trip-n-trouch': 'trip-n-trouch',
 };
 

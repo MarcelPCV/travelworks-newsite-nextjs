@@ -65,7 +65,7 @@ export default function ContactBarSection({
 
   return (
     <section className={rootClassName} aria-labelledby="contact-bar-heading">
-      <div className="mx-auto max-w-7xl flex flex-col items-center gap-3 sm:flex-row sm:items-center sm:justify-between">
+      <div className="mx-auto max-w-[1600px] flex flex-col items-center gap-3 sm:flex-row sm:items-center sm:justify-between px-10">
         <div className="flex items-center justify-center sm:justify-start">
           <Link
             href={homeHref}

@@ -654,13 +654,13 @@ export default function Navbar() {
           }`}
         >
           <div
-            className={`mx-auto w-full max-w-6xl px-6 pb-6 pt-4 transition duration-200 motion-reduce:transition-none ${
+            className={`mx-auto w-full max-w-7xl px-6 pb-6 pt-4 transition duration-200 motion-reduce:transition-none ${
               isProductsOpen ? 'translate-y-0 opacity-100' : '-translate-y-1 opacity-0'
             }`}
           >
-            <div className="grid min-h-64 grid-cols-[260px_1fr] overflow-hidden">
+            <div className="grid min-h-64 grid-cols-[300px_1fr] overflow-hidden">
               <div className="border-r border-zinc-600 p-8">
-                <p className="max-w-[12ch] text-2xl font-semibold leading-[1.4] tracking-tight text-white">
+                <p className="max-w-[90ch] text-3xl font-semibold leading-[1.4] tracking-tight text-white">
                   {t('products.promoMessage')}
                 </p>
               </div>

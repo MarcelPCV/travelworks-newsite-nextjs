@@ -285,7 +285,7 @@
           "reservation-management": {
             "title": "Reservation Management",
             "topLinkLabel": "Click Here and discover SIREV: The Online Booking Engine",
-            "topLinkHref": "/en-ca/sirev",
+            "topLinkHref": "/en-ca/travel-agency-software/sirev",
             "items": {
               "0": "Management of corporate accounts",
               "1": "Management of passenger groups",
@@ -1231,6 +1231,58 @@
             "submitButtonLabel": "Request a Demo"
           }
         }
+      },
+      "sirev": {
+        "breadcrumb": {
+          "features-label": "The Solution",
+          "features-link": "/travel-agency-software/features",
+          "crm-label": "Sirev"
+        },
+        "block-type-page-hero": {
+          "title": "Online reservation solution",
+          "description": "",
+          "mobileTopImageSrc": "/images/pages/travel-agency-software/sirev/sirev.webp",
+          "desktopMainImageSrc": "/images/pages/travel-agency-software/sirev/sirev.webp",
+          "logoImageSrc": "/images/pages/travel-agency-software/sirev/sirev_logo.webp",
+          "ctaImageSrc": ""
+        },
+        "block-type-split": {
+          "heading": "Price Comparison Made Easy",
+          "description": "You can select all destinations or search by specific destinations for a specific date. <strong>SIREV will display every available wholesaler package ranked by price range</strong>. When no availabilities for the selected dates, SIREV suggests alternative offers. You can compare and find <strong>the best offer for your customer!</strong>",
+          "imageSrc": "/images/pages/travel-agency-software/sirev/concept.webp",
+          "imageAlt": "CRM Tools",
+          "ctaLabel": "Register now",
+          "ctaLink": "https://pcvoyagescloud.com/SirevRegistration/"
+        },
+        "block-type-features-highlights": {
+          "invoicing-methodology": {
+            "title": "BOOKING MADE EASY",
+            "description": "SIREV was designed to provide the <strong>highest level of service to your customers</strong> by bringing every stage of the booking process into a single, <strong>efficient platform</strong>. From booking cars, hotels, and cruises to managing cancellations and payments, <strong>SIREV streamlines daily operations while reducing manual work</strong>. It also enables you to <strong>print booking details and monitor the status of every reservation</strong>, ensuring a smooth, organized, and reliable experience for both your team and your customers."
+          },
+          "process-automation": {
+            "title": "ALERTING TOOL",
+            "description": "Stay ahead of changing prices with automatic email alerts whenever a selected product exceeds your specified price threshold. This powerful feature helps you <strong>proactively advise your customers at the right time</strong>, enabling them to make informed decisions while maximizing savings. It's an invaluable tool for <strong>closing more sales with cost-conscious travelers and delivering exceptional customer service</strong>."
+          },
+          "accounting-integration": {
+            "title": "ADVANCED SEARCH",
+            "description": "Find the perfect accommodation faster with <strong>advanced search filters</strong> that help you <strong>narrow results based on your customers' preferences</strong>. Refine searches by price range, specific hotel name, star rating, all-inclusive packages, beachfront location, nearby golf courses, kitchenette availability, and many other criteria. These flexible search options make it <strong>easy to identify the ideal travel experience while saving valuable time</strong>."
+          }
+        },
+        "block-type-planning-demo-section": {
+          "heading": "Planning a Demo",
+          "image": {
+            "placeholderLabel": "Teamwork Image Placeholder"
+          },
+          "form": {
+            "nameLabel": "Name",
+            "emailLabel": "Email",
+            "companyLabel": "Agency Name",
+            "countryLabel": "Country",
+            "countryPlaceholder": "Please choose an option",
+            "phoneLabel": "Phone",
+            "submitButtonLabel": "Request a Demo"
+          }
+        }
       }
     },
     "training": {
@@ -1817,6 +1869,7 @@
         "dashboardReports": "Dashboard Reports",
         "integrations": "Integrations",
         "customizations": "Customizations",
+        "sirev": "Sirev",
         "tryIt": "Try It",
         "askForDemo": "Ask for a Demo",
         "trip-n-trouch": "Trip'n Touch"

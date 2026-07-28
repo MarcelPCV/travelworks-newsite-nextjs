@@ -155,6 +155,12 @@ export const travelAgencySoftwareSlugs: Record<string, Record<string, string>> =
     'fr-ca': 'customizations',
     'en-au': 'customizations',
   },
+  sirev: {
+    en: 'sirev',
+    'en-ca': 'sirev',
+    'fr-ca': 'sirev',
+    'en-au': 'sirev',
+  },
 };
 
 export const aboutUsSlugs: Record<string, Record<string, string>> = {

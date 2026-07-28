@@ -285,7 +285,7 @@
           "reservation-management": {
             "title": "Gestion des réservations",
             "topLinkLabel": "Cliquez ici et découvrez SIREV : le moteur de réservation en ligne",
-            "topLinkHref": "/fr-ca/sirev",
+            "topLinkHref": "/fr-ca/logiciel-agence-voyage/sirev",
             "items": {
               "0": "Gestion des comptes corporatifs",
               "1": "Gestion des groupes de passagers",
@@ -1246,6 +1246,58 @@
             "submitButtonLabel": "Demander une démonstration"
           }
         }
+      },
+      "sirev": {
+        "breadcrumb": {
+          "features-label": "La solution",
+          "features-link": "/fr-ca/logiciel-agence-voyage/fonctionnalites",
+          "crm-label": "Sirev"
+        },
+        "block-type-page-hero": {
+          "title": "Solution de réservation en ligne",
+          "description": "",
+          "mobileTopImageSrc": "/images/pages/travel-agency-software/sirev/sirev.webp",
+          "desktopMainImageSrc": "/images/pages/travel-agency-software/sirev/sirev.webp",
+          "logoImageSrc": "/images/pages/travel-agency-software/sirev/sirev_logo.webp",
+          "ctaImageSrc": ""
+        },
+        "block-type-split": {
+          "heading": "La comparaison de prix simplifiée",
+          "description": "Vous pouvez sélectionner toutes les destinations ou rechercher des destinations précises pour une date donnée. <strong>SIREV affiche tous les forfaits offerts par les grossistes, classés par ordre de prix</strong>. Lorsqu'aucune disponibilité n'est offerte pour les dates sélectionnées, SIREV propose des solutions de rechange. Vous pouvez ainsi comparer les offres et trouver <strong>la meilleure option pour votre client&nbsp;!</strong>",
+          "imageSrc": "/images/pages/travel-agency-software/sirev/concept.webp",
+          "imageAlt": "Outils CRM",
+          "ctaLabel": "Inscrivez-vous maintenant",
+          "ctaLink": "https://pcvoyagescloud.com/SirevRegistration/"
+        },
+        "block-type-features-highlights": {
+          "invoicing-methodology": {
+            "title": "RÉSERVATION SIMPLIFIÉE",
+            "description": "SIREV a été conçu pour offrir <strong>le plus haut niveau de service à vos clients</strong> en regroupant toutes les étapes du processus de réservation au sein d'une <strong>plateforme unique et performante</strong>. De la réservation de voitures, d'hôtels et de croisières à la gestion des annulations et des paiements, <strong>SIREV simplifie les opérations quotidiennes tout en réduisant le travail manuel</strong>. Il vous permet également <strong>d'imprimer les détails des réservations et de suivre l'état de chaque dossier</strong>, assurant ainsi une expérience fluide, organisée et fiable pour votre équipe comme pour vos clients."
+          },
+          "process-automation": {
+            "title": "OUTIL D'ALERTE",
+            "description": "Gardez une longueur d'avance sur les variations de prix grâce à des alertes automatiques par courriel lorsqu'un produit sélectionné dépasse le seuil de prix que vous avez défini. Cette fonctionnalité vous permet de <strong>conseiller vos clients au bon moment</strong>, afin qu'ils puissent prendre des décisions éclairées tout en maximisant leurs économies. C'est un outil précieux pour <strong>conclure davantage de ventes auprès des voyageurs soucieux de leur budget et offrir un service à la clientèle exceptionnel</strong>."
+          },
+          "accounting-integration": {
+            "title": "RECHERCHE AVANCÉE",
+            "description": "Trouvez plus rapidement l'hébergement idéal grâce à des <strong>filtres de recherche avancés</strong> qui vous permettent <strong>d'affiner les résultats selon les préférences de vos clients</strong>. Vous pouvez filtrer les recherches par gamme de prix, nom d'hôtel, classement par étoiles, forfaits tout compris, emplacement en bord de mer, proximité d'un terrain de golf, présence d'une cuisinette et bien d'autres critères. Ces options de recherche flexibles permettent <strong>d'identifier facilement l'expérience de voyage idéale tout en vous faisant gagner un temps précieux</strong>."
+          }
+        },
+        "block-type-planning-demo-section": {
+          "heading": "Planifier une démonstration",
+          "image": {
+            "placeholderLabel": "Espace réservé pour l'image de l'équipe"
+          },
+          "form": {
+            "nameLabel": "Nom",
+            "emailLabel": "Courriel",
+            "companyLabel": "Nom de l'agence",
+            "countryLabel": "Pays",
+            "countryPlaceholder": "Veuillez sélectionner une option",
+            "phoneLabel": "Téléphone",
+            "submitButtonLabel": "Demander une démonstration"
+          }
+        }
       }
     },
     "training": {
@@ -1829,6 +1881,7 @@
         "dashboardReports": "Rapports de tableau de bord",
         "integrations": "Integrations",
         "customizations": "Personnalisations",
+        "sirev": "Sirev",
         "tryIt": "Essayer",
         "askForDemo": "Demander une demo",
         "trip-n-trouch": "Trip'n Touch"
