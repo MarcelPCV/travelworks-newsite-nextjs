@@ -99,7 +99,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
                 description={
                   layout.description
                     ? t.rich(layout.description as string, {
-                        strong: (chunks) => <strong className="text-blue-800">{chunks}</strong>,
+                        strong: (chunks) => <strong className="text-brand-blue font-semibold">{chunks}</strong>,
                       })
                     : ''
                 }
@@ -110,6 +110,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
                 maxWidth={layout.maxWidth}
                 hasCaption={layout.hasCaption}
                 captionText={layout.captionText ? t(layout.captionText) : ''}
+                backgroundColor="#F5F6F6"
               />
             );
           case 'ImageHappyLearning':

@@ -31,7 +31,7 @@ export default function TrainingFeatures({ cards }: InfoCards) {
             For more information, please contact our support team at{' '}
             <a
               href="mailto:info@travelworkssolution.com"
-              className="font-semibold text-blue-700 hover:underline"
+              className="font-semibold text-brand-blue hover:underline"
             >
               info@travelworkssolution.com
             </a>
@@ -46,16 +46,16 @@ function FeatureCard({ title, description, icon: Icon, cta, ctaLabel, ctaLink }:
   return (
     <div className="rounded-[28px] border-t-4 border-amber-400 bg-white p-8 shadow-lg shadow-slate-200/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
       <div className="flex flex-col items-center text-center">
-        <Icon className="mb-6 h-12 w-12 text-blue-700" strokeWidth={1.8} />
+        <Icon className="mb-6 h-12 w-12 text-brand-blue" strokeWidth={1.8} />
 
-        <h3 className="text-xl font-bold uppercase tracking-wide text-blue-700">{title}</h3>
+        <h3 className="text-xl font-bold uppercase tracking-wide text-brand-blue">{title}</h3>
 
         <p className="mt-4 text-lg leading-relaxed text-slate-700">{description}</p>
 
         {cta && (
           <a
             href={ctaLink}
-            className="mt-8 inline-flex items-center gap-2 rounded-md bg-blue-700 px-6 py-3 font-semibold text-white transition hover:bg-blue-800"
+            className="mt-8 inline-flex items-center gap-2 rounded-md bg-brand-blue px-6 py-3 font-semibold text-white transition hover:bg-brand-blue"
           >
             {ctaLabel}
             <ArrowRight className="h-4 w-4" />

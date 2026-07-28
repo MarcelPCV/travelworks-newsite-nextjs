@@ -1308,17 +1308,17 @@
         "block-type-page-hero": {
           "title": "Knowledge Base",
           "description": "Find all the resources you need to master TravelWorks and make the most of our software.",
-          "mobileTopImageSrc": "/images/pages/training/knowledge-base/bg-knowledge-base.webp",
-          "desktopMainImageSrc": "/images/pages/training/knowledge-base/bg-knowledge-base.webp",
+          "mobileTopImageSrc": "/images/pages/training/knowledge-base/en/background-knowledge.webp",
+          "desktopMainImageSrc": "/images/pages/training/knowledge-base/en/background-knowledge.webp",
           "logoImageSrc": "/images/pages/training/knowledge-base/new.svg",
           "ctaImageSrc": ""
         },
         "block-type-image-block": {
           "title": "Training is a key priority for our company",
           "description": "<strong>The Knowledge Base</strong> is a powerful platform that <strong>centralizes all our training videos and documents</strong> in <strong>one easy-to-access place</strong>. It empowers clients to <strong>complete training on their own schedule</strong>, quickly find the <strong>information they need</strong>, and <strong>stay confident and informed—anytime, anywhere</strong>.",
-          "imageSrc": "/images/pages/training/knowledge-base/screen-knowledge-base.jpg",
+          "imageSrc": "/images/pages/training/knowledge-base/en/screen-knowledge-base.jpg",
           "altText": "Knowledge Base",
-          "linkHref": "/",
+          "linkHref": "/en-au/demo-knowledge-base",
           "linkText": "Request now",
           "captionText": ""
         },
@@ -1384,7 +1384,7 @@
             "name": "Danna Woods",
             "role": "Director of Operations",
             "image": {
-              "src": "/images/danna-woods.webp",
+              "src": "/images/pages/training/knowledge-base/danna-woods.png",
               "alt": "Danna Woods"
             }
           },
@@ -1414,15 +1414,15 @@
         "block-type-page-hero": {
           "title": "Training Platform",
           "description": "Unlock the full potential of TravelWorks",
-          "mobileTopImageSrc": "/images/pages/training/training-platform/background-training-platform.webp",
-          "desktopMainImageSrc": "/images/pages/training/training-platform/background-training-platform.webp",
+          "mobileTopImageSrc": "/images/pages/training/training-platform/en/background-training-platform.webp",
+          "desktopMainImageSrc": "/images/pages/training/training-platform/en/background-training-platform.webp",
           "logoImageSrc": "/images/pages/training/training-platform/new.svg",
           "ctaImageSrc": ""
         },
         "block-type-image-block": {
           "title": "Exciting News for TravelWorks Clients",
           "description": "We are thrilled to announce the launch of our <strong>new training platform</strong> designed exclusively for clients using TravelWorks accounting software for travel agencies. This <strong>innovative platform</strong> is <strong>tailored to enhance your proficiency</strong> and <strong>streamline your accounting processes</strong>.",
-          "imageSrc": "/images/pages/training/training-platform/screen-training-platform.jpg",
+          "imageSrc": "/images/pages/training/training-platform/en/screen-training-platform-en.jpg",
           "altText": "Training Platform",
           "linkHref": "",
           "linkText": "",
@@ -1432,32 +1432,32 @@
           "0": {
             "title": "Basic Training Courses",
             "description": "Step-by-step instructional videos to help you master TravelWorks functionalities.",
-            "ctaLabel": "Learn More",
-            "ctaLink": "/training/basic-courses"
+            "ctaLabel": "",
+            "ctaLink": ""
           },
           "1": {
             "title": "Certification Program",
             "description": "Earn certifications to showcase your expertise and boost your career.",
-            "ctaLabel": "Learn More",
-            "ctaLink": "/training/certification-program"
+            "ctaLabel": "",
+            "ctaLink": ""
           },
           "2": {
             "title": "Progress Reporting",
             "description": "Reports generated and sent to your Administrator.",
-            "ctaLabel": "Learn More",
-            "ctaLink": "/training/progress-reporting"
+            "ctaLabel": "",
+            "ctaLink": ""
           },
           "3": {
             "title": "Supplemental Courses",
             "description": "Practical learnings for day-to-day activities.",
-            "ctaLabel": "Learn More",
-            "ctaLink": "/training/supplemental-courses"
+            "ctaLabel": "",
+            "ctaLink": ""
           },
           "4": {
             "title": "Online Client Portal",
             "description": "Knowledge base for à la carte access to all trainings.",
             "ctaLabel": "Learn More",
-            "ctaLink": "/training/online-client-portal"
+            "ctaLink": "/en-au/training/knowledge-base"
           }
         },
         "block-type-image-happy-learning": {
@@ -1522,7 +1522,7 @@
             "name": "Danna Woods",
             "role": "Director of Operations",
             "image": {
-              "src": "/images/danna-woods.webp",
+              "src": "/images/pages/training/training-platform/danna-woods.png",
               "alt": "Danna Woods"
             }
           },

@@ -8,7 +8,7 @@ function ComparisonCard({ title, badge, features }: ComparisonTrainingCard) {
         <h3 className="text-2xl font-light text-white">{title}</h3>
 
         {badge && (
-          <span className="rounded-xl bg-blue-600 px-4 py-2 text-sm font-semibold uppercase tracking-wide text-white">
+          <span className="rounded-xl bg-brand-blue px-4 py-2 text-sm font-semibold uppercase tracking-wide text-white">
             {badge}
           </span>
         )}

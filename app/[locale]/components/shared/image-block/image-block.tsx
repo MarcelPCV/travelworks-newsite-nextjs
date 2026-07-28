@@ -48,7 +48,7 @@ export default function ImageBlock({
           {linkHref && linkText && (
             <Link
               href={linkHref}
-              className="inline-block mt-2 text-base font-medium text-white hover:underline bg-blue-600 px-4 py-2 rounded-md transition-colors duration-200 mb-10"
+              className="inline-block mt-2 text-base font-medium text-white hover:underline bg-brand-blue px-4 py-2 rounded-md transition-colors duration-200 mb-10"
             >
               {linkText}
             </Link>
