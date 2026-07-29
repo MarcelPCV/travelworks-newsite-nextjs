@@ -1611,6 +1611,10 @@
           "about-us-label": "About Us",
           "about-us-link": "/about-us/travelworks",
           "clients-label": "Clients"
+        },
+        "block-type-page-hero": {
+          "title": "Clients",
+          "subtitle": "TravelWorks is proud to serve over 1,000 travel agencies worldwide."
         }
       },
       "contact": {

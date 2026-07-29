@@ -17,12 +17,18 @@ export default function ClientsLogoMarquee({ clients }: ClientsLogoMarqueeProps)
   const duplicatedClients = [...clients, ...clients];
 
   return (
-    <section className="overflow-hidden border-y bg-white text-gray-800 py-8">
+    <section className="relative overflow-hidden bg-white text-gray-800 shadow-xl">
       <div className="marquee">
         <div className="marquee-content">
           {duplicatedClients.map((client, index) => (
-            <div key={`${client.id}-${index}`} className="relative h-20 w-40 shrink-0">
-              <Image fill src={client.logo.src} alt={client.logo.alt} className="object-contain" />
+            <div key={`${client.id}-${index}`} className="relative shrink-0">
+              <Image
+                height={200}
+                width={200}
+                src={client.logo.src}
+                alt={client.logo.alt}
+                title={client.logo.alt}
+                className="object-contain" />
             </div>
           ))}
         </div>

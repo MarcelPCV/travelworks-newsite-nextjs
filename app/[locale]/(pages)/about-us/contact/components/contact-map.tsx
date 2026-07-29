@@ -5,7 +5,7 @@ export default function ContactMap() {
 
   return (
     <section className="bg-white pb-4 pt-10">
-      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto w-full max-w-[1600px] px-4 sm:px-6 lg:px-8">
         <h2 className="text-center text-[1.8rem] font-medium uppercase tracking-wide text-brand-blue sm:text-[2.2rem]">
           {t('title')}
         </h2>
