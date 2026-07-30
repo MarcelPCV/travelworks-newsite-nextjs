@@ -1611,6 +1611,94 @@
           "about-us-label": "About Us",
           "about-us-link": "/en-au/about-us/travelworks",
           "clients-label": "Clients"
+        },
+        "block-type-page-hero": {
+          "title": "More Than <strong class=\"font-semibold text-white\">1000</strong> Travel Agencies <strong class=\"font-semibold text-white\">Trust Us</strong>",
+          "subtitle": "TravelWorks powers agencies across the world with <strong class=\"font-semibold text-white\">modern accounting</strong> and back-office solutions."
+        },
+        "testimonials": {
+          "0": {
+            "quote": "We have been working with TravelWorks for 20 years. The system is very complete and easy to use. The data access is fast thanks to very user-friendly search screens. We particularly appreciate the fact that all of our information is centralized in one place in order to have a precise and quick overview of all our branches. The support staff is very well trained to guide us and responses are quick.",
+            "author": "Pierre Couture",
+            "company": "Club Voyage Agathe Leclerc/Orford"
+          },
+          "1": {
+            "quote": "TravelWorks is visually well done. The billing system interfaced with our booking engine is extraordinary because it saves us a lot of mistakes. We also particularly appreciate the functionality allowing the management of groups of passengers. Very easy to balance accounts and to manage commission rates.",
+            "author": "Chantal Lizotte",
+            "company": "Club Voyages Daniel"
+          },
+          "2": {
+            "quote": "I have been using TravelWorks for 2 years. I particularly appreciate its many features. Before that, I used to manage the accounting in my travel agency manually. I increased productivity by accessing my results in real time and improved data integrity since I have no risk of error related to manual data entry. Technical support is fast and the staff demonstrated professionalism when sharing the good practices.",
+            "author": "Manon Pellerin",
+            "company": "Voyages Revasol"
+          },
+          "3": {
+            "quote": "I have been with TravelWorks since my early days in the industry, close to 15 years now!  TravelWorks has always been very user friendly and is great for either front office or back office accounting! The Web Version is accessible at all times and from anywhere!  Response time and technical support is fast and efficient!  The system is always evolving to become better!  Their backup service is great, no worries about losing anything! Their CRM is a wonderful tool! I am totally satisfied with this company and their system!",
+            "author": "Manon Lacelle-Lacroix",
+            "company": "Marlin Travel"
+          },
+          "4": {
+            "quote": "TravelWorks makes our lives much easier. We can generate numerous reports and have an instant overview of our agency’s results. Marketing modules are very helpful in properly segmenting our customers’ needs. Furthermore, The TravelWorks customer service department always provides us with quick answers to our questions.",
+            "author": "Hélène Boulianne",
+            "company": "Plein Soleil Voyages"
+          },
+          "5": {
+            "quote": "I am not always comfortable with computers but I must confess that the TravelWorks software is very user-friendly and easy to use. It was extremely well thought out and it considerably reduces the administrative tasks involved in running a travel agency through various process automations: bank reconciliations, printing of checks in batches etc. Customer service is excellent. Courteous, fast and effective, The TravelWorks support team efficiently shares its expertise in the travel industry accounting. Keep up your great work and especially maintain the high quality of your customer service.",
+            "author": "Nathalie Germain",
+            "company": "Vitesse de Croisière"
+          },
+          "6": {
+            "quote": "After 25 years with our previous accounting system, we knew we had to change to keep up? Transitioning to something new was a big decision. We first saw Travelworks 6 months ago and now I’m sorry we waited that long to move across. The TravelWorks team made it easy by guiding us through every step with patience and expertise. From initial discussions to personalised online training, their approach was professional, clear, and tailored to our needs.",
+            "author": "Samantha",
+            "company": "Northshore Travel"
+          },
+          "7": {
+            "quote": "As our business grew, we needed a system that we could manage and not have to call a helpdesk on each transaction – also an intuitive system. TravelWorks was able to deliver first-class training to us being non-accountants in a language we understood. It has an interface that makes it easy to follow a transaction through the process and it has a reporting system that covers all the financial aspects of what we need to know in our business. For anything technical or out of the ordinary, the support provided by the team is exceptional. Highly recommended.",
+            "author": "Stephen West",
+            "company": "Interline Travel"
+          },
+          "8": {
+            "quote": "Travelworks has been a pleasure to work with for the last couple of years. The system was very intuitive and easy to use right from the start and has only become easier as more integrations are built. Trish and her team here in Australia are wonderful. They have been extremely helpful, professional and friendly and patient – a pleasure to deal with. The wider support network is great too – efficient, prompt and very proactive. It’s great to work with a team of people who care about the customer and strive to meet our needs and continually improve their product offering as our needs evolve.",
+            "author": "Adam Pearson",
+            "company": "Travel Associates Toronto NSW"
+          },
+          "9": {
+            "quote": "I have been using TravelWorks for 2 years. I particularly appreciate its many features. Before that, I managed our agency accounting manually. I gained significant speed thanks to real-time results and improved data integrity since I no longer face risks linked to manual processing. Technical support is fast and the team is very professional in sharing best practices.",
+            "author": "Manon Pellerin",
+            "company": "Voyages Revasol"
+          },
+          "10": {
+            "quote": "I have used TravelWorks since my first steps in the industry nearly 15 years ago. It has always been very user-friendly and works great for both front and back office. The web version is accessible anytime, from anywhere. Technical answers are always fast and effective. The software keeps evolving with new features, backups are excellent, and the CRM module is an outstanding tool.",
+            "author": "Helene Boulianne",
+            "company": "Plein Soleil Voyages"
+          },
+          "11": {
+            "quote": "TravelWorks has been part of my daily work for nearly 15 years. It is intuitive for front and back office, available online at all times, and supported by a responsive technical team. The product evolves constantly with practical improvements, and data backup gives us strong peace of mind.",
+            "author": "Manon Lacelle-Lacroix",
+            "company": "Marlin Travel"
+          },
+          "12": {
+            "quote": "Even for someone not always comfortable with technology, TravelWorks is very user-friendly and easy to use. It was designed thoughtfully and greatly reduces administrative tasks thanks to automation like bank reconciliations and batch cheque printing. Customer service is courteous, fast, and highly effective.",
+            "author": "Nathalie Germain",
+            "company": "Vitesse de Croisiere"
+          }
+        },
+        "videos": {
+          "0": {
+            "quote": "I have been using TravelWorks for more than 20 years and I must say that it is the best tool I have in my agency. I can manage my commissions, my payables, my receivables. I don’t think I could run my business without it.",
+            "author": "Jimmy Georgiadis",
+            "company": "Net Vacances"
+          },
+          "1": {
+            "quote": "What I like about TravelWorks is their customer service. They are very good and efficient. They listen to us and they are very proactive with their answers, sometimes within 5-10mn. I really like the CRM tools with the automated messages.",
+            "author": "Manon Gravel",
+            "company": "Voyages En Liberté"
+          },
+          "2": {
+            "quote": "It is very easy to work with it. You can log in from anywhere in the world through an internet access. It is not only a solution to manage your financial operations but also a powerful management tool as we keep all our data in one place. We can see the big picture with instant reporting.",
+            "author": "Daniela Stefanova",
+            "company": "Afrolympique"
+          }
         }
       },
       "contact": {

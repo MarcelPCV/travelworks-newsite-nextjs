@@ -1,5 +1,5 @@
-import Image from 'next/image';
 import { Quote } from 'lucide-react';
+import { getTranslations } from 'next-intl/server';
 
 type Testimonial = {
   id: string;
@@ -16,33 +16,34 @@ type Props = {
   testimonial: Testimonial;
 };
 
-export default function TestimonialCard({ testimonial }: Props) {
+export default async function TestimonialCard({ testimonial }: Props) {
+  const t = await getTranslations('pages.about-us.clients');
+
+  const resolveMessage = (value: string) => {
+    if (!value) {
+      return '';
+    }
+
+    return t.has(value) ? t(value) : value;
+  };
+
   return (
     <article className="rounded-xl bg-white p-8 shadow-md border-b-2 border-amber-600">
       <Quote className="mb-6 h-8 w-8 text-orange-500" />
 
-      <p className="text-muted-foreground text-md leading-7 text-gray-800">
-        {testimonial.quote}
+      <p className="text-muted-foreground text-sm leading-7 text-gray-800">
+        {resolveMessage(testimonial.quote)}
       </p>
 
-      <div className="mt-8 text-gray-800">
+      <div className="mt-8 text-brand-blue text-lg border-l-2 border-amber-600 pl-4">
         <h3 className="font-semibold">
-          {testimonial.author}
+          {resolveMessage(testimonial.author)}
         </h3>
 
         <p className="text-sm text-muted-foreground">
-          {testimonial.company}
+          {resolveMessage(testimonial.company)}
         </p>
       </div>
-
-      {/* <div className="relative mt-6 h-12 w-32">
-        <Image
-          fill
-          src={testimonial.logo.src}
-          alt={testimonial.logo.alt}
-          className="object-contain object-left"
-        />
-      </div> */}
     </article>
   );
 }

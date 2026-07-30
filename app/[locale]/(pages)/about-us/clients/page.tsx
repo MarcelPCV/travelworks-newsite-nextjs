@@ -9,6 +9,7 @@ import { getTranslations } from 'next-intl/server';
 import { Breadcrumb } from '@/app/[locale]/components/news/breadcrumb';
 import type { BreadcrumbItem } from '@/app/[locale]/(pages)/news/types';
 import { clientsPageData } from './data';
+import {getClientsPageData} from './data/index'
 
 export async function generateMetadata({
   params,
@@ -41,6 +42,7 @@ export default async function ClientsPage({ params }: { params: Promise<{ locale
     { label: t('breadcrumb.about-us-label'), href: t('breadcrumb.about-us-link') },
     { label: t('breadcrumb.clients-label'), href: '#' },
   ];
+  const clientsPageData = getClientsPageData(locale);
   return (
     <>
       <Breadcrumb 

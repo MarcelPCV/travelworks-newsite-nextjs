@@ -1,4 +1,4 @@
-export const clientsPageData = {
+export const frClientsPageData  = {
   hero: {
     title:'block-type-page-hero.title',
     subtitle:'block-type-page-hero.subtitle',
@@ -128,7 +128,7 @@ export const clientsPageData = {
 
   testimonials: [
     {
-      id: '1',
+      id: '0',
       quote:'testimonials.0.quote',
       author: 'testimonials.0.author',
       company: 'testimonials.0.company',
@@ -138,7 +138,7 @@ export const clientsPageData = {
       },
     },
     {
-      id: '2',
+      id: '1',
       quote:'testimonials.1.quote',
       author: 'testimonials.1.author',
       company: 'testimonials.1.company',
@@ -149,7 +149,7 @@ export const clientsPageData = {
     },
 
     {
-      id: '3',
+      id: '2',
       quote:'testimonials.2.quote',
       author: 'testimonials.2.author',
       company: 'testimonials.2.company',
@@ -160,7 +160,7 @@ export const clientsPageData = {
     },
 
     {
-      id: '4',
+      id: '3',
       quote: 'testimonials.3.quote',
       author: 'testimonials.3.author',
       company: 'testimonials.3.company',
@@ -171,7 +171,7 @@ export const clientsPageData = {
     },
 
     {
-      id: '5',
+      id: '4',
       quote: 'testimonials.4.quote',
       author: 'testimonials.4.author',
       company: 'testimonials.4.company',
@@ -181,10 +181,20 @@ export const clientsPageData = {
       },
     },
     {
-      id: '6',
+      id: '5',
       quote: 'testimonials.5.quote',
       author: 'testimonials.5.author',
       company: 'testimonials.5.company',
+      logo: {
+        src: '/images/pages/about-us/clients/logos/Vitesse-de-croisiere.jpg',
+        alt: 'Vitesse de Croisière',
+      },
+    },
+    {
+      id: '6',
+      quote: 'testimonials.6.quote',
+      author: 'testimonials.6.author',
+      company: 'testimonials.6.company',
       logo: {
         src: '/images/pages/about-us/clients/logos/Vitesse-de-croisiere.jpg',
         alt: 'Vitesse de Croisière',
@@ -210,33 +220,73 @@ export const clientsPageData = {
         alt: 'Vitesse de Croisière',
       },
     },
+    {
+      id: '9',
+      quote: 'testimonials.9.quote',
+      author: 'testimonials.9.author',
+      company: 'testimonials.9.company',
+      logo: {
+        src: '/images/pages/about-us/clients/logos/Vitesse-de-croisiere.jpg',
+        alt: 'Vitesse de Croisière',
+      },
+    },
+    {
+      id: '10',
+      quote: 'testimonials.10.quote',
+      author: 'testimonials.10.author',
+      company: 'testimonials.10.company',
+      logo: {
+        src: '/images/pages/about-us/clients/logos/Vitesse-de-croisiere.jpg',
+        alt: 'Vitesse de Croisière',
+      },
+    },
+    {
+      id: '11',
+      quote: 'testimonials.11.quote',
+      author: 'testimonials.11.author',
+      company: 'testimonials.11.company',
+      logo: {
+        src: '/images/pages/about-us/clients/logos/Vitesse-de-croisiere.jpg',
+        alt: 'Vitesse de Croisière',
+      },
+    },
+    {
+      id: '12',
+      quote: 'testimonials.12.quote',
+      author: 'testimonials.12.author',
+      company: 'testimonials.12.company',
+      logo: {
+        src: '/images/pages/about-us/clients/logos/Vitesse-de-croisiere.jpg',
+        alt: 'Vitesse de Croisière',
+      },
+    },
   ],
   videos: [
     {
       id: 'video-1',
-      thumbnail: '/images/testimonials/video-1.webp',
-      videoUrl: 'https://youtube.com/watch?v=example1',
-      quote: "TravelWorks is the backbone of our agency. We couldn't run the business without it.",
-      author: 'Agency Owner',
-      company: 'Club Voyages',
+      thumbnail: '/images/pages/about-us/clients/videos/fr/1.jpg',
+      videoUrl: 'https://www.youtube.com/watch?v=mLA2aojlvgU',
+      quote: 'videos.0.quote',
+      author: 'videos.0.author',
+      company: 'videos.0.company',
     },
 
     {
       id: 'video-2',
-      thumbnail: '/images/testimonials/video-2.webp',
-      videoUrl: 'https://youtube.com/watch?v=example2',
-      quote: 'The customer service is exceptional. Their team always responds quickly.',
-      author: 'Agency Manager',
-      company: 'Plein Soleil',
+      thumbnail: '/images/pages/about-us/clients/videos/fr/2.jpg',
+      videoUrl: 'https://www.youtube.com/watch?v=PlIQCneuJ7g&source_ve_path=OTY3MTQ&embeds_referring_euri=https%3A%2F%2Fpcvoyages.com%2F',
+      quote: 'videos.1.quote',
+      author: 'videos.1.author',
+      company: 'videos.1.company',
     },
 
     {
       id: 'video-3',
-      thumbnail: '/images/testimonials/video-3.webp',
-      videoUrl: 'https://youtube.com/watch?v=example3',
-      quote: 'Being able to access everything from one place has transformed our operations.',
-      author: 'Agency Director',
-      company: 'Voyages Revasol',
+      thumbnail: '/images/pages/about-us/clients/videos/fr/3.jpg',
+      videoUrl: 'https://www.youtube.com/watch?v=tN17xqeU0WQ',
+      quote: 'videos.2.quote',
+      author: 'videos.2.author',
+      company: 'videos.2.company',
     },
   ],
 };

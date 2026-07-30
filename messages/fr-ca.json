@@ -1611,6 +1611,94 @@
           "about-us-label": "À Propos",
           "about-us-link": "/fr-ca/a-propos/pc-voyages",
           "clients-label": "Clients"
+        },
+        "block-type-page-hero": {
+          "title": "Plus de <strong class=\"font-semibold text-white\">1000</strong> agences de voyages <strong class=\"font-semibold text-white\">nous font confiance</strong>",
+          "subtitle": "TravelWorks accompagne des agences de voyages partout dans le monde grâce à des solutions modernes de <strong class=\"font-semibold text-white\">comptabilité</strong> et de gestion administrative."
+        },
+        "testimonials": {
+          "0": {
+            "quote": "Grâce à PC Voyages, j’ai pu suivre l’évolution des ventes, obtenir les statistiques nécessaires au suivi opérationnel. Un outil indispensable pour mieux comprendre la gestion de l’entreprise. On obtient bilan et ou états des résultats en quelques minutes. Un charme !",
+            "author": "Robert Plante",
+            "company": "Club Aventure Voyages"
+          },
+          "1": {
+            "quote": "J'effectue ma comptabilité avec PC Voyages depuis 3 ans. Je gagne en rapidité et en efficacité avec le système. Cela fonctionne très bien. Rien à redire ! J’obtiens également toujours des réponses rapides à mes questions.",
+            "author": "Andréane Laroche",
+            "company": "Voyages Bélaro"
+          },
+          "2": {
+            "quote": "Je suis utilisateur de PC Voyages depuis le début du logiciel, impeccable ! L’amélioration est constante de ce produit. Rapport humain avec l’ensemble du staff de PC Voyages. Est un exemple à suivre, merci.",
+            "author": "Driss Regragui",
+            "company": "Groupe Terratours"
+          },
+          "3": {
+            "quote": "Le logiciel PC Voyages offre toutes les fonctionnalités pour gérer la comptabilité d’une agence de voyages. Très bien fait. Travailler à la main aujourd’hui ne serait pas envisageable ! Mon comptable externe l’utilise aussi pour fermer les mois et il l’adore. Incontestablement le meilleur logiciel comptable sur le marché pour l’industrie du voyage !",
+            "author": "Chantal Fournier",
+            "company": "Voyages Chantal Fournier"
+          },
+          "4": {
+            "quote": "PC Voyages englobe de A à Z l’ensemble de la gestion des opérations d’une agence de voyages. Il est simple d’utilisation aussi bien pour le comptable que pour l’agent de voyages moins familier avec la comptabilité. Pour ma part, j’ai connu dans une autre vie la facturation manuelle jusqu’à parfois 10h le soir. Alors, générer une facture automatiquement dans PC Voyages à partir de la réservation dans mon GDS (Sabre) n’a tout simplement pas de prix !",
+            "author": "Mustapha Bentajer",
+            "company": "Oasis Voyages"
+          },
+          "5": {
+            "quote": "J’utilisais auparavant un logiciel comptable non spécialisé dans le secteur du voyage. Rien à voir avec PC Voyages ! Très sécurisant pour une propriétaire d’agence comme moi de pouvoir donner des niveaux d’accès différents pour les agents internes et les agents extérieurs. Mon comptable est aussi ravi de son utilisation : facile, clair, bien conçu. L’équipe de PC Voyages répond à nos attentes très rapidement.",
+            "author": "Nathalie Etsonne",
+            "company": "Voyages ALM"
+          },
+          "6": {
+            "quote": "C’est un véritable plaisir de travailler dans un logiciel qui a été conçu par des experts de l’industrie du voyage. Les spécificités de notre secteur ont été prises en considération. Il est très simple à utiliser et j’apprécie particulièrement le fait de pouvoir me connecter de n’ importe où, à distance et de consulter les rapports de performance de mon agence de voyage en temps réel.",
+            "author": "Annick de Courval",
+            "company": "Inter-Voyages"
+          },
+          "7": {
+            "quote": "Nous utilisons le logiciel PC Voyages depuis une vingtaine d’année. Le système est très complet et facile d’utilisation. L’accès aux données est rapide grâce à des interfaces de recherche très conviviales. Nous apprécions particulièrement le fait de centraliser toutes nos informations dans un même endroit et d’avoir une vue précise et rapide de toutes nos succursales. Le personnel de support est très bien formé pour nous guider et les réponses sont rapides.",
+            "author": "Pierre Couture",
+            "company": "Club Voyage Agathe Leclerc/Orford"  
+          },
+          "8": {
+            "quote": "PC Voyages est bien fait visuellement. Le système de facturation interfacé avec notre engin de réservation est extraordinaire car il nous évite beaucoup d’erreurs. Nous apprécions aussi particulièrement la fonctionnalité de gestion des groupes. Très facile de balancer les dossiers et de gérer les taux de commissions.",
+            "author": "Chantal Lizotte",
+            "company": "Club Voyages Daniel"
+          },
+          "9": {
+            "quote": "J’utilise le logiciel PC Voyages depuis 2 ans. J’apprécie particulièrement ses nombreuses fonctionnalités. Avant cela, je gérais la comptabilité de notre agence manuellement. J’ai beaucoup gagné en rapidité d’exécution an ayant accès en temps réel à nos résultats et dans l’intégrité des données puisque je n’ai aujourd’hui aucun risque d’erreur relié au traitement manuel comme auparavant. Le support technique est rapide et le personnel fait preuve de professionnalisme pour partager les bonnes pratiques.",
+            "author": "Manon Pellerin",
+            "company": "Voyages Revasol"
+          },
+          "10": {
+            "quote": "J’utilise PC Voyages depuis mes premiers pas dans l’industrie il y a près de 15 ans. PC Voyages a toujours été très user-friendly et est parfait aussi bien pour gérer front et back office! La version web est accessible en tout temps de n’importe où, n’importe quand. Les réponses aux questions techniques sont toujours rapides et efficaces. Le logiciel évolue constamment avec de nouvelles fonctionnalités. Le système de backup est excellent, aucune crainte de perdre ses données ! Le module de CRM est un outil extraordinaire. Je suis très satisfaite du système et des services de PC Voyages!",
+            "author": "Hélène Boulianne",
+            "company": "Plein Soleil Voyages"
+          },
+          "11": {
+            "quote": "J’utilise PC Voyages depuis mes premiers pas dans l’industrie il y a près de 15 ans. PC Voyages a toujours été très user-friendly et est parfait aussi bien pour gérer front et back office! La version web est accessible en tout temps de n’importe où, n’importe quand. Les réponses aux questions techniques sont toujours rapides et efficaces. Le logiciel évolue constamment avec de nouvelles fonctionnalités. Le système de backup est excellent, aucune crainte de perdre ses données ! Le module de CRM est un outil extraordinaire. Je suis très satisfaite du système et des services de PC Voyages",
+            "author": "Manon Lacelle-Lacroix",
+            "company": "Marlin Travel"
+          },
+          "12": {
+            "quote": "Pour moi qui ne suis pas toujours à l’aise avec l’informatique, je dois avouer que le logiciel PC Voyages est très convivial et facile d’utilisation. Il a été extrêmement bien pensé et allège considérablement les tâches administratives d’une agence de voyages grâce à l’automatisation de certains processus : conciliations bancaires, impression de chèques en lot etc. Le service à la clientèle est excellent. Courtois, rapide et efficace, l’équipe de support de PC Voyages partage efficacement sa large expertise dans la comptabilité relative au secteur du voyage. Continuez votre beau travail et surtout à maintenir la grande qualité de votre service à la clientèle.",
+            "author": "Nathalie Germain",
+            "company": "Vitesse de Croisière" 
+          }
+        },
+        "videos": {
+          "0": {
+            "quote": "On utilise beaucoup le service à la clientèle de PC Voyages qui est très à l'écoute de nos commentaires. Dès qu'on soumet un billet, on a un rappel rapide ou un retour par courriel et ils prennent en compte nos commentaires et suggestions. J’adore utiliser leurs services.",
+            "author": "Nathalie Etesonne",
+            "company": "Voyages En Liberté"
+          },
+          "1": {
+            "quote": "J'utilise PC Voyages depuis 17 ans. C'est très agréable de pouvoir travailler de la maison et de partout avec une version web. Tout est bien intégré pour les multi-succursales. De belles améliorations depuis plusieurs années. Je suis un utilisateur très satisfait.",
+            "author": "Maxime Lessard",
+            "company": "Club Voyages"
+          },
+          "2": {
+            "quote": "Comme propriétaire, j’apprécie beaucoup l’analyse financière par succursale qui nous permet de mesurer l’évolution de nos marques par exemple par pays ou sur une région donnée, la performance de nos équipes ou encore l’analyse des marges bénéficiaires.",
+            "author": "Philippe Bergeron",
+            "company": "Uniktour"
+          }
         }
       },
       "contact": {

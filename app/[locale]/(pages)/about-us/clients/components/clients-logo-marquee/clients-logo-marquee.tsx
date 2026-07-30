@@ -21,14 +21,14 @@ export default function ClientsLogoMarquee({ clients }: ClientsLogoMarqueeProps)
       <div className="marquee">
         <div className="marquee-content">
           {duplicatedClients.map((client, index) => (
-            <div key={`${client.id}-${index}`} className="relative shrink-0">
+            <div key={`${client.id}-${index}`} className="relative shrink-0 h-40 flex items-center justify-center">
               <Image
                 height={200}
                 width={200}
                 src={client.logo.src}
                 alt={client.logo.alt}
                 title={client.logo.alt}
-                className="object-contain" />
+                className="block h-auto w-auto object-contain" />
             </div>
           ))}
         </div>
