@@ -1767,8 +1767,9 @@
         "trainingCta": {
           "title": "Online Training",
           "description": "Increase your productivity as quickly as possible with TravelWorks!",
-          "imagePlaceholder": "Training image placeholder",
-          "button": "See more"
+          "imageAlt": "Training",
+          "button": "See more",
+          "linkTraining": "/training/training-platform"
         },
         "map": {
           "title": "Montreal Head Office",

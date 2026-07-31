@@ -79,7 +79,7 @@ export default function ContactForm({ countries, locale }: Props) {
   }
 
   return (
-    <section>
+    <section className="relative z-10">
       <h2 className="text-[2rem] font-medium uppercase text-brand-blue">{t('title')}</h2>
 
       <form onSubmit={handleSubmit} noValidate className="mt-5 space-y-5">
@@ -89,7 +89,7 @@ export default function ContactForm({ countries, locale }: Props) {
             name="fullName"
             type="text"
             aria-describedby={fieldErrors.fullName ? 'fullName-error' : undefined}
-            className={`mt-2 w-full border-b bg-transparent py-2 text-[1rem] outline-none ${
+            className={`mt-2 w-full border-b bg-transparent py-2 text-[1rem] text-slate-900 outline-none ${
               fieldErrors.fullName ? 'border-red-500' : 'border-slate-300'
             }`}
           />
@@ -106,7 +106,7 @@ export default function ContactForm({ countries, locale }: Props) {
             name="email"
             type="email"
             aria-describedby={fieldErrors.email ? 'email-error' : undefined}
-            className={`mt-2 w-full border-b bg-transparent py-2 text-[1rem] outline-none ${
+            className={`mt-2 w-full border-b bg-transparent py-2 text-[1rem] text-slate-900 outline-none ${
               fieldErrors.email ? 'border-red-500' : 'border-slate-300'
             }`}
           />
@@ -123,7 +123,7 @@ export default function ContactForm({ countries, locale }: Props) {
             name="phone"
             type="tel"
             aria-describedby={fieldErrors.phone ? 'phone-error' : undefined}
-            className={`mt-2 w-full border-b bg-transparent py-2 text-[1rem] outline-none ${
+            className={`mt-2 w-full border-b bg-transparent py-2 text-[1rem] text-slate-900 outline-none ${
               fieldErrors.phone ? 'border-red-500' : 'border-slate-300'
             }`}
           />
@@ -140,7 +140,7 @@ export default function ContactForm({ countries, locale }: Props) {
             name="agencyName"
             type="text"
             aria-describedby={fieldErrors.agencyName ? 'agencyName-error' : undefined}
-            className={`mt-2 w-full border-b bg-transparent py-2 text-[1rem] outline-none ${
+            className={`mt-2 w-full border-b bg-transparent py-2 text-[1rem] text-slate-900 outline-none ${
               fieldErrors.agencyName ? 'border-red-500' : 'border-slate-300'
             }`}
           />
@@ -156,13 +156,13 @@ export default function ContactForm({ countries, locale }: Props) {
           <select
             name="country"
             aria-describedby={fieldErrors.country ? 'country-error' : undefined}
-            className={`mt-2 w-full border-b bg-transparent py-2 text-[1rem] outline-none ${
+            className={`mt-2 w-full border-b bg-transparent py-2 text-[1rem] text-slate-900 outline-none ${
               fieldErrors.country ? 'border-red-500' : 'border-slate-300'
             }`}
           >
-            <option value="">{t('countryPlaceholder')}</option>
+            <option className='text-gray-900' value="">{t('countryPlaceholder')}</option>
             {countries.map((country) => (
-              <option key={country.value} value={country.value}>
+              <option className='text-gray-900' key={country.value} value={country.value}>
                 {country.label}
               </option>
             ))}
@@ -191,12 +191,14 @@ export default function ContactForm({ countries, locale }: Props) {
         </fieldset>
 
         <label className="block">
-          <span className="text-[0.95rem] text-slate-700">{t('fields.message')}</span>
+          <span className="text-[0.95rem] text-slate-700">
+            {t('fields.message')}
+          </span>
           <textarea
             name="message"
             rows={7}
             aria-describedby={fieldErrors.message ? 'message-error' : undefined}
-            className={`mt-2 w-full resize-y rounded-md border bg-transparent px-3 py-2 text-[1rem] outline-none ${
+            className={`mt-2 w-full resize-y rounded-md border bg-white px-3 py-2 text-[1rem] text-slate-900 outline-none ${
               fieldErrors.message ? 'border-red-500' : 'border-slate-300'
             }`}
           />

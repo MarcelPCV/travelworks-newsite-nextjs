@@ -1,5 +1,7 @@
 import { ArrowRight } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function OnlineTrainingCard() {
   const t = useTranslations('pages.about-us.contact.trainingCta');
@@ -11,17 +13,23 @@ export default function OnlineTrainingCard() {
       </h3>
       <p className="mt-2 text-[1rem] text-brand-blue">{t('description')}</p>
 
-      <div className="mt-5 flex min-h-40 items-center justify-center rounded-md border border-dashed border-brand-blue/40 bg-slate-50 text-center text-[0.95rem] text-brand-blue/70">
-        {t('imagePlaceholder')}
+      <div className="mt-5 flex min-h-45 items-center justify-center rounded-md border border-dashed border-brand-blue/40 bg-slate-50 text-center text-[0.95rem] text-brand-blue/70">
+        <Image
+          src="/images/pages/about-us/contact/training.png"
+          alt={t('imageAlt')}
+          width={600}
+          height={300}
+          className="h-35 w-auto object-contain"
+        />
       </div>
 
-      <button
-        type="button"
+      <Link
+        href={t('linkTraining')}
         className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-md bg-brand-blue px-4 py-2 text-[0.92rem] font-medium text-white transition hover:bg-brand-navy"
       >
         {t('button')}
         <ArrowRight className="h-4 w-4" />
-      </button>
+      </Link>
     </aside>
   );
 }

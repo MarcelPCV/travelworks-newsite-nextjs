@@ -20,19 +20,19 @@ function OfficeCard({ officeKey }: OfficeCardProps) {
 
       <div className="space-y-1 pt-1 text-[0.95rem]">
         <p className="flex items-center gap-2 text-brand-blue">
-          <Phone className="h-4 w-4" />
+          <Phone className="h-4 w-4 text-amber-600" />
           <span>{t(`${officeKey}.phone1`)}</span>
         </p>
 
         {t(`${officeKey}.phone2`) && (
           <p className="flex items-center gap-2 text-brand-blue">
-            <Phone className="h-4 w-4" />
+            <Phone className="h-4 w-4 text-amber-600" />
             <span>{t(`${officeKey}.phone2`)}</span>
           </p>
         )}
 
         <p className="flex items-center gap-2 text-brand-blue">
-          <Mail className="h-4 w-4" />
+          <Mail className="h-4 w-4 text-amber-600" />
           <span>{t(`${officeKey}.email`)}</span>
         </p>
       </div>

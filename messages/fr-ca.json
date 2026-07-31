@@ -1767,8 +1767,9 @@
         "trainingCta": {
           "title": "Formation en ligne",
           "description": "Augmentez votre productivité le plus rapidement possible avec TravelWorks !",
-          "imagePlaceholder": "Espace réservé à l'image de formation",
-          "button": "Voir plus"
+          "imageAlt": "Formation en ligne",
+          "button": "Voir plus",
+          "linkTraining": "/fr-ca/formation/plateforme-de-formation"
         },
         "map": {
           "title": "Siège social de Montréal",

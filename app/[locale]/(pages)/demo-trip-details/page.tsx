@@ -6,6 +6,8 @@ import FeatureCards from '@/app/[locale]/(pages)/(home)/components/feature-cards
 import { getAlternates } from '@/app/lib/SEO/getAlternates';
 import { Metadata } from 'next';
 import { Locale } from 'next-intl';
+import TitleHero from '../../components/shared/title-hero/title-hero';
+import YoutubeVideoSection  from '@/app/[locale]/components/shared/video/youtube-video-section';
 
 export async function generateMetadata({
   params,
@@ -30,18 +32,26 @@ export async function generateMetadata({
   };
 }
 
-export default async function PageDemoTripDetails({ params }: { params: Promise<{ locale: string }> }) {
-  const { locale: routeLocale } = await params;
+export default async function Page({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale: routeLocale, locale } = await params;
   setRequestLocale(routeLocale);
 
   const messageLocale = routeToMessageLocale[routeLocale] ?? 'en-us';
   const countries = getCountryOptions(messageLocale);
-
   return (
     <main>
-      <h1 className="sr-only">Ask for a Demo</h1>
+      <TitleHero 
+        title={locale === 'fr-ca' ? 'Détails du voyage' : 'Trip Details'}
+        imageSrc="/images/pages/ask-for-demo/sent.webp"
+      />
       <AskForDemoPageContent countries={countries} locale={messageLocale} />
-      <FeatureCards />
+      <YoutubeVideoSection
+        blockType="YoutubeVideo"
+        heading={locale === 'fr-ca' ? 'BOOSTEZ L\'EFFICACITÉ DE VOTRE AGENCE DE VOYAGE !' : 'BOOST THE EFFICIENCY OF YOUR TRAVEL AGENCY!'}
+        videoId="qG8LDdvA6TE"
+        channelLabel="Travelworks Showcase"
+        description={locale === 'fr-ca' ? "Cette vidéo met en lumière notre collaboration avec Acme Corp, démontrant l'efficacité de notre plateforme en temps réel." : "This video highlights our work with Acme Corp, demonstrating our platform's efficiency in real-time."}
+      />
     </main>
   );
 }

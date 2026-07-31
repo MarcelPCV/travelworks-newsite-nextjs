@@ -41,15 +41,6 @@ export default function ConsentManager() {
                 >
                   {t('privacyPolicyLabel')}
                 </a>{' '}
-                {t('betweenLinksText')}{' '}
-                <a
-                  href={t('cookiePolicyUrl')}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline underline-offset-2 decoration-current transition-opacity hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
-                >
-                  {t('cookiePolicyLabel')}
-                </a>
                 {t('descriptionAfterCookie')}
               </div>
             </ConsentBanner.Description>

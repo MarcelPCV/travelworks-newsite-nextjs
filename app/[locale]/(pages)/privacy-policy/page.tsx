@@ -460,7 +460,10 @@ export default async function PrivacyPolicyPage({
 
   return (
     <main>
-      <TitleHero title={content.title} />
+      <TitleHero 
+        title={content.title}
+        imageSrc="/images/pages/privacy-policy/privacy-policy.png"
+      />
 
       <section className="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8">
         <div className="flex items-center justify-baseline mb-8 text-sm font-semibold text-slate-600 bg-gray-100 rounded-md border-2 border-gray-200 px-5 py-3">

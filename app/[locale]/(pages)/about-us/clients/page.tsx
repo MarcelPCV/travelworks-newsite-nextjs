@@ -8,8 +8,7 @@ import { Locale } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import { Breadcrumb } from '@/app/[locale]/components/news/breadcrumb';
 import type { BreadcrumbItem } from '@/app/[locale]/(pages)/news/types';
-import { clientsPageData } from './data';
-import {getClientsPageData} from './data/index'
+import {getClientsPageData} from './data/index';
 
 export async function generateMetadata({
   params,
