@@ -3,6 +3,7 @@ import { Locale } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
 import { getAlternates } from '@/app/lib/SEO/getAlternates';
 import TitleHero from '../../components/shared/title-hero/title-hero';
+import { PenLine } from 'lucide-react';
 
 type PolicySection = {
   heading: string;
@@ -24,28 +25,28 @@ type PolicyContent = {
 const policyContentByLocale: Record<string, PolicyContent> = {
   'fr-ca': {
     title: 'Politique de confidentialite',
-    metadataTitle: 'Politique de confidentialite - TravelWorks',
+    metadataTitle: 'Politique de confidentialite - PcVoyages',
     metadataDescription:
-      'Consultez la politique de confidentialite de TravelWorks pour comprendre comment nous collectons, utilisons, conservons et prote geons les renseignements personnels.',
+      'Consultez la politique de confidentialite de PcVoyages pour comprendre comment nous collectons, utilisons, conservons et prote geons les renseignements personnels.',
     lastUpdatedLabel: 'Derniere mise a jour :',
     lastUpdatedDate: '30 mars 2026',
     introServicesLabel:
-      'Cette politique s applique a tous les services fournis par TravelWorks, notamment :',
+      'Cette politique s applique a tous les services fournis par PcVoyages, notamment :',
     introContactLabel:
       'Pour toute question au sujet de cette politique ou pour exercer vos droits, veuillez communiquer avec :',
     sections: [
       {
         heading: '1. Introduction',
         paragraphs: [
-          'TravelWorks ("TravelWorks", "nous", "notre" ou "nos") s engage a proteger la confidentialite et la securite des renseignements personnels qui lui sont confies.',
+          'PcVoyages ("PcVoyages", "nous", "notre" ou "nos") s engage a proteger la confidentialite et la securite des renseignements personnels qui lui sont confies.',
           'La presente Politique de confidentialite explique comment nous recueillons, utilisons, communiquons, stockons, conservons et prote geons les renseignements personnels lorsque vous utilisez nos services.',
           'Selon le service que vous utilisez, nous pouvons recueillir differentes categories de renseignements personnels a des fins differentes. Cette politique explique quelles informations nous recueillons, pourquoi nous les recueillons, combien de temps nous les conservons, avec qui elles peuvent etre partagees et quels sont vos droits.',
-          'TravelWorks ne recueille que les renseignements personnels raisonnablement necessaires pour fournir ses services, respecter ses obligations legales, ameliorer l experience utilisateur, maintenir la securite et exploiter ses activites.',
+          'PcVoyages ne recueille que les renseignements personnels raisonnablement necessaires pour fournir ses services, respecter ses obligations legales, ameliorer l experience utilisateur, maintenir la securite et exploiter ses activites.',
           'Nous nous engageons a traiter les renseignements personnels de maniere responsable et conformement :',
         ],
         bullets: [
-          'Notre site web corporatif, y compris www.travelworkssolution.com et tout site connexe, ou les visiteurs peuvent en apprendre davantage sur nos produits et services, nous contacter, demander une demonstration ou communiquer avec nous.',
-          'La plateforme TravelWorks en mode logiciel-service (SaaS), qui permet aux agences de voyages et a d autres organisations autorisees de gerer leurs operations.',
+          'Notre site web corporatif, y compris www.pcvoyages.com et tout site connexe, ou les visiteurs peuvent en apprendre davantage sur nos produits et services, nous contacter, demander une demonstration ou communiquer avec nous.',
+          'La plateforme PcVoyages en mode logiciel-service (SaaS), qui permet aux agences de voyages et a d autres organisations autorisees de gerer leurs operations.',
           'a la Loi sur la protection des renseignements personnels dans le secteur prive (Loi 25) du Quebec ;',
           'aux lois canadiennes applicables en matiere de vie privee ;',
           'a toute autre loi applicable en matiere de protection des renseignements personnels la ou nos services sont offerts.',
@@ -55,8 +56,8 @@ const policyContentByLocale: Record<string, PolicyContent> = {
       {
         heading: '2. Personne responsable de la protection des renseignements personnels',
         paragraphs: [
-          'Conformement a la Loi 25 du Quebec, TravelWorks a designe une personne responsable de la protection des renseignements personnels.',
-          'Responsable de la protection des renseignements personnels : TravelWorks',
+          'Conformement a la Loi 25 du Quebec, PcVoyages a designe une personne responsable de la protection des renseignements personnels.',
+          'Responsable de la protection des renseignements personnels : PcVoyages',
         ],
       },
       {
@@ -94,7 +95,7 @@ const policyContentByLocale: Record<string, PolicyContent> = {
           'Lorsque requis, nous nous assurons que ces fournisseurs sont lies par contrat pour proteger les renseignements personnels et les traiter uniquement selon nos instructions.',
         ],
         bullets: [
-          'Microsoft Azure - hebergement et infrastructure pour la plateforme SaaS de TravelWorks',
+          'Microsoft Azure - hebergement et infrastructure pour la plateforme SaaS de PcVoyages',
           'Google Analytics - analyses du site web',
           'Fournisseurs de livraison de courriels',
           'Services de soutien a la clientele',
@@ -129,8 +130,8 @@ const policyContentByLocale: Record<string, PolicyContent> = {
       {
         heading: '8. Utilisation des renseignements personnels dans la plateforme SaaS',
         paragraphs: [
-          'La plateforme SaaS de TravelWorks permet a nos clients de gerer leurs operations.',
-          'Lorsque les organisations clientes stockent des renseignements personnels dans la plateforme, TravelWorks traite generalement ces renseignements au nom de ses clients afin de fournir les services demandes.',
+          'La plateforme SaaS de PcVoyages permet a nos clients de gerer leurs operations.',
+          'Lorsque les organisations clientes stockent des renseignements personnels dans la plateforme, PcVoyages traite generalement ces renseignements au nom de ses clients afin de fournir les services demandes.',
           'Nos clients demeurent responsables de s assurer qu ils disposent de l autorite necessaire pour recueillir et utiliser les renseignements personnels au sein de leur organisation.',
         ],
         bullets: [
@@ -154,7 +155,7 @@ const policyContentByLocale: Record<string, PolicyContent> = {
         paragraphs: [
           'Les renseignements personnels peuvent etre traites ou stockes a l exterieur du Quebec ou du Canada.',
           'Certains de nos fournisseurs de services, y compris Google Analytics et des fournisseurs d hebergement infonuagique, peuvent traiter des renseignements dans d autres juridictions, y compris les Etats-Unis.',
-          'Avant tout transfert de renseignements personnels hors Quebec lorsque requis, TravelWorks evalue les risques a la vie privee et met en place des garanties contractuelles, techniques et organisationnelles appropriees pour assurer un niveau de protection adequat, conformement a la Loi 25 du Quebec.',
+          'Avant tout transfert de renseignements personnels hors Quebec lorsque requis, PcVoyages evalue les risques a la vie privee et met en place des garanties contractuelles, techniques et organisationnelles appropriees pour assurer un niveau de protection adequat, conformement a la Loi 25 du Quebec.',
         ],
       },
       {
@@ -181,7 +182,7 @@ const policyContentByLocale: Record<string, PolicyContent> = {
       {
         heading: '13. Evaluations des facteurs relatifs a la vie privee',
         paragraphs: [
-          'Lorsque requis par la Loi 25 du Quebec, TravelWorks realise des evaluations des facteurs relatifs a la vie privee avant la mise en oeuvre de projets impliquant des renseignements personnels ou le transfert de renseignements personnels a l exterieur du Quebec.',
+          'Lorsque requis par la Loi 25 du Quebec, PcVoyages realise des evaluations des facteurs relatifs a la vie privee avant la mise en oeuvre de projets impliquant des renseignements personnels ou le transfert de renseignements personnels a l exterieur du Quebec.',
         ],
       },
       {
@@ -194,7 +195,7 @@ const policyContentByLocale: Record<string, PolicyContent> = {
       {
         heading: '15. Prise de decision automatisee',
         paragraphs: [
-          'TravelWorks ne prend pas de decisions fondees uniquement sur un traitement automatise produisant des effets juridiques ou des effets importants similaires sur les personnes.',
+          'PcVoyages ne prend pas de decisions fondees uniquement sur un traitement automatise produisant des effets juridiques ou des effets importants similaires sur les personnes.',
           'Si cette pratique change a l avenir, les personnes concernees en seront informees conformement a la loi applicable.',
         ],
       },
@@ -462,16 +463,19 @@ export default async function PrivacyPolicyPage({
       <TitleHero title={content.title} />
 
       <section className="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8">
-        <p className="mb-8 text-sm font-semibold text-slate-600">
-          <span>{content.lastUpdatedLabel} </span>
-          <span>{content.lastUpdatedDate}</span>
-        </p>
+        <div className="flex items-center justify-baseline mb-8 text-sm font-semibold text-slate-600 bg-gray-100 rounded-md border-2 border-gray-200 px-5 py-3">
+          <PenLine className="h-6 w-6 text-brand-blue" aria-hidden="true" />
+          <span className='ml-2 text-brand-blue uppercase'>{content.lastUpdatedLabel} </span>
+          <span className='ml-2'>{content.lastUpdatedDate}</span>
+        </div>
 
         {content.introServicesLabel ? <p className="mb-4 text-slate-700">{content.introServicesLabel}</p> : null}
 
         {content.sections.map((section) => (
           <article key={section.heading} className="mb-10">
-            <h2 className="mb-4 text-2xl font-bold text-slate-900">{section.heading}</h2>
+            <h2 className="mb-4 text-2xl font-bold text-brand-blue">
+              {section.heading}
+            </h2>
 
             {section.paragraphs?.map((paragraph) => (
               <p key={paragraph} className="mb-4 leading-7 text-slate-700">

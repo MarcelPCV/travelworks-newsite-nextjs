@@ -173,7 +173,7 @@ export default function DropdownCtaButton({
         id={menuId}
         role="menu"
         aria-hidden={!isOpen}
-        className={`absolute ${alignmentClassName} top-full z-50 mt-3 w-56 rounded-xl border border-zinc-300 bg-[#e5e5e5] p-3 shadow-lg transition duration-200 motion-reduce:transition-none ${
+        className={`absolute ${alignmentClassName} top-full z-50 mt-3 w-56 rounded-xl border border-zinc-300 bg-[#ededed] p-3 shadow-lg transition duration-200 motion-reduce:transition-none ${
           isOpen
             ? 'visible translate-y-0 opacity-100'
             : 'pointer-events-none invisible -translate-y-1 opacity-0'
@@ -185,7 +185,7 @@ export default function DropdownCtaButton({
               <>
                 {option.icon ? (
                   <span
-                    className={`inline-flex shrink-0 items-center justify-center ${optionIconClassName} [&>svg]:text-zinc-800`}
+                    className={`inline-flex shrink-0 items-center justify-center ${optionIconClassName} [&>svg]:text-brand-blue`}
                   >
                     {option.icon}
                   </span>

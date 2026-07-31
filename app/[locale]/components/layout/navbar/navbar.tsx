@@ -117,6 +117,7 @@ export default function Navbar() {
       ? 'https://www.pcvweb.com/Login.aspx?lang=FR'
       : 'https://www.pcvweb.com/Login.aspx?lang=EN';
   const knowledgeBaseHref = 'https://www.tw-pcv-learning.com/en';
+  const trainingPlatformHref = 'https://travelworkssolutionpcvoyages.talentlms.com/plus/login?redirect=%2Fdashboard';
   const supportLoginHref =
     'https://support.pcvweb.com/auth/v3/signin?brand_id=360003288198&locale=en-ca&return_to=https%3A%2F%2Fsupport.pcvweb.com%2Fhc%2Fen-ca%2Frequests%2Fnew&role=end_user';
 
@@ -148,7 +149,9 @@ export default function Navbar() {
     {
       id: 'Training',
       label: t('cta.logInOptions.trainingPlatform'),
-      href: oneLevelHref(loginSlugByOptionId.Training),
+      href: trainingPlatformHref,
+      target: '_blank',
+      rel: 'noopener noreferrer',
       icon: <CircleArrowRight aria-hidden="true" />,
     },
     {
