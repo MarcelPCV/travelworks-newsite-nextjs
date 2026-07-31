@@ -2,7 +2,11 @@
 
 import { useCallback } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
-import { DEFAULT_ROUTE_LOCALE, localeOptions } from '@/app/[locale]/locale-config';
+import {
+  DEFAULT_ROUTE_LOCALE,
+  getPrivacyPolicySegment,
+  localeOptions,
+} from '@/app/[locale]/locale-config';
 import {
   aboutUsLinks,
   loginSlugByOptionId,
@@ -24,6 +28,8 @@ import ContactBarSection from './contact-bar-section';
 export default function Index() {
   const activeMessageLocale = useLocale();
   const t = useTranslations('nav');
+  const tFooter = useTranslations('footer.links');
+  const tBenefits = useTranslations('pages.travel-agency-software.benefits');
 
   const currentRouteLocale =
     localeOptions.find((item) => item.messageLocale === activeMessageLocale)?.routeLocale ??
@@ -36,6 +42,21 @@ export default function Index() {
   );
 
   const productKeys = productColumnsByCategory.travelworks.flat() as ProductLinkKey[];
+  const benefitsHrefBase = getSolutionHref('benefits', currentRouteLocale, withLocalePrefix);
+  const privacyPolicyHref = getOneLevelHref(
+    getPrivacyPolicySegment(currentRouteLocale),
+    withLocalePrefix,
+  );
+
+  const benefitsLinks = [
+    { label: tBenefits('block-type-sections.0.title'), href: `${benefitsHrefBase}#cloud` },
+    { label: tBenefits('block-type-sections.1.title'), href: `${benefitsHrefBase}#efficient` },
+    { label: tBenefits('block-type-sections.2.title'), href: `${benefitsHrefBase}#scalable` },
+    { label: tBenefits('block-type-sections.3.title'), href: `${benefitsHrefBase}#secure` },
+    { label: tBenefits('block-type-sections.4.title'), href: `${benefitsHrefBase}#smart` },
+    { label: tBenefits('block-type-sections.5.title'), href: `${benefitsHrefBase}#reliable` },
+    { label: tBenefits('block-type-sections.6.title'), href: `${benefitsHrefBase}#evolutionary` },
+  ];
 
   const columns: FooterLinkColumn[] = [
     {
@@ -45,6 +66,11 @@ export default function Index() {
         label: t(`products.links.${key}`),
         href: getSolutionHref(key, currentRouteLocale, withLocalePrefix),
       })),
+    },
+    {
+      id: 'benefits',
+      heading: t('products.links.benefits'),
+      links: benefitsLinks,
     },
     {
       id: 'about-us',
@@ -87,6 +113,16 @@ export default function Index() {
         {
           label: t('cta.logInOptions.knowledgeBase'),
           href: getOneLevelHref(loginSlugByOptionId['Knowledge Base'], withLocalePrefix),
+        },
+      ],
+    },
+    {
+      id: 'privacy',
+      heading: tFooter('privacy.heading'),
+      links: [
+        {
+          label: tFooter('privacy.policyLabel'),
+          href: privacyPolicyHref,
         },
       ],
     },

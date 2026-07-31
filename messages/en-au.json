@@ -1783,6 +1783,12 @@
       "phone": "1300 936 568",
       "phone2": "+61 (0) 2 8880 8387",
       "email": "hello@blacksheeptourism.com.au"
+    },
+    "links": {
+      "privacy": {
+        "heading": "Privacy",
+        "policyLabel": "Privacy Policy"
+      }
     }
   },
   "home": {
@@ -2032,7 +2038,7 @@
     "betweenLinksText": "and",
     "cookiePolicyLabel": "Cookie Policy",
     "descriptionAfterCookie": " for more information.",
-    "privacyPolicyUrl": "#",
+    "privacyPolicyUrl": "/en-au/privacy-policy",
     "cookiePolicyUrl": "#"
   },
   "cmsUnavailable": {

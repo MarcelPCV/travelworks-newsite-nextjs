@@ -77,7 +77,7 @@ const defaultColumns: FooterLinkColumn[] = [
 function FooterLinkColumnList({ column }: { column: FooterLinkColumn }) {
   return (
     <div>
-      <h3 className="type-h6 text-white">
+      <h3 className="type-h6 text-white border-b-2 border-white/20 pb-2.5">
         {column.heading}
       </h3>
       <ul className="mt-4 space-y-2.5">

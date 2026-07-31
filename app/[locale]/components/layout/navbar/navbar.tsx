@@ -464,8 +464,8 @@ export default function Navbar() {
                           role="menuitem"
                           className={`flex items-center gap-2 rounded-md border-l-2 px-3 py-2 text-sm transition duration-150 ${
                             isActive
-                              ? 'border-orange-400 bg-white text-zinc-900'
-                              : 'border-transparent text-white hover:bg-white hover:text-zinc-900'
+                                ? 'border-orange-400 bg-brand-blue text-white uppercase'
+                                : 'border-transparent text-white hover:bg-zinc-300 hover:text-zinc-900 uppercase'
                           }`}
                           onClick={() => setActiveDesktopPanel(null)}
                         >
@@ -527,8 +527,8 @@ export default function Navbar() {
                           role="menuitem"
                           className={`flex items-center gap-2 rounded-md border-l-2 px-3 py-2 text-sm transition duration-150 ${
                             isActive
-                              ? 'border-orange-400 bg-white text-zinc-900'
-                              : 'border-transparent text-white hover:bg-white hover:text-zinc-900'
+                              ? 'border-orange-400 bg-brand-blue text-white uppercase'
+                              : 'border-transparent text-white hover:bg-zinc-300 hover:text-zinc-900 uppercase'
                           }`}
                           onClick={() => setActiveDesktopPanel(null)}
                         >
@@ -682,8 +682,8 @@ export default function Navbar() {
                             onClick={() => setActiveDesktopPanel(null)}
                             className={`flex items-center gap-2 rounded-md border-l-2 px-3 py-2 text-sm transition duration-150 ${
                               isActive
-                                ? 'border-orange-400 bg-zinc-300 text-zinc-900'
-                                : 'border-transparent text-white hover:bg-zinc-300 hover:text-zinc-900'
+                                ? 'border-orange-400 bg-brand-blue text-white uppercase'
+                                : 'border-transparent text-white hover:bg-zinc-300 hover:text-zinc-900 uppercase'
                             }`}
                           >
                             <div className="w-10 h-10 shrink-0 bg-zinc-100 flex items-center justify-center rounded-full shadow-xl">

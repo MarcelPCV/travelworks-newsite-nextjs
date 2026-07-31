@@ -125,8 +125,8 @@ export default function HeroCarousel({
 
                   {/* ================= DESKTOP ================= */}
                   <div className="hidden h-full items-center md:flex lg:px-10 xl:px-20">
-                    <div className="md:max-w-[500px] xl:max-w-2xl px-8 md:px-20 lg:px-22">
-                      <h2 className="md:text-xl xl:text-3xl text-brand-blue">
+                    <div className="md:max-w-[500px] xl:max-w-3xl px-8 md:px-20 lg:px-22">
+                      <h2 className="md:text-xl xl:text-3xl text-brand-blue uppercase">
                         {slide.titleRich ?? slide.titlePlain ?? slide.title}
                       </h2>
 

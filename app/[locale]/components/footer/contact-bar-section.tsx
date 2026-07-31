@@ -1,7 +1,7 @@
 'use client';
 
 import React, { ReactNode } from 'react';
-import { ArrowUp } from 'lucide-react';
+import { CircleArrowUp } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { DEFAULT_ROUTE_LOCALE, localeOptions } from '@/app/[locale]/locale-config';
@@ -166,9 +166,9 @@ export default function ContactBarSection({
               type="button"
               onClick={handleBackToTop}
               aria-label="Back to top"
-              className="ml-2 inline-flex items-center gap-2 rounded-md border border-neutral-200 bg-white px-3 py-2 text-sm font-medium text-neutral-800 hover:bg-neutral-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-blue"
+              className="ml-2 inline-flex items-center gap-2 rounded-md border border-neutral-200 bg-brand-blue px-3 py-2 text-sm font-medium text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-blue"
             >
-              <ArrowUp className="h-4 w-4" />
+              <CircleArrowUp className="h-8 w-8" />
               <span>Back to top</span>
             </button>
           )}

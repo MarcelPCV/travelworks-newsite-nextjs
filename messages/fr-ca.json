@@ -1783,6 +1783,12 @@
       "phone": "1 877 282-4556",
       "phone2": "",
       "email": "info@travelworkssolution.com"
+    },
+    "links": {
+      "privacy": {
+        "heading": "Confidentialite",
+        "policyLabel": "Politique de confidentialite"
+      }
     }
   },
   "home": {
@@ -2027,7 +2033,7 @@
     "betweenLinksText": "et notre",
     "cookiePolicyLabel": "Politique relative aux cookies",
     "descriptionAfterCookie": " pour plus d'informations.",
-    "privacyPolicyUrl": "#",
+    "privacyPolicyUrl": "/fr-ca/politique-de-confidentialite",
     "cookiePolicyUrl": "#"
   },
   "cmsUnavailable": {

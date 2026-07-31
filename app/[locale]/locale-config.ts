@@ -53,6 +53,13 @@ export const demoByRouteLocale: Record<string, string> = {
   'en-au': 'ask-for-a-demo',
 };
 
+export const privacyPolicySegmentByRouteLocale: Record<string, string> = {
+  en: 'privacy-policy',
+  'en-ca': 'privacy-policy',
+  'fr-ca': 'politique-de-confidentialite',
+  'en-au': 'privacy-policy',
+};
+
 export const newsSegmentByRouteLocale: Record<string, string> = {
   en: 'news',
   'en-ca': 'news',
@@ -266,6 +273,11 @@ export function getDemoSlug(routeLocale: string): string {
   return demoByRouteLocale[routeLocale] ?? demoByRouteLocale.en;
 }
 
+const knownPrivacyPolicySegments = new Set(Object.values(privacyPolicySegmentByRouteLocale));
+export function getPrivacyPolicySegment(routeLocale: string): string {
+  return privacyPolicySegmentByRouteLocale[routeLocale] ?? privacyPolicySegmentByRouteLocale.en;
+}
+
 const knownNewsSegments = new Set(Object.values(newsSegmentByRouteLocale));
 export function getNewsSegment(routeLocale: string): string {
   return newsSegmentByRouteLocale[routeLocale] ?? newsSegmentByRouteLocale.en;
@@ -358,6 +370,11 @@ export function replaceLocaleInPath(pathname: string, targetLocale: string): str
   // Keep one-level demo page slug localized when switching locales.
   if (segments.length > 0 && knownDemoSlugs.has(segments[0])) {
     segments[0] = getDemoSlug(targetLocale);
+  }
+
+  // Keep one-level privacy policy slug localized when switching locales.
+  if (segments.length > 0 && knownPrivacyPolicySegments.has(segments[0])) {
+    segments[0] = getPrivacyPolicySegment(targetLocale);
   }
 
   // Keep the static news/category segments localized when switching locales.
