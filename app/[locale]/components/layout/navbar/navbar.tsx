@@ -580,7 +580,9 @@ export default function Navbar() {
                 <Search className="h-5 w-5" aria-hidden="true" />
               </button>
               <Link href={askForDemoHref}>
-                <CtaButton label={t('cta.askForDemo')} variant="orangeGradient" size="xs" />
+                <div className='button-main'>
+                  <CtaButton label={t('cta.askForDemo')} variant="orangeGradient" size="xs" />
+                </div>
               </Link>
               <div
                 onFocusCapture={() => {
