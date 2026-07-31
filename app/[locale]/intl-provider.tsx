@@ -3,6 +3,7 @@
 import { NextIntlClientProvider } from 'next-intl';
 import type { AbstractIntlMessages } from 'next-intl';
 import type { ReactNode } from 'react';
+import LoadingOverlay from '@/app/[locale]/components/shared/loading-overlay';
 
 export default function IntlProviderWrapper({
   children,
@@ -18,6 +19,7 @@ export default function IntlProviderWrapper({
 
   return (
     <NextIntlClientProvider locale={effectiveLocale} messages={messages} timeZone="UTC">
+      <LoadingOverlay />
       {children}
     </NextIntlClientProvider>
   );
