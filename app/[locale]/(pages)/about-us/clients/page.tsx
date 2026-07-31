@@ -6,7 +6,7 @@ import { getAlternates } from '@/app/lib/SEO/getAlternates';
 import { Metadata } from 'next';
 import { Locale } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
-import { Breadcrumb } from '@/app/[locale]/components/news/breadcrumb';
+import { Breadcrumb } from '@/app/[locale]/(pages)/news/components/breadcrumb';
 import type { BreadcrumbItem } from '@/app/[locale]/(pages)/news/types';
 import {getClientsPageData} from './data/index';
 

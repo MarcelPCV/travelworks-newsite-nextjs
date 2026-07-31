@@ -9,12 +9,14 @@ import {
 } from './lib/categories';
 import { getNewsLabels } from './lib/labels';
 import { getAllArticles, paginateArticles } from './lib/news';
-import { CategoryBadge } from '@/app/[locale]/components/news/category-badge';
-import { FeaturedNewsCard } from '@/app/[locale]/components/news/featured-news-card';
-import { NewsGrid } from '@/app/[locale]/components/news/news-grid';
-import { NewsHero } from '@/app/[locale]/components/news/news-hero';
-import { NewsletterSection } from '@/app/[locale]/components/news/newsletter-section';
-import { Pagination } from '@/app/[locale]/components/news/pagination';
+import { CategoryBadge } from '@/app/[locale]/(pages)/news/components/category-badge';
+import { FeaturedNewsCard } from '@/app/[locale]/(pages)/news/components/featured-news-card';
+import { NewsGrid } from '@/app/[locale]/(pages)/news/components/news-grid';
+import { NewsHero } from '@/app/[locale]/(pages)/news/components/news-hero';
+import { NewsletterSection } from '@/app/[locale]/(pages)/news/components/newsletter-section';
+import { Pagination } from '@/app/[locale]/(pages)/news/components/pagination';
+import TitleHero from '../../components/shared/title-hero/title-hero';
+import { useLocale } from 'next-intl';
 
 const PAGE_SIZE = 6;
 
@@ -51,41 +53,46 @@ export async function NewsListPage({
     : paginated.items;
 
   return (
-    <main className="mx-auto w-full max-w-7xl px-4 pb-16 pt-8 md:px-8">
-      <NewsHero title={labels.pageTitle} description={labels.pageDescription} />
+    <main className=''>
+      <TitleHero 
+        title={locale === 'fr-ca' ? 'Actualités' : 'News'}
+        imageSrc="/images/pages/privacy-policy/privacy-policy.png"
+      />
 
-      <section className="mt-8 flex flex-wrap items-center gap-2" aria-label="News categories">
-        <CategoryBadge
-          label={labels.allNews}
-          href={getNewsListPath(locale)}
-          isActive={!activeCategory}
-        />
-        {categories.map((category) => (
+      <div className="mx-auto w-full max-w-[1600px] px-4 pb-16 md:px-8">
+        <section className="mt-8 flex flex-wrap items-center gap-2" aria-label="News categories">
           <CategoryBadge
-            key={category.id}
-            label={category.name}
-            href={getNewsCategoryPath(locale, category.id)}
-            isActive={activeCategory === category.id}
+            label={labels.allNews}
+            href={getNewsListPath(locale)}
+            isActive={!activeCategory}
           />
-        ))}
-      </section>
-
-      {featuredArticle ? (
-        <section className="mt-8">
-          <FeaturedNewsCard
-            article={featuredArticle}
-            href={getNewsArticlePath(locale, featuredArticle.slug)}
-          />
+          {categories.map((category) => (
+            <CategoryBadge
+              key={category.id}
+              label={category.name}
+              href={getNewsCategoryPath(locale, category.id)}
+              isActive={activeCategory === category.id}
+            />
+          ))}
         </section>
-      ) : null}
 
-      <section className="mt-8">
-        <NewsGrid locale={locale} articles={gridArticles} categories={categories} />
-      </section>
+        {featuredArticle ? (
+          <section className="mt-8">
+            <FeaturedNewsCard
+              article={featuredArticle}
+              href={getNewsArticlePath(locale, featuredArticle.slug)}
+            />
+          </section>
+        ) : null}
 
-      <Pagination locale={locale} currentPage={paginated.page} totalPages={paginated.totalPages} />
+        <section className="mt-8">
+          <NewsGrid locale={locale} articles={gridArticles} categories={categories} />
+        </section>
 
-      <NewsletterSection />
+        <Pagination locale={locale} currentPage={paginated.page} totalPages={paginated.totalPages} />
+
+        <NewsletterSection />
+      </div>
     </main>
   );
 }

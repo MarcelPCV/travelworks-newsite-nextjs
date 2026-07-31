@@ -3,7 +3,7 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeSlug from 'rehype-slug';
 import remarkGfm from 'remark-gfm';
 import type { ArticleTocItem } from '@/app/[locale]/(pages)/news/types';
-import { newsMdxComponents } from './mdx-components';
+import { newsMdxComponents } from '@/app/[locale]/(pages)/news/components/mdx-components';
 
 export function ArticleContent({ content, toc }: { content: string; toc: ArticleTocItem[] }) {
   return (

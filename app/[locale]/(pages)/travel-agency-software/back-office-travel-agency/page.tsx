@@ -11,7 +11,7 @@ import { getAlternates } from '@/app/lib/SEO/getAlternates';
 import { Metadata } from 'next';
 import { Locale } from 'next-intl';
 import { BreadcrumbItem } from '../../news/types';
-import { Breadcrumb } from '../../../components/news/breadcrumb';
+import { Breadcrumb } from '../../news/components/breadcrumb';
 import PlanningDemoSection from '../../(home)/components/demo-section/planning-demo-section';
 import { PlanningDemoField } from '../../(home)/components/demo-section/type';
 import { getCountryOptions } from '@/app/lib/countries';

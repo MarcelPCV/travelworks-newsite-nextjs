@@ -7,7 +7,7 @@ import TourOnlineCTA from '../../../components/shared/touronline-cta/touronline-
 import { getAlternates } from '@/app/lib/SEO/getAlternates';
 import { Metadata } from 'next';
 import { Locale } from 'next-intl';
-import { Breadcrumb } from '../../../components/news/breadcrumb';
+import { Breadcrumb } from '../../news/components/breadcrumb';
 import type { BreadcrumbItem } from '@/app/[locale]/(pages)/news/types';
 import SplitSectionMini from '@/app/[locale]/components/shared/split-section-mini/SplitSectionMini';
 import { getCountryOptions } from '@/app/lib/countries';

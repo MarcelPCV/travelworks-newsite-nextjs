@@ -9,7 +9,7 @@ import InfoCards from '@/app/[locale]/components/pages-elements/info-cards/info-
 import { getAlternates } from '@/app/lib/SEO/getAlternates';
 import { Metadata } from 'next';
 import { Locale } from 'next-intl';
-import { Breadcrumb } from '@/app/[locale]/components/news/breadcrumb';
+import { Breadcrumb } from '@/app/[locale]/(pages)/news/components/breadcrumb';
 import type { BreadcrumbItem } from '@/app/[locale]/(pages)/news/types';
 import { InfoCard } from '@/app/[locale]/components/pages-elements/info-cards/type';
 import PlanningDemoSection from '../../(home)/components/demo-section/planning-demo-section';

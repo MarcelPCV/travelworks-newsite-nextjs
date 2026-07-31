@@ -6,7 +6,7 @@ import YoutubeVideoSection from '../../../components/shared/video/youtube-video-
 import { getAlternates } from '@/app/lib/SEO/getAlternates';
 import { Metadata } from 'next';
 import { Locale } from 'next-intl';
-import { Breadcrumb } from '../../../components/news/breadcrumb';
+import { Breadcrumb } from '../../news/components/breadcrumb';
 import type { BreadcrumbItem } from '@/app/[locale]/(pages)/news/types';
 import PlanningDemoSection from '../../(home)/components/demo-section/planning-demo-section';
 import { PlanningDemoField } from '../../(home)/components/demo-section/type';

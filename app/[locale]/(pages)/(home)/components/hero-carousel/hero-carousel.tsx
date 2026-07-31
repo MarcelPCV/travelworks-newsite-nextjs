@@ -26,7 +26,7 @@ export default function HeroCarousel({
 
   return (
     <section
-      className="relative mx-auto w-full max-w-[1600px] aspect-[8/11] sm:aspect-[8/8] md:aspect-[16/5] overflow-hidden rounded-md border border-neutral-border shadow-[0_10px_35px_rgba(11,30,74,0.12)]"
+      className="relative mx-auto w-full max-w-[1600px] aspect-[8/11] sm:aspect-[8/8] md:aspect-[16/5] overflow-hidden rounded-b-md shadow-xl mt-5 md:mt-0"
       aria-label="Hero carousel"
     >
       <Swiper

@@ -14,10 +14,10 @@ import {
   getArticlesByCategory,
 } from '@/app/[locale]/(pages)/news/lib/news';
 import { getNewsLabels } from '@/app/[locale]/(pages)/news/lib/labels';
-import { CategoryBadge } from '@/app/[locale]/components/news/category-badge';
-import { NewsGrid } from '@/app/[locale]/components/news/news-grid';
-import { NewsHero } from '@/app/[locale]/components/news/news-hero';
-import { NewsletterSection } from '@/app/[locale]/components/news/newsletter-section';
+import { CategoryBadge } from '@/app/[locale]/(pages)/news/components/category-badge';
+import { NewsGrid } from '@/app/[locale]/(pages)/news/components/news-grid';
+import { NewsHero } from '@/app/[locale]/(pages)/news/components/news-hero';
+import { NewsletterSection } from '@/app/[locale]/(pages)/news/components/newsletter-section';
 
 export async function generateStaticParams() {
   const routeLocales = getRouteLocales();

@@ -2,7 +2,7 @@ import { getTranslations } from 'next-intl/server';
 import PartnersSection from './components/partners-section';
 import { PartnersSectionModel } from './components/types';
 import { getAlternates } from '@/app/lib/SEO/getAlternates';
-import { Breadcrumb } from '@/app/[locale]/components/news/breadcrumb';
+import { Breadcrumb } from '@/app/[locale]/(pages)/news/components/breadcrumb';
 import type { BreadcrumbItem } from '@/app/[locale]/(pages)/news/types';
 import { setRequestLocale } from 'next-intl/server';
 import { Metadata } from 'next';

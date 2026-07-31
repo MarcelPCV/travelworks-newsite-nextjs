@@ -166,7 +166,7 @@ export default function ContactBarSection({
               type="button"
               onClick={handleBackToTop}
               aria-label="Back to top"
-              className="ml-2 inline-flex items-center gap-2 rounded-md border border-neutral-200 bg-brand-blue px-3 py-2 text-sm font-medium text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-blue"
+              className="ml-2 inline-flex items-center gap-2 rounded-md border border-neutral-200 bg-gradient-to-r from-gray-800  to-gray-700 px-3 py-2 text-sm font-medium text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-blue"
             >
               <CircleArrowUp className="h-8 w-8" />
               <span>Back to top</span>

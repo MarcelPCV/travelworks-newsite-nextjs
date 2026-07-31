@@ -1,12 +1,12 @@
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
-import { ArticleContent } from '@/app/[locale]/components/news/article-content';
-import { ArticleFooter } from '@/app/[locale]/components/news/article-footer';
-import { ArticleHeader } from '@/app/[locale]/components/news/article-header';
-import { Breadcrumb } from '@/app/[locale]/components/news/breadcrumb';
-import { CategorySidebar } from '@/app/[locale]/components/news/category-sidebar';
-import { RelatedArticles } from '@/app/[locale]/components/news/related-articles';
+import { ArticleContent } from '@/app/[locale]/(pages)/news/components/article-content';
+import { ArticleFooter } from '@/app/[locale]/(pages)/news/components/article-footer';
+import { ArticleHeader } from '@/app/[locale]/(pages)/news/components/article-header';
+import { Breadcrumb } from '@/app/[locale]/(pages)/news/components/breadcrumb';
+import { CategorySidebar } from '@/app/[locale]/(pages)/news/components/category-sidebar';
+import { RelatedArticles } from '@/app/[locale]/(pages)/news/components/related-articles';
 import {
   generateBreadcrumbs,
   getAllArticles,
