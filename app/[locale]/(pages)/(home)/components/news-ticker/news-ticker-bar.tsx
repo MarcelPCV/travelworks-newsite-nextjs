@@ -7,7 +7,7 @@ import Link from 'next/link';
 export default function NewsTickerBar({ sectionTitle, newsLabel, newsCtaHref, phone }: NewsTicker) {
   return (
       <section
-        className="hidden md:block mx-auto mt-5 w-full max-w-[1600px] rounded-t-md border border-zinc-300 bg-gray-700"
+        className="hidden md:block mx-auto mt-5 w-full max-w-[1600px] rounded-t-md border border-zinc-300 bg-gray-800 py-1"
         aria-label={sectionTitle}
       >
       <div className="mx-auto flex w-full items-center gap-3 px-4 py-1 sm:px-6 lg:px-8">
@@ -27,9 +27,9 @@ export default function NewsTickerBar({ sectionTitle, newsLabel, newsCtaHref, ph
 
         <a
           href={`tel:${phone}`}
-          className="inline-flex shrink-0 items-center gap-2 text-white transition hover:opacity-80"
+          className="inline-flex shrink-0 items-center gap-2 text-white transition hover:opacity-80 bg-gray-600 px-2 py-1 rounded-md"
         >
-          <Phone className="h-4 w-4 text-amber-500" aria-hidden="true" />
+          <Phone className="h-4 w-4 text-white" aria-hidden="true" />
           <span className="text-[13px] font-semibold leading-none">{phone}</span>
         </a>
       </div>
