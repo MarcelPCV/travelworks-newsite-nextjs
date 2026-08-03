@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import type { MDXComponents } from 'mdx/types';
 import { getBlurDataURL } from '@/app/[locale]/(pages)/news/lib/image';
+import { Link } from 'lucide-react';
 
 type CalloutProps = {
   type?: 'info' | 'warning' | 'success';
@@ -35,6 +36,12 @@ export const newsMdxComponents: MDXComponents = {
   h2: (props) => <h2 className="mt-10 text-2xl font-semibold text-slate-900" {...props} />,
   h3: (props) => <h3 className="mt-8 text-xl font-semibold text-slate-900" {...props} />,
   p: (props) => <p className="mt-4 leading-7 text-slate-700" {...props} />,
+  a: ({ href, children }) => (
+    <a href={href} className="underline underline-offset-4 text-brand-blue">
+      <Link className="mr-2 inline-block h-4 w-4" />
+      {children}
+    </a>
+  ),
   ul: (props) => <ul className="mt-4 list-disc space-y-2 pl-6 text-slate-700" {...props} />,
   ol: (props) => <ol className="mt-4 list-decimal space-y-2 pl-6 text-slate-700" {...props} />,
   blockquote: (props) => (

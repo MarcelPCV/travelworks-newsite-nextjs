@@ -91,7 +91,6 @@ export async function NewsListPage({
 
         <Pagination locale={locale} currentPage={paginated.page} totalPages={paginated.totalPages} />
 
-        <NewsletterSection />
       </div>
     </main>
   );

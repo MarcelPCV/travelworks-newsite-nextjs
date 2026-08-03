@@ -96,7 +96,7 @@ export default async function NewsArticlePage({
   });
 
   return (
-    <main className="mx-auto w-full max-w-7xl px-4 pb-16 pt-8 md:px-8">
+    <main className="mx-auto w-full max-w-[1600px] px-4 pb-16 pt-8 md:px-8">
       <Breadcrumb items={breadcrumbItems} homeHref={locale === 'en' ? '/' : `/${locale}`} />
 
       <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_320px]">

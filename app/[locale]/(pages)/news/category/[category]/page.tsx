@@ -89,7 +89,7 @@ export default async function NewsCategoryPage({
   });
 
   return (
-    <main className="mx-auto w-full max-w-7xl px-4 pb-16 pt-8 md:px-8">
+    <main className="mx-auto w-full max-w-[1600px] px-4 pb-16 pt-8 md:px-8">
       <NewsHero title={currentCategory.name} description={currentCategory.seo.description} />
 
       <section className="mt-8 flex flex-wrap items-center gap-2" aria-label="News categories">
@@ -107,8 +107,6 @@ export default async function NewsCategoryPage({
       <section className="mt-8">
         <NewsGrid locale={locale} articles={articles} categories={categories} />
       </section>
-
-      <NewsletterSection />
 
       <script
         type="application/ld+json"

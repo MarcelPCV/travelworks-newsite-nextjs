@@ -200,7 +200,27 @@ export async function getAllArticles(locale: string): Promise<NewsArticle[]> {
 
 export async function getArticle(slug: string, locale: string): Promise<NewsArticle | null> {
   const articles = await getAllArticles(locale);
-  return articles.find((article) => article.slug === slug) ?? null;
+  const directMatch = articles.find((article) => article.slug === slug);
+
+  if (directMatch) {
+    return directMatch;
+  }
+
+  // Locale switches can keep the previous locale slug in the URL.
+  // Resolve by shared article id so localized slugs still map correctly.
+  const routeLocales = getRouteLocales();
+  for (const sourceLocale of routeLocales) {
+    const sourceArticles = await getAllArticles(sourceLocale);
+    const sourceMatch = sourceArticles.find((article) => article.slug === slug);
+
+    if (!sourceMatch) {
+      continue;
+    }
+
+    return articles.find((article) => article.id === sourceMatch.id) ?? null;
+  }
+
+  return null;
 }
 
 export async function getArticlesByCategory(
