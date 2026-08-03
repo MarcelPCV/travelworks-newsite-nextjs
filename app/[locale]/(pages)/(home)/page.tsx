@@ -4,7 +4,7 @@ import NewsTickerBar from './components/news-ticker/news-ticker-bar';
 import HeroCarousel from './components/hero-carousel/hero-carousel';
 import FeatureCards from './components/feature-cards/feature-cards';
 import PlatformShowcase from './components/platform-showcase/platform-showcase';
-import WhyTravelworks from '../../components/home/why/why-travelworks-section';
+import WhyTravelworks from './components/why/why-travelworks-section';
 import BenefitsBanner from './components/benefits-banner/benefits-banner';
 import ClientTrustSection from '@/app/[locale]/(pages)/(home)/components/clients-section/client-trust-section'
 import PlanningDemoSection from '@/app/[locale]/(pages)/(home)/components/demo-section/planning-demo-section';
@@ -15,7 +15,7 @@ import { Metadata } from 'next';
 import { Locale } from 'next-intl';
 import { HeroSlide } from './components/hero-carousel/type';
 import { FeatureCard } from './components/feature-cards/type';
-import { WhyTravelworksItems } from '../../components/home/why/type';
+import { WhyTravelworksItems } from './components/why/type';
 import { Client } from './components/clients-section/type';
 import { PlanningDemoField } from './components/demo-section/type';
 import { BenefitsBannerItem } from './components/benefits-banner/type';

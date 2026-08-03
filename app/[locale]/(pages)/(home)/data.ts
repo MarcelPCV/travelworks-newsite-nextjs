@@ -3,7 +3,7 @@ import { NewsTicker } from './components/news-ticker/type';
 import { HeroCarouselSection } from './components/hero-carousel/type';
 import { FeatureCardsSectionData } from './components/feature-cards/type';
 import { PlatformShowcaseModel } from './components/platform-showcase/type';
-import { WhyTravelworksSection, WhyTravelworksItems } from '../../components/home/why/type';
+import { WhyTravelworksSection, WhyTravelworksItems } from './components/why/type';
 import { CircleDollarSign, Cloud, Network, Users } from 'lucide-react';
 import { ClientsSectionModel, Client } from '@/app/[locale]/(pages)/(home)/components/clients-section/type';
 import { PlanningDemoSectionModel } from '@/app/[locale]/(pages)/(home)/components/demo-section/type';

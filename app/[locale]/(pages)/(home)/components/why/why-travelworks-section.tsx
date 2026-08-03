@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 import { WhyTravelworksSection } from './type';
-import TitleSection from '../../ui/title-section';
+import TitleSection from '../../../../components/ui/title-section';
 import Link from 'next/link';
 
 export default function WhyTravelworks({ title, items }: WhyTravelworksSection) {
@@ -20,7 +20,7 @@ export default function WhyTravelworks({ title, items }: WhyTravelworksSection) 
         />
       )}
 
-      <div className="grid grid-cols-1 overflow-hidden rounded-xl sm:grid-cols-2 xl:grid-cols-4">
+      <div className="grid grid-cols-1 overflow-hidden rounded-xl sm:grid-cols-2 xl:grid-cols-4 border-b-4 border-amber-500">
         {items?.map((item, index) => (
           <Link href={item.blockLink ?? '#'} key={index} className="group flex min-h-104 flex-col">
             <div className="relative h-60 overflow-hidden bg-[#ebe6dc]">
@@ -36,7 +36,7 @@ export default function WhyTravelworks({ title, items }: WhyTravelworksSection) 
               />
             </div>
 
-            <div className="flex flex-1 flex-col bg-gray-800 p-6 text-neutral-canvas">
+            <div className="flex flex-1 flex-col bg-gray-800 px-6 py-12 text-neutral-canvas">
               <div className="flex items-start justify-between gap-4">
                 <h3 className="text-[1.4rem] font-medium leading-tight">{item.title}</h3>
 

@@ -26,7 +26,7 @@ export default function HeroCarousel({
 
   return (
     <section
-      className="relative mx-auto w-full max-w-[1600px] aspect-[8/11] sm:aspect-[8/8] md:aspect-[16/5] overflow-hidden rounded-b-md shadow-xl mt-5 md:mt-0"
+      className="relative mx-auto w-full max-w-[1600px] aspect-[8/11] sm:aspect-[8/8] md:aspect-[16/5] overflow-hidden rounded-b-md shadow-xl shadow-brand-blue/20 mt-5 md:mt-0"
       aria-label="Hero carousel"
     >
       <Swiper
@@ -240,6 +240,7 @@ export default function HeroCarousel({
                   rounded-full
                   transition-all
                   duration-300
+                  shadow-brand-blue/20
                   ${isActive ? 'bg-brand-blue' : 'bg-neutral-muted opacity-40 hover:opacity-70'}
                 `}
                 aria-label={`Go to slide ${index + 1}`}

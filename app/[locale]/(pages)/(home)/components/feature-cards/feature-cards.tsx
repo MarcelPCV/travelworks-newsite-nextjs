@@ -9,7 +9,7 @@ function FeatureCards({ item }: { item: FeatureCard }) {
   return (
     <div className="relative flex h-20 w-20 items-center justify-center rounded-full bg-brand-blue">
       {item.image.src && (
-        <div className="relative h-20 w-20 overflow-hidden rounded-full shadow-xl">
+        <div className="relative h-20 w-20 overflow-hidden rounded-full shadow-xl shadow-brand-blue/20 border-b-4 border-amber-500">
           <Image
             src={item.image.src ?? '/'}
             alt={item.image.alt ?? ''}

@@ -8,7 +8,7 @@ type NewsHeroProps = {
 export function NewsHero({ title, description }: NewsHeroProps) {
   const locale = useLocale();
   return (
-    <section className="rounded-2xl bg-brand-blue px-6 py-12 text-white md:px-12">
+    <section className="rounded-lg bg-brand-blue px-6 py-6 text-white md:px-12 border-b-4 border-amber-500">
       <p className="text-xs font-semibold uppercase tracking-[0.24em] text-blue-200">
         {locale === 'fr-ca' ? 'Actualités' : 'News'}
       </p>

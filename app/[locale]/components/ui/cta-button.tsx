@@ -24,8 +24,8 @@ export type CtaButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
 
 const variantClassNames: Record<CtaButtonVariant, string> = {
   default:
-    'border-transparent bg-brand-blue text-white hover:bg-[#1d4ed8] active:bg-[#1e40af] focus-visible:ring-[#93c5fd]',
-  blue: 'border-transparent bg-[#2563eb] text-white hover:bg-[#1d4ed8] active:bg-[#1e40af] focus-visible:ring-[#93c5fd]',
+    'border-transparent bg-brand-blue text-white hover:bg-[#284782] active:bg-[#1e40af] focus-visible:ring-[#93c5fd]',
+  blue: 'border-transparent bg-[#2563eb] text-white hover:bg-[#284782] active:bg-[#1e40af] focus-visible:ring-[#93c5fd]',
   secondary:
     'border-[#334155] bg-[#1f2937] text-[#cbd5e1] hover:bg-[#273446] active:bg-[#1b2432] focus-visible:ring-[#64748b]',
   tertiary:

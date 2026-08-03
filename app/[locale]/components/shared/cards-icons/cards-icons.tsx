@@ -17,12 +17,12 @@ export default function CardsIconsSection({ cards, title }: CardsIconsSection) {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {cards?.map((card) => (
-            <article key={card.id} className="bg-white rounded-lg p-8 shadow-sm">
+            <article key={card.id} className="bg-white rounded-lg p-8 shadow-sm border-b-4 border-amber-500">
               <div className="flex justify-center mb-6">
                 <div
-                  className={`h-20 w-20 rounded-full flex items-center justify-center ${card.iconBg ?? 'bg-blue-600'}`}
+                  className={`h-20 w-20 rounded-full flex items-center justify-center border-b-4 border-amber-500 ${card.iconBg ?? 'bg-brand-blue'}`}
                 >
-                  <card.Icon className={`h-10 w-10 ${card.iconColor ?? 'text-white'}`} />
+                  <card.Icon className={`h-10 w-10  ${card.iconColor ?? 'text-white'}`} />
                 </div>
               </div>
               <h3 className="text-center text-lg font-medium text-[#0b66a6] mb-2">{card.title}</h3>
