@@ -42,6 +42,19 @@ type NavbarLabels = {
   searchPlaceholder: string;
   searchHint: string;
   searchDialogLabel: string;
+  searchLoading: string;
+  searchNoResults: string;
+  searchPagesLabel: string;
+  searchNewsLabel: string;
+  searchError: string;
+};
+
+export type NavbarSearchResult = {
+  id: string;
+  href: string;
+  title: string;
+  description: string;
+  type: 'page' | 'news';
 };
 
 type SharedNavProps = {
@@ -652,7 +665,26 @@ export function NavbarMobileMenu({
 type NavbarSearchDialogProps = {
   isSearchOpen: boolean;
   searchInputRef: React.RefObject<HTMLInputElement | null>;
-  labels: Pick<NavbarLabels, 'searchDialogLabel' | 'searchPlaceholder' | 'searchHint'>;
+  labels: Pick<
+    NavbarLabels,
+    | 'searchDialogLabel'
+    | 'searchPlaceholder'
+    | 'searchHint'
+    | 'searchLoading'
+    | 'searchNoResults'
+    | 'searchPagesLabel'
+    | 'searchNewsLabel'
+    | 'searchError'
+  >;
+  query: string;
+  results: NavbarSearchResult[];
+  isSearchLoading: boolean;
+  searchError: string | null;
+  activeResultIndex: number;
+  onQueryChange: (value: string) => void;
+  onInputKeyDown: (event: React.KeyboardEvent<HTMLInputElement>) => void;
+  onHoverResult: (index: number) => void;
+  onSelectResult: (href: string) => void;
   onClose: () => void;
 };
 
@@ -660,11 +692,72 @@ export function NavbarSearchDialog({
   isSearchOpen,
   searchInputRef,
   labels,
+  query,
+  results,
+  isSearchLoading,
+  searchError,
+  activeResultIndex,
+  onQueryChange,
+  onInputKeyDown,
+  onHoverResult,
+  onSelectResult,
   onClose,
 }: NavbarSearchDialogProps) {
   if (!isSearchOpen) {
     return null;
   }
+
+  const pages = results.filter((item) => item.type === 'page');
+  const news = results.filter((item) => item.type === 'news');
+  const searchStarted = query.trim().length >= 2;
+  const showNoResults = searchStarted && !isSearchLoading && !searchError && results.length === 0;
+
+  const renderResultGroup = (
+    groupTitle: string,
+    groupResults: NavbarSearchResult[],
+    emptyStateClassName = 'mt-4',
+  ) => {
+    if (groupResults.length === 0) {
+      return null;
+    }
+
+    return (
+      <div className={emptyStateClassName}>
+        <p className="px-1 text-xs font-semibold uppercase tracking-wide text-zinc-500">{groupTitle}</p>
+        <div className="mt-2 space-y-1">
+          {groupResults.map((result) => {
+            const globalIndex = results.findIndex((item) => item.id === result.id);
+            const isActive = globalIndex === activeResultIndex;
+
+            return (
+              <Link
+                key={result.id}
+                href={result.href}
+                className={`block rounded-xl border px-3 py-3 transition ${
+                  isActive
+                    ? 'border-zinc-900 bg-zinc-900 text-white'
+                    : 'border-zinc-200 bg-white text-zinc-800 hover:bg-zinc-50'
+                }`}
+                onMouseEnter={() => onHoverResult(globalIndex)}
+                onFocus={() => onHoverResult(globalIndex)}
+                onClick={(event) => {
+                  event.preventDefault();
+                  onSelectResult(result.href);
+                }}
+              >
+                <p className={`text-sm font-semibold ${isActive ? 'text-white' : 'text-zinc-900'}`}>
+                  {result.title}
+                </p>
+                <p className={`mt-1 text-sm ${isActive ? 'text-zinc-200' : 'text-zinc-600'}`}>
+                  {result.description}
+                </p>
+              </Link>
+            );
+          })}
+        </div>
+      </div>
+    );
+  };
 
   return (
     <div
@@ -693,6 +786,9 @@ export function NavbarSearchDialog({
               ref={searchInputRef}
               type="search"
               placeholder={labels.searchPlaceholder}
+              value={query}
+              onChange={(event) => onQueryChange(event.target.value)}
+              onKeyDown={onInputKeyDown}
               className="h-10 w-full bg-transparent text-base text-zinc-800 placeholder:text-zinc-500 focus:outline-none"
             />
             <button
@@ -713,6 +809,27 @@ export function NavbarSearchDialog({
           </div>
 
           <p className="mt-4 px-1 text-sm text-zinc-500">{labels.searchHint}</p>
+
+          {isSearchLoading ? (
+            <p className="mt-4 px-1 text-sm text-zinc-600">{labels.searchLoading}</p>
+          ) : null}
+
+          {searchError ? (
+            <p className="mt-4 rounded-lg border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-700">
+              {labels.searchError}
+            </p>
+          ) : null}
+
+          {showNoResults ? (
+            <p className="mt-4 px-1 text-sm text-zinc-600">{labels.searchNoResults}</p>
+          ) : null}
+
+          {!isSearchLoading && !searchError && results.length > 0 ? (
+            <div className="mt-4 max-h-[52vh] overflow-y-auto pr-1">
+              {renderResultGroup(labels.searchPagesLabel, pages)}
+              {renderResultGroup(labels.searchNewsLabel, news, pages.length > 0 ? 'mt-5' : 'mt-4')}
+            </div>
+          ) : null}
         </div>
       </div>
     </div>

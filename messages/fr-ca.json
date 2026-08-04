@@ -2003,6 +2003,16 @@
         "trainingPlatform": "Plateforme de formation",
         "knowledgeBase": "Base de connaissances"
       }
+    },
+    "search": {
+      "placeholder": "Rechercher des pages, des produits et des nouvelles",
+      "hint": "Tapez au moins 2 caracteres pour lancer la recherche.",
+      "dialogLabel": "Recherche du site",
+      "loading": "Recherche en cours...",
+      "noResults": "Aucune page ou nouvelle correspondante n'a ete trouvee.",
+      "pagesLabel": "Pages",
+      "newsLabel": "Nouvelles",
+      "error": "La recherche est temporairement indisponible. Veuillez reessayer."
     }
   },
   "locationBar": {

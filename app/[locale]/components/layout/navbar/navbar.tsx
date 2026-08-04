@@ -1,6 +1,6 @@
 'use client';
 
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { useEffect, useMemo, useRef, useState, useCallback } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import {
@@ -28,6 +28,7 @@ import {
   NavbarDesktopContent,
   NavbarMobileMenu,
   NavbarSearchDialog,
+  type NavbarSearchResult,
   type MobileSection,
 } from '@/app/[locale]/components/layout/navbar/navbar-sections';
 import {
@@ -38,6 +39,8 @@ import {
 } from '@/app/[locale]/components/layout/navbar/navbar-href';
 
 const EXTERNAL_RETURN_REFRESH_KEY = 'travelworks.navbar.external-return-refresh';
+const SEARCH_MIN_QUERY_LENGTH = 2;
+const SEARCH_DEBOUNCE_MS = 220;
 
 function normalizePath(path: string): string {
   if (!path) return '/';
@@ -45,6 +48,7 @@ function normalizePath(path: string): string {
 }
 
 export default function Navbar() {
+  const router = useRouter();
   const pathname = usePathname();
   const activeMessageLocale = useLocale();
   const t = useTranslations('nav');
@@ -57,8 +61,14 @@ export default function Navbar() {
   const [isMobileLoginOpen, setIsMobileLoginOpen] = useState(false);
   const [isLangOpen, setIsLangOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [searchResults, setSearchResults] = useState<NavbarSearchResult[]>([]);
+  const [isSearchLoading, setIsSearchLoading] = useState(false);
+  const [searchError, setSearchError] = useState<string | null>(null);
+  const [activeSearchResultIndex, setActiveSearchResultIndex] = useState(-1);
   const [loginDropdownCloseSignal, setLoginDropdownCloseSignal] = useState(0);
   const searchInputRef = useRef<HTMLInputElement | null>(null);
+  const searchAbortControllerRef = useRef<AbortController | null>(null);
   const headerRef = useRef<HTMLElement | null>(null);
 
   const currentRouteLocale =
@@ -218,6 +228,17 @@ export default function Navbar() {
     setLoginDropdownCloseSignal((prev) => prev + 1);
   }, []);
 
+  const closeSearch = useCallback(() => {
+    searchAbortControllerRef.current?.abort();
+    searchAbortControllerRef.current = null;
+    setIsSearchOpen(false);
+    setSearchQuery('');
+    setSearchResults([]);
+    setSearchError(null);
+    setIsSearchLoading(false);
+    setActiveSearchResultIndex(-1);
+  }, []);
+
   useEffect(() => {
     if (!isSearchOpen) {
       return;
@@ -229,6 +250,77 @@ export default function Navbar() {
 
     return () => cancelAnimationFrame(frame);
   }, [isSearchOpen]);
+
+  useEffect(() => {
+    if (!isSearchOpen) {
+      return;
+    }
+
+    const trimmedQuery = searchQuery.trim();
+
+    if (trimmedQuery.length < SEARCH_MIN_QUERY_LENGTH) {
+      searchAbortControllerRef.current?.abort();
+      searchAbortControllerRef.current = null;
+      return;
+    }
+
+    const timeout = window.setTimeout(async () => {
+      searchAbortControllerRef.current?.abort();
+
+      const controller = new AbortController();
+      searchAbortControllerRef.current = controller;
+      setIsSearchLoading(true);
+      setSearchError(null);
+
+      try {
+        const params = new URLSearchParams({
+          q: trimmedQuery,
+          locale: currentRouteLocale,
+          limit: '12',
+        });
+
+        const response = await fetch(`/api/search?${params.toString()}`, {
+          method: 'GET',
+          signal: controller.signal,
+          cache: 'no-store',
+        });
+
+        if (!response.ok) {
+          throw new Error('Search request failed');
+        }
+
+        const payload = (await response.json()) as {
+          results?: NavbarSearchResult[];
+        };
+
+        const results = Array.isArray(payload.results) ? payload.results : [];
+        setSearchResults(results);
+        setActiveSearchResultIndex((prev) =>
+          results.length === 0 ? -1 : prev >= 0 && prev < results.length ? prev : -1,
+        );
+      } catch (error) {
+        if (error instanceof Error && error.name === 'AbortError') {
+          return;
+        }
+
+        setSearchError(t('search.error'));
+        setSearchResults([]);
+        setActiveSearchResultIndex(-1);
+      } finally {
+        if (searchAbortControllerRef.current === controller) {
+          searchAbortControllerRef.current = null;
+        }
+
+        setIsSearchLoading(false);
+      }
+    }, SEARCH_DEBOUNCE_MS);
+
+    return () => {
+      window.clearTimeout(timeout);
+      searchAbortControllerRef.current?.abort();
+      searchAbortControllerRef.current = null;
+    };
+  }, [searchQuery, currentRouteLocale, isSearchOpen, t]);
 
   useEffect(() => {
     const onDocumentClick = (event: MouseEvent) => {
@@ -251,7 +343,7 @@ export default function Navbar() {
         setActiveDesktopPanel(null);
         setIsLangOpen(false);
         closeMobileMenu();
-        setIsSearchOpen(false);
+        closeSearch();
         setLoginDropdownCloseSignal((prev) => prev + 1);
       }
     };
@@ -263,7 +355,7 @@ export default function Navbar() {
       document.removeEventListener('mousedown', onDocumentClick);
       document.removeEventListener('keydown', onEscape);
     };
-  }, [closeMobileMenu]);
+  }, [closeMobileMenu, closeSearch]);
 
   useEffect(() => {
     const recoverFromExternalReturn = () => {
@@ -291,7 +383,7 @@ export default function Navbar() {
       setActiveDesktopPanel(null);
       setIsLangOpen(false);
       closeMobileMenu();
-      setIsSearchOpen(false);
+      closeSearch();
       setLoginDropdownCloseSignal((prev) => prev + 1);
     };
 
@@ -322,7 +414,7 @@ export default function Navbar() {
       window.removeEventListener('popstate', onPopState);
       document.removeEventListener('visibilitychange', onVisibilityChange);
     };
-  }, [closeMobileMenu]);
+  }, [closeMobileMenu, closeSearch]);
 
   const labels = useMemo(
     () => ({
@@ -337,11 +429,82 @@ export default function Navbar() {
       languageTitle: t('languageTitle'),
       languagePrefix: t('languagePrefix', { language: activeLanguageLabel }),
       productsPromoMessage: t('products.promoMessage'),
-      searchPlaceholder: 'Search pages, products and help',
-      searchHint: 'Type at least 2 characters to start searching.',
-      searchDialogLabel: 'Site search',
+      searchPlaceholder: t('search.placeholder'),
+      searchHint: t('search.hint'),
+      searchDialogLabel: t('search.dialogLabel'),
+      searchLoading: t('search.loading'),
+      searchNoResults: t('search.noResults'),
+      searchPagesLabel: t('search.pagesLabel'),
+      searchNewsLabel: t('search.newsLabel'),
+      searchError: t('search.error'),
     }),
     [t, activeLanguageLabel],
+  );
+
+  const handleSearchQueryChange = useCallback((value: string) => {
+    setSearchQuery(value);
+    setSearchError(null);
+    setActiveSearchResultIndex(-1);
+
+    if (value.trim().length < SEARCH_MIN_QUERY_LENGTH) {
+      setSearchResults([]);
+      setIsSearchLoading(false);
+    }
+  }, []);
+
+  const navigateToSearchResult = useCallback(
+    (href: string) => {
+      closeSearch();
+      router.push(href);
+    },
+    [closeSearch, router],
+  );
+
+  const handleSearchInputKeyDown = useCallback(
+    (event: React.KeyboardEvent<HTMLInputElement>) => {
+      if (event.key === 'ArrowDown') {
+        if (searchResults.length === 0) {
+          return;
+        }
+
+        event.preventDefault();
+        setActiveSearchResultIndex((prev) => Math.min(prev + 1, searchResults.length - 1));
+        return;
+      }
+
+      if (event.key === 'ArrowUp') {
+        if (searchResults.length === 0) {
+          return;
+        }
+
+        event.preventDefault();
+        setActiveSearchResultIndex((prev) => Math.max(prev - 1, 0));
+        return;
+      }
+
+      if (event.key === 'Enter') {
+        if (searchResults.length === 0) {
+          return;
+        }
+
+        const targetIndex = activeSearchResultIndex >= 0 ? activeSearchResultIndex : 0;
+        const target = searchResults[targetIndex];
+
+        if (!target) {
+          return;
+        }
+
+        event.preventDefault();
+        navigateToSearchResult(target.href);
+        return;
+      }
+
+      if (event.key === 'Escape') {
+        event.preventDefault();
+        closeSearch();
+      }
+    },
+    [activeSearchResultIndex, closeSearch, navigateToSearchResult, searchResults],
   );
 
   const getProductLabel = useCallback((linkKey: ProductLinkKey) => t(`products.links.${linkKey}`), [t]);
@@ -373,69 +536,71 @@ export default function Navbar() {
           });
         }}
       >
-        <NavbarDesktopContent
-          locale={locale}
-          homeHref={homeHref}
-          askForDemoHref={askForDemoHref}
-          newsHref={newsHref}
-          languageLinks={languageLinks}
-          labels={labels}
-          logInOptions={logInOptions}
-          getProductLabel={getProductLabel}
-          getAboutUsLabel={getAboutUsLabel}
-          getTrainingLabel={getTrainingLabel}
-          solutionHref={solutionHref}
-          aboutUsHref={aboutUsHref}
-          trainingHref={trainingHref}
-          isHrefActive={isHrefActive}
-          activeProductCategory={activeProductCategory}
-          isProductsOpen={isProductsOpen}
-          isAboutUsOpen={isAboutUsOpen}
-          isTrainingOpen={isTrainingOpen}
-          isProductsActive={isProductsActive}
-          isAboutUsActive={isAboutUsActive}
-          isTrainingActive={isTrainingActive}
-          isLangOpen={isLangOpen}
-          loginDropdownCloseSignal={loginDropdownCloseSignal}
-          onToggleProducts={() => {
-            setActiveDesktopPanel((prev) => (prev === 'products' ? null : 'products'));
-            setIsLangOpen(false);
-          }}
-          onToggleAboutUs={() => {
-            setActiveDesktopPanel((prev) => (prev === 'aboutUs' ? null : 'aboutUs'));
-            setIsLangOpen(false);
-          }}
-          onToggleTraining={() => {
-            setActiveDesktopPanel((prev) => (prev === 'training' ? null : 'training'));
-            setIsLangOpen(false);
-          }}
-          onClearPanels={clearDesktopPanels}
-          onOpenSearch={() => {
-            setIsSearchOpen(true);
-            clearDesktopPanels();
-            setLoginDropdownCloseSignal((prev) => prev + 1);
-          }}
-          onToggleLanguageMenu={() => {
-            setIsLangOpen((prev) => !prev);
-            setActiveDesktopPanel(null);
-          }}
-          onCloseLanguageMenu={() => setIsLangOpen(false)}
-        />
+        <div className="relative">
+          <NavbarDesktopContent
+            locale={locale}
+            homeHref={homeHref}
+            askForDemoHref={askForDemoHref}
+            newsHref={newsHref}
+            languageLinks={languageLinks}
+            labels={labels}
+            logInOptions={logInOptions}
+            getProductLabel={getProductLabel}
+            getAboutUsLabel={getAboutUsLabel}
+            getTrainingLabel={getTrainingLabel}
+            solutionHref={solutionHref}
+            aboutUsHref={aboutUsHref}
+            trainingHref={trainingHref}
+            isHrefActive={isHrefActive}
+            activeProductCategory={activeProductCategory}
+            isProductsOpen={isProductsOpen}
+            isAboutUsOpen={isAboutUsOpen}
+            isTrainingOpen={isTrainingOpen}
+            isProductsActive={isProductsActive}
+            isAboutUsActive={isAboutUsActive}
+            isTrainingActive={isTrainingActive}
+            isLangOpen={isLangOpen}
+            loginDropdownCloseSignal={loginDropdownCloseSignal}
+            onToggleProducts={() => {
+              setActiveDesktopPanel((prev) => (prev === 'products' ? null : 'products'));
+              setIsLangOpen(false);
+            }}
+            onToggleAboutUs={() => {
+              setActiveDesktopPanel((prev) => (prev === 'aboutUs' ? null : 'aboutUs'));
+              setIsLangOpen(false);
+            }}
+            onToggleTraining={() => {
+              setActiveDesktopPanel((prev) => (prev === 'training' ? null : 'training'));
+              setIsLangOpen(false);
+            }}
+            onClearPanels={clearDesktopPanels}
+            onOpenSearch={() => {
+              setIsSearchOpen(true);
+              clearDesktopPanels();
+              setLoginDropdownCloseSignal((prev) => prev + 1);
+            }}
+            onToggleLanguageMenu={() => {
+              setIsLangOpen((prev) => !prev);
+              setActiveDesktopPanel(null);
+            }}
+            onCloseLanguageMenu={() => setIsLangOpen(false)}
+          />
 
-        <button
-          type="button"
-          className="ml-auto inline-flex items-center rounded-md border border-zinc-300 px-3 py-2 text-sm font-medium text-zinc-700 hover:bg-zinc-50 lg:hidden"
-          aria-expanded={isMobileOpen}
-          aria-controls="mobile-menu"
-          onClick={() => {
-            setIsMobileOpen((prev) => !prev);
-            setMobileSection(null);
-            setIsMobileLoginOpen(false);
-            clearDesktopPanels();
-          }}
-        >
-          {isMobileOpen ? labels.close : labels.menu}
-        </button>
+          <button
+            type="button"
+            className="absolute right-4 top-1/2 z-10 inline-flex -translate-y-1/2 items-center rounded-md border border-zinc-300 bg-white px-3 py-2 text-sm font-medium text-zinc-700 shadow-sm hover:bg-zinc-50 sm:right-6 lg:hidden"
+            aria-expanded={isMobileOpen}
+            aria-controls="mobile-menu"
+            onClick={() => {
+              setIsMobileOpen((prev) => !prev);
+              setMobileSection(null);
+              setIsMobileLoginOpen(false);
+              clearDesktopPanels();
+            }}
+          >
+            {isMobileOpen ? labels.close : labels.menu}
+          </button>
+        </div>
 
         <NavbarMobileMenu
           locale={locale}
@@ -489,7 +654,16 @@ export default function Navbar() {
         isSearchOpen={isSearchOpen}
         searchInputRef={searchInputRef}
         labels={labels}
-        onClose={() => setIsSearchOpen(false)}
+        query={searchQuery}
+        results={searchResults}
+        isSearchLoading={isSearchLoading}
+        searchError={searchError}
+        activeResultIndex={activeSearchResultIndex}
+        onQueryChange={handleSearchQueryChange}
+        onInputKeyDown={handleSearchInputKeyDown}
+        onHoverResult={setActiveSearchResultIndex}
+        onSelectResult={navigateToSearchResult}
+        onClose={closeSearch}
       />
     </>
   );

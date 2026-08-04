@@ -1944,6 +1944,16 @@
         "trainingPlatform": "Training Platform",
         "knowledgeBase": "Knowledge Base"
       }
+    },
+    "search": {
+      "placeholder": "Search pages, products and news",
+      "hint": "Type at least 2 characters to start searching.",
+      "dialogLabel": "Site search",
+      "loading": "Searching...",
+      "noResults": "No matching pages or news were found.",
+      "pagesLabel": "Pages",
+      "newsLabel": "News",
+      "error": "Search is temporarily unavailable. Please try again."
     }
   },
   "locationBar": {
