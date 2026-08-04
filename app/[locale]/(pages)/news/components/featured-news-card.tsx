@@ -49,7 +49,7 @@ export function FeaturedNewsCard({
           </div>
           <Link
             href={href}
-            className="mt-6 inline-block text-sm font-semibold text-blue-700 hover:text-blue-800"
+            className="mt-6 inline-block text-sm font-semibold text-brand-blue hover:text-brand-blue-dark"
           >
             {readStoryLabel}
           </Link>

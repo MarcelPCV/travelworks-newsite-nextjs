@@ -25,7 +25,7 @@ export function Pagination({
       {currentPage > 1 ? (
         <Link
           href={getNewsPagePath(locale, currentPage - 1)}
-          className="rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 hover:border-blue-500 hover:text-blue-700"
+          className="rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 hover:border-brand-blue hover:text-brand-blue-dark"
         >
           Previous
         </Link>
@@ -49,7 +49,7 @@ export function Pagination({
       {currentPage < totalPages ? (
         <Link
           href={getNewsPagePath(locale, currentPage + 1)}
-          className="rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 hover:border-blue-500 hover:text-blue-700"
+          className="rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 hover:border-brand-blue hover:text-brand-blue-dark"
         >
           Next
         </Link>

@@ -30,7 +30,7 @@ export function ArticleContent({ content, toc }: { content: string; toc: Article
             <ul className="mt-3 space-y-2 text-sm">
               {toc.map((item) => (
                 <li key={item.id} className={item.level === 3 ? 'ml-3' : ''}>
-                  <a className="text-slate-600 hover:text-blue-700" href={`#${item.id}`}>
+                  <a className="text-slate-600 hover:text-brand-blue" href={`#${item.id}`}>
                     {item.text}
                   </a>
                 </li>

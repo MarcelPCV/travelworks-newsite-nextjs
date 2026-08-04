@@ -10,6 +10,9 @@ import {
   SlidersHorizontal,
   Star,
   Users,
+  Puzzle,
+  MapPinSearch,
+  TicketsPlane,
   type LucideIcon,
 } from 'lucide-react';
 
@@ -45,20 +48,20 @@ export const trainingLinks = ['platform', 'knowledgeBase'] as const;
 export type TrainingLinkKey = (typeof trainingLinks)[number];
 
 export const menuItemIconClassName =
-  'w-5 h-5 transition duration-150 text-zinc-900 group-hover:text-zinc-700 rounded-full';
+  'w-5.5 h-5.5 transition duration-150 text-zinc-900 group-hover:text-zinc-700 rounded-full';
 
 export const productLinkIcons: Record<ProductLinkKey, LucideIcon> = {
   features: Settings,
   benefits: Star,
   backofficeSystem: Building2,
-  tripDetails: Map,
+  tripDetails: TicketsPlane,
   tourManagement: Map,
-  tourOnline: Link2,
+  tourOnline: Map,
   crmTools: Users,
   dashboardReports: BarChart3,
-  integrations: Link2,
+  integrations: Puzzle,
   customizations: SlidersHorizontal,
-  sirev: Link2,
+  sirev: MapPinSearch,
   'trip-n-trouch': SlidersHorizontal,
 };
 

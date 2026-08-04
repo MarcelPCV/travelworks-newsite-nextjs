@@ -49,7 +49,7 @@ export function NewsCard({
           <ReadingTime minutes={article.readingTimeMinutes} minReadLabel={minReadLabel} />
         </div>
         <div className="mt-4">
-          <Link href={href} className="text-sm font-semibold text-blue-700 hover:text-blue-800">
+          <Link href={href} className="text-sm font-semibold text-brand-blue hover:text-brand-blue-dark">
             {readMoreLabel}
           </Link>
         </div>

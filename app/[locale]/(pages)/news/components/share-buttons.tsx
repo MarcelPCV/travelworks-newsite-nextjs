@@ -32,7 +32,7 @@ export function ShareButtons({ path, title }: { path: string; title: string }) {
           href={item.href}
           target="_blank"
           rel="noreferrer"
-          className="rounded-full border border-slate-200 px-3 py-1.5 text-xs font-semibold text-slate-600 transition hover:border-blue-300 hover:text-blue-700"
+          className="rounded-full border border-slate-200 px-3 py-1.5 text-xs font-semibold text-slate-600 transition hover:border-brand-blue hover:text-brand-blue-dark"
         >
           {item.label}
         </Link>
