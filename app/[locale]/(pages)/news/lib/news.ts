@@ -1,6 +1,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import matter from 'gray-matter';
+import GithubSlugger from 'github-slugger';
 import type {
   BreadcrumbItem,
   ContentLocale,
@@ -43,18 +44,10 @@ function sortArticles(articles: NewsArticle[]): NewsArticle[] {
   });
 }
 
-function slugifyHeading(value: string): string {
-  return value
-    .toLowerCase()
-    .trim()
-    .replace(/[^a-z0-9\s-]/g, '')
-    .replace(/\s+/g, '-')
-    .replace(/-+/g, '-');
-}
-
 function parseToc(markdown: string): NewsArticle['toc'] {
   const lines = markdown.split('\n');
   const toc: NewsArticle['toc'] = [];
+  const slugger = new GithubSlugger();
   let insideFence = false;
 
   for (const line of lines) {
@@ -69,13 +62,13 @@ function parseToc(markdown: string): NewsArticle['toc'] {
 
     if (line.startsWith('## ')) {
       const text = line.replace(/^##\s+/, '').trim();
-      toc.push({ id: slugifyHeading(text), text, level: 2 });
+      toc.push({ id: slugger.slug(text), text, level: 2 });
       continue;
     }
 
     if (line.startsWith('### ')) {
       const text = line.replace(/^###\s+/, '').trim();
-      toc.push({ id: slugifyHeading(text), text, level: 3 });
+      toc.push({ id: slugger.slug(text), text, level: 3 });
     }
   }
 
@@ -266,22 +259,36 @@ export function paginateArticles(
   articles: NewsArticle[],
   page: number,
   pageSize = 6,
+  firstPageSize = pageSize,
 ): PaginatedNews {
   const totalItems = articles.length;
-  const totalPages = Math.max(1, Math.ceil(totalItems / pageSize));
+  const totalPages = getPaginatedTotalPages(totalItems, pageSize, firstPageSize);
   const currentPage = Math.min(Math.max(1, page), totalPages);
-  const start = (currentPage - 1) * pageSize;
-  const end = start + pageSize;
+  const currentPageSize = currentPage === 1 ? firstPageSize : pageSize;
+  const start = currentPage === 1 ? 0 : firstPageSize + (currentPage - 2) * pageSize;
+  const end = start + currentPageSize;
 
   return {
     items: articles.slice(start, end),
     page: currentPage,
-    pageSize,
+    pageSize: currentPageSize,
     totalItems,
     totalPages,
     hasNextPage: currentPage < totalPages,
     hasPreviousPage: currentPage > 1,
   };
+}
+
+export function getPaginatedTotalPages(
+  totalItems: number,
+  pageSize = 6,
+  firstPageSize = pageSize,
+): number {
+  if (totalItems <= firstPageSize) {
+    return 1;
+  }
+
+  return 1 + Math.ceil((totalItems - firstPageSize) / pageSize);
 }
 
 export function generateBreadcrumbs(params: {

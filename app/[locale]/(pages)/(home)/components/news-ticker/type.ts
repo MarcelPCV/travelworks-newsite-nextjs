@@ -1,3 +1,9 @@
+export type NewsTickerItem = {
+  id: string;
+  title: string;
+  href: string;
+};
+
 export type NewsTicker = {
   blockType: 'NewsTicker';
   id: string;
@@ -5,4 +11,6 @@ export type NewsTicker = {
   newsLabel: string;
   newsCtaHref: string;
   phone: string;
+  sectionHref?: string;
+  items?: NewsTickerItem[];
 };

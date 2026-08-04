@@ -9,6 +9,9 @@ import TopAnnouncementBar from './components/layout/top-announcement-bar';
 import ConsentManager from './components/layout/consent-manager';
 import { routeToMessageLocale } from './locale-config';
 import Footer from './components/footer/index';
+import type { NewsItem } from './components/footer/news-section';
+import { getCategories, getNewsArticlePath } from '@/app/[locale]/(pages)/news/lib/categories';
+import { getAllArticles } from '@/app/[locale]/(pages)/news/lib/news';
 
 export default async function LocaleLayout({
   children,
@@ -33,6 +36,19 @@ export default async function LocaleLayout({
     }
   }
 
+  const categories = getCategories(locale);
+  const latestNewsItems: NewsItem[] = (await getAllArticles(locale)).slice(0, 3).map((article) => {
+    const firstCategory = categories.find((category) => article.categories.includes(category.id));
+
+    return {
+      id: article.id,
+      category: firstCategory?.name ?? 'TravelWorks',
+      title: article.title,
+      href: getNewsArticlePath(locale, article.slug),
+      imageSrc: article.thumbnail || article.coverImage,
+    };
+  });
+
   // Pass the message locale (e.g. 'en-us') to the client provider so it can be inferred reliably
   return (
     <IntlProviderWrapper locale={file} messages={messages}>
@@ -44,7 +60,7 @@ export default async function LocaleLayout({
           {children}
         </main>
         <ConsentManager />
-        <Footer />
+        <Footer newsItems={latestNewsItems} />
       </div>
     </IntlProviderWrapper>
   );

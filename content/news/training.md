@@ -1,6 +1,6 @@
 ---
 title: 'TravelWorks launches new tools to master accounting software'
-description: 'Knowledge base.'
+description: 'TravelWorks launches new training platforms to help users master its accounting software and maximize the platform’s capabilities.'
 excerpt: 'TravelWorks unveils new training platforms to help users master its accounting software with structured, accessible, and comprehensive learning tools'
 id: 'travelworks'
 slug: 'travelworks-launches-software-training'
@@ -10,8 +10,8 @@ author: 'TravelWorks'
 category:
   - technology
 featured: true
-coverImage: '/images/news/en/training-platform-knowledge-base.jpg'
-thumbnail: '/images/news/en/training-platform-knowledge-base.jpg'
+coverImage: '/images/news/training/en/training-platform-knowledge-base.jpg'
+thumbnail: '/images/news/training/en/training-platform-knowledge-base.jpg'
 seo:
   title: 'TravelWorks launches new accounting software'
   description: 'Discover TravelWorks accounting platform.'

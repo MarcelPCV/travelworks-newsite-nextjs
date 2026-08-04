@@ -21,6 +21,7 @@ import {
   getNewsListPath,
 } from '@/app/[locale]/(pages)/news/lib/categories';
 import { buildNewsArticleSchema, generateNewsMetadata } from '@/app/[locale]/(pages)/news/lib/seo';
+import { getNewsLabels } from '@/app/[locale]/(pages)/news/lib/labels';
 
 export async function generateStaticParams() {
   const routeLocales = getRouteLocales();
@@ -65,6 +66,7 @@ export default async function NewsArticlePage({
 }) {
   const { locale, slug } = await params;
   setRequestLocale(locale);
+  const labels = getNewsLabels(locale);
 
   const article = await getArticle(slug, locale);
 
@@ -101,7 +103,11 @@ export default async function NewsArticlePage({
 
       <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_320px]">
         <div>
-          <ArticleHeader article={article} categoryNames={categoryNames} />
+          <ArticleHeader
+            article={article}
+            categoryNames={categoryNames}
+            minReadLabel={labels.minRead}
+          />
           <section className="mt-8">
             <ArticleContent content={article.content} toc={article.toc} />
           </section>
@@ -121,7 +127,7 @@ export default async function NewsArticlePage({
         />
       </div>
 
-      <RelatedArticles locale={locale} articles={relatedArticles} />
+      {/* <RelatedArticles locale={locale} articles={relatedArticles} /> */}
 
       <script
         type="application/ld+json"

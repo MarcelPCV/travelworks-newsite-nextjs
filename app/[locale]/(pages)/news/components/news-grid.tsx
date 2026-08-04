@@ -6,9 +6,17 @@ type NewsGridProps = {
   locale: string;
   articles: NewsArticle[];
   categories: NewsCategory[];
+  readMoreLabel: string;
+  minReadLabel: string;
 };
 
-export function NewsGrid({ locale, articles, categories }: NewsGridProps) {
+export function NewsGrid({
+  locale,
+  articles,
+  categories,
+  readMoreLabel,
+  minReadLabel,
+}: NewsGridProps) {
   return (
     <section className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
       {articles.map((article) => {
@@ -22,6 +30,8 @@ export function NewsGrid({ locale, articles, categories }: NewsGridProps) {
             article={article}
             href={getNewsArticlePath(locale, article.slug)}
             categoryLabel={firstCategory?.name}
+            readMoreLabel={readMoreLabel}
+            minReadLabel={minReadLabel}
           />
         );
       })}

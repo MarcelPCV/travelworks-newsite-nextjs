@@ -1,9 +1,13 @@
+import Link from 'next/link';
+import Image from 'next/image';
 import TitleSection from '../ui/title-section';
 
 export type NewsItem = {
   id: string;
   category: string;
   title: string;
+  href: string;
+  imageSrc?: string;
   backgroundClassName?: string;
 };
 
@@ -13,44 +17,32 @@ type NewsSectionProps = {
   className?: string;
 };
 
-const defaultItems: NewsItem[] = [
-  {
-    id: 'itinerary-builder',
-    category: 'Featured',
-    title: 'New Itinerary Builder: Seamlessly create a complete itinerary.',
-    backgroundClassName:
-      'bg-[linear-gradient(120deg,rgba(44,55,73,0.55)_0%,rgba(44,55,73,0.6)_55%,rgba(44,55,73,0.58)_100%),radial-gradient(circle_at_28%_20%,#8f7a66_0%,#6e6152_24%,#445064_58%,#2b3344_100%)]',
-  },
-  {
-    id: 'accounting-tools',
-    category: 'Travelworks',
-    title: 'TravelWorks launches new tools to master accounting software',
-    backgroundClassName:
-      'bg-[linear-gradient(120deg,rgba(29,60,101,0.55)_0%,rgba(29,60,101,0.62)_52%,rgba(29,60,101,0.58)_100%),radial-gradient(circle_at_65%_22%,#8dbad4_0%,#678db5_28%,#3c6390_55%,#26496e_100%)]',
-  },
-  {
-    id: 'security-article',
-    category: 'IT Manager',
-    title: 'Information Security: 5 Key Elements for Your Travel Agency',
-    backgroundClassName:
-      'bg-[linear-gradient(120deg,rgba(23,35,57,0.62)_0%,rgba(23,35,57,0.64)_50%,rgba(23,35,57,0.6)_100%),radial-gradient(circle_at_80%_30%,#4f6989_0%,#2f4766_30%,#1e314e_60%,#111f33_100%)]',
-  },
-];
-
 function NewsCard({ item }: { item: NewsItem }) {
   return (
-    <article
-      className="group relative min-h-[14rem] overflow-hidden lg:min-h-[16rem]"
+    <Link
+      href={item.href}
+      className="group relative min-h-56 overflow-hidden lg:min-h-64"
       aria-labelledby={`news-title-${item.id}`}
     >
-      <div className={`absolute inset-0 ${item.backgroundClassName ?? 'bg-brand-navy'}`} />
-      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,13,23,0.15)_0%,rgba(7,13,23,0.55)_100%)]" />
+      {item.imageSrc ? (
+        <Image
+          src={item.imageSrc}
+          alt=""
+          fill
+          aria-hidden="true"
+          className="absolute inset-0 object-cover"
+          sizes="(max-width: 1024px) 100vw, 33vw"
+        />
+      ) : (
+        <div className={`absolute inset-0 ${item.backgroundClassName ?? 'bg-brand-navy'}`} />
+      )}
+      <div className="absolute inset-0 bg-black/60" />
 
       <div className="relative z-10 flex h-full flex-col justify-end p-6 text-neutral-canvas sm:p-7">
         <p className="text-[1.15rem] font-medium text-brand-orange-light">{item.category}</p>
         <h3
           id={`news-title-${item.id}`}
-          className="mt-2 text-[1.9rem] font-medium leading-[1.25] text-white"
+          className="mt-2 text-[1.4rem] font-medium leading-tight text-white"
         >
           {item.title}
         </h3>
@@ -58,18 +50,22 @@ function NewsCard({ item }: { item: NewsItem }) {
 
       <span className="pointer-events-none absolute inset-x-0 top-0 h-1 bg-brand-orange-dark/95" />
       <span className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-white/10 transition-opacity duration-300 group-hover:opacity-80" />
-    </article>
+    </Link>
   );
 }
 
 export default function NewsSection({
   heading = 'News',
-  items = defaultItems,
+  items = [],
   className,
 }: NewsSectionProps) {
   const rootClassName = ['w-full rounded-2xl bg-neutral-background py-6 sm:py-8', className]
     .filter(Boolean)
     .join(' ');
+
+  if (items.length === 0) {
+    return null;
+  }
 
   return (
     <section className={rootClassName} aria-labelledby="news-section-heading">

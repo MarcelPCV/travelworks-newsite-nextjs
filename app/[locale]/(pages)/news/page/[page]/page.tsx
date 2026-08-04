@@ -1,12 +1,18 @@
 import { notFound, redirect } from 'next/navigation';
 import type { Metadata } from 'next';
 import { NewsListPage } from '@/app/[locale]/(pages)/news/news-list-page';
-import { getAllArticles, getListAlternates, getRouteLocales } from '@/app/[locale]/(pages)/news/lib/news';
+import {
+  getAllArticles,
+  getListAlternates,
+  getPaginatedTotalPages,
+  getRouteLocales,
+} from '@/app/[locale]/(pages)/news/lib/news';
 import { getNewsLabels } from '@/app/[locale]/(pages)/news/lib/labels';
 import { generateNewsMetadata } from '@/app/[locale]/(pages)/news/lib/seo';
 import { getNewsPagePath } from '@/app/[locale]/(pages)/news/lib/categories';
 
 const PAGE_SIZE = 6;
+const FIRST_PAGE_SIZE_WITH_FEATURED = 7;
 
 export async function generateStaticParams() {
   const routeLocales = getRouteLocales();
@@ -14,7 +20,9 @@ export async function generateStaticParams() {
 
   for (const locale of routeLocales) {
     const articles = await getAllArticles(locale);
-    const totalPages = Math.max(1, Math.ceil(articles.length / PAGE_SIZE));
+    const hasFeaturedArticle = articles.some((article) => article.featured);
+    const firstPageSize = hasFeaturedArticle ? FIRST_PAGE_SIZE_WITH_FEATURED : PAGE_SIZE;
+    const totalPages = getPaginatedTotalPages(articles.length, PAGE_SIZE, firstPageSize);
 
     for (let page = 2; page <= totalPages; page += 1) {
       params.push({ locale, page: String(page) });

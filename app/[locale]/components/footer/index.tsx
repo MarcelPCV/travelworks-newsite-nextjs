@@ -22,10 +22,10 @@ import {
   getTrainingHref,
 } from '@/app/[locale]/components/layout/navbar/navbar-href';
 import FooterLinkColumnsSection, { type FooterLinkColumn } from './footer-link-columns-section';
-import NewsSection from './news-section';
+import NewsSection, { type NewsItem } from './news-section';
 import ContactBarSection from './contact-bar-section';
 
-export default function Index() {
+export default function Index({ newsItems }: { newsItems: NewsItem[] }) {
   const activeMessageLocale = useLocale();
   const t = useTranslations('nav');
   const tFooter = useTranslations('footer.links');
@@ -130,7 +130,7 @@ export default function Index() {
 
   return (
     <div>
-      <NewsSection />
+      <NewsSection heading={t('topLevel.news')} items={newsItems} />
       <ContactBarSection />
       <FooterLinkColumnsSection columns={columns} />
     </div>

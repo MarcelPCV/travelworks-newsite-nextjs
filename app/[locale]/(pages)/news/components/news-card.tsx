@@ -8,12 +8,20 @@ type NewsCardProps = {
   article: NewsArticle;
   href: string;
   categoryLabel?: string;
+  readMoreLabel: string;
+  minReadLabel: string;
 };
 
-export function NewsCard({ article, href, categoryLabel }: NewsCardProps) {
+export function NewsCard({
+  article,
+  href,
+  categoryLabel,
+  readMoreLabel,
+  minReadLabel,
+}: NewsCardProps) {
   return (
     <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
-      <Link href={href} className="relative block aspect-[16/9] overflow-hidden">
+      <Link href={href} className="relative block aspect-video overflow-hidden">
         <Image
           src={article.thumbnail}
           alt={article.title}
@@ -38,11 +46,11 @@ export function NewsCard({ article, href, categoryLabel }: NewsCardProps) {
         <p className="mt-3 text-sm text-slate-600">{article.excerpt}</p>
         <div className="mt-5 flex items-center justify-between text-xs text-slate-500">
           <time dateTime={article.date}>{new Date(article.date).toLocaleDateString('en-CA')}</time>
-          <ReadingTime minutes={article.readingTimeMinutes} />
+          <ReadingTime minutes={article.readingTimeMinutes} minReadLabel={minReadLabel} />
         </div>
         <div className="mt-4">
           <Link href={href} className="text-sm font-semibold text-blue-700 hover:text-blue-800">
-            Read more
+            {readMoreLabel}
           </Link>
         </div>
       </div>

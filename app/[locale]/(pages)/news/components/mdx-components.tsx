@@ -38,7 +38,6 @@ export const newsMdxComponents: MDXComponents = {
   p: (props) => <p className="mt-4 leading-7 text-slate-700" {...props} />,
   a: ({ href, children }) => (
     <a href={href} className="underline underline-offset-4 text-brand-blue">
-      <Link className="mr-2 inline-block h-4 w-4" />
       {children}
     </a>
   ),

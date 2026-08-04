@@ -19,6 +19,7 @@ import TitleHero from '../../components/shared/title-hero/title-hero';
 import { useLocale } from 'next-intl';
 
 const PAGE_SIZE = 6;
+const FIRST_PAGE_SIZE_WITH_FEATURED = 7;
 
 export async function NewsListPage({
   locale,
@@ -40,7 +41,9 @@ export async function NewsListPage({
       )
     : await getAllArticles(locale);
 
-  const paginated = paginateArticles(allArticles, page, PAGE_SIZE);
+  const hasFeaturedArticle = allArticles.some((article) => article.featured);
+  const firstPageSize = hasFeaturedArticle ? FIRST_PAGE_SIZE_WITH_FEATURED : PAGE_SIZE;
+  const paginated = paginateArticles(allArticles, page, PAGE_SIZE, firstPageSize);
 
   if (page > paginated.totalPages && paginated.totalPages > 0) {
     notFound();
@@ -81,12 +84,21 @@ export async function NewsListPage({
             <FeaturedNewsCard
               article={featuredArticle}
               href={getNewsArticlePath(locale, featuredArticle.slug)}
+              featuredLabel={labels.featured}
+              readStoryLabel={labels.readStory}
+              minReadLabel={labels.minRead}
             />
           </section>
         ) : null}
 
         <section className="mt-8">
-          <NewsGrid locale={locale} articles={gridArticles} categories={categories} />
+          <NewsGrid
+            locale={locale}
+            articles={gridArticles}
+            categories={categories}
+            readMoreLabel={labels.readMore}
+            minReadLabel={labels.minRead}
+          />
         </section>
 
         <Pagination locale={locale} currentPage={paginated.page} totalPages={paginated.totalPages} />

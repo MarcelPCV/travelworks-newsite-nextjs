@@ -4,11 +4,23 @@ import type { NewsArticle } from '@/app/[locale]/(pages)/news/types';
 import { getBlurDataURL } from '@/app/[locale]/(pages)/news/lib/image';
 import { ReadingTime } from './reading-time';
 
-export function FeaturedNewsCard({ article, href }: { article: NewsArticle; href: string }) {
+export function FeaturedNewsCard({
+  article,
+  href,
+  featuredLabel,
+  readStoryLabel,
+  minReadLabel,
+}: {
+  article: NewsArticle;
+  href: string;
+  featuredLabel: string;
+  readStoryLabel: string;
+  minReadLabel: string;
+}) {
   return (
     <article className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
       <div className="grid gap-0 md:grid-cols-2">
-        <Link href={href} className="relative block min-h-[260px]">
+        <Link href={href} className="relative block min-h-65">
           <Image
             src={article.coverImage}
             alt={article.title}
@@ -20,7 +32,9 @@ export function FeaturedNewsCard({ article, href }: { article: NewsArticle; href
           />
         </Link>
         <div className="px-6 py-6 md:px-8 md:py-8">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-700">Featured</p>
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-700">
+            {featuredLabel}
+          </p>
           <h2 className="mt-3 text-2xl font-semibold text-slate-900">
             <Link href={href} className="hover:text-blue-700">
               {article.title}
@@ -31,13 +45,13 @@ export function FeaturedNewsCard({ article, href }: { article: NewsArticle; href
             <time dateTime={article.date}>
               {new Date(article.date).toLocaleDateString('en-CA')}
             </time>
-            <ReadingTime minutes={article.readingTimeMinutes} />
+            <ReadingTime minutes={article.readingTimeMinutes} minReadLabel={minReadLabel} />
           </div>
           <Link
             href={href}
             className="mt-6 inline-block text-sm font-semibold text-blue-700 hover:text-blue-800"
           >
-            Read story
+            {readStoryLabel}
           </Link>
         </div>
       </div>

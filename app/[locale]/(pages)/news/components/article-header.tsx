@@ -6,9 +6,11 @@ import { ReadingTime } from './reading-time';
 export function ArticleHeader({
   article,
   categoryNames,
+  minReadLabel,
 }: {
   article: NewsArticle;
   categoryNames: string[];
+  minReadLabel: string;
 }) {
   return (
     <header>
@@ -23,15 +25,14 @@ export function ArticleHeader({
         ))}
       </div>
       <h1 className="text-3xl font-semibold text-slate-900 md:text-4xl">{article.title}</h1>
-      <p className="mt-3 text-lg text-slate-600">{article.description}</p>
       <div className="mt-4 flex flex-wrap items-center gap-4 text-sm text-slate-500">
         <span>{article.author}</span>
         <span aria-hidden="true">•</span>
         <time dateTime={article.date}>{new Date(article.date).toLocaleDateString('en-CA')}</time>
         <span aria-hidden="true">•</span>
-        <ReadingTime minutes={article.readingTimeMinutes} />
+        <ReadingTime minutes={article.readingTimeMinutes} minReadLabel={minReadLabel} />
       </div>
-      <div className="relative mt-6 aspect-[16/9] overflow-hidden rounded-2xl border border-slate-200">
+      <div className="relative mt-6 aspect-video overflow-hidden rounded-2xl border border-slate-200">
         <Image
           src={article.coverImage}
           alt={article.title}

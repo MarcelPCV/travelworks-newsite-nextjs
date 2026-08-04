@@ -2,7 +2,19 @@ import type { NewsArticle } from '@/app/[locale]/(pages)/news/types';
 import { getNewsArticlePath } from '@/app/[locale]/(pages)/news/lib/categories';
 import { NewsCard } from './news-card';
 
-export function RelatedArticles({ locale, articles }: { locale: string; articles: NewsArticle[] }) {
+type RelatedArticlesProps = {
+  locale: string;
+  articles: NewsArticle[];
+  readMoreLabel?: string;
+  minReadLabel?: string;
+};
+
+export function RelatedArticles({
+  locale,
+  articles,
+  readMoreLabel = 'Read more',
+  minReadLabel = 'min read',
+}: RelatedArticlesProps) {
   if (articles.length === 0) {
     return null;
   }
@@ -16,6 +28,8 @@ export function RelatedArticles({ locale, articles }: { locale: string; articles
             key={`${article.id}-${article.slug}`}
             article={article}
             href={getNewsArticlePath(locale, article.slug)}
+            readMoreLabel={readMoreLabel}
+            minReadLabel={minReadLabel}
           />
         ))}
       </div>

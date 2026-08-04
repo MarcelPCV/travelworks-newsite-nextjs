@@ -19,6 +19,9 @@ import { WhyTravelworksItems } from './components/why/type';
 import { Client } from './components/clients-section/type';
 import { PlanningDemoField } from './components/demo-section/type';
 import { BenefitsBannerItem } from './components/benefits-banner/type';
+import { getAllArticles } from '../news/lib/news';
+import { getNewsArticlePath, getNewsListPath } from '../news/lib/categories';
+import { NewsTickerItem } from './components/news-ticker/type';
 
 export async function generateMetadata({
   params,
@@ -49,6 +52,12 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
   setRequestLocale(routeLocale);
   const messageLocale = routeToMessageLocale[routeLocale] ?? 'en-us';
   const countries = getCountryOptions(messageLocale);
+  const tickerItems: NewsTickerItem[] = (await getAllArticles(routeLocale)).slice(0, 3).map((article) => ({
+    id: article.id,
+    title: article.title,
+    href: getNewsArticlePath(routeLocale, article.slug),
+  }));
+  const newsListPath = getNewsListPath(routeLocale);
 
   return (
     <main>
@@ -94,6 +103,8 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
                 newsLabel={layout.newsLabel ? t(layout.newsLabel) : ''}
                 newsCtaHref={layout.newsCtaHref ? t(layout.newsCtaHref) : ''}
                 phone={layout.phone ? t(layout.phone) : ''}
+                sectionHref={newsListPath}
+                items={tickerItems}
               />
             );
           case 'HeroCarousel':

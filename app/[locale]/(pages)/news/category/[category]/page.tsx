@@ -105,7 +105,13 @@ export default async function NewsCategoryPage({
       </section>
 
       <section className="mt-8">
-        <NewsGrid locale={locale} articles={articles} categories={categories} />
+        <NewsGrid
+          locale={locale}
+          articles={articles}
+          categories={categories}
+          readMoreLabel={labels.readMore}
+          minReadLabel={labels.minRead}
+        />
       </section>
 
       <script

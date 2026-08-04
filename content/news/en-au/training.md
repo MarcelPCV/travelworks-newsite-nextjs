@@ -1,6 +1,6 @@
 ---
 title: 'PcVoyages lance de nouveaux outils pour maîtriser les logiciels de comptabilité.'
-description: 'TravelWorks lance de nouvelles plateformes de formation pour aider les utilisateurs à maîtriser son logiciel de comptabilité et à maximiser les capacités de la plateforme.'
+description: 'Base de Connaissance'
 excerpt: "PcVoyages dévoile de nouvelles plateformes de formation pour aider les utilisateurs à maîtriser son logiciel de comptabilité grâce à des outils d'apprentissage structurés, accessibles et complets."
 id: 'travelworks'
 slug: 'pcvoyages-lance-logiciel-formation'
@@ -28,4 +28,4 @@ En proposant des formations structurées, accessibles et approfondies, PcVoyages
 
 ![TravelWorks training platform](/images/news/en/training-platform-knowledge-base-2.jpg)
 
-[Click here to learn more.](/fr-ca/formation/plateforme-de-formation)
+[Click here to learn more.](/en-au/formation/plateforme-de-formation)
