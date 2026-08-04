@@ -1,9 +1,11 @@
 import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
+import { Locale } from 'next-intl';
 import { ReactNode } from 'react';
 import { Sparkles } from 'lucide-react';
 
 type FeatureSectionProps = {
+  locale: Locale;
   id: string;
   title: string;
   image: string;
@@ -16,6 +18,7 @@ type FeatureSectionProps = {
 };
 
 export default async function FeatureSection({
+  locale,
   id,
   title,
   image,
@@ -23,7 +26,10 @@ export default async function FeatureSection({
   reverse = false,
   className = '',
 }: FeatureSectionProps) {
-  const t = await getTranslations('pages.travel-agency-software.benefits');
+  const t = await getTranslations({
+    locale,
+    namespace: 'pages.travel-agency-software.benefits',
+  });
 
   const resolveMessage = (value: string) =>
     t.has(value) ? t(value) : value;

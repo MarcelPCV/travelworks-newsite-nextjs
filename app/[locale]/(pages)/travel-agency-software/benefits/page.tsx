@@ -43,9 +43,10 @@ export default async function TravelWorksFeatures({
 
   const homeHref = locale === 'en' ? '/' : `/${locale}`;
 
-  const t = await getTranslations(
-    'pages.travel-agency-software.benefits'
-  );
+  const t = await getTranslations({
+    locale,
+    namespace: 'pages.travel-agency-software.benefits',
+  });
 
   const resolveMessage = (value: string) =>
     t.has(value) ? t(value) : value;
@@ -125,6 +126,7 @@ export default async function TravelWorksFeatures({
         {sections.map((section, index) => (
           <FeatureSection
             key={section.id}
+            locale={locale}
             {...section}
             reverse={index % 2 !== 0}
             className={index % 2 === 0 ? 'bg-white' : 'bg-gray-100'}
