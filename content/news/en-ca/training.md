@@ -1,9 +1,9 @@
 ---
-title: 'PcVoyages lance de nouveaux outils pour maîtriser les logiciels de comptabilité.'
-description: 'Base de Connaissance'
-excerpt: "PcVoyages dévoile de nouvelles plateformes de formation pour aider les utilisateurs à maîtriser son logiciel de comptabilité grâce à des outils d'apprentissage structurés, accessibles et complets."
+title: 'TravelWorks launches new tools to master accounting software'
+description: 'TravelWorks launches new training platforms to help users master its accounting software and maximize the platform’s capabilities.'
+excerpt: 'TravelWorks unveils new training platforms to help users master its accounting software with structured, accessible, and comprehensive learning tools'
 id: 'travelworks'
-slug: 'pcvoyages-lance-logiciel-formation'
+slug: 'travelworks-launches-software-training'
 date: '2026-04-06'
 updated: '2026-04-08'
 author: 'TravelWorks'
@@ -16,16 +16,16 @@ seo:
   title: 'TravelWorks launches new accounting software'
   description: 'Discover TravelWorks accounting platform.'
   keywords:
-    - logiciel de comptabilité
-    - logiciel pour agences de voyages
-    - formation
+    - accounting software
+    - travel agency software
+    - training
     - crm
 ---
 
-PcVoyages est fier de dévoiler ses nouvelles plateformes de formation, spécialement conçues pour doter les utilisateurs des compétences et de la confiance nécessaires à la maîtrise de son logiciel de comptabilité. Ces outils d’apprentissage innovants reflètent l’engagement de PcVoyages envers les meilleures pratiques du secteur et une compréhension approfondie des besoins des clients pour une connaissance approfondie des produits. 
+TravelWorks is proud to unveil its new training platforms, purpose-built to equip users with the skills and confidence needed to master its accounting software. These innovative learning tools reflect TravelWorks’ commitment to industry best practices and a deeper understanding of client needs for more comprehensive product knowledge. 
 
-En proposant des formations structurées, accessibles et approfondies, PcVoyages permet aux professionnels du voyage d’être mieux préparés à exploiter pleinement les fonctionnalités de la plateforme et à assurer la réussite de leur entreprise.
+By offering structured, accessible, and in-depth training, TravelWorks ensures that travel professionals are better prepared to leverage the full capabilities of the platform and drive their business success.
 
 ![TravelWorks training platform](/images/news/en/training-platform-knowledge-base-2.jpg)
 
-[Click here to learn more.](/en-ca/formation/plateforme-de-formation)
+[Click here to learn more.](/training/training-platform)

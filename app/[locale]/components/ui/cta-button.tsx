@@ -72,7 +72,7 @@ export default function CtaButton({
   ...props
 }: CtaButtonProps) {
   const rootClassName = [
-    'inline-flex items-center justify-center gap-2.5 rounded-sm border font-semibold leading-none shadow-[0_1px_2px_rgba(16,24,40,0.18)] transition-all duration-150',
+    'cursor-pointer inline-flex items-center justify-center gap-2.5 rounded-sm border font-semibold leading-none shadow-[0_1px_2px_rgba(16,24,40,0.18)] transition-all duration-150',
     'focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-55',
     variantClassNames[variant],
     sizeClassNames[size],

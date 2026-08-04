@@ -25,7 +25,7 @@ export function Pagination({
       {currentPage > 1 ? (
         <Link
           href={getNewsPagePath(locale, currentPage - 1)}
-          className="rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 hover:border-brand-blue hover:text-brand-blue-dark"
+          className="rounded-md border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 hover:border-brand-blue hover:text-brand-blue-dark"
         >
           Previous
         </Link>
@@ -36,10 +36,10 @@ export function Pagination({
           key={page}
           href={getNewsPagePath(locale, page)}
           aria-current={page === currentPage ? 'page' : undefined}
-          className={`rounded-full px-3 py-1.5 text-sm font-semibold ${
+          className={`rounded-md px-3 py-1.5 text-sm font-semibold ${
             page === currentPage
-              ? 'bg-blue-700 text-white'
-              : 'border border-slate-300 text-slate-700 hover:border-blue-500 hover:text-blue-700'
+              ? 'bg-brand-blue text-white'
+              : 'border border-slate-300 text-slate-700 hover:border-brand-blue hover:text-brand-blue-dark'
           }`}
         >
           {page}
@@ -49,7 +49,7 @@ export function Pagination({
       {currentPage < totalPages ? (
         <Link
           href={getNewsPagePath(locale, currentPage + 1)}
-          className="rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 hover:border-brand-blue hover:text-brand-blue-dark"
+          className="rounded-md border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 hover:border-brand-blue hover:text-brand-blue-dark"
         >
           Next
         </Link>

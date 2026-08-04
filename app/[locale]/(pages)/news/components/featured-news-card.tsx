@@ -1,8 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import type { NewsArticle } from '@/app/[locale]/(pages)/news/types';
+import CtaButton from '@/app/[locale]/components/ui/cta-button';
 import { getBlurDataURL } from '@/app/[locale]/(pages)/news/lib/image';
 import { ReadingTime } from './reading-time';
+import { ArrowRight } from 'lucide-react';
 
 export function FeaturedNewsCard({
   article,
@@ -47,12 +49,20 @@ export function FeaturedNewsCard({
             </time>
             <ReadingTime minutes={article.readingTimeMinutes} minReadLabel={minReadLabel} />
           </div>
-          <Link
-            href={href}
-            className="mt-6 inline-block text-sm font-semibold text-brand-blue hover:text-brand-blue-dark"
-          >
-            {readStoryLabel}
-          </Link>
+          <div className="mt-4">
+            {href && readStoryLabel && (
+              <Link href={href} className="inline-block">
+                <CtaButton
+                  label={readStoryLabel}
+                  variant="default"
+                  size="xs"
+                  icon={<ArrowRight className="h-6 w-6" strokeWidth={2.4} />}
+                  iconPosition="after"
+                  className="mt-6"
+                />
+              </Link>
+              )}
+          </div>
         </div>
       </div>
     </article>

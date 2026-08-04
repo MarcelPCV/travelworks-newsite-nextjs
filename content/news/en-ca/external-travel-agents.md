@@ -1,7 +1,7 @@
 ---
-title: 'Agents de voyages externes – 5 avantages offerts par le logiciel PC Voyages'
-description: 'Agents de voyages externes – 5 avantages offerts par le logiciel PC Voyages'
-excerpt: 'Optimisez la gestion de vos agents de voyages externes avec une solution cloud offrant une facturation personnalisée, des accès sécurisés et des rapports en temps réel.'
+title: 'External Travel Agents – 5 Benefits of the TravelWorks Software'
+description: 'External Travel Agents – 5 Benefits of the TravelWorks Software'
+excerpt: 'Managing external travel agents requires the right tools. Explore how TravelWorks improves productivity, simplifies administration, and supports remote teams'
 id: 'external-travel-agents'
 slug: 'external-travel-agents'
 date: '2025-01-01'
@@ -10,16 +10,16 @@ author: 'TravelWorks'
 category:
   - technology
 featured: true
-coverImage: '/images/news/external-agents/external-agents.jpg'
-thumbnail: '/images/news/external-agents/external-agents.jpg'
+coverImage: '/images/news/external-travel-agents/external-agents.jpg'
+thumbnail: '/images/news/external-travel-agents/external-agents.jpg'
 seo:
   title: 'TravelWorks launches new accounting software'
   description: 'Discover TravelWorks accounting platform.'
   keywords:
-    - Logiciel de comptabilité
-    - Logiciel pour agences de voyages
-    - Formation
-    - CRM
+    - accounting software
+    - travel agency software
+    - training
+    - crm
 ---
 
 You manage a travel agency with external travel agents and you wonder how to efficiently administer this activity within your organization? Since your travel agents work from home, it is therefore essential to give them the available tools that will enable them to maximize their work while still taking into account their specific needs.
