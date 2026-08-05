@@ -242,7 +242,7 @@ export function NavbarDesktopContent({
                 role="menu"
                 aria-label={labels.aboutUs}
                 aria-hidden={!isAboutUsOpen}
-                className={`absolute left-0 top-full mt-3 w-56 rounded-xl border border-zinc-200 bg-background/90 backdrop-blur-md p-3 shadow-lg transition duration-200 motion-reduce:transition-none ${
+                className={`absolute left-0 top-full mt-3 w-56 rounded-xl border border-zinc-200 bg-black/90 p-3 shadow-lg transition duration-200 motion-reduce:transition-none ${
                   isAboutUsOpen
                     ? 'visible translate-y-0 opacity-100'
                     : 'pointer-events-none invisible -translate-y-1 opacity-0'
@@ -300,7 +300,7 @@ export function NavbarDesktopContent({
                 role="menu"
                 aria-label={labels.training}
                 aria-hidden={!isTrainingOpen}
-                className={`absolute left-0 top-full mt-3 w-56 rounded-xl border border-zinc-200 bg-background/90 backdrop-blur-md p-3 shadow-lg transition duration-200 motion-reduce:transition-none ${
+                className={`absolute left-0 top-full mt-3 w-56 rounded-xl border border-zinc-200 bg-black/90 p-3 shadow-lg transition duration-200 motion-reduce:transition-none ${
                   isTrainingOpen
                     ? 'visible translate-y-0 opacity-100'
                     : 'pointer-events-none invisible -translate-y-1 opacity-0'
@@ -419,7 +419,7 @@ export function NavbarDesktopContent({
         role="menu"
         aria-label={labels.products}
         aria-hidden={!isProductsOpen}
-        className={`absolute inset-x-0 top-full hidden border-t border-zinc-200 bg-background/90 backdrop-blur-md rounded-b-2xl lg:block ${
+        className={`absolute inset-x-0 top-full hidden border-t border-zinc-200 bg-black/90 rounded-b-2xl lg:block ${
           isProductsOpen ? 'pointer-events-auto visible' : 'pointer-events-none invisible'
         }`}
       >
