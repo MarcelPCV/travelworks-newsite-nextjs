@@ -6,7 +6,7 @@ import { useLocale } from 'next-intl';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
-const LOADING_DURATION_MS = 500;
+const LOADING_DURATION_MS = 300;
 
 export default function LoadingOverlay() {
   const locale = useLocale();
