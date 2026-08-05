@@ -61,7 +61,9 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
 
   return (
     <main>
-      <h1 className="sr-only">{'Home'}</h1>
+      <h1 className="sr-only">
+        {'Home'}
+      </h1>
       {HomePage.layout.map((layout, index) => {
         switch (layout.blockType) {
           case 'BenefitsBanner':

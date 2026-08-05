@@ -67,7 +67,9 @@ type SearchMessages = {
   metadata?: {
     home?: { title?: string; description?: string };
     'ask-for-a-demo'?: { title?: string; description?: string };
+    [key: string]: unknown;
   };
+  pages?: Record<string, unknown>;
 };
 
 const PRODUCT_PAGE_DEFINITIONS = [
@@ -101,6 +103,84 @@ const TRAINING_PAGE_DEFINITIONS = [
 
 const SUPPORTED_ROUTE_LOCALES: RouteLocale[] = ['en', 'en-ca', 'en-au', 'fr-ca'];
 const CACHE_TTL_MS = 60 * 60 * 1000;
+const MAX_PAGE_BODY_STRINGS = 80;
+const MAX_PAGE_KEYWORDS = 72;
+
+const PRODUCT_METADATA_KEY_OVERRIDES: Partial<
+  Record<(typeof PRODUCT_PAGE_DEFINITIONS)[number]['labelKey'], string>
+> = {
+  backofficeSystem: 'back-office-travel-agency',
+  crmTools: 'crm',
+  'trip-n-trouch': 'trip-n-touch',
+};
+
+const ABOUT_US_METADATA_KEY_BY_LABEL: Record<
+  (typeof ABOUT_US_PAGE_DEFINITIONS)[number]['labelKey'],
+  string
+> = {
+  company: 'the-company',
+  clients: 'clients',
+  partners: 'partners',
+  contact: 'contact',
+  careers: 'careers',
+};
+
+const TRAINING_METADATA_KEY_BY_LABEL: Record<
+  (typeof TRAINING_PAGE_DEFINITIONS)[number]['labelKey'],
+  string
+> = {
+  platform: 'training-platform',
+  knowledgeBase: 'knowledge-base',
+};
+
+const PRODUCT_INTENT_TERMS = new Set([
+  'accounting',
+  'invoicing',
+  'billing',
+  'finance',
+  'bookings',
+  'booking',
+  'backoffice',
+  'back',
+  'office',
+  'crm',
+  'dashboard',
+  'reports',
+  'integrations',
+  'customizations',
+  'features',
+  'benefits',
+  'itinerary',
+  'trip',
+  'tour',
+  'comptabilite',
+  'facturation',
+  'reservation',
+]);
+
+const STOPWORDS = new Set([
+  'the',
+  'and',
+  'for',
+  'with',
+  'from',
+  'that',
+  'this',
+  'your',
+  'you',
+  'des',
+  'les',
+  'pour',
+  'avec',
+  'dans',
+  'une',
+  'sur',
+  'du',
+  'de',
+  'la',
+  'le',
+]);
+
 const searchIndexCache = new Map<RouteLocale, { expiresAt: number; items: SearchIndexItem[] }>();
 
 function normalizeRouteLocale(locale: string): RouteLocale {
@@ -146,7 +226,119 @@ function normalizeSearchText(value: string): string {
     .trim();
 }
 
-function scoreResult(item: SearchIndexItem, normalizedQuery: string, queryTokens: string[]): number {
+function getNestedValue(value: unknown, path: string[]): unknown {
+  let current: unknown = value;
+
+  for (const segment of path) {
+    if (!current || typeof current !== 'object') {
+      return undefined;
+    }
+
+    current = (current as Record<string, unknown>)[segment];
+  }
+
+  return current;
+}
+
+function sanitizeText(value: string): string {
+  return value
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&nbsp;/gi, ' ')
+    .replace(/&amp;/gi, '&')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function getCleanString(value: unknown): string | undefined {
+  if (typeof value !== 'string') {
+    return undefined;
+  }
+
+  const cleaned = sanitizeText(value);
+  return cleaned.length > 0 ? cleaned : undefined;
+}
+
+function collectStrings(value: unknown, collector: string[], limit: number): void {
+  if (collector.length >= limit) {
+    return;
+  }
+
+  if (typeof value === 'string') {
+    const cleaned = sanitizeText(value);
+    if (cleaned.length > 0) {
+      collector.push(cleaned);
+    }
+    return;
+  }
+
+  if (!value || typeof value !== 'object') {
+    return;
+  }
+
+  for (const child of Object.values(value as Record<string, unknown>)) {
+    collectStrings(child, collector, limit);
+    if (collector.length >= limit) {
+      return;
+    }
+  }
+}
+
+function toSearchKeywords(values: string[]): string[] {
+  const keywords = new Set<string>();
+
+  for (const value of values) {
+    if (!value) {
+      continue;
+    }
+
+    const cleaned = sanitizeText(value);
+    if (!cleaned) {
+      continue;
+    }
+
+    keywords.add(cleaned);
+
+    const normalizedTokens = normalizeSearchText(cleaned).split(' ');
+    for (const token of normalizedTokens) {
+      if (token.length < 3 || STOPWORDS.has(token)) {
+        continue;
+      }
+      keywords.add(token);
+    }
+
+    if (keywords.size >= MAX_PAGE_KEYWORDS) {
+      break;
+    }
+  }
+
+  return Array.from(keywords).slice(0, MAX_PAGE_KEYWORDS);
+}
+
+function getSectionStrings(messages: SearchMessages, path: string[]): string[] {
+  const section = getNestedValue(messages.pages, path);
+  const collected: string[] = [];
+  collectStrings(section, collected, MAX_PAGE_BODY_STRINGS);
+  return collected;
+}
+
+function isProductIntentQuery(normalizedQuery: string, queryTokens: string[]): boolean {
+  if (
+    normalizedQuery.includes('back office') ||
+    normalizedQuery.includes('trip details') ||
+    normalizedQuery.includes('tableau de bord')
+  ) {
+    return true;
+  }
+
+  return queryTokens.some((token) => PRODUCT_INTENT_TERMS.has(token));
+}
+
+function scoreResult(
+  item: SearchIndexItem,
+  normalizedQuery: string,
+  queryTokens: string[],
+  preferProductPages: boolean,
+): number {
   const normalizedTitle = normalizeSearchText(item.title);
   const normalizedDescription = normalizeSearchText(item.description);
   const normalizedHref = normalizeSearchText(item.href);
@@ -201,6 +393,10 @@ function scoreResult(item: SearchIndexItem, normalizedQuery: string, queryTokens
     if (normalizedDescription.includes(token)) {
       score += 6;
     }
+  }
+
+  if (preferProductPages && item.type === 'page') {
+    score += item.id.startsWith('page-product-') ? 24 : 8;
   }
 
   return score;
@@ -300,14 +496,26 @@ function buildPageIndexItems(routeLocale: RouteLocale, messages: SearchMessages)
       travelAgencySoftwareSlugs[definition.canonicalSlug]?.[routeLocale] ?? definition.canonicalSlug;
     const href = withLocalePrefix(`/${softwareSegment}/${localizedSlug}`, routeLocale);
     const title = productLinks[definition.labelKey] ?? definition.labelKey;
+    const metadataKey = PRODUCT_METADATA_KEY_OVERRIDES[definition.labelKey] ?? definition.canonicalSlug;
+    const metadataTitle = getCleanString(
+      getNestedValue(messages.metadata, ['travel-agency-software', metadataKey, 'title']),
+    );
+    const metadataDescription = getCleanString(
+      getNestedValue(messages.metadata, ['travel-agency-software', metadataKey, 'description']),
+    );
+    const pageBodyStrings = getSectionStrings(messages, ['travel-agency-software', metadataKey]);
+    const description =
+      metadataDescription ??
+      pageBodyStrings.find((item) => item.length > 20) ??
+      `${title} - ${topProductsLabel}`;
 
     addPage(
       items,
       `page-product-${definition.labelKey}`,
       href,
       title,
-      `${title} - ${topProductsLabel}`,
-      [topProductsLabel, title],
+      description,
+      toSearchKeywords([topProductsLabel, title, metadataTitle ?? '', metadataDescription ?? '', ...pageBodyStrings]),
     );
   }
 
@@ -318,14 +526,24 @@ function buildPageIndexItems(routeLocale: RouteLocale, messages: SearchMessages)
       aboutUsSlugs[definition.canonicalSlug]?.[routeLocale] ?? definition.canonicalSlug;
     const href = withLocalePrefix(`/${aboutUsSegment}/${localizedSlug}`, routeLocale);
     const title = aboutUsLabels[definition.labelKey] ?? definition.labelKey;
+    const metadataKey = ABOUT_US_METADATA_KEY_BY_LABEL[definition.labelKey];
+    const metadataTitle = getCleanString(getNestedValue(messages.metadata, ['about-us', metadataKey, 'title']));
+    const metadataDescription = getCleanString(
+      getNestedValue(messages.metadata, ['about-us', metadataKey, 'description']),
+    );
+    const pageBodyStrings = getSectionStrings(messages, ['about-us', metadataKey]);
+    const description =
+      metadataDescription ??
+      pageBodyStrings.find((item) => item.length > 20) ??
+      `${title} - ${topAboutUsLabel}`;
 
     addPage(
       items,
       `page-about-${definition.labelKey}`,
       href,
       title,
-      `${title} - ${topAboutUsLabel}`,
-      [topAboutUsLabel, title],
+      description,
+      toSearchKeywords([topAboutUsLabel, title, metadataTitle ?? '', metadataDescription ?? '', ...pageBodyStrings]),
     );
   }
 
@@ -335,14 +553,24 @@ function buildPageIndexItems(routeLocale: RouteLocale, messages: SearchMessages)
     const localizedSlug = trainingSlugs[definition.canonicalSlug]?.[routeLocale] ?? definition.canonicalSlug;
     const href = withLocalePrefix(`/${trainingSegment}/${localizedSlug}`, routeLocale);
     const title = trainingLabels[definition.labelKey] ?? definition.labelKey;
+    const metadataKey = TRAINING_METADATA_KEY_BY_LABEL[definition.labelKey];
+    const metadataTitle = getCleanString(getNestedValue(messages.metadata, ['training', metadataKey, 'title']));
+    const metadataDescription = getCleanString(
+      getNestedValue(messages.metadata, ['training', metadataKey, 'description']),
+    );
+    const pageBodyStrings = getSectionStrings(messages, ['training', metadataKey]);
+    const description =
+      metadataDescription ??
+      pageBodyStrings.find((item) => item.length > 20) ??
+      `${title} - ${topTrainingLabel}`;
 
     addPage(
       items,
       `page-training-${definition.labelKey}`,
       href,
       title,
-      `${title} - ${topTrainingLabel}`,
-      [topTrainingLabel, title],
+      description,
+      toSearchKeywords([topTrainingLabel, title, metadataTitle ?? '', metadataDescription ?? '', ...pageBodyStrings]),
     );
   }
 
@@ -411,10 +639,14 @@ export async function searchSite(params: {
   const limit = Math.max(1, Math.min(params.limit ?? 12, 20));
   const normalizedQuery = normalizeSearchText(query);
   const queryTokens = normalizedQuery.split(' ').filter(Boolean);
+  const preferProductPages = isProductIntentQuery(normalizedQuery, queryTokens);
   const index = await getSearchIndex(routeLocale);
 
   const ranked = index
-    .map((item) => ({ item, score: scoreResult(item, normalizedQuery, queryTokens) }))
+    .map((item) => ({
+      item,
+      score: scoreResult(item, normalizedQuery, queryTokens, preferProductPages),
+    }))
     .filter((entry) => entry.score > 0)
     .sort((a, b) => {
       if (a.score !== b.score) {

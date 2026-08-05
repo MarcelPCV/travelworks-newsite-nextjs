@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { ChevronDown, Globe, Search, X } from 'lucide-react';
+import { ChevronDown, FileText, Globe, Newspaper, Search, X } from 'lucide-react';
 import CtaButton from '@/app/[locale]/components/ui/cta-button';
 import DropdownCtaButton, {
   type DropdownCtaOption,
@@ -56,6 +56,50 @@ export type NavbarSearchResult = {
   description: string;
   type: 'page' | 'news';
 };
+
+function escapeRegExp(value: string): string {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+function buildHighlightParts(text: string, tokens: string[]): Array<{ value: string; isMatch: boolean }> {
+  if (!text || tokens.length === 0) {
+    return [{ value: text, isMatch: false }];
+  }
+
+  const uniqueTokens = Array.from(new Set(tokens.map((token) => token.trim()).filter(Boolean)));
+  if (uniqueTokens.length === 0) {
+    return [{ value: text, isMatch: false }];
+  }
+
+  const pattern = uniqueTokens
+    .sort((a, b) => b.length - a.length)
+    .map((token) => escapeRegExp(token))
+    .join('|');
+
+  if (!pattern) {
+    return [{ value: text, isMatch: false }];
+  }
+
+  const regex = new RegExp(`(${pattern})`, 'gi');
+  const segments = text.split(regex).filter((segment) => segment.length > 0);
+
+  return segments.map((segment) => ({
+    value: segment,
+    isMatch: uniqueTokens.some((token) => token.toLowerCase() === segment.toLowerCase()),
+  }));
+}
+
+function formatResultPath(href: string): string {
+  try {
+    const parsed = href.startsWith('http')
+      ? new URL(href)
+      : new URL(href, 'https://travelworks.local');
+    const pathname = decodeURIComponent(parsed.pathname || '/');
+    return pathname.length > 1 && pathname.endsWith('/') ? pathname.slice(0, -1) : pathname;
+  } catch {
+    return href;
+  }
+}
 
 type SharedNavProps = {
   locale: string;
@@ -710,7 +754,34 @@ export function NavbarSearchDialog({
   const pages = results.filter((item) => item.type === 'page');
   const news = results.filter((item) => item.type === 'news');
   const searchStarted = query.trim().length >= 2;
+  const highlightTokens = query
+    .trim()
+    .split(/\s+/)
+    .map((token) => token.trim())
+    .filter((token) => token.length >= 2)
+    .slice(0, 8);
   const showNoResults = searchStarted && !isSearchLoading && !searchError && results.length === 0;
+
+  const renderHighlightedText = (text: string, isActive: boolean) => {
+    const parts = buildHighlightParts(text, highlightTokens);
+
+    return parts.map((part, index) => {
+      if (!part.isMatch) {
+        return <span key={`${part.value}-${index}`}>{part.value}</span>;
+      }
+
+      return (
+        <mark
+          key={`${part.value}-${index}`}
+          className={`rounded px-0.5 ${
+            isActive ? 'bg-amber-300 text-zinc-900' : 'bg-amber-100 text-zinc-900'
+          }`}
+        >
+          {part.value}
+        </mark>
+      );
+    });
+  };
 
   const renderResultGroup = (
     groupTitle: string,
@@ -745,11 +816,28 @@ export function NavbarSearchDialog({
                   onSelectResult(result.href);
                 }}
               >
+                <div className="mb-1 flex items-center gap-2 text-xs">
+                  <span
+                    className={`inline-flex items-center gap-1 rounded-full border px-2 py-0.5 font-semibold uppercase tracking-wide ${
+                      isActive ? 'border-zinc-200/70 text-zinc-100' : 'border-zinc-300 text-zinc-600'
+                    }`}
+                  >
+                    {result.type === 'page' ? (
+                      <FileText className="h-3.5 w-3.5" aria-hidden="true" />
+                    ) : (
+                      <Newspaper className="h-3.5 w-3.5" aria-hidden="true" />
+                    )}
+                    {result.type === 'page' ? labels.searchPagesLabel : labels.searchNewsLabel}
+                  </span>
+                  <span className={`truncate ${isActive ? 'text-zinc-200' : 'text-zinc-500'}`}>
+                    {formatResultPath(result.href)}
+                  </span>
+                </div>
                 <p className={`text-sm font-semibold ${isActive ? 'text-white' : 'text-zinc-900'}`}>
-                  {result.title}
+                  {renderHighlightedText(result.title, isActive)}
                 </p>
-                <p className={`mt-1 text-sm ${isActive ? 'text-zinc-200' : 'text-zinc-600'}`}>
-                  {result.description}
+                <p className={`mt-1 line-clamp-2 text-sm ${isActive ? 'text-zinc-200' : 'text-zinc-600'}`}>
+                  {renderHighlightedText(result.description, isActive)}
                 </p>
               </Link>
             );
