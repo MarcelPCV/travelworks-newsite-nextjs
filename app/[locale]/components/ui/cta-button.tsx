@@ -44,9 +44,9 @@ const variantClassNames: Record<CtaButtonVariant, string> = {
 };
 
 const sizeClassNames: Record<CtaButtonSize, string> = {
-  xs: 'h-10 px-4 text-sm',
-  sm: 'h-11 px-5 text-base',
-  base: 'h-12 px-6 text-lg',
+  xs: 'h-10 px-3 text-sm',
+  sm: 'h-11 px-3 text-base',
+  base: 'h-12 px-3 text-lg',
   md: 'h-12 px-6 text-lg',
   lg: 'h-14 px-8 text-xl',
   xl: 'h-16 px-10 text-[1.625rem]',
@@ -72,7 +72,7 @@ export default function CtaButton({
   ...props
 }: CtaButtonProps) {
   const rootClassName = [
-    'cursor-pointer inline-flex items-center justify-center gap-2.5 rounded-sm border font-semibold leading-none shadow-[0_1px_2px_rgba(16,24,40,0.18)] transition-all duration-150',
+    'cursor-pointer inline-flex items-center justify-center gap-1 rounded-sm border font-semibold leading-none shadow-[0_1px_2px_rgba(16,24,40,0.18)] transition-all duration-150',
     'focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-55',
     variantClassNames[variant],
     sizeClassNames[size],

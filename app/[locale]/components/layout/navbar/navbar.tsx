@@ -13,7 +13,7 @@ import {
   replaceLocaleInPath,
   routeToMessageLocale,
 } from '@/app/[locale]/locale-config';
-import { CircleArrowRight } from 'lucide-react';
+import { CircleArrowRight, CircleX } from 'lucide-react';
 import { type DropdownCtaOption } from '@/app/[locale]/components/ui/dropdown-cta-button';
 import {
   aboutUsLinks,
@@ -37,6 +37,7 @@ import {
   getSolutionHref,
   getTrainingHref,
 } from '@/app/[locale]/components/layout/navbar/navbar-href';
+import { Menu } from 'lucide-react';
 
 const EXTERNAL_RETURN_REFRESH_KEY = 'travelworks.navbar.external-return-refresh';
 const SEARCH_MIN_QUERY_LENGTH = 2;
@@ -588,7 +589,7 @@ export default function Navbar() {
 
           <button
             type="button"
-            className="absolute right-4 top-1/2 z-10 inline-flex -translate-y-1/2 items-center rounded-md border border-zinc-300 bg-white px-3 py-2 text-sm font-medium text-zinc-700 shadow-sm hover:bg-zinc-50 sm:right-6 lg:hidden"
+            className="absolute right-4 top-1/2 z-10 inline-flex -translate-y-1/2 items-center rounded-md border border-zinc-300 bg-white px-3 py-2 text-sm font-medium text-zinc-700 shadow-md hover:bg-zinc-50 sm:right-6 lg:hidden"
             aria-expanded={isMobileOpen}
             aria-controls="mobile-menu"
             onClick={() => {
@@ -598,7 +599,17 @@ export default function Navbar() {
               clearDesktopPanels();
             }}
           >
-            {isMobileOpen ? labels.close : labels.menu}
+            {isMobileOpen ? 
+              <div className="flex items-center">
+                <CircleX className="mr-2 h-5 w-5 text-brand-blue" aria-hidden="true" />
+                {labels.close}
+              </div> 
+              : 
+              <div className="flex items-center">
+                <Menu className="mr-2 h-5 w-5 text-brand-blue" aria-hidden="true" />
+                {labels.menu}
+              </div>
+            }
           </button>
         </div>
 

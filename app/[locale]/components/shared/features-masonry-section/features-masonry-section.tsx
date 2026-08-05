@@ -43,10 +43,10 @@ function FeatureCard({ card }: { card: RenderFeatureMasonryCard }) {
             className="flex items-start gap-2.5 text-neutral-dark"
           >
             <CheckCircle2
-              className="mt-0.5 h-5 w-5 shrink-0 text-brand-orange-dark"
+              className="mt-1 h-5 w-5 shrink-0 text-brand-orange-dark"
               strokeWidth={2.2}
             />
-            <span className="text-[.95rem]">
+            <span className="text-[.9rem] leading-7">
               {item}
             </span>
           </li>
@@ -58,7 +58,7 @@ function FeatureCard({ card }: { card: RenderFeatureMasonryCard }) {
           <CtaButton
             label={card.ctaLabel}
             variant="default"
-            size="sm"
+            size="xs"
             icon={<ArrowRight className="h-6 w-6" strokeWidth={2.4} />}
             iconPosition="after"
             className="mt-6 cursor-pointer"

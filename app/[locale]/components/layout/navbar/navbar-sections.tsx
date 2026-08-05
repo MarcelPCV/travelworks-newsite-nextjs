@@ -196,11 +196,11 @@ export function NavbarDesktopContent({
         </Link>
 
         <div className="ml-2 hidden flex-1 items-center justify-between lg:flex">
-          <ul className="flex items-center gap-1">
+          <ul className="flex items-center gap-0">
             <li>
               <button
                 type="button"
-                className={`inline-flex items-center rounded-md px-3 py-2 text-sm uppercase transition duration-150 hover:bg-zinc-100 hover:border-b-2 hover:border-amber-600 ${
+                className={`inline-flex items-center rounded-md px-2 py-2 text-sm uppercase transition duration-150 hover:bg-zinc-100 hover:border-b-2 hover:border-amber-600 ${
                   isProductsActive ? 'font-bold text-[#015caa]' : 'font-medium text-zinc-800'
                 }`}
                 aria-expanded={isProductsOpen}
@@ -220,7 +220,7 @@ export function NavbarDesktopContent({
             <li className="relative">
               <button
                 type="button"
-                className={`inline-flex items-center rounded-md px-3 py-2 text-sm uppercase transition duration-150 hover:bg-zinc-100 hover:border-b-2 hover:border-amber-600 ${
+                className={`inline-flex items-center rounded-md px-2 py-2 text-sm uppercase transition duration-150 hover:bg-zinc-100 hover:border-b-2 hover:border-amber-600 ${
                   isAboutUsActive ? 'font-bold text-[#015caa]' : 'font-medium text-zinc-800'
                 }`}
                 aria-expanded={isAboutUsOpen}
@@ -242,7 +242,7 @@ export function NavbarDesktopContent({
                 role="menu"
                 aria-label={labels.aboutUs}
                 aria-hidden={!isAboutUsOpen}
-                className={`absolute left-0 top-full mt-3 w-56 rounded-xl border border-zinc-200 bg-black/90 p-3 shadow-lg transition duration-200 motion-reduce:transition-none ${
+                className={`absolute left-0 top-full mt-3 w-56 rounded-xl border border-zinc-200 bg-black/90 p-2 shadow-lg transition duration-200 motion-reduce:transition-none ${
                   isAboutUsOpen
                     ? 'visible translate-y-0 opacity-100'
                     : 'pointer-events-none invisible -translate-y-1 opacity-0'
@@ -278,7 +278,7 @@ export function NavbarDesktopContent({
             <li className="relative">
               <button
                 type="button"
-                className={`inline-flex items-center rounded-md px-3 py-2 text-sm uppercase transition duration-150 hover:bg-zinc-100 hover:border-b-2 hover:border-amber-600 ${
+                className={`inline-flex items-center rounded-md px-2 py-2 text-sm uppercase transition duration-150 hover:bg-zinc-100 hover:border-b-2 hover:border-amber-600 ${
                   isTrainingActive ? 'font-bold text-[#015caa]' : 'font-medium text-zinc-800'
                 }`}
                 aria-expanded={isTrainingOpen}
@@ -346,14 +346,6 @@ export function NavbarDesktopContent({
           </ul>
 
           <div className="flex items-center gap-2">
-            <button
-              type="button"
-              className="inline-flex h-10 w-10 items-center justify-center rounded-md text-zinc-700 transition hover:bg-zinc-200"
-              aria-label="Open search"
-              onClick={onOpenSearch}
-            >
-              <Search className="h-5 w-5" aria-hidden="true" />
-            </button>
             <Link href={askForDemoHref}>
               <div className="button-main">
                 <CtaButton label={labels.askForDemo} variant="orangeGradient" size="xs" />
@@ -373,13 +365,13 @@ export function NavbarDesktopContent({
             <div className="relative">
               <button
                 type="button"
-                className="inline-flex items-center rounded-md border border-zinc-300 px-3 py-2 text-sm font-medium text-zinc-700 transition hover:bg-zinc-100"
+                className="inline-flex items-center rounded-md px-3 py-3 text-sm font-medium text-zinc-700 transition hover:bg-zinc-100"
                 aria-expanded={isLangOpen}
                 aria-controls="language-menu"
                 aria-haspopup="menu"
                 onClick={onToggleLanguageMenu}
               >
-                <Globe className="mr-2 inline-block h-4 w-4" />
+                <Globe className="mr-2 inline-block h-5 w-5 text-brand-blue" />
                 {labels.languagePrefix}
                 <ChevronDown
                   className={`ml-1 inline-block h-4 w-4 transition-transform duration-150 ${
@@ -392,7 +384,7 @@ export function NavbarDesktopContent({
                 <div
                   id="language-menu"
                   role="menu"
-                  className="absolute right-0 top-full mt-2 w-64 rounded-xl border border-zinc-200 bg-white p-2 shadow-lg"
+                  className="absolute right-0 top-full mt-2 w-64 rounded-xl border border-zinc-200 bg-white max-w-[200px] p-2 shadow-lg"
                 >
                   {languageLinks.map((item) => (
                     <Link
@@ -410,6 +402,14 @@ export function NavbarDesktopContent({
                 </div>
               ) : null}
             </div>
+            <button
+              type="button"
+              className="inline-flex h-9 w-9 items-center justify-center rounded-full text-zinc-700 transition bg-brand-blue hover:bg-[#284782]"
+              aria-label="Open search"
+              onClick={onOpenSearch}
+            >
+              <Search className="h-5 w-5 text-white" aria-hidden="true" />
+            </button>
           </div>
         </div>
       </nav>
