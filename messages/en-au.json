@@ -4,41 +4,9 @@
       "title": "Home - TravelWorks - Travel Agency Software",
       "description": "Discover TravelWorks, the comprehensive travel agency software that streamlines booking, CRM, inventory, billing, accounting, and marketing for travel agencies and tour operators."
     },
-    "about-us": {
-      "careers": {
-        "title": "Careers - TravelWorks",
-        "description": "Join our team and be part of a dynamic and innovative company that is shaping the future of travel technology."
-      },
-      "clients": {
-        "title": "Clients - TravelWorks",
-        "description": "Discover how TravelWorks has helped travel agencies and tour operators streamline their operations and improve customer service."
-      },
-      "contact": {
-        "title": "Contact Us - TravelWorks",
-        "description": "Get in touch with TravelWorks for inquiries, support, or to learn more about our travel technology solutions."
-      },
-      "partners": {
-        "title": "Partners - TravelWorks",
-        "description": "Explore our partnerships with leading travel technology providers and how they enhance our solutions."
-      },
-      "the-company": {
-        "title": "The Company - TravelWorks",
-        "description": "Learn more about TravelWorks, our mission, and how we are revolutionizing the travel industry with our comprehensive solutions."
-      }
-    },
     "ask-for-a-demo": {
       "title": "Request a Demo - TravelWorks",
       "description": "Schedule a demo with TravelWorks to see how our solutions can benefit your travel agency or tour operation."
-    },
-    "training": {
-      "training-platform": {
-        "title": "Training - TravelWorks",
-        "description": "Access training resources and materials to help you get the most out of TravelWorks' travel technology solutions."
-      },
-      "knowledge-base": {
-        "title": "Knowledge Base - TravelWorks",
-        "description": "Find answers to common questions and learn how to use TravelWorks' features effectively through our knowledge base."
-      }
     },
     "travel-agency-software": {
       "back-office-travel-agency": {
@@ -84,6 +52,38 @@
       "trip-n-touch": {
         "title": "Trip n'Touch - TravelWorks",
         "description": "Discover Trip n'Touch, TravelWorks' mobile application that allows travel agencies to provide an enhanced travel experience for their clients with detailed itineraries, maps, and destination guides."
+      }
+    },
+    "training": {
+      "training-platform": {
+        "title": "Training - TravelWorks",
+        "description": "Access training resources and materials to help you get the most out of TravelWorks' travel technology solutions."
+      },
+      "knowledge-base": {
+        "title": "Knowledge Base - TravelWorks",
+        "description": "Find answers to common questions and learn how to use TravelWorks' features effectively through our knowledge base."
+      }
+    },
+    "about-us": {
+      "careers": {
+        "title": "Careers - TravelWorks",
+        "description": "Join our team and be part of a dynamic and innovative company that is shaping the future of travel technology."
+      },
+      "clients": {
+        "title": "Clients - TravelWorks",
+        "description": "Discover how TravelWorks has helped travel agencies and tour operators streamline their operations and improve customer service."
+      },
+      "contact": {
+        "title": "Contact Us - TravelWorks",
+        "description": "Get in touch with TravelWorks for inquiries, support, or to learn more about our travel technology solutions."
+      },
+      "partners": {
+        "title": "Partners - TravelWorks",
+        "description": "Explore our partnerships with leading travel technology providers and how they enhance our solutions."
+      },
+      "the-company": {
+        "title": "The Company - TravelWorks",
+        "description": "Learn more about TravelWorks, our mission, and how we are revolutionizing the travel industry with our comprehensive solutions."
       }
     }
   },
@@ -1300,6 +1300,21 @@
         }
       }
     },
+    "integrations": {
+      "breadcrumb": {
+        "features-label": "The Solution",
+        "features-link": "/travel-agency-software/features",
+        "integrations-label": "Integrations"
+      },
+      "block-type-page-hero": {
+        "title": "Integrate with other systems",
+        "description": "Interface with numerous partners and automate your operations.",
+        "mobileTopImageSrc": "/images/pages/travel-agency-software/multiple-integration/background-portfolio-multiple-integration.webp",
+        "desktopMainImageSrc": "/images/pages/travel-agency-software/multiple-integration/background-portfolio-multiple-integration.webp",
+        "logoImageSrc": "",
+        "ctaImageSrc": ""
+      }
+    },
     "training": {
       "knowledge-base": {
         "breadcrumb": {
@@ -1957,7 +1972,8 @@
       "products": "The Solution",
       "aboutUs": "About Us",
       "training": "Training",
-      "news": "News"
+      "news": "News",
+      "integrations": "Integrations"
     },
     "brand": {
       "name": "TravelWorks"

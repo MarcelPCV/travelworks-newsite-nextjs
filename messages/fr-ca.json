@@ -65,10 +65,6 @@
         "title": "Fonctionnalités - PC Voyages",
         "description": "Découvrez la vaste gamme de fonctionnalités offertes par le logiciel pour agences de voyages de PC Voyages, conçu pour optimiser les opérations et améliorer le service à la clientèle."
       },
-      "integrations": {
-        "title": "Intégrations - PC Voyages",
-        "description": "Découvrez les différentes intégrations offertes par PC Voyages, permettant une connectivité fluide avec d'autres systèmes et partenaires de l'industrie du voyage."
-      },
       "tour-management": {
         "title": "Gestion des circuits - PC Voyages",
         "description": "Découvrez comment les solutions de gestion des circuits de PC Voyages permettent aux agences de voyages de gérer efficacement les circuits, les stocks et les réservations."
@@ -85,6 +81,10 @@
         "title": "Trip n'Touch - PC Voyages",
         "description": "Découvrez Trip n'Touch, l'application mobile de PC Voyages qui permet aux agences de voyages d'offrir à leurs clients une expérience de voyage améliorée avec des itinéraires détaillés, des cartes et des guides de destination."
       }
+    },
+    "integrations": {
+      "title": "Intégrations - PC Voyages",
+      "description": "Découvrez les différentes intégrations offertes par PC Voyages, permettant une connectivité fluide avec d'autres systèmes et partenaires de l'industrie du voyage."
     }
   },
   "pages": {
@@ -740,65 +740,6 @@
           }
         }
       },
-      "integrations": {
-        "breadcrumb": {
-          "features-label": "La solution",
-          "features-link": "/fr-ca/logiciel-agence-voyage/fonctionnalites",
-          "integrations-label": "Integrations"
-        },
-        "block-type-page-hero": {
-          "title": "Intégrer avec d’autres systèmes",
-          "description": "Interagissez avec de nombreux partenaires et automatisez vos opérations.",
-          "mobileTopImageSrc": "/images/pages/travel-agency-software/multiple-integration/background-portfolio-multiple-integration.webp",
-          "desktopMainImageSrc": "/images/pages/travel-agency-software/multiple-integration/background-portfolio-multiple-integration.webp",
-          "logoImageSrc": "",
-          "ctaImageSrc": ""
-        },
-        "block-type-image-block": {
-          "title": "",
-          "description": "",
-          "imageSrc": "/images/pages/travel-agency-software/multiple-integration/schema-fr.webp",
-          "altText": "Intégrations multiples",
-          "linkHref": "",
-          "linkText": "",
-          "captionText": ""
-        },
-        "block-type-features-highlights": {
-          "online-reservation": {
-            "title": "Réservation en ligne et facturation automatisée",
-            "description": "<p>Si vous proposez à vos clients la réservation en ligne via votre site web, vous pouvez <strong>automatiser les factures sans aucune intervention manuelle.</strong></p><p>Si vous avez un partenariat avec Soft Voyages pour vos réservations en ligne, la <strong>fonction de facturation automatique peut être activée</strong>.</p><p>Si votre site web est conçu par un autre fournisseur, nous pouvons <strong>évaluer la faisabilité de l’intégration sur demande.</strong></p>",
-            "linkTitle": "",
-            "linkUrl": "#"
-          },
-          "gds": {
-            "title": "Intégration avec les principaux systèmes de distribution mondiale (GDS)",
-            "description": "<p>Cela vous permet de récupérer les informations comptables depuis des systèmes tels que : <strong>Sabre, Galileo, Amadeus, Worldspan et SIREV</strong>.</p><p>Une facture automatisée est générée et les transactions sont mises à jour dans le module comptable de TravelWorks.</p>",
-            "linkTitle": "Découvrir nos partenaires",
-            "linkUrl": "#"
-          },
-          "insurance-companies": {
-            "title": "Accès direct à plusieurs compagnies d’assurance",
-            "description": "L’<strong>interface des compagnies d’assurance</strong> est accessible en <strong>temps réel via TravelWorks</strong>. Une fois la meilleure police sélectionnée pour votre client, les informations sont transmises à la compagnie d’assurance puis automatiquement intégrées dans la facturation TravelWorks avec le détail des prix, la commission à recevoir et le numéro de police.",
-            "linkTitle": "Découvrir nos partenaires",
-            "linkUrl": "#"
-          }
-        },
-        "block-type-planning-demo-section": {
-          "heading": "Planifier une démonstration",
-          "image": {
-            "placeholderLabel": "Image de l'équipe"
-          },
-          "form": {
-            "nameLabel": "Nom",
-            "emailLabel": "Courriel",
-            "companyLabel": "Nom de l'agence",
-            "countryLabel": "Pays",
-            "countryPlaceholder": "Veuillez choisir une option",
-            "phoneLabel": "Téléphone",
-            "submitButtonLabel": "Demander une démonstration"
-          }
-        }
-      },
       "dashboard-reports": {
         "breadcrumb": {
           "features-label": "La solution",
@@ -1298,6 +1239,30 @@
             "submitButtonLabel": "Demander une démonstration"
           }
         }
+      }
+    },
+    "integrations": {
+      "breadcrumb": {
+        "features-label": "La solution",
+        "features-link": "/fr-ca/logiciel-agence-voyage/fonctionnalites",
+        "integrations-label": "Integrations"
+      },
+      "block-type-page-hero": {
+        "title": "Intégrer avec d’autres systèmes",
+        "description": "Interagissez avec de nombreux partenaires et automatisez vos opérations.",
+        "mobileTopImageSrc": "/images/pages/travel-agency-software/multiple-integration/background-portfolio-multiple-integration.webp",
+        "desktopMainImageSrc": "/images/pages/travel-agency-software/multiple-integration/background-portfolio-multiple-integration.webp",
+        "logoImageSrc": "",
+        "ctaImageSrc": ""
+      },
+      "block-type-image-block": {
+        "title": "",
+        "description": "",
+        "imageSrc": "/images/pages/travel-agency-software/multiple-integration/schema-fr.webp",
+        "altText": "Intégrations multiples",
+        "linkHref": "",
+        "linkText": "",
+        "captionText": ""
       }
     },
     "training": {
@@ -1952,7 +1917,8 @@
       "products": "La Solution",
       "aboutUs": "A propos",
       "training": "Formation",
-      "news": "Nouvelles"
+      "news": "Nouvelles",
+      "integrations": "Intégrations"
     },
     "brand": {
       "name": "PcVoyages"

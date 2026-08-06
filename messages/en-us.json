@@ -65,10 +65,6 @@
         "title": "Features - TravelWorks",
         "description": "Explore the wide range of features offered by TravelWorks' travel agency software, designed to optimize operations and enhance customer service."
       },
-      "integrations": {
-        "title": "Integrations - TravelWorks",
-        "description": "Learn about the various integrations available with TravelWorks, allowing seamless connectivity with other systems and partners in the travel industry."
-      },
       "tour-management": {
         "title": "Tour Management - TravelWorks",
         "description": "Discover how TravelWorks' tour management solutions help travel agencies efficiently manage tours, inventory, and bookings."
@@ -85,6 +81,10 @@
         "title": "Trip n'Touch - TravelWorks",
         "description": "Discover Trip n'Touch, TravelWorks' mobile application that allows travel agencies to provide an enhanced travel experience for their clients with detailed itineraries, maps, and destination guides."
       }
+    },
+    "integrations": {
+      "title": "Integrations - TravelWorks",
+      "description": "Learn about the various integrations available with TravelWorks, allowing seamless connectivity with other systems and partners in the travel industry."
     }
   },
   "pages": {
@@ -740,65 +740,6 @@
           }
         }
       },
-      "integrations": {
-        "breadcrumb": {
-          "features-label": "The Solution",
-          "features-link": "/travel-agency-software/features",
-          "integrations-label": "Integrations"
-        },
-        "block-type-page-hero": {
-          "title": "Integrate with other systems",
-          "description": "Interface with numerous partners and automate your operations.",
-          "mobileTopImageSrc": "/images/pages/travel-agency-software/multiple-integration/background-portfolio-multiple-integration.webp",
-          "desktopMainImageSrc": "/images/pages/travel-agency-software/multiple-integration/background-portfolio-multiple-integration.webp",
-          "logoImageSrc": "",
-          "ctaImageSrc": ""
-        },
-        "block-type-image-block": {
-          "title": "",
-          "description": "",
-          "imageSrc": "/images/pages/travel-agency-software/multiple-integration/schema-en.webp",
-          "altText": "Multiple Integrations",
-          "linkHref": "",
-          "linkText": "",
-          "captionText": ""
-        },
-        "block-type-features-highlights": {
-          "online-reservation": {
-            "title": "Online reservation and automated invoicing",
-            "description": "<p>If you offer your clients online booking via your website, you can <strong>automate invoices without any manual intervention.</strong></p><p>If you have a partnership with Soft Voyages for your online reservation bookings, the <strong>auto-invoicing feature can be activated</strong>.</p><p>If your website is designed by another provider, we can <strong>evaluate the feasibility of the integration upon request.</strong></p>",
-            "linkTitle": "",
-            "linkUrl": "#"
-          },
-          "gds": {
-            "title": "Integrates with major Global Distribution Systems (GDS)",
-            "description": "<p>This enables you to retrieve accounting information from systems such as: <strong>Sabre, Galileo, Amadeus, Worldspan & SIREV </strong>.</p><p>An automated invoice is generated and transactions are updated in the TravelWorks accounting module.</p>",
-            "linkTitle": "Discover our Partners",
-            "linkUrl": "#"
-          },
-          "insurance-companies": {
-            "title": "Direct connect access to several Insurance companies",
-            "description": "The <strong>insurance companies interface</strong> is accessible in <strong>real-time via TravelWorks</strong>. Once you select the best policy for your client, the information is transmitted to the insurance company and is then auto populated into TravelWorks invoicing with the price breakdown, commission receivable & policy identification number.",
-            "linkTitle": "Discover our Partners",
-            "linkUrl": "#"
-          }
-        },
-        "block-type-planning-demo-section": {
-          "heading": "Planning a Demo",
-          "image": {
-            "placeholderLabel": "Teamwork Image Placeholder"
-          },
-          "form": {
-            "nameLabel": "Name",
-            "emailLabel": "Email",
-            "companyLabel": "Agency Name",
-            "countryLabel": "Country",
-            "countryPlaceholder": "Please choose an option",
-            "phoneLabel": "Phone",
-            "submitButtonLabel": "Request a Demo"
-          }
-        }
-      },
       "dashboard-reports": {
         "breadcrumb": {
           "features-label": "The Solution",
@@ -1298,6 +1239,21 @@
             "submitButtonLabel": "Request a Demo"
           }
         }
+      }
+    },
+    "integrations": {
+      "breadcrumb": {
+        "features-label": "The Solution",
+        "features-link": "/travel-agency-software/features",
+        "integrations-label": "Integrations"
+      },
+      "block-type-page-hero": {
+        "title": "Integrate with other systems",
+        "description": "Interface with numerous partners and automate your operations.",
+        "mobileTopImageSrc": "/images/pages/travel-agency-software/multiple-integration/background-portfolio-multiple-integration.webp",
+        "desktopMainImageSrc": "/images/pages/travel-agency-software/multiple-integration/background-portfolio-multiple-integration.webp",
+        "logoImageSrc": "",
+        "ctaImageSrc": ""
       }
     },
     "training": {
@@ -1893,7 +1849,8 @@
       "products": "The Solution",
       "aboutUs": "About Us",
       "training": "Training",
-      "news": "News"
+      "news": "News",
+      "integrations": "Integrations"
     },
     "brand": {
       "name": "TravelWorks"

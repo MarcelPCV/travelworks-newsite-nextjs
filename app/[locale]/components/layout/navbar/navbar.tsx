@@ -111,6 +111,7 @@ export default function Navbar() {
     (currentRouteLocale === DEFAULT_ROUTE_LOCALE ? '/' : `/${currentRouteLocale}`);
   const askForDemoHref = getAskForDemoHref(currentRouteLocale, withLocalePrefix);
   const newsHref = withLocalePrefix(`/${getNewsSegment(currentRouteLocale)}`);
+  const integrationsHref = withLocalePrefix(`/integrations`);
   const travelworks = 'https://new.pcvweb.com/#/login/';
   const travelworksLegacy =
     locale === 'fr-ca'
@@ -425,6 +426,7 @@ export default function Navbar() {
       aboutUs: t('topLevel.aboutUs'),
       training: t('topLevel.training'),
       news: t('topLevel.news'),
+      integrations: t('topLevel.integrations'),
       askForDemo: t('cta.askForDemo'),
       logIn: t('cta.logIn'),
       languageTitle: t('languageTitle'),
@@ -543,6 +545,7 @@ export default function Navbar() {
             homeHref={homeHref}
             askForDemoHref={askForDemoHref}
             newsHref={newsHref}
+            integrationsHref={integrationsHref}
             languageLinks={languageLinks}
             labels={labels}
             logInOptions={logInOptions}
@@ -618,6 +621,7 @@ export default function Navbar() {
           homeHref={homeHref}
           askForDemoHref={askForDemoHref}
           newsHref={newsHref}
+          integrationsHref={integrationsHref}
           languageLinks={languageLinks}
           labels={labels}
           logInOptions={logInOptions}

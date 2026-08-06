@@ -34,6 +34,7 @@ type NavbarLabels = {
   aboutUs: string;
   training: string;
   news: string;
+  integrations: string;
   askForDemo: string;
   logIn: string;
   languageTitle: string;
@@ -106,6 +107,7 @@ type SharedNavProps = {
   homeHref: string;
   askForDemoHref: string;
   newsHref: string;
+  integrationsHref: string;
   languageLinks: LanguageLink[];
   labels: NavbarLabels;
   logInOptions: DropdownCtaOption[];
@@ -141,7 +143,7 @@ export function NavbarDesktopContent({
   locale,
   homeHref,
   askForDemoHref,
-  newsHref,
+  integrationsHref,
   languageLinks,
   labels,
   logInOptions,
@@ -248,7 +250,7 @@ export function NavbarDesktopContent({
                     : 'pointer-events-none invisible -translate-y-1 opacity-0'
                 }`}
               >
-                {(['company', 'clients', 'partners', 'contact', 'careers'] as const).map((link) => {
+                {(['company', 'clients', 'contact', 'careers'] as const).map((link) => {
                   const Icon = aboutUsLinkIcons[link];
                   const href = aboutUsHref(link);
                   const isActive = isHrefActive(href);
@@ -274,6 +276,20 @@ export function NavbarDesktopContent({
                   );
                 })}
               </div>
+            </li>
+            <li>
+              <Link
+                href={integrationsHref}
+                className={`rounded-md px-3 py-2 text-sm uppercase transition duration-150 hover:bg-zinc-100 ${
+                  isHrefActive(integrationsHref)
+                    ? 'font-bold text-brand-blue'
+                    : 'font-medium text-zinc-800'
+                }`}
+                onMouseEnter={onClearPanels}
+                onFocus={onClearPanels}
+              >
+                {labels.integrations}
+              </Link>
             </li>
             <li className="relative">
               <button
@@ -332,16 +348,6 @@ export function NavbarDesktopContent({
                   );
                 })}
               </div>
-            </li>
-            <li>
-              <Link
-                href={newsHref}
-                className="rounded-md px-3 py-2 text-sm font-medium text-zinc-800 uppercase transition duration-150 hover:bg-zinc-100"
-                onMouseEnter={onClearPanels}
-                onFocus={onClearPanels}
-              >
-                {labels.news}
-              </Link>
             </li>
           </ul>
 
@@ -569,7 +575,7 @@ export function NavbarMobileMenu({
           </button>
           {mobileSection === 'aboutUs' ? (
             <div className="mt-2 rounded-xl bg-zinc-100 p-3">
-              {(['company', 'clients', 'partners', 'contact', 'careers'] as const).map((link) => {
+              {(['company', 'clients', 'contact', 'careers'] as const).map((link) => {
                 const Icon = aboutUsLinkIcons[link];
                 return (
                   <Link
@@ -620,16 +626,6 @@ export function NavbarMobileMenu({
             </div>
           ) : null}
         </li>
-
-        <li>
-          <Link
-            href={newsHref}
-            className="block rounded-md px-3 py-2 text-sm font-medium text-zinc-700 hover:bg-zinc-100"
-            onClick={onCloseMobileMenu}
-          >
-            {labels.news}
-          </Link>
-        </li>
         <li className="border-t border-zinc-200 pt-2">
           <Link
             href={askForDemoHref}
@@ -639,7 +635,6 @@ export function NavbarMobileMenu({
             {labels.askForDemo}
           </Link>
         </li>
-
         <li>
           <button
             type="button"

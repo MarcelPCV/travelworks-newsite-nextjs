@@ -3,7 +3,6 @@ import {
   BookOpen,
   Building2,
   GraduationCap,
-  Link2,
   Mail,
   Map,
   Settings,
@@ -25,7 +24,6 @@ export type ProductLinkKey =
   | 'tourManagement'
   | 'tourOnline'
   | 'crmTools'
-  | 'integrations'
   | 'dashboardReports'
   | 'customizations'
   | 'sirev'
@@ -36,12 +34,12 @@ export const productCategories: ProductCategory[] = ['travelworks'];
 export const productColumnsByCategory: Record<ProductCategory, ProductLinkKey[][]> = {
   travelworks: [
     ['features', 'benefits', 'backofficeSystem', 'tripDetails'],
-    ['tourManagement', 'tourOnline', 'crmTools', 'integrations'],
-    ['dashboardReports', 'customizations', 'sirev', 'trip-n-trouch'],
+    ['tourManagement', 'tourOnline', 'crmTools', 'dashboardReports'],
+    ['customizations', 'sirev', 'trip-n-trouch'],
   ],
 };
 
-export const aboutUsLinks = ['company', 'clients', 'partners', 'contact', 'careers'] as const;
+export const aboutUsLinks = ['company', 'clients', 'contact', 'careers'] as const;
 export type AboutUsLinkKey = (typeof aboutUsLinks)[number];
 
 export const trainingLinks = ['platform', 'knowledgeBase'] as const;
@@ -59,7 +57,6 @@ export const productLinkIcons: Record<ProductLinkKey, LucideIcon> = {
   tourOnline: Map,
   crmTools: Users,
   dashboardReports: BarChart3,
-  integrations: Puzzle,
   customizations: SlidersHorizontal,
   sirev: MapPinSearch,
   'trip-n-trouch': SlidersHorizontal,
@@ -68,7 +65,6 @@ export const productLinkIcons: Record<ProductLinkKey, LucideIcon> = {
 export const aboutUsLinkIcons: Record<AboutUsLinkKey, LucideIcon> = {
   company: Building2,
   clients: Users,
-  partners: Users,
   contact: Mail,
   careers: Star,
 };
@@ -86,7 +82,6 @@ export const productSlugByKey: Record<ProductLinkKey, string> = {
   tourManagement: 'tour-management',
   tourOnline: 'tour-online',
   crmTools: 'crm-tools',
-  integrations: 'integrations',
   dashboardReports: 'dashboard-reports',
   customizations: 'customizations',
   sirev: 'sirev',
@@ -96,7 +91,6 @@ export const productSlugByKey: Record<ProductLinkKey, string> = {
 export const aboutUsSlugByKey: Record<AboutUsLinkKey, string> = {
   company: 'travelworks',
   clients: 'clients',
-  partners: 'partners',
   contact: 'contact',
   careers: 'careers',
 };
