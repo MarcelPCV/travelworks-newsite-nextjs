@@ -57,7 +57,7 @@ export default function TitleSection({
       className={clsx(
         'py-5 sm:py-5 uppercase flex justify-center',
         alignmentClassMap[alignment],
-        className
+        className,
       )}
     >
       <h2
@@ -66,12 +66,10 @@ export default function TitleSection({
           sizeClassMap[size],
           caseClassMap[textCase],
           titleMaxWidth,
-          isTailwindColorClass && color
+          isTailwindColorClass && color,
         )}
         style={!isTailwindColorClass && color ? { color } : undefined}
-        aria-label={
-          typeof title === 'string' ? `${title} section title` : undefined
-        }
+        aria-label={typeof title === 'string' ? `${title} section title` : undefined}
       >
         {titleContent}
       </h2>

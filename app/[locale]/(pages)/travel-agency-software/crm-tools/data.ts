@@ -8,7 +8,8 @@ import { PlanningDemoSectionModel } from '../../(home)/components/demo-section/t
 
 import { YoutubeVideoModel } from '../../../components/shared/video/type';
 
-export type Layout = PageHeroModel | FeatureMasonry | SplitSectionModel | PlanningDemoSectionModel | YoutubeVideoModel;
+export type Layout =
+  PageHeroModel | FeatureMasonry | SplitSectionModel | PlanningDemoSectionModel | YoutubeVideoModel;
 
 export type Page = {
   slug: string;

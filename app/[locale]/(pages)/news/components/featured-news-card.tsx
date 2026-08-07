@@ -61,7 +61,7 @@ export function FeaturedNewsCard({
                   className="mt-6"
                 />
               </Link>
-              )}
+            )}
           </div>
         </div>
       </div>

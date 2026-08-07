@@ -32,7 +32,9 @@ export default function AskForDemoHighlightsSection() {
               <div className="mb-3 rounded-full bg-brand-orange-light/20 p-3 text-brand-orange-dark border-b-4 border-amber-600">
                 <Icon className="h-12 w-12" strokeWidth={1.8} />
               </div>
-              <p className="max-w-[22ch] text-[1.05rem] leading-snug text-brand-blue">{item.text}</p>
+              <p className="max-w-[22ch] text-[1.05rem] leading-snug text-brand-blue">
+                {item.text}
+              </p>
             </article>
           );
         })}

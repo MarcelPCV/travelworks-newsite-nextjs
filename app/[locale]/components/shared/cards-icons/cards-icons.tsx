@@ -17,7 +17,10 @@ export default function CardsIconsSection({ cards, title }: CardsIconsSection) {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {cards?.map((card) => (
-            <article key={card.id} className="bg-white rounded-lg p-8 shadow-sm border-b-4 border-amber-500">
+            <article
+              key={card.id}
+              className="bg-white rounded-lg p-8 shadow-sm border-b-4 border-amber-500"
+            >
               <div className="flex justify-center mb-6">
                 <div
                   className={`h-20 w-20 rounded-full flex items-center justify-center border-b-4 border-amber-500 ${card.iconBg ?? 'bg-brand-blue'}`}

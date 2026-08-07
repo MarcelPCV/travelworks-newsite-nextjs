@@ -62,7 +62,7 @@ export function NewsCard({
                 className="mt-6"
               />
             </Link>
-            )}
+          )}
         </div>
       </div>
     </article>

@@ -56,8 +56,8 @@ export async function NewsListPage({
     : paginated.items;
 
   return (
-    <main className=''>
-      <TitleHero 
+    <main className="">
+      <TitleHero
         title={locale === 'fr-ca' ? 'Actualités' : 'News'}
         imageSrc="/images/pages/privacy-policy/privacy-policy.png"
       />
@@ -101,8 +101,11 @@ export async function NewsListPage({
           />
         </section>
 
-        <Pagination locale={locale} currentPage={paginated.page} totalPages={paginated.totalPages} />
-
+        <Pagination
+          locale={locale}
+          currentPage={paginated.page}
+          totalPages={paginated.totalPages}
+        />
       </div>
     </main>
   );

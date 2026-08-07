@@ -102,7 +102,9 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
                   layout.description
                     ? t.rich(layout.description as string, {
                         p: (chunks) => <p className="mb-4 last:mb-0">{chunks}</p>,
-                        strong: (chunks) => <strong className='text-brand-blue font-semibold'>{chunks}</strong>,
+                        strong: (chunks) => (
+                          <strong className="text-brand-blue font-semibold">{chunks}</strong>
+                        ),
                       })
                     : ''
                 }
@@ -110,7 +112,9 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
                 imageAlt={typeof layout.imageAlt === 'string' ? t(layout.imageAlt) : ''}
                 ctaLabel={typeof layout.ctaLabel === 'string' ? t(layout.ctaLabel) : ''}
                 ctaLink={typeof layout.ctaLink === 'string' ? t(layout.ctaLink) : ''}
-                backgroundClass={typeof layout.backgroundClass === 'string' ? layout.backgroundClass : ''}
+                backgroundClass={
+                  typeof layout.backgroundClass === 'string' ? layout.backgroundClass : ''
+                }
               />
             );
           case 'SplitSectionMini':
@@ -123,13 +127,15 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
                   layout.description
                     ? t.rich(layout.description as string, {
                         p: (chunks) => <p className="mb-4 last:mb-0">{chunks}</p>,
-                        strong: (chunks) => <strong className='text-brand-blue font-semibold'>{chunks}</strong>,
+                        strong: (chunks) => (
+                          <strong className="text-brand-blue font-semibold">{chunks}</strong>
+                        ),
                       })
                     : ''
                 }
                 imageSrc={typeof layout.imageSrc === 'string' ? t(layout.imageSrc) : ''}
                 imageAlt={typeof layout.imageAlt === 'string' ? t(layout.imageAlt) : ''}
-                imageMaxWidth='max-w-[400px]'
+                imageMaxWidth="max-w-[400px]"
                 ctaLabel={typeof layout.ctaLabel === 'string' ? t(layout.ctaLabel) : ''}
                 ctaLink={typeof layout.ctaLink === 'string' ? t(layout.ctaLink) : ''}
               />
@@ -143,7 +149,9 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
                 description={
                   layout.description
                     ? t.rich(layout.description as string, {
-                        strong: (chunks) => <strong className='text-brand-blue font-semibold'>{chunks}</strong>,
+                        strong: (chunks) => (
+                          <strong className="text-brand-blue font-semibold">{chunks}</strong>
+                        ),
                       })
                     : ''
                 }

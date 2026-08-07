@@ -1,7 +1,7 @@
 export const clientsPageData = {
   hero: {
-    title:'block-type-page-hero.title',
-    subtitle:'block-type-page-hero.subtitle',
+    title: 'block-type-page-hero.title',
+    subtitle: 'block-type-page-hero.subtitle',
   },
   clients: [
     {
@@ -129,7 +129,7 @@ export const clientsPageData = {
   testimonials: [
     {
       id: '1',
-      quote:'testimonials.0.quote',
+      quote: 'testimonials.0.quote',
       author: 'testimonials.0.author',
       company: 'testimonials.0.company',
       logo: {
@@ -139,7 +139,7 @@ export const clientsPageData = {
     },
     {
       id: '2',
-      quote:'testimonials.1.quote',
+      quote: 'testimonials.1.quote',
       author: 'testimonials.1.author',
       company: 'testimonials.1.company',
       logo: {
@@ -150,7 +150,7 @@ export const clientsPageData = {
 
     {
       id: '3',
-      quote:'testimonials.2.quote',
+      quote: 'testimonials.2.quote',
       author: 'testimonials.2.author',
       company: 'testimonials.2.company',
       logo: {

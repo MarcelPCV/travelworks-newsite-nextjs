@@ -1239,6 +1239,15 @@
         "desktopMainImageSrc": "/images/pages/travel-agency-software/multiple-integration/background-portfolio-multiple-integration.webp",
         "logoImageSrc": "",
         "ctaImageSrc": ""
+      },
+      "section-labels": {
+        "gds": "GDS",
+        "booking-tools": "Booking Tools",
+        "online-payment-solution": "Online Payment Solution",
+        "insurance-companies": "Insurance Companies",
+        "other-partners": "Other Partners",
+        "tourism-schools": "Tourism Schools",
+        "travel-industry-associations": "Travel Industry Associations"
       }
     },
     "training": {

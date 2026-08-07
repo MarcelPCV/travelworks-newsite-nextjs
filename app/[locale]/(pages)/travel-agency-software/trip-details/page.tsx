@@ -89,14 +89,18 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
                 title={
                   layout.title
                     ? t.rich(layout.title as string, {
-                        strong: (chunks) => <strong className='font-semibold text-brand-blue'>{chunks}</strong>,
+                        strong: (chunks) => (
+                          <strong className="font-semibold text-brand-blue">{chunks}</strong>
+                        ),
                       })
                     : ''
                 }
                 description={
                   layout.description
                     ? t.rich(layout.description as string, {
-                        strong: (chunks) => <strong className='font-semibold text-brand-blue'>{chunks}</strong>,
+                        strong: (chunks) => (
+                          <strong className="font-semibold text-brand-blue">{chunks}</strong>
+                        ),
                       })
                     : ''
                 }

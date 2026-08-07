@@ -5,7 +5,10 @@ import { FeatureCardsSectionData } from './components/feature-cards/type';
 import { PlatformShowcaseModel } from './components/platform-showcase/type';
 import { WhyTravelworksSection, WhyTravelworksItems } from './components/why/type';
 import { CircleDollarSign, Cloud, Network, Users } from 'lucide-react';
-import { ClientsSectionModel, Client } from '@/app/[locale]/(pages)/(home)/components/clients-section/type';
+import {
+  ClientsSectionModel,
+  Client,
+} from '@/app/[locale]/(pages)/(home)/components/clients-section/type';
 import { PlanningDemoSectionModel } from '@/app/[locale]/(pages)/(home)/components/demo-section/type';
 
 export type Layout =

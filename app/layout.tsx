@@ -5,9 +5,34 @@ import { getSiteUrl } from './lib/get-site-url';
 
 export const metadata: Metadata = {
   metadataBase: new URL(getSiteUrl()),
-
   title: 'TravelWorks',
   description: 'Travel agency software',
+  icons: {
+    icon: [
+      {
+        url: '/icons/images/favicon-32x32.png',
+        sizes: '32x32',
+        type: 'image/png',
+      },
+      {
+        url: '/icons/icon-192x192.png',
+        sizes: '192x192',
+        type: 'image/png',
+      },
+      {
+        url: '/icons/images/icon-270x270.png',
+        sizes: '270x270',
+        type: 'image/png',
+      },
+    ],
+    apple: [
+      {
+        url: '/icons/images/apple-touch-icon-180x180.png',
+        sizes: '180x180',
+        type: 'image/png',
+      },
+    ],
+  },
 };
 
 const poppins = Poppins({

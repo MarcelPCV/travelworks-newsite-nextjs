@@ -50,7 +50,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
 
   const homeHref = locale === 'en' ? '/' : `/${locale}`;
   const breadcrumbItems: BreadcrumbItem[] = [{ label: t('breadcrumb.features-label'), href: '#' }];
-  
+
   const { locale: routeLocale } = await params;
   setRequestLocale(routeLocale);
   const messageLocale = routeToMessageLocale[routeLocale] ?? 'en-us';

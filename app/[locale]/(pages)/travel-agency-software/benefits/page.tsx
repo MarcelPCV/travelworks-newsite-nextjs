@@ -48,8 +48,7 @@ export default async function TravelWorksFeatures({
     namespace: 'pages.travel-agency-software.benefits',
   });
 
-  const resolveMessage = (value: string) =>
-    t.has(value) ? t(value) : value;
+  const resolveMessage = (value: string) => (t.has(value) ? t(value) : value);
 
   const breadcrumbItems: BreadcrumbItem[] = [
     {
@@ -111,9 +110,7 @@ export default async function TravelWorksFeatures({
                 >
                   <Icon className="h-7 w-7 text-orange-400" />
 
-                  <span className="text-sm">
-                    {resolveMessage(section.title)}
-                  </span>
+                  <span className="text-sm">{resolveMessage(section.title)}</span>
                 </a>
               );
             })}

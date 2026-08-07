@@ -1245,15 +1245,24 @@
       "breadcrumb": {
         "features-label": "La solution",
         "features-link": "/fr-ca/logiciel-agence-voyage/fonctionnalites",
-        "integrations-label": "Integrations"
+        "integrations-label": "Intégrations"
       },
       "block-type-page-hero": {
-        "title": "Intégrer avec d’autres systèmes",
+        "title": "Intégrer avec d'autres systèmes",
         "description": "Interagissez avec de nombreux partenaires et automatisez vos opérations.",
         "mobileTopImageSrc": "/images/pages/travel-agency-software/multiple-integration/background-portfolio-multiple-integration.webp",
         "desktopMainImageSrc": "/images/pages/travel-agency-software/multiple-integration/background-portfolio-multiple-integration.webp",
         "logoImageSrc": "",
         "ctaImageSrc": ""
+      },
+      "section-labels": {
+        "gds": "GDS",
+        "booking-tools": "Outils de réservation",
+        "online-payment-solution": "Solution de paiement en ligne",
+        "insurance-companies": "Compagnies d'assurance",
+        "other-partners": "Autres partenaires",
+        "tourism-schools": "Écoles de tourisme",
+        "travel-industry-associations": "Associations de l'industrie touristique"
       },
       "block-type-image-block": {
         "title": "",
@@ -1620,7 +1629,7 @@
           "7": {
             "quote": "Nous utilisons le logiciel PC Voyages depuis une vingtaine d’année. Le système est très complet et facile d’utilisation. L’accès aux données est rapide grâce à des interfaces de recherche très conviviales. Nous apprécions particulièrement le fait de centraliser toutes nos informations dans un même endroit et d’avoir une vue précise et rapide de toutes nos succursales. Le personnel de support est très bien formé pour nous guider et les réponses sont rapides.",
             "author": "Pierre Couture",
-            "company": "Club Voyage Agathe Leclerc/Orford"  
+            "company": "Club Voyage Agathe Leclerc/Orford"
           },
           "8": {
             "quote": "PC Voyages est bien fait visuellement. Le système de facturation interfacé avec notre engin de réservation est extraordinaire car il nous évite beaucoup d’erreurs. Nous apprécions aussi particulièrement la fonctionnalité de gestion des groupes. Très facile de balancer les dossiers et de gérer les taux de commissions.",
@@ -1645,7 +1654,7 @@
           "12": {
             "quote": "Pour moi qui ne suis pas toujours à l’aise avec l’informatique, je dois avouer que le logiciel PC Voyages est très convivial et facile d’utilisation. Il a été extrêmement bien pensé et allège considérablement les tâches administratives d’une agence de voyages grâce à l’automatisation de certains processus : conciliations bancaires, impression de chèques en lot etc. Le service à la clientèle est excellent. Courtois, rapide et efficace, l’équipe de support de PC Voyages partage efficacement sa large expertise dans la comptabilité relative au secteur du voyage. Continuez votre beau travail et surtout à maintenir la grande qualité de votre service à la clientèle.",
             "author": "Nathalie Germain",
-            "company": "Vitesse de Croisière" 
+            "company": "Vitesse de Croisière"
           }
         },
         "videos": {

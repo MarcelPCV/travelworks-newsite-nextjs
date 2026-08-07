@@ -24,12 +24,17 @@ export default function VideoTestimonials({ videos }: Props) {
     <>
       <section className="bg-[#3F3F41] py-10">
         <div className="container mx-auto px-4">
-        <TitleSection title="Customer What They Say About Us" alignment="center" size="extra-large" color="text-white" />
-        <div className="grid gap-8 lg:grid-cols-3">
-          {videos.map((video) => (
-            <VideoCard key={video.id} video={video} onOpen={openVideo} />
-          ))}
-        </div>
+          <TitleSection
+            title="Customer What They Say About Us"
+            alignment="center"
+            size="extra-large"
+            color="text-white"
+          />
+          <div className="grid gap-8 lg:grid-cols-3">
+            {videos.map((video) => (
+              <VideoCard key={video.id} video={video} onOpen={openVideo} />
+            ))}
+          </div>
         </div>
       </section>
 

@@ -5,10 +5,10 @@ export default function RichTextSection({ title, description }: TextSection) {
   return (
     <section className="py-5">
       {title && (
-        <TitleSection 
-          title={title} 
-          alignment="center" 
-          size="extra-large" 
+        <TitleSection
+          title={title}
+          alignment="center"
+          size="extra-large"
           color="text-brand-blue"
           titleMaxWidth="max-w-3xl"
         />

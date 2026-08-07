@@ -21,7 +21,12 @@ export default function TestimonialsGrid({ testimonials }: Props) {
     <section className="bg-gray-100 py-10">
       <div className="container mx-auto px-4">
         <div className="mb-8 text-center">
-          <TitleSection title="Customer Testimonials" alignment="center" size="extra-large" color="text-brand-blue" />
+          <TitleSection
+            title="Customer Testimonials"
+            alignment="center"
+            size="extra-large"
+            color="text-brand-blue"
+          />
         </div>
         <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
           {testimonials.map((testimonial) => (

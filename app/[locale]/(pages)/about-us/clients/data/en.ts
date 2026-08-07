@@ -1,7 +1,7 @@
 export const enClientsPageData = {
   hero: {
-    title:'block-type-page-hero.title',
-    subtitle:'block-type-page-hero.subtitle',
+    title: 'block-type-page-hero.title',
+    subtitle: 'block-type-page-hero.subtitle',
   },
   clients: [
     {
@@ -129,7 +129,7 @@ export const enClientsPageData = {
   testimonials: [
     {
       id: '0',
-      quote:'testimonials.0.quote',
+      quote: 'testimonials.0.quote',
       author: 'testimonials.0.author',
       company: 'testimonials.0.company',
       logo: {
@@ -139,7 +139,7 @@ export const enClientsPageData = {
     },
     {
       id: '1',
-      quote:'testimonials.1.quote',
+      quote: 'testimonials.1.quote',
       author: 'testimonials.1.author',
       company: 'testimonials.1.company',
       logo: {
@@ -150,7 +150,7 @@ export const enClientsPageData = {
 
     {
       id: '2',
-      quote:'testimonials.2.quote',
+      quote: 'testimonials.2.quote',
       author: 'testimonials.2.author',
       company: 'testimonials.2.company',
       logo: {
@@ -210,7 +210,7 @@ export const enClientsPageData = {
         alt: 'Vitesse de Croisière',
       },
     },
-        {
+    {
       id: '8',
       quote: 'testimonials.8.quote',
       author: 'testimonials.8.author',
@@ -220,52 +220,53 @@ export const enClientsPageData = {
         alt: 'Vitesse de Croisière',
       },
     },
-        {
-          id: '9',
-          quote: 'testimonials.9.quote',
-          author: 'testimonials.9.author',
-          company: 'testimonials.9.company',
-          logo: {
-            src: '/images/pages/about-us/clients/logos/Vitesse-de-croisiere.jpg',
-            alt: 'Vitesse de Croisière',
-          },
-        },
-        {
-          id: '10',
-          quote: 'testimonials.10.quote',
-          author: 'testimonials.10.author',
-          company: 'testimonials.10.company',
-          logo: {
-            src: '/images/pages/about-us/clients/logos/Vitesse-de-croisiere.jpg',
-            alt: 'Vitesse de Croisière',
-          },
-        },
-        {
-          id: '11',
-          quote: 'testimonials.11.quote',
-          author: 'testimonials.11.author',
-          company: 'testimonials.11.company',
-          logo: {
-            src: '/images/pages/about-us/clients/logos/Vitesse-de-croisiere.jpg',
-            alt: 'Vitesse de Croisière',
-          },
-        },
-        {
-          id: '12',
-          quote: 'testimonials.12.quote',
-          author: 'testimonials.12.author',
-          company: 'testimonials.12.company',
-          logo: {
-            src: '/images/pages/about-us/clients/logos/Vitesse-de-croisiere.jpg',
-            alt: 'Vitesse de Croisière',
-          },
-        },
+    {
+      id: '9',
+      quote: 'testimonials.9.quote',
+      author: 'testimonials.9.author',
+      company: 'testimonials.9.company',
+      logo: {
+        src: '/images/pages/about-us/clients/logos/Vitesse-de-croisiere.jpg',
+        alt: 'Vitesse de Croisière',
+      },
+    },
+    {
+      id: '10',
+      quote: 'testimonials.10.quote',
+      author: 'testimonials.10.author',
+      company: 'testimonials.10.company',
+      logo: {
+        src: '/images/pages/about-us/clients/logos/Vitesse-de-croisiere.jpg',
+        alt: 'Vitesse de Croisière',
+      },
+    },
+    {
+      id: '11',
+      quote: 'testimonials.11.quote',
+      author: 'testimonials.11.author',
+      company: 'testimonials.11.company',
+      logo: {
+        src: '/images/pages/about-us/clients/logos/Vitesse-de-croisiere.jpg',
+        alt: 'Vitesse de Croisière',
+      },
+    },
+    {
+      id: '12',
+      quote: 'testimonials.12.quote',
+      author: 'testimonials.12.author',
+      company: 'testimonials.12.company',
+      logo: {
+        src: '/images/pages/about-us/clients/logos/Vitesse-de-croisiere.jpg',
+        alt: 'Vitesse de Croisière',
+      },
+    },
   ],
   videos: [
     {
       id: 'video-1',
       thumbnail: '/images/pages/about-us/clients/videos/en/net-vacances.jpg',
-      videoUrl: 'https://www.youtube.com/watch?v=B8TykbjMm0I&time_continue=0&source_ve_path=MjM4NTE&embeds_referring_euri=https%3A%2F%2Ftravelworkssolution.com%2F',
+      videoUrl:
+        'https://www.youtube.com/watch?v=B8TykbjMm0I&time_continue=0&source_ve_path=MjM4NTE&embeds_referring_euri=https%3A%2F%2Ftravelworkssolution.com%2F',
       quote: 'videos.0.quote',
       author: 'videos.0.author',
       company: 'videos.0.company',
@@ -283,7 +284,8 @@ export const enClientsPageData = {
     {
       id: 'video-3',
       thumbnail: '/images/pages/about-us/clients/videos/en/afrolympique.jpg',
-      videoUrl: 'https://www.youtube.com/watch?v=pduaZKsESHA&source_ve_path=MjM4NTE&embeds_referring_euri=https%3A%2F%2Ftravelworkssolution.com%2F',
+      videoUrl:
+        'https://www.youtube.com/watch?v=pduaZKsESHA&source_ve_path=MjM4NTE&embeds_referring_euri=https%3A%2F%2Ftravelworkssolution.com%2F',
       quote: 'videos.2.quote',
       author: 'videos.2.author',
       company: 'videos.2.company',

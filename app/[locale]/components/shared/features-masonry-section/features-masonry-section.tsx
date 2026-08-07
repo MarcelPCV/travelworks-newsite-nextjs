@@ -23,7 +23,7 @@ function FeatureCard({ card }: { card: RenderFeatureMasonryCard }) {
         {card.title}
       </h3>
 
-      {card.topLinkLabel && card.topLinkHref &&  (
+      {card.topLinkLabel && card.topLinkHref && (
         <Link href={card.topLinkHref} className="group mt-4 block">
           <div className="mt-4 flex h-32 items-center justify-center rounded-sm bg-[#3b3f45]">
             <span className="text-[3.5rem] font-semibold uppercase tracking-[0.04em] text-white/90">
@@ -46,9 +46,7 @@ function FeatureCard({ card }: { card: RenderFeatureMasonryCard }) {
               className="mt-1 h-5 w-5 shrink-0 text-brand-orange-dark"
               strokeWidth={2.2}
             />
-            <span className="text-[.9rem] leading-7">
-              {item}
-            </span>
+            <span className="text-[.9rem] leading-7">{item}</span>
           </li>
         ))}
       </ul>
@@ -74,10 +72,7 @@ export default function FeaturesMasonrySection({
   cards = [],
   className,
 }: FeaturesMasonrySectionProps) {
-  const rootClassName = [
-    'w-full mx-auto max-w-7xl px-3 sm:px-4 lg:px-5',
-    className,
-  ]
+  const rootClassName = ['w-full mx-auto max-w-7xl px-3 sm:px-4 lg:px-5', className]
     .filter(Boolean)
     .join(' ');
 

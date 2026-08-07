@@ -224,7 +224,7 @@ export const IntegrationsPageData: Page = {
       rows: defaultRows,
     },
     {
-    blockType: 'PlanningDemoSection',
+      blockType: 'PlanningDemoSection',
       heading: 'block-type-planning-demo-section.heading',
       image: {
         placeholderLabel: 'block-type-planning-demo-section.image.placeholderLabel',

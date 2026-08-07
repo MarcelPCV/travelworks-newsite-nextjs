@@ -3,7 +3,7 @@
 import { X } from 'lucide-react';
 import { useEffect, useMemo } from 'react';
 import type { VideoTestimonial } from '../video-card/video-card';
-import {useTranslations} from 'next-intl';
+import { useTranslations } from 'next-intl';
 
 type Props = {
   video: VideoTestimonial | null;
@@ -32,7 +32,7 @@ function extractYouTubeVideoId(videoUrl: string): string | null {
 
 export default function VideoModal({ video, onClose }: Props) {
   const videoId = useMemo(() => (video ? extractYouTubeVideoId(video.videoUrl) : null), [video]);
-    const t = useTranslations('pages.about-us.clients');
+  const t = useTranslations('pages.about-us.clients');
 
   useEffect(() => {
     if (!video) {

@@ -8,7 +8,7 @@ import { Locale } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
 import { Breadcrumb } from '@/app/[locale]/(pages)/news/components/breadcrumb';
 import type { BreadcrumbItem } from '@/app/[locale]/(pages)/news/types';
-import {getClientsPageData} from './data/index';
+import { getClientsPageData } from './data/index';
 
 export async function generateMetadata({
   params,
@@ -44,17 +44,11 @@ export default async function ClientsPage({ params }: { params: Promise<{ locale
   const clientsPageData = getClientsPageData(locale);
   return (
     <>
-      <Breadcrumb 
-        items={breadcrumbItems}
-        homeHref={homeHref}
-      />
+      <Breadcrumb items={breadcrumbItems} homeHref={homeHref} />
 
-      <ClientsHero 
-        title={clientsPageData.hero.title} 
-        subtitle={clientsPageData.hero.subtitle}
-      />
+      <ClientsHero title={clientsPageData.hero.title} subtitle={clientsPageData.hero.subtitle} />
 
-      <ClientsLogoMarquee clients={clientsPageData.clients}/>
+      <ClientsLogoMarquee clients={clientsPageData.clients} />
 
       <TestimonialsGrid testimonials={clientsPageData.testimonials} />
 

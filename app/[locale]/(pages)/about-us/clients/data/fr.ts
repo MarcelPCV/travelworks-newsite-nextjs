@@ -1,7 +1,7 @@
-export const frClientsPageData  = {
+export const frClientsPageData = {
   hero: {
-    title:'block-type-page-hero.title',
-    subtitle:'block-type-page-hero.subtitle',
+    title: 'block-type-page-hero.title',
+    subtitle: 'block-type-page-hero.subtitle',
   },
   clients: [
     {
@@ -129,7 +129,7 @@ export const frClientsPageData  = {
   testimonials: [
     {
       id: '0',
-      quote:'testimonials.0.quote',
+      quote: 'testimonials.0.quote',
       author: 'testimonials.0.author',
       company: 'testimonials.0.company',
       logo: {
@@ -139,7 +139,7 @@ export const frClientsPageData  = {
     },
     {
       id: '1',
-      quote:'testimonials.1.quote',
+      quote: 'testimonials.1.quote',
       author: 'testimonials.1.author',
       company: 'testimonials.1.company',
       logo: {
@@ -150,7 +150,7 @@ export const frClientsPageData  = {
 
     {
       id: '2',
-      quote:'testimonials.2.quote',
+      quote: 'testimonials.2.quote',
       author: 'testimonials.2.author',
       company: 'testimonials.2.company',
       logo: {
@@ -274,7 +274,8 @@ export const frClientsPageData  = {
     {
       id: 'video-2',
       thumbnail: '/images/pages/about-us/clients/videos/fr/2.jpg',
-      videoUrl: 'https://www.youtube.com/watch?v=PlIQCneuJ7g&source_ve_path=OTY3MTQ&embeds_referring_euri=https%3A%2F%2Fpcvoyages.com%2F',
+      videoUrl:
+        'https://www.youtube.com/watch?v=PlIQCneuJ7g&source_ve_path=OTY3MTQ&embeds_referring_euri=https%3A%2F%2Fpcvoyages.com%2F',
       quote: 'videos.1.quote',
       author: 'videos.1.author',
       company: 'videos.1.company',

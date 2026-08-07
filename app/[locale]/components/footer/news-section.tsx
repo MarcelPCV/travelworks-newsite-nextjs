@@ -54,11 +54,7 @@ function NewsCard({ item }: { item: NewsItem }) {
   );
 }
 
-export default function NewsSection({
-  heading = 'News',
-  items = [],
-  className,
-}: NewsSectionProps) {
+export default function NewsSection({ heading = 'News', items = [], className }: NewsSectionProps) {
   const rootClassName = ['w-full rounded-2xl bg-neutral-background py-6 sm:py-8', className]
     .filter(Boolean)
     .join(' ');

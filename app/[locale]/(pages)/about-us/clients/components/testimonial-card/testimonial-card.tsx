@@ -36,13 +36,9 @@ export default async function TestimonialCard({ testimonial }: Props) {
       </p>
 
       <div className="mt-8 text-brand-blue text-lg border-l-2 border-amber-600 pl-4">
-        <h3 className="font-semibold">
-          {resolveMessage(testimonial.author)}
-        </h3>
+        <h3 className="font-semibold">{resolveMessage(testimonial.author)}</h3>
 
-        <p className="text-sm text-muted-foreground">
-          {resolveMessage(testimonial.company)}
-        </p>
+        <p className="text-sm text-muted-foreground">{resolveMessage(testimonial.company)}</p>
       </div>
     </article>
   );

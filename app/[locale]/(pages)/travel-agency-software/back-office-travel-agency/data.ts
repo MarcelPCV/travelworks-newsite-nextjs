@@ -10,7 +10,12 @@ import { FeaturesCardsHighlights, FeaturesHighlights } from '../../../components
 import { CircleDollarSign, FileCheck2, Laptop, Workflow } from 'lucide-react';
 
 export type Layout =
-  PageHeroModel | SplitSectionModel | YoutubeVideoModel | FeaturesHighlights | PlanningDemoSectionModel | FeatureMasonry;
+  | PageHeroModel
+  | SplitSectionModel
+  | YoutubeVideoModel
+  | FeaturesHighlights
+  | PlanningDemoSectionModel
+  | FeatureMasonry;
 
 export type Page = {
   slug: string;

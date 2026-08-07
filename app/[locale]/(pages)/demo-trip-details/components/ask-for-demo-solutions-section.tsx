@@ -38,7 +38,9 @@ export default function AskForDemoSolutionsSection() {
                 className={`flex min-h-32 items-center justify-center rounded-md px-6 text-center text-[1rem] font-medium leading-snug ${
                   isOdd ? 'bg-[#0d4f96] text-white' : 'bg-[#e9edf1] text-brand-blue'
                 } ${
-                  isBlueInTwoCols ? 'sm:bg-[#0d4f96] sm:text-white' : 'sm:bg-[#e9edf1] sm:text-brand-blue'
+                  isBlueInTwoCols
+                    ? 'sm:bg-[#0d4f96] sm:text-white'
+                    : 'sm:bg-[#e9edf1] sm:text-brand-blue'
                 } ${
                   isOdd ? 'lg:bg-[#0d4f96] lg:text-white' : 'lg:bg-[#e9edf1] lg:text-brand-blue'
                 }`}

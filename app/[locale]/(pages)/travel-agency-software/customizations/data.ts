@@ -3,7 +3,8 @@ import { PageHeroModel } from '../../../components/shared/page-hero/type';
 import { SplitSectionModel } from '../../../components/shared/SplitSection/type';
 import { YoutubeVideoModel } from '../../../components/shared/video/type';
 
-export type Layout = PageHeroModel | SplitSectionModel | YoutubeVideoModel | PlanningDemoSectionModel;
+export type Layout =
+  PageHeroModel | SplitSectionModel | YoutubeVideoModel | PlanningDemoSectionModel;
 
 export type Page = {
   slug: string;

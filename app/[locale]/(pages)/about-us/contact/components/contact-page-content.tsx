@@ -18,10 +18,7 @@ export default function ContactPageContent({ countries, locale }: Props) {
 
   return (
     <div className="flex w-full flex-col">
-      <TitleHero 
-        title={t('title')}
-        imageSrc="/images/pages/about-us/contact/contact.webp"
-      />
+      <TitleHero title={t('title')} imageSrc="/images/pages/about-us/contact/contact.webp" />
       <section className="bg-[#f5f5f5] py-8 sm:py-10 lg:py-12">
         <div className="mx-auto grid w-full max-w-[1600px] grid-cols-1 gap-8 px-4 sm:px-6 xl:grid-cols-[1.45fr_1fr] xl:gap-12 lg:px-8">
           <ContactForm countries={countries} locale={locale} />

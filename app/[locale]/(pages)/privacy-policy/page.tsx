@@ -62,7 +62,9 @@ const policyContentByLocale: Record<string, PolicyContent> = {
       },
       {
         heading: '3. Renseignements personnels que nous recueillons',
-        paragraphs: ['Les categories de renseignements personnels que nous recueillons dependent des services que vous utilisez.'],
+        paragraphs: [
+          'Les categories de renseignements personnels que nous recueillons dependent des services que vous utilisez.',
+        ],
         bullets: [
           'a) Informations que vous fournissez directement : prenom et nom, adresse courriel, nom de l entreprise, numero de telephone, identifiants de compte, informations de facturation, informations soumises via les formulaires de contact, informations saisies dans la plateforme SaaS et toute autre information que vous choisissez de fournir.',
           'b) Informations recueillies automatiquement : adresse IP, type et version du navigateur, informations sur l appareil, systeme d exploitation, pages visitees, date et heure des visites, statistiques d utilisation, informations de session, journaux de diagnostic et de securite, identifiants de temoins et technologies similaires.',
@@ -70,7 +72,9 @@ const policyContentByLocale: Record<string, PolicyContent> = {
       },
       {
         heading: '4. Pourquoi nous recueillons des renseignements personnels',
-        paragraphs: ['Nous recueillons et utilisons les renseignements personnels uniquement a des fins appropriees et necessaires, notamment pour :'],
+        paragraphs: [
+          'Nous recueillons et utilisons les renseignements personnels uniquement a des fins appropriees et necessaires, notamment pour :',
+        ],
         bullets: [
           'fournir et maintenir notre site web et notre plateforme SaaS ;',
           'creer et gerer les comptes utilisateurs ;',
@@ -260,7 +264,9 @@ const policyContentByLocale: Record<string, PolicyContent> = {
       },
       {
         heading: '3. Personal Information We Collect',
-        paragraphs: ['The categories of personal information we collect depend on the services you use.'],
+        paragraphs: [
+          'The categories of personal information we collect depend on the services you use.',
+        ],
         bullets: [
           'a) Information you provide directly: first and last name, email address, company name, telephone number, account credentials, billing information, information submitted through contact forms, information entered into the TravelWorks SaaS platform, and any other information you choose to provide to us.',
           'b) Information collected automatically: IP address, browser type and version, device information, operating system, pages visited, date and time of visits, usage statistics, session information, diagnostic and security logs, and cookie identifiers and similar technologies.',
@@ -268,7 +274,9 @@ const policyContentByLocale: Record<string, PolicyContent> = {
       },
       {
         heading: '4. Why We Collect Personal Information',
-        paragraphs: ['We collect and use personal information only for purposes that are appropriate and necessary, including to:'],
+        paragraphs: [
+          'We collect and use personal information only for purposes that are appropriate and necessary, including to:',
+        ],
         bullets: [
           'provide and maintain our website and SaaS platform;',
           'create and manage user accounts;',
@@ -415,7 +423,7 @@ const policyContentByLocale: Record<string, PolicyContent> = {
         heading: '18. Complaints',
         paragraphs: [
           'If you believe your privacy rights have not been respected, please contact us first so that we may investigate your concerns.',
-          "If you remain dissatisfied, you may file a complaint with the Commission d acces a l information du Quebec (CAI).",
+          'If you remain dissatisfied, you may file a complaint with the Commission d acces a l information du Quebec (CAI).',
         ],
       },
     ],
@@ -460,25 +468,22 @@ export default async function PrivacyPolicyPage({
 
   return (
     <main>
-      <TitleHero 
-        title={content.title}
-        imageSrc="/images/pages/privacy-policy/privacy-policy.png"
-      />
+      <TitleHero title={content.title} imageSrc="/images/pages/privacy-policy/privacy-policy.png" />
 
       <section className="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8">
         <div className="flex items-center justify-baseline mb-8 text-sm font-semibold text-slate-600 bg-gray-100 rounded-md border-2 border-gray-200 px-5 py-3">
           <PenLine className="h-6 w-6 text-brand-blue" aria-hidden="true" />
-          <span className='ml-2 text-brand-blue uppercase'>{content.lastUpdatedLabel} </span>
-          <span className='ml-2'>{content.lastUpdatedDate}</span>
+          <span className="ml-2 text-brand-blue uppercase">{content.lastUpdatedLabel} </span>
+          <span className="ml-2">{content.lastUpdatedDate}</span>
         </div>
 
-        {content.introServicesLabel ? <p className="mb-4 text-slate-700">{content.introServicesLabel}</p> : null}
+        {content.introServicesLabel ? (
+          <p className="mb-4 text-slate-700">{content.introServicesLabel}</p>
+        ) : null}
 
         {content.sections.map((section) => (
           <article key={section.heading} className="mb-10">
-            <h2 className="mb-4 text-2xl font-bold text-brand-blue">
-              {section.heading}
-            </h2>
+            <h2 className="mb-4 text-2xl font-bold text-brand-blue">{section.heading}</h2>
 
             {section.paragraphs?.map((paragraph) => (
               <p key={paragraph} className="mb-4 leading-7 text-slate-700">
@@ -494,9 +499,14 @@ export default async function PrivacyPolicyPage({
               </ul>
             ) : null}
 
-            {(section.heading.startsWith('2.') || section.heading.startsWith('11.') || section.heading.startsWith('17.')) && (
+            {(section.heading.startsWith('2.') ||
+              section.heading.startsWith('11.') ||
+              section.heading.startsWith('17.')) && (
               <p className="text-slate-700">
-                <a className="font-semibold text-brand-blue hover:underline" href="mailto:info@travelworkssolution.com">
+                <a
+                  className="font-semibold text-brand-blue hover:underline"
+                  href="mailto:info@travelworkssolution.com"
+                >
                   info@travelworkssolution.com
                 </a>
               </p>

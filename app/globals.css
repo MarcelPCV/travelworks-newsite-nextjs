@@ -1,6 +1,10 @@
 @import 'tailwindcss';
 @import '@c15t/nextjs/styles.css';
 
+html {
+  scroll-behavior: smooth; /* This makes the scrolling animated, not instant */
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -198,7 +202,6 @@ body {
   }
 }
 
-
 .button-main {
   max-width: 150px;
   padding: 0px;
@@ -224,7 +227,7 @@ body {
 }
 
 .button-main::after {
-  content: "";
+  content: '';
 
   position: absolute;
   top: -40px;

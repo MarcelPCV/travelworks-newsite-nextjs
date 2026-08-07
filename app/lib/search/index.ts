@@ -402,7 +402,10 @@ function scoreResult(
   return score;
 }
 
-function buildPageIndexItems(routeLocale: RouteLocale, messages: SearchMessages): SearchIndexItem[] {
+function buildPageIndexItems(
+  routeLocale: RouteLocale,
+  messages: SearchMessages,
+): SearchIndexItem[] {
   const newsLabels = getNewsLabels(routeLocale);
   const nav = messages.nav ?? {};
   const productLinks = nav.products?.links ?? {};
@@ -477,7 +480,9 @@ function buildPageIndexItems(routeLocale: RouteLocale, messages: SearchMessages)
     'page-privacy-policy',
     withLocalePrefix(`/${getPrivacyPolicySegment(routeLocale)}`, routeLocale),
     routeLocale === 'fr-ca' ? 'Politique de confidentialite' : 'Privacy Policy',
-    routeLocale === 'fr-ca' ? 'Politique de confidentialite TravelWorks.' : 'TravelWorks privacy policy.',
+    routeLocale === 'fr-ca'
+      ? 'Politique de confidentialite TravelWorks.'
+      : 'TravelWorks privacy policy.',
     ['privacy', 'policy', 'cookies'],
   );
 
@@ -493,10 +498,12 @@ function buildPageIndexItems(routeLocale: RouteLocale, messages: SearchMessages)
   const softwareSegment = getTravelAgencySoftwareSegment(routeLocale);
   for (const definition of PRODUCT_PAGE_DEFINITIONS) {
     const localizedSlug =
-      travelAgencySoftwareSlugs[definition.canonicalSlug]?.[routeLocale] ?? definition.canonicalSlug;
+      travelAgencySoftwareSlugs[definition.canonicalSlug]?.[routeLocale] ??
+      definition.canonicalSlug;
     const href = withLocalePrefix(`/${softwareSegment}/${localizedSlug}`, routeLocale);
     const title = productLinks[definition.labelKey] ?? definition.labelKey;
-    const metadataKey = PRODUCT_METADATA_KEY_OVERRIDES[definition.labelKey] ?? definition.canonicalSlug;
+    const metadataKey =
+      PRODUCT_METADATA_KEY_OVERRIDES[definition.labelKey] ?? definition.canonicalSlug;
     const metadataTitle = getCleanString(
       getNestedValue(messages.metadata, ['travel-agency-software', metadataKey, 'title']),
     );
@@ -515,7 +522,13 @@ function buildPageIndexItems(routeLocale: RouteLocale, messages: SearchMessages)
       href,
       title,
       description,
-      toSearchKeywords([topProductsLabel, title, metadataTitle ?? '', metadataDescription ?? '', ...pageBodyStrings]),
+      toSearchKeywords([
+        topProductsLabel,
+        title,
+        metadataTitle ?? '',
+        metadataDescription ?? '',
+        ...pageBodyStrings,
+      ]),
     );
   }
 
@@ -527,7 +540,9 @@ function buildPageIndexItems(routeLocale: RouteLocale, messages: SearchMessages)
     const href = withLocalePrefix(`/${aboutUsSegment}/${localizedSlug}`, routeLocale);
     const title = aboutUsLabels[definition.labelKey] ?? definition.labelKey;
     const metadataKey = ABOUT_US_METADATA_KEY_BY_LABEL[definition.labelKey];
-    const metadataTitle = getCleanString(getNestedValue(messages.metadata, ['about-us', metadataKey, 'title']));
+    const metadataTitle = getCleanString(
+      getNestedValue(messages.metadata, ['about-us', metadataKey, 'title']),
+    );
     const metadataDescription = getCleanString(
       getNestedValue(messages.metadata, ['about-us', metadataKey, 'description']),
     );
@@ -543,18 +558,27 @@ function buildPageIndexItems(routeLocale: RouteLocale, messages: SearchMessages)
       href,
       title,
       description,
-      toSearchKeywords([topAboutUsLabel, title, metadataTitle ?? '', metadataDescription ?? '', ...pageBodyStrings]),
+      toSearchKeywords([
+        topAboutUsLabel,
+        title,
+        metadataTitle ?? '',
+        metadataDescription ?? '',
+        ...pageBodyStrings,
+      ]),
     );
   }
 
   const trainingSegment = getTrainingSegment(routeLocale);
   const trainingLabels = nav.training ?? {};
   for (const definition of TRAINING_PAGE_DEFINITIONS) {
-    const localizedSlug = trainingSlugs[definition.canonicalSlug]?.[routeLocale] ?? definition.canonicalSlug;
+    const localizedSlug =
+      trainingSlugs[definition.canonicalSlug]?.[routeLocale] ?? definition.canonicalSlug;
     const href = withLocalePrefix(`/${trainingSegment}/${localizedSlug}`, routeLocale);
     const title = trainingLabels[definition.labelKey] ?? definition.labelKey;
     const metadataKey = TRAINING_METADATA_KEY_BY_LABEL[definition.labelKey];
-    const metadataTitle = getCleanString(getNestedValue(messages.metadata, ['training', metadataKey, 'title']));
+    const metadataTitle = getCleanString(
+      getNestedValue(messages.metadata, ['training', metadataKey, 'title']),
+    );
     const metadataDescription = getCleanString(
       getNestedValue(messages.metadata, ['training', metadataKey, 'description']),
     );
@@ -570,7 +594,13 @@ function buildPageIndexItems(routeLocale: RouteLocale, messages: SearchMessages)
       href,
       title,
       description,
-      toSearchKeywords([topTrainingLabel, title, metadataTitle ?? '', metadataDescription ?? '', ...pageBodyStrings]),
+      toSearchKeywords([
+        topTrainingLabel,
+        title,
+        metadataTitle ?? '',
+        metadataDescription ?? '',
+        ...pageBodyStrings,
+      ]),
     );
   }
 

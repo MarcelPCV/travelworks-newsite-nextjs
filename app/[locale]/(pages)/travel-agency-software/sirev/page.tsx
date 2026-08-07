@@ -25,7 +25,8 @@ export async function generateMetadata({
   return {
     title: `${t('crm.title')}`,
     description: t('crm.description'),
-    alternates: getAlternates({
+    alternates: getAlternates(
+      {
         en: '/travel-agency-software/crm-tools',
         'en-ca': '/en-ca/travel-agency-software/crm-tools',
         'en-au': '/en-au/travel-agency-software/crm-tools',
@@ -88,7 +89,9 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
                 description={
                   layout.description
                     ? t.rich(layout.description as string, {
-                        strong: (chunks) => <strong className='text-semibold text-brand-blue'>{chunks}</strong>,
+                        strong: (chunks) => (
+                          <strong className="text-semibold text-brand-blue">{chunks}</strong>
+                        ),
                       })
                     : ''
                 }

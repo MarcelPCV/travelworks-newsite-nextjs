@@ -56,9 +56,7 @@ export default async function LocaleLayout({
         <LocationConfirmationBar />
         <TopAnnouncementBar />
         <Navbar />
-        <main className="mx-auto w-full">
-          {children}
-        </main>
+        <main className="mx-auto w-full">{children}</main>
         <ConsentManager />
         <Footer newsItems={latestNewsItems} />
       </div>

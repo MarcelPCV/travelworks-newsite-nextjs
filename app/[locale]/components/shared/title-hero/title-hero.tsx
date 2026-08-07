@@ -4,14 +4,14 @@ import Image from 'next/image';
 interface TitleHeroProps {
   title: string;
   imageSrc?: string;
-} 
+}
 
 export default function TitleHero({ title, imageSrc }: TitleHeroProps) {
   return (
     <section className="overflow-hidden bg-[#015CAA] h-30 md:h-40  text-white">
       <div className="relative mx-auto max-w-[1600px] h-full">
         <Image
-          src={imageSrc? imageSrc : ""}
+          src={imageSrc ? imageSrc : ''}
           alt=""
           width={600}
           height={400}

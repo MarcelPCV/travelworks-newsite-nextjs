@@ -22,7 +22,7 @@ seo:
     - crm
 ---
 
-PcVoyages est fier de dévoiler ses nouvelles plateformes de formation, spécialement conçues pour doter les utilisateurs des compétences et de la confiance nécessaires à la maîtrise de son logiciel de comptabilité. Ces outils d’apprentissage innovants reflètent l’engagement de PcVoyages envers les meilleures pratiques du secteur et une compréhension approfondie des besoins des clients pour une connaissance approfondie des produits. 
+PcVoyages est fier de dévoiler ses nouvelles plateformes de formation, spécialement conçues pour doter les utilisateurs des compétences et de la confiance nécessaires à la maîtrise de son logiciel de comptabilité. Ces outils d’apprentissage innovants reflètent l’engagement de PcVoyages envers les meilleures pratiques du secteur et une compréhension approfondie des besoins des clients pour une connaissance approfondie des produits.
 
 En proposant des formations structurées, accessibles et approfondies, PcVoyages permet aux professionnels du voyage d’être mieux préparés à exploiter pleinement les fonctionnalités de la plateforme et à assurer la réussite de leur entreprise.
 

@@ -13,7 +13,12 @@ import {
 import { PlanningDemoSectionModel } from '../../(home)/components/demo-section/type';
 
 export type Layout =
-  PageHeroModel | SplitSectionModel | FeatureMasonry | YoutubeVideoModel | PlanningDemoSectionModel | ComparisonSolution; 
+  | PageHeroModel
+  | SplitSectionModel
+  | FeatureMasonry
+  | YoutubeVideoModel
+  | PlanningDemoSectionModel
+  | ComparisonSolution;
 
 export type Page = {
   slug: string;

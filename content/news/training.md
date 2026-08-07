@@ -22,7 +22,7 @@ seo:
     - crm
 ---
 
-TravelWorks is proud to unveil its new training platforms, purpose-built to equip users with the skills and confidence needed to master its accounting software. These innovative learning tools reflect TravelWorks’ commitment to industry best practices and a deeper understanding of client needs for more comprehensive product knowledge. 
+TravelWorks is proud to unveil its new training platforms, purpose-built to equip users with the skills and confidence needed to master its accounting software. These innovative learning tools reflect TravelWorks’ commitment to industry best practices and a deeper understanding of client needs for more comprehensive product knowledge.
 
 By offering structured, accessible, and in-depth training, TravelWorks ensures that travel professionals are better prepared to leverage the full capabilities of the platform and drive their business success.
 

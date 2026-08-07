@@ -107,68 +107,68 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
                 imageAlt={layout.imageAlt ? t(layout.imageAlt) : ''}
               />
             );
-            case 'YoutubeVideo':
-              return (
-                <YoutubeVideoSection
-                  key={index}
-                  {...layout}
-                  heading={
-                    layout.heading
-                      ? t.rich(layout.heading as string, {
-                          strong: (chunks) => (
-                            <strong className="font-semibold text-brand-blue">{chunks}</strong>
-                          ),
-                        })
-                      : ''
-                  }
-                  videoId={layout.videoId ? t(layout.videoId) : ''}
-                  channelLabel={layout.channelLabel ? t(layout.channelLabel) : ''}
-                  description={
-                    layout.description
-                      ? t.rich(layout.description as string, {
-                          strong: (chunks) => (
-                            <strong className="font-semibold text-brand-blue">{chunks}</strong>
-                          ),
-                        })
-                      : ''
-                  }
+          case 'YoutubeVideo':
+            return (
+              <YoutubeVideoSection
+                key={index}
+                {...layout}
+                heading={
+                  layout.heading
+                    ? t.rich(layout.heading as string, {
+                        strong: (chunks) => (
+                          <strong className="font-semibold text-brand-blue">{chunks}</strong>
+                        ),
+                      })
+                    : ''
+                }
+                videoId={layout.videoId ? t(layout.videoId) : ''}
+                channelLabel={layout.channelLabel ? t(layout.channelLabel) : ''}
+                description={
+                  layout.description
+                    ? t.rich(layout.description as string, {
+                        strong: (chunks) => (
+                          <strong className="font-semibold text-brand-blue">{chunks}</strong>
+                        ),
+                      })
+                    : ''
+                }
+              />
+            );
+          case 'PlanningDemoSection':
+            return (
+              <div key={index} className="flex w-full flex-col gap-4 py-2">
+                <PlanningDemoSection
+                  countries={countries}
+                  locale={messageLocale}
+                  model={{
+                    ...layout,
+                    heading: t(layout.heading),
+                    image: {
+                      ...layout.image,
+                      placeholderLabel: t(layout.image.placeholderLabel),
+                    },
+                    form: {
+                      ...layout.form,
+                      fields: layout.form.fields.map((field: PlanningDemoField) => ({
+                        ...field,
+                        label: t(field.label),
+                        placeholder: field.placeholder ? t(field.placeholder) : undefined,
+                      })),
+                      country: {
+                        ...layout.form.country,
+                        label: t(layout.form.country.label),
+                        placeholder: t(layout.form.country.placeholder),
+                      },
+                      submitButton: {
+                        ...layout.form.submitButton,
+                        label: t(layout.form.submitButton.label),
+                      },
+                    },
+                  }}
                 />
-              );
-            case 'PlanningDemoSection':
-              return (
-                <div key={index} className="flex w-full flex-col gap-4 py-2">
-                  <PlanningDemoSection
-                    countries={countries}
-                    locale={messageLocale}
-                    model={{
-                      ...layout,
-                      heading: t(layout.heading),
-                      image: {
-                        ...layout.image,
-                        placeholderLabel: t(layout.image.placeholderLabel),
-                      },
-                      form: {
-                        ...layout.form,
-                        fields: layout.form.fields.map((field: PlanningDemoField) => ({
-                          ...field,
-                          label: t(field.label),
-                          placeholder: field.placeholder ? t(field.placeholder) : undefined,
-                        })),
-                        country: {
-                          ...layout.form.country,
-                          label: t(layout.form.country.label),
-                          placeholder: t(layout.form.country.placeholder),
-                        },
-                        submitButton: {
-                          ...layout.form.submitButton,
-                          label: t(layout.form.submitButton.label),
-                        },
-                      },
-                    }}
-                  />
-                </div>
-              );
-            default:
+              </div>
+            );
+          default:
             return null;
         }
       })}

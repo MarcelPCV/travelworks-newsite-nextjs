@@ -62,7 +62,10 @@ function escapeRegExp(value: string): string {
   return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
-function buildHighlightParts(text: string, tokens: string[]): Array<{ value: string; isMatch: boolean }> {
+function buildHighlightParts(
+  text: string,
+  tokens: string[],
+): Array<{ value: string; isMatch: boolean }> {
   if (!text || tokens.length === 0) {
     return [{ value: text, isMatch: false }];
   }
@@ -662,7 +665,9 @@ export function NavbarMobileMenu({
                     target={option.target}
                     rel={option.rel}
                     className={`flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium transition ${
-                      option.disabled ? 'pointer-events-none text-zinc-400' : 'text-zinc-700 hover:bg-white'
+                      option.disabled
+                        ? 'pointer-events-none text-zinc-400'
+                        : 'text-zinc-700 hover:bg-white'
                     }`}
                     onClick={(event) => onExternalOptionClick(event, option.href, option.onSelect)}
                     aria-disabled={option.disabled ? 'true' : undefined}
@@ -789,7 +794,9 @@ export function NavbarSearchDialog({
 
     return (
       <div className={emptyStateClassName}>
-        <p className="px-1 text-xs font-semibold uppercase tracking-wide text-zinc-500">{groupTitle}</p>
+        <p className="px-1 text-xs font-semibold uppercase tracking-wide text-zinc-500">
+          {groupTitle}
+        </p>
         <div className="mt-2 space-y-1">
           {groupResults.map((result) => {
             const globalIndex = results.findIndex((item) => item.id === result.id);
@@ -814,7 +821,9 @@ export function NavbarSearchDialog({
                 <div className="mb-1 flex items-center gap-2 text-xs">
                   <span
                     className={`inline-flex items-center gap-1 rounded-full border px-2 py-0.5 font-semibold uppercase tracking-wide ${
-                      isActive ? 'border-zinc-200/70 text-zinc-100' : 'border-zinc-300 text-zinc-600'
+                      isActive
+                        ? 'border-zinc-200/70 text-zinc-100'
+                        : 'border-zinc-300 text-zinc-600'
                     }`}
                   >
                     {result.type === 'page' ? (
@@ -831,7 +840,9 @@ export function NavbarSearchDialog({
                 <p className={`text-sm font-semibold ${isActive ? 'text-white' : 'text-zinc-900'}`}>
                   {renderHighlightedText(result.title, isActive)}
                 </p>
-                <p className={`mt-1 line-clamp-2 text-sm ${isActive ? 'text-zinc-200' : 'text-zinc-600'}`}>
+                <p
+                  className={`mt-1 line-clamp-2 text-sm ${isActive ? 'text-zinc-200' : 'text-zinc-600'}`}
+                >
                   {renderHighlightedText(result.description, isActive)}
                 </p>
               </Link>

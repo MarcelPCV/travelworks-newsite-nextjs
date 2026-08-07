@@ -34,7 +34,10 @@ export default function FeaturesHighlightsSection({ cards }: FeaturesHighlightsS
         <div className="grid grid-cols-1 gap-x-16 gap-y-12 lg:grid-cols-2 lg:gap-y-14">
           {cards.map((item) => {
             return (
-              <div key={item.id} className="grid grid-cols-1 gap-5 sm:grid-cols-[8rem_1fr] sm:gap-6">
+              <div
+                key={item.id}
+                className="grid grid-cols-1 gap-5 sm:grid-cols-[8rem_1fr] sm:gap-6"
+              >
                 <div className="sm:pt-3">
                   <HighlightIcon item={item} />
                 </div>

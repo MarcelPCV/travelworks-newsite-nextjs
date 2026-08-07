@@ -6,7 +6,7 @@ import FeatureCards from './components/feature-cards/feature-cards';
 import PlatformShowcase from './components/platform-showcase/platform-showcase';
 import WhyTravelworks from './components/why/why-travelworks-section';
 import BenefitsBanner from './components/benefits-banner/benefits-banner';
-import ClientTrustSection from '@/app/[locale]/(pages)/(home)/components/clients-section/client-trust-section'
+import ClientTrustSection from '@/app/[locale]/(pages)/(home)/components/clients-section/client-trust-section';
 import PlanningDemoSection from '@/app/[locale]/(pages)/(home)/components/demo-section/planning-demo-section';
 import { getCountryOptions } from '@/app/lib/countries';
 import { routeToMessageLocale } from '../../locale-config';
@@ -52,18 +52,18 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
   setRequestLocale(routeLocale);
   const messageLocale = routeToMessageLocale[routeLocale] ?? 'en-us';
   const countries = getCountryOptions(messageLocale);
-  const tickerItems: NewsTickerItem[] = (await getAllArticles(routeLocale)).slice(0, 3).map((article) => ({
-    id: article.id,
-    title: article.title,
-    href: getNewsArticlePath(routeLocale, article.slug),
-  }));
+  const tickerItems: NewsTickerItem[] = (await getAllArticles(routeLocale))
+    .slice(0, 3)
+    .map((article) => ({
+      id: article.id,
+      title: article.title,
+      href: getNewsArticlePath(routeLocale, article.slug),
+    }));
   const newsListPath = getNewsListPath(routeLocale);
 
   return (
     <main>
-      <h1 className="sr-only">
-        {'Home'}
-      </h1>
+      <h1 className="sr-only">{'Home'}</h1>
       {HomePage.layout.map((layout, index) => {
         switch (layout.blockType) {
           case 'BenefitsBanner':

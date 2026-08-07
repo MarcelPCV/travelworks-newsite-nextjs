@@ -16,7 +16,7 @@ type Props = {
   onOpen: (video: VideoTestimonial) => void;
 };
 
-export default  function VideoCard({ video, onOpen }: Props) {
+export default function VideoCard({ video, onOpen }: Props) {
   const t = useTranslations('pages.about-us.clients');
 
   return (
@@ -42,18 +42,12 @@ export default  function VideoCard({ video, onOpen }: Props) {
         </div>
       </button>
 
-      <p className="mt-6 text-sm leading-7">
-        {t(video.quote)}
-      </p>
+      <p className="mt-6 text-sm leading-7">{t(video.quote)}</p>
 
       <div className="mt-4 border-l-2 border-amber-600 pl-4">
-        <h3 className="font-semibold text-lg">
-          {t(video.author)}
-        </h3>
+        <h3 className="font-semibold text-lg">{t(video.author)}</h3>
 
-        <p className="text-muted-foreground text-sm">
-          {t(video.company)}
-        </p>
+        <p className="text-muted-foreground text-sm">{t(video.company)}</p>
       </div>
     </article>
   );

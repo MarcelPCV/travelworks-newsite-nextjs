@@ -120,7 +120,9 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
                 description={typeof layout.description === 'string' ? t(layout.description) : ''}
                 imageSrc={typeof layout.imageSrc === 'string' ? t(layout.imageSrc) : ''}
                 imageAlt={typeof layout.imageAlt === 'string' ? t(layout.imageAlt) : ''}
-                backgroundClass={typeof layout.backgroundClass === 'string' ? layout.backgroundClass : ''}
+                backgroundClass={
+                  typeof layout.backgroundClass === 'string' ? layout.backgroundClass : ''
+                }
               />
             );
           case 'SplitBannerSection':
@@ -146,76 +148,76 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
                 ctaLink={typeof layout.ctaLink === 'string' ? layout.ctaLink : ''}
               />
             );
-            case 'ComparisonSolution':
-              const translatedColumns: ComparisonColumn[] = (layout.columns ?? []).map((column) => {
-                try {
-                  return { ...column, label: t(column.label) };
-                } catch {
-                  return column;
+          case 'ComparisonSolution':
+            const translatedColumns: ComparisonColumn[] = (layout.columns ?? []).map((column) => {
+              try {
+                return { ...column, label: t(column.label) };
+              } catch {
+                return column;
+              }
+            });
+
+            const translatedRows: ComparisonSolutionRow[] = (layout.rows ?? []).map((row) => {
+              try {
+                return { ...row, label: t(row.label) };
+              } catch {
+                return row;
+              }
+            });
+
+            return (
+              <ComparisonSolutionSection
+                key={index}
+                {...layout}
+                heading={
+                  layout.heading
+                    ? t.rich(layout.heading as string, {
+                        strong: (chunks) => (
+                          <strong className="font-semibold text-brand-blue">{chunks}</strong>
+                        ),
+                      })
+                    : ''
                 }
-              });
-  
-              const translatedRows: ComparisonSolutionRow[] = (layout.rows ?? []).map((row) => {
-                try {
-                  return { ...row, label: t(row.label) };
-                } catch {
-                  return row;
-                }
-              });
-  
-              return (
-                <ComparisonSolutionSection
-                  key={index}
-                  {...layout}
-                  heading={
-                    layout.heading
-                      ? t.rich(layout.heading as string, {
-                          strong: (chunks) => (
-                            <strong className="font-semibold text-brand-blue">{chunks}</strong>
-                          ),
-                        })
-                      : ''
-                  }
-                  imageSrc={layout.imageSrc ? t(layout.imageSrc) : ''}
-                  imageAlt={layout.imageAlt ? t(layout.imageAlt) : ''}
-                  columns={translatedColumns}
-                  rows={translatedRows}
+                imageSrc={layout.imageSrc ? t(layout.imageSrc) : ''}
+                imageAlt={layout.imageAlt ? t(layout.imageAlt) : ''}
+                columns={translatedColumns}
+                rows={translatedRows}
+              />
+            );
+          case 'PlanningDemoSection':
+            return (
+              <div key={index} className="flex w-full flex-col gap-4 py-2">
+                <PlanningDemoSection
+                  countries={countries}
+                  locale={messageLocale}
+                  model={{
+                    ...layout,
+                    heading: t(layout.heading),
+                    image: {
+                      ...layout.image,
+                      placeholderLabel: t(layout.image.placeholderLabel),
+                    },
+                    form: {
+                      ...layout.form,
+                      fields: layout.form.fields.map((field: PlanningDemoField) => ({
+                        ...field,
+                        label: t(field.label),
+                        placeholder: field.placeholder ? t(field.placeholder) : undefined,
+                      })),
+                      country: {
+                        ...layout.form.country,
+                        label: t(layout.form.country.label),
+                        placeholder: t(layout.form.country.placeholder),
+                      },
+                      submitButton: {
+                        ...layout.form.submitButton,
+                        label: t(layout.form.submitButton.label),
+                      },
+                    },
+                  }}
                 />
-              );
-            case 'PlanningDemoSection':
-              return (
-                <div key={index} className="flex w-full flex-col gap-4 py-2">
-                  <PlanningDemoSection
-                    countries={countries}
-                    locale={messageLocale}
-                    model={{
-                      ...layout,
-                      heading: t(layout.heading),
-                      image: {
-                        ...layout.image,
-                        placeholderLabel: t(layout.image.placeholderLabel),
-                      },
-                      form: {
-                        ...layout.form,
-                        fields: layout.form.fields.map((field: PlanningDemoField) => ({
-                          ...field,
-                          label: t(field.label),
-                          placeholder: field.placeholder ? t(field.placeholder) : undefined,
-                        })),
-                        country: {
-                          ...layout.form.country,
-                          label: t(layout.form.country.label),
-                          placeholder: t(layout.form.country.placeholder),
-                        },
-                        submitButton: {
-                          ...layout.form.submitButton,
-                          label: t(layout.form.submitButton.label),
-                        },
-                      },
-                    }}
-                  />
-                </div>
-              );
+              </div>
+            );
           default:
             return null;
         }

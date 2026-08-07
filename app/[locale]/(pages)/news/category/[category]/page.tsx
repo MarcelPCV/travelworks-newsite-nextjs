@@ -1,7 +1,10 @@
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
-import { buildCollectionPageSchema, generateNewsMetadata } from '@/app/[locale]/(pages)/news/lib/seo';
+import {
+  buildCollectionPageSchema,
+  generateNewsMetadata,
+} from '@/app/[locale]/(pages)/news/lib/seo';
 import {
   getCategories,
   getCategoryIdFromSlug,

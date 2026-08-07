@@ -13,7 +13,10 @@ export function ArticleFooter({
   return (
     <footer className="mt-10 rounded-2xl border border-slate-200 bg-white px-6 py-5">
       <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-        <Link href={newsPath} className="text-sm font-semibold text-brand-blue hover:text-brand-blue-dark">
+        <Link
+          href={newsPath}
+          className="text-sm font-semibold text-brand-blue hover:text-brand-blue-dark"
+        >
           Back to news
         </Link>
         <ShareButtons path={articlePath} title={articleTitle} />

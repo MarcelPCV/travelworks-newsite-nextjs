@@ -118,7 +118,8 @@ export default function Navbar() {
       ? 'https://www.pcvweb.com/Login.aspx?lang=FR'
       : 'https://www.pcvweb.com/Login.aspx?lang=EN';
   const knowledgeBaseHref = 'https://www.tw-pcv-learning.com/en';
-  const trainingPlatformHref = 'https://travelworkssolutionpcvoyages.talentlms.com/plus/login?redirect=%2Fdashboard';
+  const trainingPlatformHref =
+    'https://travelworkssolutionpcvoyages.talentlms.com/plus/login?redirect=%2Fdashboard';
   const supportLoginHref =
     'https://support.pcvweb.com/auth/v3/signin?brand_id=360003288198&locale=en-ca&return_to=https%3A%2F%2Fsupport.pcvweb.com%2Fhc%2Fen-ca%2Frequests%2Fnew&role=end_user';
 
@@ -510,7 +511,10 @@ export default function Navbar() {
     [activeSearchResultIndex, closeSearch, navigateToSearchResult, searchResults],
   );
 
-  const getProductLabel = useCallback((linkKey: ProductLinkKey) => t(`products.links.${linkKey}`), [t]);
+  const getProductLabel = useCallback(
+    (linkKey: ProductLinkKey) => t(`products.links.${linkKey}`),
+    [t],
+  );
   const getAboutUsLabel = useCallback((link: AboutUsLinkKey) => t(`aboutUs.${link}`), [t]);
   const getTrainingLabel = useCallback((link: TrainingLinkKey) => t(`training.${link}`), [t]);
 
@@ -602,17 +606,17 @@ export default function Navbar() {
               clearDesktopPanels();
             }}
           >
-            {isMobileOpen ? 
+            {isMobileOpen ? (
               <div className="flex items-center">
                 <CircleX className="mr-2 h-5 w-5 text-brand-blue" aria-hidden="true" />
                 {labels.close}
-              </div> 
-              : 
+              </div>
+            ) : (
               <div className="flex items-center">
                 <Menu className="mr-2 h-5 w-5 text-brand-blue" aria-hidden="true" />
                 {labels.menu}
               </div>
-            }
+            )}
           </button>
         </div>
 
@@ -642,7 +646,9 @@ export default function Navbar() {
           onToggleMobileLogin={() => setIsMobileLoginOpen((prev) => !prev)}
           onCloseMobileMenu={closeMobileMenu}
           onExternalOptionClick={(event, href, onSelect) => {
-            const option = logInOptions.find((item) => item.href === href && item.onSelect === onSelect);
+            const option = logInOptions.find(
+              (item) => item.href === href && item.onSelect === onSelect,
+            );
             if (option?.disabled) {
               event.preventDefault();
               return;

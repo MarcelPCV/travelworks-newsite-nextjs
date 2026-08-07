@@ -160,9 +160,11 @@ export default function ContactForm({ countries, locale }: Props) {
               fieldErrors.country ? 'border-red-500' : 'border-slate-300'
             }`}
           >
-            <option className='text-gray-900' value="">{t('countryPlaceholder')}</option>
+            <option className="text-gray-900" value="">
+              {t('countryPlaceholder')}
+            </option>
             {countries.map((country) => (
-              <option className='text-gray-900' key={country.value} value={country.value}>
+              <option className="text-gray-900" key={country.value} value={country.value}>
                 {country.label}
               </option>
             ))}
@@ -191,9 +193,7 @@ export default function ContactForm({ countries, locale }: Props) {
         </fieldset>
 
         <label className="block">
-          <span className="text-[0.95rem] text-slate-700">
-            {t('fields.message')}
-          </span>
+          <span className="text-[0.95rem] text-slate-700">{t('fields.message')}</span>
           <textarea
             name="message"
             rows={7}

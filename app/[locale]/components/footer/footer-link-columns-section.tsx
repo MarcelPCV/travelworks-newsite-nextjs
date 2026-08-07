@@ -77,9 +77,7 @@ const defaultColumns: FooterLinkColumn[] = [
 function FooterLinkColumnList({ column }: { column: FooterLinkColumn }) {
   return (
     <div>
-      <h3 className="type-h6 text-white border-b-2 border-white/20 pb-2.5">
-        {column.heading}
-      </h3>
+      <h3 className="type-h6 text-white border-b-2 border-white/20 pb-2.5">{column.heading}</h3>
       <ul className="mt-4 space-y-2.5">
         {column.links.map((link) => (
           <li key={`${column.id}-${link.label}`}>
@@ -92,9 +90,7 @@ function FooterLinkColumnList({ column }: { column: FooterLinkColumn }) {
                 <span>{link.label}</span>
               </Link>
             ) : (
-              <span className="type-normal-16 inline-flex text-white/95">
-                {link.label}
-              </span>
+              <span className="type-normal-16 inline-flex text-white/95">{link.label}</span>
             )}
           </li>
         ))}
@@ -123,18 +119,13 @@ export default function FooterLinkColumnsSection({
         <nav aria-label={title} className="px-6 py-8 sm:px-8 sm:py-10 lg:px-10 lg:py-12 xl:px-12">
           <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-12">
             {columns.map((column) => (
-              <FooterLinkColumnList 
-                key={column.id} 
-                column={column} 
-              />
+              <FooterLinkColumnList key={column.id} column={column} />
             ))}
           </div>
         </nav>
 
         <div className="border-t border-white/20 px-6 py-5 text-center sm:px-8 lg:px-10 lg:text-right xl:px-12">
-          <p className="text-[.9rem] font-medium text-white/95">
-            {copyrightText}
-          </p>
+          <p className="text-[.9rem] font-medium text-white/95">{copyrightText}</p>
         </div>
       </div>
     </div>

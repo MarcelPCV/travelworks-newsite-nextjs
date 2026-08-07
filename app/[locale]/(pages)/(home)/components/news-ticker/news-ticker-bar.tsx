@@ -33,13 +33,13 @@ export default function NewsTickerBar({
   const articleHref = activeItem?.href || newsCtaHref;
 
   return (
-      <section
-        className="hidden md:block mx-auto mt-5 w-full max-w-[1600px] rounded-t-md border border-zinc-300 bg-gray-800 py-1"
-        aria-label={sectionTitle}
-      >
+    <section
+      className="hidden md:block mx-auto mt-5 w-full max-w-[1600px] rounded-t-md border border-zinc-300 bg-gray-800 py-1"
+      aria-label={sectionTitle}
+    >
       <div className="mx-auto flex w-full items-center gap-3 px-4 py-1 sm:px-6 lg:px-8">
         <Link href={sectionHref || '/news'}>
-          <div className="flex items-center gap-2 text-amber-500 hover:text-amber-400 transition"> 
+          <div className="flex items-center gap-2 text-amber-500 hover:text-amber-400 transition">
             <span className="shrink-0 text-[13px] font-semibold uppercase leading-none tracking-tight hover:underline">
               {sectionTitle}
             </span>
@@ -49,9 +49,7 @@ export default function NewsTickerBar({
         <span className="h-4 w-px shrink-0 bg-gray-500" aria-hidden="true" />
 
         <div className="min-w-0 flex-1 truncate text-[13px] font-normal text-white hover:underline">
-          <Link href={articleHref}>
-            {articleLabel}
-          </Link>
+          <Link href={articleHref}>{articleLabel}</Link>
         </div>
 
         <a
@@ -59,9 +57,7 @@ export default function NewsTickerBar({
           className="inline-flex shrink-0 items-center gap-2 text-white transition hover:opacity-80 bg-gray-600 px-2 py-1 rounded-md"
         >
           <Phone className="h-4 w-4 text-white" aria-hidden="true" />
-          <span className="text-[13px] font-semibold leading-none">
-            {phone}
-          </span>
+          <span className="text-[13px] font-semibold leading-none">{phone}</span>
         </a>
       </div>
     </section>

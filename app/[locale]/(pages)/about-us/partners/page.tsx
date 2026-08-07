@@ -334,8 +334,8 @@ export default async function PartnersPage({ params }: { params: Promise<{ local
   return (
     <main className="bg-gray-50">
       <Breadcrumb items={breadcrumbItems} homeHref={homeHref} />
-      <TitleHero 
-        title={t('title-hero.title')} 
+      <TitleHero
+        title={t('title-hero.title')}
         imageSrc="/images/pages/about-us/partners/partners.webp"
       />
       <div className="mx-auto">

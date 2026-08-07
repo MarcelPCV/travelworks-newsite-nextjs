@@ -12,7 +12,9 @@ export default async function ClientsHero({ title, subtitle }: ClientsHeroProps)
   const heroSubtitle = t.raw(subtitle);
 
   if (typeof heroTitle !== 'string' || typeof heroSubtitle !== 'string') {
-    throw new Error('Invalid clients hero translation content. Expected string values for title and subtitle.');
+    throw new Error(
+      'Invalid clients hero translation content. Expected string values for title and subtitle.',
+    );
   }
 
   return (
@@ -29,18 +31,18 @@ export default async function ClientsHero({ title, subtitle }: ClientsHeroProps)
       </div>
       <div className="relative z-20 container mx-auto px-4 py-12 lg:py-24">
         <div className="mx-auto max-w-xl text-center">
-          <h1 className="text-3xl font-light md:text-4xl lg:text-6xl uppercase" dangerouslySetInnerHTML={{ __html: heroTitle }} />
+          <h1
+            className="text-3xl font-light md:text-4xl lg:text-6xl uppercase"
+            dangerouslySetInnerHTML={{ __html: heroTitle }}
+          />
           <p
             className="mt-6 text-lg text-white md:text-xl"
             dangerouslySetInnerHTML={{ __html: heroSubtitle }}
           />
         </div>
-
       </div>
-      <div className="relative z-20 h-5 bg-[#143f84]">
-      </div>
-      <div className="relative z-20 h-1 bg-[#ff9500]">
-      </div>
+      <div className="relative z-20 h-5 bg-[#143f84]"></div>
+      <div className="relative z-20 h-1 bg-[#ff9500]"></div>
     </section>
   );
 }

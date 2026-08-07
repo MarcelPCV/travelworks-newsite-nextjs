@@ -27,18 +27,23 @@ You manage a travel agency with external travel agents and you wonder how to eff
 Here are 5 advantages your agents will benefit from with our TravelWorks software.
 
 ## A Cloud System
+
 By definition, an external travel agent works remotely, very often from home, so it is vital to provide them with a cloud software, accessible via a simple Internet connexion, without any initial installation on their computer. On the one hand, the remote travel agent will have an enormous working comfort. On the other hand, this will help your organization avoid unnecessary waste of time when it comes to software updates like for a Windows update that would be required on all computers. If you work with a lot of external agents, your organization will therefore save a lot of time.
 
 ## Secured Access Rights
+
 Your external travel agents want, of course, to be able to access the software in a secure way and only access the specific database related to their activity. It is therefore essential that your system allows travel agents to only view their own customers and not those of other travel agents. Moreover, unique identifiers (user + password) are created to respect data confidentiality.
 
 ## Software Customizable According to Your Operating Rules
+
 In general, travel agencies that have exterior agents have two types of functioning on the operational level. Agencies with only a few exterior travel agents will often give them the opportunity to bill themselves within the system. On the contrary, agencies with many external agents often have an internal billing team in charge of invoicing on behalf of the agents. The software you choose must include one of these two options according to your needs.
 
 ## Invoicing Configurable by Agent
+
 Regardless of the operating mode described above, it is important that the software you use enables you to send the agent’s invoice by email with messages customizable with the travel agents’ signature and from their personal email address. Indeed, since external travel agents deal with their own customers, they will want to convey their own image and branding to their clientele.
 
 ## An Effective Management of Your Agents’ Commissions
+
 One of the major issues with external travel agents is monitoring their sales and the commissions. Your system must therefore allow you to set up different commission rules for your numerous travel agents. In addition to this, you need to generate accurate and real time sales reports with multiple criteria (by agent, by the product, by product types, by destination, etc.).
 
 In conclusion, providing your external travel agents with an efficient system that meets their needs will have an impact on their motivation and, of course, on their performance.

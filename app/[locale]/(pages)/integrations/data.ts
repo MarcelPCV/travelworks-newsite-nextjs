@@ -18,6 +18,6 @@ export const IntegrationsPageData: Page = {
       desktopMainImageSrc: 'block-type-page-hero.desktopMainImageSrc',
       logoImageSrc: 'block-type-page-hero.logoImageSrc',
       ctaImageSrc: 'block-type-page-hero.ctaImageSrc',
-    }
+    },
   ],
 };

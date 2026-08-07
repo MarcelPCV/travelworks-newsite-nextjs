@@ -7,7 +7,7 @@ import { getAlternates } from '@/app/lib/SEO/getAlternates';
 import { Metadata } from 'next';
 import { Locale } from 'next-intl';
 import TitleHero from '../../components/shared/title-hero/title-hero';
-import YoutubeVideoSection  from '@/app/[locale]/components/shared/video/youtube-video-section';
+import YoutubeVideoSection from '@/app/[locale]/components/shared/video/youtube-video-section';
 
 export async function generateMetadata({
   params,
@@ -40,17 +40,25 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
   const countries = getCountryOptions(messageLocale);
   return (
     <main>
-      <TitleHero 
+      <TitleHero
         title={locale === 'fr-ca' ? 'Base de Connaissances' : 'Knowledge Base'}
         imageSrc="/images/pages/ask-for-demo/sent.webp"
       />
       <AskForDemoPageContent countries={countries} locale={messageLocale} />
       <YoutubeVideoSection
         blockType="YoutubeVideo"
-        heading={locale === 'fr-ca' ? 'BOOSTEZ L\'EFFICACITÉ DE VOTRE AGENCE DE VOYAGE !' : 'BOOST THE EFFICIENCY OF YOUR TRAVEL AGENCY!'}
+        heading={
+          locale === 'fr-ca'
+            ? "BOOSTEZ L'EFFICACITÉ DE VOTRE AGENCE DE VOYAGE !"
+            : 'BOOST THE EFFICIENCY OF YOUR TRAVEL AGENCY!'
+        }
         videoId="qG8LDdvA6TE"
         channelLabel="Travelworks Showcase"
-        description={locale === 'fr-ca' ? "Cette vidéo met en lumière notre collaboration avec Acme Corp, démontrant l'efficacité de notre plateforme en temps réel." : "This video highlights our work with Acme Corp, demonstrating our platform's efficiency in real-time."}
+        description={
+          locale === 'fr-ca'
+            ? "Cette vidéo met en lumière notre collaboration avec Acme Corp, démontrant l'efficacité de notre plateforme en temps réel."
+            : "This video highlights our work with Acme Corp, demonstrating our platform's efficiency in real-time."
+        }
       />
     </main>
   );

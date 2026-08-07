@@ -185,7 +185,9 @@ export default function AskForDemoFormSection({ countries, locale }: Props) {
               </button>
             </div>
 
-            {status === 'success' && <p className="text-sm text-green-600">{t('form.feedback.success')}</p>}
+            {status === 'success' && (
+              <p className="text-sm text-green-600">{t('form.feedback.success')}</p>
+            )}
             {status === 'error' && (
               <p className="text-sm text-red-600">{errorMessage ?? t('form.feedback.error')}</p>
             )}

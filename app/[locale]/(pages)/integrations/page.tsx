@@ -1,6 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import PartnersSection from './components/partners-section';
-import { PartnersSectionModel } from './components/types';
+import { IntegrationSectionId, PartnersSectionModel, SectionAnchorItem } from './components/types';
 import { getAlternates } from '@/app/lib/SEO/getAlternates';
 import { Breadcrumb } from '@/app/[locale]/(pages)/news/components/breadcrumb';
 import type { BreadcrumbItem } from '@/app/[locale]/(pages)/news/types';
@@ -9,6 +9,8 @@ import { Metadata } from 'next';
 import { Locale } from 'next-intl';
 import PageHero from '../../components/shared/page-hero/page-hero';
 import { IntegrationsPageData } from './data';
+import SectionAnchorMenu from './components/section-anchor-menu';
+import TitleHero from '../../components/shared/title-hero/title-hero';
 
 export async function generateMetadata({
   params,
@@ -33,9 +35,12 @@ export async function generateMetadata({
   };
 }
 
-const partnerSections: PartnersSectionModel[] = [
+const partnerSectionsBase: Array<
+  Omit<PartnersSectionModel, 'title'> & { titleKey: `section-labels.${IntegrationSectionId}` }
+> = [
   {
-    title: 'GDS',
+    id: 'gds',
+    titleKey: 'section-labels.gds',
     partners: [
       {
         name: 'Amadeus',
@@ -52,7 +57,8 @@ const partnerSections: PartnersSectionModel[] = [
     ],
   },
   {
-    title: 'Booking Tools',
+    id: 'booking-tools',
+    titleKey: 'section-labels.booking-tools',
     partners: [
       {
         name: 'Expedia TAAP',
@@ -109,7 +115,8 @@ const partnerSections: PartnersSectionModel[] = [
     ],
   },
   {
-    title: 'Online Payment Solution',
+    id: 'online-payment-solution',
+    titleKey: 'section-labels.online-payment-solution',
     partners: [
       {
         name: 'Clover',
@@ -182,7 +189,8 @@ const partnerSections: PartnersSectionModel[] = [
     ],
   },
   {
-    title: 'Insurance Companies',
+    id: 'insurance-companies',
+    titleKey: 'section-labels.insurance-companies',
     partners: [
       {
         name: 'Manulife',
@@ -203,7 +211,8 @@ const partnerSections: PartnersSectionModel[] = [
     ],
   },
   {
-    title: 'Other Partners',
+    id: 'other-partners',
+    titleKey: 'section-labels.other-partners',
     partners: [
       {
         name: 'SignatureAPI',
@@ -245,7 +254,8 @@ const partnerSections: PartnersSectionModel[] = [
   },
 
   {
-    title: 'Tourism Schools',
+    id: 'tourism-schools',
+    titleKey: 'section-labels.tourism-schools',
     partners: [
       {
         name: 'École Hôtelière de la Capitale',
@@ -294,7 +304,8 @@ const partnerSections: PartnersSectionModel[] = [
     ],
   },
   {
-    title: 'Travel Industry Associations',
+    id: 'travel-industry-associations',
+    titleKey: 'section-labels.travel-industry-associations',
     partners: [
       {
         name: 'ARF Québec',
@@ -326,14 +337,29 @@ export default async function PartnersPage({ params }: { params: Promise<{ local
     { label: t('breadcrumb.integrations-label'), href: '#' },
   ];
 
+  const partnerSections: PartnersSectionModel[] = partnerSectionsBase.map((section) => ({
+    id: section.id,
+    title: t(section.titleKey),
+    partners: section.partners,
+  }));
+
+  const sectionMenuItems: SectionAnchorItem[] = partnerSections.map((section) => ({
+    id: section.id,
+    label: section.title,
+  }));
+
   return (
     <main className="bg-gray-50">
       <Breadcrumb items={breadcrumbItems} homeHref={homeHref} />
+      <TitleHero 
+        title={locale === "fr-ca" ? "Intégrations" : "Integrations"} 
+        imageSrc="/images/pages/integrations/integrations.webp" 
+      />
       {IntegrationsPageData.layout.map((layout, index) => {
         switch (layout.blockType) {
           case 'PageHero':
             return (
-             <PageHero
+              <PageHero
                 key={index}
                 {...layout}
                 title={
@@ -366,10 +392,11 @@ export default async function PartnersPage({ params }: { params: Promise<{ local
             return null;
         }
       })}
+      <SectionAnchorMenu items={sectionMenuItems} />
       <div className="mx-auto">
         {partnerSections.map((section, idx) => (
           <PartnersSection
-            key={section.title}
+            key={section.id}
             {...section}
             bgClass={idx % 2 === 0 ? 'bg-gray-50' : 'bg-gray-100'}
           />

@@ -30,9 +30,7 @@ export default function SplitBannerSection({
     getOrderClasses(imagePosition);
 
   // 2. Define base classes for better separation of concerns
-  const rootBaseClasses = [`w-full mx-auto max-w-[1600px] rounded-[2rem]`].join(
-    ' ',
-  );
+  const rootBaseClasses = [`w-full mx-auto max-w-[1600px] rounded-[2rem]`].join(' ');
 
   const normalizedBg =
     typeof backgroundColor === 'string' && backgroundColor.trim().length > 0
@@ -52,12 +50,7 @@ export default function SplitBannerSection({
       <div className={`${rootBaseClasses} ${className}`} aria-labelledby={headingId}>
         <div className="pt-10">
           {title && (
-            <TitleSection
-              title={title}
-              alignment="center"
-              size="extra-large"
-              color="text-white"
-            />
+            <TitleSection title={title} alignment="center" size="extra-large" color="text-white" />
           )}
         </div>
         <div

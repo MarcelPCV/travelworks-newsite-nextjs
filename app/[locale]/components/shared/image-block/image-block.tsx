@@ -40,9 +40,7 @@ export default function ImageBlock({
           )}
 
           {description && (
-            <p className="mx-auto max-w-2xl text-md leading-8 text-neutral-dark">
-              {description}
-            </p>
+            <p className="mx-auto max-w-2xl text-md leading-8 text-neutral-dark">{description}</p>
           )}
 
           {linkHref && linkText && (
@@ -57,24 +55,13 @@ export default function ImageBlock({
 
         {imageSrc && (
           <div className="w-full mt-5">
-            <div
-              className="mx-auto w-full"
-              style={{ maxWidth }}
-            >
+            <div className="mx-auto w-full" style={{ maxWidth }}>
               <div className="relative w-full overflow-hidden rounded-lg">
-                <Image
-                  src={imageSrc}
-                  alt={altText}
-                  width={800}
-                  height={450}
-                  className="w-full"
-                />
+                <Image src={imageSrc} alt={altText} width={800} height={450} className="w-full" />
               </div>
 
               {hasCaption && captionText && (
-                <p className="mt-2 text-sm italic text-gray-500">
-                  {captionText}
-                </p>
+                <p className="mt-2 text-sm italic text-gray-500">{captionText}</p>
               )}
             </div>
           </div>

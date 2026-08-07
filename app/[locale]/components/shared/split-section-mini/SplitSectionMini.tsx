@@ -41,10 +41,7 @@ export default function SplitSection({
       imageSrc.startsWith('data:'));
 
   return (
-    <section
-      className={`${rootBaseClasses} ${className ?? ''}`}
-      aria-labelledby={headingId}
-    >
+    <section className={`${rootBaseClasses} ${className ?? ''}`} aria-labelledby={headingId}>
       <div className={contentGridClasses}>
         {/* Image Container */}
         <div
@@ -72,9 +69,7 @@ export default function SplitSection({
             {heading}
           </h2>
 
-          <div className="mt-4 text-md leading-8 text-neutral-dark">
-            {description}
-          </div>
+          <div className="mt-4 text-md leading-8 text-neutral-dark">{description}</div>
 
           {ctaLabel && ctaLink && (
             <div className="mt-8 flex justify-center md:justify-start">

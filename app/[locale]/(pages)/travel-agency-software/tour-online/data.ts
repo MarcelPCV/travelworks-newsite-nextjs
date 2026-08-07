@@ -7,7 +7,13 @@ import { SplitSectionMiniModel } from '@/app/[locale]/components/shared/split-se
 import { PlanningDemoSectionModel } from '../../(home)/components/demo-section/type';
 
 export type Layout =
-  PageHeroModel | SplitSectionModel | FeaturesHighlights | ImageBlockModel | TourOnlineCTAArea | SplitSectionMiniModel | PlanningDemoSectionModel;
+  | PageHeroModel
+  | SplitSectionModel
+  | FeaturesHighlights
+  | ImageBlockModel
+  | TourOnlineCTAArea
+  | SplitSectionMiniModel
+  | PlanningDemoSectionModel;
 
 export type Page = {
   slug: string;
