@@ -20,6 +20,7 @@ export async function generateMetadata({
   return {
     title: t('partners.title'),
     description: t('partners.description'),
+    keywords: t.raw('keywords'),
     alternates: getAlternates(
       {
         en: '/about-us/partners',

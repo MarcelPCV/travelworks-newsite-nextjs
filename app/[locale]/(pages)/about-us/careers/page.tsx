@@ -19,6 +19,7 @@ export async function generateMetadata({
   return {
     title: t('careers.title'),
     description: t('careers.description'),
+    keywords: t.raw('keywords'),
     alternates: getAlternates(
       {
         en: '/about-us/careers',

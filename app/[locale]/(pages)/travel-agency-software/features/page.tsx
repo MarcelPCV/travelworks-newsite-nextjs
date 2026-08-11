@@ -31,6 +31,7 @@ export async function generateMetadata({
   return {
     title: `${t('features.title')}`,
     description: t('features.description'),
+    keywords: t.raw('keywords'),
     alternates: getAlternates(
       {
         en: '/travel-agency-software/features',

@@ -28,6 +28,7 @@ export async function generateMetadata({
   return {
     title: `${t('back-office-travel-agency.title')}`,
     description: t('back-office-travel-agency.description'),
+    keywords: t.raw('keywords'),
     alternates: getAlternates(
       {
         en: '/travel-agency-software/back-office-travel-agency',

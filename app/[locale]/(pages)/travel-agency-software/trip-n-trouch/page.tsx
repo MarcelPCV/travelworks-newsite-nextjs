@@ -23,6 +23,7 @@ export async function generateMetadata({
   return {
     title: `${t('trip-n-touch.title')}`,
     description: t('trip-n-touch.description'),
+    keywords: t.raw('keywords'),
     alternates: getAlternates(
       {
         en: '/travel-agency-software/trip-n-touch',
