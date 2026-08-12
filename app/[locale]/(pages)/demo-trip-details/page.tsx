@@ -2,7 +2,6 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { getCountryOptions } from '@/app/lib/countries';
 import AskForDemoPageContent from '@/app/[locale]/(pages)/ask-for-a-demo/components/ask-for-demo-page-content';
 import { routeToMessageLocale } from '@/app/[locale]/locale-config';
-import FeatureCards from '@/app/[locale]/(pages)/(home)/components/feature-cards/feature-cards';
 import { getAlternates } from '@/app/lib/SEO/getAlternates';
 import { Metadata } from 'next';
 import { Locale } from 'next-intl';
@@ -15,18 +14,18 @@ export async function generateMetadata({
   params: Promise<{ locale: Locale }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'metadata.ask-for-a-demo' });
+  const t = await getTranslations({ locale, namespace: 'metadata.demo-trip-details' });
 
   return {
     title: t('title'),
     description: t('description'),
-    keywords: t.raw('keywords'),
+    keywords: t('keywords'),
     alternates: getAlternates(
       {
-        en: '/ask-for-a-demo',
-        'en-ca': '/en-ca/ask-for-a-demo',
-        'en-au': '/en-au/ask-for-a-demo',
-        'fr-ca': '/fr-ca/demander-une-demo',
+        en: '/demo-trip-details',
+        'en-ca': '/en-ca/demo-trip-details',
+        'en-au': '/en-au/demo-trip-details',
+        'fr-ca': '/fr-ca/demo-trip-details',
       },
       locale,
     ),

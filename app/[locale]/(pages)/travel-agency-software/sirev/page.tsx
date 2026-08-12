@@ -23,9 +23,9 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: 'metadata.travel-agency-software' });
 
   return {
-    title: `${t('crm.title')}`,
-    description: t('crm.description'),
-    keywords: t.raw('keywords'),
+    title: `${t('sirev.title')}`,
+    description: t('sirev.description'),
+    keywords: t('sirev.keywords'),
     alternates: getAlternates(
       {
         en: '/travel-agency-software/crm-tools',

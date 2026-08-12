@@ -22,7 +22,7 @@ export async function generateMetadata({
   return {
     title: `${t('benefits.title')}`,
     description: t('benefits.description'),
-    keywords: t.raw('keywords'),
+    keywords: t('benefits.keywords'),
     alternates: getAlternates(
       {
         en: '/travel-agency-software/benefits',

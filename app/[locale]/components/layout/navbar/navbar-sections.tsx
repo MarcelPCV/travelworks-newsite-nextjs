@@ -438,14 +438,8 @@ export function NavbarDesktopContent({
           }`}
         >
           <div className="grid min-h-64 grid-cols-[300px_1fr] overflow-hidden">
-            <div className="border-r border-zinc-600 p-8">
-              <p className="max-w-[90ch] text-3xl font-semibold leading-[1.4] tracking-tight text-white">
-                {labels.productsPromoMessage}
-              </p>
-            </div>
-
             <div className="p-7">
-              <div className="grid grid-cols-3 gap-x-10 gap-y-8">
+              <div className="grid grid-cols-4 gap-x-100 gap-y-80">
                 {productColumnsByCategory[activeProductCategory].map((column, columnIndex) => (
                   <div key={`${activeProductCategory}-${columnIndex}`} className="space-y-2">
                     {column.map((linkKey) => {
@@ -459,18 +453,20 @@ export function NavbarDesktopContent({
                           href={href}
                           role="menuitem"
                           onClick={onClearPanels}
-                          className={`flex items-center gap-2 rounded-md border-l-2 px-3 py-2 text-sm transition duration-150 ${
+                          className={`inline-flex w-fit items-center gap-4 rounded-md border-l-2 px-3 py-2 text-sm transition duration-150 ${
                             isActive
                               ? 'border-orange-400 bg-brand-blue text-white uppercase'
-                              : 'border-transparent text-white hover:bg-zinc-700 hover:border-l-2 hover:border-amber-500 uppercase'
+                              : 'border-transparent text-white hover:bg-zinc-700 hover:border-amber-500 uppercase'
                           }`}
                         >
-                          <div className="w-10 h-10 shrink-0 bg-zinc-100 flex items-center justify-center rounded-full shadow-xl">
+                          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-zinc-100 shadow-xl">
                             <Icon className={menuItemIconClassName} aria-hidden="true" />
                           </div>
 
                           <span
-                            className={`min-w-40 break-words ${isActive ? 'font-semibold' : 'font-medium'}`}
+                            className={`min-w-40 break-words ${
+                              isActive ? 'font-semibold' : 'font-medium'
+                            }`}
                           >
                             {getProductLabel(linkKey)}
                           </span>

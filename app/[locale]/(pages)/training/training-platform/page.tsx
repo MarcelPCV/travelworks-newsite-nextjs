@@ -28,7 +28,7 @@ export async function generateMetadata({
   return {
     title: `${t('training-platform.title')}`,
     description: t('training-platform.description'),
-    keywords: t.raw('keywords'),
+    keywords: t('training-platform.keywords'),
     alternates: getAlternates(
       {
         en: '/training/training-platform',

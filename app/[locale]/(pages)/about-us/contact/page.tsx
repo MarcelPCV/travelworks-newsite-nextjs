@@ -19,7 +19,7 @@ export async function generateMetadata({
   return {
     title: t('contact.title'),
     description: t('contact.description'),
-    keywords: t.raw('keywords'),
+    keywords: t('contact.keywords'),
     alternates: getAlternates(
       {
         en: '/about-us/contact',

@@ -22,7 +22,7 @@ export async function generateMetadata({
   return {
     title: t('the-company.title'),
     description: t('the-company.description'),
-    keywords: t.raw('keywords'),
+    keywords: t('the-company.keywords'),
     alternates: getAlternates(
       {
         en: '/about-us/travelworks',

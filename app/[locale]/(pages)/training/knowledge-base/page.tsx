@@ -26,7 +26,7 @@ export async function generateMetadata({
   return {
     title: `${t('knowledge-base.title')}`,
     description: t('knowledge-base.description'),
-    keywords: t.raw('keywords'),
+    keywords: t('knowledge-base.keywords'),
     alternates: getAlternates(
       {
         en: '/training/knowledge-base',

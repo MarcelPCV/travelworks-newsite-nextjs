@@ -2,7 +2,6 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { getCountryOptions } from '@/app/lib/countries';
 import AskForDemoPageContent from '@/app/[locale]/(pages)/ask-for-a-demo/components/ask-for-demo-page-content';
 import { routeToMessageLocale } from '@/app/[locale]/locale-config';
-import FeatureCards from '@/app/[locale]/(pages)/(home)/components/feature-cards/feature-cards';
 import { getAlternates } from '@/app/lib/SEO/getAlternates';
 import { Metadata } from 'next';
 import { Locale } from 'next-intl';
@@ -20,7 +19,7 @@ export async function generateMetadata({
   return {
     title: t('title'),
     description: t('description'),
-    keywords: t.raw('keywords'),
+    keywords: t('keywords'),
     alternates: getAlternates(
       {
         en: '/ask-for-a-demo',

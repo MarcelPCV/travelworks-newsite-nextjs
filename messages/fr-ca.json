@@ -1,110 +1,125 @@
 {
   "metadata": {
     "home": {
-      "title": "Accueil - PC Voyages - Logiciel pour agences de voyages",
-      "description": "Découvrez PC Voyages, le logiciel complet pour agences de voyages qui simplifie les réservations, le CRM, la gestion des stocks, la facturation, la comptabilité et le marketing pour les agences de voyages et les voyagistes.",
-      "keywords": "DMC, Agence de voyages, Tour-opérateur"
+      "title": "Accueil - PcVoyages - Logiciel pour agences de voyages",
+      "description": "Découvrez PC Voyages, le logiciel complet pour agences de voyages qui simplifie les réservations, le CRM, l'inventaire, la facturation, la comptabilité et le marketing pour les agences de voyages et les voyagistes.",
+      "keywords": "Logiciel pour agence de voyages, Logiciel pour tour opérateur, Logiciel DMC, Logiciel de réservation de voyages, CRM pour agence de voyages, Système de gestion d'agence de voyages"
     },
     "about-us": {
       "careers": {
-        "title": "Carrières - PC Voyages",
-        "description": "Joignez-vous à notre équipe et faites partie d'une entreprise dynamique et innovante qui façonne l'avenir des technologies du voyage.",
-        "keywords": "DMC, Agence de voyages, Tour-opérateur"
+        "title": "Carrières - PcVoyages",
+        "description": "Rejoignez notre équipe et participez à une entreprise dynamique et innovante qui façonne l'avenir de la technologie dans le secteur du voyage.",
+        "keywords": "Carrières en technologie du voyage, Emplois dans les logiciels de voyage, Carrières chez PC Voyages"
       },
       "clients": {
-        "title": "Clients - PC Voyages",
+        "title": "Clients - PcVoyages",
         "description": "Découvrez comment PC Voyages aide les agences de voyages et les voyagistes à simplifier leurs opérations et à améliorer leur service à la clientèle.",
-        "keywords": "DMC, Agence de voyages, Tour-opérateur"
+        "keywords": "Clients de logiciels pour agences de voyages, Études de cas de voyagistes, Réussites avec des logiciels de voyage"
       },
       "contact": {
-        "title": "Contactez-nous - PC Voyages",
-        "description": "Communiquez avec PC Voyages pour toute demande d'information, de soutien ou pour en savoir plus sur nos solutions technologiques destinées à l'industrie du voyage.",
-        "keywords": "DMC, Agence de voyages, Tour-opérateur"
+        "title": "Nous contacter - PcVoyages",
+        "description": "Communiquez avec PC Voyages pour toute question, demande de soutien ou pour en savoir plus sur nos solutions technologiques pour le secteur du voyage.",
+        "keywords": "Fournisseur de logiciels pour agences de voyages, Soutien PC Voyages, Contact commercial logiciel de voyage"
       },
       "partners": {
-        "title": "Partenaires - PC Voyages",
-        "description": "Découvrez nos partenariats avec les principaux fournisseurs de technologies du voyage et la façon dont ils enrichissent nos solutions.",
-        "keywords": "DMC, Agence de voyages, Tour-opérateur"
+        "title": "Partenaires - PcVoyages",
+        "description": "Découvrez nos partenariats avec des fournisseurs de technologies de voyage de premier plan et comment ils enrichissent nos solutions.",
+        "keywords": "Partenaires en technologie du voyage, Partenaires d'intégration de logiciels de voyage, Partenaires de logiciels DMC"
       },
       "the-company": {
-        "title": "L'entreprise - PC Voyages",
-        "description": "Apprenez-en davantage sur PC Voyages, notre mission et la façon dont nous révolutionnons l'industrie du voyage grâce à nos solutions complètes.",
-        "keywords": "DMC, Agence de voyages, Tour-opérateur"
+        "title": "L'entreprise - PcVoyages",
+        "description": "Découvrez PC Voyages, notre mission et la façon dont nous transformons l'industrie du voyage grâce à nos solutions complètes.",
+        "keywords": "À propos de PC Voyages, Entreprise de logiciels pour agences de voyages, Fournisseur de technologies de voyage"
       }
     },
     "ask-for-a-demo": {
-      "title": "Demander une démonstration - PC Voyages",
-      "description": "Planifiez une démonstration avec PC Voyages pour découvrir comment nos solutions peuvent bénéficier à votre agence de voyages ou à votre entreprise de voyagisme.",
-      "keywords": "DMC, Agence de voyages, Tour-opérateur"
+      "title": "Demander une démonstration - PcVoyages",
+      "description": "Planifiez une démonstration de PC Voyages pour découvrir comment nos solutions peuvent répondre aux besoins de votre agence de voyages ou de votre entreprise de voyages.",
+      "keywords": "Démonstration logiciel agence de voyages, Démonstration logiciel tour opérateur, Demander une démonstration logiciel de voyage, Réserver une démonstration PC Voyages"
+    },
+    "demo-knowledge-base": {
+      "title": "Base de connaissances - PcVoyages",
+      "description": "Accédez à la base de connaissances de PC Voyages pour consulter des guides, de la documentation et des ressources utiles sur nos solutions pour les agences de voyages et les voyagistes.",
+      "keywords": "Documentation logiciel agence de voyages, Guides logiciel tour opérateur, Base de connaissances logiciel de voyage, Centre d'aide logiciel de voyage"
+    },
+    "demo-trip-details": {
+      "title": "Détails du voyage - PcVoyages",
+      "description": "Découvrez la base de connaissances de PC Voyages et consultez des guides, de la documentation et des ressources pour aider les agences de voyages et les voyagistes à tirer le meilleur parti de la plateforme.",
+      "keywords": "Logiciel de détails de voyage, Gestion d'itinéraires de voyage, Outils de planification de voyages pour voyagistes"
     },
     "training": {
       "training-platform": {
-        "title": "Formation - PC Voyages",
-        "description": "Accédez à des ressources et à du matériel de formation pour tirer le meilleur parti des solutions technologiques de PC Voyages.",
-        "keywords": "DMC, Agence de voyages, Tour-opérateur"
+        "title": "Formation - PcVoyages",
+        "description": "Accédez à nos ressources et à notre matériel de formation pour tirer le meilleur parti des solutions technologiques de PC Voyages.",
+        "keywords": "Formation logiciel agence de voyages, Formation logiciel tour opérateur, Intégration logiciel de voyage, Plateforme d'apprentissage logiciel de voyage"
       },
       "knowledge-base": {
-        "title": "Base de connaissances - PC Voyages",
-        "description": "Trouvez des réponses aux questions les plus fréquentes et apprenez à utiliser efficacement les fonctionnalités de PC Voyages grâce à notre base de connaissances.",
-        "keywords": "DMC, Agence de voyages, Tour-opérateur"
+        "title": "Base de connaissances - PcVoyages",
+        "description": "Trouvez des réponses aux questions fréquentes et apprenez à utiliser efficacement les fonctionnalités de PC Voyages grâce à notre base de connaissances.",
+        "keywords": "FAQ logiciel agence de voyages, Soutien logiciel tour opérateur, Documentation logiciel de voyage, Articles d'aide logiciel de voyage"
       }
     },
     "travel-agency-software": {
       "back-office-travel-agency": {
-        "title": "Back-office pour agences de voyages - PC Voyages",
+        "title": "Back-office pour agence de voyages - PcVoyages",
         "description": "Découvrez comment les solutions de back-office de PC Voyages simplifient la comptabilité, la facturation et les opérations des agences de voyages.",
-        "keywords": "DMC, Agence de voyages, Tour-opérateur"
+        "keywords": "Logiciel back-office agence de voyages, Logiciel de comptabilité pour agence de voyages, Logiciel de facturation pour agence de voyages, Comptabilité pour voyagistes"
       },
       "benefits": {
-        "title": "Avantages - PC Voyages",
-        "description": "Découvrez les principaux avantages du logiciel pour agences de voyages de PC Voyages, conçu pour améliorer l'efficacité, l'évolutivité et la sécurité.",
-        "keywords": "DMC, Agence de voyages, Tour-opérateur"
+        "title": "Avantages - PcVoyages",
+        "description": "Découvrez les principaux avantages du logiciel pour agences de voyages de PC Voyages, conçu pour améliorer l'efficacité, la croissance et la sécurité de votre entreprise.",
+        "keywords": "Avantages d'un logiciel pour agence de voyages, Retour sur investissement logiciel de voyage, Avantages logiciel tour opérateur, Logiciel d'efficacité pour entreprise de voyages"
       },
       "crm": {
-        "title": "Outils CRM - PC Voyages",
-        "description": "Découvrez comment les outils CRM de PC Voyages aident les agences de voyages à gérer leurs relations clients et à mettre en œuvre des campagnes marketing ciblées.",
-        "keywords": "DMC, Agence de voyages, Tour-opérateur"
+        "title": "Outils CRM - PcVoyages",
+        "description": "Découvrez comment les outils CRM de PC Voyages aident les agences de voyages à gérer leurs relations clients et à mener des campagnes marketing ciblées.",
+        "keywords": "CRM pour agence de voyages, Logiciel CRM pour tour opérateur, Gestion de la relation client dans le secteur du voyage, Automatisation marketing pour agence de voyages"
       },
       "customizations": {
-        "title": "Personnalisation - PC Voyages",
-        "description": "Découvrez comment PC Voyages peut offrir des solutions personnalisées adaptées aux besoins uniques de votre agence de voyages ou de votre entreprise de voyagisme.",
-        "keywords": "DMC, Agence de voyages, Tour-opérateur"
+        "title": "Personnalisation - PcVoyages",
+        "description": "Découvrez comment PC Voyages peut offrir des solutions adaptées aux besoins uniques de votre agence de voyages ou de votre entreprise de voyages.",
+        "keywords": "Logiciel personnalisé pour agence de voyages, Solutions sur mesure pour tour opérateur, Personnalisation logiciel de voyage"
       },
       "dashboard-reports": {
-        "title": "Tableaux de bord et rapports - PC Voyages",
-        "description": "Accédez à des tableaux de bord en temps réel et à des outils de rapports complets pour suivre les performances de votre agence de voyages et prendre des décisions éclairées.",
-        "keywords": "DMC, Agence de voyages, Tour-opérateur"
+        "title": "Tableau de bord et rapports - PcVoyages",
+        "description": "Accédez à des tableaux de bord en temps réel et à des outils de reporting complets pour suivre les performances de votre agence de voyages et prendre des décisions éclairées.",
+        "keywords": "Logiciel tableau de bord agence de voyages, Outils de reporting pour tour opérateur, Analytique pour entreprise de voyages, Rapports KPI agence de voyages"
       },
       "features": {
-        "title": "Fonctionnalités - PC Voyages",
+        "title": "Fonctionnalités - PcVoyages",
         "description": "Découvrez la vaste gamme de fonctionnalités offertes par le logiciel pour agences de voyages de PC Voyages, conçu pour optimiser les opérations et améliorer le service à la clientèle.",
-        "keywords": "DMC, Agence de voyages, Tour-opérateur"
+        "keywords": "Fonctionnalités logiciel agence de voyages, Fonctionnalités logiciel tour opérateur, Fonctionnalités moteur de réservation, Outils de gestion pour agence de voyages"
       },
       "tour-management": {
-        "title": "Gestion des circuits - PC Voyages",
-        "description": "Découvrez comment les solutions de gestion des circuits de PC Voyages permettent aux agences de voyages de gérer efficacement les circuits, les stocks et les réservations.",
-        "keywords": "DMC, Agence de voyages, Tour-opérateur"
+        "title": "Gestion des circuits - PcVoyages",
+        "description": "Découvrez comment les solutions de gestion des circuits de PC Voyages permettent aux agences de voyages de gérer efficacement les circuits, les inventaires et les réservations.",
+        "keywords": "Logiciel de gestion de circuits, Gestion d'inventaire pour tour opérateur, Réservation de circuits pour agence de voyages, Logiciel de gestion de voyages de groupe"
       },
       "tour-online": {
-        "title": "TourOnline - PC Voyages",
-        "description": "Découvrez TourOnline, la solution complète de PC Voyages destinée aux voyagistes et aux agences de voyages, offrant une plateforme de commerce électronique conviviale pour les réservations en ligne.",
-        "keywords": "DMC, Agence de voyages, Tour-opérateur"
+        "title": "TourOnline - PcVoyages",
+        "description": "Découvrez TourOnline, la solution complète de PC Voyages pour les voyagistes et les agences de voyages, offrant une plateforme de commerce électronique conviviale pour les réservations en ligne.",
+        "keywords": "Plateforme de réservation de voyages en ligne, Logiciel e-commerce pour tour opérateur, Moteur de réservation TourOnline, Système de réservation de circuits en ligne"
       },
       "trip-details": {
-        "title": "Détails du voyage - PC Voyages",
-        "description": "Accédez aux informations détaillées sur les voyages et aux itinéraires grâce à la plateforme de PC Voyages, afin d'offrir une meilleure expérience à vos clients.",
-        "keywords": "DMC, Agence de voyages, Tour-opérateur"
+        "title": "Détails du voyage - PcVoyages",
+        "description": "Accédez aux informations détaillées et aux itinéraires de voyage grâce à la plateforme PC Voyages afin d'améliorer l'expérience de voyage de vos clients.",
+        "keywords": "Logiciel d'itinéraire de voyage, Gestion des voyages pour agence de voyages, Plateforme de gestion des détails de voyage pour tour opérateur"
       },
       "trip-n-touch": {
-        "title": "Trip n'Touch - PC Voyages",
-        "description": "Découvrez Trip n'Touch, l'application mobile de PC Voyages qui permet aux agences de voyages d'offrir à leurs clients une expérience de voyage améliorée avec des itinéraires détaillés, des cartes et des guides de destination.",
-        "keywords": "DMC, Agence de voyages, Tour-opérateur"
+        "title": "Trip n'Touch - PcVoyages",
+        "description": "Découvrez Trip n'Touch, l'application mobile de PC Voyages qui permet aux agences de voyages d'offrir une expérience améliorée à leurs clients grâce à des itinéraires détaillés, des cartes et des guides de destination.",
+        "keywords": "Application mobile d'itinéraire de voyage, Application mobile pour tour opérateur, Application client pour agence de voyages, Itinéraire de voyage numérique"
+      },
+      "sirev": {
+        "title": "SIREV - PcVoyages",
+        "description": "Découvrez SIREV, le moteur de réservation en ligne de PC Voyages qui permet aux agences de voyages de gérer efficacement leurs réservations.",
+        "keywords": "Moteur de réservation SIREV, Logiciel de réservation pour agence de voyages, Système de réservation pour tour opérateur"
       }
     },
     "integrations": {
-      "title": "Intégrations - PC Voyages",
-      "description": "Découvrez les différentes intégrations offertes par PC Voyages, permettant une connectivité fluide avec d'autres systèmes et partenaires de l'industrie du voyage.",
-      "keywords": "DMC, Agence de voyages, Tour-opérateur"
+      "title": "Intégrations - PcVoyages",
+      "description": "Découvrez les différentes intégrations disponibles avec PC Voyages, permettant une connexion fluide avec d'autres systèmes et partenaires de l'industrie du voyage.",
+      "keywords": "Intégrations logiciels de voyage, Intégrations API pour tour opérateur, Connectivité logiciel agence de voyages, Intégrations logiciels DMC"
     }
   },
   "pages": {
