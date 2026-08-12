@@ -433,11 +433,11 @@ export function NavbarDesktopContent({
         }`}
       >
         <div
-          className={`mx-auto w-full max-w-7xl px-6 pb-6 pt-4 transition duration-200 motion-reduce:transition-none ${
+          className={`mx-auto w-full max-w-7xl px-6  transition duration-200 motion-reduce:transition-none ${
             isProductsOpen ? 'translate-y-0 opacity-100' : '-translate-y-1 opacity-0'
           }`}
         >
-          <div className="grid min-h-64 grid-cols-[300px_1fr] overflow-hidden">
+          <div className="grid min-h-54 grid-cols-[300px_1fr] overflow-hidden">
             <div className="p-7">
               <div className="grid grid-cols-4 gap-x-100 gap-y-80">
                 {productColumnsByCategory[activeProductCategory].map((column, columnIndex) => (
