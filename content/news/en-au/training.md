@@ -26,6 +26,6 @@ TravelWorks is proud to unveil its new training platforms, purpose-built to equi
 
 By offering structured, accessible, and in-depth training, TravelWorks ensures that travel professionals are better prepared to leverage the full capabilities of the platform and drive their business success.
 
-![TravelWorks training platform](/images/news/en/training-platform-knowledge-base-2.jpg)
+![TravelWorks training platform](/images/news/training/en/training-platform-knowledge-base-danna.jpg)
 
 [Click here to learn more.](/training/training-platform)

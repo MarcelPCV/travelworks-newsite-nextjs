@@ -26,6 +26,6 @@ PcVoyages est fier de dévoiler ses nouvelles plateformes de formation, spécial
 
 En proposant des formations structurées, accessibles et approfondies, PcVoyages permet aux professionnels du voyage d’être mieux préparés à exploiter pleinement les fonctionnalités de la plateforme et à assurer la réussite de leur entreprise.
 
-![TravelWorks training platform](/images/news/en/training-platform-knowledge-base-2.jpg)
+![TravelWorks training platform](/images/news/training/fr/training-platform-knowledge-base-danna.jpg)
 
 [Click here to learn more.](/fr/formation/plateforme-de-formation)
