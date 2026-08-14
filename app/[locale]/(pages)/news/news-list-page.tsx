@@ -1,4 +1,4 @@
-import { notFound } from 'next/navigation';
+﻿import { notFound } from 'next/navigation';
 import { setRequestLocale } from 'next-intl/server';
 import type { NewsCategoryId } from './types';
 import {
@@ -58,7 +58,7 @@ export async function NewsListPage({
   return (
     <main className="">
       <TitleHero
-        title={locale === 'fr-ca' ? 'Actualités' : 'News'}
+        title={locale === 'fr' ? 'Actualités' : 'News'}
         imageSrc="/images/pages/privacy-policy/privacy-policy.png"
       />
 

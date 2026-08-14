@@ -5,6 +5,7 @@ import VideoTestimonials from '@/app/[locale]/(pages)/about-us/clients/component
 import { getAlternates } from '@/app/lib/SEO/getAlternates';
 import { Metadata } from 'next';
 import { Locale } from 'next-intl';
+import { routeToMessageLocale } from '@/app/[locale]/locale-config';
 import { getTranslations } from 'next-intl/server';
 import { Breadcrumb } from '@/app/[locale]/(pages)/news/components/breadcrumb';
 import type { BreadcrumbItem } from '@/app/[locale]/(pages)/news/types';
@@ -16,7 +17,7 @@ export async function generateMetadata({
   params: Promise<{ locale: Locale }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'metadata.about-us' });
+  const t = await getTranslations({ locale: routeToMessageLocale[locale] ?? 'en-us', namespace: 'metadata.about-us' });
 
   return {
     title: `${t('clients.title')}`,
@@ -27,7 +28,7 @@ export async function generateMetadata({
         en: '/about-us/clients',
         'en-ca': '/en-ca/about-us/clients',
         'en-au': '/en-au/about-us/clients',
-        'fr-ca': '/fr-ca/a-propos/clients',
+        'fr': '/fr/a-propos/clients',
       },
       locale,
     ),

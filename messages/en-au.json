@@ -3,7 +3,7 @@
     "home": {
       "title": "Home - TravelWorks - Travel Agency Software",
       "description": "Discover TravelWorks, the comprehensive travel agency software that streamlines booking, CRM, inventory, billing, accounting, and marketing for travel agencies and tour operators.",
-      "keywords": "Travel Agency Software, Tour Operator Software, DMC Software, Travel Booking Software, Travel CRM, Travel Agency Management System"
+      "keywords": "Travel Agency Software, Tour Operator Software, Software for Tour Creators, DMC Software, Travel Booking Software, Travel CRM, Travel Agency Management System, Travel Company, Travel Companies, Travel Hub,  B2B travel network,"
     },
     "about-us": {
       "careers": {
@@ -20,11 +20,6 @@
         "title": "Contact Us - TravelWorks",
         "description": "Get in touch with TravelWorks for inquiries, support, or to learn more about our travel technology solutions.",
         "keywords": "Contact Travel Agency Software Provider, TravelWorks Support, Travel Software Sales Contact"
-      },
-      "partners": {
-        "title": "Partners - TravelWorks",
-        "description": "Explore our partnerships with leading travel technology providers and how they enhance our solutions.",
-        "keywords": "Travel Technology Partners, Travel Software Integrations Partners, DMC Software Partners"
       },
       "the-company": {
         "title": "The Company - TravelWorks",
@@ -73,7 +68,7 @@
       "crm": {
         "title": "CRM Tools - TravelWorks",
         "description": "Learn how TravelWorks' CRM tools help travel agencies manage customer relationships and drive targeted marketing campaigns.",
-        "keywords": "Travel Agency CRM, Tour Operator CRM Software, Travel Customer Relationship Management, Travel Marketing Automation"
+        "keywords": "Travel Agency CRM, Tour Operator CRM Software, Travel Customer Relationship Management, Travel Marketing Automation, Travel CRM Tools"
       },
       "customizations": {
         "title": "Customizations - TravelWorks",
@@ -103,7 +98,7 @@
       "trip-details": {
         "title": "Trip Details - TravelWorks",
         "description": "Access detailed trip information and itineraries through TravelWorks' platform, enhancing the travel experience for your clients.",
-        "keywords": "Trip Itinerary Software, Travel Agency Trip Management, Tour Operator Trip Details Platform"
+        "keywords": "Trip Itinerary Software, Travel Agency Trip Management, Tour Operator Trip Details Platform, Trip, Trip Organizer, Itinerary"
       },
       "trip-n-touch": {
         "title": "Trip n'Touch - TravelWorks",
@@ -113,7 +108,7 @@
       "sirev": {
         "title": "SIREV - TravelWorks",
         "description": "Learn about SIREV, TravelWorks' online booking engine that allows travel agencies to manage reservations and bookings efficiently.",
-        "keywords": "SIREV Booking Engine, Travel Agency Reservation Software, Tour Operator Booking System"
+        "keywords": "SIREV Booking Engine, Travel Agency Reservation Software, Tour Operator Booking System, Trip, Manage Bookings"
       }
     },
     "integrations": {
@@ -2007,9 +2002,8 @@
     "languageTitle": "Languages",
     "languagePrefix": "{language}",
     "languages": {
-      "en": "English (Global)",
-      "en-ca": "English (Canada)",
-      "fr-ca": "French (Canada)",
+      "en": "English",
+      "fr": "French",
       "en-au": "English (Australia)"
     },
     "topLevel": {

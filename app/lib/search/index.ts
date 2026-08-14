@@ -15,7 +15,7 @@ import { getNewsArticlePath, getNewsListPath } from '@/app/[locale]/(pages)/news
 import { getAllArticles } from '@/app/[locale]/(pages)/news/lib/news';
 import type { RouteLocale } from '@/app/[locale]/(pages)/news/types';
 
-type MessageLocale = 'en-us' | 'en-ca' | 'en-au' | 'fr-ca';
+type MessageLocale = 'en-us' | 'en-au' | 'fr-ca';
 
 type SearchType = 'page' | 'news';
 
@@ -101,7 +101,7 @@ const TRAINING_PAGE_DEFINITIONS = [
   { labelKey: 'knowledgeBase', canonicalSlug: 'knowledge-base' },
 ] as const;
 
-const SUPPORTED_ROUTE_LOCALES: RouteLocale[] = ['en', 'en-ca', 'en-au', 'fr-ca'];
+const SUPPORTED_ROUTE_LOCALES: RouteLocale[] = ['en', 'en-ca', 'en-au', 'fr'];
 const CACHE_TTL_MS = 60 * 60 * 1000;
 const MAX_PAGE_BODY_STRINGS = 80;
 const MAX_PAGE_KEYWORDS = 72;
@@ -184,7 +184,7 @@ const STOPWORDS = new Set([
 const searchIndexCache = new Map<RouteLocale, { expiresAt: number; items: SearchIndexItem[] }>();
 
 function normalizeRouteLocale(locale: string): RouteLocale {
-  if (locale === 'en-ca' || locale === 'en-au' || locale === 'fr-ca') {
+  if (locale === 'en-ca' || locale === 'en-au' || locale === 'fr') {
     return locale;
   }
 
@@ -197,10 +197,6 @@ function withLocalePrefix(path: string, routeLocale: RouteLocale): string {
 
 async function loadMessages(messageLocale: MessageLocale): Promise<SearchMessages> {
   switch (messageLocale) {
-    case 'en-ca': {
-      const mod = await import('@/messages/en-ca.json');
-      return mod.default as SearchMessages;
-    }
     case 'en-au': {
       const mod = await import('@/messages/en-au.json');
       return mod.default as SearchMessages;
@@ -457,8 +453,8 @@ function buildPageIndexItems(
     items,
     'page-demo-knowledge-base',
     withLocalePrefix('/demo-knowledge-base', routeLocale),
-    routeLocale === 'fr-ca' ? 'Demo Base de connaissances' : 'Demo Knowledge Base',
-    routeLocale === 'fr-ca'
+    routeLocale === 'fr' ? 'Demo Base de connaissances' : 'Demo Knowledge Base',
+    routeLocale === 'fr'
       ? 'Demandez une demonstration orientee base de connaissances.'
       : 'Request a knowledge base focused demonstration.',
     ['demo', 'knowledge base', 'training'],
@@ -468,8 +464,8 @@ function buildPageIndexItems(
     items,
     'page-demo-trip-details',
     withLocalePrefix('/demo-trip-details', routeLocale),
-    routeLocale === 'fr-ca' ? 'Demo Details du voyage' : 'Demo Trip Details',
-    routeLocale === 'fr-ca'
+    routeLocale === 'fr' ? 'Demo Details du voyage' : 'Demo Trip Details',
+    routeLocale === 'fr'
       ? 'Demandez une demonstration orientee details du voyage.'
       : 'Request a trip details focused demonstration.',
     ['demo', 'trip details', 'itinerary'],
@@ -479,8 +475,8 @@ function buildPageIndexItems(
     items,
     'page-privacy-policy',
     withLocalePrefix(`/${getPrivacyPolicySegment(routeLocale)}`, routeLocale),
-    routeLocale === 'fr-ca' ? 'Politique de confidentialite' : 'Privacy Policy',
-    routeLocale === 'fr-ca'
+    routeLocale === 'fr' ? 'Politique de confidentialite' : 'Privacy Policy',
+    routeLocale === 'fr'
       ? 'Politique de confidentialite TravelWorks.'
       : 'TravelWorks privacy policy.',
     ['privacy', 'policy', 'cookies'],

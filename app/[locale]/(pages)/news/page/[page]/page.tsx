@@ -1,4 +1,4 @@
-import { notFound, redirect } from 'next/navigation';
+﻿import { notFound, redirect } from 'next/navigation';
 import type { Metadata } from 'next';
 import { NewsListPage } from '@/app/[locale]/(pages)/news/news-list-page';
 import {
@@ -55,7 +55,7 @@ export async function generateMetadata({
   alternates.en = getNewsPagePath('en', pageNumber);
   alternates['en-ca'] = getNewsPagePath('en-ca', pageNumber);
   alternates['en-au'] = getNewsPagePath('en-au', pageNumber);
-  alternates['fr-ca'] = getNewsPagePath('fr-ca', pageNumber);
+  alternates['fr'] = getNewsPagePath('fr', pageNumber);
 
   return generateNewsMetadata({
     locale,

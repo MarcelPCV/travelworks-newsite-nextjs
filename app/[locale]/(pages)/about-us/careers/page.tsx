@@ -5,6 +5,7 @@ import TextSectionComp from '@/app/[locale]/components/shared/text-section-comp/
 import { getAlternates } from '@/app/lib/SEO/getAlternates';
 import { Metadata } from 'next';
 import { Locale } from 'next-intl';
+import { routeToMessageLocale } from '@/app/[locale]/locale-config';
 import { Breadcrumb } from '@/app/[locale]/(pages)/news/components/breadcrumb';
 import type { BreadcrumbItem } from '@/app/[locale]/(pages)/news/types';
 
@@ -14,7 +15,7 @@ export async function generateMetadata({
   params: Promise<{ locale: Locale }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'metadata.about-us' });
+  const t = await getTranslations({ locale: routeToMessageLocale[locale] ?? 'en-us', namespace: 'metadata.about-us' });
 
   return {
     title: t('careers.title'),
@@ -25,7 +26,7 @@ export async function generateMetadata({
         en: '/about-us/careers',
         'en-ca': '/en-ca/about-us/careers',
         'en-au': '/en-au/about-us/careers',
-        'fr-ca': '/fr-ca/a-propos/carrieres',
+        'fr': '/fr/a-propos/carrieres',
       },
       locale,
     ),

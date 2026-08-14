@@ -14,7 +14,7 @@ export async function generateMetadata({
   params: Promise<{ locale: Locale }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'metadata.demo-trip-details' });
+  const t = await getTranslations({ locale: routeToMessageLocale[locale] ?? 'en-us', namespace: 'metadata.demo-trip-details' });
 
   return {
     title: t('title'),
@@ -25,7 +25,7 @@ export async function generateMetadata({
         en: '/demo-trip-details',
         'en-ca': '/en-ca/demo-trip-details',
         'en-au': '/en-au/demo-trip-details',
-        'fr-ca': '/fr-ca/demo-trip-details',
+        'fr': '/fr/demo-trip-details',
       },
       locale,
     ),
@@ -41,21 +41,21 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
   return (
     <main>
       <TitleHero
-        title={locale === 'fr-ca' ? 'Détails du voyage' : 'Trip Details'}
+        title={locale === 'fr' ? 'Détails du voyage' : 'Trip Details'}
         imageSrc="/images/pages/ask-for-demo/sent.webp"
       />
       <AskForDemoPageContent countries={countries} locale={messageLocale} />
       <YoutubeVideoSection
         blockType="YoutubeVideo"
         heading={
-          locale === 'fr-ca'
+          locale === 'fr'
             ? "BOOSTEZ L'EFFICACITÉ DE VOTRE AGENCE DE VOYAGE !"
             : 'BOOST THE EFFICIENCY OF YOUR TRAVEL AGENCY!'
         }
         videoId="qG8LDdvA6TE"
         channelLabel="Travelworks Showcase"
         description={
-          locale === 'fr-ca'
+          locale === 'fr'
             ? "Cette vidéo met en lumière notre collaboration avec Acme Corp, démontrant l'efficacité de notre plateforme en temps réel."
             : "This video highlights our work with Acme Corp, demonstrating our platform's efficiency in real-time."
         }

@@ -14,7 +14,7 @@ import {
 } from '@/app/[locale]/locale-config';
 
 const DEFAULT_ROUTE_LOCALE = 'en';
-const SUPPORTED_ROUTE_LOCALES = ['en', 'en-ca', 'fr-ca', 'en-au'] as const;
+const SUPPORTED_ROUTE_LOCALES = ['en', 'fr', 'en-au'] as const;
 
 function getFirstSegment(pathname: string) {
   return pathname.split('/')[1] ?? '';

@@ -38,7 +38,7 @@ export default function SecurityBannerCard({
 
   const t = locale === 'fr-ca' ? translations.fr : translations.en;
   const defaultHrefByLocale: Record<string, string> = {
-    'fr-ca': '/fr-ca/logiciel-agence-voyage/avantages',
+    'fr-ca': '/fr/logiciel-agence-voyage/avantages',
     'en-au': '/en-au/travel-agency-software/benefits',
     'en-ca': '/en-ca/travel-agency-software/benefits',
     'en-us': '/travel-agency-software/benefits',

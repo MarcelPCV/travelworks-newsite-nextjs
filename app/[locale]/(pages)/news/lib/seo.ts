@@ -10,7 +10,7 @@ function getSiteUrl(): string {
 }
 
 function normalizeLocale(locale: string): RouteLocale {
-  if (locale === 'en-ca' || locale === 'en-au' || locale === 'fr-ca') {
+  if (locale === 'en-ca' || locale === 'en-au' || locale === 'fr') {
     return locale;
   }
 

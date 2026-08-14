@@ -136,7 +136,7 @@ const CATEGORY_DEFINITIONS: Record<
 };
 
 function normalizeRouteLocale(locale: string): RouteLocale {
-  if (locale === 'en-ca' || locale === 'en-au' || locale === 'fr-ca') {
+  if (locale === 'en-ca' || locale === 'en-au' || locale === 'fr') {
     return locale;
   }
 
@@ -237,6 +237,6 @@ export function getAllNewsPathByLocale(): Record<RouteLocale, string> {
     en: getNewsListPath('en'),
     'en-ca': getNewsListPath('en-ca'),
     'en-au': getNewsListPath('en-au'),
-    'fr-ca': getNewsListPath('fr-ca'),
+    fr: getNewsListPath('fr'),
   };
 }

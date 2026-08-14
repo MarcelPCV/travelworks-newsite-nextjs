@@ -102,7 +102,7 @@ export default function Navbar() {
   const homeHrefByRouteLocale: Record<string, string> = {
     [DEFAULT_ROUTE_LOCALE]: '/',
     'en-ca': '/en-ca',
-    'fr-ca': '/fr-ca',
+    'fr': '/fr',
     'en-au': '/en-au',
   };
 

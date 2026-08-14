@@ -9,7 +9,7 @@ import BenefitsBanner from './components/benefits-banner/benefits-banner';
 import ClientTrustSection from '@/app/[locale]/(pages)/(home)/components/clients-section/client-trust-section';
 import PlanningDemoSection from '@/app/[locale]/(pages)/(home)/components/demo-section/planning-demo-section';
 import { getCountryOptions } from '@/app/lib/countries';
-import { routeToMessageLocale } from '../../locale-config';
+import { routeToMessageLocale } from '@/app/[locale]/locale-config';
 import { getAlternates } from '@/app/lib/SEO/getAlternates';
 import { Metadata } from 'next';
 import { Locale } from 'next-intl';
@@ -29,7 +29,7 @@ export async function generateMetadata({
   params: Promise<{ locale: Locale }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'metadata.home' });
+  const t = await getTranslations({ locale: routeToMessageLocale[locale] ?? 'en-us', namespace: 'metadata.home' });
 
   return {
     title: `${t('title')}`,
@@ -40,7 +40,7 @@ export async function generateMetadata({
         en: '/',
         'en-ca': '/en-ca',
         'en-au': '/en-au',
-        'fr-ca': '/fr-ca',
+        'fr': '/fr',
       },
       locale,
     ),

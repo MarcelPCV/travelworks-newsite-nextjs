@@ -7,9 +7,8 @@ export type LocaleOption = {
 export const DEFAULT_ROUTE_LOCALE = 'en';
 
 export const localeOptions: LocaleOption[] = [
-  { routeLocale: DEFAULT_ROUTE_LOCALE, messageLocale: 'en-us', label: 'English (Global)' },
-  { routeLocale: 'en-ca', messageLocale: 'en-ca', label: 'English (Canada)' },
-  { routeLocale: 'fr-ca', messageLocale: 'fr-ca', label: 'Francais (Canada)' },
+  { routeLocale: DEFAULT_ROUTE_LOCALE, messageLocale: 'en-us', label: 'English' },
+  { routeLocale: 'fr', messageLocale: 'fr-ca', label: 'Francais' },
   { routeLocale: 'en-au', messageLocale: 'en-au', label: 'English (Australia)' },
 ];
 
@@ -20,83 +19,71 @@ export const routeToMessageLocale = localeOptions.reduce<Record<string, string>>
 
 export const homepageSlugByRouteLocale: Record<string, string> = {
   en: 'home',
-  'en-ca': 'home',
-  'fr-ca': 'accueil',
+  'fr': 'accueil',
   'en-au': 'home',
 };
 
 export const travelAgencySoftwareSegmentByRouteLocale: Record<string, string> = {
   en: 'travel-agency-software',
-  'en-ca': 'travel-agency-software',
-  'fr-ca': 'logiciel-agence-voyage',
+  'fr': 'logiciel-agence-voyage',
   'en-au': 'travel-agency-software',
 };
 
 export const aboutUsSegmentByRouteLocale: Record<string, string> = {
   en: 'about-us',
-  'en-ca': 'about-us',
-  'fr-ca': 'a-propos',
+  'fr': 'a-propos',
   'en-au': 'about-us',
 };
 
 export const trainingSegmentByRouteLocale: Record<string, string> = {
   en: 'training',
-  'en-ca': 'training',
-  'fr-ca': 'formation',
+  'fr': 'formation',
   'en-au': 'training',
 };
 
 export const demoByRouteLocale: Record<string, string> = {
   en: 'ask-for-a-demo',
-  'en-ca': 'ask-for-a-demo',
-  'fr-ca': 'demander-une-demo',
+  'fr': 'demander-une-demo',
   'en-au': 'ask-for-a-demo',
 };
 
 export const privacyPolicySegmentByRouteLocale: Record<string, string> = {
   en: 'privacy-policy',
-  'en-ca': 'privacy-policy',
-  'fr-ca': 'politique-de-confidentialite',
+  'fr': 'politique-de-confidentialite',
   'en-au': 'privacy-policy',
 };
 
 export const newsSegmentByRouteLocale: Record<string, string> = {
   en: 'news',
-  'en-ca': 'news',
-  'fr-ca': 'nouvelles',
+  'fr': 'nouvelles',
   'en-au': 'news',
 };
 
 export const newsCategorySegmentByRouteLocale: Record<string, string> = {
   en: 'category',
-  'en-ca': 'category',
-  'fr-ca': 'categorie',
+  'fr': 'categorie',
   'en-au': 'category',
 };
 
 export const newsCategorySlugs: Record<string, Record<string, string>> = {
   accounting: {
     en: 'accounting',
-    'en-ca': 'accounting',
-    'fr-ca': 'comptabilite',
+    'fr': 'comptabilite',
     'en-au': 'accounting',
   },
   'agency-owner': {
     en: 'agency-owner',
-    'en-ca': 'agency-owner',
-    'fr-ca': 'proprietaire-agence',
+    'fr': 'proprietaire-agence',
     'en-au': 'agency-owner',
   },
   'it-manager': {
     en: 'it-manager',
-    'en-ca': 'it-manager',
-    'fr-ca': 'gestionnaire-ti',
+    'fr': 'gestionnaire-ti',
     'en-au': 'it-manager',
   },
   technology: {
     en: 'technology',
-    'en-ca': 'technology',
-    'fr-ca': 'technologie',
+    'fr': 'technologie',
     'en-au': 'technology',
   },
 };
@@ -104,68 +91,57 @@ export const newsCategorySlugs: Record<string, Record<string, string>> = {
 export const travelAgencySoftwareSlugs: Record<string, Record<string, string>> = {
   features: {
     en: 'features',
-    'en-ca': 'features',
-    'fr-ca': 'fonctionnalites',
+    'fr': 'fonctionnalites',
     'en-au': 'features',
   },
   benefits: {
     en: 'benefits',
-    'en-ca': 'benefits',
-    'fr-ca': 'avantages',
+    'fr': 'avantages',
     'en-au': 'benefits',
   },
   'back-office-travel-agency': {
     en: 'back-office-travel-agency',
-    'en-ca': 'back-office-travel-agency',
-    'fr-ca': 'back-office-agence-voyage',
+    'fr': 'back-office-agence-voyage',
     'en-au': 'back-office-travel-agency',
   },
   'trip-details': {
     en: 'trip-details',
-    'en-ca': 'trip-details',
-    'fr-ca': 'details-du-voyage',
+    'fr': 'details-du-voyage',
     'en-au': 'trip-details',
   },
   'tour-management': {
     en: 'tour-management',
-    'en-ca': 'tour-management',
-    'fr-ca': 'gestion-des-tours',
+    'fr': 'gestion-des-tours',
     'en-au': 'tour-management',
   },
   'tour-online': {
     en: 'tour-online',
-    'en-ca': 'tour-online',
-    'fr-ca': 'tour-online',
+    'fr': 'tour-online',
     'en-au': 'tour-online',
   },
   'crm-tools': {
     en: 'crm-tools',
-    'en-ca': 'crm-tools',
-    'fr-ca': 'outils-crm',
+    'fr': 'outils-crm',
     'en-au': 'crm-tools',
   },
   integrations: {
     en: 'integrations',
-    'en-ca': 'integrations',
-    'fr-ca': 'integrations',
+    'fr': 'integrations',
     'en-au': 'integrations',
   },
   'dashboard-reports': {
     en: 'dashboard-reports',
-    'en-ca': 'dashboard-reports',
-    'fr-ca': 'tableau-de-bord-rapports',
+    'fr': 'tableau-de-bord-rapports',
     'en-au': 'dashboard-reports',
   },
   customizations: {
     en: 'customizations',
-    'en-ca': 'customizations',
-    'fr-ca': 'customizations',
+    'fr': 'customizations',
     'en-au': 'customizations',
   },
   sirev: {
     en: 'sirev',
-    'en-ca': 'sirev',
-    'fr-ca': 'sirev',
+    'fr': 'sirev',
     'en-au': 'sirev',
   },
 };
@@ -173,20 +149,17 @@ export const travelAgencySoftwareSlugs: Record<string, Record<string, string>> =
 export const aboutUsSlugs: Record<string, Record<string, string>> = {
   partners: {
     en: 'partners',
-    'en-ca': 'partners',
-    'fr-ca': 'partenaires',
+    'fr': 'partenaires',
     'en-au': 'partners',
   },
   travelworks: {
     en: 'travelworks',
-    'en-ca': 'travelworks',
-    'fr-ca': 'pc-voyages',
+    'fr': 'pc-voyages',
     'en-au': 'travelworks',
   },
   careers: {
     en: 'careers',
-    'en-ca': 'careers',
-    'fr-ca': 'carrieres',
+    'fr': 'carrieres',
     'en-au': 'careers',
   },
 };
@@ -194,14 +167,12 @@ export const aboutUsSlugs: Record<string, Record<string, string>> = {
 export const trainingSlugs: Record<string, Record<string, string>> = {
   'training-platform': {
     en: 'training-platform',
-    'en-ca': 'training-platform',
-    'fr-ca': 'plateforme-de-formation',
+    'fr': 'plateforme-de-formation',
     'en-au': 'training-platform',
   },
   'knowledge-base': {
     en: 'knowledge-base',
-    'en-ca': 'knowledge-base',
-    'fr-ca': 'base-de-connaissances',
+    'fr': 'base-de-connaissances',
     'en-au': 'knowledge-base',
   },
 };

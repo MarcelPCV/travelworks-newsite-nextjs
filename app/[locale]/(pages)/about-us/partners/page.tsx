@@ -7,6 +7,7 @@ import type { BreadcrumbItem } from '@/app/[locale]/(pages)/news/types';
 import { setRequestLocale } from 'next-intl/server';
 import { Metadata } from 'next';
 import { Locale } from 'next-intl';
+import { routeToMessageLocale } from '@/app/[locale]/locale-config';
 import TitleHero from '@/app/[locale]/components/shared/title-hero/title-hero';
 
 export async function generateMetadata({
@@ -15,7 +16,7 @@ export async function generateMetadata({
   params: Promise<{ locale: Locale }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'metadata.about-us' });
+  const t = await getTranslations({ locale: routeToMessageLocale[locale] ?? 'en-us', namespace: 'metadata.about-us' });
 
   return {
     title: t('partners.title'),
@@ -26,7 +27,7 @@ export async function generateMetadata({
         en: '/about-us/partners',
         'en-ca': '/en-ca/about-us/partners',
         'en-au': '/en-au/about-us/partners',
-        'fr-ca': '/fr-ca/a-propos/partenaires',
+        'fr': '/fr/a-propos/partenaires',
       },
       locale,
     ),

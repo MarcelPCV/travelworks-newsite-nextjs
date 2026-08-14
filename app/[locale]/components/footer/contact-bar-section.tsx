@@ -35,6 +35,7 @@ export default function ContactBarSection({
   const title = t('title');
   const locale = useLocale();
   const activeMessageLocale = useLocale();
+  const isFrenchLocale = locale.toLowerCase().startsWith('fr');
   const handleBackToTop = () => {
     if (typeof window !== 'undefined') {
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -51,7 +52,7 @@ export default function ContactBarSection({
   const homeHrefByRouteLocale: Record<string, string> = {
     [DEFAULT_ROUTE_LOCALE]: '/',
     'en-ca': '/en-ca',
-    'fr-ca': '/fr-ca',
+    fr: '/fr',
     'en-au': '/en-au',
   };
 
@@ -169,7 +170,7 @@ export default function ContactBarSection({
               className="ml-2 inline-flex items-center gap-2 rounded-md border border-neutral-200 bg-gradient-to-r from-gray-800  to-gray-700 px-3 py-2 text-sm font-medium text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-blue"
             >
               <CircleArrowUp className="h-8 w-8" />
-              <span>Back to top</span>
+              <span>{isFrenchLocale ? 'Haut de page' : 'Back to top'}</span>
             </button>
           )}
         </div>

@@ -174,6 +174,8 @@ export function NavbarDesktopContent({
   onToggleLanguageMenu,
   onCloseLanguageMenu,
 }: NavbarDesktopContentProps) {
+  const isFrenchLocale = locale.toLowerCase().startsWith('fr');
+
   return (
     <>
       <nav className="mx-auto flex w-full max-w-[1600px] items-center py-2 px-4 sm:px-6 lg:px-8">
@@ -181,7 +183,7 @@ export function NavbarDesktopContent({
           href={homeHref}
           className="text-xl font-semibold tracking-tight text-zinc-900 uppercase"
         >
-          {locale === 'fr-ca' ? (
+          {isFrenchLocale ? (
             <Image
               src="/images/branding/pcvoyages.svg"
               alt="PC Voyages"
@@ -393,7 +395,7 @@ export function NavbarDesktopContent({
                 <div
                   id="language-menu"
                   role="menu"
-                  className="absolute right-0 top-full mt-2 w-64 rounded-xl border border-zinc-200 bg-white max-w-[200px] p-2 shadow-lg"
+                  className={`absolute top-full mt-2 w-64 rounded-xl border border-zinc-200 bg-white max-w-[200px] p-2 shadow-lg ${isLangOpen ? 'right-[-40px] ' : 'right-[-40px] '}`}
                 >
                   {languageLinks.map((item) => (
                     <Link

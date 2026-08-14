@@ -21,11 +21,6 @@
         "description": "Communiquez avec PC Voyages pour toute question, demande de soutien ou pour en savoir plus sur nos solutions technologiques pour le secteur du voyage.",
         "keywords": "Fournisseur de logiciels pour agences de voyages, Soutien PC Voyages, Contact commercial logiciel de voyage"
       },
-      "partners": {
-        "title": "Partenaires - PcVoyages",
-        "description": "Découvrez nos partenariats avec des fournisseurs de technologies de voyage de premier plan et comment ils enrichissent nos solutions.",
-        "keywords": "Partenaires en technologie du voyage, Partenaires d'intégration de logiciels de voyage, Partenaires de logiciels DMC"
-      },
       "the-company": {
         "title": "L'entreprise - PcVoyages",
         "description": "Découvrez PC Voyages, notre mission et la façon dont nous transformons l'industrie du voyage grâce à nos solutions complètes.",
@@ -129,14 +124,14 @@
           "concept": {
             "title": "Des solutions technologiques pour les <strong>agences de voyages</strong> et les <strong>voyagistes</strong>",
             "ctaLabel": "Découvrir TravelWorks",
-            "ctaHref": "/fr-ca/travel-agency-software/features",
+            "ctaHref": "/fr/travel-agency-software/features",
             "desktopImage": "/images/pages/home/hero-carousel/travelworks-technology-solutions-travel-agencies.webp",
             "mobileImage": "/images/pages/home/hero-carousel/travelworks-technology-solutions-travel-agencies-mobile.webp"
           },
           "promo": {
             "title": "<strong>Des systèmes cloud sécurisés</strong> adaptés au travail à distance",
             "ctaLabel": "Découvrir les avantages",
-            "ctaHref": "/fr-ca/travel-agency-software/benefits",
+            "ctaHref": "/fr/travel-agency-software/benefits",
             "desktopImage": "/images/pages/home/hero-carousel/travelworks-secured-cloud-systems-fr.webp",
             "mobileImage": "/images/pages/home/hero-carousel/travelworks-secured-cloud-systems-mobile-fr.webp"
           },
@@ -144,7 +139,7 @@
             "title": "Une <strong>solution complète</strong> : réservation, CRM, inventaire, facturation, comptabilité et marketing",
             "cta": "Découvrir TourOnline",
             "ctaLabel": "Découvrir TravelWorks",
-            "ctaHref": "/fr-ca/travel-agency-software/tour-online",
+            "ctaHref": "/fr/travel-agency-software/tour-online",
             "desktopImage": "/images/pages/home/hero-carousel/travelworks-comprehensive-solution-desktop-fr.webp",
             "mobileImage": "/images/pages/home/hero-carousel/travelworks-comprehensive-solution-mobile-fr.webp"
           }
@@ -155,49 +150,49 @@
         "items": {
           "backoffice-tools": {
             "title": "Gestion des réservations",
-            "ctaHref": "/fr-ca/logiciel-agence-voyage/back-office-agence-voyage",
+            "ctaHref": "/fr/logiciel-agence-voyage/back-office-agence-voyage",
             "image": {
               "alt": "Outils de back-office Travelworks"
             }
           },
           "reservation-management": {
             "title": "Gestion des dossiers",
-            "ctaHref": "/fr-ca/logiciel-agence-voyage/fonctionnalites",
+            "ctaHref": "/fr/logiciel-agence-voyage/fonctionnalites",
             "image": {
               "alt": "Outils de gestion des dossiers Travelworks"
             }
           },
           "strategic-management-tool": {
             "title": "Outil de gestion stratégique",
-            "ctaHref": "/fr-ca/logiciel-agence-voyage/fonctionnalites",
+            "ctaHref": "/fr/logiciel-agence-voyage/fonctionnalites",
             "image": {
               "alt": "Outil de gestion stratégique Travelworks"
             }
           },
           "tour-management": {
             "title": "Gestion des circuits",
-            "ctaHref": "/fr-ca/logiciel-agence-voyage/gestion-des-tours",
+            "ctaHref": "/fr/logiciel-agence-voyage/gestion-des-tours",
             "image": {
               "alt": "Outils de gestion des circuits Travelworks"
             }
           },
           "online-tour-booking": {
             "title": "Réservation de circuits en ligne",
-            "ctaHref": "/fr-ca/logiciel-agence-voyage/tour-online",
+            "ctaHref": "/fr/logiciel-agence-voyage/tour-online",
             "image": {
               "alt": "Réservation de circuits en ligne Travelworks"
             }
           },
           "crm-tools": {
             "title": "Outils CRM",
-            "ctaHref": "/fr-ca/logiciel-agence-voyage/outils-crm",
+            "ctaHref": "/fr/logiciel-agence-voyage/outils-crm",
             "image": {
               "alt": "Outils CRM Travelworks"
             }
           },
           "multiple-integration": {
             "title": "Intégrations multiples",
-            "ctaHref": "/fr-ca/logiciel-agence-voyage/integrations",
+            "ctaHref": "/fr/logiciel-agence-voyage/integrations",
             "image": {
               "alt": "Intégrations multiples Travelworks"
             }
@@ -219,32 +214,32 @@
             "title": "<strong>Optimisez la facturation</strong> et la <strong>comptabilité</strong>",
             "description": "Générez des factures professionnelles et normalisées. Automatisez la création de vos factures. Optimisez vos processus comptables grâce aux meilleures pratiques.",
             "imageAlt": "Optimisez la facturation et la comptabilité",
-            "blockLink": "/fr-ca/logiciel-agence-voyage/back-office-agence-voyage"
+            "blockLink": "/fr/logiciel-agence-voyage/back-office-agence-voyage"
           },
           "1": {
             "title": "Intégré aux <strong>GDS</strong> et aux <strong>moteurs de réservation</strong>",
             "description": "Effectuez vos réservations avec vos moteurs de réservation actuels (Sabre, Galileo, Amadeus, Worldspan, SIREV). Les factures sont automatiquement générées dans notre logiciel. Il en va de même pour les compagnies d'assurance.",
             "imageAlt": "Intégré aux GDS et aux moteurs de réservation",
-            "blockLink": "/fr-ca/logiciel-agence-voyage/integrations"
+            "blockLink": "/fr/logiciel-agence-voyage/integrations"
           },
           "2": {
             "title": "<strong>Système infonuagique</strong>, une solution clé en main",
             "description": "Accédez à votre logiciel où que vous soyez grâce à une solution infonuagique sécurisée. Profitez d’une plateforme clé en main, sans installation complexe, toujours à jour et accessible en tout temps.",
             "imageAlt": "Système infonuagique, une solution clé en main",
-            "blockLink": "/fr-ca/logiciel-agence-voyage/avantages"
+            "blockLink": "/fr/logiciel-agence-voyage/avantages"
           },
           "3": {
             "title": "Outil <strong>CRM</strong> et <strong>marketing intégré</strong>",
             "description": "Générez des revenus supplémentaires grâce à des campagnes courriel ciblées. Améliorez votre service à la clientèle et fidélisez vos clients avec des messages de courtoisie automatisés.",
             "imageAlt": "Outil CRM et marketing intégré",
-            "blockLink": "/fr-ca/logiciel-agence-voyage/outils-crm"
+            "blockLink": "/fr/logiciel-agence-voyage/outils-crm"
           }
         }
       },
       "block-type-clients-trust": {
         "title": "Plus de <strong>1 000 agences de voyages</strong> nous font confiance",
         "buttonLabel": "Découvrez nos clients",
-        "buttonHref": "/fr-ca/a-propos/clients"
+        "buttonHref": "/fr/a-propos/clients"
       },
       "block-type-benefits-banner-1": {
         "heading": "Une solution complète",
@@ -252,7 +247,7 @@
         "imageHref": "/images/pages/home/banner-complete-solution/travelworks-complete-solution-fr.webp",
         "imageAlt": "PcVoyages - Une solution complète",
         "imagePlaceholderLabel": "Espace réservé pour l'image de l'ordinateur portable",
-        "buttonHref": "/fr-ca/logiciel-agence-voyage/fonctionnalites",
+        "buttonHref": "/fr/logiciel-agence-voyage/fonctionnalites",
         "list": {
           "0": "Une comptabilité adaptée aux agences de voyages",
           "1": "Améliore la productivité",
@@ -266,7 +261,7 @@
         "imageHref": "/images/pages/home/banner-tripntouch/pcvoyages-tripntouch-mobile-fr.webp",
         "imageAlt": "Application mobile PcVoyages",
         "imagePlaceholderLabel": "Espace réservé pour l'image de l'ordinateur portable",
-        "buttonHref": "/fr-ca/logiciel-agence-voyage/trip-n-trouch",
+        "buttonHref": "/fr/logiciel-agence-voyage/trip-n-trouch",
         "list": {
           "0": "Bonifiez l'expérience des voyageurs",
           "1": "Améliorez la satisfaction et la fidélisation des clients",
@@ -307,7 +302,7 @@
           "mobileTopImageSrc": "/images/pages/travel-agency-software/features/background-portfolio-features-mobile.webp",
           "desktopMainImageSrc": "/images/pages/travel-agency-software/features/background-portfolio-features-mobile.webp",
           "logoImageSrc": "",
-          "ctaImageSrc": "/images/pages/travel-agency-software/features/30-logo-en.svg"
+          "ctaImageSrc": "/images/pages/travel-agency-software/features/30-logo-fr.svg"
         },
         "block-type-split": {
           "heading": "Des outils puissants et intelligents",
@@ -320,7 +315,7 @@
           "reservation-management": {
             "title": "Gestion des réservations",
             "topLinkLabel": "Cliquez ici et découvrez SIREV : le moteur de réservation en ligne",
-            "topLinkHref": "/fr-ca/logiciel-agence-voyage/sirev",
+            "topLinkHref": "/fr/logiciel-agence-voyage/sirev",
             "items": {
               "0": "Gestion des comptes corporatifs",
               "1": "Gestion des groupes de passagers",
@@ -345,7 +340,7 @@
               "2": "Application mobile avec détails d’itinéraire, cartes et contenu de destination"
             },
             "ctaLabel": "Fonctionnalités CRM",
-            "ctaHref": "/fr-ca/logiciel-agence-voyage/outils-crm"
+            "ctaHref": "/fr/logiciel-agence-voyage/outils-crm"
           },
           "accounting": {
             "title": "Comptabilité",
@@ -357,7 +352,7 @@
               "4": "Rapports"
             },
             "ctaLabel": "Fonctionnalités comptables",
-            "ctaHref": "/fr-ca/logiciel-agence-voyage/back-office-agence-voyage"
+            "ctaHref": "/fr/logiciel-agence-voyage/back-office-agence-voyage"
           },
           "invoicing": {
             "title": "Facturation",
@@ -369,7 +364,7 @@
               "4": "Génération de chèques en lot"
             },
             "ctaLabel": "Fonctionnalités de facturation",
-            "ctaHref": "/fr-ca/logiciel-agence-voyage/back-office-agence-voyage"
+            "ctaHref": "/fr/logiciel-agence-voyage/back-office-agence-voyage"
           },
           "tour-management": {
             "title": "Gestion des voyages",
@@ -380,7 +375,7 @@
               "3": "Suivi automatisé des paiements"
             },
             "ctaLabel": "Fonctionnalités de gestion des voyages",
-            "ctaHref": "/fr-ca/logiciel-agence-voyage/gestion-des-tours"
+            "ctaHref": "/fr/logiciel-agence-voyage/gestion-des-tours"
           }
         },
         "block-type-youtube-video": {
@@ -481,7 +476,7 @@
       "benefits": {
         "breadcrumb": {
           "features-label": "La solution",
-          "features-link": "/fr-ca/logiciel-agence-voyage/fonctionnalites",
+          "features-link": "/fr/logiciel-agence-voyage/fonctionnalites",
           "benefits-label": "Avantages"
         },
         "block-type-sections": {
@@ -600,7 +595,7 @@
       "back-office-travel-agency": {
         "breadcrumb": {
           "about-us-label": "La solution",
-          "about-us-link": "/fr-ca/logiciel-agence-voyage/fonctionnalites",
+          "about-us-link": "/fr/logiciel-agence-voyage/fonctionnalites",
           "back-office-label": "Système BackOffice"
         },
         "block-type-page-hero": {
@@ -661,7 +656,7 @@
               "2": "Des communications périodiques par courriel contenant des rapports peuvent être configurées selon vos besoins."
             },
             "ctaLabel": "Fonctionnalités du rapport",
-            "ctaHref": "/fr-ca/logiciel-agence-voyage/tableau-de-bord-rapports"
+            "ctaHref": "/fr/logiciel-agence-voyage/tableau-de-bord-rapports"
           },
           "mobile-solutions": {
             "title": "SOLUTIONS MOBILES",
@@ -671,7 +666,7 @@
               "2": "Des informations utiles qui simplifient leur voyage et améliorent leur expérience sur place."
             },
             "ctaLabel": "Découvrir Trip n'Touch",
-            "ctaHref": "fr-ca/logiciel-agence-voyage/trip-n-trouch"
+            "ctaHref": "/fr/logiciel-agence-voyage/trip-n-trouch"
           },
           "travel-agents-commissions": {
             "title": "COMMISSIONS DES CONSEILLERS EN VOYAGES",
@@ -736,7 +731,7 @@
       "customizations": {
         "breadcrumb": {
           "features-label": "La solution",
-          "features-link": "/fr-ca/logiciel-agence-voyage/fonctionnalites",
+          "features-link": "/fr/logiciel-agence-voyage/fonctionnalites",
           "customizations-label": "Customizations"
         },
         "block-type-page-hero": {
@@ -778,7 +773,7 @@
       "dashboard-reports": {
         "breadcrumb": {
           "features-label": "La solution",
-          "features-link": "/fr-ca/logiciel-agence-voyage/fonctionnalites",
+          "features-link": "/fr/logiciel-agence-voyage/fonctionnalites",
           "dashboard-label": "Dashboard and Reports"
         },
         "block-type-page-hero": {
@@ -828,7 +823,7 @@
       "crm": {
         "breadcrumb": {
           "features-label": "La solution",
-          "features-link": "/fr-ca/logiciel-agence-voyage/fonctionnalites",
+          "features-link": "/fr/logiciel-agence-voyage/fonctionnalites",
           "crm-label": "Outils CRM"
         },
         "block-type-page-hero": {
@@ -899,7 +894,7 @@
       "tour-online": {
         "breadcrumb": {
           "features-label": "La solution",
-          "features-link": "/fr-ca/logiciel-agence-voyage/fonctionnalites",
+          "features-link": "/fr/logiciel-agence-voyage/fonctionnalites",
           "touronline-label": "Tour Online"
         },
         "block-type-page-hero": {
@@ -976,7 +971,7 @@
       "tour-management": {
         "breadcrumb": {
           "features-label": "La solution",
-          "features-link": "/fr-ca/logiciel-agence-voyage/fonctionnalites",
+          "features-link": "/fr/logiciel-agence-voyage/fonctionnalites",
           "tour-management-label": "Tour Management"
         },
         "block-type-page-hero": {
@@ -1111,7 +1106,7 @@
       "trip-details": {
         "breadcrumb": {
           "features-label": "La solution",
-          "features-link": "/fr-ca/logiciel-agence-voyage/fonctionnalites",
+          "features-link": "/fr/logiciel-agence-voyage/fonctionnalites",
           "trip-details-label": "Détails du voyage"
         },
         "block-type-page-hero": {
@@ -1135,7 +1130,7 @@
           "linkText": "",
           "captionText": "",
           "ctaLabel": "Demander une démonstration",
-          "ctaLink": "/fr-ca/demo-trip-details"
+          "ctaLink": "/fr/demo-trip-details"
         },
         "block-type-share-items": {
           "0": {
@@ -1184,13 +1179,13 @@
           "linkText": "",
           "captionText": "",
           "ctaLabel": "Demander une démonstration",
-          "ctaLink": "/fr-ca/demo-trip-details"
+          "ctaLink": "/fr/demo-trip-details"
         }
       },
       "trip-n-touch": {
         "breadcrumb": {
           "features-label": "La solution",
-          "features-link": "/fr-ca/logiciel-agence-voyage/fonctionnalites",
+          "features-link": "/fr/logiciel-agence-voyage/fonctionnalites",
           "trip-n-touch-label": "Trip'n Touch"
         },
         "block-type-page-hero": {
@@ -1226,7 +1221,7 @@
       "sirev": {
         "breadcrumb": {
           "features-label": "La solution",
-          "features-link": "/fr-ca/logiciel-agence-voyage/fonctionnalites",
+          "features-link": "/fr/logiciel-agence-voyage/fonctionnalites",
           "crm-label": "Sirev"
         },
         "block-type-page-hero": {
@@ -1279,7 +1274,7 @@
     "integrations": {
       "breadcrumb": {
         "features-label": "La solution",
-        "features-link": "/fr-ca/logiciel-agence-voyage/fonctionnalites",
+        "features-link": "/fr/logiciel-agence-voyage/fonctionnalites",
         "integrations-label": "Intégrations"
       },
       "block-type-page-hero": {
@@ -1327,7 +1322,7 @@
           "description": "<strong>La Base de connaissances</strong> est une plateforme puissante qui <strong>centralise toutes nos vidéos et documents de formation</strong> dans <strong>un seul endroit facile d’accès</strong>. Elle permet aux clients de <strong>suivre leur formation à leur propre rythme</strong>, de trouver rapidement les <strong>informations dont ils ont besoin</strong>, et de <strong>rester confiants et informés, à tout moment et en tout lieu</strong>.",
           "imageSrc": "/images/pages/training/knowledge-base/fr/screen-knowledge-base.jpg",
           "altText": "Base de connaissances",
-          "linkHref": "/fr-ca/demo-knowledge-base",
+          "linkHref": "/fr/demo-knowledge-base",
           "linkText": "Demander maintenant",
           "captionText": ""
         },
@@ -1466,7 +1461,7 @@
             "title": "Portail client en ligne",
             "description": "Une base de connaissances offrant un accès à la carte à l’ensemble des formations.",
             "ctaLabel": "En savoir plus",
-            "ctaLink": "/fr-ca/formation/base-de-connaissances"
+            "ctaLink": "/fr/formation/base-de-connaissances"
           }
         },
         "block-type-image-happy-learning": {
@@ -1593,14 +1588,14 @@
         },
         "breadcrumb": {
           "about-us-label": "À Propos",
-          "about-us-link": "/fr-ca/a-propos/pc-voyages",
+          "about-us-link": "/fr/a-propos/pc-voyages",
           "about-us-partners-label": "Partenaires"
         }
       },
       "careers": {
         "breadcrumb": {
           "about-us-label": "À Propos",
-          "about-us-link": "/fr-ca/a-propos/pc-voyages",
+          "about-us-link": "/fr/a-propos/pc-voyages",
           "careers-label": "Carrières"
         },
         "block-type-page-hero": {
@@ -1618,7 +1613,7 @@
       "clients": {
         "breadcrumb": {
           "about-us-label": "À Propos",
-          "about-us-link": "/fr-ca/a-propos/pc-voyages",
+          "about-us-link": "/fr/a-propos/pc-voyages",
           "clients-label": "Clients"
         },
         "block-type-page-hero": {
@@ -1713,7 +1708,7 @@
       "contact": {
         "breadcrumb": {
           "about-us-label": "À Propos",
-          "about-us-link": "/fr-ca/a-propos/pc-voyages",
+          "about-us-link": "/fr/a-propos/pc-voyages",
           "contact-label": "Contact"
         },
         "title-hero": {
@@ -1778,7 +1773,7 @@
           "description": "Augmentez votre productivité le plus rapidement possible avec TravelWorks !",
           "imageAlt": "Formation en ligne",
           "button": "Voir plus",
-          "linkTraining": "/fr-ca/formation/plateforme-de-formation"
+          "linkTraining": "/fr/formation/plateforme-de-formation"
         },
         "map": {
           "title": "Siège social de Montréal",
@@ -1952,9 +1947,8 @@
     "languageTitle": "Langues",
     "languagePrefix": "{language}",
     "languages": {
-      "en": "Anglais (Global)",
-      "en-ca": "Anglais (Canada)",
-      "fr-ca": "Français (Canada)",
+      "en": "Anglais",
+      "fr": "Français",
       "en-au": "Anglais (Australie)"
     },
     "topLevel": {
@@ -2054,7 +2048,7 @@
     "betweenLinksText": "et notre",
     "cookiePolicyLabel": "Politique relative aux cookies",
     "descriptionAfterCookie": " pour plus d'informations.",
-    "privacyPolicyUrl": "/fr-ca/politique-de-confidentialite",
+    "privacyPolicyUrl": "/fr/politique-de-confidentialite",
     "cookiePolicyUrl": "#"
   },
   "cmsUnavailable": {

@@ -1,4 +1,4 @@
-import { getTranslations } from 'next-intl/server';
+﻿import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
 import FeatureSection from './components/section';
 import { sections } from './data';
@@ -28,7 +28,7 @@ export async function generateMetadata({
         en: '/travel-agency-software/benefits',
         'en-ca': '/en-ca/travel-agency-software/benefits',
         'en-au': '/en-au/travel-agency-software/benefits',
-        'fr-ca': '/fr-ca/logiciel-agence-voyage/avantages',
+        'fr': '/fr/logiciel-agence-voyage/avantages',
       },
       locale,
     ),
@@ -83,13 +83,13 @@ export default async function TravelWorksFeatures({
         {/* Content */}
         <div className="relative mx-auto max-w-7xl px-6 py-16">
           <p className="text-center text-sm uppercase tracking-[4px] opacity-80 uppercase">
-            {locale === 'fr-ca'
+            {locale === 'fr'
               ? 'Une solution éprouvée adaptée à'
               : 'A Well-Proven Solution Tailored To'}
           </p>
 
           <h1 className="mt-2 text-center text-4xl font-bold uppercase">
-            {locale === 'fr-ca'
+            {locale === 'fr'
               ? "Logiciel de gestion d'agence de voyage"
               : 'Travel Agency Management'}
           </h1>

@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
@@ -79,7 +79,7 @@ export default function AskForDemoFormSection({ countries, locale }: Props) {
 
         <div className="relative z-10 rounded-xl bg-transparent">
           <h3 className="text-[1.8rem] font-medium uppercase text-brand-blue sm:text-[2rem]">
-            {locale === 'fr-ca' ? "Demander l'accès" : 'Request Access'}
+            {locale === 'fr' ? "Demander l'accès" : 'Request Access'}
           </h3>
 
           <form onSubmit={handleSubmit} noValidate className="mt-6 space-y-5">

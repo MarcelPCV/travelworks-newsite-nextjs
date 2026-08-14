@@ -25,7 +25,7 @@ const NEWS_CONTENT_ROOT = path.join(process.cwd(), 'content', 'news');
 const CATEGORY_SET = new Set(['accounting', 'agency-owner', 'it-manager', 'technology']);
 
 function toRouteLocale(locale: string): RouteLocale {
-  if (locale === 'en-ca' || locale === 'en-au' || locale === 'fr-ca') {
+  if (locale === 'en-ca' || locale === 'en-au' || locale === 'fr') {
     return locale;
   }
 
@@ -321,7 +321,7 @@ export function generateBreadcrumbs(params: {
 }
 
 export function getRouteLocales(): RouteLocale[] {
-  return ['en', 'en-ca', 'en-au', 'fr-ca'];
+  return ['en', 'en-ca', 'en-au', 'fr'];
 }
 
 export async function getArticleAlternates(
@@ -331,7 +331,7 @@ export async function getArticleAlternates(
     en: getNewsListPath('en'),
     'en-ca': getNewsListPath('en-ca'),
     'en-au': getNewsListPath('en-au'),
-    'fr-ca': getNewsListPath('fr-ca'),
+    fr: getNewsListPath('fr'),
   };
 
   const locales = getRouteLocales();
@@ -356,7 +356,7 @@ export async function getCategoryAlternates(
     en: getNewsCategoryPath('en', categoryId),
     'en-ca': getNewsCategoryPath('en-ca', categoryId),
     'en-au': getNewsCategoryPath('en-au', categoryId),
-    'fr-ca': getNewsCategoryPath('fr-ca', categoryId),
+    fr: getNewsCategoryPath('fr', categoryId),
   };
 }
 

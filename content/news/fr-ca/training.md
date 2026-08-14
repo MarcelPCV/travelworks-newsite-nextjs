@@ -28,4 +28,4 @@ En proposant des formations structurées, accessibles et approfondies, PcVoyages
 
 ![TravelWorks training platform](/images/news/en/training-platform-knowledge-base-2.jpg)
 
-[Click here to learn more.](/fr-ca/formation/plateforme-de-formation)
+[Click here to learn more.](/fr/formation/plateforme-de-formation)

@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+﻿import { Metadata } from 'next';
 import { Locale } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
 import { getAlternates } from '@/app/lib/SEO/getAlternates';
@@ -23,7 +23,7 @@ type PolicyContent = {
 };
 
 const policyContentByLocale: Record<string, PolicyContent> = {
-  'fr-ca': {
+  'fr': {
     title: 'Politique de confidentialite',
     metadataTitle: 'Politique de confidentialite - PcVoyages',
     metadataDescription:
@@ -450,7 +450,7 @@ export async function generateMetadata({
         en: '/privacy-policy',
         'en-ca': '/en-ca/privacy-policy',
         'en-au': '/en-au/privacy-policy',
-        'fr-ca': '/fr-ca/politique-de-confidentialite',
+        'fr': '/fr/politique-de-confidentialite',
       },
       locale,
     ),

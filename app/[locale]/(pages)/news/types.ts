@@ -1,4 +1,4 @@
-export type RouteLocale = 'en' | 'en-ca' | 'en-au' | 'fr-ca';
+export type RouteLocale = 'en' | 'en-ca' | 'en-au' | 'fr';
 
 export type ContentLocale = 'en-us' | 'en-ca' | 'en-au' | 'fr-ca';
 

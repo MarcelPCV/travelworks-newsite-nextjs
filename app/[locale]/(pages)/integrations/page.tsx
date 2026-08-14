@@ -7,6 +7,7 @@ import type { BreadcrumbItem } from '@/app/[locale]/(pages)/news/types';
 import { setRequestLocale } from 'next-intl/server';
 import { Metadata } from 'next';
 import { Locale } from 'next-intl';
+import { routeToMessageLocale } from '@/app/[locale]/locale-config';
 import PageHero from '../../components/shared/page-hero/page-hero';
 import { IntegrationsPageData } from './data';
 import SectionAnchorMenu from './components/section-anchor-menu';
@@ -18,7 +19,7 @@ export async function generateMetadata({
   params: Promise<{ locale: Locale }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'metadata.integrations' });
+  const t = await getTranslations({ locale: routeToMessageLocale[locale] ?? 'en-us', namespace: 'metadata.integrations' });
 
   return {
     title: t('title'),
@@ -29,7 +30,7 @@ export async function generateMetadata({
         en: '/integrations',
         'en-ca': '/en-ca/integrations',
         'en-au': '/en-au/integrations',
-        'fr-ca': '/fr-ca/integrations',
+        'fr': '/fr/integrations',
       },
       locale,
     ),
@@ -353,7 +354,7 @@ export default async function PartnersPage({ params }: { params: Promise<{ local
     <main className="bg-gray-50">
       <Breadcrumb items={breadcrumbItems} homeHref={homeHref} />
       <TitleHero 
-        title={locale === "fr-ca" ? "Intégrations" : "Integrations"} 
+        title={locale === "fr" ? "Intégrations" : "Integrations"} 
         imageSrc="/images/pages/integrations/integrations.webp" 
       />
       {IntegrationsPageData.layout.map((layout, index) => {

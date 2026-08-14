@@ -1,4 +1,4 @@
-import Link from 'next/link';
+﻿import Link from 'next/link';
 import type { BreadcrumbItem } from '@/app/[locale]/(pages)/news/types';
 import { Home } from 'lucide-react';
 import { useLocale } from 'next-intl';
@@ -15,7 +15,7 @@ export function Breadcrumb({ items, homeHref }: { items: BreadcrumbItem[]; homeH
           <li>
             <Link className="flex items-center hover:text-slate-700" href={homeHref}>
               <Home className="mr-2 h-5 w-5 text-amber-600" />
-              {locale === 'fr-ca' ? 'Accueil' : 'Home'}
+              {locale === 'fr' ? 'Accueil' : 'Home'}
             </Link>
           </li>
 
