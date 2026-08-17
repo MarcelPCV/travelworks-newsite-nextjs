@@ -1,7 +1,6 @@
 import {
   BarChart3,
   Building2,
-  Link2,
   Map,
   Settings,
   SlidersHorizontal,
@@ -10,6 +9,7 @@ import {
   Users,
   TicketsPlane,
   PanelTop,
+  Smartphone,
 } from 'lucide-react';
 import type { ProductLinkKey } from '@/app/[locale]/components/layout/navbar/navbar-config';
 
@@ -29,5 +29,5 @@ export const travelAgencyMenuItems: TravelAgencyMenuItem[] = [
   { key: 'crmTools', canonicalSlug: 'crm-tools', icon: Users },
   { key: 'dashboardReports', canonicalSlug: 'dashboard-reports', icon: BarChart3 },
   { key: 'customizations', canonicalSlug: 'customizations', icon: SlidersHorizontal },
-  { key: 'trip-n-trouch', canonicalSlug: 'trip-n-trouch', icon: SlidersHorizontal },
+  { key: 'trip-n-trouch', canonicalSlug: 'trip-n-trouch', icon: Smartphone },
 ];

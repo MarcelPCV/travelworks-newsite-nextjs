@@ -14,6 +14,7 @@ import {
   TicketsPlane,
   type LucideIcon,
   Rocket,
+  Smartphone,
 } from 'lucide-react';
 
 export type ProductCategory = 'travelworks';
@@ -57,7 +58,7 @@ export const productLinkIcons: Record<ProductLinkKey, LucideIcon> = {
   dashboardReports: BarChart3,
   customizations: SlidersHorizontal,
   sirev: MapPinSearch,
-  'trip-n-trouch': SlidersHorizontal,
+  'trip-n-trouch': Smartphone,
 };
 
 export const aboutUsLinkIcons: Record<AboutUsLinkKey, LucideIcon> = {
