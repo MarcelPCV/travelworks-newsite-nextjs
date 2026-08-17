@@ -13,6 +13,7 @@ import {
   MapPinSearch,
   TicketsPlane,
   type LucideIcon,
+  Rocket,
 } from 'lucide-react';
 
 export type ProductCategory = 'travelworks';
@@ -45,9 +46,6 @@ export type AboutUsLinkKey = (typeof aboutUsLinks)[number];
 export const trainingLinks = ['platform', 'knowledgeBase'] as const;
 export type TrainingLinkKey = (typeof trainingLinks)[number];
 
-export const menuItemIconClassName =
-  'w-5.5 h-5.5 transition duration-150 text-zinc-900 group-hover:text-zinc-700 rounded-full';
-
 export const productLinkIcons: Record<ProductLinkKey, LucideIcon> = {
   features: Settings,
   benefits: Star,
@@ -66,7 +64,7 @@ export const aboutUsLinkIcons: Record<AboutUsLinkKey, LucideIcon> = {
   company: Building2,
   clients: Users,
   contact: Mail,
-  careers: Star,
+  careers: Rocket,
 };
 
 export const trainingLinkIcons: Record<TrainingLinkKey, LucideIcon> = {

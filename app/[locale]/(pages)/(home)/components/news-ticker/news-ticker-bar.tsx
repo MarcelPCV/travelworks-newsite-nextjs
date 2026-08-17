@@ -34,7 +34,7 @@ export default function NewsTickerBar({
 
   return (
     <section
-      className="hidden md:block mx-auto mt-5 w-full max-w-[1600px] rounded-t-md border border-zinc-300 bg-gray-800 py-1"
+      className="hidden md:block mx-auto mt-5 w-full max-w-[1600px] rounded-t-md border border-zinc-300 bg-zinc-800 border-t-2 border-t-zinc-200/60 py-1"
       aria-label={sectionTitle}
     >
       <div className="mx-auto flex w-full items-center gap-3 px-4 py-1 sm:px-6 lg:px-8">
@@ -48,8 +48,10 @@ export default function NewsTickerBar({
 
         <span className="h-4 w-px shrink-0 bg-gray-500" aria-hidden="true" />
 
-        <div className="min-w-0 flex-1 truncate text-[13px] font-normal text-white hover:underline">
-          <Link href={articleHref}>{articleLabel}</Link>
+        <div className="min-w-0 flex-1 truncate text-[13px] font-normal text-zinc-300 hover:underline">
+          <Link href={articleHref}>
+            {articleLabel}
+          </Link>
         </div>
 
         <a

@@ -3,7 +3,7 @@
     "home": {
       "title": "Home - TravelWorks - Travel Agency Software",
       "description": "Discover TravelWorks, the comprehensive travel agency software that streamlines booking, CRM, inventory, billing, accounting, and marketing for travel agencies and tour operators.",
-      "keywords": "Travel Agency Software, Tour Operator Software, Software for Tour Creators, DMC Software, Travel Booking Software, Travel CRM, Travel Agency Management System, Travel Company, Travel Companies, Travel Hub,  B2B travel network,"
+      "keywords": "Travel Agency Software, Tour Operator Software, DMC Software, Travel Agency Management System, Travel Technology, Travel Itinerary Management, Travel Accounting Software, Travel Invoicing Software, Travel agency CRM, Travel Software Integrations, Group Travel Management Software, BackOffice for travel agency, FrontOffice for travel agency"
     },
     "about-us": {
       "careers": {
@@ -2018,7 +2018,7 @@
     },
     "products": {
       "subtitle": "travel-agency-software",
-      "promoMessage": "Discover TravelWorks, the ultimate software platform for modern travel agencies.",
+      "promoMessage": "Discover <strong>TravelWorks</strong>, the ultimate software platform for modern travel agencies.",
       "categories": {
         "travelworks": "Travelworks",
         "tourOnline": "TourOnline",

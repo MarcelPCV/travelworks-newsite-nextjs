@@ -432,7 +432,9 @@ export default function Navbar() {
       logIn: t('cta.logIn'),
       languageTitle: t('languageTitle'),
       languagePrefix: t('languagePrefix', { language: activeLanguageLabel }),
-      productsPromoMessage: t('products.promoMessage'),
+      productsPromoMessage: t.rich('products.promoMessage', {
+        strong: (chunks) => <strong>{chunks}</strong>,
+      }),
       searchPlaceholder: t('search.placeholder'),
       searchHint: t('search.hint'),
       searchDialogLabel: t('search.dialogLabel'),

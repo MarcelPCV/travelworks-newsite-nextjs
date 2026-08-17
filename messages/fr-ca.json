@@ -3,7 +3,7 @@
     "home": {
       "title": "Accueil - PcVoyages - Logiciel pour agences de voyages",
       "description": "Découvrez PC Voyages, le logiciel complet pour agences de voyages qui simplifie les réservations, le CRM, l'inventaire, la facturation, la comptabilité et le marketing pour les agences de voyages et les voyagistes.",
-      "keywords": "Logiciel pour agence de voyages, Logiciel pour tour opérateur, Logiciel DMC, Logiciel de réservation de voyages, CRM pour agence de voyages, Système de gestion d'agence de voyages"
+      "keywords": "Logiciel pour agences de voyages, Logiciel pour tour-opérateurs, Logiciel DMC, Système de gestion pour agences de voyages, Technologie du voyage, Gestion des itinéraires de voyage, Logiciel de comptabilité pour agences de voyages, Logiciel de facturation pour agences de voyages, CRM pour agences de voyages, Intégrations de logiciels de voyage, Logiciel de gestion des voyages de groupe, Back-office pour agences de voyages, Front-office pour agences de voyages"
     },
     "about-us": {
       "careers": {
@@ -1963,7 +1963,7 @@
     },
     "products": {
       "subtitle": "travel-agency-software",
-      "promoMessage": "Decouvrez TravelWorks, la plateforme logicielle ultime pour les agences de voyage modernes.",
+      "promoMessage": "Decouvrez <strong>TravelWorks</strong>, la plateforme logicielle ultime pour les agences de voyage modernes.",
       "categories": {
         "travelworks": "Travelworks",
         "tourOnline": "TourOnline",

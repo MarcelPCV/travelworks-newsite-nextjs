@@ -1895,7 +1895,7 @@
     },
     "products": {
       "subtitle": "travel-agency-software",
-      "promoMessage": "Discover TravelWorks, the ultimate software platform for modern travel agencies.",
+      "promoMessage": "Discover <strong>TravelWorks</strong>, the ultimate software platform for modern travel agencies.",
       "categories": {
         "travelworks": "Travelworks",
         "tourOnline": "TourOnline",

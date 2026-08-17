@@ -7,7 +7,6 @@ import DropdownCtaButton, {
 } from '@/app/[locale]/components/ui/dropdown-cta-button';
 import {
   aboutUsLinkIcons,
-  menuItemIconClassName,
   productColumnsByCategory,
   productLinkIcons,
   trainingLinkIcons,
@@ -39,7 +38,7 @@ type NavbarLabels = {
   logIn: string;
   languageTitle: string;
   languagePrefix: string;
-  productsPromoMessage: string;
+  productsPromoMessage: React.ReactNode;
   searchPlaceholder: string;
   searchHint: string;
   searchDialogLabel: string;
@@ -271,8 +270,18 @@ export function NavbarDesktopContent({
                       }`}
                       onClick={onClearPanels}
                     >
-                      <div className="w-10 h-10 shrink-0 bg-zinc-100 flex items-center justify-center rounded-full shadow-xl">
-                        <Icon className={menuItemIconClassName} aria-hidden="true" />
+                      <div className="relative flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-r from-brand-orange-light to-brand-orange-dark shadow-[0_3px_0_0_#9a3412] border-t-2 border-white/50">
+                        {/* Main icon */}
+                        <Icon
+                          className="relative z-10 h-5.5 w-5.5 text-white transition duration-150"
+                          aria-hidden="true"
+                        />
+
+                        {/* Shadow icon */}
+                        <Icon
+                          className="absolute h-5.5 w-5.5 top-[10px] left-[10px] text-orange-800"
+                          aria-hidden="true"
+                        />
                       </div>
                       <span className={isActive ? 'font-semibold' : 'font-medium'}>
                         {getAboutUsLabel(link)}
@@ -343,8 +352,18 @@ export function NavbarDesktopContent({
                       }`}
                       onClick={onClearPanels}
                     >
-                      <div className="w-10 h-10 shrink-0 bg-zinc-100 flex items-center justify-center rounded-full shadow-xl">
-                        <Icon className={menuItemIconClassName} aria-hidden="true" />
+                      <div className="relative flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-r from-brand-orange-light to-brand-orange-dark shadow-[0_3px_0_0_#9a3412] border-t-2 border-white/50">
+                        {/* Main icon */}
+                        <Icon
+                          className="relative z-10 h-5.5 w-5.5 text-white transition duration-150"
+                          aria-hidden="true"
+                        />
+
+                        {/* Shadow icon */}
+                        <Icon
+                          className="absolute h-5.5 w-5.5 top-[10px] left-[10px]  text-orange-800"
+                          aria-hidden="true"
+                        />
                       </div>
                       <span className={isActive ? 'font-semibold' : 'font-medium'}>
                         {getTrainingLabel(link)}
@@ -435,13 +454,20 @@ export function NavbarDesktopContent({
         }`}
       >
         <div
-          className={`mx-auto w-full max-w-7xl px-6  transition duration-200 motion-reduce:transition-none ${
+          className={`mx-auto w-full max-w-7xl px-6  transition duration-200  ${
             isProductsOpen ? 'translate-y-0 opacity-100' : '-translate-y-1 opacity-0'
           }`}
         >
-          <div className="grid min-h-54 grid-cols-[300px_1fr] overflow-hidden">
+          <div className="grid min-h-54 grid-cols-[250px_1fr] overflow-hidden">
+            <div className="border-r border-zinc-600 rounded-2xl p-8 bg-gradient-to-r from-transparent to-zinc-800 lg:mr-3 my-2">
+              <p className="flex items-center h-full max-w-[120ch] text-xl font-regular leading-[1.4] tracking-tight text-white">
+                <span>
+                  {labels.productsPromoMessage}
+                </span>
+              </p>
+            </div>
             <div className="p-7">
-              <div className="grid grid-cols-4 gap-x-100 gap-y-80">
+              <div className="grid grid-cols-4 gap-x-60 gap-y-80">
                 {productColumnsByCategory[activeProductCategory].map((column, columnIndex) => (
                   <div key={`${activeProductCategory}-${columnIndex}`} className="space-y-2">
                     {column.map((linkKey) => {
@@ -461,10 +487,19 @@ export function NavbarDesktopContent({
                               : 'border-transparent text-white hover:bg-zinc-700 hover:border-amber-500 uppercase'
                           }`}
                         >
-                          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-zinc-100 shadow-xl">
-                            <Icon className={menuItemIconClassName} aria-hidden="true" />
-                          </div>
+                          <div className="relative flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-r from-brand-orange-light to-brand-orange-dark shadow-[0_3px_0_0_#9a3412] border-t-2 border-white/50">
+                            {/* Main icon */}
+                            <Icon
+                              className="relative z-10 h-5.5 w-5.5 text-white transition duration-150"
+                              aria-hidden="true"
+                            />
 
+                            {/* Shadow icon */}
+                            <Icon
+                              className="absolute h-5.5 w-5.5 top-[10px] left-[10px]  text-orange-800"
+                              aria-hidden="true"
+                            />
+                          </div>
                           <span
                             className={`min-w-40 break-words ${
                               isActive ? 'font-semibold' : 'font-medium'
@@ -550,7 +585,7 @@ export function NavbarMobileMenu({
                       className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium text-zinc-700 hover:bg-white"
                       onClick={onCloseMobileMenu}
                     >
-                      <Icon className={menuItemIconClassName} aria-hidden="true" />
+                      <Icon className="relative z-10 w-5.5 h-5.5 transition duration-150 text-white group-hover:text-zinc-700 rounded-full" aria-hidden="true" />
                       {getProductLabel(linkKey)}
                     </Link>
                   );
@@ -585,7 +620,7 @@ export function NavbarMobileMenu({
                     className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium text-zinc-700 hover:bg-white"
                     onClick={onCloseMobileMenu}
                   >
-                    <Icon className={menuItemIconClassName} aria-hidden="true" />
+                    <Icon className="relative z-10 w-5.5 h-5.5 transition duration-150 text-white group-hover:text-zinc-700 rounded-full"aria-hidden="true" />
                     {getAboutUsLabel(link)}
                   </Link>
                 );
@@ -619,7 +654,7 @@ export function NavbarMobileMenu({
                     className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium text-zinc-700 hover:bg-white"
                     onClick={onCloseMobileMenu}
                   >
-                    <Icon className={menuItemIconClassName} aria-hidden="true" />
+                    <Icon className="relative z-10 w-5.5 h-5.5 transition duration-150 text-white group-hover:text-zinc-700 rounded-full" aria-hidden="true" />
                     {getTrainingLabel(link)}
                   </Link>
                 );
