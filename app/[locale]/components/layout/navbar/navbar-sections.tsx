@@ -206,7 +206,7 @@ export function NavbarDesktopContent({
             <li>
               <button
                 type="button"
-                className={`inline-flex items-center rounded-md px-2 py-2 text-sm uppercase transition duration-150 hover:bg-zinc-100 hover:border-b-2 hover:border-amber-600 ${
+                className={`inline-flex items-center rounded-md px-2 py-2 text-[13px] uppercase transition duration-150 hover:bg-zinc-100 hover:border-b-2 hover:border-amber-600 ${
                   isProductsActive ? 'font-bold text-[#015caa]' : 'font-medium text-zinc-800'
                 }`}
                 aria-expanded={isProductsOpen}
@@ -226,7 +226,7 @@ export function NavbarDesktopContent({
             <li className="relative">
               <button
                 type="button"
-                className={`inline-flex items-center rounded-md px-2 py-2 text-sm uppercase transition duration-150 hover:bg-zinc-100 hover:border-b-2 hover:border-amber-600 ${
+                className={`inline-flex items-center rounded-md px-2 py-2 text-[13px] uppercase transition duration-150 hover:bg-zinc-100 hover:border-b-2 hover:border-amber-600 ${
                   isAboutUsActive ? 'font-bold text-[#015caa]' : 'font-medium text-zinc-800'
                 }`}
                 aria-expanded={isAboutUsOpen}
@@ -263,7 +263,7 @@ export function NavbarDesktopContent({
                       key={link}
                       href={href}
                       role="menuitem"
-                      className={`flex items-center gap-2 rounded-md border-l-2 px-3 py-2 text-sm transition duration-150 ${
+                      className={`flex items-center gap-2 rounded-md border-l-2 px-3 py-2 text-[13px] transition duration-150 ${
                         isActive
                           ? 'border-orange-400 bg-brand-blue text-white uppercase'
                           : 'border-transparent text-white hover:bg-zinc-700 hover:border-l-2 hover:border-amber-500 uppercase'
@@ -294,7 +294,7 @@ export function NavbarDesktopContent({
             <li>
               <Link
                 href={integrationsHref}
-                className={`rounded-md px-3 py-2 text-sm uppercase transition duration-150 hover:bg-zinc-100 ${
+                className={`inline-flex items-center rounded-md px-2 py-2 text-[13px] uppercase transition duration-150 hover:bg-zinc-100 hover:border-b-2 hover:border-amber-600 ${
                   isHrefActive(integrationsHref)
                     ? 'font-bold text-brand-blue'
                     : 'font-medium text-zinc-800'
@@ -308,7 +308,7 @@ export function NavbarDesktopContent({
             <li className="relative">
               <button
                 type="button"
-                className={`inline-flex items-center rounded-md px-2 py-2 text-sm uppercase transition duration-150 hover:bg-zinc-100 hover:border-b-2 hover:border-amber-600 ${
+                className={`inline-flex items-center rounded-md px-2 py-2 text-[13px] uppercase transition duration-150 hover:bg-zinc-100 hover:border-b-2 hover:border-amber-600 ${
                   isTrainingActive ? 'font-bold text-[#015caa]' : 'font-medium text-zinc-800'
                 }`}
                 aria-expanded={isTrainingOpen}
