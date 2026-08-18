@@ -12,6 +12,7 @@ import Footer from './components/footer/index';
 import type { NewsItem } from './components/footer/news-section';
 import { getCategories, getNewsArticlePath } from '@/app/[locale]/(pages)/news/lib/categories';
 import { getAllArticles } from '@/app/[locale]/(pages)/news/lib/news';
+import { Analytics } from "@vercel/analytics/next"
 
 export default async function LocaleLayout({
   children,
@@ -56,7 +57,11 @@ export default async function LocaleLayout({
         <LocationConfirmationBar />
         <TopAnnouncementBar />
         <Navbar />
-        <main className="mx-auto w-full">{children}</main>
+        <main className="mx-auto w-full">
+          <Analytics />
+          {children}
+        </main>
+        <Analytics />
         <ConsentManager />
         <Footer newsItems={latestNewsItems} />
       </div>
