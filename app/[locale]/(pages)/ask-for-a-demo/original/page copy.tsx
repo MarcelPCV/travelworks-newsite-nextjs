@@ -5,7 +5,7 @@ import { routeToMessageLocale } from '@/app/[locale]/locale-config';
 import { getAlternates } from '@/app/lib/SEO/getAlternates';
 import { Metadata } from 'next';
 import { Locale } from 'next-intl';
-import TitleHero from '../../components/shared/title-hero/title-hero';
+import TitleHero from '@/app/[locale]/components/shared/title-hero/title-hero';
 import YoutubeVideoSection from '@/app/[locale]/components/shared/video/youtube-video-section';
 
 export async function generateMetadata({

@@ -3,8 +3,8 @@
 import { ArrowRight } from 'lucide-react';
 import { useState } from 'react';
 import type { CountryOption } from '@/app/lib/countries';
-import type { PlanningDemoSectionModel } from './type';
-import { demoRequestSchema, type DemoRequestErrors } from './zod-validations';
+import type { PlanningDemoSectionModel } from '@/app/[locale]/(pages)/(home)/components/demo-section/type';
+import { demoRequestSchema, type DemoRequestErrors } from '@/app/[locale]/(pages)/(home)/components/demo-section/zod-validations';
 import Image from 'next/image';
 import TitleSection from '@/app/[locale]/components/ui/title-section';
 
