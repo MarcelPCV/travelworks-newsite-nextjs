@@ -1,12 +1,14 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { getCountryOptions } from '@/app/lib/countries';
-import AskForDemoPageContent from '@/app/[locale]/(pages)/ask-for-a-demo/components/ask-for-demo-page-content';
+import { TourOnlinePageData } from './data';
+import PageHero from '@/app/[locale]/components/shared/page-hero/page-hero';
+import TextSectionComp from '@/app/[locale]/components/shared/text-section-comp/text-section-comp';
 import { routeToMessageLocale } from '@/app/[locale]/locale-config';
 import { getAlternates } from '@/app/lib/SEO/getAlternates';
 import { Metadata } from 'next';
 import { Locale } from 'next-intl';
-import TitleHero from '../../components/shared/title-hero/title-hero';
-import YoutubeVideoSection from '@/app/[locale]/components/shared/video/youtube-video-section';
+import { Breadcrumb } from '@/app/[locale]/(pages)/news/components/breadcrumb';
+import type { BreadcrumbItem } from '@/app/[locale]/(pages)/news/types';
+import { Cog } from 'lucide-react';
 
 export async function generateMetadata({
   params,
@@ -14,18 +16,18 @@ export async function generateMetadata({
   params: Promise<{ locale: Locale }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale: routeToMessageLocale[locale] ?? 'en-us', namespace: 'metadata.demo-trip-details' });
+  const t = await getTranslations({ locale: routeToMessageLocale[locale] ?? 'en-us', namespace: 'metadata.about-us' });
 
   return {
-    title: t('title'),
-    description: t('description'),
-    keywords: t('keywords'),
+    title: t('the-company.title'),
+    description: t('the-company.description'),
+    keywords: t('the-company.keywords'),
     alternates: getAlternates(
       {
-        en: '/demo-trip-details',
-        'en-ca': '/en-ca/demo-trip-details',
-        'en-au': '/en-au/demo-trip-details',
-        'fr': '/fr/demo-trip-details',
+        en: '/about-us/travelworks',
+        'en-ca': '/en-ca/about-us/travelworks',
+        'en-au': '/en-au/about-us/travelworks',
+        'fr': '/fr/a-propos/pcvoyages',
       },
       locale,
     ),
@@ -33,33 +35,43 @@ export async function generateMetadata({
 }
 
 export default async function Page({ params }: { params: Promise<{ locale: string }> }) {
-  const { locale: routeLocale, locale } = await params;
-  setRequestLocale(routeLocale);
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations('pages.maintenance');
+  const homeHref = locale === 'en' ? '/' : `/${locale}`;
+  const breadcrumbItems: BreadcrumbItem[] = [
+    { label: t('breadcrumb.maintenance-label'), href: '#' },
+  ];
 
-  const messageLocale = routeToMessageLocale[routeLocale] ?? 'en-us';
-  const countries = getCountryOptions(messageLocale);
   return (
     <main>
-      <TitleHero
-        title={locale === 'fr' ? 'Détails du voyage' : 'Trip Details'}
-        imageSrc="/images/pages/ask-for-demo/sent.webp"
-      />
-      <AskForDemoPageContent countries={countries} locale={messageLocale} />
-      <YoutubeVideoSection
-        blockType="YoutubeVideo"
-        heading={
-          locale === 'fr'
-            ? "BOOSTEZ L'EFFICACITÉ DE VOTRE AGENCE DE VOYAGE !"
-            : 'BOOST THE EFFICIENCY OF YOUR TRAVEL AGENCY!'
+      <Breadcrumb items={breadcrumbItems} homeHref={homeHref} />
+      <div className='flex justify-center items-center mt-10'>
+        <div className="flex items-center justify-center bg-white rounded-full p-5 shadow-md border-b-2 border-orange-400">
+          <Cog className="mx-auto h-20 w-20 text-orange-400" />
+        </div>
+      </div>
+      {TourOnlinePageData.layout.map((layout, index) => {
+        switch (layout.blockType) {
+          case 'TextSection':
+            return (
+              <TextSectionComp
+                key={index}
+                {...layout}
+                description={
+                  layout.description
+                    ? t.rich(layout.description as string, {
+                        p: (chunks) => <p className="my-5">{chunks}</p>,
+                        strong: (chunks) => <strong>{chunks}</strong>,
+                      })
+                    : ''
+                }
+              />
+            );
+          default:
+            return null;
         }
-        videoId="qG8LDdvA6TE"
-        channelLabel="Travelworks Showcase"
-        description={
-          locale === 'fr'
-            ? "Cette vidéo met en lumière notre collaboration avec Acme Corp, démontrant l'efficacité de notre plateforme en temps réel."
-            : "This video highlights our work with Acme Corp, demonstrating our platform's efficiency in real-time."
-        }
-      />
+      })}
     </main>
   );
 }

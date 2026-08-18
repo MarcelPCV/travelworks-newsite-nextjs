@@ -1771,6 +1771,14 @@
           "iframeTitle": "TravelWorks Montreal office location"
         }
       }
+    },
+    "maintenance": {
+      "breadcrumb": {
+        "maintenance-label": "Maintenance"
+      },
+      "block-type-text-section": {
+        "description": "<p>Our website is currently undergoing maintenance.</p><p>For more information, or if you need any assistance, please contact us at <strong>info@travelworkssolution.com</strong>.</p><p>Thank you for your patience and understanding.</p>"
+      }
     }
   },
   "footer": {

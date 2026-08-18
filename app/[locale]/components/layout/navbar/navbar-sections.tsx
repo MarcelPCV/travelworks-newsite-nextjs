@@ -414,7 +414,7 @@ export function NavbarDesktopContent({
                 <div
                   id="language-menu"
                   role="menu"
-                  className={`absolute top-full mt-2 w-64 rounded-xl border border-zinc-200 bg-white max-w-[200px] p-2 shadow-lg ${isLangOpen ? 'right-[-40px] ' : 'right-[-40px] '}`}
+                  className={`absolute top-full mt-2 w-64 rounded-xl border border-zinc-200 bg-white max-w-[200px] p-2 shadow-lg`}
                 >
                   {languageLinks.map((item) => (
                     <Link

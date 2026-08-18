@@ -1780,6 +1780,14 @@
           "iframeTitle": "Emplacement du bureau de TravelWorks à Montréal"
         }
       }
+    },
+    "maintenance": {
+      "breadcrumb": {
+        "maintenance-label": "Maintenance"
+      },
+      "block-type-text-section": {
+        "description": "<p>Notre site Web est actuellement en maintenance.</p><p>Pour plus d’informations ou si vous avez besoin d’assistance, veuillez nous contacter à <strong>info@travelworkssolution.com</strong>.</p><p>Merci de votre patience et de votre compréhension.</p>"
+      }
     }
   },
   "footer": {
