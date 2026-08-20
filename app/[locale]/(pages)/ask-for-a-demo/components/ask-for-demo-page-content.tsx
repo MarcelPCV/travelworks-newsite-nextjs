@@ -1,7 +1,7 @@
 'use client';
 
 import type { CountryOption } from '@/app/lib/countries';
-import AskForDemoFormSection from '@/app/[locale]/(pages)/demo-trip-details/components/ask-for-demo-form-section';
+import AskForDemoFormSection from '@/app/[locale]/(pages)/demo-knowledge-base/components/ask-for-demo-form-section';
 import AskForDemoHighlightsSection from '@/app/[locale]/(pages)/ask-for-a-demo/components/ask-for-demo-highlights-section';
 import AskForDemoSolutionsSection from '@/app/[locale]/(pages)/ask-for-a-demo/components/ask-for-demo-solutions-section';
 

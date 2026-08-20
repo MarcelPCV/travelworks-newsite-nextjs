@@ -2,9 +2,14 @@
 
 import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
+import { useSearchParams } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 import type { CountryOption } from '@/app/lib/countries';
+import {
+  DEFAULT_ROUTE_LOCALE,
+  getThankYouSlug,
+} from '@/app/[locale]/locale-config';
 import {
   demoRequestSchema,
   type DemoRequestErrors,
@@ -15,8 +20,34 @@ type Props = {
   locale: string;
 };
 
+function getThankYouPath(locale: string) {
+  const normalizedLocale = locale.toLowerCase();
+
+  const routeLocale = normalizedLocale.startsWith('fr')
+    ? 'fr'
+    : normalizedLocale === 'en-au'
+      ? 'en-au'
+      : DEFAULT_ROUTE_LOCALE;
+
+  const slug = getThankYouSlug(routeLocale);
+
+  if (routeLocale === DEFAULT_ROUTE_LOCALE) {
+    return `/${slug}`;
+  }
+
+  return `/${routeLocale}/${slug}`;
+}
+
 export default function AskForDemoFormSection({ countries, locale }: Props) {
   const t = useTranslations('home.ask-for-a-demo');
+  const searchParams = useSearchParams();
+  const source = searchParams.get('source');
+  const isFrench = locale.toLowerCase().startsWith('fr');
+
+  const genericErrorMessage = isFrench
+    ? "Une erreur s'est produite. Veuillez reessayer."
+    : 'Something went wrong. Please try again.';
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
@@ -25,7 +56,8 @@ export default function AskForDemoFormSection({ countries, locale }: Props) {
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    const formData = new FormData(event.currentTarget);
+    const form = event.currentTarget;
+    const formData = new FormData(form);
     const raw = Object.fromEntries(formData.entries());
     const result = demoRequestSchema.safeParse(raw);
 
@@ -47,23 +79,46 @@ export default function AskForDemoFormSection({ countries, locale }: Props) {
     setErrorMessage(null);
 
     try {
-      const res = await fetch('/api/demo', {
+      const res = await fetch('/api/demo-knowledge-base', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...result.data, locale, formName: t('form.formName') }),
+        body: JSON.stringify({
+          ...result.data,
+          locale,
+          formName: t('form.formName'),
+          pageUrl: window.location.href,
+          paidPromotion: source ?? (isFrench ? 'Non' : 'No'),
+        }),
       });
 
-      if (!res.ok) {
-        const data = await res.json().catch(() => ({}));
-        setErrorMessage(data.error ?? t('form.feedback.error'));
+      const text = await res.text();
+      let data: {
+        success?: boolean;
+        redirectTo?: string;
+        error?: string;
+        message?: string;
+      } = {};
+
+      try {
+        data = text ? JSON.parse(text) : {};
+      } catch {
+        data = {};
+      }
+
+      if (!res.ok || data.success === false) {
+        setErrorMessage(data.error ?? data.message ?? genericErrorMessage);
         setStatus('error');
         return;
       }
 
       setStatus('success');
-      event.currentTarget.reset();
-    } catch {
-      setErrorMessage(t('form.feedback.error'));
+      form.reset();
+
+      const redirectTarget = data.redirectTo ?? getThankYouPath(locale);
+      window.location.assign(redirectTarget);
+    } catch (error) {
+      const detail = error instanceof Error ? error.message : '';
+      setErrorMessage(detail ? `${genericErrorMessage} (${detail})` : genericErrorMessage);
       setStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -106,7 +161,7 @@ export default function AskForDemoFormSection({ countries, locale }: Props) {
                 name="email"
                 type="email"
                 aria-describedby={fieldErrors.email ? 'email-error' : undefined}
-                className={`mt-2 w-full border-b bg-transparent py-2 text-[1rem] text-slate-900 outline-none ${
+                className={`mt-2 w-full border-b bg-transparent py-2 text-[.9rem] text-slate-900 outline-none ${
                   fieldErrors.email ? 'border-red-500' : 'border-neutral-border'
                 }`}
               />
@@ -123,7 +178,7 @@ export default function AskForDemoFormSection({ countries, locale }: Props) {
                 name="phone"
                 type="tel"
                 aria-describedby={fieldErrors.phone ? 'phone-error' : undefined}
-                className={`mt-2 w-full border-b bg-transparent py-2 text-[1rem] text-slate-900 outline-none ${
+                className={`mt-2 w-full border-b bg-transparent py-2 text-[.9rem] text-slate-900 outline-none ${
                   fieldErrors.phone ? 'border-red-500' : 'border-neutral-border'
                 }`}
               />
@@ -140,7 +195,7 @@ export default function AskForDemoFormSection({ countries, locale }: Props) {
                 name="agencyName"
                 type="text"
                 aria-describedby={fieldErrors.agencyName ? 'agencyName-error' : undefined}
-                className={`mt-2 w-full border-b bg-transparent py-2 text-[1rem] text-slate-900 outline-none ${
+                className={`mt-2 w-full border-b bg-transparent py-2 text-[.9rem] text-slate-900 outline-none ${
                   fieldErrors.agencyName ? 'border-red-500' : 'border-neutral-border'
                 }`}
               />
@@ -156,7 +211,7 @@ export default function AskForDemoFormSection({ countries, locale }: Props) {
               <select
                 name="country"
                 aria-describedby={fieldErrors.country ? 'country-error' : undefined}
-                className={`mt-2 w-full border-b bg-transparent py-2 text-[1rem] text-slate-900 outline-none ${
+                className={`mt-2 w-full border-b bg-transparent py-2 text-[.9rem] text-slate-900 outline-none ${
                   fieldErrors.country ? 'border-red-500' : 'border-neutral-border'
                 }`}
               >
