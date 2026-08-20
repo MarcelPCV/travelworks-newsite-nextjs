@@ -14,6 +14,7 @@ import {
 import { DEFAULT_ROUTE_LOCALE, getThankYouSlug } from '@/app/[locale]/locale-config';
 
 import TitleSection from '@/app/[locale]/components/ui/title-section';
+import { is } from 'zod/v4/locales';
 
 type Props = {
   countries: CountryOption[];
@@ -108,8 +109,9 @@ export default function PlanningDemoSection({
         body: JSON.stringify({
           ...result.data,
           locale,
-          formName: 'Footer Demo Request',
+          formName: isFrench ? 'Footer' : 'Pied de page',
           pageUrl: window.location.href,
+          paidPromotion: isFrench ? 'Non' : 'No',
         }),
       });
 

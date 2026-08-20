@@ -18,6 +18,7 @@ type DemoMessages = {
     agency: string;
     country: string;
     pageUrl: string;
+    paidPromotion: string;
   };
 };
 
@@ -46,6 +47,7 @@ function getDemoMessages(locale: string): DemoMessages {
         agency: 'Agence',
         country: 'Pays',
         pageUrl: 'URL',
+        paidPromotion: 'Promu',
       },
     };
   }
@@ -65,6 +67,7 @@ function getDemoMessages(locale: string): DemoMessages {
       agency: 'Agency',
       country: 'Country',
       pageUrl: 'URL',
+      paidPromotion: 'Promoted',
     },
   };
 }
@@ -87,6 +90,7 @@ export async function POST(request: Request) {
       country,
       formName,
       pageUrl,
+      paidPromotion
     } = body ?? {};
 
     const safeFormName = isNonEmptyString(formName) ? formName : 'Footer Demo Request';
@@ -140,6 +144,7 @@ export async function POST(request: Request) {
         <p><strong>${messages.labels.agency}:</strong> ${String(agencyName)}</p>
         <p><strong>${messages.labels.country}:</strong> ${countryName}</p>
         <p><strong>Page URL:</strong> ${String(pageUrl)}</p>
+        <p><strong>${messages.labels.paidPromotion}:</strong> ${String(paidPromotion)}</p>
       `,
     });
 

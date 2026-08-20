@@ -2,20 +2,43 @@
 
 import { ArrowRight } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import type { CountryOption } from '@/app/lib/countries';
 import {
   contactRequestSchema,
   type ContactRequestErrors,
 } from '@/app/[locale]/(pages)/about-us/contact/components/contact-form-validations';
+import { DEFAULT_ROUTE_LOCALE, getThankYouSlug } from '@/app/[locale]/locale-config';
 
 type Props = {
   countries: CountryOption[];
   locale: string;
 };
 
+function getThankYouPath(locale: string) {
+  const normalizedLocale = locale.toLowerCase();
+  const routeLocale = normalizedLocale.startsWith('fr')
+    ? 'fr'
+    : normalizedLocale === 'en-au'
+      ? 'en-au'
+      : DEFAULT_ROUTE_LOCALE;
+  const slug = getThankYouSlug(routeLocale);
+
+  if (routeLocale === DEFAULT_ROUTE_LOCALE) {
+    return `/${slug}`;
+  }
+
+  return `/${routeLocale}/${slug}`;
+}
+
 export default function ContactForm({ countries, locale }: Props) {
+  const router = useRouter();
   const t = useTranslations('pages.about-us.contact.form');
+  const isFrench = locale.toLowerCase().startsWith('fr');
+  const genericErrorMessage = isFrench
+    ? "Une erreur s'est produite. Veuillez réessayer."
+    : 'Something went wrong. Please try again.';
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
@@ -24,7 +47,8 @@ export default function ContactForm({ countries, locale }: Props) {
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    const formData = new FormData(event.currentTarget);
+    const form = event.currentTarget;
+    const formData = new FormData(form);
     const raw = {
       fullName: String(formData.get('fullName') ?? ''),
       email: String(formData.get('email') ?? ''),
@@ -58,20 +82,39 @@ export default function ContactForm({ countries, locale }: Props) {
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...result.data, locale, formName: t('formName') }),
+        body: JSON.stringify({ ...result.data, 
+          locale, 
+          formName: isFrench ? 'Page Contact' : 'Contact Page',
+          pageUrl: window.location.href,
+          paidPromotion: isFrench ? 'Non' : 'No' }),
       });
 
-      if (!res.ok) {
-        const data = await res.json().catch(() => ({}));
-        setErrorMessage(data.error ?? t('feedback.error'));
+      const text = await res.text();
+
+      let data: {
+        success?: boolean;
+        redirectTo?: string;
+        error?: string;
+        message?: string;
+      } = {};
+
+      try {
+        data = text ? JSON.parse(text) : {};
+      } catch {
+        data = {};
+      }
+
+      if (!res.ok || data.success === false) {
+        setErrorMessage(data.error ?? data.message ?? genericErrorMessage);
         setStatus('error');
         return;
       }
 
+      form.reset();
       setStatus('success');
-      event.currentTarget.reset();
+      router.push(data.redirectTo ?? getThankYouPath(locale));
     } catch {
-      setErrorMessage(t('feedback.error'));
+      setErrorMessage(genericErrorMessage);
       setStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -89,7 +132,7 @@ export default function ContactForm({ countries, locale }: Props) {
             name="fullName"
             type="text"
             aria-describedby={fieldErrors.fullName ? 'fullName-error' : undefined}
-            className={`mt-2 w-full border-b bg-transparent py-2 text-[1rem] text-slate-900 outline-none ${
+            className={`mt-2 w-full border-b bg-transparent py-2 text-[.9rem] text-slate-900 outline-none ${
               fieldErrors.fullName ? 'border-red-500' : 'border-slate-300'
             }`}
           />
@@ -106,7 +149,7 @@ export default function ContactForm({ countries, locale }: Props) {
             name="email"
             type="email"
             aria-describedby={fieldErrors.email ? 'email-error' : undefined}
-            className={`mt-2 w-full border-b bg-transparent py-2 text-[1rem] text-slate-900 outline-none ${
+            className={`mt-2 w-full border-b bg-transparent py-2 text-[.9rem] text-slate-900 outline-none ${
               fieldErrors.email ? 'border-red-500' : 'border-slate-300'
             }`}
           />
@@ -123,7 +166,7 @@ export default function ContactForm({ countries, locale }: Props) {
             name="phone"
             type="tel"
             aria-describedby={fieldErrors.phone ? 'phone-error' : undefined}
-            className={`mt-2 w-full border-b bg-transparent py-2 text-[1rem] text-slate-900 outline-none ${
+            className={`mt-2 w-full border-b bg-transparent py-2 text-[.9rem] text-slate-900 outline-none ${
               fieldErrors.phone ? 'border-red-500' : 'border-slate-300'
             }`}
           />
@@ -140,7 +183,7 @@ export default function ContactForm({ countries, locale }: Props) {
             name="agencyName"
             type="text"
             aria-describedby={fieldErrors.agencyName ? 'agencyName-error' : undefined}
-            className={`mt-2 w-full border-b bg-transparent py-2 text-[1rem] text-slate-900 outline-none ${
+            className={`mt-2 w-full border-b bg-transparent py-2 text-[.9rem] text-slate-900 outline-none ${
               fieldErrors.agencyName ? 'border-red-500' : 'border-slate-300'
             }`}
           />
@@ -156,7 +199,7 @@ export default function ContactForm({ countries, locale }: Props) {
           <select
             name="country"
             aria-describedby={fieldErrors.country ? 'country-error' : undefined}
-            className={`mt-2 w-full border-b bg-transparent py-2 text-[1rem] text-slate-900 outline-none ${
+            className={`mt-2 w-full border-b bg-transparent py-2 text-[.9rem] text-slate-900 outline-none ${
               fieldErrors.country ? 'border-red-500' : 'border-slate-300'
             }`}
           >
