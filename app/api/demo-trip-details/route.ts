@@ -50,8 +50,8 @@ function getDemoMessages(locale: string): DemoMessages {
 			missingRequiredFields: 'Champs obligatoires manquants.',
 			sendFailed: "Impossible d'envoyer la demande pour le moment.",
 			serverError: 'Erreur serveur.',
-			subjectPrefix: 'Nouvelle demande de demo - Details du voyage',
-			heading: 'Nouvelle demande de demo - Details du voyage',
+			subjectPrefix: 'Nouvelle demande de demo - Details du voyage - PcVoyages',
+			heading: 'Nouvelle demande de demo - Details du voyage - PcVoyages',
 			labels: {
 				form: 'Formulaire',
 				language: 'Langue',
@@ -70,8 +70,8 @@ function getDemoMessages(locale: string): DemoMessages {
 		missingRequiredFields: 'Missing required fields.',
 		sendFailed: 'Unable to send the request right now.',
 		serverError: 'Server error.',
-		subjectPrefix: 'New Demo Request - Trip Details',
-		heading: 'New Demo Request - Trip Details',
+		subjectPrefix: 'New Demo Request - Trip Details - TravelWorks',
+		heading: 'New Demo Request - Trip Details - TravelWorks',
 		labels: {
 			form: 'Form',
 			language: 'Language',

@@ -51,7 +51,7 @@ function getDemoMessages(locale: string): DemoMessages {
 			sendFailed: "Impossible d'envoyer la demande pour le moment.",
 			serverError: 'Erreur serveur.',
 			subjectPrefix: 'Nouvelle demande de demo base de connaissances - PcVoyages',
-			heading: 'Nouvelle demande de demo base de connaissances',
+			heading: 'Nouvelle demande de demo base de connaissances - PcVoyages',
 			labels: {
 				form: 'Formulaire',
 				language: 'Langue',
@@ -71,7 +71,7 @@ function getDemoMessages(locale: string): DemoMessages {
 		sendFailed: 'Unable to send the request right now.',
 		serverError: 'Server error.',
 		subjectPrefix: 'New Knowledge Base Demo Request - TravelWorks',
-		heading: 'New Knowledge Base Demo Request',
+		heading: 'New Knowledge Base Demo Request - TravelWorks',
 		labels: {
 			form: 'Form',
 			language: 'Language',

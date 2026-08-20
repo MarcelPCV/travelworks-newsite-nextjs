@@ -56,8 +56,8 @@ function getContactMessages(locale: string): ContactMessages {
 			missingRequiredFields: 'Champs obligatoires manquants.',
 			sendFailed: "Impossible d'envoyer la demande pour le moment.",
 			serverError: 'Erreur serveur.',
-			subjectPrefix: 'Nouveau message de contact',
-			heading: 'Nouveau message de contact',
+			subjectPrefix: 'Nouveau message de contact - PcVoyages',
+			heading: 'Nouveau message de contact - PcVoyages',
 			labels: {
 				form: 'Formulaire',
 				language: 'Langue',
@@ -78,8 +78,8 @@ function getContactMessages(locale: string): ContactMessages {
 		missingRequiredFields: 'Missing required fields.',
 		sendFailed: 'Unable to send the request right now.',
 		serverError: 'Server error.',
-		subjectPrefix: 'New Contact Message',
-		heading: 'New Contact Message',
+		subjectPrefix: 'New Contact Message - TravelWorks',
+		heading: 'New Contact Message - TravelWorks',
 		labels: {
 			form: 'Form',
 			language: 'Language',
