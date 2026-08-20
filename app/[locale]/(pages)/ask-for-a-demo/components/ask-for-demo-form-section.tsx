@@ -122,7 +122,7 @@ export default function AskForDemoFormSection({
 
           // Get ?source= from the URL
           // If no source exists, send "No"
-          paidPromotion: source ?? isFrench ? 'Non' : 'No',
+          paidPromotion: source?.length ? source : isFrench ? 'Non' : 'No',
         }),
       });
 
