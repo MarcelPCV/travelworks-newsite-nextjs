@@ -39,6 +39,7 @@ export default function ContactForm({ countries, locale }: Props) {
   const genericErrorMessage = isFrench
     ? "Une erreur s'est produite. Veuillez réessayer."
     : 'Something went wrong. Please try again.';
+  const successMessage = t('feedback.success');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
@@ -263,9 +264,18 @@ export default function ContactForm({ countries, locale }: Props) {
           </button>
         </div>
 
-        {status === 'success' && <p className="text-sm text-green-600">{t('feedback.success')}</p>}
+        {status === 'success' && (
+          <p className="text-sm text-green-600">
+            {successMessage}
+          </p>
+        )}
         {status === 'error' && (
-          <p className="text-sm text-red-600">{errorMessage ?? t('feedback.error')}</p>
+          <p
+            role="alert"
+            className="text-sm text-red-600"
+          >
+            {errorMessage ?? genericErrorMessage}
+          </p>
         )}
       </form>
     </section>

@@ -50,8 +50,8 @@ function getDemoMessages(locale: string): DemoMessages {
 			missingRequiredFields: 'Champs obligatoires manquants.',
 			sendFailed: "Impossible d'envoyer la demande pour le moment.",
 			serverError: 'Erreur serveur.',
-			subjectPrefix: 'Nouvelle demande de demo - PcVoyages',
-			heading: 'Nouvelle demande de demo',
+			subjectPrefix: 'Nouvelle demande de demo - Details du voyage',
+			heading: 'Nouvelle demande de demo - Details du voyage',
 			labels: {
 				form: 'Formulaire',
 				language: 'Langue',
@@ -70,8 +70,8 @@ function getDemoMessages(locale: string): DemoMessages {
 		missingRequiredFields: 'Missing required fields.',
 		sendFailed: 'Unable to send the request right now.',
 		serverError: 'Server error.',
-		subjectPrefix: 'New Demo Request - TravelWorks',
-		heading: 'New Demo Request',
+		subjectPrefix: 'New Demo Request - Trip Details',
+		heading: 'New Demo Request - Trip Details',
 		labels: {
 			form: 'Form',
 			language: 'Language',
@@ -98,7 +98,7 @@ export async function POST(request: Request) {
 
 		const { fullName, email, phone, agencyName, country, formName, pageUrl, paidPromotion } = body ?? {};
 
-		const safeFormName = isNonEmptyString(formName) ? formName : 'Ask for a demo';
+		const safeFormName = isNonEmptyString(formName) ? formName : 'Trip Details Demo Page';
 
 		if (
 			!isNonEmptyString(fullName) ||
@@ -164,7 +164,7 @@ export async function POST(request: Request) {
 		}
 
 		if (sendError) {
-			console.error('[demo API] Resend error:', sendError.message);
+			console.error('[demo-trip-details API] Resend error:', sendError.message);
 			return NextResponse.json({ success: false, error: messages.sendFailed }, { status: 502 });
 		}
 
@@ -172,7 +172,7 @@ export async function POST(request: Request) {
 	} catch (error) {
 		const message = error instanceof Error ? error.message : 'Server error';
 		const messages = getDemoMessages(localeForMessages);
-		console.error('[demo API]', message);
+		console.error('[demo-trip-details API]', message);
 		return NextResponse.json({ success: false, error: messages.serverError }, { status: 500 });
 	}
 }

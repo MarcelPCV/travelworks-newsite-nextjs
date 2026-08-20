@@ -14,7 +14,6 @@ import {
 import { DEFAULT_ROUTE_LOCALE, getThankYouSlug } from '@/app/[locale]/locale-config';
 
 import TitleSection from '@/app/[locale]/components/ui/title-section';
-import { is } from 'zod/v4/locales';
 
 type Props = {
   countries: CountryOption[];
@@ -50,6 +49,9 @@ export default function PlanningDemoSection({
   const genericErrorMessage = isFrench
     ? "Une erreur s'est produite. Veuillez réessayer."
     : 'Something went wrong. Please try again.';
+  const successMessage = isFrench
+    ? 'Votre demande a ete envoyee avec succes.'
+    : 'Your request was sent successfully.';
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [status, setStatus] = useState<
@@ -312,11 +314,16 @@ export default function PlanningDemoSection({
                 <ArrowRight className="h-5 w-5" />
               </button>
 
-              {/* General error */}
+              {status === 'success' && (
+                <p className="text-sm text-green-600">
+                  {successMessage}
+                </p>
+              )}
+
               {status === 'error' && (
                 <p
                   role="alert"
-                  className="text-red-600"
+                  className="text-sm text-red-600"
                 >
                   {errorMessage ?? genericErrorMessage}
                 </p>
