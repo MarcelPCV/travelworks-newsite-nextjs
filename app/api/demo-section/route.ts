@@ -17,6 +17,7 @@ type DemoMessages = {
     phone: string;
     agency: string;
     country: string;
+    pageUrl: string;
   };
 };
 
@@ -44,6 +45,7 @@ function getDemoMessages(locale: string): DemoMessages {
         phone: 'Telephone',
         agency: 'Agence',
         country: 'Pays',
+        pageUrl: 'URL',
       },
     };
   }
@@ -62,6 +64,7 @@ function getDemoMessages(locale: string): DemoMessages {
       phone: 'Phone',
       agency: 'Agency',
       country: 'Country',
+      pageUrl: 'URL',
     },
   };
 }
@@ -83,6 +86,7 @@ export async function POST(request: Request) {
       agencyName,
       country,
       formName,
+      pageUrl,
     } = body ?? {};
 
     const safeFormName = isNonEmptyString(formName) ? formName : 'Footer Demo Request';
@@ -135,6 +139,7 @@ export async function POST(request: Request) {
         <p><strong>${messages.labels.phone}:</strong> ${String(phone)}</p>
         <p><strong>${messages.labels.agency}:</strong> ${String(agencyName)}</p>
         <p><strong>${messages.labels.country}:</strong> ${countryName}</p>
+        <p><strong>Page URL:</strong> ${String(pageUrl)}</p>
       `,
     });
 

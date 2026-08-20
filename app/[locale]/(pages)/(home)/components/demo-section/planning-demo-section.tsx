@@ -108,7 +108,8 @@ export default function PlanningDemoSection({
         body: JSON.stringify({
           ...result.data,
           locale,
-          formName: 'Demo Request Form',
+          formName: 'Footer Demo Request',
+          pageUrl: window.location.href,
         }),
       });
 
