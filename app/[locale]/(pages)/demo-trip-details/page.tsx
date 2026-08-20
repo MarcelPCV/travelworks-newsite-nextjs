@@ -1,6 +1,6 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { getCountryOptions } from '@/app/lib/countries';
-import AskForDemoPageContent from '@/app/[locale]/(pages)/ask-for-a-demo/components/ask-for-demo-page-content';
+import AskForDemoPageContent from '@/app/[locale]/(pages)/demo-trip-details/components/ask-for-demo-page-content';
 import { routeToMessageLocale } from '@/app/[locale]/locale-config';
 import { getAlternates } from '@/app/lib/SEO/getAlternates';
 import { Metadata } from 'next';
