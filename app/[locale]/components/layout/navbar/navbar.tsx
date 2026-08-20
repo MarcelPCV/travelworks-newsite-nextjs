@@ -533,6 +533,7 @@ export default function Navbar() {
           backdrop-saturate-200
           border-b border-white/80
           shadow-lg shadow-zinc-900/5
+          rounded-b-xl
         "
         onBlurCapture={(event) => {
           const currentTarget = event.currentTarget;

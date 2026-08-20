@@ -1788,6 +1788,14 @@
       "block-type-text-section": {
         "description": "<p>Notre site Web est actuellement en maintenance.</p><p>Pour plus d’informations ou si vous avez besoin d’assistance, veuillez nous contacter à <strong>info@travelworkssolution.com</strong>.</p><p>Merci de votre patience et de votre compréhension.</p>"
       }
+    },
+    "thank-you": {
+      "breadcrumb": {
+        "thank-you-label": "Merci"
+      },
+      "block-type-text-section": {
+        "description": "<p><strong>Merci de nous avoir contactés.</strong></p><p>Nous avons bien reçu votre message et vous remercions de votre intérêt. Un membre de notre équipe communiquera avec vous dans les plus brefs délais.</p>"
+      }
     }
   },
   "footer": {

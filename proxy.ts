@@ -7,6 +7,7 @@ import {
   newsCategorySlugs,
   newsSegmentByRouteLocale,
   privacyPolicySegmentByRouteLocale,
+  thankYouByRouteLocale,
   trainingSegmentByRouteLocale,
   trainingSlugs,
   travelAgencySoftwareSegmentByRouteLocale,
@@ -104,6 +105,11 @@ export function proxy(request: NextRequest) {
 
     if (routeSegments[0] === demoByRouteLocale[routeLocale]) {
       routeSegments[0] = 'ask-for-a-demo';
+      rewritten = true;
+    }
+
+    if (routeSegments[0] === thankYouByRouteLocale[routeLocale]) {
+      routeSegments[0] = 'thank-you';
       rewritten = true;
     }
 
