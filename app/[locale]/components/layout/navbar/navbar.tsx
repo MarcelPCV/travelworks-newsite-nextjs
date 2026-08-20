@@ -102,7 +102,7 @@ export default function Navbar() {
   const homeHrefByRouteLocale: Record<string, string> = {
     [DEFAULT_ROUTE_LOCALE]: '/',
     'en-ca': '/en-ca',
-    'fr': '/fr',
+    fr: '/fr',
     'en-au': '/en-au',
   };
 
@@ -461,7 +461,7 @@ export default function Navbar() {
   const navigateToSearchResult = useCallback(
     (href: string) => {
       closeSearch();
-      router.push(href);
+      router.push(href, { scroll: true });
     },
     [closeSearch, router],
   );

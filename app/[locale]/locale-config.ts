@@ -19,77 +19,77 @@ export const routeToMessageLocale = localeOptions.reduce<Record<string, string>>
 
 export const homepageSlugByRouteLocale: Record<string, string> = {
   en: 'home',
-  'fr': 'accueil',
+  fr: 'accueil',
   'en-au': 'home',
 };
 
 export const travelAgencySoftwareSegmentByRouteLocale: Record<string, string> = {
   en: 'travel-agency-software',
-  'fr': 'logiciel-agence-voyage',
+  fr: 'logiciel-agence-voyage',
   'en-au': 'travel-agency-software',
 };
 
 export const aboutUsSegmentByRouteLocale: Record<string, string> = {
   en: 'about-us',
-  'fr': 'a-propos',
+  fr: 'a-propos',
   'en-au': 'about-us',
 };
 
 export const trainingSegmentByRouteLocale: Record<string, string> = {
   en: 'training',
-  'fr': 'formation',
+  fr: 'formation',
   'en-au': 'training',
 };
 
 export const demoByRouteLocale: Record<string, string> = {
   en: 'ask-for-a-demo',
-  'fr': 'demander-une-demo',
+  fr: 'demander-une-demo',
   'en-au': 'ask-for-a-demo',
 };
 
 export const thankYouByRouteLocale: Record<string, string> = {
   en: 'thank-you',
-  'fr': 'merci',
+  fr: 'merci',
   'en-au': 'thank-you',
 };
 
 export const privacyPolicySegmentByRouteLocale: Record<string, string> = {
   en: 'privacy-policy',
-  'fr': 'politique-de-confidentialite',
+  fr: 'politique-de-confidentialite',
   'en-au': 'privacy-policy',
 };
 
 export const newsSegmentByRouteLocale: Record<string, string> = {
   en: 'news',
-  'fr': 'nouvelles',
+  fr: 'nouvelles',
   'en-au': 'news',
 };
 
 export const newsCategorySegmentByRouteLocale: Record<string, string> = {
   en: 'category',
-  'fr': 'categorie',
+  fr: 'categorie',
   'en-au': 'category',
 };
 
 export const newsCategorySlugs: Record<string, Record<string, string>> = {
   accounting: {
     en: 'accounting',
-    'fr': 'comptabilite',
+    fr: 'comptabilite',
     'en-au': 'accounting',
   },
   'agency-owner': {
     en: 'agency-owner',
-    'fr': 'proprietaire-agence',
+    fr: 'proprietaire-agence',
     'en-au': 'agency-owner',
   },
   'it-manager': {
     en: 'it-manager',
-    'fr': 'gestionnaire-ti',
+    fr: 'gestionnaire-ti',
     'en-au': 'it-manager',
   },
   technology: {
     en: 'technology',
-    'fr': 'technologie',
+    fr: 'technologie',
     'en-au': 'technology',
   },
 };
@@ -97,57 +97,57 @@ export const newsCategorySlugs: Record<string, Record<string, string>> = {
 export const travelAgencySoftwareSlugs: Record<string, Record<string, string>> = {
   features: {
     en: 'features',
-    'fr': 'fonctionnalites',
+    fr: 'fonctionnalites',
     'en-au': 'features',
   },
   benefits: {
     en: 'benefits',
-    'fr': 'avantages',
+    fr: 'avantages',
     'en-au': 'benefits',
   },
   'back-office-travel-agency': {
     en: 'back-office-travel-agency',
-    'fr': 'back-office-agence-voyage',
+    fr: 'back-office-agence-voyage',
     'en-au': 'back-office-travel-agency',
   },
   'trip-details': {
     en: 'trip-details',
-    'fr': 'details-du-voyage',
+    fr: 'details-du-voyage',
     'en-au': 'trip-details',
   },
   'tour-management': {
     en: 'tour-management',
-    'fr': 'gestion-des-tours',
+    fr: 'gestion-des-tours',
     'en-au': 'tour-management',
   },
   'tour-online': {
     en: 'tour-online',
-    'fr': 'tour-online',
+    fr: 'tour-online',
     'en-au': 'tour-online',
   },
   'crm-tools': {
     en: 'crm-tools',
-    'fr': 'outils-crm',
+    fr: 'outils-crm',
     'en-au': 'crm-tools',
   },
   integrations: {
     en: 'integrations',
-    'fr': 'integrations',
+    fr: 'integrations',
     'en-au': 'integrations',
   },
   'dashboard-reports': {
     en: 'dashboard-reports',
-    'fr': 'tableau-de-bord-rapports',
+    fr: 'tableau-de-bord-rapports',
     'en-au': 'dashboard-reports',
   },
   customizations: {
     en: 'customizations',
-    'fr': 'customizations',
+    fr: 'customizations',
     'en-au': 'customizations',
   },
   sirev: {
     en: 'sirev',
-    'fr': 'sirev',
+    fr: 'sirev',
     'en-au': 'sirev',
   },
 };
@@ -155,17 +155,17 @@ export const travelAgencySoftwareSlugs: Record<string, Record<string, string>> =
 export const aboutUsSlugs: Record<string, Record<string, string>> = {
   partners: {
     en: 'partners',
-    'fr': 'partenaires',
+    fr: 'partenaires',
     'en-au': 'partners',
   },
   travelworks: {
     en: 'travelworks',
-    'fr': 'pc-voyages',
+    fr: 'pc-voyages',
     'en-au': 'travelworks',
   },
   careers: {
     en: 'careers',
-    'fr': 'carrieres',
+    fr: 'carrieres',
     'en-au': 'careers',
   },
 };
@@ -173,12 +173,12 @@ export const aboutUsSlugs: Record<string, Record<string, string>> = {
 export const trainingSlugs: Record<string, Record<string, string>> = {
   'training-platform': {
     en: 'training-platform',
-    'fr': 'plateforme-de-formation',
+    fr: 'plateforme-de-formation',
     'en-au': 'training-platform',
   },
   'knowledge-base': {
     en: 'knowledge-base',
-    'fr': 'base-de-connaissances',
+    fr: 'base-de-connaissances',
     'en-au': 'knowledge-base',
   },
 };

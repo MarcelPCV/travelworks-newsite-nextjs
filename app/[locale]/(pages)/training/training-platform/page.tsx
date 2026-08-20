@@ -23,7 +23,10 @@ export async function generateMetadata({
   params: Promise<{ locale: Locale }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale: routeToMessageLocale[locale] ?? 'en-us', namespace: 'metadata.training' });
+  const t = await getTranslations({
+    locale: routeToMessageLocale[locale] ?? 'en-us',
+    namespace: 'metadata.training',
+  });
 
   return {
     title: `${t('training-platform.title')}`,
@@ -34,7 +37,7 @@ export async function generateMetadata({
         en: '/training/training-platform',
         'en-ca': '/en-ca/training/training-platform',
         'en-au': '/en-au/training/training-platform',
-        'fr': '/fr/formation/plateforme-de-formation',
+        fr: '/fr/formation/plateforme-de-formation',
       },
       locale,
     ),

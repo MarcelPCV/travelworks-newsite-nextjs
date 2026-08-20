@@ -69,7 +69,7 @@ export default function LocationConfirmationBar() {
 
   const handleContinue = () => {
     setHasPendingSelection(false);
-    router.push(targetHref);
+    router.push(targetHref, { scroll: true });
   };
 
   if (!isVisible) {

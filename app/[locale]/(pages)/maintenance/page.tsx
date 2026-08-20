@@ -16,7 +16,10 @@ export async function generateMetadata({
   params: Promise<{ locale: Locale }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale: routeToMessageLocale[locale] ?? 'en-us', namespace: 'metadata.about-us' });
+  const t = await getTranslations({
+    locale: routeToMessageLocale[locale] ?? 'en-us',
+    namespace: 'metadata.about-us',
+  });
 
   return {
     title: t('the-company.title'),
@@ -27,7 +30,7 @@ export async function generateMetadata({
         en: '/about-us/travelworks',
         'en-ca': '/en-ca/about-us/travelworks',
         'en-au': '/en-au/about-us/travelworks',
-        'fr': '/fr/a-propos/pcvoyages',
+        fr: '/fr/a-propos/pcvoyages',
       },
       locale,
     ),
@@ -46,7 +49,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
   return (
     <main>
       <Breadcrumb items={breadcrumbItems} homeHref={homeHref} />
-      <div className='flex justify-center items-center mt-10'>
+      <div className="flex justify-center items-center mt-10">
         <div className="flex items-center justify-center bg-white rounded-full p-5 shadow-md border-b-2 border-orange-400">
           <Cog className="mx-auto h-20 w-20 text-orange-400" />
         </div>

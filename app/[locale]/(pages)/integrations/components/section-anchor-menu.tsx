@@ -108,9 +108,11 @@ export default function SectionAnchorMenu({ items }: SectionAnchorMenuProps) {
                   }`}
                   aria-current={isActive ? 'location' : undefined}
                 >
-									<div className="flex justify-center items-center">
-											<Icon className={`h-6 w-6 ${isActive ? 'text-orange-400' : 'text-brand-blue'}`} />
-									</div>
+                  <div className="flex justify-center items-center">
+                    <Icon
+                      className={`h-6 w-6 ${isActive ? 'text-orange-400' : 'text-brand-blue'}`}
+                    />
+                  </div>
                   <span className="whitespace-nowrap font-medium">{item.label}</span>
                 </button>
               </li>

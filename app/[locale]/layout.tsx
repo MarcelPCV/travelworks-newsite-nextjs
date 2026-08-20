@@ -7,12 +7,13 @@ import Navbar from './components/layout/navbar/navbar';
 import LocationConfirmationBar from './components/layout/location-confirmation-bar';
 import TopAnnouncementBar from './components/layout/top-announcement-bar';
 import ConsentManager from './components/layout/consent-manager';
+import ScrollOnRouteChange from './components/layout/scroll-on-route-change';
 import { routeToMessageLocale } from './locale-config';
 import Footer from './components/footer/index';
 import type { NewsItem } from './components/footer/news-section';
 import { getCategories, getNewsArticlePath } from '@/app/[locale]/(pages)/news/lib/categories';
 import { getAllArticles } from '@/app/[locale]/(pages)/news/lib/news';
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from '@vercel/analytics/next';
 
 export default async function LocaleLayout({
   children,
@@ -54,6 +55,7 @@ export default async function LocaleLayout({
   return (
     <IntlProviderWrapper locale={file} messages={messages}>
       <div className="min-h-screen bg-zinc-50">
+        <ScrollOnRouteChange />
         <LocationConfirmationBar />
         <TopAnnouncementBar />
         <Navbar />

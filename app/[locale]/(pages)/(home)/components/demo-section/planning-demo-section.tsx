@@ -37,11 +37,7 @@ function getThankYouPath(locale: string) {
   return `/${routeLocale}/${slug}`;
 }
 
-export default function PlanningDemoSection({
-  countries,
-  locale,
-  model,
-}: Props) {
+export default function PlanningDemoSection({ countries, locale, model }: Props) {
   const router = useRouter();
 
   const isFrench = locale.toLowerCase().startsWith('fr');
@@ -54,17 +50,12 @@ export default function PlanningDemoSection({
     : 'Your request was sent successfully.';
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [status, setStatus] = useState<
-    'idle' | 'success' | 'error'
-  >('idle');
+  const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
-  const [fieldErrors, setFieldErrors] =
-    useState<DemoRequestErrors>({});
+  const [fieldErrors, setFieldErrors] = useState<DemoRequestErrors>({});
 
-  async function handleSubmit(
-    event: React.FormEvent<HTMLFormElement>
-  ) {
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
     const form = event.currentTarget;
@@ -138,10 +129,7 @@ export default function PlanningDemoSection({
 
       // Handle API errors
       if (!res.ok || data.success === false) {
-        const message =
-          data.error ??
-          data.message ??
-          genericErrorMessage;
+        const message = data.error ?? data.message ?? genericErrorMessage;
 
         console.error('API error:', {
           status: res.status,
@@ -160,7 +148,7 @@ export default function PlanningDemoSection({
 
       setStatus('success');
 
-      router.push(getThankYouPath(locale));
+      router.push(getThankYouPath(locale), { scroll: true });
     } catch (error) {
       console.error('Demo form submission failed:', error);
 
@@ -188,63 +176,41 @@ export default function PlanningDemoSection({
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.95fr]">
           {/* Image */}
           <div className="hidden md:block">
-            {model.image.linkHref &&
-              model.image.placeholderLabel && (
-                <Image
-                  src={model.image.linkHref}
-                  alt={model.image.placeholderLabel}
-                  width={1000}
-                  height={800}
-                  className="h-full w-full object-cover"
-                />
-              )}
+            {model.image.linkHref && model.image.placeholderLabel && (
+              <Image
+                src={model.image.linkHref}
+                alt={model.image.placeholderLabel}
+                width={1000}
+                height={800}
+                className="h-full w-full object-cover"
+              />
+            )}
           </div>
 
           {/* Form */}
           <div className="p-6 sm:p-8 lg:p-10">
-            <form
-              onSubmit={handleSubmit}
-              noValidate
-              className="space-y-7"
-            >
+            <form onSubmit={handleSubmit} noValidate className="space-y-7">
               <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                 {model.form.fields.map((field) => {
-                  const error =
-                    fieldErrors[
-                      field.name as keyof DemoRequestErrors
-                    ];
+                  const error = fieldErrors[field.name as keyof DemoRequestErrors];
 
                   return (
-                    <label
-                      key={field.id}
-                      className="block"
-                    >
-                      <span className="text-[.9rem] font-medium">
-                        {field.label}
-                      </span>
+                    <label key={field.id} className="block">
+                      <span className="text-[.9rem] font-medium">{field.label}</span>
 
                       <input
                         name={field.name}
                         type={field.type ?? 'text'}
                         placeholder={field.placeholder}
                         aria-invalid={Boolean(error)}
-                        aria-describedby={
-                          error
-                            ? `${field.id}-error`
-                            : undefined
-                        }
+                        aria-describedby={error ? `${field.id}-error` : undefined}
                         className={`mt-2 w-full border-b bg-transparent py-2 text-[.9rem] outline-none ${
-                          error
-                            ? 'border-red-500'
-                            : 'border-neutral-border'
+                          error ? 'border-red-500' : 'border-neutral-border'
                         }`}
                       />
 
                       {error && (
-                        <p
-                          id={`${field.id}-error`}
-                          className="mt-1 text-[1.1rem] text-red-500"
-                        >
+                        <p id={`${field.id}-error`} className="mt-1 text-[1.1rem] text-red-500">
                           {error}
                         </p>
                       )}
@@ -256,43 +222,27 @@ export default function PlanningDemoSection({
               {/* Country */}
               <div>
                 <label className="block">
-                  <span className="text-[.9rem] font-medium">
-                    {model.form.country.label}
-                  </span>
+                  <span className="text-[.9rem] font-medium">{model.form.country.label}</span>
 
                   <select
                     name="country"
                     aria-invalid={Boolean(fieldErrors.country)}
-                    aria-describedby={
-                      fieldErrors.country
-                        ? 'country-error'
-                        : undefined
-                    }
+                    aria-describedby={fieldErrors.country ? 'country-error' : undefined}
                     className={`mt-2 w-full border-b bg-transparent py-2 text-[.9rem] outline-none ${
-                      fieldErrors.country
-                        ? 'border-red-500'
-                        : 'border-neutral-border'
+                      fieldErrors.country ? 'border-red-500' : 'border-neutral-border'
                     }`}
                   >
-                    <option value="">
-                      {model.form.country.placeholder}
-                    </option>
+                    <option value="">{model.form.country.placeholder}</option>
 
                     {countries.map((country) => (
-                      <option
-                        key={country.value}
-                        value={country.value}
-                      >
+                      <option key={country.value} value={country.value}>
                         {country.label}
                       </option>
                     ))}
                   </select>
 
                   {fieldErrors.country && (
-                    <p
-                      id="country-error"
-                      className="mt-1 text-[1.1rem] text-red-500"
-                    >
+                    <p id="country-error" className="mt-1 text-[1.1rem] text-red-500">
                       {fieldErrors.country}
                     </p>
                   )}
@@ -314,17 +264,10 @@ export default function PlanningDemoSection({
                 <ArrowRight className="h-5 w-5" />
               </button>
 
-              {status === 'success' && (
-                <p className="text-sm text-green-600">
-                  {successMessage}
-                </p>
-              )}
+              {status === 'success' && <p className="text-sm text-green-600">{successMessage}</p>}
 
               {status === 'error' && (
-                <p
-                  role="alert"
-                  className="text-sm text-red-600"
-                >
+                <p role="alert" className="text-sm text-red-600">
                   {errorMessage ?? genericErrorMessage}
                 </p>
               )}

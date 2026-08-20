@@ -49,9 +49,7 @@ export default function NewsTickerBar({
         <span className="h-4 w-px shrink-0 bg-gray-500" aria-hidden="true" />
 
         <div className="min-w-0 flex-1 truncate text-[13px] font-normal text-zinc-300 hover:underline">
-          <Link href={articleHref}>
-            {articleLabel}
-          </Link>
+          <Link href={articleHref}>{articleLabel}</Link>
         </div>
 
         <a

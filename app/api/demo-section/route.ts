@@ -82,16 +82,8 @@ export async function POST(request: Request) {
     localeForMessages = locale;
     const messages = getDemoMessages(locale);
 
-    const {
-      fullName,
-      email,
-      phone,
-      agencyName,
-      country,
-      formName,
-      pageUrl,
-      paidPromotion
-    } = body ?? {};
+    const { fullName, email, phone, agencyName, country, formName, pageUrl, paidPromotion } =
+      body ?? {};
 
     const safeFormName = isNonEmptyString(formName) ? formName : 'Footer Demo Request';
 
@@ -109,7 +101,8 @@ export async function POST(request: Request) {
     }
 
     const from = process.env.RESEND_FROM_EMAIL ?? 'Travelworks <noreply@travelworkssolution.com>';
-    const toEnv = process.env.RESEND_TO_EMAIL ?? 'sales@travelworkssolution.com, mandreazza@pcvoyages.com';
+    const toEnv =
+      process.env.RESEND_TO_EMAIL ?? 'sales@travelworkssolution.com, mandreazza@pcvoyages.com';
     const to = toEnv
       .split(',')
       .map((s) => s.trim())

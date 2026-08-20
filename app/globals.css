@@ -2,7 +2,7 @@
 @import '@c15t/nextjs/styles.css';
 
 html {
-  scroll-behavior: smooth; /* This makes the scrolling animated, not instant */
+  scroll-behavior: auto;
 }
 
 :root {

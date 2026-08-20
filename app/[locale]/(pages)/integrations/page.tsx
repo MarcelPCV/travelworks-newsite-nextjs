@@ -19,7 +19,10 @@ export async function generateMetadata({
   params: Promise<{ locale: Locale }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale: routeToMessageLocale[locale] ?? 'en-us', namespace: 'metadata.integrations' });
+  const t = await getTranslations({
+    locale: routeToMessageLocale[locale] ?? 'en-us',
+    namespace: 'metadata.integrations',
+  });
 
   return {
     title: t('title'),
@@ -30,7 +33,7 @@ export async function generateMetadata({
         en: '/integrations',
         'en-ca': '/en-ca/integrations',
         'en-au': '/en-au/integrations',
-        'fr': '/fr/integrations',
+        fr: '/fr/integrations',
       },
       locale,
     ),
@@ -353,9 +356,9 @@ export default async function PartnersPage({ params }: { params: Promise<{ local
   return (
     <main className="bg-gray-50">
       <Breadcrumb items={breadcrumbItems} homeHref={homeHref} />
-      <TitleHero 
-        title={locale === "fr" ? "Intégrations" : "Integrations"} 
-        imageSrc="/images/pages/integrations/integrations.webp" 
+      <TitleHero
+        title={locale === 'fr' ? 'Intégrations' : 'Integrations'}
+        imageSrc="/images/pages/integrations/integrations.webp"
       />
       {IntegrationsPageData.layout.map((layout, index) => {
         switch (layout.blockType) {

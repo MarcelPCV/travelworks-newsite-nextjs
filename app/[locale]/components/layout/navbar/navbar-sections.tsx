@@ -461,9 +461,7 @@ export function NavbarDesktopContent({
           <div className="grid min-h-54 grid-cols-[250px_1fr] overflow-hidden">
             <div className="border-r border-zinc-600 rounded-2xl p-8 bg-gradient-to-r from-transparent to-zinc-800 lg:mr-3 my-2">
               <p className="flex items-center h-full max-w-[120ch] text-xl font-regular leading-[1.4] tracking-tight text-white">
-                <span>
-                  {labels.productsPromoMessage}
-                </span>
+                <span>{labels.productsPromoMessage}</span>
               </p>
             </div>
             <div className="p-7">
@@ -585,7 +583,10 @@ export function NavbarMobileMenu({
                       className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium text-zinc-700 hover:bg-white"
                       onClick={onCloseMobileMenu}
                     >
-                      <Icon className="relative z-10 w-5.5 h-5.5 transition duration-150 text-white group-hover:text-zinc-700 rounded-full" aria-hidden="true" />
+                      <Icon
+                        className="relative z-10 w-5.5 h-5.5 transition duration-150 text-white group-hover:text-zinc-700 rounded-full"
+                        aria-hidden="true"
+                      />
                       {getProductLabel(linkKey)}
                     </Link>
                   );
@@ -620,7 +621,10 @@ export function NavbarMobileMenu({
                     className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium text-zinc-700 hover:bg-white"
                     onClick={onCloseMobileMenu}
                   >
-                    <Icon className="relative z-10 w-5.5 h-5.5 transition duration-150 text-white group-hover:text-zinc-700 rounded-full"aria-hidden="true" />
+                    <Icon
+                      className="relative z-10 w-5.5 h-5.5 transition duration-150 text-white group-hover:text-zinc-700 rounded-full"
+                      aria-hidden="true"
+                    />
                     {getAboutUsLabel(link)}
                   </Link>
                 );
@@ -654,7 +658,10 @@ export function NavbarMobileMenu({
                     className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium text-zinc-700 hover:bg-white"
                     onClick={onCloseMobileMenu}
                   >
-                    <Icon className="relative z-10 w-5.5 h-5.5 transition duration-150 text-white group-hover:text-zinc-700 rounded-full" aria-hidden="true" />
+                    <Icon
+                      className="relative z-10 w-5.5 h-5.5 transition duration-150 text-white group-hover:text-zinc-700 rounded-full"
+                      aria-hidden="true"
+                    />
                     {getTrainingLabel(link)}
                   </Link>
                 );

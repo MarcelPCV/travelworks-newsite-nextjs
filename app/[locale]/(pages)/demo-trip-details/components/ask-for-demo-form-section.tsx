@@ -77,7 +77,9 @@ export default function AskForDemoFormSection({ countries, locale }: Props) {
         body: JSON.stringify({
           ...result.data,
           locale,
-          formName: isFrench ? 'Page Demander une demo - Details du voyage' : 'Trip Details Demo Page',
+          formName: isFrench
+            ? 'Page Demander une demo - Details du voyage'
+            : 'Trip Details Demo Page',
           pageUrl: window.location.href,
           paidPromotion: isFrench ? 'Non' : 'No',
         }),
@@ -234,15 +236,11 @@ export default function AskForDemoFormSection({ countries, locale }: Props) {
             </div>
 
             {status === 'success' && (
-              <p className="text-sm text-green-600">
-                {t('form.feedback.success')}
-              </p>
+              <p className="text-sm text-green-600">{t('form.feedback.success')}</p>
             )}
 
             {status === 'error' && (
-              <p className="text-sm text-red-600">
-                {errorMessage ?? t('form.feedback.error')}
-              </p>
+              <p className="text-sm text-red-600">{errorMessage ?? t('form.feedback.error')}</p>
             )}
           </form>
         </div>

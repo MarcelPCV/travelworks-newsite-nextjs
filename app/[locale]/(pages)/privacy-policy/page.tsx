@@ -23,7 +23,7 @@ type PolicyContent = {
 };
 
 const policyContentByLocale: Record<string, PolicyContent> = {
-  'fr': {
+  fr: {
     title: 'Politique de confidentialite',
     metadataTitle: 'Politique de confidentialite - PcVoyages',
     metadataDescription:
@@ -450,7 +450,7 @@ export async function generateMetadata({
         en: '/privacy-policy',
         'en-ca': '/en-ca/privacy-policy',
         'en-au': '/en-au/privacy-policy',
-        'fr': '/fr/politique-de-confidentialite',
+        fr: '/fr/politique-de-confidentialite',
       },
       locale,
     ),

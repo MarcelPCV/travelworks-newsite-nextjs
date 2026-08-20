@@ -25,7 +25,10 @@ export async function generateMetadata({
   params: Promise<{ locale: Locale }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale: routeToMessageLocale[locale] ?? 'en-us', namespace: 'metadata.travel-agency-software' });
+  const t = await getTranslations({
+    locale: routeToMessageLocale[locale] ?? 'en-us',
+    namespace: 'metadata.travel-agency-software',
+  });
 
   return {
     title: `${t('tour-management.title')}`,
@@ -36,7 +39,7 @@ export async function generateMetadata({
         en: '/travel-agency-software/tour-management',
         'en-ca': '/en-ca/travel-agency-software/tour-management',
         'en-au': '/en-au/travel-agency-software/tour-management',
-        'fr': '/fr/logiciel-agence-voyage/gestion-des-tours',
+        fr: '/fr/logiciel-agence-voyage/gestion-des-tours',
       },
       locale,
     ),

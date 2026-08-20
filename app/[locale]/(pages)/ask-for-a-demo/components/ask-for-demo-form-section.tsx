@@ -11,10 +11,7 @@ import {
   demoRequestSchema,
   type DemoRequestErrors,
 } from '@/app/[locale]/(pages)/(home)/components/demo-section/zod-validations';
-import {
-  DEFAULT_ROUTE_LOCALE,
-  getThankYouSlug,
-} from '@/app/[locale]/locale-config';
+import { DEFAULT_ROUTE_LOCALE, getThankYouSlug } from '@/app/[locale]/locale-config';
 
 type Props = {
   countries: CountryOption[];
@@ -39,10 +36,7 @@ function getThankYouPath(locale: string) {
   return `/${routeLocale}/${slug}`;
 }
 
-export default function AskForDemoFormSection({
-  countries,
-  locale,
-}: Props) {
+export default function AskForDemoFormSection({ countries, locale }: Props) {
   const t = useTranslations('home.ask-for-a-demo');
 
   // Get the source from the URL
@@ -58,20 +52,13 @@ export default function AskForDemoFormSection({
 
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const [status, setStatus] = useState<
-    'idle' | 'success' | 'error'
-  >('idle');
+  const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  const [errorMessage, setErrorMessage] = useState<string | null>(
-    null
-  );
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
-  const [fieldErrors, setFieldErrors] =
-    useState<DemoRequestErrors>({});
+  const [fieldErrors, setFieldErrors] = useState<DemoRequestErrors>({});
 
-  async function handleSubmit(
-    event: React.FormEvent<HTMLFormElement>
-  ) {
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
     const form = event.currentTarget;
@@ -114,9 +101,7 @@ export default function AskForDemoFormSection({
 
           locale,
 
-          formName: isFrench
-            ? 'Page Demander une démo'
-            : 'Ask for a demo Page',
+          formName: isFrench ? 'Page Demander une démo' : 'Ask for a demo Page',
 
           pageUrl: window.location.href,
 
@@ -142,11 +127,7 @@ export default function AskForDemoFormSection({
       }
 
       if (!res.ok || data.success === false) {
-        setErrorMessage(
-          data.error ??
-            data.message ??
-            genericErrorMessage
-        );
+        setErrorMessage(data.error ?? data.message ?? genericErrorMessage);
 
         setStatus('error');
         return;
@@ -156,19 +137,15 @@ export default function AskForDemoFormSection({
 
       setStatus('success');
 
-      const redirectTarget =
-        data.redirectTo ?? getThankYouPath(locale);
+      const redirectTarget = data.redirectTo ?? getThankYouPath(locale);
 
       window.location.assign(redirectTarget);
     } catch (error) {
       const fallback = genericErrorMessage;
 
-      const detail =
-        error instanceof Error ? error.message : '';
+      const detail = error instanceof Error ? error.message : '';
 
-      setErrorMessage(
-        detail ? `${fallback} (${detail})` : fallback
-      );
+      setErrorMessage(detail ? `${fallback} (${detail})` : fallback);
 
       setStatus('error');
     } finally {
@@ -180,177 +157,108 @@ export default function AskForDemoFormSection({
     <section className="bg-[#ebebee] py-8 sm:py-10 lg:py-12">
       <div className="mx-auto grid w-full max-w-[1600px] grid-cols-1 gap-5 px-4 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:px-8">
         <div className="relative p-6 sm:min-h-120">
-          <Image
-            src="/images/pages/ask-for-demo/demo.webp"
-            alt=""
-            width={800}
-            height={400}
-          />
+          <Image src="/images/pages/ask-for-demo/demo.webp" alt="" width={800} height={400} />
         </div>
 
         <div className="relative z-10 rounded-xl bg-transparent">
-          <form
-            onSubmit={handleSubmit}
-            noValidate
-            className="mt-6 space-y-5"
-          >
+          <form onSubmit={handleSubmit} noValidate className="mt-6 space-y-5">
             <label className="block">
-              <span className="text-[1rem] text-neutral-dark">
-                {t('form.fields.fullName')}
-              </span>
+              <span className="text-[1rem] text-neutral-dark">{t('form.fields.fullName')}</span>
 
               <input
                 name="fullName"
                 type="text"
-                aria-describedby={
-                  fieldErrors.fullName
-                    ? 'fullName-error'
-                    : undefined
-                }
+                aria-describedby={fieldErrors.fullName ? 'fullName-error' : undefined}
                 className={`mt-2 w-full border-b bg-transparent py-2 text-[.9rem] text-slate-900 outline-none ${
-                  fieldErrors.fullName
-                    ? 'border-red-500'
-                    : 'border-neutral-border'
+                  fieldErrors.fullName ? 'border-red-500' : 'border-neutral-border'
                 }`}
               />
 
               {fieldErrors.fullName && (
-                <p
-                  id="fullName-error"
-                  className="mt-1 text-sm text-red-600"
-                >
+                <p id="fullName-error" className="mt-1 text-sm text-red-600">
                   {fieldErrors.fullName}
                 </p>
               )}
             </label>
 
             <label className="block">
-              <span className="text-[1rem] text-neutral-dark">
-                {t('form.fields.email')}
-              </span>
+              <span className="text-[1rem] text-neutral-dark">{t('form.fields.email')}</span>
 
               <input
                 name="email"
                 type="email"
-                aria-describedby={
-                  fieldErrors.email
-                    ? 'email-error'
-                    : undefined
-                }
+                aria-describedby={fieldErrors.email ? 'email-error' : undefined}
                 className={`mt-2 w-full border-b bg-transparent py-2 text-[.9rem] text-slate-900 outline-none ${
-                  fieldErrors.email
-                    ? 'border-red-500'
-                    : 'border-neutral-border'
+                  fieldErrors.email ? 'border-red-500' : 'border-neutral-border'
                 }`}
               />
 
               {fieldErrors.email && (
-                <p
-                  id="email-error"
-                  className="mt-1 text-sm text-red-600"
-                >
+                <p id="email-error" className="mt-1 text-sm text-red-600">
                   {fieldErrors.email}
                 </p>
               )}
             </label>
 
             <label className="block">
-              <span className="text-[1rem] text-neutral-dark">
-                {t('form.fields.phone')}
-              </span>
+              <span className="text-[1rem] text-neutral-dark">{t('form.fields.phone')}</span>
 
               <input
                 name="phone"
                 type="tel"
-                aria-describedby={
-                  fieldErrors.phone
-                    ? 'phone-error'
-                    : undefined
-                }
+                aria-describedby={fieldErrors.phone ? 'phone-error' : undefined}
                 className={`mt-2 w-full border-b bg-transparent py-2 text-[.9rem] text-slate-900 outline-none ${
-                  fieldErrors.phone
-                    ? 'border-red-500'
-                    : 'border-neutral-border'
+                  fieldErrors.phone ? 'border-red-500' : 'border-neutral-border'
                 }`}
               />
 
               {fieldErrors.phone && (
-                <p
-                  id="phone-error"
-                  className="mt-1 text-sm text-red-600"
-                >
+                <p id="phone-error" className="mt-1 text-sm text-red-600">
                   {fieldErrors.phone}
                 </p>
               )}
             </label>
 
             <label className="block">
-              <span className="text-[1rem] text-neutral-dark">
-                {t('form.fields.agencyName')}
-              </span>
+              <span className="text-[1rem] text-neutral-dark">{t('form.fields.agencyName')}</span>
 
               <input
                 name="agencyName"
                 type="text"
-                aria-describedby={
-                  fieldErrors.agencyName
-                    ? 'agencyName-error'
-                    : undefined
-                }
+                aria-describedby={fieldErrors.agencyName ? 'agencyName-error' : undefined}
                 className={`mt-2 w-full border-b bg-transparent py-2 text-[.9rem] text-slate-900 outline-none ${
-                  fieldErrors.agencyName
-                    ? 'border-red-500'
-                    : 'border-neutral-border'
+                  fieldErrors.agencyName ? 'border-red-500' : 'border-neutral-border'
                 }`}
               />
 
               {fieldErrors.agencyName && (
-                <p
-                  id="agencyName-error"
-                  className="mt-1 text-sm text-red-600"
-                >
+                <p id="agencyName-error" className="mt-1 text-sm text-red-600">
                   {fieldErrors.agencyName}
                 </p>
               )}
             </label>
 
             <label className="block">
-              <span className="text-[1rem] text-neutral-dark">
-                {t('form.fields.country')}
-              </span>
+              <span className="text-[1rem] text-neutral-dark">{t('form.fields.country')}</span>
 
               <select
                 name="country"
-                aria-describedby={
-                  fieldErrors.country
-                    ? 'country-error'
-                    : undefined
-                }
+                aria-describedby={fieldErrors.country ? 'country-error' : undefined}
                 className={`mt-2 w-full border-b bg-transparent py-2 text-[.9rem] text-slate-900 outline-none ${
-                  fieldErrors.country
-                    ? 'border-red-500'
-                    : 'border-neutral-border'
+                  fieldErrors.country ? 'border-red-500' : 'border-neutral-border'
                 }`}
               >
-                <option value="">
-                  {t('form.countryPlaceholder')}
-                </option>
+                <option value="">{t('form.countryPlaceholder')}</option>
 
                 {countries.map((country) => (
-                  <option
-                    key={country.value}
-                    value={country.value}
-                  >
+                  <option key={country.value} value={country.value}>
                     {country.label}
                   </option>
                 ))}
               </select>
 
               {fieldErrors.country && (
-                <p
-                  id="country-error"
-                  className="mt-1 text-sm text-red-600"
-                >
+                <p id="country-error" className="mt-1 text-sm text-red-600">
                   {fieldErrors.country}
                 </p>
               )}
@@ -362,24 +270,18 @@ export default function AskForDemoFormSection({
                 disabled={isSubmitting}
                 className="inline-flex items-center gap-2 rounded-md bg-brand-blue px-5 py-2 text-sm font-semibold uppercase tracking-wide text-white transition hover:bg-brand-navy disabled:cursor-not-allowed disabled:opacity-60"
               >
-                {isSubmitting
-                  ? t('form.submitPending')
-                  : t('form.submit')}
+                {isSubmitting ? t('form.submitPending') : t('form.submit')}
 
                 <ArrowRight className="h-4 w-4" />
               </button>
             </div>
 
             {status === 'success' && (
-              <p className="text-sm text-green-600">
-                {t('form.feedback.success')}
-              </p>
+              <p className="text-sm text-green-600">{t('form.feedback.success')}</p>
             )}
 
             {status === 'error' && (
-              <p className="text-sm text-red-600">
-                {errorMessage ?? t('form.feedback.error')}
-              </p>
+              <p className="text-sm text-red-600">{errorMessage ?? t('form.feedback.error')}</p>
             )}
           </form>
         </div>

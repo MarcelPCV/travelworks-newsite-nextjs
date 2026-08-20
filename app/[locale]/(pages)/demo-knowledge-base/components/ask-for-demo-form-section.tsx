@@ -6,10 +6,7 @@ import { useSearchParams } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 import type { CountryOption } from '@/app/lib/countries';
-import {
-  DEFAULT_ROUTE_LOCALE,
-  getThankYouSlug,
-} from '@/app/[locale]/locale-config';
+import { DEFAULT_ROUTE_LOCALE, getThankYouSlug } from '@/app/[locale]/locale-config';
 import {
   demoRequestSchema,
   type DemoRequestErrors,

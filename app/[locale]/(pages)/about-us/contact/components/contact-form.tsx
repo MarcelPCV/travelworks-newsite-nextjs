@@ -83,11 +83,13 @@ export default function ContactForm({ countries, locale }: Props) {
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...result.data, 
-          locale, 
+        body: JSON.stringify({
+          ...result.data,
+          locale,
           formName: isFrench ? 'Page Contact' : 'Contact Page',
           pageUrl: window.location.href,
-          paidPromotion: isFrench ? 'Non' : 'No' }),
+          paidPromotion: isFrench ? 'Non' : 'No',
+        }),
       });
 
       const text = await res.text();
@@ -113,7 +115,7 @@ export default function ContactForm({ countries, locale }: Props) {
 
       form.reset();
       setStatus('success');
-      router.push(data.redirectTo ?? getThankYouPath(locale));
+      router.push(data.redirectTo ?? getThankYouPath(locale), { scroll: true });
     } catch {
       setErrorMessage(genericErrorMessage);
       setStatus('error');
@@ -264,16 +266,9 @@ export default function ContactForm({ countries, locale }: Props) {
           </button>
         </div>
 
-        {status === 'success' && (
-          <p className="text-sm text-green-600">
-            {successMessage}
-          </p>
-        )}
+        {status === 'success' && <p className="text-sm text-green-600">{successMessage}</p>}
         {status === 'error' && (
-          <p
-            role="alert"
-            className="text-sm text-red-600"
-          >
+          <p role="alert" className="text-sm text-red-600">
             {errorMessage ?? genericErrorMessage}
           </p>
         )}
