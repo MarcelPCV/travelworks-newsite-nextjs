@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "pcvoyages.com"
+        }
+      ],
+      "destination": "https://travelworkssolution.com/fr",
+      "permanent": true
+    }
+  ]
+}
