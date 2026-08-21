@@ -33,7 +33,6 @@ export async function generateMetadata({
     alternates: getAlternates(
       {
         en: '/travel-agency-software/tour-online',
-        'en-ca': '/en-ca/travel-agency-software/tour-online',
         'en-au': '/en-au/travel-agency-software/tour-online',
         fr: '/fr/logiciel-agence-voyage/tour-online',
       },

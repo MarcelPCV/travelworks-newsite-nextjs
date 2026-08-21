@@ -33,7 +33,6 @@ export async function generateMetadata({
     alternates: getAlternates(
       {
         en: '/travel-agency-software/crm-tools',
-        'en-ca': '/en-ca/travel-agency-software/crm-tools',
         'en-au': '/en-au/travel-agency-software/crm-tools',
         fr: '/fr/logiciel-agence-voyage/outils-crm',
       },

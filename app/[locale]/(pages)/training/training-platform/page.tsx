@@ -35,7 +35,6 @@ export async function generateMetadata({
     alternates: getAlternates(
       {
         en: '/training/training-platform',
-        'en-ca': '/en-ca/training/training-platform',
         'en-au': '/en-au/training/training-platform',
         fr: '/fr/formation/plateforme-de-formation',
       },

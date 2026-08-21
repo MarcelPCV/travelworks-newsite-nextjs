@@ -26,7 +26,6 @@ export async function generateMetadata({
     alternates: getAlternates(
       {
         en: '/ask-for-a-demo',
-        'en-ca': '/en-ca/ask-for-a-demo',
         'en-au': '/en-au/ask-for-a-demo',
         fr: '/fr/demander-une-demo',
       },

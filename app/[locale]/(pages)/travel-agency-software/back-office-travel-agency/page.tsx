@@ -35,7 +35,6 @@ export async function generateMetadata({
     alternates: getAlternates(
       {
         en: '/travel-agency-software/back-office-travel-agency',
-        'en-ca': '/en-ca/travel-agency-software/back-office-travel-agency',
         'en-au': '/en-au/travel-agency-software/back-office-travel-agency',
         fr: '/fr/logiciel-agence-voyage/back-office-agence-de-voyage',
       },

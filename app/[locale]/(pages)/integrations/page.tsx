@@ -31,7 +31,6 @@ export async function generateMetadata({
     alternates: getAlternates(
       {
         en: '/integrations',
-        'en-ca': '/en-ca/integrations',
         'en-au': '/en-au/integrations',
         fr: '/fr/integrations',
       },

@@ -6,7 +6,6 @@ import { ArticleFooter } from '@/app/[locale]/(pages)/news/components/article-fo
 import { ArticleHeader } from '@/app/[locale]/(pages)/news/components/article-header';
 import { Breadcrumb } from '@/app/[locale]/(pages)/news/components/breadcrumb';
 import { CategorySidebar } from '@/app/[locale]/(pages)/news/components/category-sidebar';
-import { RelatedArticles } from '@/app/[locale]/(pages)/news/components/related-articles';
 import {
   generateBreadcrumbs,
   getAllArticles,

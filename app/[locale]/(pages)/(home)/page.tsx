@@ -41,7 +41,6 @@ export async function generateMetadata({
     alternates: getAlternates(
       {
         en: '/',
-        'en-ca': '/en-ca',
         'en-au': '/en-au',
         fr: '/fr',
       },

@@ -28,7 +28,6 @@ export async function generateMetadata({
     alternates: getAlternates(
       {
         en: '/about-us/partners',
-        'en-ca': '/en-ca/about-us/partners',
         'en-au': '/en-au/about-us/partners',
         fr: '/fr/a-propos/partenaires',
       },

@@ -27,7 +27,6 @@ export async function generateMetadata({
     alternates: getAlternates(
       {
         en: '/about-us/careers',
-        'en-ca': '/en-ca/about-us/careers',
         'en-au': '/en-au/about-us/careers',
         fr: '/fr/a-propos/carrieres',
       },

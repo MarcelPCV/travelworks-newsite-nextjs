@@ -29,7 +29,6 @@ export async function generateMetadata({
     alternates: getAlternates(
       {
         en: '/about-us/travelworks',
-        'en-ca': '/en-ca/about-us/travelworks',
         'en-au': '/en-au/about-us/travelworks',
         fr: '/fr/a-propos/pcvoyages',
       },

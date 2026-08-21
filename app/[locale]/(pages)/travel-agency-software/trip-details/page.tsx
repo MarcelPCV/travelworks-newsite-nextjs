@@ -29,7 +29,6 @@ export async function generateMetadata({
     alternates: getAlternates(
       {
         en: '/travel-agency-software/trip-details',
-        'en-ca': '/en-ca/travel-agency-software/trip-details',
         'en-au': '/en-au/travel-agency-software/trip-details',
         fr: '/fr/logiciel-agence-voyage/details-du-voyage',
       },

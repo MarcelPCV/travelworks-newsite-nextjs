@@ -26,7 +26,6 @@ export async function generateMetadata({
     alternates: getAlternates(
       {
         en: '/demo-knowledge-base',
-        'en-ca': '/en-ca/demo-knowledge-base',
         'en-au': '/en-au/demo-knowledge-base',
         fr: '/fr/demo-knowledge-base',
       },

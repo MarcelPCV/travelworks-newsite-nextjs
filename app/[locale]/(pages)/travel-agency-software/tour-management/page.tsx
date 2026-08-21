@@ -37,7 +37,6 @@ export async function generateMetadata({
     alternates: getAlternates(
       {
         en: '/travel-agency-software/tour-management',
-        'en-ca': '/en-ca/travel-agency-software/tour-management',
         'en-au': '/en-au/travel-agency-software/tour-management',
         fr: '/fr/logiciel-agence-voyage/gestion-des-tours',
       },

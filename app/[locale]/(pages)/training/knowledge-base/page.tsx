@@ -33,7 +33,6 @@ export async function generateMetadata({
     alternates: getAlternates(
       {
         en: '/training/knowledge-base',
-        'en-ca': '/en-ca/training/knowledge-base',
         'en-au': '/en-au/training/knowledge-base',
         fr: '/fr/formation/base-de-connaissances',
       },

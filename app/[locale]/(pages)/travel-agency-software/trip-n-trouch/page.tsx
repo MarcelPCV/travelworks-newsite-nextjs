@@ -30,7 +30,6 @@ export async function generateMetadata({
     alternates: getAlternates(
       {
         en: '/travel-agency-software/trip-n-touch',
-        'en-ca': '/en-ca/travel-agency-software/trip-n-touch',
         'en-au': '/en-au/travel-agency-software/trip-n-touch',
         fr: '/fr/logiciel-agence-voyage/trip-n-touch',
       },

@@ -26,7 +26,6 @@ export async function generateMetadata({
     alternates: getAlternates(
       {
         en: '/about-us/contact',
-        'en-ca': '/en-ca/about-us/contact',
         'en-au': '/en-au/about-us/contact',
         fr: '/fr/a-propos/contact',
       },

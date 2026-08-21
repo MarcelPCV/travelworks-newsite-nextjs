@@ -26,10 +26,9 @@ export async function generateMetadata({
     keywords: t('the-company.keywords'),
     alternates: getAlternates(
       {
-        en: '/about-us/travelworks',
-        'en-ca': '/en-ca/about-us/travelworks',
-        'en-au': '/en-au/about-us/travelworks',
-        fr: '/fr/a-propos/pcvoyages',
+        en: '/thank-you',
+        'en-au': '/en-au/thank-you',
+        fr: '/fr/merci',
       },
       locale,
     ),

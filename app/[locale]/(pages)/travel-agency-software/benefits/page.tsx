@@ -26,7 +26,6 @@ export async function generateMetadata({
     alternates: getAlternates(
       {
         en: '/travel-agency-software/benefits',
-        'en-ca': '/en-ca/travel-agency-software/benefits',
         'en-au': '/en-au/travel-agency-software/benefits',
         fr: '/fr/logiciel-agence-voyage/avantages',
       },

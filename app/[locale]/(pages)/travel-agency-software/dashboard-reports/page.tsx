@@ -31,7 +31,6 @@ export async function generateMetadata({
     alternates: getAlternates(
       {
         en: '/travel-agency-software/dashboard-reports',
-        'en-ca': '/en-ca/travel-agency-software/dashboard-reports',
         'en-au': '/en-au/travel-agency-software/dashboard-reports',
         fr: '/fr/logiciel-agence-voyage/tableau-de-bord-rapports',
       },

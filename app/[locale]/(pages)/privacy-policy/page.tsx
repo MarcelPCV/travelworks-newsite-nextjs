@@ -448,7 +448,6 @@ export async function generateMetadata({
     alternates: getAlternates(
       {
         en: '/privacy-policy',
-        'en-ca': '/en-ca/privacy-policy',
         'en-au': '/en-au/privacy-policy',
         fr: '/fr/politique-de-confidentialite',
       },

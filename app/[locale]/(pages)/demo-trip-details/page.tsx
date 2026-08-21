@@ -26,7 +26,6 @@ export async function generateMetadata({
     alternates: getAlternates(
       {
         en: '/demo-trip-details',
-        'en-ca': '/en-ca/demo-trip-details',
         'en-au': '/en-au/demo-trip-details',
         fr: '/fr/demo-trip-details',
       },

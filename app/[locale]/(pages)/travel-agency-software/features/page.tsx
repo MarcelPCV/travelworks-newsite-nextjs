@@ -38,7 +38,6 @@ export async function generateMetadata({
     alternates: getAlternates(
       {
         en: '/travel-agency-software/features',
-        'en-ca': '/en-ca/travel-agency-software/features',
         'en-au': '/en-au/travel-agency-software/features',
         fr: '/fr/logiciel-agence-voyage/fonctionnalites',
       },
