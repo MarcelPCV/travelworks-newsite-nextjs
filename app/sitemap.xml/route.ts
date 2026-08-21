@@ -33,7 +33,6 @@ const CANONICAL_STATIC_PATHS: string[] = [
   '/about-us/careers',
   '/about-us/clients',
   '/about-us/contact',
-  '/about-us/partners',
   '/about-us/travelworks',
   '/ask-for-a-demo',
   '/demo-knowledge-base',
