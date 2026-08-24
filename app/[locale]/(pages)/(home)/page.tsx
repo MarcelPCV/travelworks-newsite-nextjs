@@ -50,7 +50,7 @@ export async function generateMetadata({
 }
 
 export default async function Page({ params }: { params: Promise<{ locale: string }> }) {
-  const { locale: routeLocale } = await params;
+  const { locale: routeLocale, locale } = await params;
   const t = await getTranslations('pages.home');
   setRequestLocale(routeLocale);
   const messageLocale = routeToMessageLocale[routeLocale] ?? 'en-us';
@@ -63,10 +63,13 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
       href: getNewsArticlePath(routeLocale, article.slug),
     }));
   const newsListPath = getNewsListPath(routeLocale);
+  const isFrench = locale.toLowerCase().startsWith('fr');
 
   return (
     <main>
-      <h1 className="sr-only">{'Home'}</h1>
+      <h1 className="sr-only">
+        {isFrench ? 'PcVoyages: Solutions technologiques pour agences de voyages et voyagistes' : 'Travelworks: Technology Solutions for Travel Agencies and Tour Operators'}
+      </h1>
       {HomePage.layout.map((layout, index) => {
         switch (layout.blockType) {
           case 'BenefitsBanner':

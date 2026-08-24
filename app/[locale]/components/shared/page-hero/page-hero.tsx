@@ -42,7 +42,7 @@ export default function PageHero({
                 <div className="flex justify-center">
                   <Image
                     src={logoImageSrc}
-                    alt="Travelworks logo image"
+                    alt={title ? `${title}` : ''}
                     width={logoWidth}
                     height={Math.round(logoWidth * 0.45)}
                     className="h-auto"
