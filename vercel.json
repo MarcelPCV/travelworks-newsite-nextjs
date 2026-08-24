@@ -1,11 +1,22 @@
 {
   "redirects": [
     {
-      "source": "/:path*",
+      "source": "/(.*)",
       "has": [
         {
           "type": "host",
           "value": "pcvoyages.com"
+        }
+      ],
+      "destination": "https://travelworkssolution.com/fr",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.pcvoyages.com"
         }
       ],
       "destination": "https://travelworkssolution.com/fr",
