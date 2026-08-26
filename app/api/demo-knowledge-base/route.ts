@@ -50,8 +50,8 @@ function getDemoMessages(locale: string): DemoMessages {
       missingRequiredFields: 'Champs obligatoires manquants.',
       sendFailed: "Impossible d'envoyer la demande pour le moment.",
       serverError: 'Erreur serveur.',
-      subjectPrefix: 'Nouvelle demande de demo base de connaissances - PcVoyages',
-      heading: 'Nouvelle demande de demo base de connaissances - PcVoyages',
+      subjectPrefix: 'Nouvelle demande d\'accès à la base de connaissances - PcVoyages',
+      heading: 'Nouvelle demande d\'accès à la base de connaissances - PcVoyages',
       labels: {
         form: 'Formulaire',
         language: 'Langue',
@@ -70,8 +70,8 @@ function getDemoMessages(locale: string): DemoMessages {
     missingRequiredFields: 'Missing required fields.',
     sendFailed: 'Unable to send the request right now.',
     serverError: 'Server error.',
-    subjectPrefix: 'New Knowledge Base Demo Request - TravelWorks',
-    heading: 'New Knowledge Base Demo Request - TravelWorks',
+    subjectPrefix: 'New Knowledge Base Request Access - TravelWorks',
+    heading: 'New Knowledge Base Request Access - TravelWorks',
     labels: {
       form: 'Form',
       language: 'Language',
@@ -102,8 +102,8 @@ export async function POST(request: Request) {
     const safeFormName = isNonEmptyString(formName)
       ? formName
       : isFrenchLocale(locale)
-        ? 'Demande demo base de connaissances'
-        : 'Knowledge Base Demo Request';
+        ? 'Demande d\'accès à la base de connaissances'
+        : 'Knowledge Base Request Access';
 
     if (
       !isNonEmptyString(fullName) ||

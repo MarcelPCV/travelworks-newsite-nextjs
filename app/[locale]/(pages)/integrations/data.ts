@@ -96,12 +96,8 @@ export const partnerSectionsBase: Array<
         logo: '/images/pages/about-us/partners/FISERV-AIBMS.webp',
       },
       {
-        name: 'PaySafe',
-        logo: '/images/pages/about-us/partners/paysafe.webp',
-      },
-      {
-        name: 'NetBanx',
-        logo: '/images/pages/about-us/partners/netbanx.webp',
+        name: 'PaySafe - NetBanx',
+        logo: '/images/pages/about-us/partners/paysafe-netbanx.webp',
       },
       {
         name: 'Clover',
