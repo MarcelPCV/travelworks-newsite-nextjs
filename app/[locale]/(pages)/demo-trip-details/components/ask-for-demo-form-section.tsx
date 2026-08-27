@@ -78,8 +78,8 @@ export default function AskForDemoFormSection({ countries, locale }: Props) {
           ...result.data,
           locale,
           formName: isFrench
-            ? 'Page Demander une demo - Details du voyage'
-            : 'Trip Details Demo Page',
+            ? 'Demande d\'accès aux détails du voyage'
+            : 'Trip Details Request Access',
           pageUrl: window.location.href,
           paidPromotion: isFrench ? 'Non' : 'No',
         }),
@@ -129,7 +129,7 @@ export default function AskForDemoFormSection({ countries, locale }: Props) {
 
         <div className="relative z-10 rounded-xl bg-transparent">
           <h3 className="text-[1.8rem] font-medium uppercase text-brand-blue sm:text-[2rem]">
-            {t('form.heading')}
+            {isFrench ? 'Demander l\'accès' : 'Request access'}
           </h3>
 
           <form onSubmit={handleSubmit} noValidate className="mt-6 space-y-5">

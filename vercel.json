@@ -21,6 +21,50 @@
       ],
       "destination": "https://travelworkssolution.com/fr",
       "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.travelworkssolution.au"
+        }
+      ],
+      "destination": "https://travelworkssolution.com/en-au",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.travelworkssolution.au"
+        }
+      ],
+      "destination": "https://travelworkssolution.com/en-au",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.travelworkssolution.com.au"
+        }
+      ],
+      "destination": "https://travelworkssolution.com/en-au",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.travelworkssolution.com.au"
+        }
+      ],
+      "destination": "https://travelworkssolution.com/en-au",
+      "permanent": true
     }
   ]
 }

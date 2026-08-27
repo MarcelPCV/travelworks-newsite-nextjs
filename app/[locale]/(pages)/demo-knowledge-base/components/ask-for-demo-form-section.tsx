@@ -82,7 +82,7 @@ export default function AskForDemoFormSection({ countries, locale }: Props) {
         body: JSON.stringify({
           ...result.data,
           locale,
-          formName: t('form.formName'),
+          formName: isFrench ? 'Demande d\'accès à la base de connaissances' : 'Knowledge Base Request Access',
           pageUrl: window.location.href,
           paidPromotion: source ?? (isFrench ? 'Non' : 'No'),
         }),
