@@ -1986,19 +1986,19 @@
         "travelPortal": "Travel Portal"
       },
       "links": {
-        "features": "Fonctionnalites",
+        "features": "Fonctionnalités",
         "benefits": "Avantages",
-        "backofficeSystem": "Systeme Backoffice",
-        "tripDetails": "Details du voyage",
+        "backofficeSystem": "Système Backoffice",
+        "tripDetails": "Détails du voyage",
         "tourManagement": "Gestion des tours",
         "tourOnline": "TourOnline",
         "crmTools": "Outils CRM",
         "dashboardReports": "Rapports de tableau de bord",
-        "integrations": "Integrations",
+        "integrations": "Intégrations",
         "customizations": "Personnalisations",
         "sirev": "Sirev",
         "tryIt": "Essayer",
-        "askForDemo": "Demander une demo",
+        "askForDemo": "Demander une démo",
         "trip-n-trouch": "Trip'n Touch"
       }
     },

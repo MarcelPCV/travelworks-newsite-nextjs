@@ -2,7 +2,7 @@ import { expect, test } from '@playwright/test';
 
 test.describe('Navbar mega menu', () => {
   test('opens Products mega menu on click only', async ({ page }) => {
-    await page.goto('/en-us');
+    await page.goto('/');
 
     const productsTrigger = page.getByRole('button', { name: 'Products' });
     const megaMenu = page.locator('#products-mega-menu');
@@ -16,7 +16,7 @@ test.describe('Navbar mega menu', () => {
   });
 
   test('shows About Us and Training dropdown menus on click only', async ({ page }) => {
-    await page.goto('/en-us');
+    await page.goto('/');
 
     const aboutUsTrigger = page.getByRole('button', { name: 'About Us' });
     const trainingTrigger = page.getByRole('button', { name: 'Training' });
@@ -37,7 +37,7 @@ test.describe('Navbar mega menu', () => {
   });
 
   test('supports keyboard activation and escape close for products menu', async ({ page }) => {
-    await page.goto('/en-us');
+    await page.goto('/');
 
     const productsTrigger = page.getByRole('button', { name: 'Products' });
     const megaMenu = page.locator('#products-mega-menu');
@@ -52,7 +52,7 @@ test.describe('Navbar mega menu', () => {
   });
 
   test('keeps login and language dropdowns click-only', async ({ page }) => {
-    await page.goto('/en-us');
+    await page.goto('/');
 
     const loginTrigger = page.getByRole('button', { name: /log in/i }).first();
     const languageTrigger = page.getByRole('button', { name: /language/i });

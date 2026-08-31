@@ -29,7 +29,6 @@ export const revalidate = 3600;
 
 const CANONICAL_STATIC_PATHS: string[] = [
   '/',
-  '/about-us',
   '/about-us/careers',
   '/about-us/clients',
   '/about-us/contact',
@@ -42,10 +41,8 @@ const CANONICAL_STATIC_PATHS: string[] = [
   '/news',
   '/privacy-policy',
   '/thank-you',
-  '/training',
   '/training/knowledge-base',
   '/training/training-platform',
-  '/travel-agency-software',
   '/travel-agency-software/back-office-travel-agency',
   '/travel-agency-software/benefits',
   '/travel-agency-software/crm-tools',
