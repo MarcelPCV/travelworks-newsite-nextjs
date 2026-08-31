@@ -34,6 +34,7 @@ export default function ClientTrustSection({
                     alt={client.name}
                     title={client.name}
                     fill
+                    sizes="192px"
                     className="h-full w-full object-cover"
                   />
                 </div>

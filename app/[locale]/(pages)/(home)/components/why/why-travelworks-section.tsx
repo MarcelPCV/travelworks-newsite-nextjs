@@ -23,7 +23,7 @@ export default function WhyTravelworks({ title, items }: WhyTravelworksSection) 
       <div className="grid grid-cols-1 overflow-hidden rounded-xl sm:grid-cols-2 xl:grid-cols-4 border-b-4 border-amber-500">
         {items?.map((item, index) => (
           <Link href={item.blockLink ?? '#'} key={index} className="group flex min-h-104 flex-col">
-            <div className="relative h-60 overflow-hidden bg-[#ebe6dc]">
+            <div className="relative h-60 overflow-hidden bg-[#ebe6dc] transition-colors duration-300 group-hover:bg-amber-100">
               <Image
                 src={item.imageHref}
                 alt={item.imageAlt ?? ''}
@@ -36,7 +36,7 @@ export default function WhyTravelworks({ title, items }: WhyTravelworksSection) 
               />
             </div>
 
-            <div className="flex flex-1 flex-col bg-gray-800 px-6 py-12 text-neutral-canvas">
+            <div className="flex flex-1 flex-col bg-gray-800 px-6 py-12 text-neutral-canvas transition-colors duration-300 group-hover:bg-brand-blue">
               <div className="flex items-start justify-between gap-4">
                 <h3 className="text-[1.4rem] font-medium leading-tight">{item.title}</h3>
 

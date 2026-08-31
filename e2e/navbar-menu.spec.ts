@@ -4,7 +4,7 @@ test.describe('Navbar mega menu', () => {
   test('opens Products mega menu on click only', async ({ page }) => {
     await page.goto('/');
 
-    const productsTrigger = page.getByRole('button', { name: 'Products' });
+    const productsTrigger = page.getByRole('button', { name: 'The Solution' });
     const megaMenu = page.locator('#products-mega-menu');
 
     await productsTrigger.hover();
@@ -12,7 +12,7 @@ test.describe('Navbar mega menu', () => {
 
     await productsTrigger.click();
     await expect(megaMenu).toBeVisible();
-    await expect(page.getByRole('link', { name: 'Backoffice System' })).toBeVisible();
+    await expect(megaMenu.getByRole('menuitem', { name: 'Backoffice System' })).toBeVisible();
   });
 
   test('shows About Us and Training dropdown menus on click only', async ({ page }) => {
@@ -26,20 +26,24 @@ test.describe('Navbar mega menu', () => {
 
     await aboutUsTrigger.click();
     await expect(page.getByRole('menu', { name: 'About Us' })).toBeVisible();
-    await expect(page.getByRole('link', { name: 'Travelworks' })).toBeVisible();
+    await expect(
+      page.getByRole('menu', { name: 'About Us' }).getByRole('menuitem', { name: 'Travelworks' }),
+    ).toBeVisible();
 
     await trainingTrigger.hover();
     await expect(page.getByRole('menu', { name: 'Training' })).not.toBeVisible();
 
     await trainingTrigger.click();
     await expect(page.getByRole('menu', { name: 'Training' })).toBeVisible();
-    await expect(page.getByRole('link', { name: 'Knowledge Base' })).toBeVisible();
+    await expect(
+      page.getByRole('menu', { name: 'Training' }).getByRole('menuitem', { name: 'Knowledge Base' }),
+    ).toBeVisible();
   });
 
   test('supports keyboard activation and escape close for products menu', async ({ page }) => {
     await page.goto('/');
 
-    const productsTrigger = page.getByRole('button', { name: 'Products' });
+    const productsTrigger = page.getByRole('button', { name: 'The Solution' });
     const megaMenu = page.locator('#products-mega-menu');
 
     await productsTrigger.focus();
@@ -74,6 +78,6 @@ test.describe('Navbar mega menu', () => {
 
     await languageTrigger.click();
     await expect(languageTrigger).toHaveAttribute('aria-expanded', 'true');
-    await expect(page.locator('#language-menu')).toBeVisible();
+    await expect(page.getByRole('button', { name: 'Francais' })).toBeVisible();
   });
 });

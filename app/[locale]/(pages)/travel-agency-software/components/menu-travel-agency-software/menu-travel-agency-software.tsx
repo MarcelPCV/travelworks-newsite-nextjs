@@ -251,6 +251,7 @@ export default function MenuTravelAgencySoftware() {
                           : 'border-transparent text-zinc-200 hover:bg-zinc-700/50 hover:text-white'
                       }`}
                       aria-current={isActive ? 'page' : undefined}
+                      onClick={() => setIsMoreOpen(false)}
                     >
                       <span
                         className={`flex h-6 w-6 items-center justify-center rounded-full border bg-zinc-700/40 ${

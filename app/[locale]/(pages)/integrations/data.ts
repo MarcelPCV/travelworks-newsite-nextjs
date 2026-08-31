@@ -196,6 +196,10 @@ export const partnerSectionsBase: Array<
     titleKey: 'section-labels.other-partners',
     partners: [
       {
+        name: 'travelgenix',
+        logo: '/images/pages/about-us/partners/travelgenix.webp',
+      },
+      {
         name: 'SignatureAPI',
         logo: '/images/pages/about-us/partners/signatureApi.webp',
       },

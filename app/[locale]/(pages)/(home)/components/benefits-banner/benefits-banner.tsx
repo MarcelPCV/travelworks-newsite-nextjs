@@ -42,6 +42,8 @@ export default function BenefitsBannerSection({
                 alt={imageAlt ?? ''}
                 width={700}
                 height={400}
+                sizes="(max-width: 1024px) 90vw, 53vw"
+                style={{ width: '100%', height: 'auto' }}
                 className="h-auto w-full rounded-lg object-cover"
               />
             )}
