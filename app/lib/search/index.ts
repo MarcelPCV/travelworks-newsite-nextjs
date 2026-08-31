@@ -80,7 +80,6 @@ const PRODUCT_PAGE_DEFINITIONS = [
   { labelKey: 'tourManagement', canonicalSlug: 'tour-management' },
   { labelKey: 'tourOnline', canonicalSlug: 'tour-online' },
   { labelKey: 'crmTools', canonicalSlug: 'crm-tools' },
-  { labelKey: 'integrations', canonicalSlug: 'integrations' },
   { labelKey: 'dashboardReports', canonicalSlug: 'dashboard-reports' },
   { labelKey: 'customizations', canonicalSlug: 'customizations' },
   { labelKey: 'sirev', canonicalSlug: 'sirev' },
@@ -113,6 +112,11 @@ const PRODUCT_METADATA_KEY_OVERRIDES: Partial<
   crmTools: 'crm',
   'trip-n-trouch': 'trip-n-touch',
 };
+
+const INTEGRATIONS_PAGE_DEFINITION = {
+  labelKey: 'integrations',
+  canonicalSlug: 'integrations',
+} as const;
 
 const ABOUT_US_METADATA_KEY_BY_LABEL: Record<
   (typeof ABOUT_US_PAGE_DEFINITIONS)[number]['labelKey'],
@@ -527,6 +531,41 @@ function buildPageIndexItems(
       ]),
     );
   }
+
+  const integrationsSlug =
+    travelAgencySoftwareSlugs[INTEGRATIONS_PAGE_DEFINITION.canonicalSlug]?.[routeLocale] ??
+    INTEGRATIONS_PAGE_DEFINITION.canonicalSlug;
+  const integrationsTitle =
+    productLinks[INTEGRATIONS_PAGE_DEFINITION.labelKey] ?? INTEGRATIONS_PAGE_DEFINITION.labelKey;
+  const integrationsMetadataTitle = getCleanString(
+    getNestedValue(messages.metadata, ['travel-agency-software', integrationsSlug, 'title']),
+  );
+  const integrationsMetadataDescription = getCleanString(
+    getNestedValue(messages.metadata, ['travel-agency-software', integrationsSlug, 'description']),
+  );
+  const integrationsPageBodyStrings = getSectionStrings(messages, [
+    'travel-agency-software',
+    integrationsSlug,
+  ]);
+  const integrationsDescription =
+    integrationsMetadataDescription ??
+    integrationsPageBodyStrings.find((item) => item.length > 20) ??
+    `${integrationsTitle} - ${topProductsLabel}`;
+
+  addPage(
+    items,
+    'page-product-integrations',
+    withLocalePrefix(`/${integrationsSlug}`, routeLocale),
+    integrationsTitle,
+    integrationsDescription,
+    toSearchKeywords([
+      topProductsLabel,
+      integrationsTitle,
+      integrationsMetadataTitle ?? '',
+      integrationsMetadataDescription ?? '',
+      ...integrationsPageBodyStrings,
+    ]),
+  );
 
   const aboutUsSegment = getAboutUsSegment(routeLocale);
   const aboutUsLabels = nav.aboutUs ?? {};
