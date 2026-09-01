@@ -8,6 +8,20 @@ type RedirectCase = {
 const redirects: RedirectCase[] = [
   { source: '/au', destination: '/en-au' },
   { source: '/home', destination: '/' },
+  { source: '/clients', destination: '/about-us/clients' },
+  { source: '/tour-online', destination: '/travel-agency-software/tour-online' },
+  { source: '/careers', destination: '/about-us/careers' },
+  { source: '/crm-tools', destination: '/travel-agency-software/crm-tools' },
+  { source: '/benefits', destination: '/travel-agency-software/benefits' },
+  {
+    source: '/dashboard-reports-for-travel-agency',
+    destination: '/travel-agency-software/dashboard-reports',
+  },
+  {
+    source:
+      '/news/accountant/group-travel-management-how-can-travelworks-software-help-you-maximize-billing',
+    destination: '/',
+  },
   { source: '/fr/accueil', destination: '/fr' },
   { source: '/fr/home', destination: '/fr' },
   { source: '/en-au/home', destination: '/en-au' },

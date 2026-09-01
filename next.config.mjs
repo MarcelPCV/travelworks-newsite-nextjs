@@ -3,6 +3,7 @@ import createNextIntlPlugin from 'next-intl/plugin';
 const withNextIntl = createNextIntlPlugin('./i18n/request.ts');
 
 const archivedEnglishNewsSlugs = [
+  'accountant/group-travel-management-how-can-travelworks-software-help-you-maximize-billing',
   'travelworks-launches-accounting-software',
   'agency-growth-benchmarks-for-2026',
   'automation-qa-checklist-for-travel-operations',
@@ -24,6 +25,36 @@ const nextConfig = {
       {
         source: '/home',
         destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/clients',
+        destination: '/about-us/clients',
+        permanent: true,
+      },
+      {
+        source: '/tour-online',
+        destination: '/travel-agency-software/tour-online',
+        permanent: true,
+      },
+      {
+        source: '/careers',
+        destination: '/about-us/careers',
+        permanent: true,
+      },
+      {
+        source: '/crm-tools',
+        destination: '/travel-agency-software/crm-tools',
+        permanent: true,
+      },
+      {
+        source: '/benefits',
+        destination: '/travel-agency-software/benefits',
+        permanent: true,
+      },
+      {
+        source: '/dashboard-reports-for-travel-agency',
+        destination: '/travel-agency-software/dashboard-reports',
         permanent: true,
       },
       {
