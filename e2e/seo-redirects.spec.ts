@@ -10,6 +10,25 @@ const redirects: RedirectCase[] = [
   { source: '/home', destination: '/' },
   { source: '/clients', destination: '/about-us/clients' },
   { source: '/tour-online', destination: '/travel-agency-software/tour-online' },
+  { source: '/tour-management', destination: '/travel-agency-software/tour-management' },
+  {
+    source:
+      '/news/technology/travelworks-launches-trip-n-touch-mobile-application-that-will-be-highly-appreciated-by-travelers',
+    destination: '/',
+  },
+  {
+    source:
+      '/news/accountant/accounting-for-travel-agencies-5-reasons-to-use-a-software-tailored-for-the-travel-industry',
+    destination: '/',
+  },
+  {
+    source: '/news/accountant/good-accounting-practices-for-new-travel-agency',
+    destination: '/',
+  },
+  {
+    source: '/news/featured/new-itinerary-builder-seamlessly-create-a-itinerary',
+    destination: '/',
+  },
   { source: '/careers', destination: '/about-us/careers' },
   { source: '/crm-tools', destination: '/travel-agency-software/crm-tools' },
   { source: '/benefits', destination: '/travel-agency-software/benefits' },

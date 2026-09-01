@@ -38,6 +38,33 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/tour-management',
+        destination: '/travel-agency-software/tour-management',
+        permanent: true,
+      },
+      {
+        source:
+          '/news/technology/travelworks-launches-trip-n-touch-mobile-application-that-will-be-highly-appreciated-by-travelers',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source:
+          '/news/accountant/accounting-for-travel-agencies-5-reasons-to-use-a-software-tailored-for-the-travel-industry',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/news/accountant/good-accounting-practices-for-new-travel-agency',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/news/featured/new-itinerary-builder-seamlessly-create-a-itinerary',
+        destination: '/',
+        permanent: true,
+      },
+      {
         source: '/careers',
         destination: '/about-us/careers',
         permanent: true,
