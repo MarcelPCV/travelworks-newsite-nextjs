@@ -15,7 +15,7 @@ export default async function PrivacyPolicyPage({ params }: { params: Promise<{ 
   const isFrench = locale === 'fr';
   const options = [
     {
-      label: isFrench ? 'PcVoyages' : 'TravelWorks',
+      label: isFrench ? 'PcVoyages - Politique de Confidentialité' : 'TravelWorks - Privacy Policy',
       href: getPrivacyPath(locale, 'travelworks'),
     },
     {
