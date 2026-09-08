@@ -18,9 +18,9 @@ type PolicyContent = { title: string; metadataTitle: string; metadataDescription
 
 const policyContentByLocale: Record<string, PolicyContent> = {
   "default": {
-    "title": "Privacy Policy - Trip'n Touch",
-    "metadataTitle": "Privacy Policy - Trip n'touch",
-    "metadataDescription": "Trip n'touch Privacy Policy.",
+    "title": "Trip'n Touch - Privacy Policy",
+    "metadataTitle": "Trip'n Touch - Privacy Policy",
+    "metadataDescription": "Trip'n Touch Privacy Policy.",
     "lastUpdatedLabel": "Last updated:",
     "lastUpdatedDate": "April 24, 2024",
     "sections": [
@@ -1069,9 +1069,9 @@ const policyContentByLocale: Record<string, PolicyContent> = {
     ]
   },
   "fr": {
-    "title": "Politique de confidentialité - Trip'n Touch",
-    "metadataTitle": "Politique de confidentialité - Trip n'touch",
-    "metadataDescription": "Politique de confidentialité de Trip n'touch.",
+    "title": "Trip'n Touch - Politique de confidentialité",
+    "metadataTitle": "Trip'n Touch - Politique de confidentialité",
+    "metadataDescription": "Politique de confidentialité de Trip'n Touch.",
     "lastUpdatedLabel": "Derniere mise a jour :",
     "lastUpdatedDate": "24 avril 2024",
     "sections": [

@@ -1030,16 +1030,16 @@ const cookiePolicySections = {
 
 const cookiePolicyContentByLocale: Record<string, CookiePolicyContent> = {
   default: {
-    title: "Cookie Policy - Trip n'touch",
-    description: "Trip n'touch Cookie Policy.",
+    title: "Trip'n Touch - Cookie Policy",
+    description: "Trip'n Touch Cookie Policy.",
     lastUpdatedLabel: 'Last updated:',
     lastUpdatedDate: 'April 24, 2024',
     privacyPolicyLabel: 'Show the complete Privacy Policy',
     sections: cookiePolicySections.default,
   },
   fr: {
-    title: "Politique relative aux cookies - Trip n'touch",
-    description: "Politique relative aux cookies de Trip n'touch.",
+    title: "Trip'n Touch - Politique relative aux cookies",
+    description: "Politique relative aux cookies de Trip'n Touch.",
     lastUpdatedLabel: 'Dernière mise à jour :',
     lastUpdatedDate: '24 avril 2024',
     privacyPolicyLabel: 'Afficher la politique de confidentialité complète',
