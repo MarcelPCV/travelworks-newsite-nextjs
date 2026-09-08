@@ -5,6 +5,7 @@ import { useLocale } from 'next-intl';
 
 export function Breadcrumb({ items, homeHref }: { items: BreadcrumbItem[]; homeHref: string }) {
   const locale = useLocale();
+  const isFrench = locale.toLowerCase().startsWith('fr');
   return (
     <section
       className="mx-auto mt-3 mb-3 w-full max-w-[1600px] rounded-md border border-zinc-300 bg-white px-4 py-2"
@@ -15,7 +16,7 @@ export function Breadcrumb({ items, homeHref }: { items: BreadcrumbItem[]; homeH
           <li>
             <Link className="flex items-center hover:text-slate-700" href={homeHref}>
               <Home className="mr-2 h-5 w-5 text-amber-600" />
-              {locale === 'fr' ? 'Accueil' : 'Home'}
+              {isFrench ? 'Accueil' : 'Home'}
             </Link>
           </li>
 

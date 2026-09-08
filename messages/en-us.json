@@ -1787,6 +1787,27 @@
       "block-type-text-section": {
         "description": "<p><strong>Thank you for reaching out.</strong></p><p>We have received your message and appreciate your interest. A member of our team will be in touch with you as soon as possible.</p>"
       }
+    },
+    "privacy-policy-travelworks": {
+      "breadcrumb": {
+        "privacy-policy-label": "Privacy Policy",
+        "privacy-policy-link": "/privacy-policy",
+        "privacy-policy-label2": "Travelworks Application and Website"
+      }
+    },
+    "privacy-policy-tripntouch": {
+      "breadcrumb": {
+        "privacy-policy-label": "Privacy Policy",
+        "privacy-policy-link": "/privacy-policy",
+        "privacy-policy-label2": "Trip'n Touch Application"
+      }
+    },
+    "cookies-tripntouch": {
+      "breadcrumb": {
+        "privacy-policy-label": "Privacy Policy",
+        "privacy-policy-link": "/privacy-policy",
+        "privacy-policy-label2": "Trip'n Touch - Cookies"
+      }
     }
   },
   "footer": {
@@ -1946,11 +1967,11 @@
       "knowledgeBase": "Knowledge Base"
     },
     "cta": {
-      "askForDemo": "ASK FOR A DEMO",
-      "logIn": "LOG IN",
+      "askForDemo": "Ask for a Demo",
+      "logIn": "Log In",
       "logInOptions": {
-        "travelworks": "Travelworks",
-        "travelworksLegacy": "Travelworks Classic Version",
+        "travelworks": "TravelWorks",
+        "travelworksLegacy": "TravelWorks Classic Version",
         "support": "Support",
         "trainingPlatform": "Training Platform",
         "knowledgeBase": "Knowledge Base"

@@ -1796,6 +1796,27 @@
       "block-type-text-section": {
         "description": "<p><strong>Merci de nous avoir contactés.</strong></p><p>Nous avons bien reçu votre message et vous remercions de votre intérêt. Un membre de notre équipe communiquera avec vous dans les plus brefs délais.</p>"
       }
+    },
+    "privacy-policy-travelworks": {
+      "breadcrumb": {
+        "privacy-policy-label": "Politique de confidentialité",
+        "privacy-policy-link": "/fr/politique-de-confidentialite",
+        "privacy-policy-label2": "Application et Site Web PcVoyages"
+      }
+    },
+    "privacy-policy-tripntouch": {
+      "breadcrumb": {
+        "privacy-policy-label": "Politique de confidentialité",
+        "privacy-policy-link": "/fr/politique-de-confidentialite",
+        "privacy-policy-label2": "Application Trip'n Touch"
+      }
+    },
+    "cookies-tripntouch": {
+      "breadcrumb": {
+        "privacy-policy-label": "Politique de confidentialité",
+        "privacy-policy-link": "/fr/politique-de-confidentialite",
+        "privacy-policy-label2": "Trip'n Touch - Cookies"
+      }
     }
   },
   "footer": {
@@ -1808,7 +1829,7 @@
     "links": {
       "privacy": {
         "heading": "Confidentialite",
-        "policyLabel": "Politique de confidentialite"
+        "policyLabel": "Politique de confidentialité"
       }
     }
   },
@@ -2014,11 +2035,11 @@
       "knowledgeBase": "Base de connaissances"
     },
     "cta": {
-      "askForDemo": "DEMANDER UNE DEMO",
-      "logIn": "SE CONNECTER",
+      "askForDemo": "Demander une démo",
+      "logIn": "Se connecter",
       "logInOptions": {
-        "travelworks": "PCVoyages",
-        "travelworksLegacy": "PCVoyages Version Classique",
+        "travelworks": "PcVoyages",
+        "travelworksLegacy": "PcVoyages Version Classique",
         "support": "Support",
         "trainingPlatform": "Plateforme de formation",
         "knowledgeBase": "Base de connaissances"

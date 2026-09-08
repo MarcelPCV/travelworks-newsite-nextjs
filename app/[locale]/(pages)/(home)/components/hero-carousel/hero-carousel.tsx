@@ -97,7 +97,7 @@ export default function HeroCarousel({
                         alt={stripHtml(slide.titlePlain ?? '')}
                         fill
                         priority={index === 0}
-                        sizes="100vw"
+                        sizes="(max-width: 1600px) 100vw, 1600px"
                         className="object-cover"
                       />
                     </div>
