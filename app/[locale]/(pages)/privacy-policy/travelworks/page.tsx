@@ -476,7 +476,7 @@ export default async function PrivacyPolicyPage({
 
   return (
     <main>
-      <section className="mx-auto max-w-5xl px-4 py-5 sm:px-6 lg:px-8">
+      <section className="mx-auto max-w-5xl select-none px-4 py-5 sm:px-6 lg:px-8">
         <Breadcrumb items={breadcrumbItems} homeHref={homeHref} />
         <h1 className="mt-10 mb-6 text-3xl font-bold text-brand-blue uppercase">
           {content.title}

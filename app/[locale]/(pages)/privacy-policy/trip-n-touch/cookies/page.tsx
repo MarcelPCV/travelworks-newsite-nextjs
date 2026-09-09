@@ -1090,7 +1090,7 @@ export default async function TripDetailsCookiePolicyPage({ params }: { params: 
   const homeHref = locale === 'en' ? '/' : '/' + locale;
   const breadcrumbItems: BreadcrumbItem[] = [{ label: t('breadcrumb.privacy-policy-label'), href: t('breadcrumb.privacy-policy-link') }, { label: t('breadcrumb.privacy-policy-label2'), href: '#' }];
 
-  return <main><section className="mx-auto max-w-5xl px-4 py-5 sm:px-6 lg:px-8">
+  return <main><section className="mx-auto max-w-5xl select-none px-4 py-5 sm:px-6 lg:px-8">
     <Breadcrumb items={breadcrumbItems} homeHref={homeHref} />
     <h1 className="mt-10 mb-6 text-3xl font-bold uppercase text-brand-blue">{content.title}</h1>
     <div className="mb-8 flex items-center rounded-md border-2 border-gray-200 bg-gray-100 px-5 py-3 text-sm font-semibold text-slate-600"><PenLine className="h-6 w-6 text-brand-blue" aria-hidden="true" /><span className="ml-2 uppercase text-brand-blue">{content.lastUpdatedLabel}</span><span className="ml-2">{content.lastUpdatedDate}</span></div>
