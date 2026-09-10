@@ -141,8 +141,9 @@ export async function POST(request: Request) {
     }
 
     const from = process.env.RESEND_FROM_EMAIL ?? 'Travelworks <noreply@travelworkssolution.com>';
-    const toEnv =
-      process.env.RESEND_TO_EMAIL ?? 'sales@travelworkssolution.com, mandreazza@pcvoyages.com';
+    const toEnv =isFrenchLocale(locale)
+      ? process.env.RESEND_TO_EMAIL_CONTACT_FR ?? 'info@pcvoyages.com, mandreazza@pcvoyages.com'
+      : process.env.RESEND_TO_EMAIL_CONTACT_EN ?? 'info@travelworkssolution.com, mandreazza@pcvoyages.com';
     const to = toEnv
       .split(',')
       .map((s) => s.trim())
