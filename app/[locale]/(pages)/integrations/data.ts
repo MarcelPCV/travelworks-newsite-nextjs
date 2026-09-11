@@ -34,10 +34,6 @@ export const partnerSectionsBase: Array<
     titleKey: 'section-labels.booking-tools',
     partners: [
       {
-        name: 'Grasp',
-        logo: '/images/pages/about-us/partners/grasp.webp',
-      },
-      {
         name: 'Travelgenix',
         logo: '/images/pages/about-us/partners/travelgenix.webp',
       },
@@ -203,6 +199,10 @@ export const partnerSectionsBase: Array<
     id: 'other-partners',
     titleKey: 'section-labels.other-partners',
     partners: [
+      {
+        name: 'Grasp',
+        logo: '/images/pages/about-us/partners/grasp.webp',
+      },
       {
         name: 'SignatureAPI',
         logo: '/images/pages/about-us/partners/signatureApi.webp',
