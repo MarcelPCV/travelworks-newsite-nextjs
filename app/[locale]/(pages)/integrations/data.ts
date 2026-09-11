@@ -1,5 +1,5 @@
 import { PageHeroModel } from '@/app/[locale]/components/shared/page-hero/type';
-import { IntegrationSectionId, PartnersSectionModel, SectionAnchorItem } from './components/types';
+import { IntegrationSectionId, PartnersSectionModel } from './components/types';
 
 export type Layout = PageHeroModel;
 
@@ -33,6 +33,14 @@ export const partnerSectionsBase: Array<
     id: 'booking-tools',
     titleKey: 'section-labels.booking-tools',
     partners: [
+      {
+        name: 'Grasp',
+        logo: '/images/pages/about-us/partners/grasp.webp',
+      },
+      {
+        name: 'Travelgenix',
+        logo: '/images/pages/about-us/partners/travelgenix.webp',
+      },
       {
         name: 'Expedia TAAP',
         logo: '/images/pages/about-us/partners/expedia-taap2.webp',
@@ -82,8 +90,8 @@ export const partnerSectionsBase: Array<
         logo: '/images/pages/about-us/partners/sirev.webp',
       },
       {
-        name: 'Express Travel Group',
-        logo: '/images/pages/about-us/partners/expressTravelGroup.webp',
+        name: 'Quiktravel',
+        logo: '/images/pages/about-us/partners/quiktravel.webp',
       },
     ],
   },
@@ -195,10 +203,6 @@ export const partnerSectionsBase: Array<
     id: 'other-partners',
     titleKey: 'section-labels.other-partners',
     partners: [
-      {
-        name: 'travelgenix',
-        logo: '/images/pages/about-us/partners/travelgenix.webp',
-      },
       {
         name: 'SignatureAPI',
         logo: '/images/pages/about-us/partners/signatureApi.webp',
