@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Geist_Mono, Poppins } from 'next/font/google';
+import Script from 'next/script';
 import './globals.css';
 import { getSiteUrl } from './lib/get-site-url';
 
@@ -55,7 +56,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${poppins.variable} ${geistMono.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col font-sans">{children}</body>
+      <body className="min-h-full flex flex-col font-sans">
+        {children}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-R82T2VWRR5"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-R82T2VWRR5');`}
+        </Script>
+      </body>
     </html>
   );
 }
