@@ -1314,7 +1314,7 @@
           "description": "Trouvez toutes les ressources dont vous avez besoin pour maîtriser TravelWorks et tirer le meilleur parti de notre logiciel.",
           "mobileTopImageSrc": "/images/pages/training/knowledge-base/fr/background-knowledge-base.webp",
           "desktopMainImageSrc": "/images/pages/training/knowledge-base/fr/background-knowledge-base.webp",
-          "logoImageSrc": "/images/pages/training/knowledge-base/new.svg",
+          "logoImageSrc": "/images/pages/training/knowledge-base/fr/nouveau.svg",
           "ctaImageSrc": ""
         },
         "block-type-image-block": {
@@ -1420,7 +1420,7 @@
           "description": "Exploitez tout le potentiel de TravelWorks",
           "mobileTopImageSrc": "/images/pages/training/training-platform/fr/background-training-platform.webp",
           "desktopMainImageSrc": "/images/pages/training/training-platform/background-training-platform.webp",
-          "logoImageSrc": "/images/pages/training/training-platform/new.svg",
+          "logoImageSrc": "/images/pages/training/training-platform/fr/nouveau.svg",
           "ctaImageSrc": ""
         },
         "block-type-image-block": {

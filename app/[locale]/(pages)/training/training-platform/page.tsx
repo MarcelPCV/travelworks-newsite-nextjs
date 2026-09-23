@@ -47,6 +47,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations('pages.training.training-platform');
+  const isFrench = locale.toLowerCase().startsWith('fr');
 
   const homeHref = locale === 'en' ? '/' : `/${locale}`;
   const breadcrumbItems: BreadcrumbItem[] = [
@@ -91,7 +92,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
                   layout.desktopMainImageSrc ? t(layout.desktopMainImageSrc) : ''
                 }
                 logoImageSrc={layout.logoImageSrc ? t(layout.logoImageSrc) : ''}
-                logoWidth={70}
+                logoWidth={ isFrench ? 105 : 70 }
                 ctaImageSrc={layout.ctaImageSrc ? t(layout.ctaImageSrc) : ''}
               />
             );

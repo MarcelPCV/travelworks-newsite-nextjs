@@ -45,7 +45,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations('pages.training.knowledge-base');
-
+  const isFrench = locale.toLowerCase().startsWith('fr');
   const homeHref = locale === 'en' ? '/' : `/${locale}`;
   const breadcrumbItems: BreadcrumbItem[] = [
     { label: t('breadcrumb.knowledge-base-label'), href: '#' },
@@ -70,7 +70,9 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
                   layout.title
                     ? t.rich(layout.title as string, {
                         strong: (chunks) => (
-                          <strong className="font-semibold text-brand-blue">{chunks}</strong>
+                          <strong className="font-semibold text-brand-blue">
+                            {chunks}
+                          </strong>
                         ),
                       })
                     : ''
@@ -79,7 +81,9 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
                   layout.description
                     ? t.rich(layout.description as string, {
                         strong: (chunks) => (
-                          <strong className="font-semibold text-brand-blue">{chunks}</strong>
+                          <strong className="font-semibold text-brand-blue">
+                            {chunks}
+                          </strong>
                         ),
                       })
                     : ''
@@ -89,7 +93,7 @@ export default async function Page({ params }: { params: Promise<{ locale: strin
                   layout.desktopMainImageSrc ? t(layout.desktopMainImageSrc) : ''
                 }
                 logoImageSrc={layout.logoImageSrc ? t(layout.logoImageSrc) : ''}
-                logoWidth={70}
+                logoWidth={ isFrench ? 105 : 70 }
                 ctaImageSrc={layout.ctaImageSrc ? t(layout.ctaImageSrc) : ''}
               />
             );
