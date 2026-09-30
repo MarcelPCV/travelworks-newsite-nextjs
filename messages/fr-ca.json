@@ -1,4 +1,9 @@
 {
+  "notFound": {
+    "title": "404",
+    "message": "Cette page est introuvable.",
+    "home": "Retour à l'accueil"
+  },
   "metadata": {
     "home": {
       "title": "Accueil - PcVoyages - Logiciel pour agences de voyages",

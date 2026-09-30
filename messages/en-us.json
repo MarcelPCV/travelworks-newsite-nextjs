@@ -1,4 +1,9 @@
 {
+  "notFound": {
+    "title": "404",
+    "message": "This page could not be found.",
+    "home": "Go to home"
+  },
   "metadata": {
     "home": {
       "title": "Home - TravelWorks - Travel Agency Software",

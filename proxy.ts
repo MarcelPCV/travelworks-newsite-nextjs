@@ -35,6 +35,17 @@ function getCanonicalSlug(
   return localizedSlug;
 }
 
+function withRouteLocale(request: NextRequest, routeLocale: string, url?: URL) {
+  const headers = new Headers(request.headers);
+  headers.set('x-travelworks-route-locale', routeLocale);
+
+  if (url) {
+    return NextResponse.rewrite(url, { request: { headers } });
+  }
+
+  return NextResponse.next({ request: { headers } });
+}
+
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
@@ -61,7 +72,7 @@ export function proxy(request: NextRequest) {
   if (!isLocalePrefixed) {
     const url = request.nextUrl.clone();
     url.pathname = `/${DEFAULT_ROUTE_LOCALE}${pathname === '/' ? '' : pathname}`;
-    return NextResponse.rewrite(url);
+    return withRouteLocale(request, DEFAULT_ROUTE_LOCALE, url);
   }
 
   // Rewrite localized locale-prefixed routes to canonical file-system routes.
@@ -139,12 +150,12 @@ export function proxy(request: NextRequest) {
       if (rewrittenPath !== pathname) {
         const url = request.nextUrl.clone();
         url.pathname = rewrittenPath;
-        return NextResponse.rewrite(url);
+        return withRouteLocale(request, routeLocale, url);
       }
     }
   }
 
-  return NextResponse.next();
+  return withRouteLocale(request, routeLocale);
 }
 
 export const config = {
