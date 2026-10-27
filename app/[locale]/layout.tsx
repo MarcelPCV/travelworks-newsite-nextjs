@@ -14,6 +14,7 @@ import type { NewsItem } from './components/footer/news-section';
 import { getCategories, getNewsArticlePath } from '@/app/[locale]/(pages)/news/lib/categories';
 import { getAllArticles } from '@/app/[locale]/(pages)/news/lib/news';
 import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export default async function LocaleLayout({
   children,
@@ -61,6 +62,7 @@ export default async function LocaleLayout({
         <Navbar />
         <main className="mx-auto w-full">
           <Analytics />
+          <SpeedInsights />
           {children}
         </main>
         <Analytics />
