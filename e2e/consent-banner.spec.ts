@@ -106,6 +106,13 @@ test('uses French for the banner and privacy settings on the French site', async
   await page.goto('/fr');
   const banner = page.getByRole('dialog', { name: 'Nous respectons votre vie privée' });
   await expect(banner).toBeVisible();
+  await expect(banner.getByTestId('consent-banner-description')).toHaveText(
+    "Ce site utilise des cookies pour améliorer votre expérience de navigation, analyser le trafic du site et afficher du contenu personnalisé. Veuillez consulter notre Politique de confidentialité pour plus d'informations.",
+  );
+  await expect(banner.getByRole('link', { name: 'Politique de confidentialité' })).toHaveAttribute(
+    'href',
+    '/fr/politique-de-confidentialite',
+  );
   await expect(banner.getByRole('button', { name: 'Personnaliser' })).toBeVisible();
   await expect(banner.getByRole('button', { name: 'Tout refuser' })).toBeVisible();
   await expect(banner.getByRole('button', { name: 'Tout accepter' })).toBeVisible();

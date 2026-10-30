@@ -27,6 +27,20 @@ measurement category is allowed. Withdrawing measurement consent stops PostHog
 capture; cookieless capture is disabled as well. Visitors can reopen their
 preferences through Privacy Settings in the footer.
 
+Google Analytics (G-R82T2VWRR5) and Google Tag Manager (GTM-WPWFTW8H)
+load only after c15t allows measurement. Google Consent Mode maps measurement to
+analytics storage and marketing to advertising consent. The published GTM
+container currently supplies Microsoft Clarity project z5bmx5lajm; Clarity's
+Consent V2 receives the same category decisions before the container loads.
+c15t reloads the page when a consent category is revoked, after the tags receive
+the updated decision. No Google or Clarity tags load when measurement is denied.
+
+Keep the Clarity tag in GTM, and do not add another GA4 tag for this measurement
+ID there, or visits will be counted twice. The container is gated by measurement
+consent, so tags added to it must also respect their own consent requirements.
+For GA4 client-side navigation tracking, enable enhanced measurement's page
+changes based on browser history in the GA4 web stream.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

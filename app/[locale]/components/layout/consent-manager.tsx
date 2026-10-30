@@ -13,6 +13,7 @@ import { useLocale, useTranslations } from 'next-intl';
 import posthog from 'posthog-js';
 import { useEffect, type ReactNode } from 'react';
 import frenchConsentMessages from '@/messages/c15t-fr.json';
+import { startAnalytics, updateAnalyticsConsent } from './tracking-consent';
 import styles from './consent-manager.module.css';
 
 const hostedBackendUrl = process.env.NEXT_PUBLIC_C15T_BACKEND_URL;
@@ -59,9 +60,25 @@ function PostHogConsent() {
   return null;
 }
 
+function AnalyticsConsent() {
+  const { consents, hasFetchedBanner } = useConsentManager();
+
+  useEffect(() => {
+    if (!hasFetchedBanner) return;
+    if (consents.measurement) {
+      startAnalytics(consents);
+    } else {
+      updateAnalyticsConsent(consents);
+    }
+  }, [hasFetchedBanner, consents.measurement, consents.marketing, consents]);
+
+  return null;
+}
+
 const callbacks: NonNullable<ConsentManagerOptions['callbacks']> = {
   onConsentSet: ({ preferences }) => {
     if (!preferences.measurement) stopPostHog();
+    updateAnalyticsConsent(preferences);
   },
 };
 
@@ -135,6 +152,7 @@ export default function ConsentManager({ children }: { children: ReactNode }) {
   return (
     <ConsentManagerProvider options={options}>
       <PostHogConsent />
+      <AnalyticsConsent />
       <ConsentBanner.Root scrollLock className={styles.bannerRoot}>
         <ConsentBanner.Card className={styles.bannerCard}>
           <ConsentBanner.Header className={styles.bannerHeader}>
