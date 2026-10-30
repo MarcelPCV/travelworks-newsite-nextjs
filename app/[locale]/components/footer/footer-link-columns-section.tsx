@@ -4,6 +4,7 @@ import { ArrowRight } from 'lucide-react';
 export type FooterLinkItem = {
   label: string;
   href?: string;
+  onClick?: () => void;
 };
 
 export type FooterLinkColumn = {
@@ -89,6 +90,15 @@ function FooterLinkColumnList({ column }: { column: FooterLinkColumn }) {
                 <ArrowRight className="h-4 w-4 mr-2" strokeWidth={2.4} />
                 <span>{link.label}</span>
               </Link>
+            ) : link.onClick ? (
+              <button
+                type="button"
+                onClick={link.onClick}
+                className="type-normal-16 inline-flex items-center text-left text-white/95 transition-colors duration-200 hover:text-brand-orange-light focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange-light/80 focus-visible:ring-offset-2 focus-visible:ring-offset-brand-blue"
+              >
+                <ArrowRight className="h-4 w-4 mr-2" strokeWidth={2.4} />
+                <span>{link.label}</span>
+              </button>
             ) : (
               <span className="type-normal-16 inline-flex text-white/95">{link.label}</span>
             )}

@@ -1884,7 +1884,8 @@
     "links": {
       "privacy": {
         "heading": "Privacy",
-        "policyLabel": "Privacy Policy"
+        "policyLabel": "Privacy Policy",
+        "settingsLabel": "Privacy Settings"
       }
     }
   },

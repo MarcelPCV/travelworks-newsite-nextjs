@@ -1834,7 +1834,8 @@
     "links": {
       "privacy": {
         "heading": "Confidentialite",
-        "policyLabel": "Politique de confidentialité"
+        "policyLabel": "Politique de confidentialité",
+        "settingsLabel": "Paramètres de confidentialité"
       }
     }
   },

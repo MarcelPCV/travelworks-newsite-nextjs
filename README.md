@@ -20,6 +20,13 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Analytics consent
+
+PostHog is initialized only after c15t has resolved the visitor's consent and the
+measurement category is allowed. Withdrawing measurement consent stops PostHog
+capture; cookieless capture is disabled as well. Visitors can reopen their
+preferences through Privacy Settings in the footer.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

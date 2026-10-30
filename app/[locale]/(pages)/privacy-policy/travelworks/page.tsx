@@ -102,6 +102,7 @@ const policyContentByLocale: Record<string, PolicyContent> = {
         bullets: [
           'Microsoft Azure - hebergement et infrastructure pour la plateforme SaaS de PcVoyages',
           'Google Analytics - analyses du site web',
+          'PostHog - analyses du site web',
           'Fournisseurs de livraison de courriels',
           'Services de soutien a la clientele',
           'Services de securite et de surveillance',
@@ -127,7 +128,7 @@ const policyContentByLocale: Record<string, PolicyContent> = {
           'mesurer la performance du site web ;',
           'analyser le trafic du site web ;',
           'renforcer la securite du site web.',
-          'Nous utilisons egalement des outils d analyse tels que Google Analytics pour mieux comprendre l utilisation de notre site web.',
+          'Nous utilisons egalement des outils d analyse tels que Google Analytics et PostHog pour mieux comprendre l utilisation de notre site web.',
           'Lorsque requis par la loi, une banniere de consentement aux temoins est presentee lors de votre premiere visite.',
           'Vous pouvez refuser ou desactiver les temoins non essentiels via les parametres de votre navigateur ou les preferences de temoins disponibles sur notre site web.',
         ],
@@ -159,7 +160,7 @@ const policyContentByLocale: Record<string, PolicyContent> = {
         heading: '10. Stockage et transferts internationaux de donnees',
         paragraphs: [
           'Les renseignements personnels peuvent etre traites ou stockes a l exterieur du Quebec ou du Canada.',
-          'Certains de nos fournisseurs de services, y compris Google Analytics et des fournisseurs d hebergement infonuagique, peuvent traiter des renseignements dans d autres juridictions, y compris les Etats-Unis.',
+          'Certains de nos fournisseurs de services, y compris Google Analytics, PostHog et des fournisseurs d hebergement infonuagique, peuvent traiter des renseignements dans d autres juridictions, y compris les Etats-Unis.',
           'Avant tout transfert de renseignements personnels hors Quebec lorsque requis, PcVoyages evalue les risques a la vie privee et met en place des garanties contractuelles, techniques et organisationnelles appropriees pour assurer un niveau de protection adequat, conformement a la Loi 25 du Quebec.',
         ],
       },
@@ -304,6 +305,7 @@ const policyContentByLocale: Record<string, PolicyContent> = {
         bullets: [
           'Microsoft Azure - hosting and infrastructure for the TravelWorks SaaS platform',
           'Google Analytics - website analytics',
+          'PostHog - website analytics',
           'Email delivery providers',
           'Customer support services',
           'Security and monitoring services',
@@ -329,7 +331,7 @@ const policyContentByLocale: Record<string, PolicyContent> = {
           'measure website performance;',
           'analyze website traffic;',
           'enhance website security.',
-          'We also use analytics tools such as Google Analytics to better understand how visitors use our website.',
+          'We also use analytics tools such as Google Analytics and PostHog to better understand how visitors use our website.',
           'Where required by law, a cookie consent banner will be presented during your first visit.',
           'You may refuse or disable non-essential cookies through your browser settings or the cookie preferences available on our website.',
         ],
@@ -361,7 +363,7 @@ const policyContentByLocale: Record<string, PolicyContent> = {
         heading: '10. Storage and International Data Transfers',
         paragraphs: [
           'Personal information may be processed or stored outside Quebec or Canada.',
-          'Some of our service providers, including Google Analytics and cloud hosting providers, may process information in other jurisdictions, including the United States.',
+          'Some of our service providers, including Google Analytics, PostHog, and cloud hosting providers, may process information in other jurisdictions, including the United States.',
           "Before transferring personal information outside Quebec where required, TravelWorks evaluates privacy risks and implements appropriate contractual, technical, and organizational safeguards to ensure an adequate level of protection, as required under Quebec's Law 25.",
         ],
       },

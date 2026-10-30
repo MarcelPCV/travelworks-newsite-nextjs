@@ -1,6 +1,7 @@
 'use client';
 
 import { useCallback } from 'react';
+import { useConsentDialogTrigger } from '@c15t/nextjs';
 import { useLocale, useTranslations } from 'next-intl';
 import {
   DEFAULT_ROUTE_LOCALE,
@@ -30,6 +31,7 @@ export default function Index({ newsItems }: { newsItems: NewsItem[] }) {
   const t = useTranslations('nav');
   const tFooter = useTranslations('footer.links');
   const tBenefits = useTranslations('pages.travel-agency-software.benefits');
+  const { openDialog } = useConsentDialogTrigger();
 
   const currentRouteLocale =
     localeOptions.find((item) => item.messageLocale === activeMessageLocale)?.routeLocale ??
@@ -123,6 +125,10 @@ export default function Index({ newsItems }: { newsItems: NewsItem[] }) {
         {
           label: tFooter('privacy.policyLabel'),
           href: privacyPolicyHref,
+        },
+        {
+          label: tFooter('privacy.settingsLabel'),
+          onClick: openDialog,
         },
       ],
     },

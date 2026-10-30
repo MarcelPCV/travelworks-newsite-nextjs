@@ -66,8 +66,9 @@ export default async function LocaleLayout({
           {children}
         </main>
         <Analytics />
-        <ConsentManager />
-        <Footer newsItems={latestNewsItems} />
+        <ConsentManager>
+          <Footer newsItems={latestNewsItems} />
+        </ConsentManager>
       </div>
     </IntlProviderWrapper>
   );
